@@ -389,33 +389,46 @@ window.addEventListener('scroll', () => {
 
 <script>
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbySO6lLsainzUtHLBF5HVKatqIcbHZSpzsSBAOml7mBIsRadRT52A88Roz-oG9uDeZLpQ/exec';
+
 async function submitForm() {
   const btn = document.getElementById('submitBtn');
   const err = document.getElementById('errMsg');
   const name = document.getElementById('fname').value.trim();
   const phone = document.getElementById('fphone').value.trim();
   err.style.display = 'none';
+  
   if (!name) { alert('Please enter your full name.'); return; }
   if (!phone) { alert('Please enter your phone number.'); return; }
+  
   btn.disabled = true;
   btn.textContent = 'Submitting...';
+  
+  const data = {
+    type: 'registration',
+    name: name,
+    phone: phone,
+    age: document.getElementById('fage').value,
+    grade: document.getElementById('fgrade').value,
+    school: document.getElementById('fschool').value,
+    program: document.getElementById('fprogram').value,
+    heard: document.getElementById('fheard').value,
+    message: document.getElementById('fmsg').value
+  };
+  
+  // Use URL-encoded form data — bypasses CORS entirely, works every time
+  const formBody = new URLSearchParams();
+  for (const key in data) {
+    formBody.append(key, data[key]);
+  }
+  
   try {
-    const data = {
-      type: 'registration',
-      name, phone,
-      age: document.getElementById('fage').value,
-      grade: document.getElementById('fgrade').value,
-      school: document.getElementById('fschool').value,
-      program: document.getElementById('fprogram').value,
-      heard: document.getElementById('fheard').value,
-      message: document.getElementById('fmsg').value
-    };
     await fetch(SCRIPT_URL, {
       method: 'POST',
       mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify(data)
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formBody.toString()
     });
+    
     document.getElementById('formWrap').style.display = 'none';
     document.getElementById('confirmedPhone').textContent = phone;
     document.getElementById('successMsg').style.display = 'block';
