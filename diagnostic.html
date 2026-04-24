@@ -439,10 +439,10 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
     </div>
 
     <div class="test-actions">
-      <a href="https://www.desmos.com/calculator" target="_blank" id="calc-link" class="calc-btn" style="display:none">
+      <button id="calc-link" class="calc-btn" style="display:none" onclick="openCalculator()">
         <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="12" y1="10" x2="14" y2="10"/><line x1="16" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="12" y1="14" x2="14" y2="14"/><line x1="16" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="12" y1="18" x2="14" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg>
         <span data-en="Calculator" data-uz="Kalkulyator" data-ru="Калькулятор">Calculator</span>
-      </a>
+      </button>
       <div style="flex:1"></div>
       <button class="btn-primary" id="next-btn" onclick="submitAnswer()" disabled data-en="Next →" data-uz="Keyingi →" data-ru="Далее →">Next →</button>
     </div>
@@ -546,14 +546,15 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
       </div>
     </div>
 
-    <!-- PDF notice -->
+    <!-- PDF download -->
     <div class="pdf-notice">
       <div class="pdf-notice-icon">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
       </div>
-      <div>
-        <h4 data-en="Your detailed PDF report is on the way" data-uz="Batafsil PDF hisobotingiz yo'lda" data-ru="Ваш детальный PDF отчёт в пути">Your detailed PDF report is on the way</h4>
-        <p data-en="We'll send your complete personalized report to your phone via Telegram within 24 hours. It includes every question, your answer, detailed explanations, and a personalized study plan." data-uz="Telegram orqali shaxsiy hisobotni 24 soat ichida yuboramiz." data-ru="Детальный отчёт придёт через Telegram в течение 24 часов.">We'll send your complete personalized report to your phone via Telegram within 24 hours. It includes every question, your answer, detailed explanations, and a personalized study plan.</p>
+      <div style="flex:1">
+        <h4 data-en="Download your full report" data-uz="To'liq hisobotingizni yuklab oling" data-ru="Скачайте полный отчёт">Download your full report</h4>
+        <p data-en="Your complete results — every question, every answer, explanations, and your personalized plan. Keep it for your records." data-uz="To'liq natijalaringiz — har bir savol, javob va tushuntirish." data-ru="Полные результаты — каждый вопрос, ответ и объяснение.">Your complete results — every question, every answer, explanations, and your personalized plan. Keep it for your records.</p>
+        <button class="btn-primary" onclick="downloadReport()" style="margin-top:1rem;padding:11px 24px;font-size:.88rem" data-en="📄 Download Report (HTML)" data-uz="📄 Hisobotni Yuklab Olish" data-ru="📄 Скачать отчёт">📄 Download Report (HTML)</button>
       </div>
     </div>
 
@@ -1888,9 +1889,11 @@ function startMathSection() {
 }
 
 function startEnglishSection() {
+  if (window._breakInterval) { clearInterval(window._breakInterval); window._breakInterval = null; }
   state.section = 'english';
   state.questionIndex = 0;
   state.sectionTimeRemaining = 20 * 60;
+  state.selectedAnswer = null;
   
   showScreen('test');
   startTimer();
@@ -2028,7 +2031,11 @@ function submitAnswer() {
   
   const questions = state.section === 'math' ? state.mathQuestions : state.engQuestions;
   const q = questions[state.questionIndex];
-  const timeSpent = Math.floor((Date.now() - state.questionStartTime) / 1000);
+  if (!q) {
+    console.error('No question at index', state.questionIndex);
+    return;
+  }
+  const timeSpent = Math.floor((Date.now() - (state.questionStartTime || Date.now())) / 1000);
   
   state.answers.push({
     qId: q.id,
@@ -2038,14 +2045,25 @@ function submitAnswer() {
     userAnswer: state.selectedAnswer,
     correctAnswer: q.correct,
     isCorrect: state.selectedAnswer === q.correct,
-    timeSpent,
+    timeSpent: timeSpent,
     question: q
   });
+  
+  // Disable next button immediately to prevent double-click
+  document.getElementById('next-btn').disabled = true;
   
   // Move to next or end
   state.questionIndex++;
   if (state.questionIndex >= 20) {
-    endSection();
+    try {
+      endSection();
+    } catch(err) {
+      console.error('endSection error:', err);
+      // Fallback: force results screen
+      if (state.section === 'english') {
+        alert('There was an issue showing results. Please contact support with your phone number.');
+      }
+    }
   } else {
     renderQuestion();
   }
@@ -2087,17 +2105,16 @@ function endSection() {
   }
 }
 
-// Wrapper for the break screen button — also clears countdown
-const _origStartEng = startEnglishSection;
-startEnglishSection = function() {
-  if (window._breakInterval) clearInterval(window._breakInterval);
-  _origStartEng();
-};
+// (wrapper removed — countdown cleared directly in startEnglishSection)
 
 // ═══════════════════════════════════════════════════
 // CALCULATE RESULTS & SHOW
 // ═══════════════════════════════════════════════════
 function showResults() {
+  // Show results screen IMMEDIATELY so user always sees something
+  showScreen('results');
+  
+  try {
   const mathAnswers = state.answers.filter(a => a.section === 'math');
   const engAnswers = state.answers.filter(a => a.section === 'english');
   
@@ -2177,6 +2194,10 @@ function showResults() {
   });
   
   showScreen('results');
+
+  } catch(err) {
+    console.error('Error rendering results:', err);
+  }
 }
 
 // ═══════════════════════════════════════════════════
@@ -2553,6 +2574,191 @@ window.addEventListener('beforeunload', (e) => {
   }
 });
 
+
+
+// ═══════════════════════════════════════════════════
+// CALCULATOR MODAL
+// ═══════════════════════════════════════════════════
+function openCalculator() {
+  const iframe = document.getElementById('calc-iframe');
+  if (!iframe.src || iframe.src === 'about:blank') {
+    iframe.src = 'https://www.desmos.com/calculator';
+  }
+  document.getElementById('calc-modal').classList.add('active');
+}
+
+function closeCalculator() {
+  document.getElementById('calc-modal').classList.remove('active');
+}
+
+// Close modal on background click
+document.addEventListener('click', (e) => {
+  const modal = document.getElementById('calc-modal');
+  if (e.target === modal) closeCalculator();
+});
+
+// Escape key closes modal
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeCalculator();
+  }
+});
+
+// ═══════════════════════════════════════════════════
+// DOWNLOAD REPORT (as HTML file)
+// ═══════════════════════════════════════════════════
+function downloadReport() {
+  const mathAnswers = state.answers.filter(a => a.section === 'math');
+  const engAnswers = state.answers.filter(a => a.section === 'english');
+  const mathCorrect = mathAnswers.filter(a => a.isCorrect).length;
+  const engCorrect = engAnswers.filter(a => a.isCorrect).length;
+  const total = mathCorrect + engCorrect;
+  const mathPct = Math.round((mathCorrect / 20) * 100);
+  const engPct = Math.round((engCorrect / 20) * 100);
+  const totalPct = Math.round((total / 40) * 100);
+  const estSAT = estimateSATScore(mathCorrect, engCorrect, state.answers);
+  const level = determineLevel(totalPct, estSAT);
+  const now = new Date().toLocaleString('en-GB', {timeZone: 'Asia/Tashkent'});
+  const letters = ['A', 'B', 'C', 'D'];
+  
+  let html = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>SAT Samarkand — Diagnostic Report</title>';
+  html += '<style>';
+  html += 'body{font-family:-apple-system,Arial,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px;color:#1d1d1f;line-height:1.6}';
+  html += 'h1{color:#022049;font-size:2rem;margin-bottom:.3rem}';
+  html += 'h2{color:#022049;font-size:1.3rem;margin-top:2rem;border-bottom:2px solid #0661de;padding-bottom:.5rem}';
+  html += 'h3{color:#022049;font-size:1.05rem;margin-top:1.5rem}';
+  html += '.hero{background:#022049;color:#fff;padding:30px;border-radius:12px;text-align:center;margin:2rem 0}';
+  html += '.score{font-size:4rem;font-weight:700;margin:0}';
+  html += '.badge{display:inline-block;background:#0661de;color:#fff;padding:6px 14px;border-radius:20px;font-size:.75rem;font-weight:700;letter-spacing:.1em;margin-bottom:1rem;text-transform:uppercase}';
+  html += '.sections{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:1.5rem 0}';
+  html += '.sec-card{background:#f5f5f7;padding:20px;border-radius:8px;border-left:4px solid #0661de}';
+  html += '.sec-card h3{margin-top:0}';
+  html += '.sec-score{font-size:2rem;font-weight:700;color:#022049}';
+  html += '.est-sat{background:#e8f0fe;border:2px solid #0661de;padding:20px;border-radius:8px;text-align:center;margin:1.5rem 0}';
+  html += '.est-sat-num{font-size:2.5rem;font-weight:700;color:#022049}';
+  html += '.q{background:#f5f5f7;padding:15px;border-radius:8px;margin-bottom:10px}';
+  html += '.q.correct{border-left:4px solid #16a34a}';
+  html += '.q.wrong{border-left:4px solid #dc2626}';
+  html += '.q-status{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.7rem;font-weight:700;margin-bottom:6px;text-transform:uppercase}';
+  html += '.q-status.correct{background:#dcfce7;color:#15803d}';
+  html += '.q-status.wrong{background:#fee2e2;color:#991b1b}';
+  html += '.ans{padding:6px 10px;border-radius:4px;margin:4px 0;font-size:.9rem}';
+  html += '.ans.your{background:#fee2e2;color:#991b1b}';
+  html += '.ans.correct{background:#dcfce7;color:#15803d}';
+  html += '.expl{background:#e8f0fe;padding:10px;border-radius:4px;margin-top:8px;font-size:.85rem;border-left:3px solid #0661de}';
+  html += '.footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #d2d2d7;color:#6e6e73;font-size:.82rem;text-align:center}';
+  html += 'table{width:100%;border-collapse:collapse;margin:1rem 0}';
+  html += 'td{padding:8px;border-bottom:1px solid #d2d2d7}';
+  html += 'td:first-child{font-weight:600}';
+  html += '</style></head><body>';
+  
+  html += '<div style="text-align:center;color:#0661de;font-weight:700;letter-spacing:.15em;font-size:.75rem;text-transform:uppercase">SAT SAMARKAND</div>';
+  html += '<h1 style="text-align:center">Diagnostic Test Report</h1>';
+  html += '<p style="text-align:center;color:#6e6e73">Generated: ' + now + '</p>';
+  
+  html += '<div class="hero">';
+  html += '<div class="badge">' + level.label.en + '</div>';
+  html += '<div class="score">' + total + '<span style="font-size:1.5rem;opacity:.5"> / 40</span></div>';
+  html += '<div style="font-size:1.1rem;color:#60a5fa;margin-top:.5rem">' + totalPct + '% overall</div>';
+  html += '</div>';
+  
+  html += '<h2>Student Information</h2>';
+  html += '<table>';
+  html += '<tr><td>Name</td><td>' + state.info.name + '</td></tr>';
+  html += '<tr><td>Phone</td><td>' + state.info.phone + '</td></tr>';
+  html += '<tr><td>Age</td><td>' + state.info.age + '</td></tr>';
+  html += '<tr><td>Grade</td><td>' + state.info.grade + '</td></tr>';
+  if (state.info.goal) html += '<tr><td>Goal SAT Score</td><td>' + state.info.goal + '+</td></tr>';
+  if (state.info.uni) html += '<tr><td>Target University</td><td>' + state.info.uni + '</td></tr>';
+  html += '</table>';
+  
+  html += '<h2>Section Scores</h2>';
+  html += '<div class="sections">';
+  html += '<div class="sec-card"><h3>📐 Mathematics</h3><div class="sec-score">' + mathCorrect + '/20</div><div>' + mathPct + '% correct</div></div>';
+  html += '<div class="sec-card" style="border-left-color:#16a34a"><h3>📖 English</h3><div class="sec-score">' + engCorrect + '/20</div><div>' + engPct + '% correct</div></div>';
+  html += '</div>';
+  
+  html += '<div class="est-sat">';
+  html += '<div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#0661de;text-transform:uppercase">Estimated SAT Score</div>';
+  html += '<div class="est-sat-num">~' + estSAT + '</div>';
+  html += '<div style="color:#6e6e73">Range: ' + (estSAT - 50) + '–' + (estSAT + 50) + '</div>';
+  html += '</div>';
+  
+  html += '<h2>Answer Review</h2>';
+  html += '<h3>Mathematics (' + mathCorrect + ' correct out of 20)</h3>';
+  mathAnswers.forEach((a, i) => {
+    const q = a.question;
+    const qText = q.q[currentLang] || q.q.en;
+    const expl = q.explanation[currentLang] || q.explanation.en;
+    html += '<div class="q ' + (a.isCorrect ? 'correct' : 'wrong') + '">';
+    html += '<span class="q-status ' + (a.isCorrect ? 'correct' : 'wrong') + '">' + (a.isCorrect ? 'Correct ✓' : 'Wrong ✗') + '</span>';
+    html += '<div><strong>Q' + (i+1) + ':</strong> ' + qText + '</div>';
+    if (!a.isCorrect) {
+      html += '<div class="ans your"><strong>Your answer:</strong> ' + letters[a.userAnswer] + ') ' + q.choices[a.userAnswer] + '</div>';
+    }
+    html += '<div class="ans correct"><strong>Correct:</strong> ' + letters[a.correctAnswer] + ') ' + q.choices[a.correctAnswer] + '</div>';
+    html += '<div class="expl"><strong>Why:</strong> ' + expl + '</div>';
+    html += '</div>';
+  });
+  
+  html += '<h3 style="margin-top:2rem">English (' + engCorrect + ' correct out of 20)</h3>';
+  engAnswers.forEach((a, i) => {
+    const q = a.question;
+    html += '<div class="q ' + (a.isCorrect ? 'correct' : 'wrong') + '">';
+    html += '<span class="q-status ' + (a.isCorrect ? 'correct' : 'wrong') + '">' + (a.isCorrect ? 'Correct ✓' : 'Wrong ✗') + '</span>';
+    if (q.passage) html += '<div style="background:#fff;padding:10px;border-left:3px solid #0661de;margin:6px 0;font-style:italic;font-size:.85rem">' + q.passage + '</div>';
+    html += '<div><strong>Q' + (i+1) + ':</strong> ' + q.q + '</div>';
+    if (!a.isCorrect) {
+      html += '<div class="ans your"><strong>Your answer:</strong> ' + letters[a.userAnswer] + ') ' + q.choices[a.userAnswer] + '</div>';
+    }
+    html += '<div class="ans correct"><strong>Correct:</strong> ' + letters[a.correctAnswer] + ') ' + q.choices[a.correctAnswer] + '</div>';
+    html += '<div class="expl"><strong>Why:</strong> ' + q.explanation + '</div>';
+    html += '</div>';
+  });
+  
+  html += '<div class="footer">';
+  html += '<strong>SAT Samarkand</strong> · satsamarkand.uz<br>';
+  html += 'Questions? Contact @satsam_support on Telegram';
+  html += '</div>';
+  
+  html += '</body></html>';
+  
+  // Create download
+  const blob = new Blob([html], {type: 'text/html'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  const safeName = state.info.name.replace(/[^a-zA-Z0-9]/g, '_');
+  a.download = 'SAT_Samarkand_Report_' + safeName + '_' + new Date().toISOString().split('T')[0] + '.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 </script>
+
+<!-- CALCULATOR MODAL -->
+<div id="calc-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9998;align-items:center;justify-content:center;padding:20px">
+  <div style="background:#fff;border-radius:var(--rxl);box-shadow:0 20px 60px rgba(0,0,0,.3);width:100%;max-width:720px;height:560px;max-height:90vh;display:flex;flex-direction:column;overflow:hidden">
+    <div style="padding:14px 20px;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;flex-shrink:0">
+      <div style="display:flex;align-items:center;gap:10px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/></svg>
+        <span style="font-family:var(--f);font-weight:700;color:var(--navy);font-size:.95rem">Desmos Calculator</span>
+      </div>
+      <button onclick="closeCalculator()" style="background:none;border:none;font-size:1.5rem;color:var(--tm);cursor:pointer;padding:4px 10px;line-height:1;border-radius:6px" onmouseover="this.style.background='var(--bg2)'" onmouseout="this.style.background='none'">×</button>
+    </div>
+    <iframe id="calc-iframe" src="" style="border:none;width:100%;flex:1" title="Calculator"></iframe>
+  </div>
+</div>
+
+<!-- CALCULATOR MODAL STYLES -->
+<style>
+  #calc-modal.active { display: flex !important; }
+  @media(max-width:640px) {
+    #calc-modal > div { height: 90vh !important; }
+  }
+</style>
+
 </body>
 </html>
