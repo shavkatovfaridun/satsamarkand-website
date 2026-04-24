@@ -1853,7 +1853,7 @@ function startTest() {
   err.style.display = 'none';
   
   if (!name || !phone || !age || !grade) {
-    err.textContent = currentLang === 'uz' ? "Iltimos barcha majburiy maydonlarni to'ldiring." : 
+    err.textContent = currentLang === 'uz' ? "Iltimos barcha majburiy maydonlarni to\'ldiring." : 
                       currentLang === 'ru' ? "Заполните все обязательные поля." :
                       "Please fill in all required fields.";
     err.style.display = 'block';
@@ -2005,7 +2005,7 @@ function renderQuestion() {
   if (isLast) {
     nextBtn.textContent = state.section === 'math' ?
       (currentLang === 'uz' ? 'Tugatish →' : currentLang === 'ru' ? 'Завершить →' : 'Finish Math →') :
-      (currentLang === 'uz' ? 'Natijalarni Ko'rish →' : currentLang === 'ru' ? 'Увидеть результаты →' : 'See Results →');
+      (currentLang === 'uz' ? 'Natijalarni Ko\'rish →' : currentLang === 'ru' ? 'Увидеть результаты →' : 'See Results →');
   } else {
     nextBtn.textContent = currentLang === 'uz' ? 'Keyingi →' : currentLang === 'ru' ? 'Далее →' : 'Next →';
   }
@@ -2148,10 +2148,10 @@ function showResults() {
       const months = state.info.when === '3months' ? 3 : state.info.when === '6months' ? 6 : state.info.when === '1year' ? 12 : 6;
       gapEl.innerHTML = 'Your current level: <strong>~' + estimatedSAT + '</strong> · Your goal: <strong>' + goal + '+</strong> · Gap: <strong>' + gap + ' points</strong><br>With focused preparation, this is achievable in <strong>' + months + ' months</strong>.';
     } else {
-      gapEl.innerHTML = 'You're already at or above your goal of <strong>' + goal + '</strong>! Focus on consistency to maintain your level.';
+      gapEl.innerHTML = "You're already at or above your goal of <strong>" + goal + "</strong>! Focus on consistency to maintain your level.";
     }
   } else {
-    gapEl.innerHTML = 'Set a goal score and we'll show you the roadmap to get there.';
+    gapEl.innerHTML = 'Set a goal score and we\'ll show you the roadmap to get there.';
   }
   
   // Topic breakdown
@@ -2220,11 +2220,11 @@ function determineLevel(totalPct, estSAT) {
   };
   if (estSAT >= 1200) return {
     cls: 'advanced',
-    label: {en: '⭐ Advanced', uz: '⭐ Ilg'or', ru: '⭐ Продвинутый'}
+    label: {en: '⭐ Advanced', uz: '⭐ Ilg\'or', ru: '⭐ Продвинутый'}
   };
   if (estSAT >= 1000) return {
     cls: 'intermediate',
-    label: {en: '📈 Intermediate', uz: '📈 O'rta Daraja', ru: '📈 Средний'}
+    label: {en: '📈 Intermediate', uz: '📈 O\'rta Daraja', ru: '📈 Средний'}
   };
   if (estSAT >= 800) return {
     cls: 'building',
@@ -2237,9 +2237,9 @@ function determineLevel(totalPct, estSAT) {
 }
 
 function getStatusText(pct) {
-  if (pct >= 85) return currentLang === 'uz' ? 'A'lo' : currentLang === 'ru' ? 'Отлично' : 'Excellent — strong mastery';
+  if (pct >= 85) return currentLang === 'uz' ? "A'lo" : currentLang === 'ru' ? 'Отлично' : 'Excellent — strong mastery';
   if (pct >= 70) return currentLang === 'uz' ? 'Yaxshi' : currentLang === 'ru' ? 'Хорошо' : 'Good — solid foundation';
-  if (pct >= 55) return currentLang === 'uz' ? 'O'rtacha' : currentLang === 'ru' ? 'Средне' : 'Moderate — room to grow';
+  if (pct >= 55) return currentLang === 'uz' ? 'O\'rtacha' : currentLang === 'ru' ? 'Средне' : 'Moderate — room to grow';
   if (pct >= 40) return currentLang === 'uz' ? 'Mustahkamlash kerak' : currentLang === 'ru' ? 'Нужно укреплять' : 'Needs focus and practice';
   return currentLang === 'uz' ? 'Asoslardan boshlash kerak' : currentLang === 'ru' ? 'Нужны основы' : 'Foundation work recommended';
 }
@@ -2339,10 +2339,10 @@ function renderRecommendation(estSAT, totalPct, mathPct, engPct) {
   let title, desc;
   if (estSAT >= 1400) {
     title = 'SAT 1400+ Guaranteed Program';
-    desc = 'Your skills are strong — you qualify for our selective 1400+ program. Intensive advanced group with weekly 1-on-1 sessions. Free up to 3 months if you don't reach 1400.';
+    desc = 'Your skills are strong — you qualify for our selective 1400+ program. Intensive advanced group with weekly 1-on-1 sessions. Free up to 3 months if you don\'t reach 1400.';
   } else if (estSAT >= 1200) {
     title = 'Full SAT Program';
-    desc = 'You're at a solid foundation. Our most popular Full SAT Program will take you from your current level to 1400+ in 3-6 months.';
+    desc = 'You\'re at a solid foundation. Our most popular Full SAT Program will take you from your current level to 1400+ in 3-6 months.';
   } else if (estSAT >= 1000) {
     // Determine which is weaker
     if (mathPct < engPct - 10) {
@@ -2360,7 +2360,7 @@ function renderRecommendation(estSAT, totalPct, mathPct, engPct) {
     desc = 'Start with your weaker subject (' + (mathPct < engPct ? 'Math' : 'English') + ') at 700,000 UZS/month. Build one section to solid foundation, then add the other.';
   } else {
     title = 'Foundation Building (Pre-SAT)';
-    desc = 'Your current skills need foundational work before SAT prep makes sense. We'll start you on 1 Subject Program focused on the fundamentals — and you'll progress to full SAT prep when ready.';
+    desc = 'Your current skills need foundational work before SAT prep makes sense. We\'ll start you on 1 Subject Program focused on the fundamentals — and you\'ll progress to full SAT prep when ready.';
   }
   
   titleEl.textContent = title;
