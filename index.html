@@ -252,13 +252,33 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 .fcol a:hover{color:rgba(255,255,255,.8)}
 .fbot{max-width:1200px;margin:36px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
 .fbot p,.fbot a{font-size:.72rem;color:rgba(255,255,255,.2);text-decoration:none}
-.fbtn{position:fixed;bottom:26px;right:26px;z-index:1000;transition:opacity .3s}
-.fitem{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--bd);border-radius:980px;padding:9px 17px 9px 12px;box-shadow:var(--sl);text-decoration:none}
-.fitem:hover{transform:translateY(-2px)}
-.ficon{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:#29b6f6}
-.ficon svg{width:14px;height:14px;fill:#fff}
-.ftext{font-size:.76rem;font-weight:600;color:var(--navy)}
-.fsub{font-size:.66rem;color:var(--tm)}
+.fwidget{position:fixed;bottom:26px;right:26px;z-index:1000;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.ftoggle{width:56px;height:56px;border-radius:50%;background:var(--blue);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(6,97,222,.35),0 4px 12px rgba(0,0,0,.12);transition:all .25s cubic-bezier(.4,0,.2,1);position:relative}
+.ftoggle:hover{transform:scale(1.05);box-shadow:0 12px 32px rgba(6,97,222,.45),0 4px 16px rgba(0,0,0,.15)}
+.ftoggle svg{width:24px;height:24px;position:absolute;transition:all .3s cubic-bezier(.4,0,.2,1)}
+.ftoggle .fticon-close{opacity:0;transform:rotate(-90deg) scale(.6)}
+.ftoggle .fticon-chat{opacity:1;transform:rotate(0) scale(1)}
+.fwidget.open .ftoggle{background:var(--navy);transform:scale(1)}
+.fwidget.open .ftoggle .fticon-chat{opacity:0;transform:rotate(90deg) scale(.6)}
+.fwidget.open .ftoggle .fticon-close{opacity:1;transform:rotate(0) scale(1)}
+.fmenu{display:flex;flex-direction:column;gap:8px;opacity:0;transform:translateY(20px) scale(.92);transform-origin:bottom right;pointer-events:none;transition:all .3s cubic-bezier(.4,0,.2,1)}
+.fwidget.open .fmenu{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--bd);border-radius:14px;padding:10px 18px 10px 12px;box-shadow:0 4px 16px rgba(0,0,0,.08),0 2px 6px rgba(0,0,0,.04);text-decoration:none;transition:all .2s ease;min-width:220px}
+.fmitem:hover{transform:translateX(-4px);box-shadow:0 8px 24px rgba(0,0,0,.12),0 4px 10px rgba(0,0,0,.06);border-color:var(--blue)}
+.fmicon{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff}
+.fmicon svg{width:18px;height:18px}
+.fmcall .fmicon{background:linear-gradient(135deg,#10b981,#059669)}
+.fmchat .fmicon{background:linear-gradient(135deg,#0088cc,#006bb3)}
+.fmbot .fmicon{background:linear-gradient(135deg,#7c3aed,#5b21b6)}
+.fminfo{flex:1;min-width:0}
+.fmtitle{font-size:.84rem;font-weight:700;color:var(--navy);line-height:1.2;letter-spacing:-.01em}
+.fmsub{font-size:.71rem;color:var(--tm);margin-top:2px;font-weight:500}
+/* Stagger animation for menu items */
+.fwidget.open .fmitem:nth-child(1){transition-delay:.05s}
+.fwidget.open .fmitem:nth-child(2){transition-delay:.1s}
+.fwidget.open .fmitem:nth-child(3){transition-delay:.15s}
+.fmitem{transform:translateY(10px);opacity:0;transition:opacity .25s ease,transform .25s ease,box-shadow .2s ease,border-color .2s ease}
+.fwidget.open .fmitem{transform:translateY(0);opacity:1}
 .fade{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
 .fade.in{opacity:1;transform:translateY(0)}
 .mob-sticky{display:none;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--bd);padding:10px 12px;z-index:998;box-shadow:0 -4px 20px rgba(0,0,0,.08)}
@@ -275,7 +295,7 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 @media(max-width:980px){.price-grid{grid-template-columns:1fr;max-width:480px;margin-left:auto;margin-right:auto}}
 @media(max-width:960px){.nlinks{display:none}.nham{display:block}.fgrid{grid-template-columns:1fr 1fr}.fgrid>div:first-child{grid-column:1/-1}.wgrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.uni-grid{grid-template-columns:repeat(2,1fr)}.mock-grid{grid-template-columns:1fr;gap:1.5rem}.mock-banner{padding:32px 24px}.mock-features{grid-template-columns:1fr}.partners-grid{grid-template-columns:1fr}.form-wrap{grid-template-columns:1fr;gap:2rem}.form-card{padding:28px 22px}.seo-inner{grid-template-columns:1fr;gap:20px}}
-@media(max-width:640px){.trust-bar{flex-wrap:wrap;width:100%}.tb{flex:1;min-width:140px}.uni-grid{grid-template-columns:1fr}.wgrid{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}.fbtn{bottom:80px;right:14px}.mob-sticky{display:block}body{padding-bottom:60px}.hero{padding-top:48px}}
+@media(max-width:640px){.trust-bar{flex-wrap:wrap;width:100%}.tb{flex:1;min-width:140px}.uni-grid{grid-template-columns:1fr}.wgrid{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}.fwidget{bottom:80px;right:14px;gap:8px}.ftoggle{width:50px;height:50px}.ftoggle svg{width:22px;height:22px}.fmitem{min-width:0;padding:9px 14px 9px 10px}.mob-sticky{display:block}body{padding-bottom:60px}.hero{padding-top:48px}}
 </style>
 </head><body>
 <div class="lbar">
@@ -307,7 +327,7 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="btns" data-en="Take Free Diagnostic" data-uz="Bepul Diagnostika" data-ru="Бесплатная диагностика">Take Free Diagnostic</a>
 </div>
 <div class="trust-bar">
-<div class="tb"><div class="tb-num">1540</div><div class="tb-label" data-en="Top Score" data-uz="Eng yuqori" data-ru="Лучший балл">Top Score</div></div>
+<div class="tb"><div class="tb-num">1530</div><div class="tb-label" data-en="Top Score" data-uz="Eng yuqori" data-ru="Лучший балл">Top Score</div></div>
 <div class="tb"><div class="tb-num">100+</div><div class="tb-label" data-en="Students" data-uz="Talabalar" data-ru="Студентов">Students</div></div>
 <div class="tb"><div class="tb-num">9</div><div class="tb-label" data-en="Universities" data-uz="Universitet" data-ru="Университетов">Universities</div></div>
 <div class="tb"><div class="tb-num">8</div><div class="tb-label" data-en="Mentors" data-uz="Mentor" data-ru="Менторов">Mentors</div></div>
@@ -315,8 +335,8 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 </section>
 
 <div class="marq"><div class="mtrack">
-<span class="mi">SAT 1540 Verified</span><span class="mi">Math 800</span><span class="mi">English 700+</span><span class="mi">Purdue · Drexel · METU</span><span class="mi">Free Mock Every Sunday</span><span class="mi">Max 15 Per Class</span><span class="mi">1500+ Guaranteed</span><span class="mi">AP &amp; IELTS</span><span class="mi">Joylink Academy Partner</span><span class="mi">Millennium Education Partner</span>
-<span class="mi">SAT 1540 Verified</span><span class="mi">Math 800</span><span class="mi">English 700+</span><span class="mi">Purdue · Drexel · METU</span><span class="mi">Free Mock Every Sunday</span><span class="mi">Max 15 Per Class</span><span class="mi">1500+ Guaranteed</span><span class="mi">AP &amp; IELTS</span><span class="mi">Joylink Academy Partner</span><span class="mi">Millennium Education Partner</span>
+<span class="mi">SAT 1530 Verified</span><span class="mi">Math 800</span><span class="mi">English 700+</span><span class="mi">Purdue · Drexel · METU</span><span class="mi">Free Mock Every Sunday</span><span class="mi">Max 15 Per Class</span><span class="mi">1500+ Guaranteed</span><span class="mi">AP &amp; IELTS</span><span class="mi">Joylink Academy Partner</span><span class="mi">Millennium Education Partner</span>
+<span class="mi">SAT 1530 Verified</span><span class="mi">Math 800</span><span class="mi">English 700+</span><span class="mi">Purdue · Drexel · METU</span><span class="mi">Free Mock Every Sunday</span><span class="mi">Max 15 Per Class</span><span class="mi">1500+ Guaranteed</span><span class="mi">AP &amp; IELTS</span><span class="mi">Joylink Academy Partner</span><span class="mi">Millennium Education Partner</span>
 </div></div>
 
 <div class="sec" id="universities"><div class="w" style="text-align:center">
@@ -451,7 +471,7 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 <div class="sec alt" id="mentors"><div class="w">
 <div class="slbl" data-en="Expert Mentors" data-uz="Mentorlar" data-ru="Эксперты">Expert Mentors</div>
 <h2 class="sh" data-en="They’ve passed the test.<br>Now they’ll help you ace it." data-uz="Ular testni topshirgan." data-ru="Они прошли тест.">They’ve passed the test.<br>Now they’ll help you ace it.</h2>
-<div class="mgrid"><div class="mc founder fade"><div class="mcphoto"><div class="mcinit">SF</div></div><div class="mcbody"><div class="mcname">Shavkatov Faridun</div><div class="mcrole">Founder & SAT Mentor</div><span class="mcbadge">Founder</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">AZ</div></div><div class="mcbody"><div class="mcname">Aziza Zakiryayeva</div><div class="mcrole">SAT Mentor</div><span class="mcbadge">SAT 1540</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">FP</div></div><div class="mcbody"><div class="mcname">Faxriddin Pulatov</div><div class="mcrole">SAT English Specialist</div><span class="mcbadge">SAT 1530</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">SM</div></div><div class="mcbody"><div class="mcname">Shoxrux Mexrojiddinov</div><div class="mcrole">SAT Math Mentor</div><span class="mcbadge">Math 800</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">AV</div></div><div class="mcbody"><div class="mcname">Azizbek Vakhobov</div><div class="mcrole">SAT English Mentor</div><span class="mcbadge">English 700/800</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">FA</div></div><div class="mcbody"><div class="mcname">Fariza Abdullaeva</div><div class="mcrole">SAT Math Mentor</div><span class="mcbadge">SAT Math</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">DK</div></div><div class="mcbody"><div class="mcname">Dilmurod Kudratov</div><div class="mcrole">SAT Math Mentor</div><span class="mcbadge">SAT Math</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">ND</div></div><div class="mcbody"><div class="mcname">Nuriddin Doniyorov</div><div class="mcrole">SAT Math Mentor</div><span class="mcbadge">SAT Math</span></div></div></div>
+<div class="mgrid"><div class="mc founder fade"><div class="mcphoto"><div class="mcinit">SF</div></div><div class="mcbody"><div class="mcname">Shavkatov Faridun</div><div class="mcrole">Founder & SAT Mentor</div><span class="mcbadge">Founder</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">AZ</div></div><div class="mcbody"><div class="mcname">Aziza Zakiryayeva</div><div class="mcrole">SAT Mentor</div><span class="mcbadge">SAT 1510</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">FP</div></div><div class="mcbody"><div class="mcname">Faxriddin Pulatov</div><div class="mcrole">SAT English Specialist</div><span class="mcbadge">SAT 1530</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">SM</div></div><div class="mcbody"><div class="mcname">Shoxrux Mexrojiddinov</div><div class="mcrole">SAT Math Mentor</div><span class="mcbadge">Math 800</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">AV</div></div><div class="mcbody"><div class="mcname">Azizbek Vakhobov</div><div class="mcrole">SAT English Mentor</div><span class="mcbadge">English 700/800</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">FA</div></div><div class="mcbody"><div class="mcname">Fariza Abdullaeva</div><div class="mcrole">SAT Math Mentor</div><span class="mcbadge">SAT Math</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">DK</div></div><div class="mcbody"><div class="mcname">Dilmurod Kudratov</div><div class="mcrole">SAT Math Mentor</div><span class="mcbadge">SAT Math</span></div></div><div class="mc fade"><div class="mcphoto"><div class="mcinit">ND</div></div><div class="mcbody"><div class="mcname">Nuriddin Doniyorov</div><div class="mcrole">SAT Math Mentor</div><span class="mcbadge">SAT Math</span></div></div></div>
 </div></div>
 
 <div class="div"></div>
@@ -494,8 +514,8 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 <div id="formWrap">
 <h3 data-en="Register Now" data-uz="Hozir Yozilish" data-ru="Записаться">Register Now</h3>
 <p class="subtitle" data-en="Quick form. Just 2 fields." data-uz="Faqat 2 maydon." data-ru="Только 2 поля.">Quick form. Just 2 fields.</p>
-<div class="fg"><label data-en="Full Name" data-uz="To'liq Ism" data-ru="Имя">Full Name <span class="req">*</span></label><input type="text" id="fname" placeholder="Shavkatov Faridun" required autocomplete="name"></div>
-<div class="fg"><label data-en="Phone Number" data-uz="Telefon" data-ru="Телефон">Phone Number <span class="req">*</span></label><input type="tel" id="fphone" placeholder="+998 XX XXX XX XX" required autocomplete="tel"><div class="hint" data-en="We'll contact you via this number." data-uz="Shu raqam orqali bog'lanamiz." data-ru="Свяжемся по этому номеру.">We'll contact you via this number.</div></div>
+<div class="fg"><label data-en="Full Name" data-uz="To'liq Ism" data-ru="Имя">Full Name <span class="req">*</span></label><input type="text" id="fname" placeholder="Anvar Karimov" required autocomplete="name"></div>
+<div class="fg"><label data-en="Phone Number" data-uz="Telefon" data-ru="Телефон">Phone Number <span class="req">*</span></label><input type="tel" id="fphone" placeholder="+998-XX-XXX-XX-XX" required autocomplete="tel" maxlength="17" oninput="formatPhone(this)" pattern="\+998-\d{2}-\d{3}-\d{2}-\d{2}" title="Format: +998-XX-XXX-XX-XX"><div class="hint" data-en="We'll contact you via this number." data-uz="Shu raqam orqali bog'lanamiz." data-ru="Свяжемся по этому номеру.">We'll contact you via this number.</div></div>
 <button class="submit-btn" id="submitBtn" onclick="submitForm()" data-en="Submit →" data-uz="Yuborish →" data-ru="Отправить →">Submit →</button>
 </div>
 <div class="success-msg" id="successMsg">
@@ -556,11 +576,25 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 <div class="fbot"><p>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></p><a href="https://satsamarkand.uz">satsamarkand.uz</a></div>
 </div>
 
-<div class="fbtn" id="fb">
-<a href="https://t.me/satsam_support" target="_blank" class="fitem">
-<div class="ficon"><svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg></div>
-<div><div class="ftext" data-en="Have a question?" data-uz="Savol?" data-ru="Вопрос?">Have a question?</div><div class="fsub">@satsam_support</div></div>
-</a>
+<div class="fwidget" id="fwidget">
+  <div class="fmenu" id="fmenu">
+    <a href="tel:+998951131600" class="fmitem fmcall" data-action="call">
+      <div class="fmicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+      <div class="fminfo"><div class="fmtitle" data-en="Call us" data-uz="Qo\'ng\'iroq qiling" data-ru="Позвонить">Call us</div><div class="fmsub">+998 95 113 16 00</div></div>
+    </a>
+    <a href="https://t.me/satsam_support" target="_blank" class="fmitem fmchat" data-action="chat">
+      <div class="fmicon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg></div>
+      <div class="fminfo"><div class="fmtitle" data-en="Chat with us" data-uz="Yordam" data-ru="Написать">Chat with us</div><div class="fmsub">@satsam_support</div></div>
+    </a>
+    <a href="https://t.me/sat_samarkand_ai_bot" target="_blank" class="fmitem fmbot" data-action="bot">
+      <div class="fmicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg></div>
+      <div class="fminfo"><div class="fmtitle" data-en="Ask AI Bot" data-uz="AI Bot" data-ru="AI бот">Ask AI Bot</div><div class="fmsub" data-en="Instant answers" data-uz="Tezkor javob" data-ru="Мгновенный">Instant answers</div></div>
+    </a>
+  </div>
+  <button class="ftoggle" id="ftoggle" onclick="toggleWidget()" aria-label="Open contact menu">
+    <svg class="fticon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    <svg class="fticon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 
 <div class="mob-sticky"><a href="#register" data-en="Enroll Now →" data-uz="Yozilish →" data-ru="Записаться →">Enroll Now →</a></div>
@@ -650,17 +684,41 @@ if (car) {
 
 // Hide floating button near footer
 window.addEventListener('scroll', () => {
-  const fb = document.getElementById('fb');
-  if (!fb) return;
+  const fw = document.getElementById('fwidget');
+  if (!fw) return;
   const footer = document.querySelector('.footer');
   if (footer && window.scrollY + window.innerHeight >= footer.offsetTop) {
-    fb.style.opacity = '0';
-    fb.style.pointerEvents = 'none';
+    fw.style.opacity = '0';
+    fw.style.pointerEvents = 'none';
   } else {
-    fb.style.opacity = '1';
-    fb.style.pointerEvents = 'auto';
+    fw.style.opacity = '1';
+    fw.style.pointerEvents = 'auto';
   }
 }, { passive: true });
+
+// Toggle expandable widget
+function toggleWidget() {
+  const fw = document.getElementById('fwidget');
+  fw.classList.toggle('open');
+}
+
+// Close widget when clicking outside
+document.addEventListener('click', (e) => {
+  const fw = document.getElementById('fwidget');
+  if (fw && fw.classList.contains('open') && !fw.contains(e.target)) {
+    fw.classList.remove('open');
+  }
+});
+
+// Close widget when an item is clicked (so user sees their choice took effect)
+document.querySelectorAll('.fmitem').forEach(item => {
+  item.addEventListener('click', () => {
+    setTimeout(() => {
+      const fw = document.getElementById('fwidget');
+      if (fw) fw.classList.remove('open');
+    }, 200);
+  });
+});
 
 // Active nav link highlighting on scroll
 const sections = document.querySelectorAll('.sec[id]');
@@ -678,13 +736,45 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // FORM SUBMIT — bulletproof iframe method
+// Auto-format phone to +998-XX-XXX-XX-XX as user types
+function formatPhone(input) {
+  // Strip everything except digits
+  let digits = input.value.replace(/\D/g, '');
+  // Remove leading 998 if user typed it
+  if (digits.startsWith('998')) digits = digits.substring(3);
+  // Limit to 9 digits (Uzbek mobile number length)
+  digits = digits.substring(0, 9);
+  
+  // Build formatted string: +998-XX-XXX-XX-XX
+  let formatted = '+998';
+  if (digits.length > 0) formatted += '-' + digits.substring(0, 2);
+  if (digits.length > 2) formatted += '-' + digits.substring(2, 5);
+  if (digits.length > 5) formatted += '-' + digits.substring(5, 7);
+  if (digits.length > 7) formatted += '-' + digits.substring(7, 9);
+  
+  input.value = formatted;
+}
+
+// Validate phone format strictly
+function isValidPhone(phone) {
+  return /^\+998-\d{2}-\d{3}-\d{2}-\d{2}$/.test(phone);
+}
+
 function submitForm() {
   const name = document.getElementById('fname').value.trim();
   const phone = document.getElementById('fphone').value.trim();
   const btn = document.getElementById('submitBtn');
   
-  if (!name) { alert('Please enter your name.'); return; }
-  if (!phone) { alert('Please enter your phone number.'); return; }
+  if (!name) { 
+    alert(currentLang === 'uz' ? "Iltimos ismingizni kiriting." : currentLang === 'ru' ? "Введите ваше имя." : "Please enter your name."); 
+    return; 
+  }
+  
+  if (!phone || !isValidPhone(phone)) { 
+    alert(currentLang === 'uz' ? "Telefon raqamini quyidagi formatda kiriting: +998-XX-XXX-XX-XX" : currentLang === 'ru' ? "Введите номер в формате: +998-XX-XXX-XX-XX" : "Please enter phone in format: +998-XX-XXX-XX-XX"); 
+    document.getElementById('fphone').focus();
+    return; 
+  }
   
   btn.disabled = true;
   btn.textContent = 'Submitting...';
