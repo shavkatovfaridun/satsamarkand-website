@@ -14,16 +14,6 @@
   </url>
 
   <url>
-    <loc>https://satsamarkand.uz/about/</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://satsamarkand.uz/about/"/>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://satsamarkand.uz/uz/biz-haqimizda/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://satsamarkand.uz/ru/o-nas/"/>
-  </url>
-
-  <url>
     <loc>https://satsamarkand.uz/courses/</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -147,10 +137,49 @@
   </url>
   <url>
     <loc>https://satsamarkand.uz/blog/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://satsamarkand.uz/blog/how-to-score-1500-digital-sat/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satsamarkand.uz/blog/how-to-score-1500-digital-sat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satsamarkand.uz/blog/how-to-score-1500-digital-sat/"/>
+  </url>
+
+  <url>
+    <loc>https://satsamarkand.uz/blog/sat-vs-ielts-uzbekistan/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satsamarkand.uz/blog/sat-vs-ielts-uzbekistan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satsamarkand.uz/blog/sat-vs-ielts-uzbekistan/"/>
+  </url>
+
+  <url>
+    <loc>https://satsamarkand.uz/blog/sat-registration-uzbekistan-2026/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satsamarkand.uz/blog/sat-registration-uzbekistan-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satsamarkand.uz/blog/sat-registration-uzbekistan-2026/"/>
+  </url>
+
+  <url>
+    <loc>https://satsamarkand.uz/about/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satsamarkand.uz/about/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://satsamarkand.uz/uz/biz-haqimizda/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://satsamarkand.uz/ru/o-nas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satsamarkand.uz/about/"/>
+  </url>
+
   <url>
     <loc>https://satsamarkand.uz/uz/sat-kurslari-samarqand/</loc>
     <lastmod>2026-05-18</lastmod>

@@ -390,7 +390,7 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 <li><a href="/#about" data-en="About" data-uz="Biz" data-ru="О нас">About</a></li>
 <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Diagnostic" data-uz="Diagnostika" data-ru="Диагностика">Diagnostic</a></li>
 </ul>
-<div class="nright"><a href="#register" class="nenroll" data-en="Enroll Now" data-uz="Yozilish" data-ru="Записаться">Enroll Now</a><button class="nham" onclick="toggleNav()" aria-label="Menu"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="12" x2="19" y2="12"/><line x1="3" y1="18" x2="19" y2="18"/></svg></button></div>
+<div class="nright"><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="nenroll" data-en="Enroll Now" data-uz="Yozilish" data-ru="Записаться">Enroll Now</a><button class="nham" onclick="toggleMobileNav()" aria-label="Menu"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="12" x2="19" y2="12"/><line x1="3" y1="18" x2="19" y2="18"/></svg></button></div>
 </div></nav>
 <nav class="bc-nav" aria-label="breadcrumb">
 <div class="bc-inner">
@@ -420,61 +420,75 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 
 <div class="pg-wrap">
 <section class="pg-section">
-  <div class="slbl-pg" data-en="COMING SOON" data-uz="TEZDA" data-ru="&#1057;&#1050;&#1054;&#1056;&#1054;">COMING SOON</div>
-  <h2 class="pg-h2" data-en="Articles <em>launching soon.</em>" data-uz="Maqolalar <em>tez orada.</em>" data-ru="&#1057;&#1090;&#1072;&#1090;&#1100;&#1080; <em>&#1089;&#1082;&#1086;&#1088;&#1086;.</em>">Articles <em>launching soon.</em></h2>
-  <p class="pg-lead" data-en="We are writing a full content library for SAT students in Uzbekistan — in English, Uzbek, and Russian. Topics include Digital SAT strategy, university applications, score breakdowns, and student stories." data-uz="Biz O&#39;zbekistondagi SAT talabalari uchun to&#39;liq kontent kutubxonasini yozmoqdamiz — ingliz, o&#39;zbek va rus tillarida." data-ru="&#1052;&#1099; &#1087;&#1080;&#1096;&#1077;&#1084; &#1087;&#1086;&#1083;&#1085;&#1091;&#1102; &#1073;&#1080;&#1073;&#1083;&#1080;&#1086;&#1090;&#1077;&#1082;&#1091; &#1082;&#1086;&#1085;&#1090;&#1077;&#1085;&#1090;&#1072; &#1076;&#1083;&#1103; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074; SAT &#1074; &#1059;&#1079;&#1073;&#1077;&#1082;&#1080;&#1089;&#1090;&#1072;&#1085;&#1077;.">We are writing a full content library for SAT students in Uzbekistan — in English, Uzbek, and Russian.</p>
+  <div class="slbl-pg" data-en="LATEST ARTICLES" data-uz="SO&#39;NGGI MAQOLALAR" data-ru="&#1057;&#1042;&#1045;&#1046;&#1048;&#1045; &#1057;&#1058;&#1040;&#1058;&#1068;&#1048;">LATEST ARTICLES</div>
+  <h2 class="pg-h2" data-en="Expert guides <em>for Uzbek students.</em>" data-uz="O&#39;zbek talabalar uchun <em>ekspert qo&#39;llanmalar.</em>" data-ru="&#1069;&#1082;&#1089;&#1087;&#1077;&#1088;&#1090;&#1085;&#1099;&#1077; &#1088;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1072; <em>&#1076;&#1083;&#1103; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074;.</em>">Expert guides <em>for Uzbek students.</em></h2>
+  <p class="pg-lead" data-en="Practical SAT preparation advice from mentors who scored 1500+ themselves. In English, Uzbek, and Russian." data-uz="O&#39;zlari 1500+ olgan mentorlardan amaliy SAT maslahatlari." data-ru="&#1055;&#1088;&#1072;&#1082;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1089;&#1086;&#1074;&#1077;&#1090;&#1099; &#1086;&#1090; &#1084;&#1077;&#1085;&#1090;&#1086;&#1088;&#1086;&#1074;, &#1085;&#1072;&#1073;&#1088;&#1072;&#1074;&#1096;&#1080;&#1093; 1500+.">Practical SAT preparation advice from mentors who scored 1500+ themselves.</p>
 
   <style>
-  .blog-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:2rem}
-  @media(max-width:760px){.blog-preview-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:480px){.blog-preview-grid{grid-template-columns:1fr}}
-  .blog-preview-card{background:#fff;border:1px solid var(--bd);border-radius:16px;overflow:hidden;box-shadow:var(--ss)}
-  .blog-preview-top{background:linear-gradient(135deg,var(--navy),var(--blue));padding:28px 20px 20px;color:#fff}
-  .blog-preview-tag{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.5rem}
-  .blog-preview-title{font-family:var(--f);font-size:.95rem;font-weight:700;color:#fff;line-height:1.35}
-  .blog-preview-body{padding:16px 20px}
-  .blog-preview-desc{font-size:.8rem;color:var(--tm);line-height:1.6;margin-bottom:.8rem}
-  .blog-preview-coming{font-size:.72rem;font-weight:700;color:var(--tl);letter-spacing:.06em;text-transform:uppercase}
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:2rem}
+  @media(max-width:760px){.blog-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.blog-grid{grid-template-columns:1fr}}
+  .blog-card{background:#fff;border:1px solid var(--bd);border-radius:16px;overflow:hidden;box-shadow:var(--ss);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+  .blog-card:hover{box-shadow:var(--sl);transform:translateY(-3px)}
+  .blog-card-top{padding:28px 20px 20px}
+  .blog-card-top.clr-1{background:linear-gradient(135deg,#022049,#0450b4)}
+  .blog-card-top.clr-2{background:linear-gradient(135deg,#0450b4,#2979ff)}
+  .blog-card-top.clr-3{background:linear-gradient(135deg,#022049,#0661de)}
+  .blog-card-tag{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.5rem}
+  .blog-card-title{font-family:var(--f);font-size:.95rem;font-weight:700;color:#fff;line-height:1.35}
+  .blog-card-body{padding:16px 20px;flex:1;display:flex;flex-direction:column}
+  .blog-card-desc{font-size:.82rem;color:var(--tm);line-height:1.6;margin-bottom:.8rem;flex:1}
+  .blog-card-meta{font-size:.72rem;color:var(--tl);display:flex;gap:12px;align-items:center}
+  .blog-card-read{font-size:.76rem;font-weight:600;color:var(--blue);margin-top:10px;display:inline-flex;align-items:center;gap:4px}
   </style>
 
-  <div class="blog-preview-grid">
-    <div class="blog-preview-card">
-      <div class="blog-preview-top">
-        <div class="blog-preview-tag" data-en="GUIDE" data-uz="QO&#39;LLANMA" data-ru="&#1056;&#1059;&#1050;&#1054;&#1042;&#1054;&#1044;&#1057;&#1058;&#1042;&#1054;">GUIDE</div>
-        <div class="blog-preview-title" data-en="How to score 1500+ on the Digital SAT: a realistic 6-month plan" data-uz="Raqamli SATda 1500+ olish: 6 oylik reja" data-ru="&#1050;&#1072;&#1082; &#1085;&#1072;&#1073;&#1088;&#1072;&#1090;&#1100; 1500+ &#1085;&#1072; Digital SAT: &#1088;&#1077;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1087;&#1083;&#1072;&#1085;">How to score 1500+ on the Digital SAT: a realistic 6-month plan</div>
+  <div class="blog-grid">
+    <a href="/blog/how-to-score-1500-digital-sat/" class="blog-card">
+      <div class="blog-card-top clr-1">
+        <div class="blog-card-tag" data-en="GUIDE" data-uz="QO&#39;LLANMA" data-ru="&#1056;&#1059;&#1050;&#1054;&#1042;&#1054;&#1044;&#1057;&#1058;&#1042;&#1054;">GUIDE</div>
+        <div class="blog-card-title" data-en="How to Score 1500+ on the Digital SAT: A Month-by-Month Plan" data-uz="Digital SATda 1500+ olish: Oyma-oy reja" data-ru="&#1050;&#1072;&#1082; &#1085;&#1072;&#1073;&#1088;&#1072;&#1090;&#1100; 1500+ &#1085;&#1072; Digital SAT">How to Score 1500+ on the Digital SAT: A Month-by-Month Plan</div>
       </div>
-      <div class="blog-preview-body">
-        <div class="blog-preview-desc" data-en="A week-by-week breakdown from our top-scoring mentors." data-uz="Top mentorlarimizdantafsiliy haftalik reja." data-ru="&#1055;&#1086;&#1085;&#1077;&#1076;&#1077;&#1083;&#1100;&#1085;&#1099;&#1081; &#1087;&#1083;&#1072;&#1085; &#1086;&#1090; &#1085;&#1072;&#1096;&#1080;&#1093; &#1084;&#1077;&#1085;&#1090;&#1086;&#1088;&#1086;&#1074;.">A week-by-week breakdown from our top-scoring mentors.</div>
-        <div class="blog-preview-coming" data-en="Coming soon" data-uz="Tez orada" data-ru="&#1057;&#1082;&#1086;&#1088;&#1086;">Coming soon</div>
+      <div class="blog-card-body">
+        <div class="blog-card-desc" data-en="A realistic, step-by-step monthly roadmap from mentors who scored 1500+ themselves. Includes study schedule and key strategies." data-uz="1500+ olgan mentorlardan oyma-oy reja. O&#39;quv jadvali va asosiy strategiyalar." data-ru="&#1055;&#1088;&#1072;&#1082;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1081; &#1087;&#1083;&#1072;&#1085; &#1086;&#1090; &#1084;&#1077;&#1085;&#1090;&#1086;&#1088;&#1086;&#1074;, &#1085;&#1072;&#1073;&#1088;&#1072;&#1074;&#1096;&#1080;&#1093; 1500+.">A realistic, step-by-step monthly roadmap from mentors who scored 1500+ themselves.</div>
+        <div class="blog-card-meta">
+          <span>Faridun Shavkatov</span>
+          <span>Jan 15, 2026</span>
+          <span>8 min</span>
+        </div>
+        <span class="blog-card-read" data-en="Read article &#8594;" data-uz="O&#39;qish &#8594;" data-ru="&#1063;&#1080;&#1090;&#1072;&#1090;&#1100; &#8594;">Read article &#8594;</span>
       </div>
-    </div>
-    <div class="blog-preview-card">
-      <div class="blog-preview-top">
-        <div class="blog-preview-tag" data-en="COMPARISON" data-uz="TAQQOSLASH" data-ru="&#1057;&#1056;&#1040;&#1042;&#1053;&#1045;&#1053;&#1048;&#1045;">COMPARISON</div>
-        <div class="blog-preview-title" data-en="SAT vs IELTS: which should Uzbek students take in 2026?" data-uz="SAT va IELTS: 2026-yilda o&#39;zbek talabalar qaysinisini topshirishi kerak?" data-ru="SAT &#1080;&#1083;&#1080; IELTS: &#1095;&#1090;&#1086; &#1089;&#1076;&#1072;&#1074;&#1072;&#1090;&#1100; &#1091;&#1079;&#1073;&#1077;&#1082;&#1089;&#1082;&#1080;&#1084; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1072;&#1084; &#1074; 2026?">SAT vs IELTS: which should Uzbek students take in 2026?</div>
-      </div>
-      <div class="blog-preview-body">
-        <div class="blog-preview-desc" data-en="An honest comparison for students targeting US, Korean, and Turkish universities." data-uz="AQSh, Koreya va Turk universitetlarini maqsad qilgan talabalar uchun halol taqqoslash." data-ru="&#1063;&#1077;&#1089;&#1090;&#1085;&#1086;&#1077; &#1089;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077; &#1076;&#1083;&#1103; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074;.">An honest comparison for students targeting US, Korean, and Turkish universities.</div>
-        <div class="blog-preview-coming" data-en="Coming soon" data-uz="Tez orada" data-ru="&#1057;&#1082;&#1086;&#1088;&#1086;">Coming soon</div>
-      </div>
-    </div>
-    <div class="blog-preview-card">
-      <div class="blog-preview-top">
-        <div class="blog-preview-tag" data-en="STRATEGY" data-uz="STRATEGIYA" data-ru="&#1057;&#1058;&#1056;&#1040;&#1058;&#1045;&#1043;&#1048;&#1071;">STRATEGY</div>
-        <div class="blog-preview-title" data-en="Desmos calculator strategies that save time on SAT Math" data-uz="SAT Matematikada vaqt tejovchi Desmos kalkulyator strategiyalari" data-ru="&#1057;&#1090;&#1088;&#1072;&#1090;&#1077;&#1075;&#1080;&#1080; &#1082;&#1072;&#1083;&#1100;&#1082;&#1091;&#1083;&#1103;&#1090;&#1086;&#1088;&#1072; Desmos &#1076;&#1083;&#1103; &#1101;&#1082;&#1086;&#1085;&#1086;&#1084;&#1080;&#1080; &#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1080;">Desmos calculator strategies that save time on SAT Math</div>
-      </div>
-      <div class="blog-preview-body">
-        <div class="blog-preview-desc" data-en="The exact Desmos techniques our 800 Math mentor uses." data-uz="800 ball olgan Math mentorimiz ishlatadigan Desmos texnikalari." data-ru="&#1058;&#1086;&#1095;&#1085;&#1099;&#1077; &#1090;&#1077;&#1093;&#1085;&#1080;&#1082;&#1080; Desmos &#1086;&#1090; &#1085;&#1072;&#1096;&#1077;&#1075;&#1086; &#1084;&#1077;&#1085;&#1090;&#1086;&#1088;&#1072; &#1089; 800 &#1073;&#1072;&#1083;&#1083;&#1072;&#1084;&#1080; &#1087;&#1086; &#1084;&#1072;&#1090;&#1077;&#1084;&#1072;&#1090;&#1080;&#1082;&#1077;.">The exact Desmos techniques our 800 Math mentor uses.</div>
-        <div class="blog-preview-coming" data-en="Coming soon" data-uz="Tez orada" data-ru="&#1057;&#1082;&#1086;&#1088;&#1086;">Coming soon</div>
-      </div>
-    </div>
-  </div>
+    </a>
 
-  <div style="text-align:center;margin-top:2rem;padding:24px;background:var(--bg2);border-radius:14px">
-    <p style="font-size:.9rem;color:var(--t2);margin-bottom:.8rem" data-en="Get notified when new articles publish. Follow our Telegram channel." data-uz="Yangi maqolalar chiqganda xabar oling. Telegram kanalimizga obuna bo&#39;ling." data-ru="&#1055;&#1086;&#1083;&#1091;&#1095;&#1072;&#1081;&#1090;&#1077; &#1091;&#1074;&#1077;&#1076;&#1086;&#1084;&#1083;&#1077;&#1085;&#1080;&#1103; &#1086; &#1085;&#1086;&#1074;&#1099;&#1093; &#1089;&#1090;&#1072;&#1090;&#1100;&#1103;&#1093;. &#1055;&#1086;&#1076;&#1087;&#1080;&#1096;&#1080;&#1090;&#1077;&#1089;&#1100; &#1085;&#1072; Telegram.">Get notified when new articles publish. Follow our Telegram channel.</p>
-    <a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" class="btn-tg-pg" style="display:inline-flex">
-      <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      <span data-en="Follow @sat_samarkand" data-uz="@sat_samarkand kanalga obuna" data-ru="&#1055;&#1086;&#1076;&#1087;&#1080;&#1089;&#1072;&#1090;&#1100;&#1089;&#1103; &#1085;&#1072; @sat_samarkand">Follow @sat_samarkand</span>
+    <a href="/blog/sat-vs-ielts-uzbekistan/" class="blog-card">
+      <div class="blog-card-top clr-2">
+        <div class="blog-card-tag" data-en="COMPARISON" data-uz="TAQQOSLASH" data-ru="&#1057;&#1056;&#1040;&#1042;&#1053;&#1045;&#1053;&#1048;&#1045;">COMPARISON</div>
+        <div class="blog-card-title" data-en="SAT vs IELTS for Uzbek Students: Which Should You Take?" data-uz="SAT vs IELTS: O&#39;zbek talabalar uchun qaysi biri?" data-ru="SAT &#1080;&#1083;&#1080; IELTS: &#1095;&#1090;&#1086; &#1089;&#1076;&#1072;&#1074;&#1072;&#1090;&#1100;?">SAT vs IELTS for Uzbek Students: Which Should You Take?</div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-desc" data-en="Complete comparison of SAT and IELTS — purpose, format, cost, difficulty, and which to choose based on your university goals." data-uz="SAT va IELTS to&#39;liq taqqoslamasi — maqsad, format, narx va qaysinini tanlash." data-ru="&#1055;&#1086;&#1083;&#1085;&#1086;&#1077; &#1089;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077; SAT &#1080; IELTS &#1076;&#1083;&#1103; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074; &#1059;&#1079;&#1073;&#1077;&#1082;&#1080;&#1089;&#1090;&#1072;&#1085;&#1072;.">Complete comparison of SAT and IELTS — purpose, format, cost, and which to choose based on your university goals.</div>
+        <div class="blog-card-meta">
+          <span>Faridun Shavkatov</span>
+          <span>Jan 22, 2026</span>
+          <span>7 min</span>
+        </div>
+        <span class="blog-card-read" data-en="Read article &#8594;" data-uz="O&#39;qish &#8594;" data-ru="&#1063;&#1080;&#1090;&#1072;&#1090;&#1100; &#8594;">Read article &#8594;</span>
+      </div>
+    </a>
+
+    <a href="/blog/sat-registration-uzbekistan-2026/" class="blog-card">
+      <div class="blog-card-top clr-3">
+        <div class="blog-card-tag" data-en="REGISTRATION" data-uz="RO&#39;YXATDAN O&#39;TISH" data-ru="&#1056;&#1045;&#1043;&#1048;&#1057;&#1058;&#1056;&#1040;&#1062;&#1048;&#1071;">REGISTRATION</div>
+        <div class="blog-card-title" data-en="SAT Registration in Uzbekistan 2026: Step-by-Step Guide" data-uz="O&#39;zbekistonda SAT ro&#39;yxatdan o&#39;tish 2026" data-ru="&#1056;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1103; &#1085;&#1072; SAT &#1074; &#1059;&#1079;&#1073;&#1077;&#1082;&#1080;&#1089;&#1090;&#1072;&#1085;&#1077; 2026">SAT Registration in Uzbekistan 2026: Step-by-Step Guide</div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-desc" data-en="Test dates, test centers, registration fees, deadlines, and exactly what to bring on test day. Everything you need to know." data-uz="Sinov sanalari, markazlar, to&#39;lov, muddatlar va sinov kunida nima olib borish kerak." data-ru="&#1044;&#1072;&#1090;&#1099; &#1090;&#1077;&#1089;&#1090;&#1086;&#1074;, &#1094;&#1077;&#1085;&#1090;&#1088;&#1099;, &#1089;&#1090;&#1086;&#1080;&#1084;&#1086;&#1089;&#1090;&#1100; &#1080; &#1095;&#1090;&#1086; &#1074;&#1079;&#1103;&#1090;&#1100; &#1085;&#1072; &#1101;&#1082;&#1079;&#1072;&#1084;&#1077;&#1085;.">Test dates, test centers, registration fees, and exactly what to bring on test day.</div>
+        <div class="blog-card-meta">
+          <span>Faridun Shavkatov</span>
+          <span>Feb 1, 2026</span>
+          <span>6 min</span>
+        </div>
+        <span class="blog-card-read" data-en="Read article &#8594;" data-uz="O&#39;qish &#8594;" data-ru="&#1063;&#1080;&#1090;&#1072;&#1090;&#1100; &#8594;">Read article &#8594;</span>
+      </div>
     </a>
   </div>
 </section>
@@ -491,7 +505,7 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 <a href="#mock" data-en="Free Mock" data-uz="Bepul Mock" data-ru="Mock">Free Mock</a>
 <a href="#pricing" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a>
 <a href="#mentors" data-en="Mentors" data-uz="Mentorlar" data-ru="Менторы">Mentors</a>
-<a href="#register" data-en="Register" data-uz="Yozilish" data-ru="Запись">Register</a>
+<a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Register" data-uz="Yozilish" data-ru="Запись">Register</a>
 <a href="https://diagnostic.satsamarkand.uz" target="_blank" data-en="Diagnostic" data-uz="Diagnostika" data-ru="Диагностика">Diagnostic</a>
 </div>
 <div class="fcol"><h4 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h4>
@@ -532,7 +546,7 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
   </button>
 </div>
 
-<div class="mob-sticky"><a href="#register" data-en="Enroll Now →" data-uz="Yozilish →" data-ru="Записаться →">Enroll Now →</a></div>
+<div class="mob-sticky"><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now →" data-uz="Yozilish →" data-ru="Записаться →">Enroll Now →</a></div>
 
 <div class="exit-popup" id="exitPopup">
 <div class="exit-card">
