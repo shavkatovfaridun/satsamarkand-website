@@ -460,7 +460,7 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 .btnsw{display:inline-flex;align-items:center;gap:6px;background:transparent;color:rgba(255,255,255,.8);border:1.5px solid rgba(255,255,255,.27);padding:13px 26px;border-radius:980px;font-size:.95rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:all .15s}
 .btnsw:hover{border-color:rgba(255,255,255,.6);color:#fff}
 .footer{background:var(--navy3);border-top:1px solid rgba(255,255,255,.05);padding:52px 5vw 32px}
-.fgrid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.fgrid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:2rem}
 .flogrow{display:flex;align-items:center;gap:8px;margin-bottom:.7rem}
 .flogrow img{height:24px;width:24px}
 .fbrand{font-size:.82rem;font-weight:700;color:#fff;letter-spacing:.04em}
@@ -661,6 +661,22 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 .breadcrumb-list a:hover{text-decoration:underline}
 .breadcrumb-list li:last-child{font-size:.78rem;color:var(--tm)}
 .bc-sep{color:var(--tl);font-size:.78rem}
+/* Gen-Z micro-animations */
+@media(prefers-reduced-motion:no-preference){
+  .pillar-section,.why-card,.prog-card,.res-card,.step-item,.hero-card,.trust-bar,.internal-link-item{
+    opacity:0;transform:translateY(28px);
+    transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1)}
+  .pillar-section.anim-in,.why-card.anim-in,.prog-card.anim-in,.res-card.anim-in,.step-item.anim-in,.hero-card.anim-in,.trust-bar.anim-in,.internal-link-item.anim-in{
+    opacity:1;transform:none}
+  .prog-card{transition-property:opacity,transform,box-shadow,border-color}
+  .prog-card:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 16px 40px rgba(0,0,0,.18)}
+  .prog-card.anim-in:hover{transform:translateY(-6px) scale(1.01)}
+  .why-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.15)}
+  .why-card{transition-property:opacity,transform,box-shadow}
+  .res-card:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 12px 32px rgba(0,0,0,.18)}
+  .res-card{transition-property:opacity,transform,box-shadow}
+  .internal-link-item:hover{transform:translateY(-3px)}
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H7P88TD85G"></script>
@@ -1086,13 +1102,21 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 <p class="ftagline" data-en="Samarkand’s official SAT, AP & IELTS prep center." data-uz="Samarqandning rasmiy markazi." data-ru="Официальный центр.">Samarkand’s official SAT, AP & IELTS prep center.</p>
 <p class="fpartner" data-en="Partners: Joylink & Millennium" data-uz="Joylink & Millennium" data-ru="Joylink & Millennium">Partners: Joylink & Millennium</p>
 </div>
-<div class="fcol"><h4 data-en="Sections" data-uz="Bo'limlar" data-ru="Разделы">Sections</h4>
-<a href="#universities" data-en="Universities" data-uz="Universitetlar" data-ru="Университеты">Universities</a>
-<a href="#mock" data-en="Free Mock" data-uz="Bepul Mock" data-ru="Mock">Free Mock</a>
-<a href="#pricing" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a>
-<a href="#mentors" data-en="Mentors" data-uz="Mentorlar" data-ru="Менторы">Mentors</a>
-<a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Register" data-uz="Yozilish" data-ru="Запись">Register</a>
-<a href="https://diagnostic.satsamarkand.uz" target="_blank" data-en="Diagnostic" data-uz="Diagnostika" data-ru="Диагностика">Diagnostic</a>
+<div class="fcol"><h4 data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</h4>
+<a href="/sat-course-samarkand/" data-en="SAT Course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT Course</a>
+<a href="/digital-sat/" data-en="Digital SAT" data-uz="Raqamli SAT" data-ru="Цифровой SAT">Digital SAT</a>
+<a href="/sat-math-prep/" data-en="SAT Math" data-uz="SAT Matematika" data-ru="Математика SAT">SAT Math</a>
+<a href="/sat-english-prep/" data-en="SAT English" data-uz="SAT Ingliz tili" data-ru="Английский SAT">SAT English</a>
+<a href="/sat-tutoring-samarkand/" data-en="Tutoring" data-uz="Individual dars" data-ru="Репетиторство">Tutoring</a>
+<a href="/free-sat-diagnostic-test/" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a>
+</div>
+<div class="fcol"><h4 data-en="About" data-uz="Haqimizda" data-ru="О нас">About</h4>
+<a href="/teachers/" data-en="Teachers" data-uz="O'qituvchilar" data-ru="Учителя">Teachers</a>
+<a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a>
+<a href="/pricing/" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a>
+<a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a>
+<a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a>
+<a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакт">Contact</a>
 </div>
 <div class="fcol"><h4 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h4>
 <a href="https://t.me/sat_samarkand" target="_blank">Telegram</a>
@@ -1234,6 +1258,23 @@ window.addEventListener('scroll', () => {
     fw.style.bottom = footerTop < winH ? (winH - footerTop + 20) + 'px' : '28px';
   }
 });
+</script>
+<script>
+(function(){
+  if(!window.IntersectionObserver)return;
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('anim-in');obs.unobserve(e.target);}
+    });
+  },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+  document.addEventListener('DOMContentLoaded',function(){
+    var sel='.pillar-section,.why-card,.prog-card,.res-card,.step-item,.hero-card,.trust-bar,.internal-link-item';
+    document.querySelectorAll(sel).forEach(function(el,i){
+      el.style.transitionDelay=(i*0.035)+'s';
+      obs.observe(el);
+    });
+  });
+})();
 </script>
 </body>
 </html>
