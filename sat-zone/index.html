@@ -288,6 +288,27 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
   .nlinks.open a{height:48px;padding:0 24px;border-bottom:1px solid var(--bg2)!important;color:var(--t)!important;font-size:.92rem;width:100%}
   .nlinks.open a:hover{background:var(--bg2)}
 }
+
+/* ── Dropdown nav ── */
+.nlinks li.has-dd{position:relative}
+.nlinks .dd{
+  display:none;position:absolute;top:calc(100% + 2px);left:0;
+  background:#fff;border:1px solid var(--bd,#d2d2d7);border-radius:10px;
+  min-width:210px;box-shadow:0 8px 28px rgba(0,0,0,.13);z-index:600;
+  list-style:none;padding:5px 0}
+.nlinks li.has-dd:hover .dd{display:block}
+.nlinks .dd li a{
+  height:auto!important;padding:9px 16px!important;
+  font-size:.8rem!important;display:block;white-space:nowrap;
+  border-bottom:none!important;line-height:1.4}
+.nlinks .dd li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)!important}
+.nlinks .dd-arrow{font-size:.65rem;margin-left:2px;opacity:.6}
+/* Mobile section headers */
+.mob-nav .mob-sec{
+  font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--tl,#86868b);padding:10px 24px 3px;margin-top:4px;
+  pointer-events:none;display:block}
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H7P88TD85G"></script>
@@ -312,13 +333,31 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
     </a>
     <ul class="nlinks" id="nlinks">
 <li><a onclick="closeMobileNav()" href="/" data-en="Home" data-uz="Bosh sahifa" data-ru="Главная">Home</a></li>
-<li><a onclick="closeMobileNav()" href="/about/" data-en="About" data-uz="Biz haqimizda" data-ru="О нас">About</a></li>
-<li><a onclick="closeMobileNav()" href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a></li>
-<li><a onclick="closeMobileNav()" href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a></li>
+<li class="has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses<span class="dd-arrow">▾</span></a>
+  <ul class="dd">
+    <li><a onclick="closeMobileNav()" href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
+    <li><a onclick="closeMobileNav()" href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
+    <li><a onclick="closeMobileNav()" href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
+    <li><a onclick="closeMobileNav()" href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
+  </ul>
+</li>
+<li class="has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions<span class="dd-arrow">▾</span></a>
+  <ul class="dd">
+    <li><a onclick="closeMobileNav()" href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a></li>
+    <li><a onclick="closeMobileNav()" href="/universities/" data-en="76+ Universities" data-uz="76+ Universitetlar" data-ru="76+ Университетов">76+ Universities</a></li>
+  </ul>
+</li>
 <li><a onclick="closeMobileNav()" href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
-<li><a onclick="closeMobileNav()" href="/sat-zone/" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a></li>
-<li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Test" data-uz="Bepul test" data-ru="Бесплатный тест">Free Test</a></li>
+<li class="has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About<span class="dd-arrow">▾</span></a>
+  <ul class="dd">
+    <li><a onclick="closeMobileNav()" href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+    <li><a onclick="closeMobileNav()" href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></li>
+  </ul>
+</li>
+<li><a onclick="closeMobileNav()" href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
+<li><a onclick="closeMobileNav()" href="/sat-zone/" data-en="SAT Zone" data-uz="SAT Zone" data-ru="SAT Zone">SAT Zone</a></li>
 <li><a onclick="closeMobileNav()" href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
+<li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Test" data-uz="Bepul test" data-ru="Бесплатный тест">Free Test</a></li>
 </ul>
     <div class="nright">
       <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="nenroll" data-en="Enroll Now" data-uz="Ro'yxatdan O'tish" data-ru="Записаться">Enroll Now</a>
@@ -327,6 +366,28 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
       </button>
     </div>
   </div>
+</nav>
+<nav class="mob-nav" id="mobnav">
+<ul>
+<li><a href="/" onclick="closeMobileNav()" data-en="Home" data-uz="Bosh sahifa" data-ru="Главная">Home</a></li>
+<li><span class="mob-sec" data-en="COURSES" data-uz="KURSLAR" data-ru="КУРСЫ">COURSES</span></li>
+<li><a href="/courses/" onclick="closeMobileNav()" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
+<li><a href="/schedule/" onclick="closeMobileNav()" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
+<li><a href="/intensive-sat-bootcamp/" onclick="closeMobileNav()" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
+<li><a href="/digital-sat/" onclick="closeMobileNav()" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
+<li><span class="mob-sec" data-en="ADMISSIONS" data-uz="QABUL" data-ru="ПОСТУПЛЕНИЕ">ADMISSIONS</span></li>
+<li><a href="/admissions/" onclick="closeMobileNav()" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг">Admissions Consulting</a></li>
+<li><a href="/universities/" onclick="closeMobileNav()" data-en="76+ Universities" data-uz="76+ Universitetlar" data-ru="76+ Университетов">76+ Universities</a></li>
+<li><a href="/results/" onclick="closeMobileNav()" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
+<li><span class="mob-sec" data-en="ABOUT" data-uz="BIZ" data-ru="О НАС">ABOUT</span></li>
+<li><a href="/about/" onclick="closeMobileNav()" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+<li><a href="/teachers/" onclick="closeMobileNav()" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Преподаватели">Our Teachers</a></li>
+<li><a href="/blog/" onclick="closeMobileNav()" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
+<li><a href="/sat-zone/" onclick="closeMobileNav()" data-en="SAT Zone" data-uz="SAT Zone" data-ru="SAT Zone">SAT Zone</a></li>
+<li><a href="/contact/" onclick="closeMobileNav()" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
+<li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Test" data-uz="Bepul test" data-ru="Бесплатный тест">Free Test</a></li>
+<li><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="mob-enroll" data-en="Enroll Now →" data-uz="Yozilish →" data-ru="Записаться →">Enroll Now →</a></li>
+</ul>
 </nav>
 
 <div class="szhero">
