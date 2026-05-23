@@ -490,6 +490,8 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 .nham.open svg line:first-child{transform:translateY(6px) rotate(45deg)}
 .nham.open svg line:nth-child(2){opacity:0;transform:scaleX(0)}
 .nham.open svg line:last-child{transform:translateY(-6px) rotate(-45deg)}
+/* Show hamburger on laptops too */
+@media(max-width:1280px){.nlinks{display:none!important}.nham{display:block!important}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H7P88TD85G"></script>

@@ -473,6 +473,8 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 .nham.open svg line:first-child{transform:translateY(6px) rotate(45deg)}
 .nham.open svg line:nth-child(2){opacity:0;transform:scaleX(0)}
 .nham.open svg line:last-child{transform:translateY(-6px) rotate(-45deg)}
+/* Show hamburger on laptops too */
+@media(max-width:1280px){.nlinks{display:none!important}.nham{display:block!important}}
 </style>
 <style>
 .boot-hero{background:linear-gradient(135deg,#010e24 0%,#0a1a40 50%,#0d2d5e 100%);padding:80px 5vw 64px;text-align:center;color:#fff;position:relative;overflow:hidden}
