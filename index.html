@@ -593,6 +593,19 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 /* Show hamburger on laptops too */
 @media(max-width:1280px){.nlinks{display:none!important}.nham{display:block!important}}
 
+/* ── Results Ticker ── */
+.res-ticker{display:flex;align-items:center;gap:16px;background:#f0f4ff;border:1px solid #d4e0ff;border-radius:12px;padding:10px 20px;margin:32px 0;overflow:hidden}
+.res-ticker-label{font-size:10px;font-weight:700;letter-spacing:.12em;color:#0661de;white-space:nowrap;text-transform:uppercase}
+.res-ticker-track{overflow:hidden;flex:1;mask-image:linear-gradient(90deg,transparent,#000 60px,#000 calc(100% - 60px),transparent)}
+.res-ticker-inner{display:flex;gap:48px;white-space:nowrap;animation:_ticker 28s linear infinite}
+.rtick{font-size:13px;color:#1d1d1f;white-space:nowrap}
+.rtick strong{color:#022049;font-weight:700}
+@keyframes _ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@media(max-width:600px){.res-ticker{flex-direction:column;align-items:flex-start;gap:8px;padding:12px 16px}.res-ticker-label{font-size:9px}}
+
+/* ── Pillar CTA tag ── */
+.pillar-cta-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;color:#0661de;background:#e8f0ff;border:1px solid #c7d9ff;border-radius:20px;padding:6px 16px;margin-bottom:18px;text-transform:uppercase}
+
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    SITE-WIDE ANIMATION SYSTEM
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -757,8 +770,8 @@ nav.scrolled{
     <div class="pillar-hero-badge">
       <span data-en="SAMARKAND'S #1 SAT PREP CENTER" data-uz="SAMARQANDNING #1 SAT MARKAZI" data-ru="ЦЕНТР SAT №1 В САМАРКАНДЕ">SAMARKAND'S #1 SAT PREP CENTER</span>
     </div>
-    <h1 data-en="The best <em>SAT course</em> in Samarkand." data-uz="Samarqandda eng yaxshi <em>SAT kursi.</em>" data-ru="Лучший <em>курс SAT</em> в Самарканде.">The best <em>SAT course</em> in Samarkand.</h1>
-    <p class="pillar-hero-sub" data-en="Expert mentors with verified 1500+ scores. Small groups, weekly mock tests, and a guaranteed path to your target university." data-uz="Tasdiqlangan 1500+ ballli tajribali mentorlar. Kichik guruhlar, haftalik mock testlar va kafolatlangan yo'l." data-ru="Опытные менторы с подтверждёнными баллами 1500+. Маленькие группы, еженедельные пробники, гарантированный результат.">Expert mentors with verified 1500+ scores. Small groups, weekly mock tests, and a guaranteed path to your target university.</p>
+    <h1 data-en="Score 1400+. Get into the university you actually want." data-uz="1400+ oling. Haqiqatan xohlagan universitetingizga kiring." data-ru="Набери 1400+. Поступи в университет, о котором мечтаешь.">Score 1400+. Get into the university you actually want.</h1>
+    <p class="pillar-hero-sub" data-en="Samarkand's only SAT center with a verified 1500+ guarantee. 200+ students trained. Top score 1530. Mentors who scored 1500+ themselves — not theory teachers." data-uz="Samarqandda tasdiqlangan 1500+ kafolati bor yagona SAT markaz. 200+ talaba. Top ball 1530. O'zlari 1500+ olgan mentorlar — nazariyachilar emas." data-ru="Единственный SAT-центр в Самарканде с подтверждённой гарантией 1500+. 200+ студентов. Топ-балл 1530. Менторы, которые сами набрали 1500+.">Samarkand's only SAT center with a verified 1500+ guarantee. 200+ students trained. Top score 1530. Mentors who scored 1500+ themselves — not theory teachers.</p>
     <div class="pillar-hero-stats">
       <div class="pillar-stat">
         <span class="pillar-stat-num">200+</span>
@@ -778,12 +791,10 @@ nav.scrolled{
       </div>
     </div>
     <div class="pillar-hero-btns">
-      <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="btn-tg-hero">
-        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        <span data-en="Register via Telegram" data-uz="Telegram orqali yozilish" data-ru="Записаться через Telegram">Register via Telegram</span>
-      </a>
-      <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="btn-ghost-hero" data-en="Free Diagnostic Test" data-uz="Bepul Diagnostika" data-ru="Бесплатный тест">Free Diagnostic Test</a>
+      <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="btn-tg-hero" data-en="Take Free Diagnostic Test →" data-uz="Bepul Diagnostika →" data-ru="Пройти бесплатный тест →">Take Free Diagnostic Test →</a>
+      <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="btn-ghost-hero" data-en="Enroll via Telegram" data-uz="Telegram orqali yozilish" data-ru="Записаться через Telegram">Enroll via Telegram</a>
     </div>
+    <p style="font-size:.78rem;color:var(--tl);margin-top:.7rem" data-en="40 questions · 40 minutes · Free · No sign-up needed" data-uz="40 savol · 40 daqiqa · Bepul · Ro'yxatdan o'tish shart emas" data-ru="40 вопросов · 40 минут · Бесплатно · Без регистрации">40 questions · 40 minutes · Free · No sign-up needed</p>
   </div>
 
   <div class="hero-card">
@@ -822,12 +833,33 @@ nav.scrolled{
 
 <div class="pillar-wrap">
 
+  <!-- ═══ RESULTS TICKER ═══ -->
+  <div class="res-ticker">
+    <div class="res-ticker-label" data-en="RECENT RESULTS" data-uz="SO'NGGI NATIJALAR" data-ru="ПОСЛЕДНИЕ РЕЗУЛЬТАТЫ">RECENT RESULTS</div>
+    <div class="res-ticker-track">
+      <div class="res-ticker-inner">
+        <span class="rtick">✓ Muhammad — <strong>1510</strong> first attempt</span>
+        <span class="rtick">✓ Shahriyor — <strong>1500</strong> in 3 months</span>
+        <span class="rtick">✓ Dilmurod — <strong>1230 → 1500</strong> at age 16</span>
+        <span class="rtick">✓ Sarvinoz — <strong>1440</strong> from B2 English, math beginner</span>
+        <span class="rtick">✓ Abdulla — <strong>1220 → 1440</strong> in 1.5 months</span>
+        <span class="rtick">✓ Abdulloh — <strong>1410</strong> from IELTS 7.5</span>
+        <span class="rtick">✓ Muhammad — <strong>1510</strong> first attempt</span>
+        <span class="rtick">✓ Shahriyor — <strong>1500</strong> in 3 months</span>
+        <span class="rtick">✓ Dilmurod — <strong>1230 → 1500</strong> at age 16</span>
+        <span class="rtick">✓ Sarvinoz — <strong>1440</strong> from B2 English, math beginner</span>
+        <span class="rtick">✓ Abdulla — <strong>1220 → 1440</strong> in 1.5 months</span>
+        <span class="rtick">✓ Abdulloh — <strong>1410</strong> from IELTS 7.5</span>
+      </div>
+    </div>
+  </div>
+
   <!-- ═══ WHY SAT SAMARKAND ═══ -->
   <section class="pillar-section" id="about">
     <span id="mentors" aria-hidden="true"></span>
     <div class="pillar-section-label" data-en="WHY US" data-uz="NIMA UCHUN BIZ" data-ru="ПОЧЕМУ МЫ">WHY US</div>
-    <h2 class="pillar-h2" data-en="Why students choose <em>SAT Samarkand.</em>" data-uz="Talabalar nima uchun <em>SAT Samarqand</em>ni tanlaydi." data-ru="Почему студенты выбирают <em>SAT Samarkand.</em>">Why students choose <em>SAT Samarkand.</em></h2>
-    <p class="pillar-lead" data-en="SAT Samarkand is the first dedicated SAT preparation center in Samarkand, Uzbekistan. Since August 2024, we have helped 200+ students reach their target scores and gain admission to universities across the USA, Korea, and Turkey." data-uz="SAT Samarqand — Samarqanddagi birinchi maxsus SAT tayyorgarlik markazi. 2024-yil avgustdan beri biz 200+ talabaga maqsadli ball olishda va AQSh, Koreya hamda Turkiyadagi universitetlarga kirishda yordam berdik." data-ru="SAT Samarkand — первый специализированный центр подготовки к SAT в Самарканде. С августа 2024 года мы помогли 200+ студентам достичь целевых баллов и поступить в университеты США, Кореи и Турции.">SAT Samarkand is the first dedicated SAT preparation center in Samarkand, Uzbekistan. Since August 2024, we have helped 200+ students reach their target scores and gain admission to universities across the USA, Korea, and Turkey.</p>
+    <h2 class="pillar-h2" data-en="6 reasons our students reach <em>1400+.</em>" data-uz="O'quvchilarimiz <em>1400+</em> olishining 6 sababi." data-ru="6 причин, почему наши студенты набирают <em>1400+.</em>">6 reasons our students reach <em>1400+.</em></h2>
+    <p class="pillar-lead" data-en="Since August 2024, 200+ students have trusted SAT Samarkand. Here's exactly what makes the difference." data-uz="2024-yil avgustdan beri 200+ talaba SAT Samarqandga ishondi. Mana, nima farq qiladi." data-ru="С августа 2024 года 200+ студентов доверились SAT Samarkand. Вот что именно делает разницу.">Since August 2024, 200+ students have trusted SAT Samarkand. Here's exactly what makes the difference.</p>
     <div class="why-grid">
       <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
@@ -1077,12 +1109,14 @@ nav.scrolled{
 
   <!-- ═══ FINAL CTA ═══ -->
   <div class="pillar-cta-section" id="register">
-    <h2 data-en="Ready to start your <em>SAT journey?</em>" data-uz="SAT <em>sayohatingizni</em> boshlashga tayyormisiz?" data-ru="Готовы начать свой <em>путь к SAT?</em>">Ready to start your <em>SAT journey?</em></h2>
-    <p data-en="Take the free diagnostic test and find out exactly where you stand. Then register via Telegram — we respond in minutes." data-uz="Bepul diagnostika testini toping va o'z darajangizni aniq bilib oling. Keyin Telegram orqali yoziling — daqiqalar ichida javob beramiz." data-ru="Пройдите бесплатный диагностический тест и узнайте точно свой уровень. Затем запишитесь через Telegram — ответим в течение минут.">Take the free diagnostic test and find out exactly where you stand. Then register via Telegram — we respond in minutes.</p>
+    <div class="pillar-cta-tag" data-en="FREE · NO COMMITMENT · 40 MINUTES" data-uz="BEPUL · MAJBURIYATSIZ · 40 DAQIQA" data-ru="БЕСПЛАТНО · БЕЗ ОБЯЗАТЕЛЬСТВ · 40 МИНУТ">FREE · NO COMMITMENT · 40 MINUTES</div>
+    <h2 data-en="Know your SAT level <em>today.</em>" data-uz="SAT darajangizni <em>bugun</em> bilib oling." data-ru="Узнай свой уровень SAT <em>сегодня.</em>">Know your SAT level <em>today.</em></h2>
+    <p data-en="Take our free 40-question diagnostic. No sign-up, no pressure. You'll know exactly where you stand and what to fix — in under an hour." data-uz="Bizning bepul 40 savollik diagnostikani toping. Ro'yxatdan o'tish shart emas, bosim yo'q. Bir soat ichida darajangizni va nima tuzatish kerakligini bilib olasiz." data-ru="Пройди нашу бесплатную диагностику из 40 вопросов. Без регистрации, без давления. За час узнаешь свой уровень и что именно нужно исправить.">Take our free 40-question diagnostic. No sign-up, no pressure. You'll know exactly where you stand and what to fix — in under an hour.</p>
     <div class="pillar-cta-btns">
-      <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="btn-tg-hero" data-en="Register via Telegram" data-uz="Telegram orqali yozilish" data-ru="Записаться через Telegram">Register via Telegram</a>
-      <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="btn-ghost-hero" data-en="Free Diagnostic Test" data-uz="Bepul Diagnostika" data-ru="Бесплатный тест">Free Diagnostic Test</a>
+      <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="btn-tg-hero" data-en="Take Free Diagnostic →" data-uz="Bepul Diagnostika →" data-ru="Пройти диагностику →">Take Free Diagnostic →</a>
+      <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="btn-ghost-hero" data-en="Enroll via Telegram" data-uz="Telegram orqali yozilish" data-ru="Записаться через Telegram">Enroll via Telegram</a>
     </div>
+    <p style="font-size:.78rem;color:var(--tl);margin-top:1rem" data-en="Already know your level? Message us and we'll place you in the right group today." data-uz="Darajangizni allaqachon bilasizmi? Bizga yozing va bugun to'g'ri guruhga joylashamiz." data-ru="Уже знаешь свой уровень? Напиши нам — сегодня же определим в нужную группу.">Already know your level? Message us and we'll place you in the right group today.</p>
   </div>
 
   <!-- ═══ INTERNAL LINKS ═══ -->
