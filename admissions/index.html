@@ -855,42 +855,51 @@ document.head.appendChild(ddStyle);
 </script>
 
 <script>
-/* Dropdown: fixed-position anchored via JS (bypasses backdrop-filter stacking) */
+/* Dropdown: portal pattern — teleports .dd to body to escape backdrop-filter stacking context */
 (function(){
   var timers = {};
-  function positionDD(li){
+  var ddMap = [];
+
+  document.querySelectorAll('.nlinks li.has-dd').forEach(function(li){
     var dd = li.querySelector('.dd');
     if(!dd) return;
-    var r = li.getBoundingClientRect();
-    dd.style.top  = r.bottom + 'px';
-    dd.style.left = r.left   + 'px';
-  }
-  document.querySelectorAll('.nlinks li.has-dd').forEach(function(li){
+    document.body.appendChild(dd);
+    dd.style.display = 'none';
+    ddMap.push({li:li, dd:dd});
+
     var id = Math.random();
-    var dd = li.querySelector('.dd');
-    li.addEventListener('mouseenter', function(){
+
+    function openDD(){
       clearTimeout(timers[id]);
-      document.querySelectorAll('.nlinks li.has-dd').forEach(function(x){ x.classList.remove('dd-open'); });
-      positionDD(li);
-      li.classList.add('dd-open');
-    });
-    li.addEventListener('mouseleave', function(){
-      timers[id] = setTimeout(function(){ li.classList.remove('dd-open'); }, 200);
-    });
-    if(dd){
-      dd.addEventListener('mouseenter', function(){ clearTimeout(timers[id]); });
-      dd.addEventListener('mouseleave', function(){
-        timers[id] = setTimeout(function(){ li.classList.remove('dd-open'); }, 200);
-      });
+      ddMap.forEach(function(item){ if(item.li !== li) item.dd.style.display = 'none'; });
+      var r = li.getBoundingClientRect();
+      dd.style.top  = r.bottom + 'px';
+      dd.style.left = r.left   + 'px';
+      dd.style.display = 'block';
     }
+    function closeDD(){
+      timers[id] = setTimeout(function(){ dd.style.display = 'none'; }, 200);
+    }
+
+    li.addEventListener('mouseenter', openDD);
+    li.addEventListener('mouseleave', closeDD);
+    dd.addEventListener('mouseenter', function(){ clearTimeout(timers[id]); });
+    dd.addEventListener('mouseleave', closeDD);
   });
+
   document.addEventListener('click', function(e){
-    if(!e.target.closest('.has-dd'))
-      document.querySelectorAll('.nlinks li.has-dd').forEach(function(x){ x.classList.remove('dd-open'); });
+    if(!e.target.closest('.has-dd') && !e.target.closest('.dd'))
+      ddMap.forEach(function(item){ item.dd.style.display = 'none'; });
   });
+
   window.addEventListener('scroll', function(){
-    var open = document.querySelector('.nlinks li.has-dd.dd-open');
-    if(open) positionDD(open);
+    ddMap.forEach(function(item){
+      if(item.dd.style.display === 'block'){
+        var r = item.li.getBoundingClientRect();
+        item.dd.style.top  = r.bottom + 'px';
+        item.dd.style.left = r.left   + 'px';
+      }
+    });
   }, {passive:true});
 })();
 </script>
