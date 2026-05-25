@@ -586,7 +586,7 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
 .seo-content-block h2{font-family:var(--f);font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.8rem}
 .seo-content-block p{font-size:.88rem;color:var(--tm);line-height:1.8;margin-bottom:.6rem}
 
-.breadcrumb-nav{background:rgba(2,32,73,.04);border-bottom:1px solid rgba(2,32,73,.08)}
+.breadcrumb-nav{background:rgba(2,32,73,.04);border-bottom:1px solid rgba(2,32,73,.08);pointer-events:none}.breadcrumb-list a,.breadcrumb-list li{pointer-events:auto}
 .breadcrumb-inner{max-width:1100px;margin:0 auto;padding:10px 5vw}
 .breadcrumb-list{list-style:none;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .breadcrumb-list a{font-size:.78rem;color:var(--blue);text-decoration:none;font-weight:500}
@@ -608,7 +608,7 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
   background:#fff;border:1px solid var(--bd,#d2d2d7);border-radius:10px;
   min-width:210px;box-shadow:0 8px 28px rgba(0,0,0,.13);z-index:600;
   list-style:none;padding:5px 0}
-.nlinks li.has-dd:hover .dd{display:block}
+.nlinks li.has-dd.dd-open .dd{display:block}
 .nlinks .dd li a{
   height:auto!important;padding:9px 16px!important;
   font-size:.8rem!important;display:block;white-space:nowrap;
@@ -1432,5 +1432,34 @@ window.addEventListener('scroll', () => {
 })();
 </script>
 
+<script>
+/* Dropdown: JS hover with close-delay so breadcrumb can't steal focus */
+(function(){
+  var timers = {};
+  document.querySelectorAll('.nlinks li.has-dd').forEach(function(li){
+    var id = Math.random();
+    li.addEventListener('mouseenter', function(){
+      clearTimeout(timers[id]);
+      document.querySelectorAll('.nlinks li.has-dd').forEach(function(x){ x.classList.remove('dd-open'); });
+      li.classList.add('dd-open');
+    });
+    li.addEventListener('mouseleave', function(){
+      timers[id] = setTimeout(function(){ li.classList.remove('dd-open'); }, 180);
+    });
+    var dd = li.querySelector('.dd');
+    if(dd){
+      dd.addEventListener('mouseenter', function(){ clearTimeout(timers[id]); });
+      dd.addEventListener('mouseleave', function(){
+        timers[id] = setTimeout(function(){ li.classList.remove('dd-open'); }, 180);
+      });
+    }
+  });
+  /* Close on click outside */
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.has-dd'))
+      document.querySelectorAll('.nlinks li.has-dd').forEach(function(x){ x.classList.remove('dd-open'); });
+  });
+})();
+</script>
 </body>
 </html>

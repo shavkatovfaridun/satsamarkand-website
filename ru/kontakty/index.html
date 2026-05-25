@@ -370,7 +370,7 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);backdrop-
   background:#fff;border:1px solid var(--bd,#d2d2d7);border-radius:10px;
   min-width:210px;box-shadow:0 8px 28px rgba(0,0,0,.13);z-index:600;
   list-style:none;padding:5px 0}
-.nlinks li.has-dd:hover .dd{display:block}
+.nlinks li.has-dd.dd-open .dd{display:block}
 .nlinks .dd li a{
   height:auto!important;padding:9px 16px!important;
   font-size:.8rem!important;display:block;white-space:nowrap;
@@ -752,5 +752,34 @@ window.addEventListener('scroll',()=>{const fw=document.getElementById('fwidget'
 })();
 </script>
 
+<script>
+/* Dropdown: JS hover with close-delay so breadcrumb can't steal focus */
+(function(){
+  var timers = {};
+  document.querySelectorAll('.nlinks li.has-dd').forEach(function(li){
+    var id = Math.random();
+    li.addEventListener('mouseenter', function(){
+      clearTimeout(timers[id]);
+      document.querySelectorAll('.nlinks li.has-dd').forEach(function(x){ x.classList.remove('dd-open'); });
+      li.classList.add('dd-open');
+    });
+    li.addEventListener('mouseleave', function(){
+      timers[id] = setTimeout(function(){ li.classList.remove('dd-open'); }, 180);
+    });
+    var dd = li.querySelector('.dd');
+    if(dd){
+      dd.addEventListener('mouseenter', function(){ clearTimeout(timers[id]); });
+      dd.addEventListener('mouseleave', function(){
+        timers[id] = setTimeout(function(){ li.classList.remove('dd-open'); }, 180);
+      });
+    }
+  });
+  /* Close on click outside */
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.has-dd'))
+      document.querySelectorAll('.nlinks li.has-dd').forEach(function(x){ x.classList.remove('dd-open'); });
+  });
+})();
+</script>
 </body>
 </html>
