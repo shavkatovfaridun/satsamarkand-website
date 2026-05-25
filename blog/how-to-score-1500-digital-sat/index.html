@@ -399,23 +399,33 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .nlinks .dd li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)!important}
 .nlinks .dd-arrow{font-size:.65rem;margin-left:2px;opacity:.6}
 /* Mobile section headers */
-.mob-nav .mob-sec{
-  font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
-  color:var(--tl,#86868b);padding:10px 24px 3px;margin-top:4px;
-  pointer-events:none;display:block}
-
-/* ── Mobile nav overlay ── */
-.mob-nav{display:none;position:fixed;top:52px;left:0;right:0;bottom:0;
-  background:#fff;z-index:499;overflow-y:auto;
-  box-shadow:0 8px 32px rgba(0,0,0,.18)}
+/* ── Mobile nav panel (compact accordion) ── */
+.mob-nav{display:none;position:fixed;top:52px;left:0;right:0;
+  max-height:calc(100vh - 52px);background:#fff;z-index:1999;overflow-y:auto;
+  box-shadow:0 12px 40px rgba(0,0,0,.18);border-radius:0 0 16px 16px}
 .mob-nav.open{display:block}
-.mob-nav ul{list-style:none;padding:6px 0 40px;margin:0}
-.mob-nav li a{display:block;padding:13px 24px;color:var(--t,#1d1d1f);
+.mob-nav .mob-list{list-style:none;padding:6px 0 12px;margin:0}
+.mob-nav .mob-list>li>a{display:block;padding:13px 20px;color:var(--t,#1d1d1f);
   font-size:.95rem;text-decoration:none;border-bottom:1px solid #f5f5f7}
-.mob-nav li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
-.mob-nav .mob-enroll{display:block;margin:16px 24px 8px;padding:14px 24px;
+.mob-nav .mob-list>li>a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-group-hd{display:flex;align-items:center;justify-content:space-between;
+  width:100%;padding:13px 20px;background:none;border:none;border-bottom:1px solid #f5f5f7;
+  color:var(--t,#1d1d1f);font-size:.95rem;font-weight:500;cursor:pointer;text-align:left;
+  font-family:inherit}
+.mob-group-hd:hover,.mob-group.open .mob-group-hd{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-arrow{transition:transform .22s;flex-shrink:0}
+.mob-group.open .mob-arrow{transform:rotate(180deg)}
+.mob-group-body{list-style:none;padding:0;margin:0;
+  max-height:0;overflow:hidden;transition:max-height .28s ease;background:#fafafa}
+.mob-group.open .mob-group-body{max-height:400px}
+.mob-group-body li a{display:block;padding:10px 20px 10px 30px;
+  color:var(--tm,#6e6e73);font-size:.88rem;text-decoration:none;
+  border-bottom:1px solid #f5f5f7}
+.mob-group-body li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-nav .mob-enroll{display:block;margin:12px 20px 8px;padding:14px 24px;
   background:var(--blue,#0661de);color:#fff!important;border-radius:10px;
-  text-align:center;font-weight:600;font-size:.95rem;border-bottom:none!important}
+  text-align:center;font-weight:600;font-size:.95rem;border-bottom:none!important;
+  text-decoration:none}
 .mob-nav .mob-enroll:hover{background:#0550c0!important;color:#fff!important}
 /* Hamburger → X animation */
 .nham svg line{transition:all .25s;transform-box:fill-box;transform-origin:center}
@@ -580,23 +590,48 @@ nav.scrolled{
 <div class="nright"><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="nenroll" data-en="Enroll Now" data-uz="Yozilish" data-ru="Записаться">Enroll Now</a><button class="nham" onclick="toggleMobileNav()" aria-label="Menu"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="12" x2="19" y2="12"/><line x1="3" y1="18" x2="19" y2="18"/></svg></button></div>
 </div></nav>
 <nav class="mob-nav" id="mobnav">
-<ul>
+<ul class="mob-list">
 <li><a href="/" onclick="closeMobileNav()" data-en="Home" data-uz="Bosh sahifa" data-ru="Главная">Home</a></li>
-<li><span class="mob-sec" data-en="COURSES" data-uz="KURSLAR" data-ru="КУРСЫ">COURSES</span></li>
-<li><a href="/courses/" onclick="closeMobileNav()" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
-<li><a href="/schedule/" onclick="closeMobileNav()" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
-<li><a href="/intensive-sat-bootcamp/" onclick="closeMobileNav()" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
-<li><a href="/digital-sat/" onclick="closeMobileNav()" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
-<li><span class="mob-sec" data-en="ADMISSIONS" data-uz="QABUL" data-ru="ПОСТУПЛЕНИЕ">ADMISSIONS</span></li>
-<li><a href="/admissions/" onclick="closeMobileNav()" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг">Admissions Consulting</a></li>
-<li><a href="/universities/" onclick="closeMobileNav()" data-en="76+ Universities" data-uz="76+ Universitetlar" data-ru="76+ Университетов">76+ Universities</a></li>
-<li><a href="/results/" onclick="closeMobileNav()" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
-<li><span class="mob-sec" data-en="ABOUT" data-uz="BIZ" data-ru="О НАС">ABOUT</span></li>
-<li><a href="/about/" onclick="closeMobileNav()" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
-<li><a href="/teachers/" onclick="closeMobileNav()" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Преподаватели">Our Teachers</a></li>
-<li><a href="/blog/" onclick="closeMobileNav()" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
-<li><a href="/sat-zone/" onclick="closeMobileNav()" data-en="SAT Zone" data-uz="SAT Zone" data-ru="SAT Zone">SAT Zone</a></li>
-<li><a href="/contact/" onclick="closeMobileNav()" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
+
+<li class="mob-group">
+  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
+    <span data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</span>
+    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+  <ul class="mob-group-body">
+    <li><a href="/courses/" onclick="closeMobileNav()" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
+    <li><a href="/schedule/" onclick="closeMobileNav()" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
+    <li><a href="/intensive-sat-bootcamp/" onclick="closeMobileNav()" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
+    <li><a href="/digital-sat/" onclick="closeMobileNav()" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
+  </ul>
+</li>
+
+<li class="mob-group">
+  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
+    <span data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</span>
+    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+  <ul class="mob-group-body">
+    <li><a href="/admissions/" onclick="closeMobileNav()" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг">Admissions Consulting</a></li>
+    <li><a href="/universities/" onclick="closeMobileNav()" data-en="76+ Universities" data-uz="76+ Universitetlar" data-ru="76+ Университетов">76+ Universities</a></li>
+    <li><a href="/results/" onclick="closeMobileNav()" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
+  </ul>
+</li>
+
+<li class="mob-group">
+  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
+    <span data-en="About" data-uz="Biz haqimizda" data-ru="О нас">About</span>
+    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+  <ul class="mob-group-body">
+    <li><a href="/about/" onclick="closeMobileNav()" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+    <li><a href="/teachers/" onclick="closeMobileNav()" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Преподаватели">Our Teachers</a></li>
+    <li><a href="/blog/" onclick="closeMobileNav()" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
+    <li><a href="/sat-zone/" onclick="closeMobileNav()" data-en="SAT Zone" data-uz="SAT Zone" data-ru="SAT Zone">SAT Zone</a></li>
+    <li><a href="/contact/" onclick="closeMobileNav()" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
+  </ul>
+</li>
+
 <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Test" data-uz="Bepul test" data-ru="Бесплатный тест">Free Test</a></li>
 <li><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="mob-enroll" data-en="Enroll Now →" data-uz="Yozilish →" data-ru="Записаться →">Enroll Now →</a></li>
 </ul>
@@ -973,6 +1008,15 @@ window.addEventListener('scroll',()=>{const fw=document.getElementById('fwidget'
     });
   }, {passive:true});
 })();
+</script>
+<script>
+/* Mobile nav: accordion + hamburger */
+if(typeof toggleMobileNav==='undefined'){
+  function toggleMobileNav(){var mn=document.getElementById('mobnav'),btn=document.querySelector('.nham');if(mn){mn.classList.toggle('open');if(btn)btn.classList.toggle('open');}}
+  function closeMobileNav(){var mn=document.getElementById('mobnav'),btn=document.querySelector('.nham');if(mn)mn.classList.remove('open');if(btn)btn.classList.remove('open');}
+  function toggleMobGroup(b){var g=b.closest('.mob-group'),o=g.classList.contains('open');document.querySelectorAll('.mob-group.open').forEach(function(x){x.classList.remove('open');});if(!o)g.classList.add('open');}
+  document.addEventListener('click',function(e){var mn=document.getElementById('mobnav');if(mn&&mn.classList.contains('open')&&!e.target.closest('#mobnav')&&!e.target.closest('.nham')){mn.classList.remove('open');var b=document.querySelector('.nham');if(b)b.classList.remove('open');}});
+}
 </script>
 </body>
 </html>
