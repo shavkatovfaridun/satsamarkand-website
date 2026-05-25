@@ -366,9 +366,9 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 /* ── Dropdown nav ── */
 .nlinks li.has-dd{position:relative}
 .nlinks .dd{
-  display:none;position:absolute;top:100%;left:0;margin-top:-1px;
+  display:none;position:fixed;top:0;left:0;
   background:#fff;border:1px solid var(--bd,#d2d2d7);border-radius:10px;
-  min-width:210px;box-shadow:0 8px 28px rgba(0,0,0,.13);z-index:600;
+  min-width:210px;box-shadow:0 8px 28px rgba(0,0,0,.13);z-index:99999;
   list-style:none;padding:5px 0}
 .nlinks li.has-dd.dd-open .dd{display:block}
 .nlinks .dd li a{
@@ -823,32 +823,43 @@ window.addEventListener('scroll',()=>{const fw=document.getElementById('fwidget'
 </script>
 
 <script>
-/* Dropdown: JS hover with close-delay so breadcrumb can't steal focus */
+/* Dropdown: fixed-position anchored via JS (bypasses backdrop-filter stacking) */
 (function(){
   var timers = {};
+  function positionDD(li){
+    var dd = li.querySelector('.dd');
+    if(!dd) return;
+    var r = li.getBoundingClientRect();
+    dd.style.top  = r.bottom + 'px';
+    dd.style.left = r.left   + 'px';
+  }
   document.querySelectorAll('.nlinks li.has-dd').forEach(function(li){
     var id = Math.random();
+    var dd = li.querySelector('.dd');
     li.addEventListener('mouseenter', function(){
       clearTimeout(timers[id]);
       document.querySelectorAll('.nlinks li.has-dd').forEach(function(x){ x.classList.remove('dd-open'); });
+      positionDD(li);
       li.classList.add('dd-open');
     });
     li.addEventListener('mouseleave', function(){
-      timers[id] = setTimeout(function(){ li.classList.remove('dd-open'); }, 180);
+      timers[id] = setTimeout(function(){ li.classList.remove('dd-open'); }, 200);
     });
-    var dd = li.querySelector('.dd');
     if(dd){
       dd.addEventListener('mouseenter', function(){ clearTimeout(timers[id]); });
       dd.addEventListener('mouseleave', function(){
-        timers[id] = setTimeout(function(){ li.classList.remove('dd-open'); }, 180);
+        timers[id] = setTimeout(function(){ li.classList.remove('dd-open'); }, 200);
       });
     }
   });
-  /* Close on click outside */
   document.addEventListener('click', function(e){
     if(!e.target.closest('.has-dd'))
       document.querySelectorAll('.nlinks li.has-dd').forEach(function(x){ x.classList.remove('dd-open'); });
   });
+  window.addEventListener('scroll', function(){
+    var open = document.querySelector('.nlinks li.has-dd.dd-open');
+    if(open) positionDD(open);
+  }, {passive:true});
 })();
 </script>
 </body>
