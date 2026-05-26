@@ -200,7 +200,19 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 @media(max-width:960px){.nlinks{display:none}.nham{display:block}.fgrid{grid-template-columns:1fr 1fr}.fgrid>div:first-child{grid-column:1/-1}}
 @media(max-width:640px){.fgrid{grid-template-columns:1fr}.fbtn{bottom:14px;right:14px}}
 
-.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:2.4rem}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:2.4rem}
+@media(max-width:860px){.pgrid{grid-template-columns:1fr}}
+.pdual{background:var(--bg2,#f5f5f7);border-radius:10px;padding:10px 14px;margin-bottom:1.4rem}
+.pdual-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0}
+.pdual-row:not(:last-child){border-bottom:1px solid var(--bd,#d2d2d7)}
+.pdual-lbl{font-size:.78rem;color:var(--tm,#6e6e73);font-weight:500}
+.pdual-val{font-family:var(--f);font-size:1.05rem;font-weight:700;color:var(--navy);letter-spacing:-.02em}
+.pdual-val small{font-size:.68rem;font-weight:500;color:var(--tm);margin-left:2px}
+.pc.prm .pdual{background:rgba(255,255,255,.09)}
+.pc.prm .pdual-row{border-bottom-color:rgba(255,255,255,.1)}
+.pc.prm .pdual-lbl{color:rgba(255,255,255,.45)}
+.pc.prm .pdual-val{color:#fff}
+.pc.prm .pdual-val small{color:rgba(255,255,255,.4)}
 .pc{background:#fff;border:1px solid var(--bd);border-radius:var(--rlg);overflow:hidden;box-shadow:var(--ss);transition:box-shadow .2s,transform .2s}
 .pc:hover{box-shadow:var(--sm);transform:translateY(-2px)}
 .pc.pop{border:2px solid var(--blue);box-shadow:0 0 0 4px rgba(6,97,222,.07),var(--sm)}
@@ -571,60 +583,85 @@ nav.scrolled{
     <p class="sp" style="margin-bottom:2rem" data-en="All programs include mentors who scored 1500+, weekly mocks, and free Sunday Mock SAT." data-uz="Barcha dasturlarda 1500+ mentorlar, haftalik mocklar va yakshanba Mock SAT." data-ru="Все программы включают менторов 1500+, еженедельные тесты и Mock SAT по воскресеньям.">All programs include mentors who scored 1500+, weekly mocks, and free Sunday Mock SAT.</p>
     <div class="pgrid">
 
+      <!-- Card 1: Intensive -->
       <div class="pc fade">
-        <div class="ph"><div class="ptag">SAT Programs</div><div class="ptitle" data-en="1 Subject" data-uz="1 Fan" data-ru="1 Предмет">1 Subject</div><div class="psub" data-en="Math or English — ideal if you need one section" data-uz="Math yoki English — bitta bo&#x27;lim kerak bo&#x27;lsa" data-ru="Математика или Английский — если нужен один раздел">Math or English — ideal if you need one section</div><div class="pprow"><span class="pprice">700 000</span><span class="pcurr">UZS</span></div><div class="pper" data-en="per month" data-uz="oyiga" data-ru="в месяц">per month</div></div>
+        <div class="ph">
+          <div class="ptag" data-en="Group Program" data-uz="Guruh Dasturi" data-ru="Групповая программа">Group Program</div>
+          <div class="ptitle" data-en="Intensive" data-uz="Intensiv" data-ru="Интенсив">Intensive</div>
+          <div class="psub" data-en="Core SAT prep in a focused small group" data-uz="Kichik guruhda asosiy SAT tayyorgarlik" data-ru="Основная подготовка к SAT в малой группе">Core SAT prep in a focused small group</div>
+          <div class="pdual">
+            <div class="pdual-row">
+              <span class="pdual-lbl" data-en="1 Subject (Math or English)" data-uz="1 Fan (Math yoki English)" data-ru="1 Предмет (Math или English)">1 Subject</span>
+              <span class="pdual-val">700 000 <small>UZS/mo</small></span>
+            </div>
+            <div class="pdual-row">
+              <span class="pdual-lbl" data-en="2 Subjects (Math + English)" data-uz="2 Fan (Math + English)" data-ru="2 Предмета (Math + English)">2 Subjects</span>
+              <span class="pdual-val">1 000 000 <small>UZS/mo</small></span>
+            </div>
+          </div>
+        </div>
         <div class="pdiv"></div>
         <div class="pb"><ul class="pfeats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="1 section: Math or English" data-uz="1 bo'lim" data-ru="1 раздел">1 section: Math or English</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Max 15 students per class" data-uz="Maks 15 talaba" data-ru="Макс. 15 студентов">Max 15 students per class</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Weekly mock tests" data-uz="Haftalik mock testlar" data-ru="Еженедельные тесты">Weekly mock tests</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Free Sunday Mock SAT" data-uz="Yakshanba bepul Mock SAT" data-ru="Бесплатный Mock SAT">Free Sunday Mock SAT</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="1500+ scored mentors" data-uz="1500+ olgan mentorlar" data-ru="Менторы с баллом 1500+">1500+ scored mentors</span></li>
         </ul><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="pbtn out" data-en="Enroll Now" data-uz="Ro'yxatdan O'tish" data-ru="Записаться">Enroll Now</a></div>
       </div>
 
+      <!-- Card 2: SAT Max (Most Popular) -->
       <div class="pc pop fade">
-        <div class="ph"><div class="pbadge" data-en="Most Popular" data-uz="Eng Mashhur" data-ru="Самый популярный">Most Popular</div><div class="ptag">SAT Programs</div><div class="ptitle" data-en="Full SAT Program" data-uz="To'liq SAT Dasturi" data-ru="Полная программа SAT">Full SAT Program</div><div class="psub" data-en="Math + English · 200 000 UZS saved vs separate" data-uz="Math + English · Alohida nisbatan 200 000 UZS tejaysiz" data-ru="Математика + Английский · Экономия 200 000 UZS">Math + English · 200 000 UZS saved vs separate</div><div class="pprow"><span class="pprice">1 200 000</span><span class="pcurr">UZS</span></div><div class="pper" data-en="per month" data-uz="oyiga" data-ru="в месяц">per month</div></div>
+        <div class="ph">
+          <div class="pbadge" data-en="Most Popular" data-uz="Eng Mashhur" data-ru="Самый популярный">Most Popular</div>
+          <div class="ptag" data-en="Group Program" data-uz="Guruh Dasturi" data-ru="Групповая программа">Group Program</div>
+          <div class="ptitle" data-en="SAT Max" data-uz="SAT Max" data-ru="SAT Max">SAT Max</div>
+          <div class="psub" data-en="Advanced prep with deeper analytics and support" data-uz="Chuqur tahlil va qo'llab-quvvatlash bilan kengaytirilgan tayyorgarlik" data-ru="Продвинутая подготовка с глубокой аналитикой">Advanced prep with deeper analytics and support</div>
+          <div class="pdual">
+            <div class="pdual-row">
+              <span class="pdual-lbl" data-en="1 Subject (Math or English)" data-uz="1 Fan" data-ru="1 Предмет">1 Subject</span>
+              <span class="pdual-val">1 000 000 <small>UZS/mo</small></span>
+            </div>
+            <div class="pdual-row">
+              <span class="pdual-lbl" data-en="2 Subjects (Math + English)" data-uz="2 Fan" data-ru="2 Предмета">2 Subjects</span>
+              <span class="pdual-val">1 800 000 <small>UZS/mo</small></span>
+            </div>
+          </div>
+        </div>
         <div class="pdiv"></div>
         <div class="pb"><ul class="pfeats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Both Math &amp; English sections" data-uz="Math va English ikkalasi" data-ru="Оба раздела">Both Math &amp; English sections</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Max 15 students per class" data-uz="Maks 15 talaba" data-ru="Макс. 15 студентов">Max 15 students per class</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Weekly mocks + score analytics" data-uz="Haftalik mocklar + tahlil" data-ru="Тесты + аналитика">Weekly mocks + score analytics</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Free Sunday Mock SAT" data-uz="Yakshanba bepul Mock" data-ru="Бесплатный Mock SAT">Free Sunday Mock SAT</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Max 12 students per class" data-uz="Maks 12 talaba" data-ru="Макс. 12 студентов">Max 12 students per class</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Weekly mocks + score analytics" data-uz="Haftalik mocklar + ball tahlili" data-ru="Тесты + аналитика баллов">Weekly mocks + score analytics</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Free Sunday Mock SAT" data-uz="Yakshanba bepul Mock SAT" data-ru="Бесплатный Mock SAT">Free Sunday Mock SAT</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Priority Telegram support" data-uz="Ustuvor Telegram yordami" data-ru="Приоритетная поддержка">Priority Telegram support</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="1500+ scored mentors" data-uz="1500+ olgan mentorlar" data-ru="Менторы 1500+">1500+ scored mentors</span></li>
         </ul><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="pbtn pop-btn" data-en="Enroll Now" data-uz="Ro'yxatdan O'tish" data-ru="Записаться">Enroll Now</a></div>
       </div>
 
-      <div class="pc fade">
-        <div class="ph"><div class="pbadge grn" data-en="Best Value" data-uz="Eng Foydali" data-ru="Лучшая ценность">Best Value</div><div class="ptag" data-en="Commitment Plan" data-uz="Majburiyat Rejasi" data-ru="Долгосрочный план">Commitment Plan</div><div class="ptitle" data-en="Full SAT — 3 Months" data-uz="To'liq SAT — 3 Oy" data-ru="Полный SAT — 3 месяца">Full SAT — 3 Months</div><div class="psub" data-en="Lock in · Save 600 000 UZS" data-uz="600 000 UZS tejang" data-ru="Экономия 600 000 UZS">Lock in · Save 600 000 UZS</div><div class="pprow"><span class="pprice">3 000 000</span><span class="pcurr">UZS</span></div><div class="pper" data-en="one-time · 1 000 000/month effective" data-uz="bir to'lov · 1 000 000/oy" data-ru="единоразово · 1 000 000/мес">one-time · 1 000 000/month effective</div></div>
-        <div class="pdiv"></div>
-        <div class="pb"><ul class="pfeats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Full SAT (Math + English)" data-uz="To'liq SAT" data-ru="Полный SAT">Full SAT (Math + English)</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="3 months structured preparation" data-uz="3 oy tizimli tayyorgarlik" data-ru="3 месяца подготовки">3 months structured preparation</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="All Full SAT benefits included" data-uz="Barcha Full SAT afzalliklari" data-ru="Все преимущества Full SAT">All Full SAT benefits included</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Save 600 000 UZS vs monthly" data-uz="Oylikdan 600 000 tejash" data-ru="Экономия 600 000 UZS">Save 600 000 UZS vs monthly</span></li>
-        </ul><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="pbtn sol" data-en="Lock In Now" data-uz="Hozir Yozilish" data-ru="Зафиксировать">Lock In Now</a></div>
-      </div>
-
-      <div class="pc fade">
-        <div class="ph"><div class="pbadge gold" data-en="Selective · 1200+ Entry" data-uz="Tanlov · 1100+" data-ru="Отборный · 1100+">Selective · 1200+ Entry</div><div class="ptag" data-en="Premium Program" data-uz="Premium Dastur" data-ru="Премиум">Premium Program</div><div class="ptitle" data-en="SAT 1500+ Guaranteed" data-uz="SAT 1500+ Kafolatlangan" data-ru="SAT 1500+ Гарантия">SAT 1500+ Guaranteed</div><div class="psub" data-en="Free up to 3 months if under 1500" data-uz="1500 dan past bo'lsa 3 oygacha bepul" data-ru="До 3 мес бесплатно">Free up to 3 months if under 1500</div><div class="pprow"><span class="pprice">2 000 000</span><span class="pcurr">UZS</span></div><div class="pper" data-en="per month" data-uz="oyiga" data-ru="в месяц">per month</div></div>
-        <div class="pdiv"></div>
-        <div class="pb"><ul class="pfeats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Full SAT (Math + English)" data-uz="To'liq SAT" data-ru="Полный SAT">Full SAT (Math + English)</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Advanced intensive group" data-uz="Kengaytirilgan intensiv guruh" data-ru="Продвинутый интенсив">Advanced intensive group</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Weekly 1-on-1 progress sessions" data-uz="Haftalik 1:1 sessiyalar" data-ru="Еженедельные 1:1">Weekly 1-on-1 progress sessions</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Free attendance up to 3 months if under 1500" data-uz="1500 dan past bo'lsa 3 oygacha bepul" data-ru="До 3 мес бесплатно">Free attendance up to 3 months if under 1500</span></li>
-        </ul><div class="pnote" data-en="Entry only after diagnostic. Score 1100+ required." data-uz="Faqat diagnostikadan so'ng. 1100+ kerak." data-ru="Только после диагностики. 1100+.">Entry only after diagnostic. Score 1100+ required.</div><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="pbtn sol" data-en="Take Diagnostic First →" data-uz="Avval Diagnostika →" data-ru="Сначала диагностика →">Take Diagnostic First →</a></div>
-      </div>
-
+      <!-- Card 3: Individual -->
       <div class="pc prm fade">
-        <div class="ph"><div class="pbadge gold" data-en="Limited Spots" data-uz="Cheklangan O'rinlar" data-ru="Ограниченные места">Limited Spots</div><div class="ptag" data-en="Premium Program" data-uz="Premium Dastur" data-ru="Премиум">Premium Program</div><div class="ptitle" data-en="Private Mentorship" data-uz="Xususiy Mentorlik" data-ru="Частное наставничество">Private Mentorship</div><div class="psub" data-en="1-on-1 with a 1500+ mentor · Fastest results" data-uz="1500+ mentor bilan 1:1 · Eng tez natija" data-ru="1 на 1 с ментором 1500+ · Самый быстрый результат">1-on-1 with a 1500+ mentor · Fastest results</div><div class="pprow"><span class="pprice">4 000 000</span><span class="pcurr">UZS</span></div><div class="pper" data-en="per month" data-uz="oyiga" data-ru="в месяц">per month</div></div>
+        <div class="ph">
+          <div class="pbadge gold" data-en="Limited Spots" data-uz="Cheklangan O'rinlar" data-ru="Ограниченные места">Limited Spots</div>
+          <div class="ptag" data-en="1-on-1 Program" data-uz="1:1 Dastur" data-ru="Программа 1:1">1-on-1 Program</div>
+          <div class="ptitle" data-en="Individual" data-uz="Individual" data-ru="Индивидуальный">Individual</div>
+          <div class="psub" data-en="Fully personalized sessions with your own 1500+ mentor" data-uz="O'z 1500+ mentoringiz bilan to'liq shaxsiy darslar" data-ru="Полностью персональные занятия с вашим ментором 1500+">Fully personalized sessions with your own 1500+ mentor</div>
+          <div class="pdual">
+            <div class="pdual-row">
+              <span class="pdual-lbl" data-en="1 Subject (Math or English)" data-uz="1 Fan" data-ru="1 Предмет">1 Subject</span>
+              <span class="pdual-val">2 000 000 <small>UZS/mo</small></span>
+            </div>
+            <div class="pdual-row">
+              <span class="pdual-lbl" data-en="2 Subjects (Math + English)" data-uz="2 Fan" data-ru="2 Предмета">2 Subjects</span>
+              <span class="pdual-val">3 000 000 <small>UZS/mo</small></span>
+            </div>
+          </div>
+        </div>
         <div class="pdiv"></div>
         <div class="pb"><ul class="pfeats">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#60d394" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Fully personalized curriculum" data-uz="To'liq shaxsiy dastur" data-ru="Персонализированная программа">Fully personalized curriculum</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#60d394" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Flexible schedule around you" data-uz="Sizga mos jadval" data-ru="Расписание под вас">Flexible schedule around you</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#60d394" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Direct access anytime" data-uz="To'g'ridan-to'g'ri kirish" data-ru="Прямой доступ">Direct access anytime</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#60d394" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Fastest path to target score" data-uz="Tez yo'l" data-ru="Быстрейший путь">Fastest path to target score</span></li>
-        </ul><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="pbtn prm-btn" data-en="Apply for Mentorship →" data-uz="Mentorlikka Ariza →" data-ru="Подать заявку →">Apply for Mentorship →</a></div>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#60d394" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Free Sunday Mock SAT" data-uz="Yakshanba bepul Mock SAT" data-ru="Бесплатный Mock SAT">Free Sunday Mock SAT</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#60d394" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Fastest path to your target score" data-uz="Maqsad ballingizga eng tez yo'l" data-ru="Быстрейший путь к цели">Fastest path to your target score</span></li>
+        </ul><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="pbtn prm-btn" data-en="Apply Now →" data-uz="Ariza Berish →" data-ru="Подать заявку →">Apply Now →</a></div>
       </div>
 
     </div>
@@ -641,16 +678,16 @@ nav.scrolled{
     <p class="sp" style="margin-bottom:.5rem" data-en="Every program includes mentors who scored 1500+, small classes, and weekly mocks. The difference is intensity." data-uz="Har bir dasturda 1500+ mentorlar, kichik guruhlar va haftalik mocklar bor. Farq — intensivlikda." data-ru="В каждой программе менторы 1500+, малые группы и еженедельные тесты. Разница — в интенсивности.">Every program includes mentors who scored 1500+, small classes, and weekly mocks. The difference is intensity.</p>
     <div style="overflow-x:auto">
       <table class="compare-table">
-        <thead><tr><th data-en="Feature" data-uz="Xususiyat" data-ru="Возможность">Feature</th><th>1 Subject</th><th style="background:var(--blue)">Full SAT ⭐</th><th>3-Month</th><th>1500+</th><th>Private</th></tr></thead>
+        <thead><tr><th data-en="Feature" data-uz="Xususiyat" data-ru="Возможность">Feature</th><th data-en="Intensive" data-uz="Intensiv" data-ru="Интенсив">Intensive</th><th style="background:var(--blue)" data-en="SAT Max ⭐" data-uz="SAT Max ⭐" data-ru="SAT Max ⭐">SAT Max ⭐</th><th data-en="Individual" data-uz="Individual" data-ru="Индивидуальный">Individual</th></tr></thead>
         <tbody>
-          <tr><td data-en="Price / month" data-uz="Oylik narx" data-ru="Цена / мес">Price / month</td><td>700 000</td><td class="pop-col">1 200 000</td><td>1 000 000</td><td>2 000 000</td><td>4 000 000</td></tr>
-          <tr><td data-en="Sections" data-uz="Bo'limlar" data-ru="Разделы">Sections</td><td>1</td><td class="pop-col" data-en="Both" data-uz="Ikkalasi" data-ru="Оба">Both</td><td data-en="Both" data-uz="Ikkalasi" data-ru="Оба">Both</td><td data-en="Both" data-uz="Ikkalasi" data-ru="Оба">Both</td><td data-en="Both" data-uz="Ikkalasi" data-ru="Оба">Both</td></tr>
-          <tr><td data-en="Class size" data-uz="Guruh hajmi" data-ru="Размер группы">Class size</td><td>Max 15</td><td class="pop-col">Max 15</td><td>Max 15</td><td data-en="Small advanced" data-uz="Kichik" data-ru="Малая">Small advanced</td><td>1-on-1</td></tr>
-          <tr><td data-en="Weekly mocks" data-uz="Haftalik mocklar" data-ru="Еженедельные тесты">Weekly mocks</td><td class="check">✓</td><td class="pop-col check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td data-en="Free Sunday Mock" data-uz="Yakshanba mock" data-ru="Воскресный Mock">Free Sunday Mock</td><td class="check">✓</td><td class="pop-col check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td data-en="Score analytics" data-uz="Ball tahlili" data-ru="Аналитика">Score analytics</td><td class="cross">—</td><td class="pop-col check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td data-en="1-on-1 sessions" data-uz="1:1 sessiyalar" data-ru="Сессии 1:1">1-on-1 sessions</td><td class="cross">—</td><td class="pop-col cross">—</td><td class="cross">—</td><td data-en="Weekly" data-uz="Haftalik" data-ru="Еженедельно">Weekly</td><td data-en="Unlimited" data-uz="Cheklanmagan" data-ru="Безлимит">Unlimited</td></tr>
-          <tr><td data-en="Score guarantee" data-uz="Ball kafolati" data-ru="Гарантия балла">Score guarantee</td><td class="cross">—</td><td class="pop-col cross">—</td><td class="cross">—</td><td data-en="1500+ or free" data-uz="1500+ yoki bepul" data-ru="1500+ или бесплатно">1500+ or free</td><td class="cross">—</td></tr>
+          <tr><td data-en="1 Subject / month" data-uz="1 Fan / oy" data-ru="1 Предмет / мес">1 Subject / month</td><td>700 000</td><td class="pop-col">1 000 000</td><td>2 000 000</td></tr>
+          <tr><td data-en="2 Subjects / month" data-uz="2 Fan / oy" data-ru="2 Предмета / мес">2 Subjects / month</td><td>1 000 000</td><td class="pop-col">1 800 000</td><td>3 000 000</td></tr>
+          <tr><td data-en="Class format" data-uz="Dars formati" data-ru="Формат занятий">Class format</td><td data-en="Group (max 15)" data-uz="Guruh (maks 15)" data-ru="Группа (макс. 15)">Group (max 15)</td><td class="pop-col" data-en="Group (max 12)" data-uz="Guruh (maks 12)" data-ru="Группа (макс. 12)">Group (max 12)</td><td>1-on-1</td></tr>
+          <tr><td data-en="Weekly mocks" data-uz="Haftalik mocklar" data-ru="Еженедельные тесты">Weekly mocks</td><td class="check">✓</td><td class="pop-col check">✓</td><td class="check">✓</td></tr>
+          <tr><td data-en="Free Sunday Mock" data-uz="Yakshanba mock" data-ru="Воскресный Mock">Free Sunday Mock</td><td class="check">✓</td><td class="pop-col check">✓</td><td class="check">✓</td></tr>
+          <tr><td data-en="Score analytics" data-uz="Ball tahlili" data-ru="Аналитика">Score analytics</td><td class="cross">—</td><td class="pop-col check">✓</td><td class="check">✓</td></tr>
+          <tr><td data-en="1-on-1 sessions" data-uz="1:1 sessiyalar" data-ru="Сессии 1:1">1-on-1 sessions</td><td class="cross">—</td><td class="pop-col cross">—</td><td data-en="Unlimited" data-uz="Cheklanmagan" data-ru="Безлимит">Unlimited</td></tr>
+          <tr><td data-en="Flexible schedule" data-uz="Moslashuvchan jadval" data-ru="Гибкое расписание">Flexible schedule</td><td class="cross">—</td><td class="pop-col cross">—</td><td class="check">✓</td></tr>
         </tbody>
       </table>
     </div>
