@@ -545,31 +545,87 @@ nav.scrolled{
   </div>
 </div>
 
+<style>
+.inc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:2.2rem}
+@media(max-width:640px){.inc-grid{grid-template-columns:1fr}}
+.inc-card{background:#fff;border:1px solid var(--bd,#d2d2d7);border-radius:16px;padding:22px 20px;display:flex;align-items:flex-start;gap:18px;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:box-shadow .2s,transform .2s}
+.inc-card:hover{box-shadow:0 6px 24px rgba(6,97,222,.1);transform:translateY(-2px)}
+.inc-icon{width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.inc-icon svg{width:26px;height:26px}
+.inc-title{font-size:.95rem;font-weight:700;color:var(--navy,#022049);margin-bottom:6px;letter-spacing:-.01em}
+.inc-desc{font-size:.81rem;color:var(--tm,#6e6e73);line-height:1.6}
+</style>
 <div class="sec alt">
-  <div class="w" style="text-align:center">
-    <div class="slbl" style="justify-content:center" data-en="Every Program Includes" data-uz="Har bir dasturda bor" data-ru="Входит в каждую программу">Every Program Includes</div>
-    <h2 class="sh" style="text-align:center;margin-bottom:2rem" data-en="The same <em>standard.</em> Different speeds." data-uz="Bir xil <em>standart.</em> Turli tezliklar." data-ru="Один <em>стандарт.</em> Разная скорость.">The same <em>standard.</em> Different speeds.</h2>
-    <div class="wgrid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:0">
-      <div class="wc">
-        <div class="wi" style="font-size:1.5rem;margin-bottom:.6rem">📐</div>
-        <div class="wt" data-en="Mentors who scored 1500+" data-uz="1500+ olgan mentorlar" data-ru="Менторы с баллом 1500+">Mentors who scored 1500+</div>
-        <div class="wd" data-en="Not theory teachers — coaches who solved every problem themselves." data-uz="Nazariya emas — hamma masalani o&#x27;zlari yechgan." data-ru="Не теоретики — те, кто сам решал каждую задачу.">Not theory teachers — coaches who solved every problem themselves.</div>
+  <div class="w">
+    <div class="slbl" data-en="Every Program Includes" data-uz="Har bir dasturda bor" data-ru="Входит в каждую программу">Every Program Includes</div>
+    <h2 class="sh" data-en="The same <em>standard.</em> Different speeds." data-uz="Bir xil <em>standart.</em> Turli tezliklar." data-ru="Один <em>стандарт.</em> Разная скорость.">The same <em>standard.</em> Different speeds.</h2>
+    <div class="inc-grid">
+
+      <!-- 1: Mentors 1500+ -->
+      <div class="inc-card">
+        <div class="inc-icon" style="background:#e8f0ff">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M6 20v-1a6 6 0 0112 0v1"/>
+            <path d="M9 8l1.5 1.5L13 7"/>
+            <polyline points="8 20 12 17 16 20"/>
+          </svg>
+        </div>
+        <div>
+          <div class="inc-title" data-en="Mentors who scored 1500+" data-uz="1500+ olgan mentorlar" data-ru="Менторы с баллом 1500+">Mentors who scored 1500+</div>
+          <div class="inc-desc" data-en="Not theory teachers — coaches who solved every problem themselves." data-uz="Nazariya emas — hamma masalani o'zlari yechgan." data-ru="Не теоретики — те, кто сам решал каждую задачу.">Not theory teachers — coaches who solved every problem themselves.</div>
+        </div>
       </div>
-      <div class="wc">
-        <div class="wi" style="font-size:1.5rem;margin-bottom:.6rem">📊</div>
-        <div class="wt" data-en="Weekly mock tests" data-uz="Haftalik mock testlar" data-ru="Еженедельные тесты">Weekly mock tests</div>
-        <div class="wd" data-en="Real SAT conditions every week. You see exactly where points are leaking." data-uz="Haqiqiy sharoitda haftalik test. Qayerda ball yo&#x27;qolayotganini ko&#x27;rasiz." data-ru="Реальные условия SAT каждую неделю. Видите, где теряете очки.">Real SAT conditions every week. You see exactly where points are leaking.</div>
+
+      <!-- 2: Weekly Mock Tests -->
+      <div class="inc-card">
+        <div class="inc-icon" style="background:#edfaf3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="9"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="13"/>
+            <line x1="2" y1="20" x2="22" y2="20"/>
+          </svg>
+        </div>
+        <div>
+          <div class="inc-title" data-en="Weekly mock tests" data-uz="Haftalik mock testlar" data-ru="Еженедельные тесты">Weekly mock tests</div>
+          <div class="inc-desc" data-en="Real SAT conditions every week. You see exactly where points are leaking." data-uz="Haqiqiy sharoitda haftalik test. Qayerda ball yo'qolayotganini ko'rasiz." data-ru="Реальные условия SAT каждую неделю. Видите, где теряете очки.">Real SAT conditions every week. You see exactly where points are leaking.</div>
+        </div>
       </div>
-      <div class="wc">
-        <div class="wi" style="font-size:1.5rem;margin-bottom:.6rem">🗓️</div>
-        <div class="wt" data-en="Free Sunday Mock SAT" data-uz="Yakshanba bepul Mock SAT" data-ru="Бесплатный Mock SAT по воскресеньям">Free Sunday Mock SAT</div>
-        <div class="wd" data-en="Full-length timed mock every Sunday. Open to all students, free." data-uz="Har yakshanba to&#x27;liq Mock SAT. Barcha o&#x27;quvchilar uchun bepul." data-ru="Полный пробный экзамен каждое воскресенье. Для всех студентов бесплатно.">Full-length timed mock every Sunday. Open to all students, free.</div>
+
+      <!-- 3: Sunday Mock SAT -->
+      <div class="inc-card">
+        <div class="inc-icon" style="background:#fff7e6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+            <polyline points="9 16 11 18 15 14"/>
+          </svg>
+        </div>
+        <div>
+          <div class="inc-title" data-en="Free Sunday Mock SAT" data-uz="Yakshanba bepul Mock SAT" data-ru="Бесплатный Mock SAT по воскресеньям">Free Sunday Mock SAT</div>
+          <div class="inc-desc" data-en="Full-length timed mock every Sunday. Open to all students, free." data-uz="Har yakshanba to'liq Mock SAT. Barcha o'quvchilar uchun bepul." data-ru="Полный пробный экзамен каждое воскресенье. Для всех студентов бесплатно.">Full-length timed mock every Sunday. Open to all students, free.</div>
+        </div>
       </div>
-      <div class="wc">
-        <div class="wi" style="font-size:1.5rem;margin-bottom:.6rem">👥</div>
-        <div class="wt" data-en="Max 15 students per class" data-uz="Guruhda max 15 talaba" data-ru="Максимум 15 студентов в группе">Max 15 students per class</div>
-        <div class="wd" data-en="Small enough that your mentor knows your weak spots by name." data-uz="Mentoring hamma o&#x27;quvchini yaxshi biladi." data-ru="Достаточно маленькая группа, чтобы ментор знал ваши слабые места.">Small enough that your mentor knows your weak spots by name.</div>
+
+      <!-- 4: Max 15 students -->
+      <div class="inc-card">
+        <div class="inc-icon" style="background:#f3e8ff">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+            <path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <div>
+          <div class="inc-title" data-en="Max 15 students per class" data-uz="Guruhda max 15 talaba" data-ru="Максимум 15 студентов в группе">Max 15 students per class</div>
+          <div class="inc-desc" data-en="Small enough that your mentor knows your weak spots by name." data-uz="Mentoring hamma o'quvchini yaxshi biladi." data-ru="Достаточно маленькая группа, чтобы ментор знал ваши слабые места.">Small enough that your mentor knows your weak spots by name.</div>
+        </div>
       </div>
+
     </div>
   </div>
 </div>
@@ -632,7 +688,7 @@ nav.scrolled{
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Max 12 students per class" data-uz="Maks 12 talaba" data-ru="Макс. 12 студентов">Max 12 students per class</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Weekly mocks + score analytics" data-uz="Haftalik mocklar + ball tahlili" data-ru="Тесты + аналитика баллов">Weekly mocks + score analytics</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Free Sunday Mock SAT" data-uz="Yakshanba bepul Mock SAT" data-ru="Бесплатный Mock SAT">Free Sunday Mock SAT</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Priority Telegram support" data-uz="Ustuvor Telegram yordami" data-ru="Приоритетная поддержка">Priority Telegram support</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="1-on-1 sessions 2× per week" data-uz="Haftada 2 marta 1:1 dars" data-ru="Занятия 1:1 дважды в неделю">1-on-1 sessions 2× per week</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="1500+ scored mentors" data-uz="1500+ olgan mentorlar" data-ru="Менторы 1500+">1500+ scored mentors</span></li>
         </ul><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="pbtn pop-btn" data-en="Enroll Now" data-uz="Ro'yxatdan O'tish" data-ru="Записаться">Enroll Now</a></div>
       </div>
