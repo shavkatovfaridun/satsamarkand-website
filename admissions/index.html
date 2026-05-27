@@ -207,13 +207,11 @@ footer{background:var(--navy3);color:rgba(255,255,255,.45);text-align:center;pad
 footer a{color:rgba(255,255,255,.6)}
 footer a:hover{color:#fff}
 
-/* FLOATING WIDGET */
+
 .fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 4px 20px rgba(0,0,0,.15);text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:0 6px 28px rgba(0,0,0,.2)}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:linear-gradient(135deg,#10b981,#059669);color:#fff}.fmchat .fmicon{background:linear-gradient(135deg,#0088cc,#006bb3);color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
-.ftoggle:hover{transform:scale(1.07);background:var(--blue2)}
-.fticon-close{display:none}
-.fmenu-open~button .fticon-chat{display:none}
-.fmenu-open~button .fticon-close{display:block}
-.ftoggle svg{width:22px;height:22px}
+
+
+
 
 /* MOB STICKY */
 .mob-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:700;background:var(--blue);text-align:center;padding:14px;font-size:.95rem;font-weight:700;color:#fff}
@@ -691,7 +689,6 @@ let currentLang = localStorage.getItem('sats_lang');
 if (!currentLang) {
   const bl = (navigator.language || 'en').toLowerCase();
   currentLang = bl.startsWith('uz') ? 'uz' : bl.startsWith('ru') ? 'ru' : 'en';
-}
 function applyLang(lang) {
   document.querySelectorAll('[data-' + lang + ']').forEach(el => {
     const v = el.getAttribute('data-' + lang);
@@ -748,13 +745,7 @@ document.querySelectorAll('.faq-q').forEach(q => {
 });
 
 // Floating widget
-function toggleWidget() {
-  const menu = document.getElementById('fmenu');
-  const btn = document.getElementById('ftoggle');
-  if (menu && btn) {
-    const open = menu.classList.toggle('fmenu-open');
-    btn.setAttribute('aria-expanded', open);
-  }
+
 }
 
 // Dropdown nav CSS (keep in sync sitewide)
