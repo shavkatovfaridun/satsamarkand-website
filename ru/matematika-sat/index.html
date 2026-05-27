@@ -278,8 +278,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .fcol a:hover{color:rgba(255,255,255,.8)}
 .fbot{max-width:1200px;margin:36px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
 .fbot p,.fbot a{font-size:.72rem;color:rgba(255,255,255,.2);text-decoration:none}
-.fwidget{position:fixed;bottom:26px;right:26px;z-index:1000;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
-.ftoggle{width:56px;height:56px;border-radius:50%;background:var(--blue);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(6,97,222,.35),0 4px 12px rgba(0,0,0,.12);transition:all .25s cubic-bezier(.4,0,.2,1);position:relative}
+.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 4px 20px rgba(0,0,0,.15);text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:0 6px 28px rgba(0,0,0,.2)}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:linear-gradient(135deg,#10b981,#059669);color:#fff}.fmchat .fmicon{background:linear-gradient(135deg,#0088cc,#006bb3);color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 .ftoggle:hover{transform:scale(1.05);box-shadow:0 12px 32px rgba(6,97,222,.45),0 4px 16px rgba(0,0,0,.15)}
 .ftoggle svg{width:24px;height:24px;position:absolute;transition:all .3s cubic-bezier(.4,0,.2,1)}
 .ftoggle .fticon-close{opacity:0;transform:rotate(-90deg) scale(.6)}
@@ -705,20 +704,14 @@ nav.scrolled{
 
 
 <div class="fwidget" id="fwidget">
-  <div class="fmenu" id="fmenu">
-    <a href="https://t.me/satsam_support" target="_blank" class="fmitem fmchat" data-action="chat">
-      <div class="fmicon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg></div>
-      <div class="fminfo"><div class="fmtitle" data-en="Chat with us" data-uz="Yordam" data-ru="Написать">Chat with us</div><div class="fmsub">@satsam_support</div></div>
-    </a>
-    <a href="https://t.me/sat_samarkand_ai_bot" target="_blank" class="fmitem fmbot" data-action="bot">
-      <div class="fmicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg></div>
-      <div class="fminfo"><div class="fmtitle" data-en="Ask AI Bot" data-uz="AI Bot" data-ru="AI бот">Ask AI Bot</div><div class="fmsub" data-en="Instant answers" data-uz="Tezkor javob" data-ru="Мгновенный">Instant answers</div></div>
-    </a>
-  </div>
-  <button class="ftoggle" id="ftoggle" onclick="toggleWidget()" aria-label="Open contact menu">
-    <svg class="fticon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-    <svg class="fticon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-  </button>
+  <a href="tel:+998951131600" class="fmitem fmcall">
+    <div class="fmicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+    <div class="fminfo"><div class="fmtitle" data-en="Call us" data-uz="Qo'ng'iroq qiling" data-ru="Позвонить">Call us</div><div class="fmsub">+998 95 113 16 00</div></div>
+  </a>
+  <a href="https://t.me/satsam_support" target="_blank" class="fmitem fmchat">
+    <div class="fmicon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg></div>
+    <div class="fminfo"><div class="fmtitle" data-en="Have a question?" data-uz="Savol bormi?" data-ru="Есть вопрос?">Have a question?</div><div class="fmsub">@satsam_support</div></div>
+  </a>
 </div>
 
 <div class="mob-sticky"><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now →" data-uz="Yozilish →" data-ru="Записаться →">Enroll Now →</a></div>
