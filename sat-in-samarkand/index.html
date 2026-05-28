@@ -846,7 +846,7 @@ nav.scrolled{
     </a>
     <a href="/free-sat-diagnostic-test/" class="hub-link-card">
       <h4 data-en="Free SAT Diagnostic" data-uz="Bepul SAT Diagnostika" data-ru="&#1041;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1072;&#1103; &#1076;&#1080;&#1072;&#1075;&#1085;&#1086;&#1089;&#1090;&#1080;&#1082;&#1072;">Free SAT Diagnostic</h4>
-      <p data-en="Know your starting score before enrolling. Online, 42-minute, instant results." data-uz="Yozilishdan oldin boshlang&#39;ich balingizni biling. 42 daqiqa." data-ru="&#1059;&#1079;&#1085;&#1072;&#1081;&#1090;&#1077; &#1089;&#1074;&#1086;&#1081; &#1089;&#1090;&#1072;&#1088;&#1090;&#1086;&#1074;&#1099;&#1081; &#1073;&#1072;&#1083;&#1083; &#1087;&#1077;&#1088;&#1077;&#1076; &#1079;&#1072;&#1087;&#1080;&#1089;&#1100;&#1102;.">Know your starting score. Online, 42 minutes, instant results.</p>
+      <p data-en="Know your starting score before enrolling. Online, 42-minute, instant results." data-uz="Yozilishdan oldin boshlang&#39;ich balingizni biling. 55 daqiqa." data-ru="&#1059;&#1079;&#1085;&#1072;&#1081;&#1090;&#1077; &#1089;&#1074;&#1086;&#1081; &#1089;&#1090;&#1072;&#1088;&#1090;&#1086;&#1074;&#1099;&#1081; &#1073;&#1072;&#1083;&#1083; &#1087;&#1077;&#1088;&#1077;&#1076; &#1079;&#1072;&#1087;&#1080;&#1089;&#1100;&#1102;.">Know your starting score. Online, 55 minutes, instant results.</p>
     </a>
     <a href="/schedule/" class="hub-link-card">
       <h4 data-en="SAT Schedule 2026" data-uz="SAT Jadvali 2026" data-ru="&#1056;&#1072;&#1089;&#1087;&#1080;&#1089;&#1072;&#1085;&#1080;&#1077; SAT 2026">SAT Schedule 2026</h4>
@@ -965,7 +965,7 @@ nav.scrolled{
 <button class="exit-close" onclick="closeExitPopup()" aria-label="Close">×</button>
 <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
 <h3 data-en="Wait! Take our free diagnostic." data-uz="Kuting! Bepul diagnostika." data-ru="Подождите!">Wait! Take our free diagnostic.</h3>
-<p data-en="44 questions. Find your real SAT level. Get a personalized recommendation." data-uz="44 savol. Darajangizni biling." data-ru="44 вопроса.">44 questions. Find your real SAT level. Get a personalized recommendation.</p>
+<p data-en="66 questions. Find your real SAT level. Get a personalized recommendation." data-uz="66 savol. Darajangizni biling." data-ru="66 вопросова.">66 questions. Find your real SAT level. Get a personalized recommendation.</p>
 <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="btnf" data-en="Take Free Diagnostic →" data-uz="Bepul Diagnostika →" data-ru="Бесплатная диагностика →">Take Free Diagnostic →</a>
 </div>
 </div>
@@ -1201,7 +1201,7 @@ window.addEventListener('scroll', () => {
     var raw = el.textContent.trim();
     var num = parseFloat(raw.replace(/[^0-9.]/g,''));
     var suffix = raw.replace(/[0-9.]/g,'');
-    if(isNaN(num)||num===0) return;
+    if(isNaN(num)||num===0||num<4) return;
     var start = null, dur = 1600;
     var from = num > 200 ? num - 300 : num > 10 ? Math.max(0, num - (num*0.6|0)) : 0;
     function step(ts){

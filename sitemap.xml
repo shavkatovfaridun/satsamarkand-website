@@ -775,4 +775,9 @@
     <xhtml:link rel="alternate" hreflang="uz" href="https://satsamarkand.uz/uz/sat-kurslari-samarqand/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://satsamarkand.uz/ru/kursy-sat-samarkand/"/>
   </url>
+  <url>
+    <loc>https://satsamarkand.uz/ap/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

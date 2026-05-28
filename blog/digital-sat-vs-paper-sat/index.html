@@ -741,7 +741,7 @@ nav.scrolled{
 
   <div class="article-section">
     <h2>Change #4: New Reading &amp; Writing Format</h2>
-    <p>The old SAT had separate Reading (52 questions, long passages) and Writing &amp; Language (44 questions, grammar in context) sections. The Digital SAT combines them into one <strong>Reading &amp; Writing</strong> section.</p>
+    <p>The old SAT had separate Reading (52 questions, long passages) and Writing &amp; Language (66 questions, grammar in context) sections. The Digital SAT combines them into one <strong>Reading &amp; Writing</strong> section.</p>
     <p>Each R&amp;W question now comes with its own short passage (50-150 words). This is a major difference:</p>
     <ul>
       <li><strong>Old format:</strong> Read a 750-word passage, then answer 10-11 questions about it. Requires tracking information across many paragraphs.</li>
@@ -959,7 +959,7 @@ window.addEventListener('scroll',()=>{const fw=document.getElementById('fwidget'
     var raw = el.textContent.trim();
     var num = parseFloat(raw.replace(/[^0-9.]/g,''));
     var suffix = raw.replace(/[0-9.]/g,'');
-    if(isNaN(num)||num===0) return;
+    if(isNaN(num)||num===0||num<4) return;
     var start = null, dur = 1600;
     var from = num > 200 ? num - 300 : num > 10 ? Math.max(0, num - (num*0.6|0)) : 0;
     function step(ts){

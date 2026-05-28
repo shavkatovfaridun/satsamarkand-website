@@ -662,6 +662,19 @@ nav.scrolled{
   </div>
 </div>
 
+
+<div style="background:linear-gradient(135deg,#022049,#0a3a7a);padding:56px 5vw;text-align:center;color:#fff">
+  <div style="max-width:720px;margin:0 auto">
+    <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(96,165,250,.15);border:1px solid rgba(96,165,250,.3);color:#60a5fa;font-size:.7rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:1.2rem;letter-spacing:.1em;text-transform:uppercase" data-en="FROM SAT SAMARKAND" data-uz="SAT SAMARQANDDAN" data-ru="ОТ SAT SAMARKAND">FROM SAT SAMARKAND</div>
+    <h2 style="font-family:var(--f);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:.9rem" data-en="Practice alone gets you far. <em style='color:#60a5fa'>A mentor gets you 1500+.</em>" data-uz="Mustaqil mashq ko'p narsaga olib keladi. <em style='color:#60a5fa'>Mentor 1500+ ga olib keladi.</em>" data-ru="Самостоятельная практика даёт многое. <em style='color:#60a5fa'>Ментор ведёт к 1500+.</em>">Practice alone gets you far. <em style="color:#60a5fa">A mentor gets you 1500+.</em></h2>
+    <p style="font-size:1rem;color:rgba(255,255,255,.65);max-width:500px;margin:0 auto 2rem;line-height:1.7" data-en="SAT Zone gives you the practice engine. SAT Samarkand gives you the structured classes, weekly mocks, and mentors who scored 1500+ themselves." data-uz="SAT Zone sizga mashq vositasini beradi. SAT Samarqand esa tizimli darslar, haftalik mock testlar va o'zlari 1500+ olgan mentorlarni beradi." data-ru="SAT Zone даёт вам инструмент практики. SAT Samarkand — структурированные занятия, еженедельные пробники и менторов, которые сами набрали 1500+.">SAT Zone gives you the practice engine. SAT Samarkand gives you the structured classes, weekly mocks, and mentors who scored 1500+ themselves.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.25);color:#fff;padding:13px 26px;border-radius:980px;font-family:var(--f);font-size:.9rem;font-weight:600;text-decoration:none" data-en="Take the Free Diagnostic →" data-uz="Bepul diagnostikani oling →" data-ru="Пройти диагностику бесплатно →">Take the Free Diagnostic →</a>
+      <a href="/courses/" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#0661de,#2979ff);color:#fff;padding:13px 26px;border-radius:980px;font-family:var(--f);font-size:.9rem;font-weight:700;text-decoration:none;box-shadow:0 6px 24px rgba(6,97,222,.35)" data-en="See SAT Programs →" data-uz="SAT Dasturlarini ko'rish →" data-ru="Посмотреть программы SAT →">See SAT Programs →</a>
+    </div>
+  </div>
+</div>
+
 <div class="footer">
   <div class="fgrid">
     <div>
@@ -851,7 +864,7 @@ window.addEventListener('scroll', () => {
     var raw = el.textContent.trim();
     var num = parseFloat(raw.replace(/[^0-9.]/g,''));
     var suffix = raw.replace(/[0-9.]/g,'');
-    if(isNaN(num)||num===0) return;
+    if(isNaN(num)||num===0||num<4) return;
     var start = null, dur = 1600;
     var from = num > 200 ? num - 300 : num > 10 ? Math.max(0, num - (num*0.6|0)) : 0;
     function step(ts){

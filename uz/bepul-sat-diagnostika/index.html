@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <title>Bepul SAT Diagnostika Testi Samarqand — Darajangizni Biling | SAT Samarqand</title>
-<meta name="description" content="SAT Samarqandda bepul SAT diagnostika testini oling. 50 ta savol, 42 daqiqa, tezkor natijalar. Matematika va ingliz tili darajangizni biling. Shaxsiy dastur tavsiyasi.">
+<meta name="description" content="SAT Samarqandda bepul SAT diagnostika testini oling. 50 ta savol, 55 daqiqa, tezkor natijalar. Matematika va ingliz tili darajangizni biling. Shaxsiy dastur tavsiyasi.">
 <meta name="keywords" content="bepul SAT testi Samarqand, SAT diagnostika Samarqand, bepul SAT Samarqand, SAT daraja testi Samarqand, bepul SAT tayyorgarlik testi">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <link rel="canonical" href="https://satsamarkand.uz/uz/bepul-sat-diagnostika/">
@@ -22,14 +22,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://satsamarkand.uz/uz/bepul-sat-diagnostika/">
 <meta property="og:title" content="Bepul SAT Diagnostika Testi Samarqand — Darajangizni Biling | SAT Samarqand">
-<meta property="og:description" content="SAT Samarqandda bepul SAT diagnostika testini oling. 50 ta savol, 42 daqiqa, tezkor natijalar. Matematika va ingliz tili darajangizni biling. Shaxsiy dastur tavsiyasi.">
+<meta property="og:description" content="SAT Samarqandda bepul SAT diagnostika testini oling. 50 ta savol, 55 daqiqa, tezkor natijalar. Matematika va ingliz tili darajangizni biling. Shaxsiy dastur tavsiyasi.">
 <meta property="og:site_name" content="SAT Samarqand">
 <meta property="og:image" content="https://satsamarkand.uz/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bepul SAT Diagnostika Testi Samarqand — Darajangizni Biling | SAT Samarqand">
-<meta name="twitter:description" content="SAT Samarqandda bepul SAT diagnostika testini oling. 50 ta savol, 42 daqiqa, tezkor natijalar. Matematika va ingliz tili darajangizni biling. Shaxsiy dastur tavsiyasi.">
+<meta name="twitter:description" content="SAT Samarqandda bepul SAT diagnostika testini oling. 50 ta savol, 55 daqiqa, tezkor natijalar. Matematika va ingliz tili darajangizni biling. Shaxsiy dastur tavsiyasi.">
 <meta name="twitter:image" content="https://satsamarkand.uz/og-image.jpg">
 <meta name="theme-color" content="#022049">
 <meta name="geo.region" content="UZ-SA">
@@ -40,7 +40,7 @@
   "@type": "WebPage",
   "name": "Bepul SAT Diagnostika Testi Samarqand — Darajangizni Biling | SAT Samarqand",
   "url": "https://satsamarkand.uz/uz/bepul-sat-diagnostika/",
-  "description": "SAT Samarqandda bepul SAT diagnostika testini oling. 50 ta savol, 42 daqiqa, tezkor natijalar. Matematika va ingliz tili darajangizni biling. Shaxsiy dastur tavsiyasi.",
+  "description": "SAT Samarqandda bepul SAT diagnostika testini oling. 50 ta savol, 55 daqiqa, tezkor natijalar. Matematika va ingliz tili darajangizni biling. Shaxsiy dastur tavsiyasi.",
   "inLanguage": "uz",
   "isPartOf": {"@type":"WebSite","name":"SAT Samarqand","url":"https://satsamarkand.uz"},
   "breadcrumb": {
@@ -652,7 +652,7 @@ nav.scrolled{
 <button class="exit-close" onclick="closeExitPopup()" aria-label="Close">×</button>
 <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
 <h3 data-en="Wait! Take our free diagnostic." data-uz="Kuting! Bepul diagnostika." data-ru="Подождите!">Wait! Take our free diagnostic.</h3>
-<p data-en="44 questions. Find your real SAT level. Get a personalized recommendation." data-uz="44 savol. Darajangizni biling." data-ru="44 вопроса.">44 questions. Find your real SAT level. Get a personalized recommendation.</p>
+<p data-en="66 questions. Find your real SAT level. Get a personalized recommendation." data-uz="66 savol. Darajangizni biling." data-ru="66 вопросова.">66 questions. Find your real SAT level. Get a personalized recommendation.</p>
 <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="btnf" data-en="Take Free Diagnostic →" data-uz="Bepul Diagnostika →" data-ru="Бесплатная диагностика →">Take Free Diagnostic →</a>
 </div>
 </div>
@@ -751,7 +751,7 @@ window.addEventListener('scroll',()=>{const fw=document.getElementById('fwidget'
     var raw = el.textContent.trim();
     var num = parseFloat(raw.replace(/[^0-9.]/g,''));
     var suffix = raw.replace(/[0-9.]/g,'');
-    if(isNaN(num)||num===0) return;
+    if(isNaN(num)||num===0||num<4) return;
     var start = null, dur = 1600;
     var from = num > 200 ? num - 300 : num > 10 ? Math.max(0, num - (num*0.6|0)) : 0;
     function step(ts){

@@ -799,7 +799,7 @@ nav.scrolled{
 <button class="exit-close" onclick="closeExitPopup()" aria-label="Close">×</button>
 <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
 <h3 data-en="Wait! Take our free diagnostic." data-uz="Kuting! Bepul diagnostika." data-ru="Подождите!">Wait! Take our free diagnostic.</h3>
-<p data-en="44 questions. Find your real SAT level. Get a personalized recommendation." data-uz="44 savol. Darajangizni biling." data-ru="44 вопроса.">44 questions. Find your real SAT level. Get a personalized recommendation.</p>
+<p data-en="66 questions. Find your real SAT level. Get a personalized recommendation." data-uz="66 savol. Darajangizni biling." data-ru="66 вопросова.">66 questions. Find your real SAT level. Get a personalized recommendation.</p>
 <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="btnf" data-en="Take Free Diagnostic →" data-uz="Bepul Diagnostika →" data-ru="Бесплатная диагностика →">Take Free Diagnostic →</a>
 </div>
 </div>
@@ -940,7 +940,7 @@ window.addEventListener('scroll', () => {
     var raw = el.textContent.trim();
     var num = parseFloat(raw.replace(/[^0-9.]/g,''));
     var suffix = raw.replace(/[0-9.]/g,'');
-    if(isNaN(num)||num===0) return;
+    if(isNaN(num)||num===0||num<4) return;
     var start = null, dur = 1600;
     var from = num > 200 ? num - 300 : num > 10 ? Math.max(0, num - (num*0.6|0)) : 0;
     function step(ts){
