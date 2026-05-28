@@ -765,4 +765,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://satsamarkand.uz/sat-prep-samarkand/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satsamarkand.uz/sat-prep-samarkand/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://satsamarkand.uz/uz/sat-kurslari-samarqand/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://satsamarkand.uz/ru/kursy-sat-samarkand/"/>
+  </url>
 </urlset>
