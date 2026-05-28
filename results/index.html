@@ -571,6 +571,13 @@ nav.scrolled{
   .hero-btns,.hero__cta-group,.pillar-hero-btns,.pg-hero-btns,
   .trust-bar,.pillar-hero-stats,.hero__stats{animation:none;opacity:1;transform:none}
 }
+
+.footer-tel{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.55);font-size:.82rem;margin-bottom:.55rem;text-decoration:none;transition:color .15s}
+.footer-tel:hover{color:#fff}
+.footer-tel .fmicon{width:20px;height:20px;background:none;border-radius:0;flex-shrink:0}
+.footer-tel .fmicon svg{width:16px;height:16px;stroke:rgba(255,255,255,.4)}
+.footer-tel .fmtitle{font-size:.82rem;font-weight:500}
+.footer-tel .fmsub{font-size:.75rem;color:rgba(255,255,255,.35)}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H7P88TD85G"></script>
@@ -793,7 +800,7 @@ nav.scrolled{
 </div>
 <div class="fcol"><h4 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h4>
 <a href="https://t.me/sat_samarkand" target="_blank">Telegram</a>
-<a href="tel:+998951131600" class="fmitem fmcall" data-action="call">
+<a href="tel:+998951131600" class="footer-tel" >
       <div class="fmicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
       <div class="fminfo"><div class="fmtitle" data-en="Call us" data-uz="Qo\'ng\'iroq qiling" data-ru="Позвонить">Call us</div><div class="fmsub">+998 95 113 16 00</div></div>
     </a>
@@ -966,6 +973,7 @@ window.addEventListener('scroll',()=>{const fw=document.getElementById('fwidget'
     var dd = li.querySelector('.dd');
     if(!dd) return;
     document.body.appendChild(dd);
+    dd.style.position = 'fixed';
     dd.style.display = 'none';
     ddMap.push({li:li, dd:dd});
 

@@ -814,6 +814,7 @@ async function submitForm() {
     var dd = li.querySelector('.dd');
     if(!dd) return;
     document.body.appendChild(dd);
+    dd.style.position = 'fixed';
     dd.style.display = 'none';
     ddMap.push({li:li, dd:dd});
 
