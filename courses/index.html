@@ -337,8 +337,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .nham.open svg line:first-child{transform:translateY(6px) rotate(45deg)}
 .nham.open svg line:nth-child(2){opacity:0;transform:scaleX(0)}
 .nham.open svg line:last-child{transform:translateY(-6px) rotate(-45deg)}
-/* Show hamburger on laptops too */
-@media(max-width:1280px){.nlinks{display:none!important}.nham{display:block!important}}
+/* Nav visible on desktop/laptop (960px+); hamburger on tablet/mobile */
 
 .pillar-cta-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;color:#0661de;background:#e8f0ff;border:1px solid #c7d9ff;border-radius:20px;padding:6px 16px;margin-bottom:18px;text-transform:uppercase}
 
@@ -642,6 +641,42 @@ nav.scrolled{
         </div>
       </div>
 
+    </div>
+  </div>
+</div>
+
+<div class="div"></div>
+
+
+<div class="sec" id="schedule">
+  <div class="w">
+    <div class="slbl" data-en="Class Schedule" data-uz="Dars Jadvali" data-ru="Расписание занятий">Class Schedule</div>
+    <h2 class="sh" data-en="When are the classes?" data-uz="Darslar qachon?" data-ru="Когда проходят занятия?">When are the classes?</h2>
+    <p class="sp" style="margin-bottom:2rem" data-en="We run three daily time slots. Pick the batch that fits your school schedule." data-uz="Bizda uchta kunlik vaqt uyasi mavjud. Maktab jadvalingizga mos variantni tanlang." data-ru="У нас три ежедневных временных слота. Выберите подходящий под ваше школьное расписание.">We run three daily time slots. Pick the batch that fits your school schedule.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:1.5rem">
+      <div style="border:1.5px solid var(--bd);border-radius:16px;padding:22px;background:#fff;text-align:center">
+        <div style="font-size:1.6rem;font-weight:800;color:var(--navy);letter-spacing:-.03em;margin-bottom:6px">10:00–12:00</div>
+        <div style="font-size:.82rem;color:var(--tm)" data-en="Morning · Mon–Sat" data-uz="Ertalab · Du–Sha" data-ru="Утро · Пн–Сб">Morning · Mon–Sat</div>
+      </div>
+      <div style="border:2px solid var(--blue);border-radius:16px;padding:22px;background:linear-gradient(135deg,#f0f7ff,#e8f0ff);text-align:center;position:relative">
+        <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.1em;padding:3px 12px;border-radius:20px;white-space:nowrap" data-en="MOST POPULAR" data-uz="ENG MASHHUR" data-ru="ПОПУЛЯРНОЕ">MOST POPULAR</div>
+        <div style="font-size:1.6rem;font-weight:800;color:var(--blue);letter-spacing:-.03em;margin-bottom:6px">14:00–16:00</div>
+        <div style="font-size:.82rem;color:var(--tm)" data-en="Afternoon · Mon–Sat" data-uz="Tushdan keyin · Du–Sha" data-ru="День · Пн–Сб">Afternoon · Mon–Sat</div>
+      </div>
+      <div style="border:1.5px solid var(--bd);border-radius:16px;padding:22px;background:#fff;text-align:center">
+        <div style="font-size:1.6rem;font-weight:800;color:var(--navy);letter-spacing:-.03em;margin-bottom:6px">16:00–18:00</div>
+        <div style="font-size:.82rem;color:var(--tm)" data-en="Evening · Mon–Sat" data-uz="Kechki · Du–Sha" data-ru="Вечер · Пн–Сб">Evening · Mon–Sat</div>
+      </div>
+      <div style="border:1.5px dashed #fbbf24;border-radius:16px;padding:22px;background:#fffbeb;text-align:center">
+        <div style="font-size:1.6rem;font-weight:800;color:#d97706;letter-spacing:-.03em;margin-bottom:6px">08:00–10:00</div>
+        <div style="font-size:.82rem;color:var(--tm)" data-en="Summer only · Jul–Aug" data-uz="Faqat yoz · Iyul–Avg" data-ru="Только лето · Июль–Авг">Summer only · Jul–Aug</div>
+      </div>
+    </div>
+    <div style="border:1.5px solid var(--bd);border-radius:14px;padding:16px 20px;background:#f9fafb;font-size:.83rem;color:var(--tm);line-height:1.7">
+      <strong>Note:</strong> <span data-en="Classes run 3–4 days per week. Exact days are confirmed at enrollment. Sunday Mock SAT (10:00 AM, both locations) is free for all students every week." data-uz="Darslar haftada 3–4 kun. Aniq kunlar yozilishda tasdiqlanadi. Yakshanba Mock SAT (10:00, ikkala manzil) har hafta barcha o'quvchilar uchun bepul." data-ru="Занятия 3–4 дня в неделю. Конкретные дни подтверждаются при записи. Воскресный Mock SAT (10:00, оба офиса) — бесплатно каждую неделю.">Classes run 3–4 days per week. Exact days are confirmed at enrollment. Sunday Mock SAT (10:00 AM, both locations) is free for all students every week.</span>
+    </div>
+    <div style="text-align:center;margin-top:1.5rem">
+      <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-weight:600;font-size:.9rem;border-radius:12px;padding:13px 28px;text-decoration:none" data-en="Reserve your time slot →" data-uz="Vaqtingizni band qiling →" data-ru="Забронировать место →">Reserve your time slot →</a>
     </div>
   </div>
 </div>
