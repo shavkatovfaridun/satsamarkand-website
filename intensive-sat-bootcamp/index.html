@@ -569,14 +569,14 @@ nav.scrolled{
 .boot-hero .boot-tag{display:inline-block;background:rgba(249,115,22,.2);border:1px solid rgba(249,115,22,.45);border-radius:20px;padding:5px 14px;font-size:.8rem;font-weight:700;color:#fb923c;margin-bottom:1rem;letter-spacing:.04em;text-transform:uppercase}
 .boot-hero p{color:rgba(255,255,255,.75);font-size:1.05rem;max-width:600px;margin:0 auto 2rem;position:relative}
 .boot-cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
-.boot-cta-primary{background:#0661de;color:#fff;padding:16px 36px;border-radius:12px;font-size:1.05rem;font-weight:700;text-decoration:none;transition:background .2s,transform .15s}
+.boot-cta-primary{background:linear-gradient(135deg,#f59e0b,#f97316);color:#1a0a00;padding:17px 40px;border-radius:14px;font-size:1.08rem;font-weight:800;text-decoration:none;transition:all .2s;box-shadow:0 8px 28px rgba(245,158,11,.35);letter-spacing:.01em}.boot-cta-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(245,158,11,.45)}
 .boot-cta-primary:hover{background:#0450b4;transform:translateY(-2px)}
 .boot-cta-sec{background:rgba(255,255,255,.1);color:#fff;padding:16px 28px;border-radius:12px;font-size:1rem;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,.2)}
 .boot-cta-sec:hover{background:rgba(255,255,255,.2)}
-.stat-bar{background:rgba(255,255,255,.06);border-top:1px solid rgba(255,255,255,.08);padding:24px 5vw;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
-.stat-item{text-align:center}
-.stat-num{font-size:1.8rem;font-weight:800;color:#fff;line-height:1}
-.stat-label{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:4px;text-transform:uppercase;letter-spacing:.06em}
+.stat-bar{background:rgba(255,255,255,.04);border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.06);padding:28px 5vw;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.stat-item{text-align:center;padding:0 8px}
+.stat-num{font-size:2rem;font-weight:900;color:#fff;line-height:1;letter-spacing:-.03em}
+.stat-label{font-size:.72rem;color:rgba(255,255,255,.45);margin-top:5px;text-transform:uppercase;letter-spacing:.08em;font-weight:500}
 .wrap{max-width:1000px;margin:0 auto;padding:64px 5vw}
 .sec-label{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem}
 .sec-h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;letter-spacing:-.02em;color:var(--navy);margin-bottom:1rem}
@@ -648,6 +648,7 @@ nav.scrolled{
 .footer-tel .fmtitle{font-size:.82rem;font-weight:500}
 .footer-tel .fmsub{font-size:.75rem;color:rgba(255,255,255,.35)}
 </style>
+<link rel="stylesheet" href="/enhancements.css">
 </head>
 <body>
 <div class="lbar">
@@ -681,7 +682,7 @@ nav.scrolled{
   </ul>
 </li>
 <li><a onclick="closeMobileNav()" href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
-<li><a onclick="closeMobileNav()" href="/sat-zone/" data-en="SAT Zone" data-uz="SAT Zone" data-ru="SAT Zone">SAT Zone</a></li>
+<li><a onclick="closeMobileNav()" href="/sat-zone/" data-en="Practice" data-uz="Practice" data-ru="Practice">Practice</a></li>
 <li><a onclick="closeMobileNav()" href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
 <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Test" data-uz="Bepul test" data-ru="Бесплатный тест">Free Test</a></li>
 </ul>
@@ -725,13 +726,13 @@ nav.scrolled{
     <li><a href="/about/" onclick="closeMobileNav()" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
     <li><a href="/teachers/" onclick="closeMobileNav()" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Преподаватели">Our Teachers</a></li>
     <li><a href="/blog/" onclick="closeMobileNav()" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
-    <li><a href="/sat-zone/" onclick="closeMobileNav()" data-en="SAT Zone" data-uz="SAT Zone" data-ru="SAT Zone">SAT Zone</a></li>
+    <li><a href="/sat-zone/" onclick="closeMobileNav()" data-en="Practice" data-uz="Practice" data-ru="Practice">Practice</a></li>
     <li><a href="/contact/" onclick="closeMobileNav()" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
   </ul>
 </li>
 
 <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Test" data-uz="Bepul test" data-ru="Бесплатный тест">Free Test</a></li>
-<li><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="mob-enroll" data-en="Enroll Now →" data-uz="Yozilish →" data-ru="Записаться →">Enroll Now →</a></li>
+<li><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="mob-enroll" data-en="Book FREE Lesson →" data-uz="Bepul Dars →" data-ru="Бесплатный урок →">Enroll Now →</a></li>
 </ul>
 </nav>
 
@@ -741,13 +742,13 @@ nav.scrolled{
   <h1 data-en="Intensive SAT Bootcamp — 3 Months to 1500+" data-uz="Intensiv SAT Bootcamp — 3 Oyda 1400+" data-ru="&#1048;&#1085;&#1090;&#1077;&#1085;&#1089;&#1080;&#1074;&#1085;&#1099;&#1081; SAT &#1073;&#1091;&#1090;&#1082;&#1077;&#1084;&#1087; — 1400+ &#1079;&#1072; 3 &#1084;&#1077;&#1089;&#1103;&#1094;&#1072;">Intensive SAT Bootcamp — 3 Months to 1500+</h1>
   <p data-en="Accelerated SAT preparation for students with a test date in 3&#8211;4 months. Daily practice, weekly full mock SATs, deep score analytics, and personal mentor feedback." data-uz="3-4 oy ichida test sanasi bo&#39;lgan talabalar uchun tezlashtirilgan SAT tayyorgarlik. Kunlik mashq, haftalik to&#39;liq mock SAT, chuqur tahlil." data-ru="&#1059;&#1089;&#1082;&#1086;&#1088;&#1077;&#1085;&#1085;&#1072;&#1103; &#1087;&#1086;&#1076;&#1075;&#1086;&#1090;&#1086;&#1074;&#1082;&#1072; SAT &#1076;&#1083;&#1103; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074; &#1089; &#1076;&#1072;&#1090;&#1086;&#1081; &#1090;&#1077;&#1089;&#1090;&#1072; &#1095;&#1077;&#1088;&#1077;&#1079; 3-4 &#1084;&#1077;&#1089;&#1103;&#1094;&#1072;.">Accelerated SAT preparation for students with a test date in 3–4 months.</p>
   <div class="boot-cta-row">
-    <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="boot-cta-primary" data-en="Apply for Bootcamp" data-uz="Bootcampga Yozilish" data-ru="&#1047;&#1072;&#1087;&#1080;&#1089;&#1072;&#1090;&#1100;&#1089;&#1103; &#1085;&#1072; &#1073;&#1091;&#1090;&#1082;&#1077;&#1084;&#1087;">Apply for Bootcamp</a>
+    <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="boot-cta-primary" data-en="Book FREE Lesson →" data-uz="Bepul Dars →" data-ru="Записаться бесплатно →">Book FREE Lesson →</a></a>
     <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="boot-cta-sec" data-en="Free Diagnostic First" data-uz="Avval Bepul Diagnostika" data-ru="&#1057;&#1085;&#1072;&#1095;&#1072;&#1083;&#1072; &#1076;&#1080;&#1072;&#1075;&#1085;&#1086;&#1089;&#1090;&#1080;&#1082;&#1072;">Free Diagnostic First</a>
   </div>
   <div class="stat-bar">
     <div class="stat-item"><div class="stat-num">3</div><div class="stat-label" data-en="Month Program" data-uz="Oylik Dastur" data-ru="&#1052;&#1077;&#1089;&#1103;&#1094;&#1072;">Month Program</div></div>
     <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label" data-en="Points Avg Gain" data-uz="Ball Ko&#39;tarilishi" data-ru="&#1041;&#1072;&#1083;&#1083;&#1086;&#1074; &#1088;&#1086;&#1089;&#1090;">Points Avg Gain</div></div>
-    <div class="stat-item"><div class="stat-num">&#x2264;15</div><div class="stat-label" data-en="Students per Group" data-uz="Guruhda Talaba" data-ru="&#1057;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074;">Students per Group</div></div>
+    <div class="stat-item"><div class="stat-num">&#x2264;12</div><div class="stat-label" data-en="Students per Group" data-uz="Guruhda Talaba" data-ru="&#1057;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074;">Students per Group</div></div>
     <div class="stat-item"><div class="stat-num">12</div><div class="stat-label" data-en="Mock SATs Included" data-uz="Mock SAT Kiritilgan" data-ru="Mock &#1074;&#1082;&#1083;&#1102;&#1095;&#1077;&#1085;&#1086;">Mock SATs Included</div></div>
   </div>
 </div>
@@ -981,7 +982,7 @@ nav.scrolled{
   </a>
 </div>
 
-<div class="mob-sticky"><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now →" data-uz="Yozilish →" data-ru="Записаться →">Enroll Now →</a></div>
+<div class="mob-sticky"><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Book FREE Lesson →" data-uz="Bepul Dars →" data-ru="Бесплатный урок →">Book FREE Lesson →</a></div>
 
 <div class="exit-popup" id="exitPopup">
 <div class="exit-card">

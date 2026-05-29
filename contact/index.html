@@ -400,6 +400,7 @@ nav.scrolled{
 
 @media(max-width:640px){.fwidget{bottom:80px;right:14px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 </style>
+<link rel="stylesheet" href="/enhancements.css">
 </head>
 <body>
 <div class="lbar">
@@ -437,7 +438,7 @@ nav.scrolled{
   </ul>
 </li>
 <li><a onclick="closeMobileNav()" href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
-<li><a onclick="closeMobileNav()" href="/sat-zone/" data-en="SAT Zone" data-uz="SAT Zone" data-ru="SAT Zone">SAT Zone</a></li>
+<li><a onclick="closeMobileNav()" href="/sat-zone/" data-en="Practice" data-uz="Practice" data-ru="Practice">Practice</a></li>
 <li><a onclick="closeMobileNav()" href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
 <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Test" data-uz="Bepul test" data-ru="Бесплатный тест">Free Test</a></li>
 </ul>
@@ -487,13 +488,13 @@ nav.scrolled{
     <li><a href="/about/" onclick="closeMobileNav()" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
     <li><a href="/teachers/" onclick="closeMobileNav()" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Преподаватели">Our Teachers</a></li>
     <li><a href="/blog/" onclick="closeMobileNav()" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
-    <li><a href="/sat-zone/" onclick="closeMobileNav()" data-en="SAT Zone" data-uz="SAT Zone" data-ru="SAT Zone">SAT Zone</a></li>
+    <li><a href="/sat-zone/" onclick="closeMobileNav()" data-en="Practice" data-uz="Practice" data-ru="Practice">Practice</a></li>
     <li><a href="/contact/" onclick="closeMobileNav()" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
   </ul>
 </li>
 
 <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Test" data-uz="Bepul test" data-ru="Бесплатный тест">Free Test</a></li>
-<li><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="mob-enroll" data-en="Enroll Now →" data-uz="Yozilish →" data-ru="Записаться →">Enroll Now →</a></li>
+<li><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="mob-enroll" data-en="Book FREE Lesson →" data-uz="Bepul Dars →" data-ru="Бесплатный урок →">Enroll Now →</a></li>
 </ul>
 </nav>
 
@@ -616,25 +617,79 @@ nav.scrolled{
 
 
   <!-- ═══ EMBEDDED MAP ═══ -->
-  <section style="padding:48px 5vw 0">
+  <section style="padding:48px 5vw 32px">
     <div style="max-width:1100px;margin:0 auto">
       <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem" data-en="FIND US" data-uz="BIZNI TOPING" data-ru="КАК НАС НАЙТИ">FIND US</div>
-      <h2 style="font-family:var(--f);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;color:var(--navy);letter-spacing:-.03em;margin-bottom:1.2rem" data-en="We're in the heart of Samarkand" data-uz="Biz Samarqand markazidamiz" data-ru="Мы в центре Самарканда">We're in the heart of Samarkand</h2>
-      <div style="border-radius:20px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,.1);border:1px solid var(--bd)">
-        <iframe
-          src="https://www.google.com/maps?q=Temur+Malik+19,+Samarkand,+Uzbekistan&output=embed"
-          width="100%"
-          height="400"
-          style="border:0;display:block"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="SAT Samarkand — Temur Malik 19">
-        </iframe>
+      <h2 style="font-family:var(--f);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;color:var(--navy);letter-spacing:-.03em;margin-bottom:1.4rem" data-en="Two locations in Samarkand" data-uz="Samarqandda ikki filial" data-ru="Два адреса в Самарканде">Two locations in Samarkand</h2>
+
+      <!-- Branch Tabs -->
+      <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+        <button onclick="showMap(1)" id="mtab1"
+          style="padding:9px 22px;border-radius:980px;border:2px solid var(--blue);background:var(--blue);color:#fff;font-size:.83rem;font-weight:700;font-family:var(--f);cursor:pointer;transition:all .15s"
+          data-en="Branch 1 — Temur Malik 19" data-uz="1-filial — Temur Malik 19" data-ru="Филиал 1 — Темур Малик 19">Branch 1 — Temur Malik 19</button>
+        <button onclick="showMap(2)" id="mtab2"
+          style="padding:9px 22px;border-radius:980px;border:2px solid var(--bd);background:#fff;color:var(--navy);font-size:.83rem;font-weight:700;font-family:var(--f);cursor:pointer;transition:all .15s"
+          data-en="Branch 2 — Mirzo Ulug'bek 105" data-uz="2-filial — Mirzo Ulug'bek 105" data-ru="Филиал 2 — Мирзо Улугбек 105">Branch 2 — Mirzo Ulug'bek 105</button>
       </div>
-      <p style="font-size:.82rem;color:var(--tm);margin-top:.8rem;text-align:center" data-en="Branch 1: Temur Malik 19 · Branch 2: Mirzo Ulug'bek 105, Samarkand" data-uz="1-filial: Temur Malik 19 · 2-filial: Mirzo Ulug'bek 105, Samarqand" data-ru="Филиал 1: Темур Малик 19 · Филиал 2: Мирзо Улугбек 105, Самарканд">Branch 1: Temur Malik 19 · Branch 2: Mirzo Ulug'bek 105, Samarkand</p>
+
+      <!-- Map 1: Branch 1 -->
+      <div id="mwrap1" style="border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.1);border:1px solid var(--bd)">
+        <iframe
+          src="https://maps.google.com/maps?q=Temur+Malik+19+Samarkand+Uzbekistan&output=embed&z=16"
+          width="100%" height="420" style="border:0;display:block"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="SAT Samarkand — Branch 1, Temur Malik 19">
+        </iframe>
+        <div style="padding:12px 18px;background:#fff;display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--bd)">
+          <span style="font-size:.82rem;font-weight:600;color:var(--navy)">📍 Temur Malik 19, Samarkand</span>
+          <a href="https://maps.google.com/?q=Temur+Malik+19+Samarkand+Uzbekistan" target="_blank" rel="noopener"
+            style="font-size:.76rem;color:var(--blue);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px"
+            data-en="Open in Google Maps →" data-uz="Google Maps da ochish →" data-ru="Открыть в Google Maps →">Open in Google Maps →</a>
+          <a href="https://yandex.uz/maps/?text=Samarkand+Temur+Malik+19" target="_blank" rel="noopener"
+            style="font-size:.76rem;color:#f00;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px"
+            data-en="Open in Yandex Maps →" data-uz="Yandex Maps da ochish →" data-ru="Открыть в Яндекс.Картах →">Open in Yandex Maps →</a>
+        </div>
+      </div>
+
+      <!-- Map 2: Branch 2 (hidden by default) -->
+      <div id="mwrap2" style="display:none;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.1);border:1px solid var(--bd)">
+        <iframe
+          src="https://maps.google.com/maps?q=Mirzo+Ulugbek+105+Samarkand+Uzbekistan&output=embed&z=16"
+          width="100%" height="420" style="border:0;display:block"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="SAT Samarkand — Branch 2, Mirzo Ulugbek 105">
+        </iframe>
+        <div style="padding:12px 18px;background:#fff;display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--bd)">
+          <span style="font-size:.82rem;font-weight:600;color:var(--navy)">📍 Mirzo Ulug'bek 105, Samarkand</span>
+          <a href="https://maps.google.com/?q=Mirzo+Ulugbek+105+Samarkand+Uzbekistan" target="_blank" rel="noopener"
+            style="font-size:.76rem;color:var(--blue);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px"
+            data-en="Open in Google Maps →" data-uz="Google Maps da ochish →" data-ru="Открыть в Google Maps →">Open in Google Maps →</a>
+          <a href="https://yandex.uz/maps/?text=Samarkand+Mirzo+Ulugbek+105" target="_blank" rel="noopener"
+            style="font-size:.76rem;color:#f00;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px"
+            data-en="Open in Yandex Maps →" data-uz="Yandex Maps da ochish →" data-ru="Открыть в Яндекс.Картах →">Open in Yandex Maps →</a>
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <script>
+  function showMap(n) {
+    document.getElementById('mwrap1').style.display = n===1 ? 'block' : 'none';
+    document.getElementById('mwrap2').style.display = n===2 ? 'block' : 'none';
+    var t1 = document.getElementById('mtab1');
+    var t2 = document.getElementById('mtab2');
+    if (n===1) {
+      t1.style.background='var(--blue)'; t1.style.color='#fff'; t1.style.borderColor='var(--blue)';
+      t2.style.background='#fff'; t2.style.color='var(--navy)'; t2.style.borderColor='var(--bd)';
+    } else {
+      t2.style.background='var(--blue)'; t2.style.color='#fff'; t2.style.borderColor='var(--blue)';
+      t1.style.background='#fff'; t1.style.color='var(--navy)'; t1.style.borderColor='var(--bd)';
+    }
+  }
+  </script>
 ="footer">
   <div class="fgrid">
     <div>
