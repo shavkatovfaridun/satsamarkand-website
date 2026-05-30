@@ -198,3 +198,21 @@
 .smore:hover, .fbot a:hover {
   border-bottom-color: currentColor;
 }
+
+/* ── MENTOR & PARENTS SECTIONS — MOBILE RESPONSIVE ──────── */
+@media (max-width: 760px) {
+  .mentor-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  .parents-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+@media (max-width: 480px) {
+  .mentor-cards-grid,
+  .parents-cards-grid {
+    gap: 10px !important;
+  }
+}
