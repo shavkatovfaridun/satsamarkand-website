@@ -472,6 +472,53 @@ nav.scrolled{
     <a href="https://satsamarkand.uz" class="nback" data-en="Back to main site" data-uz="Asosiy saytga" data-ru="На главную">Back to main site</a>
   </div>
 </nav>
+<nav class="mob-nav" id="mobnav">
+<ul class="mob-list">
+<li><a href="/" onclick="closeMobileNav()" data-en="Home" data-uz="Bosh sahifa" data-ru="Главная">Home</a></li>
+
+<li class="mob-group">
+  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
+    <span data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</span>
+    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+  <ul class="mob-group-body">
+    <li><a href="/courses/" onclick="closeMobileNav()" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
+    <li><a href="/schedule/" onclick="closeMobileNav()" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
+    <li><a href="/intensive-sat-bootcamp/" onclick="closeMobileNav()" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
+    <li><a href="/digital-sat/" onclick="closeMobileNav()" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
+  </ul>
+</li>
+
+<li class="mob-group">
+  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
+    <span data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</span>
+    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+  <ul class="mob-group-body">
+    <li><a href="/admissions/" onclick="closeMobileNav()" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг">Admissions Consulting</a></li>
+    <li><a href="/universities/" onclick="closeMobileNav()" data-en="76+ Universities" data-uz="76+ Universitetlar" data-ru="76+ Университетов">76+ Universities</a></li>
+    <li><a href="/results/" onclick="closeMobileNav()" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
+  </ul>
+</li>
+
+<li class="mob-group">
+  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
+    <span data-en="About" data-uz="Biz haqimizda" data-ru="О нас">About</span>
+    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+  <ul class="mob-group-body">
+    <li><a href="/about/" onclick="closeMobileNav()" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+    <li><a href="/teachers/" onclick="closeMobileNav()" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Преподаватели">Our Teachers</a></li>
+    <li><a href="/blog/" onclick="closeMobileNav()" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
+    <li><a href="/sat-zone/" onclick="closeMobileNav()" data-en="Practice" data-uz="Practice" data-ru="Practice">Practice</a></li>
+    <li><a href="/contact/" onclick="closeMobileNav()" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
+  </ul>
+</li>
+
+<li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Test" data-uz="Bepul test" data-ru="Бесплатный тест">Free Test</a></li>
+<li><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="mob-enroll" data-en="Book FREE Lesson →" data-uz="Bepul Dars →" data-ru="Бесплатный урок →">Enroll Now →</a></li>
+</ul>
+</nav>
 
 <div class="screen active" id="screen-intro">
   <div class="wrap">
@@ -4470,5 +4517,104 @@ window.addEventListener('beforeunload', e => {
 </div>
 
 
+
+
+<script>
+// ═══ LANGUAGE ═══
+let currentLang = localStorage.getItem('sats_lang');
+if (!currentLang) {
+  const bl = (navigator.language || 'en').toLowerCase();
+  currentLang = bl.startsWith('uz') ? 'uz' : bl.startsWith('ru') ? 'ru' : 'en';
+}
+
+function applyLang(lang) {
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    const v = el.getAttribute('data-' + lang);
+    if (v !== null) el.innerHTML = v;
+  });
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lb').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('sats_lang', lang);
+  applyLang(lang);
+}
+
+document.addEventListener('DOMContentLoaded', () => applyLang(currentLang));
+
+// ═══ NAV SCROLL ═══
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// ═══ EXIT POPUP ═══
+function closeExitPopup() {
+  const p = document.getElementById('exitPopup');
+  if (p) p.classList.remove('active');
+}
+let exitShown = false;
+document.addEventListener('mouseleave', (e) => {
+  if (e.clientY < 10 && !exitShown) {
+    exitShown = true;
+    const p = document.getElementById('exitPopup');
+    if (p) p.classList.add('active');
+  }
+});
+
+// ═══ MOBILE NAV ═══
+function toggleMobileNav() {
+  var mn = document.getElementById('mobnav');
+  var btn = document.querySelector('.nham');
+  if (mn) { mn.classList.toggle('open'); if (btn) btn.classList.toggle('open'); }
+  else { var nl = document.getElementById('nlinks'); if (nl) nl.classList.toggle('open'); }
+}
+function closeMobileNav() {
+  var mn = document.getElementById('mobnav');
+  var nl = document.getElementById('nlinks');
+  var btn = document.querySelector('.nham');
+  if (mn) mn.classList.remove('open');
+  if (nl) nl.classList.remove('open');
+  if (btn) btn.classList.remove('open');
+}
+function toggleMobGroup(btn) {
+  var group = btn.closest('.mob-group');
+  var isOpen = group.classList.contains('open');
+  document.querySelectorAll('.mob-group.open').forEach(function(g){ g.classList.remove('open'); });
+  if (!isOpen) group.classList.add('open');
+}
+document.addEventListener('click', function(e) {
+  var mn = document.getElementById('mobnav');
+  if (mn && mn.classList.contains('open')) {
+    if (!e.target.closest('.mob-nav') && !e.target.closest('.nham')) {
+      mn.classList.remove('open');
+      var btn = document.querySelector('.nham');
+      if (btn) btn.classList.remove('open');
+    }
+  }
+});
+
+// ═══ FAQ ACCORDION ═══
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// Floating button position near footer
+window.addEventListener('scroll', () => {
+  const fw = document.getElementById('fwidget');
+  if (!fw) return;
+  const footer = document.querySelector('.footer');
+  if (footer) {
+    const footerTop = footer.getBoundingClientRect().top;
+    const winH = window.innerHeight;
+    fw.style.bottom = footerTop < winH ? (winH - footerTop + 20) + 'px' : '28px';
+  }
+});
+</script>
 </body>
 </html>
