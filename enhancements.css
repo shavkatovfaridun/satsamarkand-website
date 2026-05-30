@@ -161,6 +161,7 @@ input[type="tel"], input[type="number"] {
   box-shadow: 0 -4px 20px var(--amber-glow) !important;
 }
 .mob-sticky a {
+  background: transparent !important;
   color: #052e16 !important;
   font-weight: 700 !important;
   animation: none !important;
