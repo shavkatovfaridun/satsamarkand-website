@@ -155,16 +155,12 @@ input[type="tel"], input[type="number"] {
   animation: none;
 }
 
-/* Mobile sticky bar */
+/* Mobile sticky bar — hidden */
 .mob-sticky {
-  background: linear-gradient(90deg, var(--amber), #16a34a) !important;
-  box-shadow: 0 -4px 20px var(--amber-glow) !important;
+  display: none !important;
 }
-.mob-sticky a {
-  background: transparent !important;
-  color: #052e16 !important;
-  font-weight: 700 !important;
-  animation: none !important;
+@media (max-width: 640px) {
+  body { padding-bottom: 0 !important; }
 }
 
 /* ── SECTION LABEL ACCENT DOT ───────────────────────────── */
