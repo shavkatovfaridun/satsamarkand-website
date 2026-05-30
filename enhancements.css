@@ -9,6 +9,79 @@
   --amber3:     #4ade80;
   --amber-glow: rgba(34,197,94,.28);
   --amber-pale: #f0fdf4;
+
+  /* ── SQUIRCLE RADIUS OVERRIDES ── */
+  --rsm: 14px;
+  --rlg: 28px;
+  --rxl: 40px;
+}
+
+/* ── SQUIRCLE — ALL RECTANGULAR ELEMENTS ───────────────── */
+
+/* Cards */
+.card, .pcard, .scard, .wc, .why-card, .feat-card,
+.uni-card, .blog-card, .result-card, .score-card,
+.faq-item, .step-item, .mentor-card, .parent-card,
+.info-card, .pkg-card, .pricing-card, .inner-link-card,
+.mock-card, .tip-card, .pillar-card, .services-card,
+[class*="-card"], [class*="card-"] {
+  border-radius: 28px !important;
+}
+
+/* Sections / banners with background */
+.cta-banner, .mock-banner, .urgency-banner,
+.hero-badge, .slbl, .pillar-section-label,
+.stat-box, .score-box, .tb, .tb-item,
+.form-card, .form-wrap, .form-inner {
+  border-radius: 20px !important;
+}
+
+/* Buttons — keep pill shape but use squircle for non-pill buttons */
+.btnf, .btns, .btnw, .pbtn,
+.btn-tg-kw, .btn-tg-hero, .boot-cta-primary,
+.nenroll, .mob-enroll {
+  border-radius: 40px !important;
+}
+
+/* Tags / badges / labels */
+.tag, .blog-card-tag, .slbl, .course-tag,
+.uni-badge, .score-tag, [class*="tag"],
+[class*="badge"], [class*="label"] {
+  border-radius: 999px !important;
+}
+
+/* Input fields & selects */
+input, textarea, select,
+.input, .field, .form-field,
+input[type="text"], input[type="email"],
+input[type="tel"], input[type="number"] {
+  border-radius: 16px !important;
+}
+
+/* Nav dropdown */
+.dd, .nav-dropdown, #mobnav {
+  border-radius: 20px !important;
+}
+
+/* Floating widget items */
+.fmitem {
+  border-radius: 20px !important;
+}
+
+/* Images inside cards — soft squircle */
+.uni-card img, .mentor-card img,
+.blog-card img, .result-card img {
+  border-radius: 16px !important;
+}
+
+/* Nav pill */
+.nbar, nav {
+  border-radius: 0 !important; /* nav bar stays full-width */
+}
+
+/* Mobile sticky bar */
+.mob-sticky {
+  border-radius: 20px 20px 0 0 !important;
 }
 
 /* ── GREEN PRIMARY CTAs ─────────────────────────────────── */
