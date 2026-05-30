@@ -58,8 +58,15 @@ input[type="tel"], input[type="number"] {
   border-radius: 16px !important;
 }
 
-/* Nav dropdown */
-.dd, .nav-dropdown, #mobnav {
+/* Nav dropdown — explicit background prevents backdrop-filter bleed */
+.dd, .nav-dropdown {
+  border-radius: 20px !important;
+  background: #ffffff !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06), 0 12px 36px rgba(0,0,0,.14) !important;
+}
+#mobnav {
   border-radius: 20px !important;
 }
 
