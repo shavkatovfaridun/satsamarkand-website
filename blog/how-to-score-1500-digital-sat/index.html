@@ -42,7 +42,7 @@
 <style>
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--navy:#022049;--navy3:#010e24;--blue:#0661de;--blue2:#0450b4;--elec:#2979ff;--green:#16a34a;--bxpale:#f0f4ff;--bpale:#e8f0fe;--t:#1d1d1f;--t2:#3d3d3d;--tm:#6e6e73;--tl:#86868b;--bg:#fff;--bg2:#f5f5f7;--bg3:#e8ecf0;--bd:#d2d2d7;--ss:0 1px 3px rgba(0,0,0,.06);--sm:0 2px 12px rgba(0,0,0,.08);--sl:0 8px 32px rgba(0,0,0,.1);--r:12px;--rsm:8px;--rlg:18px;--rxl:24px;--f:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;--ft:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif}
+:root{--navy:#022049;--navy3:#010e24;--blue:#0661de;--blue2:#0450b4;--elec:#2979ff;--green:#044fba;--bxpale:#f0f4ff;--bpale:#e8f0fe;--t:#1d1d1f;--t2:#3d3d3d;--tm:#6e6e73;--tl:#86868b;--bg:#fff;--bg2:#f5f5f7;--bg3:#e8ecf0;--bd:#d2d2d7;--ss:0 1px 3px rgba(0,0,0,.06);--sm:0 2px 12px rgba(0,0,0,.08);--sl:0 8px 32px rgba(0,0,0,.1);--r:12px;--rsm:8px;--rlg:18px;--rxl:24px;--f:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;--ft:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:64px}
 body{font-family:var(--ft);background:var(--bg);color:var(--t);line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
@@ -148,7 +148,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .rank-other{background:var(--bg2);color:var(--tm)}
 .score-val{font-family:var(--f);font-size:1.05rem;font-weight:700;color:var(--navy)}
 .year-badge{font-size:.7rem;font-weight:600;color:var(--blue);background:var(--bxpale);border:1px solid rgba(6,97,222,.15);padding:3px 10px;border-radius:20px}
-.year-badge.y2026{background:#dcfce7;color:#15803d;border-color:#86efac}
+.year-badge.y2026{background:#dbeafe;color:#1d4ed8;border-color:#93c5fd}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:2.5rem}
 .pcard{background:#fff;border:1px solid var(--bd);border-radius:var(--rxl);padding:0;overflow:hidden;box-shadow:var(--ss);transition:all .25s;display:flex;flex-direction:column;position:relative}
 .pcard:hover{box-shadow:var(--sm);transform:translateY(-4px)}
@@ -170,7 +170,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .ptier-label-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
 .ptier-label{font-size:.72rem;font-weight:700;color:var(--navy);letter-spacing:.04em}
 .pcard.premium .ptier-label{color:#fff}
-.ptier-savings{font-size:.65rem;font-weight:700;color:var(--green);background:#dcfce7;padding:2px 8px;border-radius:20px;letter-spacing:.04em;text-transform:uppercase}
+.ptier-savings{font-size:.65rem;font-weight:700;color:var(--green);background:#dbeafe;padding:2px 8px;border-radius:20px;letter-spacing:.04em;text-transform:uppercase}
 .pcard.premium .ptier-savings{background:rgba(52,211,153,.2);color:#34d399}
 .ptier-price-row{display:flex;align-items:baseline;gap:5px}
 .ptier-price{font-family:var(--f);font-size:1.4rem;font-weight:700;color:var(--navy);line-height:1}
@@ -185,7 +185,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pfeats{list-style:none;margin-bottom:1.4rem;display:flex;flex-direction:column;gap:8px;flex:1}
 .pfeats li{font-size:.83rem;color:var(--t2);display:flex;align-items:flex-start;gap:8px;line-height:1.45}
 .pcard.premium .pfeats li{color:rgba(255,255,255,.75)}
-.pfeats li svg{width:14px;height:14px;flex-shrink:0;margin-top:3px;stroke:#22c55e;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.pfeats li svg{width:14px;height:14px;flex-shrink:0;margin-top:3px;stroke:#0661de;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 .pcard.premium .pfeats li svg{stroke:#60d394}
 .pnote{font-size:.74rem;color:var(--tl);line-height:1.5;padding:9px 11px;background:var(--bg2);border-radius:var(--rsm);margin-bottom:1.1rem}
 .pcard.premium .pnote{background:rgba(255,255,255,.06);color:rgba(255,255,255,.4)}
@@ -239,7 +239,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .submit-btn:hover{background:var(--blue2)}
 .submit-btn:disabled{opacity:.5;cursor:not-allowed}
 .success-msg{display:none;text-align:center;padding:32px 24px}
-.success-msg svg{width:56px;height:56px;stroke:#16a34a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1rem}
+.success-msg svg{width:56px;height:56px;stroke:#044fba;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1rem}
 .success-msg h3{font-family:var(--f);font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
 .success-msg p{font-size:.92rem;color:var(--tm);line-height:1.6}
 .success-msg .highlight{font-weight:700;color:var(--navy);margin:.4rem 0}
@@ -573,7 +573,8 @@ nav.scrolled{
 <li class="has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses<span class="dd-arrow">▾</span></a>
   <ul class="dd">
     <li><a onclick="closeMobileNav()" href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
-    <li><a onclick="closeMobileNav()" href="/ap/" data-en="AP &amp; IELTS Courses" data-uz="AP va IELTS Kurslar" data-ru="Курсы AP и IELTS">AP &amp; IELTS Courses</a></li>
+    <li><a onclick="closeMobileNav()" href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a></li>
+    <li><a onclick="closeMobileNav()" href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a></li>
     <li><a onclick="closeMobileNav()" href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
     <li><a onclick="closeMobileNav()" href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
     <li><a onclick="closeMobileNav()" href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
@@ -610,7 +611,8 @@ nav.scrolled{
   </button>
   <ul class="mob-group-body">
     <li><a href="/courses/" onclick="closeMobileNav()" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
-    <li><a href="/ap/" onclick="closeMobileNav()" data-en="AP &amp; IELTS Courses" data-uz="AP va IELTS Kurslar" data-ru="Курсы AP и IELTS">AP &amp; IELTS Courses</a></li>
+    <li><a href="/ap/" onclick="closeMobileNav()" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a></li>
+    <li><a href="/ielts/" onclick="closeMobileNav()" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a></li>
     <li><a href="/schedule/" onclick="closeMobileNav()" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
     <li><a href="/intensive-sat-bootcamp/" onclick="closeMobileNav()" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
     <li><a href="/digital-sat/" onclick="closeMobileNav()" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>

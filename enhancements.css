@@ -1,14 +1,14 @@
 /* =========================================================
    SATSAMARKAND.UZ — Visual Enhancements v2
-   Green accent · Micro-interactions · Animations
+   Blue accent · Micro-interactions · Animations
    ========================================================= */
 
 :root {
-  --amber:      #22c55e;
-  --amber2:     #16a34a;
-  --amber3:     #4ade80;
-  --amber-glow: rgba(34,197,94,.28);
-  --amber-pale: #f0fdf4;
+  --amber:      #0661de;
+  --amber2:     #044fba;
+  --amber3:     #3b82f6;
+  --amber-glow: rgba(6,97,222,.28);
+  --amber-pale: #eff6ff;
 
   /* ── SQUIRCLE RADIUS OVERRIDES ── */
   --rsm: 14px;
@@ -137,8 +137,8 @@ body > ul.dd li::marker {
 .mob-enroll,
 .btn-tg-hero,
 .boot-cta-primary {
-  background: linear-gradient(135deg, var(--amber), #16a34a) !important;
-  color: #052e16 !important;
+  background: linear-gradient(135deg, var(--amber), #044fba) !important;
+  color: #fff !important;
   border: none !important;
   box-shadow: 0 6px 22px var(--amber-glow) !important;
 }
@@ -149,7 +149,7 @@ body > ul.dd li::marker {
   background: linear-gradient(135deg, var(--amber3), var(--amber)) !important;
   box-shadow: 0 10px 36px var(--amber-glow) !important;
   transform: translateY(-2px) scale(1.02) !important;
-  color: #052e16 !important;
+  color: #fff !important;
 }
 
 /* Pulse ring on primary hero CTA */
@@ -247,7 +247,7 @@ body > ul.dd li::marker {
   transform: translateX(-5px) translateY(-2px) !important;
   box-shadow: 0 10px 30px rgba(0,0,0,.14) !important;
 }
-.fmitem.fmcall .fmicon { background: var(--amber) !important; color: #052e16 !important; }
+.fmitem.fmcall .fmicon { background: var(--amber) !important; color: #fff !important; }
 
 /* ── STATS GRADIENT TEXT ────────────────────────────────── */
 .tb-num,

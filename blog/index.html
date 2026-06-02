@@ -37,7 +37,7 @@
 <style>
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--navy:#022049;--navy3:#010e24;--blue:#0661de;--blue2:#0450b4;--elec:#2979ff;--green:#16a34a;--bxpale:#f0f4ff;--bpale:#e8f0fe;--t:#1d1d1f;--t2:#3d3d3d;--tm:#6e6e73;--tl:#86868b;--bg:#fff;--bg2:#f5f5f7;--bg3:#e8ecf0;--bd:#d2d2d7;--ss:0 1px 3px rgba(0,0,0,.06);--sm:0 2px 12px rgba(0,0,0,.08);--sl:0 8px 32px rgba(0,0,0,.1);--r:12px;--rsm:8px;--rlg:18px;--rxl:24px;--f:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;--ft:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif}
+:root{--navy:#022049;--navy3:#010e24;--blue:#0661de;--blue2:#0450b4;--elec:#2979ff;--green:#044fba;--bxpale:#f0f4ff;--bpale:#e8f0fe;--t:#1d1d1f;--t2:#3d3d3d;--tm:#6e6e73;--tl:#86868b;--bg:#fff;--bg2:#f5f5f7;--bg3:#e8ecf0;--bd:#d2d2d7;--ss:0 1px 3px rgba(0,0,0,.06);--sm:0 2px 12px rgba(0,0,0,.08);--sl:0 8px 32px rgba(0,0,0,.1);--r:12px;--rsm:8px;--rlg:18px;--rxl:24px;--f:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;--ft:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:64px}
 body{font-family:var(--ft);background:var(--bg);color:var(--t);line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
@@ -143,7 +143,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .rank-other{background:var(--bg2);color:var(--tm)}
 .score-val{font-family:var(--f);font-size:1.05rem;font-weight:700;color:var(--navy)}
 .year-badge{font-size:.7rem;font-weight:600;color:var(--blue);background:var(--bxpale);border:1px solid rgba(6,97,222,.15);padding:3px 10px;border-radius:20px}
-.year-badge.y2026{background:#dcfce7;color:#15803d;border-color:#86efac}
+.year-badge.y2026{background:#dbeafe;color:#1d4ed8;border-color:#93c5fd}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:2.5rem}
 .pcard{background:#fff;border:1px solid var(--bd);border-radius:var(--rxl);padding:0;overflow:hidden;box-shadow:var(--ss);transition:all .25s;display:flex;flex-direction:column;position:relative}
 .pcard:hover{box-shadow:var(--sm);transform:translateY(-4px)}
@@ -165,7 +165,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .ptier-label-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
 .ptier-label{font-size:.72rem;font-weight:700;color:var(--navy);letter-spacing:.04em}
 .pcard.premium .ptier-label{color:#fff}
-.ptier-savings{font-size:.65rem;font-weight:700;color:var(--green);background:#dcfce7;padding:2px 8px;border-radius:20px;letter-spacing:.04em;text-transform:uppercase}
+.ptier-savings{font-size:.65rem;font-weight:700;color:var(--green);background:#dbeafe;padding:2px 8px;border-radius:20px;letter-spacing:.04em;text-transform:uppercase}
 .pcard.premium .ptier-savings{background:rgba(52,211,153,.2);color:#34d399}
 .ptier-price-row{display:flex;align-items:baseline;gap:5px}
 .ptier-price{font-family:var(--f);font-size:1.4rem;font-weight:700;color:var(--navy);line-height:1}
@@ -180,7 +180,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pfeats{list-style:none;margin-bottom:1.4rem;display:flex;flex-direction:column;gap:8px;flex:1}
 .pfeats li{font-size:.83rem;color:var(--t2);display:flex;align-items:flex-start;gap:8px;line-height:1.45}
 .pcard.premium .pfeats li{color:rgba(255,255,255,.75)}
-.pfeats li svg{width:14px;height:14px;flex-shrink:0;margin-top:3px;stroke:#22c55e;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.pfeats li svg{width:14px;height:14px;flex-shrink:0;margin-top:3px;stroke:#0661de;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 .pcard.premium .pfeats li svg{stroke:#60d394}
 .pnote{font-size:.74rem;color:var(--tl);line-height:1.5;padding:9px 11px;background:var(--bg2);border-radius:var(--rsm);margin-bottom:1.1rem}
 .pcard.premium .pnote{background:rgba(255,255,255,.06);color:rgba(255,255,255,.4)}
@@ -234,7 +234,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .submit-btn:hover{background:var(--blue2)}
 .submit-btn:disabled{opacity:.5;cursor:not-allowed}
 .success-msg{display:none;text-align:center;padding:32px 24px}
-.success-msg svg{width:56px;height:56px;stroke:#16a34a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1rem}
+.success-msg svg{width:56px;height:56px;stroke:#044fba;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1rem}
 .success-msg h3{font-family:var(--f);font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
 .success-msg p{font-size:.92rem;color:var(--tm);line-height:1.6}
 .success-msg .highlight{font-weight:700;color:var(--navy);margin:.4rem 0}
@@ -536,7 +536,8 @@ nav.scrolled{
 <li class="has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses<span class="dd-arrow">▾</span></a>
   <ul class="dd">
     <li><a onclick="closeMobileNav()" href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
-    <li><a onclick="closeMobileNav()" href="/ap/" data-en="AP &amp; IELTS Courses" data-uz="AP va IELTS Kurslar" data-ru="Курсы AP и IELTS">AP &amp; IELTS Courses</a></li>
+    <li><a onclick="closeMobileNav()" href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a></li>
+    <li><a onclick="closeMobileNav()" href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a></li>
     <li><a onclick="closeMobileNav()" href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
     <li><a onclick="closeMobileNav()" href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
     <li><a onclick="closeMobileNav()" href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
@@ -573,7 +574,8 @@ nav.scrolled{
   </button>
   <ul class="mob-group-body">
     <li><a href="/courses/" onclick="closeMobileNav()" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
-    <li><a href="/ap/" onclick="closeMobileNav()" data-en="AP &amp; IELTS Courses" data-uz="AP va IELTS Kurslar" data-ru="Курсы AP и IELTS">AP &amp; IELTS Courses</a></li>
+    <li><a href="/ap/" onclick="closeMobileNav()" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a></li>
+    <li><a href="/ielts/" onclick="closeMobileNav()" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a></li>
     <li><a href="/schedule/" onclick="closeMobileNav()" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
     <li><a href="/intensive-sat-bootcamp/" onclick="closeMobileNav()" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
     <li><a href="/digital-sat/" onclick="closeMobileNav()" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
@@ -753,7 +755,7 @@ nav.scrolled{
   <!-- Dates row 1 -->
   <circle cx="134" cy="73" r="10" fill="rgba(255,255,255,.08)"/><text x="134" y="77" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.6)">5</text>
   <circle cx="160" cy="73" r="10" fill="rgba(255,255,255,.08)"/><text x="160" y="77" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.6)">6</text>
-  <circle cx="186" cy="73" r="10" fill="rgba(34,197,94,.35)" stroke="rgba(34,197,94,.7)" stroke-width="1"/><text x="186" y="77" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#4ade80" font-weight="700">7</text>
+  <circle cx="186" cy="73" r="10" fill="rgba(6,97,222,.35)" stroke="rgba(6,97,222,.7)" stroke-width="1"/><text x="186" y="77" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#3b82f6" font-weight="700">7</text>
   <circle cx="212" cy="73" r="10" fill="rgba(255,255,255,.08)"/><text x="212" y="77" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.6)">8</text>
   <circle cx="238" cy="73" r="10" fill="rgba(255,255,255,.08)"/><text x="238" y="77" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.6)">9</text>
   <!-- Dates row 2 -->
@@ -763,7 +765,7 @@ nav.scrolled{
   <circle cx="212" cy="100" r="10" fill="rgba(6,97,222,.6)" stroke="rgba(6,97,222,.9)" stroke-width="1"/><text x="212" y="104" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#fff" font-weight="700">22</text>
   <circle cx="238" cy="100" r="10" fill="rgba(255,255,255,.08)"/><text x="238" y="104" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.6)">23</text>
   <!-- REGISTER label -->
-  <text x="340" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="rgba(34,197,94,.7)" transform="rotate(-90,340,70)">REGISTER</text>
+  <text x="340" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="rgba(6,97,222,.7)" transform="rotate(-90,340,70)">REGISTER</text>
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
@@ -835,14 +837,14 @@ nav.scrolled{
   <!-- Distance -->
   <text x="200" y="60" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">~300 km</text>
   <!-- Tashkent dot with pin -->
-  <circle cx="330" cy="70" r="14" fill="rgba(34,197,94,.25)" stroke="rgba(34,197,94,.6)" stroke-width="1.5"/>
-  <text x="330" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="9" fill="#4ade80">TSH</text>
+  <circle cx="330" cy="70" r="14" fill="rgba(6,97,222,.25)" stroke="rgba(6,97,222,.6)" stroke-width="1.5"/>
+  <text x="330" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="9" fill="#3b82f6">TSH</text>
   <text x="330" y="94" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">Tashkent</text>
   <!-- SAT badge at Tashkent -->
-  <rect x="302" y="30" width="56" height="22" rx="4" fill="rgba(34,197,94,.2)" stroke="rgba(34,197,94,.4)" stroke-width="1"/>
-  <text x="330" y="45" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="10" fill="#4ade80">SAT TEST</text>
+  <rect x="302" y="30" width="56" height="22" rx="4" fill="rgba(6,97,222,.2)" stroke="rgba(6,97,222,.4)" stroke-width="1"/>
+  <text x="330" y="45" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="10" fill="#3b82f6">SAT TEST</text>
   <!-- Arrow -->
-  <polygon points="330,52 325,44 335,44" fill="rgba(34,197,94,.6)"/>
+  <polygon points="330,52 325,44 335,44" fill="rgba(6,97,222,.6)"/>
   <!-- Train icon -->
   <text x="200" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,.2)">🚆</text>
 
@@ -1017,9 +1019,9 @@ nav.scrolled{
   <rect x="155" y="62" width="46" height="18" rx="3" fill="rgba(6,97,222,.5)"/><text x="178" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#fff">MATH</text>
   <rect x="235" y="62" width="46" height="18" rx="3" fill="rgba(6,97,222,.5)"/><text x="258" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#fff">MATH</text>
   <!-- English sessions -->
-  <rect x="115" y="85" width="46" height="18" rx="3" fill="rgba(34,197,94,.35)"/><text x="138" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#4ade80">ENG</text>
-  <rect x="195" y="85" width="46" height="18" rx="3" fill="rgba(34,197,94,.35)"/><text x="218" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#4ade80">ENG</text>
-  <rect x="275" y="85" width="46" height="18" rx="3" fill="rgba(34,197,94,.35)"/><text x="298" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#4ade80">ENG</text>
+  <rect x="115" y="85" width="46" height="18" rx="3" fill="rgba(6,97,222,.35)"/><text x="138" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#3b82f6">ENG</text>
+  <rect x="195" y="85" width="46" height="18" rx="3" fill="rgba(6,97,222,.35)"/><text x="218" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#3b82f6">ENG</text>
+  <rect x="275" y="85" width="46" height="18" rx="3" fill="rgba(6,97,222,.35)"/><text x="298" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#3b82f6">ENG</text>
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
@@ -1035,7 +1037,7 @@ nav.scrolled{
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g11a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#020d1f"/><stop offset="100%" stop-color="#071d3e"/></linearGradient>
-    <linearGradient id="g11b" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#0661de"/><stop offset="100%" stop-color="#22c55e"/></linearGradient>
+    <linearGradient id="g11b" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#0661de"/><stop offset="100%" stop-color="#0661de"/></linearGradient>
   </defs>
   <rect width="400" height="130" fill="url(#g11a)"/>
   <!-- Score gauge arc -->
@@ -1046,8 +1048,8 @@ nav.scrolled{
   <text x="160" y="62" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.35)">1000</text>
   <text x="242" y="118" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.35)">1600</text>
   <!-- Needle -->
-  <line x1="160" y1="100" x2="200" y2="48" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="160" cy="100" r="5" fill="#22c55e"/>
+  <line x1="160" y1="100" x2="200" y2="48" stroke="#0661de" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="160" cy="100" r="5" fill="#0661de"/>
   <!-- Target score -->
   <text x="290" y="55" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="18" fill="#fff">1400+</text>
   <text x="290" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.4)">target score</text>
@@ -1079,8 +1081,8 @@ nav.scrolled{
   <polygon points="270,70 266,62 274,62" fill="rgba(6,97,222,.6)"/>
   <text x="270" y="55" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,255,255,.7)">Tashkent</text>
   <!-- Samarkand pin -->
-  <circle cx="190" cy="75" r="7" fill="rgba(34,197,94,.5)" stroke="#fff" stroke-width="1"/>
-  <polygon points="190,82 186,75 194,75" fill="rgba(34,197,94,.5)"/>
+  <circle cx="190" cy="75" r="7" fill="rgba(6,97,222,.5)" stroke="#fff" stroke-width="1"/>
+  <polygon points="190,82 186,75 194,75" fill="rgba(6,97,222,.5)"/>
   <text x="190" y="68" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,255,255,.7)">Samarkand</text>
   <!-- Other pins -->
   <circle cx="145" cy="58" r="5" fill="rgba(255,255,255,.2)" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
@@ -1178,12 +1180,12 @@ nav.scrolled{
   <rect x="100" y="20" width="200" height="90" rx="10" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
   <text x="200" y="38" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="11" fill="rgba(255,255,255,.6)">ПОДГОТОВКА К SAT</text>
   <!-- Check items -->
-  <circle cx="122" cy="54" r="7" fill="rgba(34,197,94,.3)" stroke="rgba(34,197,94,.6)" stroke-width="1"/>
-  <polyline points="118,54 121,57 126,51" stroke="#4ade80" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <circle cx="122" cy="54" r="7" fill="rgba(6,97,222,.3)" stroke="rgba(6,97,222,.6)" stroke-width="1"/>
+  <polyline points="118,54 121,57 126,51" stroke="#3b82f6" stroke-width="1.5" fill="none" stroke-linecap="round"/>
   <text x="138" y="58" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.6)">SAT Math 650-800</text>
   
-  <circle cx="122" cy="74" r="7" fill="rgba(34,197,94,.3)" stroke="rgba(34,197,94,.6)" stroke-width="1"/>
-  <polyline points="118,74 121,77 126,71" stroke="#4ade80" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <circle cx="122" cy="74" r="7" fill="rgba(6,97,222,.3)" stroke="rgba(6,97,222,.6)" stroke-width="1"/>
+  <polyline points="118,74 121,77 126,71" stroke="#3b82f6" stroke-width="1.5" fill="none" stroke-linecap="round"/>
   <text x="138" y="78" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.6)">SAT English 600-750</text>
   
   <circle cx="122" cy="94" r="7" fill="rgba(6,97,222,.3)" stroke="rgba(6,97,222,.5)" stroke-width="1"/>
@@ -1252,13 +1254,13 @@ nav.scrolled{
   <rect x="99" y="71" width="13" height="12" rx="2" fill="rgba(6,97,222,.3)"/>
   <rect x="48" y="87" width="31" height="12" rx="2" fill="rgba(255,255,255,.08)"/>
   <rect x="82" y="87" width="14" height="12" rx="2" fill="rgba(255,255,255,.08)"/>
-  <rect x="99" y="87" width="13" height="12" rx="2" fill="rgba(34,197,94,.35)"/>
+  <rect x="99" y="87" width="13" height="12" rx="2" fill="rgba(6,97,222,.35)"/>
   <!-- Tips list -->
-  <text x="155" y="40" font-family="system-ui,sans-serif" font-size="9" fill="rgba(34,197,94,.8)">✓ Eliminate wrong answers</text>
-  <text x="155" y="58" font-family="system-ui,sans-serif" font-size="9" fill="rgba(34,197,94,.7)">✓ Plug in numbers</text>
-  <text x="155" y="76" font-family="system-ui,sans-serif" font-size="9" fill="rgba(34,197,94,.6)">✓ Linear equations first</text>
-  <text x="155" y="94" font-family="system-ui,sans-serif" font-size="9" fill="rgba(34,197,94,.5)">✓ Time management</text>
-  <text x="155" y="112" font-family="system-ui,sans-serif" font-size="9" fill="rgba(34,197,94,.4)">✓ Grid-in strategy</text>
+  <text x="155" y="40" font-family="system-ui,sans-serif" font-size="9" fill="rgba(6,97,222,.8)">✓ Eliminate wrong answers</text>
+  <text x="155" y="58" font-family="system-ui,sans-serif" font-size="9" fill="rgba(6,97,222,.7)">✓ Plug in numbers</text>
+  <text x="155" y="76" font-family="system-ui,sans-serif" font-size="9" fill="rgba(6,97,222,.6)">✓ Linear equations first</text>
+  <text x="155" y="94" font-family="system-ui,sans-serif" font-size="9" fill="rgba(6,97,222,.5)">✓ Time management</text>
+  <text x="155" y="112" font-family="system-ui,sans-serif" font-size="9" fill="rgba(6,97,222,.4)">✓ Grid-in strategy</text>
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
@@ -1292,11 +1294,11 @@ nav.scrolled{
   <line x1="180" y1="53" x2="248" y2="53" stroke="rgba(255,255,255,.15)" stroke-width="1" stroke-linecap="round"/>
   <line x1="180" y1="61" x2="240" y2="61" stroke="rgba(255,255,255,.15)" stroke-width="1" stroke-linecap="round"/>
   <line x1="180" y1="69" x2="248" y2="69" stroke="rgba(255,255,255,.15)" stroke-width="1" stroke-linecap="round"/>
-  <line x1="180" y1="77" x2="245" y2="77" stroke="rgba(34,197,94,.4)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="180" y1="77" x2="245" y2="77" stroke="rgba(6,97,222,.4)" stroke-width="2" stroke-linecap="round"/>
   <line x1="180" y1="85" x2="242" y2="85" stroke="rgba(255,255,255,.15)" stroke-width="1" stroke-linecap="round"/>
   <!-- Labels -->
   <text x="125" y="115" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(6,97,222,.7)">READING</text>
-  <text x="215" y="115" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(34,197,94,.7)">WRITING</text>
+  <text x="215" y="115" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(6,97,222,.7)">WRITING</text>
   <!-- Score -->
   <text x="330" y="62" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="20" fill="rgba(6,97,222,.4)">700+</text>
   <text x="330" y="78" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="rgba(255,255,255,.3)">English section</text>
@@ -1385,7 +1387,7 @@ nav.scrolled{
   <line x1="200" y1="65" x2="222" y2="72" stroke="rgba(255,255,255,.6)" stroke-width="2" stroke-linecap="round"/>
   <circle cx="200" cy="65" r="3" fill="#60a5fa"/>
   <!-- 5 years label -->
-  <text x="200" y="95" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="11" fill="rgba(34,197,94,.8)">5 YEARS</text>
+  <text x="200" y="95" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="11" fill="rgba(6,97,222,.8)">5 YEARS</text>
   <text x="200" y="108" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="rgba(255,255,255,.35)">score validity</text>
   <!-- Tick marks -->
   <line x1="200" y1="28" x2="200" y2="32" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
@@ -1406,7 +1408,7 @@ nav.scrolled{
       <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030d1d">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1d"/><stop offset="100%" stop-color="#071d3a"/></linearGradient>
-    <linearGradient id="rg4b" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#0661de"/><stop offset="100%" stop-color="#22c55e"/></linearGradient>
+    <linearGradient id="rg4b" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#0661de"/><stop offset="100%" stop-color="#0661de"/></linearGradient>
   </defs>
   <rect width="400" height="130" fill="url(#rg4)"/>
   <!-- Arrow up -->
@@ -1416,10 +1418,10 @@ nav.scrolled{
   <text x="60" y="113" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="rgba(255,255,255,.4)">900</text>
   <circle cx="200" cy="55" r="5" fill="#1a9e50"/>
   <text x="200" y="73" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="rgba(255,255,255,.4)">1300</text>
-  <circle cx="340" cy="20" r="6" fill="#22c55e"/>
-  <text x="340" y="15" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#4ade80">1500+</text>
+  <circle cx="340" cy="20" r="6" fill="#0661de"/>
+  <text x="340" y="15" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#3b82f6">1500+</text>
   <!-- FAST label -->
-  <text x="200" y="118" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="900" font-size="18" fill="rgba(34,197,94,.15)">FAST</text>
+  <text x="200" y="118" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="900" font-size="18" fill="rgba(6,97,222,.15)">FAST</text>
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
@@ -1466,14 +1468,14 @@ nav.scrolled{
   <!-- Checklist -->
   <rect x="100" y="18" width="200" height="94" rx="10" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
   <text x="200" y="34" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="10" fill="rgba(255,255,255,.6)">TEST DAY CHECKLIST</text>
-  <circle cx="122" cy="50" r="7" fill="rgba(34,197,94,.3)" stroke="rgba(34,197,94,.6)" stroke-width="1"/>
-  <polyline points="118,50 121,53 126,47" stroke="#4ade80" stroke-width="1.5" fill="none"/>
+  <circle cx="122" cy="50" r="7" fill="rgba(6,97,222,.3)" stroke="rgba(6,97,222,.6)" stroke-width="1"/>
+  <polyline points="118,50 121,53 126,47" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
   <text x="137" y="54" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.7)">Valid ID / Passport</text>
-  <circle cx="122" cy="68" r="7" fill="rgba(34,197,94,.3)" stroke="rgba(34,197,94,.6)" stroke-width="1"/>
-  <polyline points="118,68 121,71 126,65" stroke="#4ade80" stroke-width="1.5" fill="none"/>
+  <circle cx="122" cy="68" r="7" fill="rgba(6,97,222,.3)" stroke="rgba(6,97,222,.6)" stroke-width="1"/>
+  <polyline points="118,68 121,71 126,65" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
   <text x="137" y="72" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.7)">Admission ticket</text>
-  <circle cx="122" cy="86" r="7" fill="rgba(34,197,94,.3)" stroke="rgba(34,197,94,.6)" stroke-width="1"/>
-  <polyline points="118,86 121,89 126,83" stroke="#4ade80" stroke-width="1.5" fill="none"/>
+  <circle cx="122" cy="86" r="7" fill="rgba(6,97,222,.3)" stroke="rgba(6,97,222,.6)" stroke-width="1"/>
+  <polyline points="118,86 121,89 126,83" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
   <text x="137" y="90" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.7)">2 No. 2 pencils</text>
   <circle cx="122" cy="104" r="7" fill="rgba(6,97,222,.3)" stroke="rgba(6,97,222,.5)" stroke-width="1"/>
   <text x="137" y="108" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.5)">Calculator (approved)</text>
@@ -1533,9 +1535,9 @@ nav.scrolled{
   <circle cx="305" cy="65" r="8" fill="rgba(6,97,222,.7)" stroke="#60a5fa" stroke-width="1.5"/>
   <text x="305" y="50" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="rgba(255,255,255,.5)">M5</text>
   <text x="305" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,255,255,.4)">Mocks</text>
-  <circle cx="355" cy="65" r="10" fill="rgba(34,197,94,.5)" stroke="#4ade80" stroke-width="2"/>
-  <text x="355" y="50" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#4ade80" font-weight="700">M6</text>
-  <text x="355" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="#86efac" font-weight="600">TEST!</text>
+  <circle cx="355" cy="65" r="10" fill="rgba(6,97,222,.5)" stroke="#3b82f6" stroke-width="2"/>
+  <text x="355" y="50" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#3b82f6" font-weight="700">M6</text>
+  <text x="355" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="#93c5fd" font-weight="600">TEST!</text>
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
@@ -1572,7 +1574,7 @@ nav.scrolled{
   <path d="M108 72 Q90 55 75 65" stroke="#4a9fd8" stroke-width="2" fill="none" opacity=".7"/>
   <!-- Score bars on right -->
   <text x="160" y="45" font-size="10" fill="rgba(255,255,255,0.5)" font-family="monospace">NUS  NTU  SMU</text>
-  <rect x="158" y="52" width="55" height="8" rx="3" fill="#22c55e" opacity=".8"/>
+  <rect x="158" y="52" width="55" height="8" rx="3" fill="#0661de" opacity=".8"/>
   <text x="218" y="60" font-size="8" fill="white" opacity=".8">1500+</text>
   <rect x="158" y="65" width="48" height="8" rx="3" fill="#3b82f6" opacity=".7"/>
   <text x="211" y="73" font-size="8" fill="white" opacity=".7">1450+</text>
@@ -1607,8 +1609,8 @@ nav.scrolled{
   <!-- Formula -->
   <text x="55" y="60" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="rgba(6,97,222,.3)" font-weight="700">f(x)</text>
   <text x="55" y="78" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(6,97,222,.2)">= x²</text>
-  <text x="340" y="55" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(34,197,94,.3)">y=mx+b</text>
-  <text x="340" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="rgba(34,197,94,.2)">√x · π</text>
+  <text x="340" y="55" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(6,97,222,.3)">y=mx+b</text>
+  <text x="340" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="rgba(6,97,222,.2)">√x · π</text>
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
@@ -1641,8 +1643,8 @@ nav.scrolled{
   <line x1="155" y1="105" x2="175" y2="105" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
   <line x1="148" y1="86" x2="192" y2="120" stroke="#ef4444" stroke-width="3" opacity=".8"/>
   <!-- 2026 badge -->
-  <rect x="210" y="88" width="60" height="24" rx="4" fill="#22c55e" opacity=".3"/>
-  <text x="221" y="105" font-size="12" fill="#22c55e" font-weight="bold" font-family="monospace">2026 ✓</text>
+  <rect x="210" y="88" width="60" height="24" rx="4" fill="#0661de" opacity=".3"/>
+  <text x="221" y="105" font-size="12" fill="#0661de" font-weight="bold" font-family="monospace">2026 ✓</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
           <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
@@ -1703,13 +1705,13 @@ nav.scrolled{
   <text x="30" y="38" font-size="8" fill="rgba(255,255,255,0.5)" font-weight="bold" font-family="monospace">CHECKLIST</text>
   <rect x="26" y="42" width="88" height="1" fill="rgba(255,255,255,0.1)"/>
   <!-- Checkboxes -->
-  <rect x="28" y="50" width="10" height="10" rx="2" fill="#22c55e" opacity=".8"/>
+  <rect x="28" y="50" width="10" height="10" rx="2" fill="#0661de" opacity=".8"/>
   <text x="30" y="59" font-size="8" fill="white" font-weight="bold">✓</text>
   <text x="42" y="59" font-size="8" fill="white" opacity=".8">Small groups</text>
-  <rect x="28" y="65" width="10" height="10" rx="2" fill="#22c55e" opacity=".8"/>
+  <rect x="28" y="65" width="10" height="10" rx="2" fill="#0661de" opacity=".8"/>
   <text x="30" y="74" font-size="8" fill="white" font-weight="bold">✓</text>
   <text x="42" y="74" font-size="8" fill="white" opacity=".8">Expert teacher</text>
-  <rect x="28" y="80" width="10" height="10" rx="2" fill="#22c55e" opacity=".8"/>
+  <rect x="28" y="80" width="10" height="10" rx="2" fill="#0661de" opacity=".8"/>
   <text x="30" y="89" font-size="8" fill="white" font-weight="bold">✓</text>
   <text x="42" y="89" font-size="8" fill="white" opacity=".8">Mock tests</text>
   <rect x="28" y="95" width="10" height="10" rx="2" fill="rgba(255,255,255,0.15)"/>
@@ -1742,8 +1744,8 @@ nav.scrolled{
   <path d="M30,105 Q80,100 130,80 Q165,60 200,30 Q235,60 270,80 Q320,100 370,105" fill="none" stroke="rgba(6,97,222,.5)" stroke-width="2"/>
   <path d="M140,85 Q165,50 200,30 Q235,50 260,85 L260,105 L140,105 Z" fill="rgba(6,97,222,.15)"/>
   <!-- Percentile markers -->
-  <line x1="200" y1="30" x2="200" y2="108" stroke="rgba(34,197,94,.6)" stroke-width="1.5" stroke-dasharray="3,3"/>
-  <text x="200" y="120" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#4ade80">TOP 4%</text>
+  <line x1="200" y1="30" x2="200" y2="108" stroke="rgba(6,97,222,.6)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="200" y="120" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#3b82f6">TOP 4%</text>
   <text x="200" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#fff">1500+</text>
   <line x1="140" y1="85" x2="140" y2="108" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
   <text x="140" y="120" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="rgba(255,255,255,.3)">1200</text>
@@ -1787,14 +1789,14 @@ nav.scrolled{
   <!-- Online resources icons on right -->
   <rect x="240" y="25" width="140" height="80" rx="8" fill="rgba(255,255,255,0.04)"/>
   <text x="252" y="42" font-size="9" fill="rgba(255,255,255,0.5)" font-weight="bold">ONLINE RESOURCES</text>
-  <circle cx="258" cy="58" r="6" fill="#22c55e" opacity=".7"/>
+  <circle cx="258" cy="58" r="6" fill="#0661de" opacity=".7"/>
   <text x="270" y="62" font-size="9" fill="white" opacity=".8">Khan Academy</text>
   <circle cx="258" cy="73" r="6" fill="#0661de" opacity=".7"/>
   <text x="270" y="77" font-size="9" fill="white" opacity=".8">CollegeBoard.org</text>
   <circle cx="258" cy="88" r="6" fill="#f59e0b" opacity=".7"/>
   <text x="270" y="92" font-size="9" fill="white" opacity=".8">PrepScholar</text>
   <!-- Glow -->
-  <ellipse cx="120" cy="115" rx="60" ry="8" fill="#22c55e" opacity=".08"/>
+  <ellipse cx="120" cy="115" rx="60" ry="8" fill="#0661de" opacity=".08"/>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
           <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
@@ -1810,14 +1812,14 @@ nav.scrolled{
   <defs><linearGradient id="fw1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a1a0a"/><stop offset="100%" stop-color="#162816"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#fw1)"/>
   <!-- Big dollar sign background -->
-  <text x="25" y="105" font-size="100" fill="#22c55e" opacity=".08" font-family="serif" font-weight="bold">$</text>
+  <text x="25" y="105" font-size="100" fill="#0661de" opacity=".08" font-family="serif" font-weight="bold">$</text>
   <!-- Shield -->
-  <path d="M170 20 L230 20 L240 40 L200 80 L160 40 Z" fill="#22c55e" opacity=".2"/>
-  <path d="M175 25 L225 25 L234 43 L200 75 L166 43 Z" stroke="#22c55e" stroke-width="1.5" fill="none" opacity=".5"/>
-  <text x="188" y="57" font-size="26" fill="#22c55e" font-weight="bold" font-family="serif">$</text>
+  <path d="M170 20 L230 20 L240 40 L200 80 L160 40 Z" fill="#0661de" opacity=".2"/>
+  <path d="M175 25 L225 25 L234 43 L200 75 L166 43 Z" stroke="#0661de" stroke-width="1.5" fill="none" opacity=".5"/>
+  <text x="188" y="57" font-size="26" fill="#0661de" font-weight="bold" font-family="serif">$</text>
   <!-- Waiver banner -->
-  <rect x="130" y="88" width="140" height="22" rx="4" fill="#22c55e" opacity=".3"/>
-  <text x="145" y="104" font-size="11" fill="#22c55e" font-weight="bold" font-family="monospace">FREE WAIVER ✓</text>
+  <rect x="130" y="88" width="140" height="22" rx="4" fill="#0661de" opacity=".3"/>
+  <text x="145" y="104" font-size="11" fill="#0661de" font-weight="bold" font-family="monospace">FREE WAIVER ✓</text>
   <!-- Info cards -->
   <rect x="290" y="20" width="95" height="30" rx="4" fill="rgba(255,255,255,0.05)"/>
   <text x="300" y="33" font-size="8" fill="rgba(255,255,255,0.5)">Registration</text>
@@ -1849,9 +1851,9 @@ nav.scrolled{
   <rect x="160" y="60" width="80" height="55" rx="8" fill="rgba(6,97,222,.35)" stroke="rgba(6,97,222,.6)" stroke-width="1.5"/>
   <text x="200" y="85" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="13" fill="#93c5fd">10th</text>
   <text x="200" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="rgba(255,255,255,.5)">grade</text>
-  <rect x="260" y="35" width="80" height="80" rx="8" fill="rgba(34,197,94,.25)" stroke="rgba(34,197,94,.55)" stroke-width="1.5"/>
-  <text x="300" y="68" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="11" fill="#4ade80">SAT</text>
-  <text x="300" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="16" fill="#4ade80">1500</text>
+  <rect x="260" y="35" width="80" height="80" rx="8" fill="rgba(6,97,222,.25)" stroke="rgba(6,97,222,.55)" stroke-width="1.5"/>
+  <text x="300" y="68" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="11" fill="#3b82f6">SAT</text>
+  <text x="300" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="16" fill="#3b82f6">1500</text>
   <text x="300" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="rgba(255,255,255,.5)">target</text>
   <!-- Arrow -->
   <polyline points="70,62 90,40 110,35" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="1" stroke-dasharray="4,3"/>
@@ -1921,18 +1923,18 @@ nav.scrolled{
   <rect x="60" y="30" width="160" height="95" rx="4" fill="#1a2a45" opacity=".8"/>
   <rect x="65" y="35" width="150" height="75" rx="2" fill="#0a1428" opacity=".9"/>
   <!-- Screen content -->
-  <text x="95" y="58" font-size="9" fill="#22c55e" font-family="monospace">DIGITAL SAT 2026</text>
+  <text x="95" y="58" font-size="9" fill="#0661de" font-family="monospace">DIGITAL SAT 2026</text>
   <rect x="75" y="63" width="130" height="1" fill="rgba(255,255,255,0.1)"/>
   <text x="75" y="76" font-size="8" fill="rgba(255,255,255,0.5)" font-family="monospace">Section 1: R&amp;W</text>
   <rect x="75" y="79" width="90" height="6" rx="2" fill="#0661de" opacity=".6"/>
   <text x="75" y="93" font-size="8" fill="rgba(255,255,255,0.5)" font-family="monospace">Section 2: Math</text>
-  <rect x="75" y="96" width="110" height="6" rx="2" fill="#22c55e" opacity=".6"/>
+  <rect x="75" y="96" width="110" height="6" rx="2" fill="#0661de" opacity=".6"/>
   <!-- Laptop base -->
   <rect x="45" y="125" width="195" height="6" rx="3" fill="#1a2a45" opacity=".8"/>
   <!-- Score display -->
   <text x="245" y="45" font-size="10" fill="rgba(255,255,255,0.4)" font-family="monospace">YOUR SCORE</text>
   <text x="245" y="80" font-size="42" fill="white" font-family="monospace" font-weight="bold" opacity=".9">1600</text>
-  <text x="250" y="95" font-size="9" fill="#22c55e" font-family="monospace">PERFECT ★</text>
+  <text x="250" y="95" font-size="9" fill="#0661de" font-family="monospace">PERFECT ★</text>
   <!-- Binary background -->
   <text x="340" y="30" font-size="8" fill="rgba(255,255,255,0.05)" font-family="monospace">10110</text>
   <text x="355" y="45" font-size="8" fill="rgba(255,255,255,0.05)" font-family="monospace">01001</text>
@@ -1975,7 +1977,7 @@ nav.scrolled{
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="rg11" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1d"/><stop offset="100%" stop-color="#071d3a"/></linearGradient>
-    <linearGradient id="rg11b" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#0661de"/><stop offset="100%" stop-color="#22c55e"/></linearGradient>
+    <linearGradient id="rg11b" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#0661de"/><stop offset="100%" stop-color="#0661de"/></linearGradient>
   </defs>
   <rect width="400" height="130" fill="url(#rg11)"/>
   <!-- Score journey -->
@@ -1983,7 +1985,7 @@ nav.scrolled{
   <circle cx="50" cy="95" r="5" fill="#0661de"/><text x="50" y="112" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.5)">1100</text>
   <circle cx="130" cy="78" r="5" fill="#0a6fd0"/><text x="130" y="95" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.4)">1250</text>
   <circle cx="210" cy="60" r="5" fill="#1a9e50"/><text x="210" y="77" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,.4)">1380</text>
-  <circle cx="310" cy="35" r="7" fill="#22c55e"/><text x="310" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#4ade80">1480</text>
+  <circle cx="310" cy="35" r="7" fill="#0661de"/><text x="310" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#3b82f6">1480</text>
   <text x="200" y="118" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="rgba(255,255,255,.25)">Samarkandlik talabaning tajribasi (UZ)</text>
 
         </svg>
@@ -2006,10 +2008,10 @@ nav.scrolled{
   <line x1="20" y1="95" x2="55" y2="65" stroke="#0661de" stroke-width="1" opacity=".5"/>
   <line x1="100" y1="95" x2="65" y2="65" stroke="#0661de" stroke-width="1" opacity=".5"/>
   <text x="30" y="58" font-size="8" fill="white" opacity=".7" font-family="monospace">SAT</text>
-  <text x="26" y="70" font-size="9" fill="#22c55e" font-weight="bold">1480</text>
+  <text x="26" y="70" font-size="9" fill="#0661de" font-weight="bold">1480</text>
   <!-- Arrow path -->
-  <path d="M108 67 Q155 40 200 67" stroke="#22c55e" stroke-width="2" fill="none" stroke-dasharray="6,3" opacity=".7"/>
-  <polygon points="197,60 208,67 197,74" fill="#22c55e" opacity=".8"/>
+  <path d="M108 67 Q155 40 200 67" stroke="#0661de" stroke-width="2" fill="none" stroke-dasharray="6,3" opacity=".7"/>
+  <polygon points="197,60 208,67 197,74" fill="#0661de" opacity=".8"/>
   <!-- University building -->
   <rect x="220" y="45" width="70" height="55" rx="2" fill="#1a3a6e" opacity=".8"/>
   <polygon points="220,45 255,25 290,45" fill="#0e2a5a" opacity=".9"/>
@@ -2023,9 +2025,9 @@ nav.scrolled{
   <path d="M108 72 Q155 95 205 82" stroke="#0661de" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity=".5"/>
   <path d="M108 62 Q155 20 205 52" stroke="#0661de" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity=".5"/>
   <!-- Score badge -->
-  <rect x="310" y="40" width="75" height="50" rx="6" fill="rgba(34,197,94,0.15)"/>
+  <rect x="310" y="40" width="75" height="50" rx="6" fill="rgba(6,97,222,0.15)"/>
   <text x="320" y="58" font-size="8" fill="rgba(255,255,255,0.5)">FREE SENDS</text>
-  <text x="322" y="75" font-size="22" fill="#22c55e" font-weight="bold">4</text>
+  <text x="322" y="75" font-size="22" fill="#0661de" font-weight="bold">4</text>
   <text x="318" y="87" font-size="8" fill="rgba(255,255,255,0.5)">universities</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
@@ -2046,9 +2048,9 @@ nav.scrolled{
   <rect x="80" y="36" width="240" height="7" fill="rgba(6,97,222,.4)"/>
   <text x="200" y="33" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="12" fill="#fff">SAT 2026–2027</text>
   <!-- Dates list -->
-  <text x="105" y="60" font-family="system-ui,sans-serif" font-size="8.5" fill="rgba(34,197,94,.8)">✓ Aug 22, 2026</text>
-  <text x="105" y="74" font-family="system-ui,sans-serif" font-size="8.5" fill="rgba(34,197,94,.8)">✓ Oct 3, 2026</text>
-  <text x="105" y="88" font-family="system-ui,sans-serif" font-size="8.5" fill="rgba(34,197,94,.8)">✓ Dec 5, 2026</text>
+  <text x="105" y="60" font-family="system-ui,sans-serif" font-size="8.5" fill="rgba(6,97,222,.8)">✓ Aug 22, 2026</text>
+  <text x="105" y="74" font-family="system-ui,sans-serif" font-size="8.5" fill="rgba(6,97,222,.8)">✓ Oct 3, 2026</text>
+  <text x="105" y="88" font-family="system-ui,sans-serif" font-size="8.5" fill="rgba(6,97,222,.8)">✓ Dec 5, 2026</text>
   <text x="220" y="60" font-family="system-ui,sans-serif" font-size="8.5" fill="rgba(6,97,222,.7)">→ Mar 6, 2027</text>
   <text x="220" y="74" font-family="system-ui,sans-serif" font-size="8.5" fill="rgba(6,97,222,.7)">→ May 1, 2027</text>
   <text x="220" y="88" font-family="system-ui,sans-serif" font-size="8.5" fill="rgba(6,97,222,.7)">→ Jun 5, 2027</text>
@@ -2069,27 +2071,27 @@ nav.scrolled{
   <defs><linearGradient id="fr1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a1a2e"/><stop offset="100%" stop-color="#162a40"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#fr1)"/>
   <!-- Big FREE ribbon -->
-  <rect x="15" y="35" width="90" height="35" rx="0" fill="#22c55e" opacity=".9" transform="rotate(-5,60,52)"/>
+  <rect x="15" y="35" width="90" height="35" rx="0" fill="#0661de" opacity=".9" transform="rotate(-5,60,52)"/>
   <text x="22" y="57" font-size="20" fill="white" font-weight="bold" font-family="sans-serif" transform="rotate(-5,60,52)">FREE!</text>
   <!-- Triangle corners -->
-  <polygon points="15,35 5,35 15,25" fill="#16a34a" transform="rotate(-5,60,52)"/>
-  <polygon points="105,70 115,70 105,80" fill="#16a34a" transform="rotate(-5,60,52)"/>
+  <polygon points="15,35 5,35 15,25" fill="#044fba" transform="rotate(-5,60,52)"/>
+  <polygon points="105,70 115,70 105,80" fill="#044fba" transform="rotate(-5,60,52)"/>
   <!-- Resource icons -->
   <!-- Khan Academy -->
-  <rect x="130" y="25" width="60" height="35" rx="6" fill="#22c55e" opacity=".2"/>
+  <rect x="130" y="25" width="60" height="35" rx="6" fill="#0661de" opacity=".2"/>
   <text x="138" y="40" font-size="8" fill="white" opacity=".7">Khan</text>
   <text x="133" y="52" font-size="8" fill="white" opacity=".7">Academy</text>
-  <text x="162" y="40" font-size="10" fill="#22c55e">✓</text>
+  <text x="162" y="40" font-size="10" fill="#0661de">✓</text>
   <!-- College Board -->
   <rect x="200" y="25" width="60" height="35" rx="6" fill="#0661de" opacity=".2"/>
   <text x="204" y="40" font-size="8" fill="white" opacity=".7">College</text>
   <text x="205" y="52" font-size="8" fill="white" opacity=".7">Board</text>
-  <text x="232" y="40" font-size="10" fill="#22c55e">✓</text>
+  <text x="232" y="40" font-size="10" fill="#0661de">✓</text>
   <!-- YouTube -->
   <rect x="270" y="25" width="60" height="35" rx="6" fill="#dc2626" opacity=".2"/>
   <text x="278" y="40" font-size="8" fill="white" opacity=".7">YouTube</text>
   <text x="278" y="52" font-size="8" fill="white" opacity=".7">Channels</text>
-  <text x="302" y="40" font-size="10" fill="#22c55e">✓</text>
+  <text x="302" y="40" font-size="10" fill="#0661de">✓</text>
   <!-- Practice tests row -->
   <rect x="130" y="70" width="200" height="20" rx="4" fill="rgba(255,255,255,0.05)"/>
   <text x="140" y="84" font-size="9" fill="rgba(255,255,255,0.6)">8 FREE Official Practice Tests available</text>
@@ -2130,22 +2132,22 @@ nav.scrolled{
   <circle cx="190" cy="35" r="10" fill="#0661de" opacity=".5"/>
   <text x="186" y="39" font-size="10" fill="white">👤</text>
   <text x="205" y="30" font-size="8" fill="white" opacity=".8">Aziz K.</text>
-  <text x="205" y="42" font-size="9" fill="#22c55e" font-weight="bold">MIT → 1540</text>
+  <text x="205" y="42" font-size="9" fill="#0661de" font-weight="bold">MIT → 1540</text>
   <rect x="270" y="20" width="85" height="40" rx="6" fill="rgba(255,255,255,0.06)"/>
-  <circle cx="290" cy="35" r="10" fill="#22c55e" opacity=".5"/>
+  <circle cx="290" cy="35" r="10" fill="#0661de" opacity=".5"/>
   <text x="286" y="39" font-size="10" fill="white">👤</text>
   <text x="305" y="30" font-size="8" fill="white" opacity=".8">Malika U.</text>
-  <text x="305" y="42" font-size="9" fill="#22c55e" font-weight="bold">Oxford → 1510</text>
+  <text x="305" y="42" font-size="9" fill="#0661de" font-weight="bold">Oxford → 1510</text>
   <rect x="170" y="70" width="85" height="40" rx="6" fill="rgba(255,255,255,0.06)"/>
   <circle cx="190" cy="85" r="10" fill="#f59e0b" opacity=".5"/>
   <text x="186" y="89" font-size="10" fill="white">👤</text>
   <text x="205" y="80" font-size="8" fill="white" opacity=".8">Jasur T.</text>
-  <text x="205" y="92" font-size="9" fill="#22c55e" font-weight="bold">NUS → 1490</text>
+  <text x="205" y="92" font-size="9" fill="#0661de" font-weight="bold">NUS → 1490</text>
   <rect x="270" y="70" width="85" height="40" rx="6" fill="rgba(255,255,255,0.06)"/>
   <circle cx="290" cy="85" r="10" fill="#7c3aed" opacity=".5"/>
   <text x="286" y="89" font-size="10" fill="white">👤</text>
   <text x="305" y="80" font-size="8" fill="white" opacity=".8">Dilnoza R.</text>
-  <text x="305" y="92" font-size="9" fill="#22c55e" font-weight="bold">Toronto → 1460</text>
+  <text x="305" y="92" font-size="9" fill="#0661de" font-weight="bold">Toronto → 1460</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
           <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
@@ -2181,10 +2183,10 @@ nav.scrolled{
   <rect x="250" y="57" width="70" height="10" rx="3" fill="rgba(255,255,255,0.1)"/>
   <rect x="250" y="57" width="55" height="10" rx="3" fill="#f59e0b" opacity=".6"/>
   <text x="325" y="66" font-size="8" fill="rgba(255,255,255,0.4)"> good</text>
-  <text x="175" y="82" font-size="9" fill="#22c55e" font-weight="bold">1500+</text>
+  <text x="175" y="82" font-size="9" fill="#0661de" font-weight="bold">1500+</text>
   <rect x="250" y="74" width="70" height="10" rx="3" fill="rgba(255,255,255,0.1)"/>
-  <rect x="250" y="74" width="40" height="10" rx="3" fill="#22c55e" opacity=".8"/>
-  <text x="325" y="83" font-size="8" fill="#22c55e" font-weight="bold"> ★</text>
+  <rect x="250" y="74" width="40" height="10" rx="3" fill="#0661de" opacity=".8"/>
+  <text x="325" y="83" font-size="8" fill="#0661de" font-weight="bold"> ★</text>
   <!-- Advanced tips -->
   <rect x="175" y="95" width="200" height="25" rx="4" fill="rgba(255,255,255,0.04)"/>
   <text x="185" y="107" font-size="8" fill="rgba(255,255,255,0.5)">→ Eliminate 2, not 1</text>
@@ -2251,7 +2253,7 @@ nav.scrolled{
   <rect x="305" y="42" width="70" height="1" fill="rgba(255,255,255,0.1)"/>
   <text x="305" y="58" font-size="20" fill="white" font-weight="bold">200+</text>
   <text x="305" y="68" font-size="8" fill="rgba(255,255,255,0.5)">students</text>
-  <text x="305" y="82" font-size="20" fill="#22c55e" font-weight="bold">1400+</text>
+  <text x="305" y="82" font-size="20" fill="#0661de" font-weight="bold">1400+</text>
   <text x="305" y="92" font-size="8" fill="rgba(255,255,255,0.5)">avg score</text>
   <text x="305" y="104" font-size="12" fill="#f59e0b">★★★★★</text>
 </svg>
@@ -2276,7 +2278,7 @@ nav.scrolled{
   <text x="25" y="75" font-size="8" fill="rgba(255,255,255,0.6)">→ Score: 400-1600</text>
   <text x="25" y="87" font-size="8" fill="rgba(255,255,255,0.6)">→ 2h14m duration</text>
   <text x="25" y="99" font-size="8" fill="rgba(255,255,255,0.6)">→ Math + R&amp;W</text>
-  <text x="25" y="111" font-size="8" fill="#22c55e">→ Scholarship tool</text>
+  <text x="25" y="111" font-size="8" fill="#0661de">→ Scholarship tool</text>
   <!-- VS divider -->
   <rect x="177" y="15" width="46" height="100" rx="0" fill="none"/>
   <text x="183" y="72" font-size="20" fill="white" font-weight="bold" opacity=".5">VS</text>
@@ -2311,16 +2313,16 @@ nav.scrolled{
   <text x="15" y="94" font-size="11" fill="rgba(255,255,255,0.08)" font-family="monospace">A = πr²  |  V = (4/3)πr³</text>
   <text x="15" y="112" font-size="11" fill="rgba(255,255,255,0.08)" font-family="monospace">P(A∪B) = P(A) + P(B)</text>
   <!-- Lock icon with glow -->
-  <rect x="155" y="35" width="50" height="40" rx="5" fill="#22c55e" opacity=".3"/>
-  <path d="M165 35 Q165 18 175 18 Q185 18 185 35" stroke="#22c55e" stroke-width="4" fill="none" opacity=".6"/>
-  <circle cx="180" cy="58" r="5" fill="#22c55e" opacity=".8"/>
+  <rect x="155" y="35" width="50" height="40" rx="5" fill="#0661de" opacity=".3"/>
+  <path d="M165 35 Q165 18 175 18 Q185 18 185 35" stroke="#0661de" stroke-width="4" fill="none" opacity=".6"/>
+  <circle cx="180" cy="58" r="5" fill="#0661de" opacity=".8"/>
   <!-- Score progression -->
   <rect x="230" y="20" width="150" height="90" rx="6" fill="rgba(255,255,255,0.04)"/>
   <text x="240" y="36" font-size="8" fill="rgba(255,255,255,0.5)" font-weight="bold">SCORE PATH</text>
   <text x="240" y="52" font-size="18" fill="rgba(255,100,100,0.8)" font-weight="bold">650</text>
   <text x="275" y="52" font-size="10" fill="rgba(255,255,255,0.4)">→ 700</text>
   <text x="313" y="52" font-size="10" fill="rgba(255,255,255,0.4)">→</text>
-  <text x="322" y="52" font-size="18" fill="#22c55e" font-weight="bold">800</text>
+  <text x="322" y="52" font-size="18" fill="#0661de" font-weight="bold">800</text>
   <rect x="240" y="58" width="130" height="1" fill="rgba(255,255,255,0.1)"/>
   <text x="240" y="73" font-size="8" fill="rgba(255,255,255,0.5)">★ Back-calculate</text>
   <text x="240" y="85" font-size="8" fill="rgba(255,255,255,0.5)">★ Plug in numbers</text>
@@ -2359,8 +2361,8 @@ nav.scrolled{
   <!-- Arrow path: Samarkand → World -->
   <circle cx="35" cy="30" r="8" fill="#0661de" opacity=".7"/>
   <text x="32" y="34" font-size="8" fill="white">Smq</text>
-  <path d="M44 30 Q100 10 155 40" stroke="#22c55e" stroke-width="2" fill="none" stroke-dasharray="5,3" opacity=".7"/>
-  <text x="158" y="44" font-size="10" fill="#22c55e" opacity=".8">🌍</text>
+  <path d="M44 30 Q100 10 155 40" stroke="#0661de" stroke-width="2" fill="none" stroke-dasharray="5,3" opacity=".7"/>
+  <text x="158" y="44" font-size="10" fill="#0661de" opacity=".8">🌍</text>
   <!-- Roadmap on right -->
   <rect x="185" y="15" width="200" height="100" rx="6" fill="rgba(255,255,255,0.03)"/>
   <text x="195" y="30" font-size="8" fill="rgba(255,255,255,0.5)" font-weight="bold">ROADMAP</text>
@@ -2371,7 +2373,7 @@ nav.scrolled{
   <line x1="200" y1="73" x2="200" y2="83" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
   <circle cx="200" cy="86" r="5" fill="#0661de" opacity=".5"/><text x="210" y="90" font-size="8" fill="white" opacity=".7">Write essays &amp; apply</text>
   <line x1="200" y1="91" x2="200" y2="101" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-  <circle cx="200" cy="104" r="5" fill="#22c55e" opacity=".8"/><text x="210" y="108" font-size="8" fill="#22c55e" font-weight="bold">Get accepted! ★</text>
+  <circle cx="200" cy="104" r="5" fill="#0661de" opacity=".8"/><text x="210" y="108" font-size="8" fill="#0661de" font-weight="bold">Get accepted! ★</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
           <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
@@ -2397,10 +2399,10 @@ nav.scrolled{
   <text x="30" y="80" font-size="18" fill="white" font-weight="bold" font-family="serif" opacity=".9">ENG</text>
   <text x="30" y="100" font-size="9" fill="rgba(255,255,255,0.6)">Grammar</text>
   <!-- Arrow going up -->
-  <line x1="130" y1="100" x2="130" y2="25" stroke="#22c55e" stroke-width="3" opacity=".6"/>
-  <polygon points="130,15 122,30 138,30" fill="#22c55e" opacity=".8"/>
+  <line x1="130" y1="100" x2="130" y2="25" stroke="#0661de" stroke-width="3" opacity=".6"/>
+  <polygon points="130,15 122,30 138,30" fill="#0661de" opacity=".8"/>
   <!-- Score improvement labels -->
-  <text x="140" y="30" font-size="9" fill="#22c55e" font-weight="bold">800</text>
+  <text x="140" y="30" font-size="9" fill="#0661de" font-weight="bold">800</text>
   <text x="140" y="48" font-size="9" fill="white" opacity=".7">720</text>
   <text x="140" y="65" font-size="9" fill="white" opacity=".6">640</text>
   <text x="140" y="83" font-size="9" fill="white" opacity=".5">560</text>
@@ -2414,7 +2416,7 @@ nav.scrolled{
   <text x="185" y="66" font-size="9" fill="white" opacity=".8">📝 Learn 10 vocab/day</text>
   <text x="185" y="80" font-size="9" fill="white" opacity=".8">🎧 English podcasts</text>
   <text x="185" y="94" font-size="9" fill="white" opacity=".8">✍️ Write 1 essay/week</text>
-  <text x="185" y="108" font-size="9" fill="#22c55e">⚡ Khan Academy R&amp;W</text>
+  <text x="185" y="108" font-size="9" fill="#0661de">⚡ Khan Academy R&amp;W</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
           <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
@@ -2435,9 +2437,9 @@ nav.scrolled{
   <line x1="120" y1="67" x2="120" y2="85" stroke="#f59e0b" stroke-width="3" opacity=".6"/>
   <circle cx="120" cy="88" r="5" fill="#f59e0b" opacity=".6"/>
   <!-- Money symbols -->
-  <text x="22" y="50" font-size="22" fill="#22c55e" opacity=".25">$</text>
-  <text x="145" y="35" font-size="18" fill="#22c55e" opacity=".2">$</text>
-  <text x="22" y="100" font-size="14" fill="#22c55e" opacity=".2">$</text>
+  <text x="22" y="50" font-size="22" fill="#0661de" opacity=".25">$</text>
+  <text x="145" y="35" font-size="18" fill="#0661de" opacity=".2">$</text>
+  <text x="22" y="100" font-size="14" fill="#0661de" opacity=".2">$</text>
   <!-- Stars scattered -->
   <text x="30" y="35" font-size="12" fill="#f59e0b" opacity=".4">★</text>
   <text x="140" y="75" font-size="10" fill="#f59e0b" opacity=".3">★</text>
@@ -2448,7 +2450,7 @@ nav.scrolled{
   <!-- Scholarship rows -->
   <rect x="180" y="40" width="8" height="8" rx="1" fill="#f59e0b" opacity=".7"/>
   <text x="193" y="48" font-size="8" fill="white" opacity=".8">QS Merit Scholarship (Full)</text>
-  <rect x="180" y="54" width="8" height="8" rx="1" fill="#22c55e" opacity=".7"/>
+  <rect x="180" y="54" width="8" height="8" rx="1" fill="#0661de" opacity=".7"/>
   <text x="193" y="62" font-size="8" fill="white" opacity=".8">Gates Cambridge (Full)</text>
   <rect x="180" y="68" width="8" height="8" rx="1" fill="#0661de" opacity=".7"/>
   <text x="193" y="76" font-size="8" fill="white" opacity=".8">Erasmus+ (EU Programs)</text>
@@ -2475,9 +2477,9 @@ nav.scrolled{
   <text x="57" y="43" font-size="16" fill="white">👤</text>
   <rect x="48" y="55" width="34" height="40" rx="4" fill="#0661de" opacity=".3"/>
   <!-- Child figure (smaller) -->
-  <circle cx="110" cy="45" r="10" fill="#22c55e" opacity=".5"/>
+  <circle cx="110" cy="45" r="10" fill="#0661de" opacity=".5"/>
   <text x="104" y="49" font-size="12" fill="white">👤</text>
-  <rect x="96" y="57" width="28" height="35" rx="4" fill="#22c55e" opacity=".3"/>
+  <rect x="96" y="57" width="28" height="35" rx="4" fill="#0661de" opacity=".3"/>
   <!-- Connection line -->
   <line x1="82" y1="65" x2="96" y2="65" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
   <!-- SAT book between them -->
@@ -2489,7 +2491,7 @@ nav.scrolled{
   <text x="165" y="64" font-size="8" fill="white" opacity=".8">❓ How long to prepare?</text>
   <text x="165" y="78" font-size="8" fill="white" opacity=".8">❓ How much does it cost?</text>
   <text x="165" y="92" font-size="8" fill="white" opacity=".8">❓ What score is good enough?</text>
-  <text x="165" y="106" font-size="8" fill="#22c55e">✓ All answered inside →</text>
+  <text x="165" y="106" font-size="8" fill="#0661de">✓ All answered inside →</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
           <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
@@ -2531,9 +2533,9 @@ nav.scrolled{
   <!-- SAT label on pin -->
   <text x="73" y="59" font-size="7" fill="#ef4444" font-weight="bold">SAT</text>
   <!-- Route from Samarkand -->
-  <path d="M25 120 Q60 100 80 70" stroke="#22c55e" stroke-width="2" fill="none" stroke-dasharray="5,3" opacity=".6"/>
-  <circle cx="22" cy="120" r="5" fill="#22c55e" opacity=".6"/>
-  <text x="10" y="120" font-size="7" fill="#22c55e" opacity=".7">Smq</text>
+  <path d="M25 120 Q60 100 80 70" stroke="#0661de" stroke-width="2" fill="none" stroke-dasharray="5,3" opacity=".6"/>
+  <circle cx="22" cy="120" r="5" fill="#0661de" opacity=".6"/>
+  <text x="10" y="120" font-size="7" fill="#0661de" opacity=".7">Smq</text>
   <!-- Info on right -->
   <rect x="180" y="15" width="205" height="100" rx="6" fill="rgba(255,255,255,0.04)"/>
   <text x="190" y="30" font-size="8" fill="rgba(255,255,255,0.5)" font-weight="bold">TEST CENTER INFO</text>
@@ -2542,7 +2544,7 @@ nav.scrolled{
   <text x="190" y="65" font-size="8" fill="white" opacity=".8">🕐 Check-in: 7:45 AM</text>
   <text x="190" y="79" font-size="8" fill="white" opacity=".8">🚆 Train: 3h from Smq</text>
   <text x="190" y="93" font-size="8" fill="white" opacity=".8">📋 Bring: Passport + admit</text>
-  <text x="190" y="107" font-size="8" fill="#22c55e">⚡ Book 3 months early!</text>
+  <text x="190" y="107" font-size="8" fill="#0661de">⚡ Book 3 months early!</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
           <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
@@ -2576,7 +2578,7 @@ nav.scrolled{
   <text x="155" y="65" font-size="9" fill="white" opacity=".9">✓ Qualify for merit scholarships</text>
   <text x="155" y="79" font-size="9" fill="white" opacity=".9">✓ Stronger than IELTS for US</text>
   <text x="155" y="93" font-size="9" fill="white" opacity=".9">✓ Accepted in Korea, Singapore</text>
-  <text x="155" y="107" font-size="9" fill="#22c55e" font-weight="bold">✓ Opens global doors in 2026</text>
+  <text x="155" y="107" font-size="9" fill="#0661de" font-weight="bold">✓ Opens global doors in 2026</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
           <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>

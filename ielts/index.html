@@ -10,8 +10,7 @@
   </button>
   <ul class="mob-group-body">
     <li><a href="/courses/" onclick="closeMobileNav()" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
-    <li><a href="/ap/" onclick="closeMobileNav()" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a></li>
-    <li><a href="/ielts/" onclick="closeMobileNav()" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a></li>
+    <li><a href="/ielts/" onclick="closeMobileNav()" data-en="AP &amp; IELTS Courses" data-uz="AP va IELTS Kurslar" data-ru="Курсы AP и IELTS">AP &amp; IELTS Courses</a></li>
     <li><a href="/schedule/" onclick="closeMobileNav()" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
     <li><a href="/intensive-sat-bootcamp/" onclick="closeMobileNav()" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
     <li><a href="/digital-sat/" onclick="closeMobileNav()" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
@@ -50,161 +49,124 @@
 </nav>
 
 <style>
-.ap-hero{background:linear-gradient(135deg,#022049 0%,#0a3a7a 60%,#0661de 100%);padding:72px 5vw 60px;text-align:center;color:#fff}
-.ap-hero .slbl{background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.15);display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.2rem}
-.ap-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.15;margin-bottom:1rem;letter-spacing:-.02em}
-.ap-hero h1 em{font-style:normal;color:#93c5fd}
-.ap-hero p{font-size:1rem;color:rgba(255,255,255,.7);max-width:560px;margin:0 auto 1.8rem;line-height:1.7}
-.ap-cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.ielts-hero{background:linear-gradient(135deg,#022049 0%,#0a3a7a 60%,#0661de 100%);padding:72px 5vw 60px;text-align:center;color:#fff}
+.ielts-hero .slbl{background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.15);display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.2rem}
+.ielts-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.15;margin-bottom:1rem;letter-spacing:-.02em}
+.ielts-hero h1 em{font-style:normal;color:#93c5fd}
+.ielts-hero p{font-size:1rem;color:rgba(255,255,255,.7);max-width:560px;margin:0 auto 1.8rem;line-height:1.7}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .sec{padding:52px 5vw}
 .w{max-width:1100px;margin:0 auto}
-.sec-label{font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue,#0661de);margin-bottom:.5rem}
+.sec-label{font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#0661de;margin-bottom:.5rem}
 .sec-h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:#022049;line-height:1.2;letter-spacing:-.02em;margin-bottom:.6rem}
-.sec-h2 em{font-style:normal;color:var(--blue,#0661de)}
+.sec-h2 em{font-style:normal;color:#0661de}
 .sec-lead{font-size:.95rem;color:#64748b;line-height:1.7;max-width:640px;margin-bottom:2rem}
-.course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:1.5rem}
-.course-card{background:#fff;border:1.5px solid #e2e8f0;border-radius:20px;padding:28px;transition:transform .2s,box-shadow .2s,border-color .2s}
-.course-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(6,97,222,.12);border-color:rgba(6,97,222,.25)}
-.course-card.featured{border-color:rgba(6,97,222,.3);background:linear-gradient(135deg,#fff,#eff6ff)}
-.course-card.soon{opacity:.65}
-.course-badge{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:1rem}
-.badge-live{background:#dbeafe;color:#1d4ed8}
-.badge-soon{background:#f1f5f9;color:#94a3b8}
-.course-card h3{font-size:1.1rem;font-weight:700;color:#022049;margin-bottom:.5rem;letter-spacing:-.01em}
-.course-card p{font-size:.84rem;color:#64748b;line-height:1.65;margin-bottom:1.2rem}
-.course-price{font-size:1.4rem;font-weight:700;color:#0661de;margin-bottom:.3rem}
-.course-price span{font-size:.78rem;font-weight:500;color:#94a3b8}
-.course-enroll{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:700;color:#fff;background:#0661de;border:none;padding:10px 20px;border-radius:40px;text-decoration:none;cursor:pointer;transition:background .15s}
-.course-enroll:hover{background:#044fba}
-.course-soon-note{font-size:.78rem;color:#94a3b8;font-style:italic}
-.teacher-card{background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:28px;display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap}
-.teacher-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#0661de,#3b82f6);display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;color:#fff;flex-shrink:0}
-.teacher-info h4{font-size:1rem;font-weight:700;color:#022049;margin-bottom:3px}
-.teacher-info .role{font-size:.8rem;color:#0661de;font-weight:600;margin-bottom:8px}
-.teacher-info p{font-size:.84rem;color:#64748b;line-height:1.6;margin:0}
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:1.5rem}
-.why-item{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:22px}
-.why-icon{font-size:1.6rem;margin-bottom:10px}
-.why-item h4{font-size:.9rem;font-weight:700;color:#022049;margin-bottom:5px}
-.why-item p{font-size:.8rem;color:#64748b;line-height:1.6;margin:0}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:1.5rem}
+.skill-card{background:#fff;border:1.5px solid #e2e8f0;border-radius:20px;padding:26px;transition:transform .2s,box-shadow .2s}
+.skill-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(6,97,222,.12)}
+.skill-icon{font-size:1.8rem;margin-bottom:12px}
+.skill-card h3{font-size:.95rem;font-weight:700;color:#022049;margin-bottom:6px}
+.skill-card p{font-size:.82rem;color:#64748b;line-height:1.6;margin:0}
+.pricing-card{background:linear-gradient(135deg,#eff6ff,#fff);border:1.5px solid rgba(6,97,222,.2);border-radius:24px;padding:36px;max-width:480px;margin:2rem auto 0}
+.pricing-card .price{font-size:2.4rem;font-weight:700;color:#0661de;margin-bottom:4px}
+.pricing-card .price-sub{font-size:.85rem;color:#94a3b8;margin-bottom:1.2rem}
+.pricing-card ul{list-style:none;padding:0;margin:0 0 1.5rem}
+.pricing-card ul li{font-size:.88rem;color:#334155;padding:6px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:8px}
+.pricing-card ul li::before{content:"✓";color:#0661de;font-weight:700;flex-shrink:0}
+.enroll-btn{display:inline-flex;align-items:center;gap:8px;background:#0661de;color:#fff;font-weight:700;font-size:.95rem;padding:14px 32px;border-radius:40px;text-decoration:none;transition:background .15s}
+.enroll-btn:hover{background:#044fba}
+.band-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:1.5rem}
+.band-item{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:20px;text-align:center}
+.band-num{font-size:1.8rem;font-weight:700;color:#0661de;margin-bottom:4px}
+.band-label{font-size:.78rem;color:#64748b}
 .cta-band{background:linear-gradient(135deg,#022049,#0661de);border-radius:24px;padding:44px 36px;text-align:center;color:#fff;margin-top:3rem}
 .cta-band h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-bottom:.7rem;letter-spacing:-.02em}
 .cta-band p{font-size:.95rem;color:rgba(255,255,255,.75);margin-bottom:1.5rem;max-width:480px;margin-left:auto;margin-right:auto}
 .cta-band-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-white{background:#fff;color:#0661de;font-weight:700;font-size:.9rem;padding:12px 28px;border-radius:40px;text-decoration:none;border:none;cursor:pointer;transition:opacity .15s}
+.btn-white{background:#fff;color:#0661de;font-weight:700;font-size:.9rem;padding:12px 28px;border-radius:40px;text-decoration:none;transition:opacity .15s}
 .btn-white:hover{opacity:.9}
 .btn-ghost-white{background:transparent;color:#fff;font-weight:600;font-size:.9rem;padding:12px 28px;border-radius:40px;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);transition:border-color .15s}
 .btn-ghost-white:hover{border-color:#fff}
 </style>
 
-<div class="ap-hero">
-  <div class="slbl" data-en="AP COURSES · SAMARKAND" data-uz="AP KURSLAR · SAMARQAND" data-ru="КУРСЫ AP · САМАРКАНД">AP COURSES · SAMARKAND</div>
-  <h1 data-en="Advanced Placement.<br><em>Real results.</em>" data-uz="Advanced Placement.<br><em>Haqiqiy natijalar.</em>" data-ru="Advanced Placement.<br><em>Реальные результаты.</em>">Advanced Placement.<br><em>Real results.</em></h1>
-  <p data-en="AP scores matter for US university admissions. We prepare you to score 4 or 5 — taught by instructors who scored 1530 on the SAT themselves." data-uz="AP ballari AQSh universitetlariga qabul uchun muhim. Biz sizni 4 yoki 5 olishga tayyorlaymiz — o'zlari SATda 1530 olgan o'qituvchilar bilan." data-ru="Баллы AP важны для поступления в американские университеты. Готовим вас к 4 или 5 — преподаватели, сами набравшие 1530 на SAT.">AP scores matter for US university admissions. We prepare you to score 4 or 5 — taught by instructors who scored 1530 on the SAT themselves.</p>
-  <div class="ap-cta-row">
-    <a href="https://t.me/satsam_support?text=Hi%21%20I%27m%20interested%20in%20AP%20courses.%20Can%20you%20tell%20me%20more%3F" target="_blank" class="btn-white" data-en="Enroll in AP →" data-uz="AP ga yozilish →" data-ru="Записаться на AP →">Enroll in AP →</a>
+<div class="ielts-hero">
+  <div class="slbl" data-en="IELTS PREP · SAMARKAND" data-uz="IELTS TAYYORGARLIK · SAMARQAND" data-ru="ПОДГОТОВКА К IELTS · САМАРКАНД">IELTS PREP · SAMARKAND</div>
+  <h1 data-en="IELTS preparation.<br><em>Target Band 7+.</em>" data-uz="IELTS tayyorligi.<br><em>Band 7+ maqsad.</em>" data-ru="Подготовка к IELTS.<br><em>Цель — Band 7+.</em>">IELTS preparation.<br><em>Target Band 7+.</em></h1>
+  <p data-en="All four IELTS skills in one structured course. Reading, Writing, Listening, and Speaking — with full mock tests and expert feedback every week." data-uz="To'rtta IELTS ko'nikmasini bitta tizimli kursda. O'qish, yozish, tinglash va gapirish — har hafta to'liq mock testlar va mutaxassis fikrlari bilan." data-ru="Все четыре навыка IELTS в одном структурированном курсе. Чтение, письмо, аудирование и говорение — с полными пробными тестами и экспертной обратной связью каждую неделю.">All four IELTS skills in one structured course. Reading, Writing, Listening, and Speaking — with full mock tests and expert feedback every week.</p>
+  <div class="cta-row">
+    <a href="https://t.me/satsam_support?text=Hi%21%20I%27m%20interested%20in%20IELTS%20preparation.%20Can%20you%20tell%20me%20more%3F" target="_blank" class="btn-white" data-en="Enroll in IELTS →" data-uz="IELTS ga yozilish →" data-ru="Записаться на IELTS →">Enroll in IELTS →</a>
     <a href="/contact/" class="btn-ghost-white" data-en="Ask a question" data-uz="Savol berish" data-ru="Задать вопрос">Ask a question</a>
   </div>
 </div>
 
 <div class="sec">
   <div class="w">
-    <div class="sec-label" data-en="AVAILABLE COURSES" data-uz="MAVJUD KURSLAR" data-ru="ДОСТУПНЫЕ КУРСЫ">AVAILABLE COURSES</div>
-    <h2 class="sec-h2" data-en="Three AP subjects.<br><em>Enrolling now.</em>" data-uz="Uchta AP fani.<br><em>Qabul ochiq.</em>" data-ru="Три предмета AP.<br><em>Набор открыт.</em>">Three AP subjects.<br><em>Enrolling now.</em></h2>
-    <p class="sec-lead" data-en="Each course is 1,000,000 UZS per month per subject. Small groups, max 12 students. Full past-paper practice included." data-uz="Har bir kurs oyiga 1,000,000 so'm. Kichik guruhlar, maksimum 12 talaba. To'liq o'tgan yilgi testlar bilan." data-ru="Каждый курс — 1 000 000 сум в месяц за предмет. Малые группы, до 12 студентов. Полная практика по прошлым экзаменам.">Each course is 1,000,000 UZS per month per subject. Small groups, max 12 students. Full past-paper practice included.</p>
+    <div class="sec-label" data-en="WHAT WE COVER" data-uz="NIMA O'RGATAMIZ" data-ru="ЧТО МЫ ИЗУЧАЕМ">WHAT WE COVER</div>
+    <h2 class="sec-h2" data-en="All four skills.<br><em>One structured course.</em>" data-uz="To'rtta ko'nikma.<br><em>Bitta tizimli kurs.</em>" data-ru="Все четыре навыка.<br><em>Один структурированный курс.</em>">All four skills.<br><em>One structured course.</em></h2>
+    <p class="sec-lead" data-en="IELTS tests Reading, Writing, Listening, and Speaking. We train all four — with weekly timed practice under real exam conditions." data-uz="IELTS o'qish, yozish, tinglash va gapirish ko'nikmalarini tekshiradi. Biz to'rttasini ham — haftalik vaqt chegaralangan mashq bilan haqiqiy imtihon sharoitida o'rgatamiz." data-ru="IELTS проверяет чтение, письмо, аудирование и говорение. Мы тренируем все четыре — еженедельная практика в условиях реального экзамена.">IELTS tests Reading, Writing, Listening, and Speaking. We train all four — with weekly timed practice under real exam conditions.</p>
 
-    <div class="course-grid">
-
-      <div class="course-card featured">
-        <div class="course-badge badge-live" data-en="ENROLLING NOW" data-uz="QABUL OCHIQ" data-ru="НАБОР ОТКРЫТ">ENROLLING NOW</div>
-        <h3>AP Calculus AB / BC</h3>
-        <p data-en="Limits, derivatives, and integration (AB) plus infinite series, parametric curves, and polar coordinates (BC). Structured for students targeting a 4 or 5." data-uz="Limitlar, hosilalar va integrallar (AB) + cheksiz qatorlar va parametrik egrilar (BC). 4 yoki 5 olishga mo'ljallangan." data-ru="Пределы, производные, интегралы (AB) + ряды и параметрические кривые (BC). Цель — 4 или 5.">Limits, derivatives, and integration (AB) plus infinite series, parametric curves, and polar coordinates (BC). Structured for students targeting a 4 or 5.</p>
-        <div class="course-price">1,000,000 <span data-en="UZS / month" data-uz="so'm / oy" data-ru="сум / мес">UZS / month</span></div>
-        <a href="https://t.me/satsam_support?text=Hi%21%20I%27m%20interested%20in%20AP%20Calculus.%20Can%20you%20tell%20me%20more%3F" target="_blank" class="course-enroll" data-en="Enroll →" data-uz="Yozilish →" data-ru="Записаться →">Enroll →</a>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">📖</div>
+        <h3 data-en="Reading" data-uz="O'qish" data-ru="Чтение">Reading</h3>
+        <p data-en="Academic passage strategies, skimming and scanning, identifying main ideas, and True/False/Not Given mastery." data-uz="Akademik matn strategiyalari, tez o'qish va izlash, asosiy fikrlarni aniqlash, True/False/Not Given texnikasi." data-ru="Стратегии академических текстов, скимминг и сканирование, определение главных идей, True/False/Not Given.">Academic passage strategies, skimming and scanning, identifying main ideas, and True/False/Not Given mastery.</p>
       </div>
-
-      <div class="course-card featured">
-        <div class="course-badge badge-live" data-en="ENROLLING NOW" data-uz="QABUL OCHIQ" data-ru="НАБОР ОТКРЫТ">ENROLLING NOW</div>
-        <h3>AP Microeconomics</h3>
-        <p data-en="Supply and demand, consumer theory, market structures, factor markets, and market failure. Strong foundation for US business or economics majors." data-uz="Taklif va talab, iste'molchi nazariyasi, bozor tuzilmalari. AQSh iqtisodiyot yo'nalishi uchun mustahkam asos." data-ru="Спрос и предложение, теория потребителя, рыночные структуры. Прочная база для экономических специальностей.">Supply and demand, consumer theory, market structures, factor markets, and market failure. Strong foundation for US business or economics majors.</p>
-        <div class="course-price">1,000,000 <span data-en="UZS / month" data-uz="so'm / oy" data-ru="сум / мес">UZS / month</span></div>
-        <a href="https://t.me/satsam_support?text=Hi%21%20I%27m%20interested%20in%20AP%20Microeconomics.%20Can%20you%20tell%20me%20more%3F" target="_blank" class="course-enroll" data-en="Enroll →" data-uz="Yozilish →" data-ru="Записаться →">Enroll →</a>
+      <div class="skill-card">
+        <div class="skill-icon">✍️</div>
+        <h3 data-en="Writing" data-uz="Yozish" data-ru="Письмо">Writing</h3>
+        <p data-en="Task 1 (graphs, charts, diagrams) and Task 2 (academic essays). Structure, coherence, lexical resource, and grammatical range — all four marking criteria." data-uz="1-topshiriq (grafiklar, diagrammalar) va 2-topshiriq (akademik insholar). Tuzilish, izchillik, leksik boylik va grammatika — to'rtta baholash mezoni." data-ru="Задание 1 (графики, диаграммы) и Задание 2 (академические эссе). Структура, связность, лексический запас и грамматика.">Task 1 (graphs, charts, diagrams) and Task 2 (academic essays). Structure, coherence, lexical resource, and grammatical range — all four marking criteria.</p>
       </div>
-
-      <div class="course-card featured">
-        <div class="course-badge badge-live" data-en="ENROLLING NOW" data-uz="QABUL OCHIQ" data-ru="НАБОР ОТКРЫТ">ENROLLING NOW</div>
-        <h3>AP Macroeconomics</h3>
-        <p data-en="National income, economic growth, fiscal and monetary policy, international trade, and exchange rates. Can be paired with AP Micro for maximum impact." data-uz="Milliy daromad, iqtisodiy o'sish, fiskal va pul siyosati, xalqaro savdo. AP Micro bilan birga o'qish mumkin." data-ru="Национальный доход, экономический рост, фискальная и монетарная политика. Можно совмещать с AP Micro.">National income, economic growth, fiscal and monetary policy, international trade, and exchange rates. Can be paired with AP Micro for maximum impact.</p>
-        <div class="course-price">1,000,000 <span data-en="UZS / month" data-uz="so'm / oy" data-ru="сум / мес">UZS / month</span></div>
-        <a href="https://t.me/satsam_support?text=Hi%21%20I%27m%20interested%20in%20AP%20Macroeconomics.%20Can%20you%20tell%20me%20more%3F" target="_blank" class="course-enroll" data-en="Enroll →" data-uz="Yozilish →" data-ru="Записаться →">Enroll →</a>
+      <div class="skill-card">
+        <div class="skill-icon">🎧</div>
+        <h3 data-en="Listening" data-uz="Tinglash" data-ru="Аудирование">Listening</h3>
+        <p data-en="Four sections from everyday to academic contexts. Note completion, multiple choice, and map labelling under timed conditions with authentic audio." data-uz="To'rtta bo'lim — kundalikdan akademik kontekstgacha. Vaqt chegarasida haqiqiy audio bilan yozish, tanlov va xaritani belgilash." data-ru="Четыре раздела — от бытовых до академических. Заполнение заметок, выбор ответа и обозначение карт в условиях таймера.">Four sections from everyday to academic contexts. Note completion, multiple choice, and map labelling under timed conditions with authentic audio.</p>
       </div>
-
-      <div class="course-card soon">
-        <div class="course-badge badge-soon" data-en="COMING SOON" data-uz="TEZ ORADA" data-ru="СКОРО">COMING SOON</div>
-        <h3>AP Physics 1</h3>
-        <p data-en="Mechanics, waves, and introductory electricity. Coming Q3 2026." data-uz="Mexanika, to'lqinlar va elektr asoslari. 2026 Q3 da." data-ru="Механика, волны и основы электричества. Q3 2026.">Mechanics, waves, and introductory electricity. Coming Q3 2026.</p>
-        <div class="course-soon-note" data-en="Join the waitlist via Telegram" data-uz="Telegram orqali navbatga yoziling" data-ru="Вступите в список ожидания через Telegram">Join the waitlist via Telegram</div>
+      <div class="skill-card">
+        <div class="skill-icon">🗣</div>
+        <h3 data-en="Speaking" data-uz="Gapirish" data-ru="Говорение">Speaking</h3>
+        <p data-en="Parts 1, 2, and 3 of the speaking interview. Fluency, coherence, pronunciation, and lexical range — practised through weekly mock speaking sessions." data-uz="Og'zaki intervyuning 1, 2 va 3-qismlari. Ravonlik, izchillik, talaffuz va leksik boylik — haftalik mock gapirish seanslarida mashq qilinadi." data-ru="Части 1, 2 и 3 устного интервью. Беглость, связность, произношение и лексический запас — еженедельные пробные сессии говорения.">Parts 1, 2, and 3 of the speaking interview. Fluency, coherence, pronunciation, and lexical range — practised through weekly mock speaking sessions.</p>
       </div>
-
-      <div class="course-card soon">
-        <div class="course-badge badge-soon" data-en="COMING SOON" data-uz="TEZ ORADA" data-ru="СКОРО">COMING SOON</div>
-        <h3>AP Chemistry</h3>
-        <p data-en="Atomic structure, kinetics, equilibrium, and thermodynamics. Coming Q3 2026." data-uz="Atom tuzilishi, kinetika, muvozanat. 2026 Q3 da." data-ru="Атомная структура, кинетика, равновесие. Q3 2026.">Atomic structure, kinetics, equilibrium, and thermodynamics. Coming Q3 2026.</p>
-        <div class="course-soon-note" data-en="Join the waitlist via Telegram" data-uz="Telegram orqali navbatga yoziling" data-ru="Вступите в список ожидания через Telegram">Join the waitlist via Telegram</div>
-      </div>
-
     </div>
   </div>
 </div>
 
-<div class="sec" style="background:var(--bg2,#f8faff);padding-top:44px;padding-bottom:44px">
+<div class="sec" style="background:#f8faff;padding-top:44px;padding-bottom:44px">
   <div class="w">
-    <div class="sec-label" data-en="YOUR INSTRUCTOR" data-uz="O'QITUVCHINGIZ" data-ru="ВАШ ПРЕПОДАВАТЕЛЬ">YOUR INSTRUCTOR</div>
-    <h2 class="sec-h2" data-en="Taught by someone who <em>scored 1530.</em>" data-uz="<em>1530 ball</em> olgan mentor o'qitadi." data-ru="Преподаёт тот, кто <em>набрал 1530.</em>">Taught by someone who <em>scored 1530.</em></h2>
-    <div class="teacher-card" style="margin-top:1.2rem">
-      <div class="teacher-avatar">FP</div>
-      <div class="teacher-info" style="flex:1;min-width:200px">
-        <h4>Faxriddin Pulatov</h4>
-        <div class="role" data-en="AP & SAT Math Instructor · SAT 1530" data-uz="AP va SAT Math O'qituvchisi · SAT 1530" data-ru="Преподаватель AP и SAT Math · SAT 1530">AP &amp; SAT Math Instructor · SAT 1530</div>
-        <p data-en="Faxriddin scored 1530 on the Digital SAT and specialises in AP Calculus AB/BC, AP Microeconomics, and AP Macroeconomics. He has guided students from zero to consistent 4s and 5s on AP exams. Every session includes full past-paper practice." data-uz="Faxriddin Digital SATda 1530 ball to'plagan. AP Calculus, AP Mikroiqtisodiyot va AP Makroiqtisodiyotga ixtisoslashgan. Talabalarni AP imtihonlarida 4 va 5 olishga tayyorlaydi." data-ru="Фахриддин набрал 1530 на Digital SAT. Специализируется на AP Calculus, AP Microeconomics и AP Macroeconomics. Готовит студентов к стабильным 4 и 5 на экзаменах AP.">Faxriddin scored 1530 on the Digital SAT and specialises in AP Calculus AB/BC, AP Microeconomics, and AP Macroeconomics. He has guided students from zero to consistent 4s and 5s on AP exams.</p>
-      </div>
-      <a href="/teachers/" style="display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:700;color:#0661de;border:1.5px solid rgba(6,97,222,.2);padding:10px 20px;border-radius:40px;text-decoration:none;background:#eff6ff;white-space:nowrap;align-self:center" data-en="All mentors →" data-uz="Barcha mentorlar →" data-ru="Все преподаватели →">All mentors →</a>
+    <div class="sec-label" data-en="PRICING" data-uz="NARX" data-ru="СТОИМОСТЬ">PRICING</div>
+    <h2 class="sec-h2" data-en="One price.<br><em>All four skills.</em>" data-uz="Bitta narx.<br><em>To'rtta ko'nikma.</em>" data-ru="Одна цена.<br><em>Все четыре навыка.</em>">One price.<br><em>All four skills.</em></h2>
+    <div class="pricing-card">
+      <div class="price">700,000 <span style="font-size:1rem;font-weight:500;color:#94a3b8">UZS</span></div>
+      <div class="price-sub" data-en="per month · all skills included" data-uz="oyiga · barcha ko'nikmalar kiritilgan" data-ru="в месяц · все навыки включены">per month · all skills included</div>
+      <ul>
+        <li data-en="Reading, Writing, Listening & Speaking" data-uz="O'qish, Yozish, Tinglash va Gapirish" data-ru="Чтение, письмо, аудирование и говорение">Reading, Writing, Listening &amp; Speaking</li>
+        <li data-en="Full mock IELTS tests weekly" data-uz="Har hafta to'liq mock IELTS testlari" data-ru="Полные пробные IELTS тесты еженедельно">Full mock IELTS tests weekly</li>
+        <li data-en="Expert written feedback on essays" data-uz="Insholar bo'yicha mutaxassis yozma fikrlari" data-ru="Экспертная письменная обратная связь по эссе">Expert written feedback on essays</li>
+        <li data-en="Speaking sessions with correction" data-uz="Tuzatishlar bilan gapirish seanslar" data-ru="Сессии говорения с исправлением ошибок">Speaking sessions with correction</li>
+        <li data-en="Max 12 students per group" data-uz="Guruhda maksimum 12 talaba" data-ru="Максимум 12 студентов в группе">Max 12 students per group</li>
+        <li data-en="IELTS Academic focus (University entry)" data-uz="IELTS Academic yo'nalishi (Universitet qabuli)" data-ru="IELTS Academic (поступление в университет)">IELTS Academic focus (University entry)</li>
+      </ul>
+      <a href="https://t.me/satsam_support?text=Hi%21%20I%27m%20interested%20in%20IELTS%20preparation.%20Can%20you%20tell%20me%20more%3F" target="_blank" class="enroll-btn" data-en="Enroll now →" data-uz="Yozilish →" data-ru="Записаться →">Enroll now →</a>
     </div>
   </div>
 </div>
 
 <div class="sec">
   <div class="w">
-    <div class="sec-label" data-en="WHY AP" data-uz="NIMA UCHUN AP" data-ru="ЗАЧЕМ AP">WHY AP</div>
-    <h2 class="sec-h2" data-en="AP scores give you a real <em>admissions edge.</em>" data-uz="AP ballari sizga haqiqiy <em>qabul afzalligini</em> beradi." data-ru="Баллы AP дают реальное <em>преимущество при поступлении.</em>">AP scores give you a real <em>admissions edge.</em></h2>
-    <div class="why-grid">
-      <div class="why-item">
-        <div class="why-icon">🎓</div>
-        <h4 data-en="College credit" data-uz="Kollej krediti" data-ru="Зачёт в колледже">College credit</h4>
-        <p data-en="A score of 4 or 5 can earn you college credit at US universities — skipping introductory courses and saving thousands in tuition." data-uz="4 yoki 5 ball AQSh universitetlarida kollej kreditini ta'minlaydi — kirish kurslarini o'tkazib yuborish va o'qish xarajatlarini tejash." data-ru="Балл 4 или 5 даёт зачёт в американских университетах — пропуск вводных курсов и экономия тысяч долларов.">A score of 4 or 5 can earn you college credit at US universities — skipping introductory courses and saving thousands in tuition.</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">📋</div>
-        <h4 data-en="Stronger application" data-uz="Kuchli ariza" data-ru="Сильная заявка">Stronger application</h4>
-        <p data-en="US admissions officers view AP courses as evidence you can handle university-level work. They signal rigor — especially from an Uzbek applicant." data-uz="AQSh qabul xodimlari AP kurslarini universitet darajasidagi ishni uddalay olishingizning isboti sifatida ko'radi." data-ru="Американские приёмные комиссии видят в AP свидетельство того, что вы справитесь с университетской нагрузкой.">US admissions officers view AP courses as evidence you can handle university-level work. They signal rigor — especially from an Uzbek applicant.</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">💰</div>
-        <h4 data-en="Scholarship impact" data-uz="Stipendiya ta'siri" data-ru="Влияние на стипендию">Scholarship impact</h4>
-        <p data-en="Many merit scholarships factor AP performance into awards. A strong AP record alongside a 1400+ SAT significantly improves scholarship eligibility." data-uz="Ko'p akademik stipendiyalar AP natijalarini hisobga oladi. 1400+ SAT va kuchli AP rekordi stipendiya ehtimolini oshiradi." data-ru="Многие стипендии учитывают результаты AP. Сильные AP вместе с SAT 1400+ значительно повышают шансы.">Many merit scholarships factor AP performance into awards. A strong AP record alongside a 1400+ SAT significantly improves scholarship eligibility.</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">⏱</div>
-        <h4 data-en="Real exam discipline" data-uz="Haqiqiy imtihon intizomi" data-ru="Дисциплина реального экзамена">Real exam discipline</h4>
-        <p data-en="AP exams are timed, high-stakes, and graded externally. Preparing for them builds the same exam discipline that makes SAT preparation more effective." data-uz="AP imtihonlari vaqt chegaralangan va tashqi baholanadi. Tayyorgarlik SAT tayyorgarligini ham samaraliroq qiladi." data-ru="Экзамены AP — с таймером и внешней оценкой. Подготовка к ним развивает дисциплину, которая делает SAT эффективнее.">AP exams are timed, high-stakes, and graded externally. Preparing for them builds the same exam discipline that makes SAT preparation more effective.</p>
-      </div>
+    <div class="sec-label" data-en="TARGET BANDS" data-uz="MAQSAD BANDLAR" data-ru="ЦЕЛЕВЫЕ БАЛЛЫ">TARGET BANDS</div>
+    <h2 class="sec-h2" data-en="What band do you <em>need?</em>" data-uz="Qanday band <em>kerak?</em>" data-ru="Какой балл вам <em>нужен?</em>">What band do you <em>need?</em></h2>
+    <p class="sec-lead" data-en="Most UK, Australian, and Canadian university programs require Band 6.5 to 7.5. US programs typically accept IELTS alongside SAT scores. We target Band 7+ for all students." data-uz="Ko'pgina Buyuk Britaniya, Avstraliya va Kanada universitetlari 6.5 dan 7.5 gacha band talab qiladi. Biz barcha talabalar uchun Band 7+ ni maqsad qilamiz." data-ru="Большинство британских, австралийских и канадских программ требуют Band 6.5–7.5. Мы ставим цель Band 7+ для всех студентов.">Most UK, Australian, and Canadian university programs require Band 6.5 to 7.5. We target Band 7+ for all students.</p>
+    <div class="band-grid">
+      <div class="band-item"><div class="band-num">6.5</div><div class="band-label" data-en="Most UK universities" data-uz="Ko'pgina UK universitetlari" data-ru="Большинство университетов UK">Most UK universities</div></div>
+      <div class="band-item"><div class="band-num">7.0</div><div class="band-label" data-en="Top UK & Australian programs" data-uz="UK va Avstraliya top dasturlari" data-ru="Топ программы UK и Австралии">Top UK &amp; Australian programs</div></div>
+      <div class="band-item"><div class="band-num">7.5</div><div class="band-label" data-en="Competitive graduate programs" data-uz="Raqobatbardosh magistratura dasturlari" data-ru="Конкурентные программы магистратуры">Competitive graduate programs</div></div>
+      <div class="band-item" style="border-color:rgba(6,97,222,.25);background:#eff6ff"><div class="band-num" style="color:#0661de">7+</div><div class="band-label" style="color:#0661de;font-weight:700" data-en="Our target for you" data-uz="Biz sizni shu yerga olib boramiz" data-ru="Наша цель для вас">Our target for you</div></div>
     </div>
 
     <div class="cta-band">
-      <h2 data-en="Ready to start AP?" data-uz="AP boshlashga tayyormisiz?" data-ru="Готовы начать AP?">Ready to start AP?</h2>
-      <p data-en="Message us on Telegram and we'll place you in the right group for your current level and timeline." data-uz="Telegram orqali murojaat qiling — darajangizga mos guruhga joylashtiramiz." data-ru="Напишите нам в Telegram — подберём группу под ваш уровень и расписание.">Message us on Telegram and we'll place you in the right group for your current level and timeline.</p>
+      <h2 data-en="Ready to hit Band 7?" data-uz="Band 7 olishga tayyormisiz?" data-ru="Готовы набрать Band 7?">Ready to hit Band 7?</h2>
+      <p data-en="Message us on Telegram and we'll get you started with a level assessment and class placement." data-uz="Telegram orqali murojaat qiling — daraja baholash va guruhga joylashtirish bilan boshlaymiz." data-ru="Напишите нам в Telegram — начнём с оценки уровня и распределения по группам.">Message us on Telegram and we'll get you started with a level assessment and class placement.</p>
       <div class="cta-band-btns">
-        <a href="https://t.me/satsam_support?text=Hi%21%20I%27m%20interested%20in%20AP%20courses.%20Can%20you%20tell%20me%20more%3F" target="_blank" class="btn-white" data-en="Message us on Telegram →" data-uz="Telegramda yozing →" data-ru="Написать в Telegram →">Message us on Telegram →</a>
+        <a href="https://t.me/satsam_support?text=Hi%21%20I%27m%20interested%20in%20IELTS%20preparation.%20Can%20you%20tell%20me%20more%3F" target="_blank" class="btn-white" data-en="Message us on Telegram →" data-uz="Telegramda yozing →" data-ru="Написать в Telegram →">Message us on Telegram →</a>
         <a href="/contact/" class="btn-ghost-white" data-en="View contact info" data-uz="Aloqa ma'lumotlari" data-ru="Контактная информация">View contact info</a>
       </div>
     </div>
