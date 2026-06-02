@@ -619,7 +619,7 @@ nav.scrolled{
 <li class="has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions<span class="dd-arrow">▾</span></a>
   <ul class="dd">
     <li><a onclick="closeMobileNav()" href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a></li>
-    <li><a onclick="closeMobileNav()" href="/universities/" data-en="76+ Universities" data-uz="76+ Universitetlar" data-ru="76+ Университетов">76+ Universities</a></li>
+    <li><a onclick="closeMobileNav()" href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></li>
   </ul>
 </li>
 <li><a onclick="closeMobileNav()" href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
@@ -662,7 +662,7 @@ nav.scrolled{
   </button>
   <ul class="mob-group-body">
     <li><a href="/admissions/" onclick="closeMobileNav()" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг">Admissions Consulting</a></li>
-    <li><a href="/universities/" onclick="closeMobileNav()" data-en="76+ Universities" data-uz="76+ Universitetlar" data-ru="76+ Университетов">76+ Universities</a></li>
+    <li><a href="/universities/" onclick="closeMobileNav()" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></li>
     <li><a href="/results/" onclick="closeMobileNav()" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
   </ul>
 </li>
@@ -740,43 +740,131 @@ nav.scrolled{
 </section>
 
 <section class="pg-section">
-  <div class="slbl-pg" data-en="UNIVERSITIES" data-uz="UNIVERSITETLAR" data-ru="&#1059;&#1053;&#1048;&#1042;&#1045;&#1056;&#1057;&#1048;&#1058;&#1045;&#1058;&#1067;">UNIVERSITIES</div>
-  <h2 class="pg-h2" data-en="Where we can <em>guide you.</em>" data-uz="Biz sizni <em>yo&#39;naltira olamiz.</em>" data-ru="&#1050;&#1091;&#1076;&#1072; &#1084;&#1099; &#1084;&#1086;&#1078;&#1077;&#1084; <em>&#1074;&#1072;&#1089; &#1085;&#1072;&#1087;&#1088;&#1072;&#1074;&#1080;&#1090;&#1100;.</em>">Universities our <em>students attend.</em></h2>
+  <div class="slbl-pg" data-en="DESTINATIONS" data-uz="DAVLATLAR" data-ru="СТРАНЫ">DESTINATIONS</div>
+  <h2 class="pg-h2" data-en="Countries our <em>students reach.</em>" data-uz="Talabalarimiz <em>boradigan davlatlar.</em>" data-ru="Страны, куда <em>поступают наши студенты.</em>">Countries our <em>students reach.</em></h2>
+  <p style="color:var(--tm);font-size:.95rem;margin:.5rem 0 0" data-en="SAT Samarkand students have been accepted to universities across 18 countries. Every destination below has active admission pathways we guide students through." data-uz="SAT Samarqand talabalari 18 davlatdagi universitetlarga qabul qilindi." data-ru="Студенты SAT Samarkand поступили в университеты 18 стран.">SAT Samarkand students have been accepted to universities across 18 countries. Every destination below has active admission pathways we guide students through.</p>
+
   <style>
-  .uni-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:1.6rem}
-  @media(max-width:640px){.uni-grid{grid-template-columns:1fr 1fr}}
-  .uni-card{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:16px 14px;display:flex;align-items:center;gap:12px;box-shadow:var(--ss)}
-  .uni-logo{width:44px;height:44px;object-fit:contain;border-radius:10px;background:#f8f8f8;flex-shrink:0;border:1px solid #eee;padding:4px}
-  .uni-initial{width:44px;height:44px;border-radius:10px;color:#fff;font-family:var(--f);font-size:.82rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;letter-spacing:-.01em}
-  .uni-name{font-size:.86rem;font-weight:600;color:var(--navy);line-height:1.3}
-  .uni-country{font-size:.71rem;color:var(--tl);margin-top:2px}
+  .country-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:2rem}
+  @media(max-width:760px){.country-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:420px){.country-grid{grid-template-columns:1fr}}
+  .country-card{background:#fff;border:1px solid var(--bd);border-radius:20px;padding:20px 18px;display:flex;align-items:flex-start;gap:14px;box-shadow:var(--ss);transition:transform .2s ease,box-shadow .2s ease,border-color .2s}
+  .country-card:hover{transform:translateY(-4px);box-shadow:var(--sm);border-color:rgba(6,97,222,.25)}
+  .country-flag{font-size:2rem;line-height:1;flex-shrink:0;margin-top:2px}
+  .country-name{font-size:.92rem;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:3px}
+  .country-hook{font-size:.76rem;color:var(--tl);line-height:1.45}
   </style>
-  <div class="uni-grid">
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/harvard.edu" alt="Harvard" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#7b0000,#b00);display:none">H</div><div><div class="uni-name">Harvard University</div><div class="uni-country">USA · Ivy League</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/stanford.edu" alt="Stanford" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#8c1515,#c00);display:none">S</div><div><div class="uni-name">Stanford University</div><div class="uni-country">USA · California</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/ox.ac.uk" alt="Oxford" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#002147,#0047b3);display:none">O</div><div><div class="uni-name">University of Oxford</div><div class="uni-country">UK · Europe</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/berkeley.edu" alt="UC Berkeley" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#003262,#0066cc);display:none">B</div><div><div class="uni-name">UC Berkeley</div><div class="uni-country">USA · California</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/nyu.edu" alt="NYU Abu Dhabi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#330072,#6600cc);display:none">N</div><div><div class="uni-name">NYU Abu Dhabi</div><div class="uni-country">UAE · Abu Dhabi</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/hku.hk" alt="HKU" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#003366,#0052a5);display:none">H</div><div><div class="uni-name">HKU Hong Kong</div><div class="uni-country">Hong Kong</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/columbia.edu" alt="Columbia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#002d72,#0057e9);display:none">C</div><div><div class="uni-name">Columbia University</div><div class="uni-country">USA · Ivy League</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/northwestern.edu" alt="Northwestern" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#4e2a84,#7b4bbd);display:none">N</div><div><div class="uni-name">Northwestern Univ.</div><div class="uni-country">USA · Illinois</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/ucl.ac.uk" alt="UCL" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#003c71,#005fb3);display:none">U</div><div><div class="uni-name">University College London</div><div class="uni-country">UK · Europe</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/nus.edu.sg" alt="NUS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#003049,#005080);display:none">N</div><div><div class="uni-name">NUS Singapore</div><div class="uni-country">Singapore</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/tudelft.nl" alt="TU Delft" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#003da5,#0057d9);display:none">T</div><div><div class="uni-name">TU Delft</div><div class="uni-country">Netherlands · Europe</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/mcgill.ca" alt="McGill" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#002868,#004db3);display:none">M</div><div><div class="uni-name">McGill University</div><div class="uni-country">Canada · Montreal</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/purdue.edu" alt="Purdue" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#003153,#005580);display:none">P</div><div><div class="uni-name">Purdue University</div><div class="uni-country">USA · Indiana</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/drexel.edu" alt="Drexel" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#07294d,#003f7f);display:none">D</div><div><div class="uni-name">Drexel University</div><div class="uni-country">USA · Philadelphia</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/metu.edu.tr" alt="METU" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#cc0000,#990000);display:none">M</div><div><div class="uni-name">METU</div><div class="uni-country">Turkey · Ankara</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/inha.ac.kr" alt="Inha" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#003478,#0052b4);display:none">I</div><div><div class="uni-name">Inha University</div><div class="uni-country">Korea / Tashkent</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/kaist.ac.kr" alt="KAIST" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#880000,#cc0000);display:none">K</div><div><div class="uni-name">KAIST</div><div class="uni-country">South Korea</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/uva.nl" alt="Univ. of Amsterdam" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#003049,#004d6b);display:none">U</div><div><div class="uni-name">Univ. of Amsterdam</div><div class="uni-country">Netherlands · Europe</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/tulane.edu" alt="Tulane" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#006747,#009460);display:none">T</div><div><div class="uni-name">Tulane University</div><div class="uni-country">USA · New Orleans</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/gettysburg.edu" alt="Gettysburg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#002868,#0041a8);display:none">G</div><div><div class="uni-name">Gettysburg College</div><div class="uni-country">USA · Pennsylvania</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/utoronto.ca" alt="Univ. of Toronto" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#00539b,#007acc);display:none">U</div><div><div class="uni-name">Univ. of Toronto</div><div class="uni-country">Canada</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/wooster.edu" alt="College of Wooster" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#8a1538,#c4154b);display:none">C</div><div><div class="uni-name">College of Wooster</div><div class="uni-country">USA · Ohio</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/knox.edu" alt="Knox College" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#5c3317,#8b4c1e);display:none">K</div><div><div class="uni-name">Knox College</div><div class="uni-country">USA · Illinois</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/ada.edu.az" alt="ADA University" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#006b3c,#009c59);display:none">A</div><div><div class="uni-name">ADA University</div><div class="uni-country">Azerbaijan</div></div></div>
-    <div class="uni-card"><img class="uni-logo" src="https://logo.clearbit.com/fandm.edu" alt="Franklin & Marshall" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="uni-initial" style="background:linear-gradient(135deg,#8a3000,#c44800);display:none">F</div><div><div class="uni-name">Franklin &amp; Marshall</div><div class="uni-country">USA · Pennsylvania</div></div></div>
+
+  <div class="country-grid">
+
+    <div class="country-card">
+      <div class="country-flag">🇺🇸</div>
+      <div><div class="country-name" data-en="United States" data-uz="Amerika" data-ru="США">United States</div>
+      <div class="country-hook" data-en="Ivy League, top research unis, Common App, generous scholarships" data-uz="Ivy League, top universitetlar, Common App, stipendiyalar" data-ru="Лиги Плюща, Common App, щедрые стипендии">Ivy League, top research unis, Common App, generous scholarships</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇬🇧</div>
+      <div><div class="country-name" data-en="United Kingdom" data-uz="Britaniya" data-ru="Великобритания">United Kingdom</div>
+      <div class="country-hook" data-en="Oxford, UCL, Imperial — 3-year degrees, UCAS application" data-uz="Oxford, UCL, Imperial — 3 yillik dasturlar, UCAS" data-ru="Oxford, UCL, Imperial — 3-летние программы, UCAS">Oxford, UCL, Imperial — 3-year degrees, UCAS application</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇰🇷</div>
+      <div><div class="country-name" data-en="South Korea" data-uz="Janubiy Koreya" data-ru="Южная Корея">South Korea</div>
+      <div class="country-hook" data-en="KAIST, Yonsei, SKKU — English programs, no TOPIK required" data-uz="KAIST, Yonsei, SKKU — inglizcha dasturlar, TOPIK shart emas" data-ru="KAIST, Yonsei, SKKU — программы на английском, TOPIK не нужен">KAIST, Yonsei, SKKU — English programs, no TOPIK required</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇩🇪</div>
+      <div><div class="country-name" data-en="Germany" data-uz="Germaniya" data-ru="Германия">Germany</div>
+      <div class="country-hook" data-en="TU Munich, Heidelberg — tuition-free public universities" data-uz="TU Munich, Heidelberg — to'lovsiz davlat universitetlari" data-ru="TU Munich, Heidelberg — бесплатные государственные университеты">TU Munich, Heidelberg — tuition-free public universities</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇨🇦</div>
+      <div><div class="country-name" data-en="Canada" data-uz="Kanada" data-ru="Канада">Canada</div>
+      <div class="country-hook" data-en="McGill, UBC, UofT — IELTS pathway, post-grad work permits" data-uz="McGill, UBC — IELTS yo'li, bitiruvdan keyin ish ruxsati" data-ru="McGill, UBC — IELTS, разрешение на работу после окончания">McGill, UBC, UofT — IELTS pathway, post-grad work permits</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇸🇬</div>
+      <div><div class="country-name" data-en="Singapore" data-uz="Singapur" data-ru="Сингапур">Singapore</div>
+      <div class="country-hook" data-en="NUS, NTU — Asia's top-ranked, English-medium, SAT accepted" data-uz="NUS, NTU — Osiyoning eng yaxshilari, inglizcha, SAT qabul qilinadi" data-ru="NUS, NTU — лучшие в Азии, на английском, SAT принимается">NUS, NTU — Asia's top-ranked, English-medium, SAT accepted</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇯🇵</div>
+      <div><div class="country-name" data-en="Japan" data-uz="Yaponiya" data-ru="Япония">Japan</div>
+      <div class="country-hook" data-en="Waseda, Tokyo, Kyoto — scholarship-heavy, English programs growing" data-uz="Waseda, Tokyo — stipendiyalar ko'p, inglizcha dasturlar o'smoqda" data-ru="Waseda, Tokyo — много стипендий, английские программы растут">Waseda, Tokyo, Kyoto — scholarship-heavy, English programs growing</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇹🇷</div>
+      <div><div class="country-name" data-en="Türkiye" data-uz="Turkiya" data-ru="Турция">Türkiye</div>
+      <div class="country-hook" data-en="METU, Bilkent, Boğaziçi — closest destination, SAT-friendly" data-uz="METU, Bilkent — eng yaqin yo'nalish, SAT qabul qilinadi" data-ru="METU, Bilkent — ближайшее направление, SAT приветствуется">METU, Bilkent, Boğaziçi — closest destination, SAT-friendly</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇮🇹</div>
+      <div><div class="country-name" data-en="Italy" data-uz="Italiya" data-ru="Италия">Italy</div>
+      <div class="country-hook" data-en="Politecnico Milano, Bologna — affordable EU degrees, English tracks" data-uz="Politecnico Milano, Bologna — arzon EU darajalari" data-ru="Politecnico Milano, Bologna — доступные программы ЕС">Politecnico Milano, Bologna — affordable EU degrees, English tracks</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇵🇱</div>
+      <div><div class="country-name" data-en="Poland" data-uz="Polsha" data-ru="Польша">Poland</div>
+      <div class="country-hook" data-en="Warsaw, Wrocław, AGH — affordable EU education, growing tech scene" data-uz="Varshava, Vrotslav — arzon EU ta'lim, rivojlanayotgan texnologiya" data-ru="Варшава, Вроцлав — доступное образование в ЕС">Warsaw, Wrocław, AGH — affordable EU education, growing tech scene</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇭🇺</div>
+      <div><div class="country-name" data-en="Hungary" data-uz="Vengriya" data-ru="Венгрия">Hungary</div>
+      <div class="country-hook" data-en="Budapest unis, Stipendium Hungaricum — fully funded scholarships" data-uz="Budapest universitetlari, Stipendium Hungaricum — to'liq stipendiyalar" data-ru="Будапештские вузы, Stipendium Hungaricum — полное финансирование">Budapest unis, Stipendium Hungaricum — fully funded scholarships</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇨🇳</div>
+      <div><div class="country-name" data-en="China" data-uz="Xitoy" data-ru="Китай">China</div>
+      <div class="country-hook" data-en="Fudan, Zhejiang, Tsinghua — CSC scholarships, English-medium programs" data-uz="Fudan, Tsinghua — CSC stipendiyalar, inglizcha dasturlar" data-ru="Фудань, Цинхуа — стипендии CSC, программы на английском">Fudan, Zhejiang, Tsinghua — CSC scholarships, English-medium programs</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇭🇰</div>
+      <div><div class="country-name" data-en="Hong Kong" data-uz="Gonkong" data-ru="Гонконг">Hong Kong</div>
+      <div class="country-hook" data-en="HKU, HKUST, CUHK — fully English, globally ranked, SAT accepted" data-uz="HKU, HKUST — to'liq inglizcha, SAT qabul qilinadi" data-ru="HKU, HKUST — полностью на английском, SAT принимается">HKU, HKUST, CUHK — fully English, globally ranked, SAT accepted</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇦🇪</div>
+      <div><div class="country-name" data-en="UAE" data-uz="BAA" data-ru="ОАЭ">UAE</div>
+      <div class="country-hook" data-en="NYU Abu Dhabi, Khalifa University — tax-free, high scholarships" data-uz="NYU Abu Dhabi, Khalifa — soliqsiz, yuqori stipendiyalar" data-ru="NYU Abu Dhabi, Khalifa — без налогов, высокие стипендии">NYU Abu Dhabi, Khalifa University — tax-free, high scholarships</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇸🇦</div>
+      <div><div class="country-name" data-en="Saudi Arabia" data-uz="Saudiya Arabistoni" data-ru="Саудовская Аравия">Saudi Arabia</div>
+      <div class="country-hook" data-en="KAUST, KFUPM — fully funded, world-class research universities" data-uz="KAUST, KFUPM — to'liq moliyalashtirilgan, dunyodagi yetakchi tadqiqot universitetlari" data-ru="KAUST, KFUPM — полное финансирование, ведущие исследовательские университеты">KAUST, KFUPM — fully funded, world-class research universities</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇨🇭</div>
+      <div><div class="country-name" data-en="Switzerland" data-uz="Shveytsariya" data-ru="Швейцария">Switzerland</div>
+      <div class="country-hook" data-en="ETH Zurich, EPFL — Europe's top engineering & science schools" data-uz="ETH Zurich, EPFL — Yevropaning top muhandislik va fan universitetlari" data-ru="ETH Zurich, EPFL — лучшие инженерные и научные школы Европы">ETH Zurich, EPFL — Europe's top engineering & science schools</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇫🇮</div>
+      <div><div class="country-name" data-en="Finland" data-uz="Finlandiya" data-ru="Финляндия">Finland</div>
+      <div class="country-hook" data-en="Aalto, Helsinki — free or low tuition, strong tech & design programs" data-uz="Aalto, Helsinki — arzon ta'lim, kuchli texnologiya va dizayn" data-ru="Aalto, Helsinki — низкая стоимость, сильные программы по IT и дизайну">Aalto, Helsinki — free or low tuition, strong tech & design programs</div></div>
+    </div>
+
+    <div class="country-card">
+      <div class="country-flag">🇲🇾</div>
+      <div><div class="country-name" data-en="Malaysia" data-uz="Malayziya" data-ru="Малайзия">Malaysia</div>
+      <div class="country-hook" data-en="UTM, UM, Monash Malaysia — English-medium, affordable Asian hub" data-uz="UTM, UM, Monash — inglizcha, arzon Osiyo markazi" data-ru="UTM, UM, Monash — на английском, доступный азиатский хаб">UTM, UM, Monash Malaysia — English-medium, affordable Asian hub</div></div>
+    </div>
+
   </div>
 </section>
 
