@@ -791,6 +791,10 @@ document.addEventListener('click', function(e) {
   }
 });
 
+// Floating widget
+
+}
+
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(q => {
   q.addEventListener('click', () => {
@@ -800,10 +804,6 @@ document.querySelectorAll('.faq-q').forEach(q => {
     if (!wasOpen) item.classList.add('open');
   });
 });
-
-// Floating widget
-
-}
 
 // Dropdown nav CSS (keep in sync sitewide)
 const ddStyle = document.createElement('style');
