@@ -249,11 +249,11 @@ body > ul.dd li::marker {
 }
 .fmitem.fmcall .fmicon { background: var(--amber) !important; color: #fff !important; }
 
-/* ── STATS GRADIENT TEXT ────────────────────────────────── */
+/* ── STATS — BRIGHT BLUE (matches button color) ─────────── */
 .tb-num,
 .stat-num,
 .pillar-stat-num {
-  background: linear-gradient(135deg, var(--navy), #1a4ea8);
+  background: linear-gradient(135deg, var(--amber), var(--amber3));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
