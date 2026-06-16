@@ -589,16 +589,16 @@ nav.scrolled{
     <div class="guide-section" id="nthroot">
       <h2 class="guide-h2"><span class="guide-icon">ⁿ√</span> Nth Roots (Cube Root & Beyond)</h2>
       <div class="guide-callout">
-        <strong>Key insight:</strong> In Desmos, the nth root syntax is <code>nthroot(n)(x)</code> — two sets of parentheses. The first holds the <em>index</em> (which root), the second holds the <em>radicand</em> (what's under the root).
+        <strong>Use fractional exponents — that's the keyboard way.</strong> Desmos doesn't have a simple <code>cbrt()</code> function you can type. The fastest method on test day is <code>x^(1/3)</code> for cube root, <code>x^(1/4)</code> for 4th root, and so on.
       </div>
       <table class="guide-table">
         <thead><tr><th>Math notation</th><th class="type-col">Type in Desmos</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td>∛x  (cube root)</td>    <td><code>nthroot(3)(x)</code></td>       <td>3rd root of x</td></tr>
-          <tr><td>∛(x + 1)</td>           <td><code>nthroot(3)(x + 1)</code></td>   <td></td></tr>
-          <tr><td>⁴√x  (4th root)</td>    <td><code>nthroot(4)(x)</code></td>       <td>4th root of x</td></tr>
-          <tr><td>⁵√(x²)</td>             <td><code>nthroot(5)(x^2)</code></td>     <td></td></tr>
-          <tr class="highlight-row"><td colspan="3">💡 <strong>Shortcut:</strong> You can also type <code>x^(1/3)</code> for the cube root — same result, simpler to type under pressure.</td></tr>
+          <tr><td>∛x  (cube root)</td>    <td><code>x^(1/3)</code></td>         <td>Fractional exponent — reliable on any device</td></tr>
+          <tr><td>∛(x + 1)</td>           <td><code>(x+1)^(1/3)</code></td>     <td>Wrap base in parentheses</td></tr>
+          <tr><td>⁴√x  (4th root)</td>    <td><code>x^(1/4)</code></td>         <td></td></tr>
+          <tr><td>⁵√(x²)</td>             <td><code>(x^2)^(1/5)</code></td>     <td></td></tr>
+          <tr class="highlight-row"><td colspan="3">💡 <strong>General rule:</strong> ⁿ√x = <code>x^(1/n)</code>. Memorize this — it works for every root and is the fastest to type.</td></tr>
         </tbody>
       </table>
     </div>
@@ -607,17 +607,17 @@ nav.scrolled{
     <div class="guide-section" id="abs">
       <h2 class="guide-h2"><span class="guide-icon">|·|</span> Absolute Value</h2>
       <div class="guide-callout">
-        <strong>Two ways:</strong> You can type <code>abs(x)</code> (always works) or use the pipe key <code>|x|</code> (shift + backslash on most keyboards). Both work in Desmos. We recommend <code>abs()</code> to avoid confusion.
+        <strong>Use the pipe key <code>|</code></strong> (Shift + Backslash on most keyboards). This is exactly how Desmos displays absolute value — you type what you see. You can also type <code>abs(x)</code> as an alternative.
       </div>
       <table class="guide-table">
-        <thead><tr><th>Math notation</th><th class="type-col">Type in Desmos</th><th>Alt (pipe key)</th></tr></thead>
+        <thead><tr><th>Math notation</th><th class="type-col">Type in Desmos</th><th>Alternative</th></tr></thead>
         <tbody>
-          <tr><td>|x|</td>           <td><code>abs(x)</code></td>           <td><code>|x|</code></td></tr>
-          <tr><td>|x − 3|</td>       <td><code>abs(x - 3)</code></td>       <td><code>|x - 3|</code></td></tr>
-          <tr><td>|x + 2| − 1</td>   <td><code>abs(x + 2) - 1</code></td>  <td><code>|x + 2| - 1</code></td></tr>
-          <tr><td>2|x|</td>          <td><code>2*abs(x)</code></td>         <td><code>2|x|</code></td></tr>
-          <tr><td>|2x − 4|</td>      <td><code>abs(2x - 4)</code></td>      <td><code>|2x - 4|</code></td></tr>
-          <tr><td>−|x| + 5</td>      <td><code>-abs(x) + 5</code></td>     <td><code>-|x| + 5</code></td></tr>
+          <tr><td>|x|</td>           <td><code>|x|</code></td>           <td><code>abs(x)</code></td></tr>
+          <tr><td>|x − 3|</td>       <td><code>|x-3|</code></td>         <td><code>abs(x-3)</code></td></tr>
+          <tr><td>|x + 2| − 1</td>   <td><code>|x+2|-1</code></td>       <td><code>abs(x+2)-1</code></td></tr>
+          <tr><td>2|x|</td>          <td><code>2|x|</code></td>           <td><code>2abs(x)</code></td></tr>
+          <tr><td>|2x − 4|</td>      <td><code>|2x-4|</code></td>         <td><code>abs(2x-4)</code></td></tr>
+          <tr><td>−|x| + 5</td>      <td><code>-|x|+5</code></td>         <td><code>-abs(x)+5</code></td></tr>
         </tbody>
       </table>
     </div>
@@ -742,13 +742,13 @@ nav.scrolled{
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
         <div class="cheat-pill"><span class="cheat-n">1</span><code>sqrt(x)</code><span>√x</span></div>
         <div class="cheat-pill"><span class="cheat-n">2</span><code>x^2</code><span>x²</span></div>
-        <div class="cheat-pill"><span class="cheat-n">3</span><code>abs(x)</code><span>|x|</span></div>
+        <div class="cheat-pill"><span class="cheat-n">3</span><code>|x|</code><span>|x|</span></div>
         <div class="cheat-pill"><span class="cheat-n">4</span><code>y >= x^2</code><span>y ≥ x²</span></div>
-        <div class="cheat-pill"><span class="cheat-n">5</span><code>nthroot(3)(x)</code><span>∛x</span></div>
+        <div class="cheat-pill"><span class="cheat-n">5</span><code>x^(1/3)</code><span>∛x</span></div>
         <div class="cheat-pill"><span class="cheat-n">6</span><code>y = 2x + 3</code><span>line</span></div>
         <div class="cheat-pill"><span class="cheat-n">7</span><code>sqrt(9 - x^2)</code><span>semicircle</span></div>
         <div class="cheat-pill"><span class="cheat-n">8</span><code>y = (x-3)^2</code><span>shifted parabola</span></div>
-        <div class="cheat-pill"><span class="cheat-n">9</span><code>y = abs(x-3)</code><span>shifted V</span></div>
+        <div class="cheat-pill"><span class="cheat-n">9</span><code>y=|x-3|</code><span>shifted V</span></div>
         <div class="cheat-pill"><span class="cheat-n">10</span><code>x = 2</code><span>vertical line</span></div>
       </div>
     </div>
