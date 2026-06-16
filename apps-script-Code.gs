@@ -1,68 +1,166 @@
-/**
- * SAT Samarkand — lead capture backend (Google Apps Script)
- *
- * What it does on each form submit:
- *   1. Appends the lead as a row in the bound Google Sheet.
- *   2. Sends a Telegram message to your chat via your bot.
- *
- * SETUP (one time):
- *   1. Create a Google Sheet. Top menu: Extensions → Apps Script.
- *   2. Delete any sample code, paste THIS file in, and save.
- *   3. Create a Telegram bot: message @BotFather → /newbot → copy the token.
- *   4. Get your chat id: message your new bot once, then open
- *      https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates and read "chat":{"id":...}.
- *      (For a group, add the bot to the group and use the group's negative id.)
- *   5. Fill in BOT_TOKEN and CHAT_ID below.
- *   6. Deploy → New deployment → type "Web app" →
- *        Execute as: Me   |   Who has access: Anyone
- *      Copy the /exec URL it gives you.
- *   7. Paste that URL into ENDPOINT at the top of lead-form.js on the website.
- */
-
-var BOT_TOKEN = 'PASTE_YOUR_BOT_TOKEN_HERE';
-var CHAT_ID   = 'PASTE_YOUR_CHAT_ID_HERE';   // e.g. 123456789  or  -1001234567890 for a group
+const SHEET_ID = '1nneDzo_Uzj5sNvh5r5DHQHJT73CRPrvOfWUev9e5PXw';
+const TELEGRAM_BOT_TOKEN = 'PASTE_YOUR_NEW_BOT_TOKEN_HERE'; // old token was exposed — revoke it in @BotFather and paste the new one here
+const TELEGRAM_CHAT_ID = '1632587141';
 
 function doPost(e) {
   try {
-    var p = (e && e.parameter) ? e.parameter : {};
-    var name   = (p.name   || '').toString().slice(0, 120);
-    var phone  = (p.phone  || '').toString().slice(0, 60);
-    var course = (p.course || '').toString().slice(0, 120);
-    var lang   = (p.lang   || '').toString().slice(0, 8);
-    var page   = (p.page   || '').toString().slice(0, 200);
-    var now    = new Date();
+    let data = {};
 
-    // 1) Append to the Sheet
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
-    if (sheet.getLastRow() === 0) {
-      sheet.appendRow(['Timestamp', 'Name', 'Phone', 'Program', 'Language', 'Page']);
+    // Try form-encoded first (URL params)
+    if (e.parameter && Object.keys(e.parameter).length > 0) {
+      data = e.parameter;
     }
-    sheet.appendRow([now, name, phone, course, lang, page]);
-
-    // 2) Notify Telegram
-    if (BOT_TOKEN.indexOf('PASTE_') !== 0) {
-      var text =
-        '🎓 New SAT Samarkand lead\n' +
-        '👤 ' + name + '\n' +
-        '📞 ' + phone + '\n' +
-        '📚 ' + course + '\n' +
-        '🌐 ' + lang + '  ·  ' + page;
-      UrlFetchApp.fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
-        method: 'post',
-        payload: { chat_id: CHAT_ID, text: text },
-        muteHttpExceptions: true
-      });
+    // Fall back to JSON body
+    else if (e.postData && e.postData.contents) {
+      try {
+        data = JSON.parse(e.postData.contents);
+      } catch(jsonErr) {
+        data = {};
+      }
     }
 
-    return ContentService.createTextOutput(JSON.stringify({ ok: true }))
+    Logger.log('Parsed data: ' + JSON.stringify(data));
+
+    const sheet = SpreadsheetApp.openById(SHEET_ID);
+    const timestamp = new Date().toLocaleString('en-GB', { timeZone: 'Asia/Tashkent' });
+
+    if (data.type === 'registration') {
+      let tab = sheet.getSheetByName('Registrations');
+      if (!tab) {
+        tab = sheet.insertSheet('Registrations');
+        tab.appendRow(['Timestamp', 'Name', 'Phone', 'Age', 'Grade', 'School', 'Program', 'Heard', 'Message']);
+      }
+      tab.appendRow([
+        timestamp,
+        data.name || '',
+        data.phone || '',
+        data.age || '',
+        data.grade || '',
+        data.school || '',
+        data.program || '',
+        data.heard || '',
+        data.message || ''
+      ]);
+
+      sendTelegram(data, timestamp);
+    }
+
+    if (data.type === 'mock_score') {
+      let tab = sheet.getSheetByName('MockScores');
+      if (!tab) {
+        tab = sheet.insertSheet('MockScores');
+        tab.appendRow(['Timestamp', 'Name', 'Score', 'Date', 'Added By']);
+      }
+      tab.appendRow([
+        timestamp,
+        data.name || '',
+        data.score || '',
+        data.date || '',
+        data.added_by || 'Admin'
+      ]);
+    }
+
+    // Lightweight callback leads from the website form (kept separate from full Registrations)
+    if (data.type === 'lead') {
+      let tab = sheet.getSheetByName('Leads');
+      if (!tab) {
+        tab = sheet.insertSheet('Leads');
+        tab.appendRow(['Timestamp', 'Name', 'Phone', 'Program', 'Language', 'Page']);
+      }
+      tab.appendRow([
+        timestamp,
+        data.name || '',
+        data.phone || '',
+        data.program || '',
+        data.lang || '',
+        data.page || ''
+      ]);
+
+      sendTelegram(data, timestamp);
+    }
+
+    return ContentService
+      .createTextOutput(JSON.stringify({status: 'ok'}))
       .setMimeType(ContentService.MimeType.JSON);
-  } catch (err) {
-    return ContentService.createTextOutput(JSON.stringify({ ok: false, error: String(err) }))
+
+  } catch(err) {
+    Logger.log('doPost ERROR: ' + err.toString());
+    return ContentService
+      .createTextOutput(JSON.stringify({status: 'error', message: err.toString()}))
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
 
-// Optional: lets you open the /exec URL in a browser to confirm it's live.
-function doGet() {
-  return ContentService.createTextOutput('SAT Samarkand lead endpoint is running.');
+function sendTelegram(data, timestamp) {
+  try {
+    Logger.log('Sending Telegram for: ' + data.name);
+
+    const message =
+      '🔔 *New Lead — SAT Samarkand*\n\n' +
+      '👤 *Name:* ' + (data.name || 'Not provided') + '\n' +
+      '📞 *Phone:* `' + (data.phone || 'Not provided') + '`\n' +
+      (data.age ? '🎂 *Age:* ' + data.age + '\n' : '') +
+      (data.grade ? '🎓 *Grade:* ' + data.grade + '\n' : '') +
+      (data.school ? '🏫 *School:* ' + data.school + '\n' : '') +
+      (data.program ? '📚 *Program:* ' + data.program + '\n' : '') +
+      (data.heard ? '📡 *Source:* ' + data.heard + '\n' : '') +
+      (data.page ? '🌐 *Page:* ' + data.page + '\n' : '') +
+      (data.message ? '\n💬 *Message:* ' + data.message + '\n' : '') +
+      '\n📅 ' + timestamp + '\n' +
+      '\n⚡ _Contact within 24 hours_';
+
+    const url = 'https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN + '/sendMessage';
+
+    UrlFetchApp.fetch(url, {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify({
+        chat_id: TELEGRAM_CHAT_ID,
+        text: message,
+        parse_mode: 'Markdown'
+      }),
+      muteHttpExceptions: true
+    });
+  } catch(err) {
+    Logger.log('Telegram error: ' + err.toString());
+  }
+}
+
+function doGet(e) {
+  const sheet = SpreadsheetApp.openById(SHEET_ID);
+  const type = e.parameter.type;
+
+  if (type === 'get_scores') {
+    let tab = sheet.getSheetByName('MockScores');
+    if (!tab) return ContentService.createTextOutput(JSON.stringify([])).setMimeType(ContentService.MimeType.JSON);
+    const rows = tab.getDataRange().getValues();
+    const scores = rows.slice(1).filter(r => r[1] && r[2]).map(r => ({name:r[1], score:Number(r[2]), date:r[3]}));
+    scores.sort((a,b) => b.score - a.score);
+    return ContentService.createTextOutput(JSON.stringify(scores.slice(0,10))).setMimeType(ContentService.MimeType.JSON);
+  }
+
+  if (type === 'get_registrations') {
+    let tab = sheet.getSheetByName('Registrations');
+    if (!tab) return ContentService.createTextOutput(JSON.stringify([])).setMimeType(ContentService.MimeType.JSON);
+    const rows = tab.getDataRange().getValues();
+    const regs = rows.slice(1).filter(r => r[1]).map(r => ({time:r[0], name:r[1], phone:r[2], age:r[3], grade:r[4], school:r[5], program:r[6]})).reverse();
+    return ContentService.createTextOutput(JSON.stringify(regs)).setMimeType(ContentService.MimeType.JSON);
+  }
+
+  return ContentService.createTextOutput(JSON.stringify({status:'ok'})).setMimeType(ContentService.MimeType.JSON);
+}
+
+function testFromForm() {
+  const fakeEvent = {
+    parameter: {
+      type: 'lead',
+      name: 'Faridun Test',
+      phone: '+998 95 113 16 00',
+      program: 'SAT MAX (1500+ guaranteed)',
+      lang: 'en',
+      page: '/'
+    }
+  };
+  doPost(fakeEvent);
+  Logger.log('Test done — check Telegram and the Leads tab');
 }

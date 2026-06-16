@@ -80,7 +80,9 @@
     }
 
     var body = new URLSearchParams({
-      name: name, phone: phone, course: form.course.value,
+      type: 'lead',                 // routes to the "Leads" tab in your Apps Script
+      name: name, phone: phone,
+      program: form.course.value,   // your script reads data.program
       lang: lang, page: location.pathname
     });
     fetch(ENDPOINT, { method: 'POST', body: body }) // simple request → no CORS preflight
