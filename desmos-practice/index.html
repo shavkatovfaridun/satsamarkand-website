@@ -404,7 +404,6 @@ nav.scrolled{
 <link rel="stylesheet" href="/enhancements.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js" crossorigin="anonymous"></script>
-<script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fac6"></script>
 </head>
 <body>
 
@@ -610,7 +609,7 @@ nav.scrolled{
         <span style="font-size:.75rem;color:#a0aec0">
           <kbd style="background:#f0f4ff;border:1px solid #e2e8f0;border-radius:5px;padding:1px 6px;color:#0661de">Esc</kbd> quit &nbsp;·&nbsp;
           <code style="background:#f0f4ff;padding:1px 5px;border-radius:4px;font-size:.73rem;color:#0661de">sqrt(x)</code>&nbsp;
-          <code style="background:#f0f4ff;padding:1px 5px;border-radius:4px;font-size:.73rem;color:#0661de">abs(x)</code>&nbsp;
+          <code style="background:#f0f4ff;padding:1px 5px;border-radius:4px;font-size:.73rem;color:#0661de">|x|</code>&nbsp;
           <code style="background:#f0f4ff;padding:1px 5px;border-radius:4px;font-size:.73rem;color:#0661de">x^2</code>&nbsp;
           <code style="background:#f0f4ff;padding:1px 5px;border-radius:4px;font-size:.73rem;color:#0661de">x^(1/3)</code>&nbsp;
           <span style="color:#16a34a;font-weight:600">· spaces ignored</span>
@@ -800,20 +799,41 @@ let sessionTotal = 0;
 // Desmos calculator instance
 let desmosCalc = null;
 
+// ── Desmos API: dynamic load so it never blocks page and survives CSP ──────
+let _desmosLoadCallbacks = [];
+let _desmosLoading = false;
+
+function onDesmosReady(cb) {
+  if (typeof Desmos !== 'undefined') { cb(); return; }
+  _desmosLoadCallbacks.push(cb);
+  if (_desmosLoading) return;
+  _desmosLoading = true;
+  const s = document.createElement('script');
+  s.src = 'https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fac6';
+  s.onload = () => { _desmosLoadCallbacks.forEach(fn => fn()); _desmosLoadCallbacks = []; };
+  s.onerror = () => console.warn('Desmos API failed to load — graph preview unavailable');
+  document.head.appendChild(s);
+}
+
 function initDesmos() {
-  const el = document.getElementById('desmos-embed');
-  if (!el || desmosCalc) return;
-  try {
-    desmosCalc = Desmos.GraphingCalculator(el, {
-      keypad: false,
-      expressions: false,
-      settingsMenu: false,
-      zoomButtons: false,
-      lockViewport: false,
-      border: false,
-      expressionsTopbar: false
-    });
-  } catch(e) { console.warn('Desmos init failed', e); }
+  if (desmosCalc) return;
+  onDesmosReady(() => {
+    const el = document.getElementById('desmos-embed');
+    if (!el || desmosCalc) return;
+    try {
+      desmosCalc = Desmos.GraphingCalculator(el, {
+        keypad: false,
+        expressions: false,
+        settingsMenu: false,
+        zoomButtons: false,
+        lockViewport: false,
+        border: false,
+        expressionsTopbar: false
+      });
+      // Load the current expression once calc is ready
+      if (current) updateDesmos(current.api);
+    } catch(e) { console.warn('Desmos calc init failed', e); }
+  });
 }
 
 function updateDesmos(latex) {
