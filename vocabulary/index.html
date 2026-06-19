@@ -760,14 +760,6 @@ const TOTAL_PAGES = 13;
 const SK = 'vocab400_progress'; // {pageNum: {wordNum: 'known'|'learning'}}
 
 
-// ── Shuffle toggle ─────────────────────────────────────────────────────
-let shuffleMode = false;
-
-function toggleShuffle() {
-  shuffleMode = !shuffleMode;
-  document.getElementById('shuffle-track').classList.toggle('on', shuffleMode);
-  document.getElementById('shuffle-txt').textContent = shuffleMode ? 'Shuffled' : 'In Order';
-}
 
 function shuffleArray(arr) {
   const a = [...arr];
@@ -843,11 +835,10 @@ function startPage(pageNum, onlyLearning) {
   const pageProg = prog[pageNum] || {};
 
   if (onlyLearning) {
-    deck = words.filter(w => pageProg[w.num] === 'learning');
-    if (shuffleMode) deck = shuffleArray(deck);
+    deck = shuffleArray(words.filter(w => pageProg[w.num] === 'learning'));
     reviewMode = true;
   } else {
-    deck = shuffleMode ? shuffleArray([...words]) : [...words];
+    deck = shuffleArray([...words]);
     reviewMode = false;
     sessionKnown = Object.values(pageProg).filter(v => v === 'known').length;
     sessionLearning = Object.values(pageProg).filter(v => v === 'learning').length;

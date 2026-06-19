@@ -743,14 +743,6 @@ const TOTAL_PAGES = 12;
 const SK = 'ivy500_progress';
 
 
-// ── Shuffle toggle ─────────────────────────────────────────────────────
-let shuffleMode = false;
-
-function toggleShuffle() {
-  shuffleMode = !shuffleMode;
-  document.getElementById('shuffle-track').classList.toggle('on', shuffleMode);
-  document.getElementById('shuffle-txt').textContent = shuffleMode ? 'Shuffled' : 'In Order';
-}
 
 function shuffleArray(arr) {
   const a = [...arr];
@@ -811,8 +803,7 @@ function startPage(pageNum, onlyLearning) {
   const prog = loadProgress();
   const pageProg = prog[pageNum] || {};
 
-  deck        = onlyLearning ? words.filter(w => pageProg[w.num] === 'learning') : [...words];
-  if (shuffleMode) deck = shuffleArray(deck);
+  deck        = onlyLearning ? shuffleArray(words.filter(w => pageProg[w.num] === 'learning')) : shuffleArray([...words]);
   reviewMode  = !!onlyLearning;
   deckIdx     = 0;
 
