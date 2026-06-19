@@ -384,6 +384,17 @@ nav.scrolled{
   .hero-btns,.hero__cta-group,.pillar-hero-btns,.pg-hero-btns,
   .trust-bar,.pillar-hero-stats,.hero__stats{animation:none;opacity:1;transform:none}
 }
+
+/* ── Shuffle toggle ─────────────────────────────────────── */
+.mode-bar{display:flex;align-items:center;justify-content:center;gap:14px;padding:10px 5vw;background:#f8faff;border-bottom:1px solid var(--bd)}
+.mode-label{font-size:.82rem;font-weight:600;color:var(--t2)}
+.toggle-wrap{display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none}
+.toggle-track{width:44px;height:24px;background:var(--bg2);border-radius:99px;position:relative;transition:background .2s;flex-shrink:0}
+.toggle-track.on{background:var(--blue)}
+.toggle-thumb{position:absolute;top:3px;left:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.toggle-track.on .toggle-thumb{transform:translateX(20px)}
+.toggle-mode-txt{font-size:.82rem;font-weight:700;color:var(--navy);min-width:60px}
+
 </style>
 <style>
 /* ── Vocab-specific styles ─────────────────────────────── */
@@ -748,6 +759,24 @@ const TOTAL_PAGES = 13;
 // ══════════════════════════════════════════════════════════════
 const SK = 'vocab400_progress'; // {pageNum: {wordNum: 'known'|'learning'}}
 
+
+// ── Shuffle toggle ─────────────────────────────────────────────────────
+let shuffleMode = false;
+
+function toggleShuffle() {
+  shuffleMode = !shuffleMode;
+  document.getElementById('shuffle-track').classList.toggle('on', shuffleMode);
+  document.getElementById('shuffle-txt').textContent = shuffleMode ? 'Shuffled' : 'In Order';
+}
+
+function shuffleArray(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 function loadProgress() {
   try { return JSON.parse(localStorage.getItem(SK)) || {}; } catch(e) { return {}; }
 }
@@ -815,9 +844,10 @@ function startPage(pageNum, onlyLearning) {
 
   if (onlyLearning) {
     deck = words.filter(w => pageProg[w.num] === 'learning');
+    if (shuffleMode) deck = shuffleArray(deck);
     reviewMode = true;
   } else {
-    deck = [...words];
+    deck = shuffleMode ? shuffleArray([...words]) : [...words];
     reviewMode = false;
     sessionKnown = Object.values(pageProg).filter(v => v === 'known').length;
     sessionLearning = Object.values(pageProg).filter(v => v === 'learning').length;
