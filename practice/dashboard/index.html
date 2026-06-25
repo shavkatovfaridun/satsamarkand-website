@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teacher Dashboard | SAT Samarkand</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg">
+<style>
+:root{
+  --navy:#022049;--blue:#0661de;--blue2:#0450b4;--elec:#2979ff;
+  --bpale:#e8f0fe;--bxpale:#f0f4ff;
+  --t:#1d1d1f;--t2:#3d3d3d;--tm:#6e6e73;--tl:#86868b;
+  --bg:#fff;--bg2:#f5f5f7;--bg3:#e8ecf0;--bd:#d2d2d7;--bd2:#c0c0c8;
+  --green:#0a8a43;--greenpale:#e7f6ee;--amber:#b76e00;--amberpale:#fff3e0;--red:#c8102e;--redpale:#fdecee;
+  --ss:0 1px 3px rgba(0,0,0,.06),0 1px 8px rgba(0,0,0,.04);
+  --sm:0 2px 12px rgba(0,0,0,.08),0 4px 24px rgba(0,0,0,.05);
+  --f:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg2);color:var(--t);font-family:var(--f);-webkit-font-smoothing:antialiased;min-height:100vh}
+a{color:var(--blue);text-decoration:none}
+.bar{background:var(--navy);color:#fff;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.bar .brand{font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:9px}
+.bar .brand .dot{width:10px;height:10px;border-radius:999px;background:var(--blue)}
+.bar .who{font-size:.85rem;opacity:.9}
+.bar .who a{color:#cfe0ff}
+.wrap{width:100%;max-width:1100px;margin:0 auto;padding:26px 18px 60px}
+.hide{display:none!important}
+.card{background:#fff;border:1px solid var(--bd);border-radius:28px;box-shadow:var(--sm);padding:28px;max-width:440px;margin:40px auto}
+h1{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}
+.sub{color:var(--tm);font-size:.95rem;margin-bottom:20px;line-height:1.5}
+label{display:block;font-weight:600;font-size:.9rem;margin-bottom:8px}
+input[type=password]{width:100%;font-size:1.05rem;padding:14px 16px;border:1.5px solid var(--bd);border-radius:16px;font-family:var(--f);outline:none;transition:border-color .15s,box-shadow .15s}
+input[type=password]:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(6,97,222,.14)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--f);font-weight:600;font-size:1rem;padding:12px 20px;border-radius:40px;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;box-shadow:0 6px 22px rgba(6,97,222,.28)}
+.btn:hover{transform:translateY(-2px)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--bd);box-shadow:none}
+.btn.wide{width:100%}
+.btn.sm{font-size:.85rem;padding:9px 16px}
+.msg{margin-top:14px;font-size:.9rem;font-weight:600}
+.msg.err{color:var(--red)}
+.head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:20px}
+.head h1{margin:0}
+.head .tools{display:flex;gap:10px;align-items:center}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.stat{background:#fff;border:1px solid var(--bd);border-radius:18px;box-shadow:var(--ss);padding:14px 20px;min-width:120px}
+.stat .n{font-size:1.6rem;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+.stat .l{font-size:.78rem;color:var(--tm);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:2px}
+.tablewrap{background:#fff;border:1px solid var(--bd);border-radius:22px;box-shadow:var(--sm);overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:11px 12px;text-align:center;white-space:nowrap;border-bottom:1px solid var(--bg3)}
+th{background:var(--bg2);font-weight:700;color:var(--t2);position:sticky;top:0;font-size:.8rem}
+thead tr.grp th{background:var(--navy);color:#fff;font-size:.82rem;letter-spacing:.02em}
+td.name,th.name{text-align:left;position:sticky;left:0;background:#fff;font-weight:600;z-index:2;border-right:1px solid var(--bg3)}
+th.name{background:var(--bg2);z-index:3}
+tbody tr:hover td{background:var(--bxpale)}
+tbody tr:hover td.name{background:var(--bxpale)}
+.cell{display:inline-flex;flex-direction:column;align-items:center;gap:1px}
+.cell .d{font-weight:700}
+.cell .s{font-size:.74rem;color:var(--tm)}
+.b-done{color:var(--green)}
+.b-part{color:var(--amber)}
+.b-none{color:var(--tl)}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;color:var(--tm)}
+.center{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--tm);padding:40px;font-weight:600}
+.spin{display:inline-block;width:18px;height:18px;border:2.5px solid rgba(6,97,222,.25);border-top-color:var(--blue);border-radius:50%;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:.8rem;color:var(--tm)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+</style>
+</head>
+<body>
+<div class="bar">
+  <div class="brand"><span class="dot"></span>SAT Samarkand · Teacher Dashboard</div>
+  <div class="who"><a href="/practice/">Student view →</a></div>
+</div>
+<div class="wrap">
+
+  <!-- PIN -->
+  <section id="vPin">
+    <div class="card">
+      <h1>Teacher access</h1>
+      <p class="sub">Enter your dashboard PIN to view student progress.</p>
+      <label for="pin">PIN</label>
+      <input type="password" id="pin" autocomplete="off" inputmode="numeric">
+      <div style="margin-top:18px"><button class="btn wide" id="pinBtn">View dashboard</button></div>
+      <div class="msg err hide" id="pinMsg"></div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="vDash" class="hide">
+    <div class="head">
+      <div><h1>Student progress</h1><p class="sub" style="margin:4px 0 0" id="updated"></p></div>
+      <div class="tools">
+        <select id="grpFilter" style="font-size:.85rem;padding:9px 30px 9px 14px;border:1.5px solid var(--bd);border-radius:40px;font-family:var(--f);background:#fff;cursor:pointer"></select>
+        <button class="btn ghost sm" id="csvBtn">Export CSV</button>
+        <button class="btn sm" id="refreshBtn">Refresh</button>
+      </div>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div class="tablewrap" id="tablewrap"><div class="center"><span class="spin"></span>Loading…</div></div>
+    <div class="legend">
+      <span><i style="background:var(--green)"></i>Complete (all questions attempted)</span>
+      <span><i style="background:var(--amber)"></i>Started</span>
+      <span><i style="background:var(--bd2)"></i>Not started</span>
+      <span>Each cell: <b>attempted / target</b> &nbsp;·&nbsp; <b>score = correct / attempted</b></span>
+    </div>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL="https://qypiezuwjoeghbitjxwg.supabase.co";
+const SUPABASE_ANON="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF5cGllenV3am9lZ2hiaXRqeHdnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA4NDQyMjMsImV4cCI6MjA2NjQyMDIyM30.HsQN9EOMp8g2p3YqyeqffzqcNj-UQClmiq_yDCqfkF8";
+const sb=supabase.createClient(SUPABASE_URL,SUPABASE_ANON);
+const $=id=>document.getElementById(id);
+let PIN=null, TOPICS=[], ROWS=[];
+
+function esc(s){return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+
+async function login(){
+  const pin=$("pin").value.trim();const msg=$("pinMsg");msg.classList.add("hide");
+  if(!pin){msg.textContent="Enter your PIN.";msg.classList.remove("hide");return;}
+  const btn=$("pinBtn");btn.disabled=true;btn.innerHTML='<span class="spin" style="border-color:rgba(255,255,255,.4);border-top-color:#fff"></span>';
+  const ok=await load(pin);
+  btn.disabled=false;btn.textContent="View dashboard";
+  if(ok){PIN=pin;$("vPin").classList.add("hide");$("vDash").classList.remove("hide");}
+  else{msg.textContent="Wrong PIN.";msg.classList.remove("hide");}
+}
+$("pinBtn").onclick=login;
+$("pin").addEventListener("keydown",e=>{if(e.key==="Enter")login();});
+
+async function load(pin){
+  const [tRes,sRes]=await Promise.all([
+    sb.rpc("list_topics"),
+    sb.rpc("teacher_summary",{p_pin:pin})
+  ]);
+  if(sRes.error)return false;
+  TOPICS=tRes.data||[];
+  ROWS=sRes.data||[];
+  render();
+  return true;
+}
+
+function render(){
+  // index summary rows by student+topic+task
+  const stu=new Map(); // sid -> {name, code, cells:{topic:{class:{a,c},home:{a,c}}}}
+  ROWS.forEach(r=>{
+    if(!stu.has(r.student_id))stu.set(r.student_id,{name:r.full_name,group:r.group_label||"",cells:{}});
+    if(!r.topic)return; // student with no attempts (left join null)
+    const s=stu.get(r.student_id);
+    s.cells[r.topic]=s.cells[r.topic]||{};
+    s.cells[r.topic][r.task_type]={a:r.attempted,c:r.correct};
+  });
+  let students=[...stu.values()].sort((a,b)=>a.name.localeCompare(b.name));
+
+  // group filter options
+  const allGroups=[...new Set(students.map(s=>s.group).filter(Boolean))].sort();
+  const sel=$("grpFilter");
+  if(sel.dataset.built!=="1"){
+    sel.innerHTML='<option value="">All classes</option>'+allGroups.map(g=>`<option value="${esc(g)}">${esc(g)}</option>`).join("");
+    sel.dataset.built="1";
+  }
+  const filter=sel.value;
+  if(filter)students=students.filter(s=>s.group===filter);
+
+  // stats
+  const totalStudents=students.length;
+  let active=0;
+  students.forEach(s=>{if(Object.keys(s.cells).length)active++;});
+  $("stats").innerHTML=
+    statBox(totalStudents,"Students")+
+    statBox(active,"Active")+
+    statBox(TOPICS.length,"Topics");
+  $("updated").textContent="Updated "+new Date().toLocaleString();
+
+  // table
+  let h='<table><thead><tr class="grp"><th class="name" rowspan="2">Student</th><th rowspan="2">Class</th>';
+  TOPICS.forEach(t=>{h+=`<th colspan="2">${esc(t.name)}</th>`;});
+  h+='</tr><tr>';
+  TOPICS.forEach(()=>{h+='<th>Class task</th><th>Hometask</th>';});
+  h+='</tr></thead><tbody>';
+  if(!students.length){h+=`<tr><td class="name">No students yet</td><td colspan="${1+TOPICS.length*2}"></td></tr>`;}
+  students.forEach(s=>{
+    h+=`<tr><td class="name">${esc(s.name)}</td><td class="code">${esc(s.group)}</td>`;
+    TOPICS.forEach(t=>{
+      h+=cellHtml(s.cells[t.id]&&s.cells[t.id].class,t.target_class);
+      h+=cellHtml(s.cells[t.id]&&s.cells[t.id].home,t.target_home);
+    });
+    h+='</tr>';
+  });
+  h+='</tbody></table>';
+  $("tablewrap").innerHTML=h;
+}
+function statBox(n,l){return `<div class="stat"><div class="n">${n}</div><div class="l">${l}</div></div>`;}
+function cellHtml(d,target){
+  const a=d?d.a:0, c=d?d.c:0;
+  let cls="b-none";
+  if(a>0&&a>=target)cls="b-done";else if(a>0)cls="b-part";
+  const score=a>0?Math.round(c/a*100)+"%":"—";
+  return `<td><span class="cell"><span class="d ${cls}">${a}/${target}</span><span class="s">${score}</span></span></td>`;
+}
+
+$("refreshBtn").onclick=async()=>{
+  $("tablewrap").innerHTML='<div class="center"><span class="spin"></span>Loading…</div>';
+  await load(PIN);
+};
+$("grpFilter").onchange=()=>render();
+$("csvBtn").onclick=()=>{
+  let rows=[["Student","Class","Topic","Task","Attempted","Target","Correct","Score%"]];
+  const stu=new Map();
+  ROWS.forEach(r=>{
+    if(!stu.has(r.student_id))stu.set(r.student_id,{name:r.full_name,group:r.group_label||"",cells:{}});
+    if(!r.topic)return;
+    const s=stu.get(r.student_id);s.cells[r.topic]=s.cells[r.topic]||{};
+    s.cells[r.topic][r.task_type]={a:r.attempted,c:r.correct};
+  });
+  [...stu.values()].sort((a,b)=>a.name.localeCompare(b.name)).forEach(s=>{
+    TOPICS.forEach(t=>{
+      [["class",t.target_class],["home",t.target_home]].forEach(([tt,tg])=>{
+        const d=s.cells[t.id]&&s.cells[t.id][tt];const a=d?d.a:0,c=d?d.c:0;
+        rows.push([s.name,s.group,t.name,tt,a,tg,c,a?Math.round(c/a*100):0]);
+      });
+    });
+  });
+  const csv=rows.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(",")).join("\n");
+  const blob=new Blob([csv],{type:"text/csv"});const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");a.href=url;a.download="sat-samarkand-progress.csv";a.click();URL.revokeObjectURL(url);
+};
+</script>
+</body>
+</html>

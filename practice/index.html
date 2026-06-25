@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Question Bank | SAT Samarkand</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg">
+<style>
+:root{
+  --navy:#022049;--navy2:#011535;--navy3:#010e24;
+  --blue:#0661de;--blue2:#0450b4;--elec:#2979ff;
+  --bpale:#e8f0fe;--bxpale:#f0f4ff;
+  --t:#1d1d1f;--t2:#3d3d3d;--tm:#6e6e73;--tl:#86868b;
+  --bg:#fff;--bg2:#f5f5f7;--bg3:#e8ecf0;
+  --bd:#d2d2d7;--bd2:#c0c0c8;
+  --green:#0a8a43;--greenpale:#e7f6ee;--red:#c8102e;--redpale:#fdecee;
+  --ss:0 1px 3px rgba(0,0,0,.06),0 1px 8px rgba(0,0,0,.04);
+  --sm:0 2px 12px rgba(0,0,0,.08),0 4px 24px rgba(0,0,0,.05);
+  --sl:0 8px 32px rgba(0,0,0,.1),0 2px 8px rgba(0,0,0,.06);
+  --f:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg2);color:var(--t);font-family:var(--f);-webkit-font-smoothing:antialiased}
+body{min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--blue);text-decoration:none}
+/* top bar */
+.bar{background:var(--navy);color:#fff;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.bar .brand{font-weight:700;font-size:1.05rem;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
+.bar .brand .dot{width:10px;height:10px;border-radius:999px;background:var(--blue)}
+.bar .who{font-size:.85rem;opacity:.9;display:flex;align-items:center;gap:14px}
+.bar .who a{color:#cfe0ff}
+.wrap{flex:1;width:100%;max-width:760px;margin:0 auto;padding:26px 18px 60px}
+.hide{display:none!important}
+/* cards & buttons */
+.card{background:#fff;border:1px solid var(--bd);border-radius:28px;box-shadow:var(--sm);padding:28px}
+h1{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}
+h2{font-size:1.18rem;font-weight:700;letter-spacing:-.01em}
+.sub{color:var(--tm);font-size:.95rem;margin-bottom:20px;line-height:1.5}
+label{display:block;font-weight:600;font-size:.9rem;margin-bottom:8px}
+input[type=text]{width:100%;font-size:1.05rem;padding:14px 16px;border:1.5px solid var(--bd);border-radius:16px;font-family:var(--f);outline:none;transition:border-color .15s,box-shadow .15s;text-transform:uppercase}
+input[type=text]:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(6,97,222,.14)}
+input.noupper{text-transform:none}
+select{width:100%;font-size:1.05rem;padding:14px 16px;border:1.5px solid var(--bd);border-radius:16px;font-family:var(--f);background:#fff;outline:none;transition:border-color .15s,box-shadow .15s;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236e6e73' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(6,97,222,.14)}
+.gridin{text-transform:none!important;max-width:220px;font-variant-numeric:tabular-nums}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--f);font-weight:600;font-size:1rem;padding:14px 22px;border-radius:40px;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;box-shadow:0 6px 22px rgba(6,97,222,.28)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(6,97,222,.32)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.btn.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--bd);box-shadow:none}
+.btn.ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn.wide{width:100%}
+.msg{margin-top:14px;font-size:.9rem;font-weight:600}
+.msg.err{color:var(--red)}
+/* topic list */
+.topic{background:#fff;border:1px solid var(--bd);border-radius:24px;box-shadow:var(--ss);padding:18px 20px;margin-bottom:14px;transition:transform .2s,box-shadow .2s}
+.topic:hover{transform:translateY(-3px);box-shadow:var(--sm)}
+.topic .th{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+.topic .tn{font-weight:700;font-size:1.1rem}
+.topic .tag{font-size:.72rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--blue);background:var(--bxpale);padding:5px 11px;border-radius:999px}
+.tasks{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.taskbtn{text-align:left;background:var(--bg2);border:1.5px solid var(--bd);border-radius:18px;padding:14px 16px;cursor:pointer;transition:border-color .15s,background .15s,transform .15s;font-family:var(--f)}
+.taskbtn:hover{border-color:var(--blue);background:#fff;transform:translateY(-2px)}
+.taskbtn .tt{font-weight:700;font-size:.98rem;color:var(--navy)}
+.taskbtn .tc{font-size:.82rem;color:var(--tm);margin-top:3px}
+@media(max-width:520px){.tasks{grid-template-columns:1fr}}
+/* mode picker */
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.mode{text-align:left;background:#fff;border:2px solid var(--bd);border-radius:22px;padding:20px;cursor:pointer;transition:border-color .15s,transform .15s,box-shadow .15s;font-family:var(--f)}
+.mode:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:var(--sm)}
+.mode .mi{font-size:1.5rem;margin-bottom:8px}
+.mode .mt{font-weight:700;font-size:1.08rem;color:var(--navy)}
+.mode .md{font-size:.85rem;color:var(--tm);margin-top:5px;line-height:1.45}
+@media(max-width:520px){.modes{grid-template-columns:1fr}}
+/* runner */
+.prog{height:8px;background:var(--bg3);border-radius:999px;overflow:hidden;margin-bottom:8px}
+.prog>i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--elec));width:0;transition:width .3s}
+.pmeta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--tm);font-weight:600;margin-bottom:18px}
+.src{font-size:.75rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--tl);margin-bottom:10px}
+.qtext{font-size:1.12rem;line-height:1.6;color:var(--t);margin-bottom:22px}
+.choices{display:flex;flex-direction:column;gap:11px}
+.choice{display:flex;align-items:flex-start;gap:13px;border:1.6px solid var(--bd);border-radius:16px;padding:14px 16px;cursor:pointer;transition:border-color .12s,background .12s;background:#fff}
+.choice:hover{border-color:var(--blue)}
+.choice .lt{flex:0 0 28px;height:28px;border-radius:999px;border:1.6px solid var(--bd2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:var(--tm);transition:.12s}
+.choice .ct{flex:1;line-height:1.5;padding-top:2px}
+.choice.sel{border-color:var(--blue);background:var(--bxpale)}
+.choice.sel .lt{background:var(--blue);border-color:var(--blue);color:#fff}
+.choice.correct{border-color:var(--green);background:var(--greenpale)}
+.choice.correct .lt{background:var(--green);border-color:var(--green);color:#fff}
+.choice.wrong{border-color:var(--red);background:var(--redpale)}
+.choice.wrong .lt{background:var(--red);border-color:var(--red);color:#fff}
+.choice.lock{pointer-events:none}
+.fb{margin-top:18px;padding:14px 16px;border-radius:16px;font-size:.95rem;font-weight:600;display:none}
+.fb.ok{background:var(--greenpale);color:var(--green);display:block}
+.fb.no{background:var(--redpale);color:var(--red);display:block}
+.runfoot{display:flex;justify-content:space-between;align-items:center;margin-top:24px;gap:12px}
+/* results */
+.score{text-align:center;padding:10px 0 6px}
+.score .big{font-size:3rem;font-weight:800;letter-spacing:-.03em;background:linear-gradient(135deg,var(--blue),var(--elec));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.score .pct{color:var(--tm);font-weight:600;margin-top:2px}
+.rev{margin-top:8px}
+.revq{border:1px solid var(--bd);border-radius:18px;padding:16px;margin-bottom:12px;background:#fff}
+.revq .rh{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem;margin-bottom:8px}
+.revq .pill{font-size:.72rem;font-weight:800;padding:3px 9px;border-radius:999px;text-transform:uppercase}
+.revq .pill.ok{background:var(--greenpale);color:var(--green)}
+.revq .pill.no{background:var(--redpale);color:var(--red)}
+.revq .rt{font-size:.96rem;line-height:1.55;color:var(--t2);margin-bottom:10px}
+.revq .ans{font-size:.88rem;color:var(--tm);line-height:1.6}
+.revq .ans b{color:var(--t)}
+.spin{display:inline-block;width:18px;height:18px;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite}
+.center{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--tm);padding:40px 0;font-weight:600}
+.center .spin{border-color:rgba(6,97,222,.25);border-top-color:var(--blue)}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fnote{text-align:center;color:var(--tl);font-size:.78rem;margin-top:26px}
+</style>
+</head>
+<body>
+<div class="bar">
+  <div class="brand"><span class="dot"></span>SAT Samarkand · Question Bank</div>
+  <div class="who"><span id="whoName"></span><a href="#" id="logout" class="hide">Log out</a></div>
+</div>
+<div class="wrap">
+
+  <!-- LOGIN -->
+  <section id="vLogin" class="card">
+    <h1>Let's begin</h1>
+    <p class="sub">Enter your name and pick your class so your teacher can see your progress.</p>
+    <label for="name">Full name</label>
+    <input type="text" id="name" class="noupper" autocomplete="name" placeholder="e.g. Ali Karimov" maxlength="60">
+    <label for="grp" style="margin-top:16px">Class / group</label>
+    <select id="grp"></select>
+    <div style="margin-top:18px"><button class="btn wide" id="loginBtn">Continue</button></div>
+    <div class="msg err hide" id="loginMsg"></div>
+  </section>
+
+  <!-- TOPICS -->
+  <section id="vTopics" class="hide">
+    <h1 style="margin-bottom:4px">Choose a topic</h1>
+    <p class="sub">Pick a class task or hometask to begin.</p>
+    <div id="topicList"></div>
+  </section>
+
+  <!-- MODE -->
+  <section id="vMode" class="hide">
+    <button class="btn ghost" id="modeBack" style="margin-bottom:18px">&larr; Back</button>
+    <div class="card">
+      <h2 id="modeTitle"></h2>
+      <p class="sub" id="modeSub" style="margin-bottom:18px"></p>
+      <div class="modes">
+        <button class="mode" data-mode="practice">
+          <div class="mi">📝</div>
+          <div class="mt">Practice</div>
+          <div class="md">See if each answer is right or wrong as you go. Best for learning.</div>
+        </button>
+        <button class="mode" data-mode="test">
+          <div class="mi">⏱️</div>
+          <div class="mt">Test</div>
+          <div class="md">No feedback until the end. Then review every question and your score.</div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUNNER -->
+  <section id="vRun" class="hide">
+    <div class="card">
+      <div class="prog"><i id="progBar"></i></div>
+      <div class="pmeta"><span id="pCount"></span><span id="pMode"></span></div>
+      <div class="src" id="qSrc"></div>
+      <div class="qtext" id="qText"></div>
+      <div class="choices" id="qChoices"></div>
+      <div id="gridWrap" class="hide"><input type="text" id="gridIn" class="gridin" maxlength="6" placeholder="Answer"></div>
+      <div class="fb" id="fb"></div>
+      <div class="runfoot">
+        <span style="color:var(--tl);font-size:.82rem" id="runSrc2"></span>
+        <button class="btn" id="nextBtn" disabled>Submit</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="vDone" class="hide">
+    <div class="card">
+      <div class="score">
+        <div class="big" id="scoreBig"></div>
+        <div class="pct" id="scorePct"></div>
+      </div>
+      <div class="rev" id="review"></div>
+      <div style="display:flex;gap:12px;margin-top:20px">
+        <button class="btn ghost wide" id="retryBtn">Try again</button>
+        <button class="btn wide" id="homeBtn">More topics</button>
+      </div>
+    </div>
+  </section>
+
+  <p class="fnote">SAT Samarkand · for enrolled students only</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* ---------- config ---------- */
+const SUPABASE_URL = "https://qypiezuwjoeghbitjxwg.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF5cGllenV3am9lZ2hiaXRqeHdnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA4NDQyMjMsImV4cCI6MjA2NjQyMDIyM30.HsQN9EOMp8g2p3YqyeqffzqcNj-UQClmiq_yDCqfkF8";
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+/* ---------- state ---------- */
+let SID=null, NAME=null;
+let curTopic=null, curTask=null, curMode=null;
+let qs=[], idx=0, answered=false, results=[];
+
+/* ---------- helpers ---------- */
+const $=id=>document.getElementById(id);
+const views=["vLogin","vTopics","vMode","vRun","vDone"];
+function show(v){views.forEach(x=>$(x).classList.toggle("hide",x!==v));window.scrollTo(0,0);}
+function esc(s){return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+
+/* ---------- session ---------- */
+function setSession(id,name,grp){
+  SID=id;NAME=name;
+  try{sessionStorage.setItem("qb_sid",id);sessionStorage.setItem("qb_name",name);if(grp!=null)sessionStorage.setItem("qb_grp",grp);}catch(e){}
+  $("whoName").textContent=name+(grp?" · "+grp:"");
+  $("logout").classList.remove("hide");
+}
+function clearSession(){
+  SID=null;NAME=null;
+  try{sessionStorage.removeItem("qb_sid");sessionStorage.removeItem("qb_name");sessionStorage.removeItem("qb_grp");}catch(e){}
+  $("whoName").textContent="";$("logout").classList.add("hide");
+  show("vLogin");
+}
+$("logout").onclick=e=>{e.preventDefault();clearSession();};
+
+/* ---------- groups ---------- */
+async function loadGroups(){
+  const sel=$("grp");
+  const {data,error}=await sb.rpc("list_groups");
+  sel.innerHTML="";
+  if(error||!data||!data.length){
+    const o=document.createElement("option");o.value="";o.textContent="(no class)";sel.appendChild(o);return;
+  }
+  data.forEach(g=>{const o=document.createElement("option");o.value=g.name;o.textContent=g.name;sel.appendChild(o);});
+}
+
+/* ---------- login ---------- */
+async function doLogin(){
+  const name=$("name").value.trim();
+  const grp=$("grp").value;
+  const msg=$("loginMsg");msg.classList.add("hide");
+  if(!name){msg.textContent="Please enter your name.";msg.classList.remove("hide");return;}
+  const btn=$("loginBtn");btn.disabled=true;btn.innerHTML='<span class="spin"></span>';
+  const {data,error}=await sb.rpc("start_session",{p_name:name,p_group:grp});
+  btn.disabled=false;btn.textContent="Continue";
+  if(error){msg.textContent="Something went wrong. Try again.";msg.classList.remove("hide");return;}
+  if(!data||!data.length){msg.textContent="Couldn't start. Try again.";msg.classList.remove("hide");return;}
+  setSession(data[0].id,data[0].full_name,data[0].group_label);
+  loadTopics();
+}
+$("loginBtn").onclick=doLogin;
+$("name").addEventListener("keydown",e=>{if(e.key==="Enter")doLogin();});
+
+/* ---------- topics ---------- */
+async function loadTopics(){
+  show("vTopics");
+  const box=$("topicList");
+  box.innerHTML='<div class="center"><span class="spin"></span>Loading topics…</div>';
+  const {data,error}=await sb.rpc("list_topics");
+  if(error||!data||!data.length){box.innerHTML='<div class="card">No topics available yet.</div>';return;}
+  box.innerHTML="";
+  data.forEach(t=>{
+    const el=document.createElement("div");el.className="topic";
+    el.innerHTML=`<div class="th"><span class="tn">${esc(t.name)}</span><span class="tag">${esc(t.subject)}</span></div>
+      <div class="tasks">
+        <button class="taskbtn" data-tt="class"><div class="tt">Class task</div><div class="tc">${t.target_class} questions</div></button>
+        <button class="taskbtn" data-tt="home"><div class="tt">Hometask</div><div class="tc">${t.target_home} questions</div></button>
+      </div>`;
+    el.querySelectorAll(".taskbtn").forEach(b=>{
+      b.onclick=()=>openMode(t,b.dataset.tt);
+    });
+    box.appendChild(el);
+  });
+}
+
+/* ---------- mode picker ---------- */
+function openMode(topic,task){
+  curTopic=topic.id;curTask=task;
+  $("modeTitle").textContent=topic.name+" · "+(task==="class"?"Class task":"Hometask");
+  $("modeSub").textContent="How do you want to work through these questions?";
+  show("vMode");
+}
+$("modeBack").onclick=()=>show("vTopics");
+document.querySelectorAll(".mode").forEach(m=>{
+  m.onclick=()=>startRun(m.dataset.mode);
+});
+
+/* ---------- runner ---------- */
+async function startRun(mode){
+  curMode=mode;
+  show("vRun");
+  $("qChoices").innerHTML='';$("qText").innerHTML='<div class="center"><span class="spin"></span>Loading questions…</div>';
+  $("qSrc").textContent='';$("fb").className='fb';
+  const {data,error}=await sb.rpc("get_questions",{p_topic:curTopic,p_task_type:curTask});
+  if(error||!data||!data.length){$("qText").innerHTML='No questions found for this set yet.';return;}
+  qs=data;idx=0;results=[];
+  renderQ();
+}
+
+function renderQ(){
+  answered=false;
+  const q=qs[idx];
+  $("progBar").style.width=((idx)/qs.length*100)+"%";
+  $("pCount").textContent=`Question ${idx+1} of ${qs.length}`;
+  $("pMode").textContent=curMode==="practice"?"Practice mode":"Test mode";
+  $("qSrc").textContent=q.source||"";
+  $("qText").textContent=q.prompt;
+  const fb=$("fb");fb.className="fb";fb.textContent="";
+  const ch=$("qChoices");ch.innerHTML="";
+  const grid=$("gridWrap");
+  if(q.answer_format==="grid"){
+    grid.classList.remove("hide");ch.classList.add("hide");
+    $("gridIn").value="";$("gridIn").disabled=false;
+    $("gridIn").oninput=()=>{$("nextBtn").disabled=!$("gridIn").value.trim();};
+  }else{
+    grid.classList.add("hide");ch.classList.remove("hide");
+    [["A",q.option_a],["B",q.option_b],["C",q.option_c],["D",q.option_d]].forEach(([L,txt])=>{
+      if(txt==null)return;
+      const c=document.createElement("div");c.className="choice";c.dataset.letter=L;
+      c.innerHTML=`<div class="lt">${L}</div><div class="ct">${esc(txt)}</div>`;
+      c.onclick=()=>{
+        if(answered)return;
+        ch.querySelectorAll(".choice").forEach(x=>x.classList.remove("sel"));
+        c.classList.add("sel");$("nextBtn").disabled=false;
+      };
+      ch.appendChild(c);
+    });
+  }
+  const nb=$("nextBtn");
+  nb.disabled=true;
+  nb.textContent=(curMode==="practice")?"Submit":(idx===qs.length-1?"Finish":"Next");
+  nb.onclick=onNext;
+}
+
+async function onNext(){
+  const q=qs[idx];
+  const grid=q.answer_format==="grid";
+  // get chosen answer
+  let chosen;
+  if(grid){chosen=$("gridIn").value.trim();if(!chosen)return;}
+  else{const sel=$("qChoices").querySelector(".choice.sel");if(!sel)return;chosen=sel.dataset.letter;}
+
+  if(curMode==="practice" && !answered){
+    // submit + reveal
+    const nb=$("nextBtn");nb.disabled=true;nb.innerHTML='<span class="spin"></span>';
+    const {data,error}=await sb.rpc("submit_attempt",{p_sid:SID,p_question_id:q.id,p_mode:"practice",p_answer:chosen});
+    if(error){nb.disabled=false;nb.textContent="Submit";$("fb").className="fb no";$("fb").textContent="Couldn't save — try again.";return;}
+    const r=data[0];answered=true;
+    results.push({q,chosen,correct:r.correct,ok:r.is_correct});
+    revealPractice(q,chosen,r);
+    nb.innerHTML="";nb.textContent=(idx===qs.length-1?"See results":"Next");nb.disabled=false;
+    return;
+  }
+  if(curMode==="practice" && answered){
+    idx++; if(idx>=qs.length){finish();}else{renderQ();} return;
+  }
+  // test mode: submit silently, advance
+  const nb=$("nextBtn");nb.disabled=true;nb.innerHTML='<span class="spin"></span>';
+  const {data,error}=await sb.rpc("submit_attempt",{p_sid:SID,p_question_id:q.id,p_mode:"test",p_answer:chosen});
+  nb.innerHTML="";nb.disabled=false;
+  if(error){nb.textContent=(idx===qs.length-1?"Finish":"Next");$("fb").className="fb no";$("fb").textContent="Couldn't save — try again.";return;}
+  const r=data[0];
+  results.push({q,chosen,correct:r.correct,ok:r.is_correct});
+  idx++; if(idx>=qs.length){finish();}else{renderQ();}
+}
+
+function revealPractice(q,chosen,r){
+  if(q.answer_format==="grid"){
+    $("gridIn").disabled=true;
+    const fb=$("fb");
+    fb.className="fb "+(r.is_correct?"ok":"no");
+    fb.textContent=r.is_correct?"Correct!":("Not quite. Correct answer: "+r.correct);
+    return;
+  }
+  $("qChoices").querySelectorAll(".choice").forEach(c=>{
+    c.classList.add("lock");
+    if(c.dataset.letter===r.correct)c.classList.add("correct");
+    else if(c.dataset.letter===chosen)c.classList.add("wrong");
+    c.classList.remove("sel");
+  });
+  const fb=$("fb");
+  fb.className="fb "+(r.is_correct?"ok":"no");
+  fb.textContent=r.is_correct?"Correct!":("Correct answer: "+r.correct);
+}
+
+/* ---------- results ---------- */
+function finish(){
+  $("progBar").style.width="100%";
+  const total=results.length;
+  const got=results.filter(r=>r.ok).length;
+  $("scoreBig").textContent=got+" / "+total;
+  $("scorePct").textContent=total?Math.round(got/total*100)+"% correct":"";
+  // full review (both modes)
+  const rev=$("review");rev.innerHTML="";
+  results.forEach((r,i)=>{
+    const q=r.q;
+    const chTxt=letterText(q,r.chosen);
+    const coTxt=letterText(q,r.correct);
+    const el=document.createElement("div");el.className="revq";
+    el.innerHTML=`<div class="rh"><span class="pill ${r.ok?'ok':'no'}">${r.ok?'Correct':'Wrong'}</span><span>Q${i+1} · ${esc(q.source||"")}</span></div>
+      <div class="rt">${esc(q.prompt)}</div>
+      <div class="ans">Your answer: <b>${r.chosen}${chTxt?" — "+esc(chTxt):""}</b><br>Correct answer: <b>${r.correct}${coTxt?" — "+esc(coTxt):""}</b></div>`;
+    rev.appendChild(el);
+  });
+  show("vDone");
+}
+function letterText(q,L){
+  if(!L)return"";
+  return {A:q.option_a,B:q.option_b,C:q.option_c,D:q.option_d}[L]||"";
+}
+$("retryBtn").onclick=()=>startRun(curMode);
+$("homeBtn").onclick=()=>loadTopics();
+
+/* ---------- boot ---------- */
+(function boot(){
+  try{
+    const id=sessionStorage.getItem("qb_sid"), nm=sessionStorage.getItem("qb_name"), gp=sessionStorage.getItem("qb_grp");
+    if(id&&nm){setSession(id,nm,gp);loadTopics();return;}
+  }catch(e){}
+  show("vLogin");
+  loadGroups();
+})();
+</script>
+</body>
+</html>
