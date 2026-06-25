@@ -228,6 +228,9 @@ function clearSession(){
   show("vLogin");
 }
 $("logout").onclick=e=>{e.preventDefault();clearSession();};
+// If the stored session no longer exists server-side (e.g. DB reset), recover gracefully.
+function isStaleSession(error){return error&&/invalid session/i.test(error.message||"");}
+function handleStaleSession(){clearSession();alert("Your session expired. Please log in again.");}
 
 /* ---------- groups ---------- */
 async function loadGroups(){
@@ -350,7 +353,7 @@ async function onNext(){
     // submit + reveal
     const nb=$("nextBtn");nb.disabled=true;nb.innerHTML='<span class="spin"></span>';
     const {data,error}=await sb.rpc("submit_attempt",{p_sid:SID,p_question_id:q.id,p_mode:"practice",p_answer:chosen});
-    if(error){nb.disabled=false;nb.textContent="Submit";$("fb").className="fb no";$("fb").textContent="Couldn't save — try again.";return;}
+    if(error){if(isStaleSession(error)){handleStaleSession();return;}nb.disabled=false;nb.textContent="Submit";$("fb").className="fb no";$("fb").textContent="Couldn't save — try again.";return;}
     const r=data[0];answered=true;
     results.push({q,chosen,correct:r.correct,ok:r.is_correct});
     revealPractice(q,chosen,r);
@@ -364,7 +367,7 @@ async function onNext(){
   const nb=$("nextBtn");nb.disabled=true;nb.innerHTML='<span class="spin"></span>';
   const {data,error}=await sb.rpc("submit_attempt",{p_sid:SID,p_question_id:q.id,p_mode:"test",p_answer:chosen});
   nb.innerHTML="";nb.disabled=false;
-  if(error){nb.textContent=(idx===qs.length-1?"Finish":"Next");$("fb").className="fb no";$("fb").textContent="Couldn't save — try again.";return;}
+  if(error){if(isStaleSession(error)){handleStaleSession();return;}nb.textContent=(idx===qs.length-1?"Finish":"Next");$("fb").className="fb no";$("fb").textContent="Couldn't save — try again.";return;}
   const r=data[0];
   results.push({q,chosen,correct:r.correct,ok:r.is_correct});
   idx++; if(idx>=qs.length){finish();}else{renderQ();}
