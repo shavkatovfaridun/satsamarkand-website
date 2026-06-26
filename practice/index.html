@@ -342,6 +342,10 @@ function renderQ(){
 }
 
 async function onNext(){
+  // practice mode, second click: answer already submitted & revealed — just advance.
+  if(curMode==="practice" && answered){
+    idx++; if(idx>=qs.length){finish();}else{renderQ();} return;
+  }
   const q=qs[idx];
   const grid=q.answer_format==="grid";
   // get chosen answer
@@ -359,9 +363,6 @@ async function onNext(){
     revealPractice(q,chosen,r);
     nb.innerHTML="";nb.textContent=(idx===qs.length-1?"See results":"Next");nb.disabled=false;
     return;
-  }
-  if(curMode==="practice" && answered){
-    idx++; if(idx>=qs.length){finish();}else{renderQ();} return;
   }
   // test mode: submit silently, advance
   const nb=$("nextBtn");nb.disabled=true;nb.innerHTML='<span class="spin"></span>';
