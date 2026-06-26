@@ -23,16 +23,18 @@ a{color:var(--blue);text-decoration:none}
 .bar{background:var(--navy);color:#fff;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
 .bar .brand{font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:9px}
 .bar .brand .dot{width:10px;height:10px;border-radius:999px;background:var(--blue)}
-.bar .who{font-size:.85rem;opacity:.9}
-.bar .who a{color:#cfe0ff}
-.wrap{width:100%;max-width:1100px;margin:0 auto;padding:26px 18px 60px}
+.bar .who{font-size:.85rem;opacity:.92;display:flex;align-items:center;gap:14px}
+.bar .who a{color:#cfe0ff;cursor:pointer}
+.wrap{width:100%;max-width:1000px;margin:0 auto;padding:26px 18px 60px}
 .hide{display:none!important}
-.card{background:#fff;border:1px solid var(--bd);border-radius:28px;box-shadow:var(--sm);padding:28px;max-width:440px;margin:40px auto}
+.card{background:#fff;border:1px solid var(--bd);border-radius:28px;box-shadow:var(--sm);padding:28px;max-width:430px;margin:40px auto}
 h1{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}
+h2{font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
 .sub{color:var(--tm);font-size:.95rem;margin-bottom:20px;line-height:1.5}
-label{display:block;font-weight:600;font-size:.9rem;margin-bottom:8px}
-input[type=password]{width:100%;font-size:1.05rem;padding:14px 16px;border:1.5px solid var(--bd);border-radius:16px;font-family:var(--f);outline:none;transition:border-color .15s,box-shadow .15s}
-input[type=password]:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(6,97,222,.14)}
+label{display:block;font-weight:600;font-size:.9rem;margin-bottom:8px;margin-top:14px}
+label:first-of-type{margin-top:0}
+input{width:100%;font-size:1.05rem;padding:13px 16px;border:1.5px solid var(--bd);border-radius:16px;font-family:var(--f);outline:none;transition:border-color .15s,box-shadow .15s;background:#fff;color:var(--t)}
+input:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(6,97,222,.14)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--f);font-weight:600;font-size:1rem;padding:12px 20px;border-radius:40px;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;box-shadow:0 6px 22px rgba(6,97,222,.28)}
 .btn:hover{transform:translateY(-2px)}
 .btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
@@ -41,74 +43,86 @@ input[type=password]:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(6,
 .btn.sm{font-size:.85rem;padding:9px 16px}
 .msg{margin-top:14px;font-size:.9rem;font-weight:600}
 .msg.err{color:var(--red)}
-.head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:20px}
+.msg.ok{color:var(--green)}
+.tabs{display:flex;gap:8px;margin-bottom:20px;background:var(--bg2);padding:5px;border-radius:14px}
+.tabs button{flex:1;border:none;background:none;font-family:var(--f);font-weight:600;font-size:.92rem;padding:9px;border-radius:10px;cursor:pointer;color:var(--tm)}
+.tabs button.on{background:#fff;color:var(--navy);box-shadow:var(--ss)}
+.head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:22px}
 .head h1{margin:0}
-.head .tools{display:flex;gap:10px;align-items:center}
-.stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
-.stat{background:#fff;border:1px solid var(--bd);border-radius:18px;box-shadow:var(--ss);padding:14px 20px;min-width:120px}
-.stat .n{font-size:1.6rem;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
-.stat .l{font-size:.78rem;color:var(--tm);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:2px}
-.tablewrap{background:#fff;border:1px solid var(--bd);border-radius:22px;box-shadow:var(--sm);overflow:auto}
-table{border-collapse:collapse;width:100%;font-size:.88rem}
-th,td{padding:11px 12px;text-align:center;white-space:nowrap;border-bottom:1px solid var(--bg3)}
-th{background:var(--bg2);font-weight:700;color:var(--t2);position:sticky;top:0;font-size:.8rem}
-thead tr.grp th{background:var(--navy);color:#fff;font-size:.82rem;letter-spacing:.02em}
-td.name,th.name{text-align:left;position:sticky;left:0;background:#fff;font-weight:600;z-index:2;border-right:1px solid var(--bg3)}
-th.name{background:var(--bg2);z-index:3}
+.newclass{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.newclass input{width:auto;flex:1;min-width:200px;font-size:.95rem;padding:11px 14px}
+.classes{display:grid;gap:14px}
+.classcard{background:#fff;border:1px solid var(--bd);border-radius:22px;box-shadow:var(--ss);padding:20px 22px}
+.classcard .ch{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.classcard .cn{font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
+.classcard .meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:4px}
+.codepill{display:inline-flex;align-items:center;gap:8px;background:var(--bxpale);border:1px solid var(--bpale);border-radius:12px;padding:6px 12px}
+.codepill .code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:1.05rem;letter-spacing:.08em;color:var(--navy)}
+.codepill .cp{cursor:pointer;font-size:.78rem;font-weight:600;color:var(--blue);border:none;background:none;font-family:var(--f)}
+.scount{font-size:.85rem;color:var(--tm);font-weight:600}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 0}
+.stat{background:var(--bg2);border-radius:16px;padding:12px 18px;min-width:96px}
+.stat .n{font-size:1.4rem;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+.stat .l{font-size:.74rem;color:var(--tm);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:2px}
+.tablewrap{margin-top:16px;border:1px solid var(--bd);border-radius:18px;overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{padding:11px 14px;text-align:center;white-space:nowrap;border-bottom:1px solid var(--bg3)}
+th{background:var(--bg2);font-weight:700;color:var(--t2);font-size:.8rem}
+td.name,th.name{text-align:left;font-weight:600}
+tbody tr:last-child td{border-bottom:none}
 tbody tr:hover td{background:var(--bxpale)}
-tbody tr:hover td.name{background:var(--bxpale)}
-.cell{display:inline-flex;flex-direction:column;align-items:center;gap:1px}
-.cell .d{font-weight:700}
-.cell .s{font-size:.74rem;color:var(--tm)}
-.b-done{color:var(--green)}
-.b-part{color:var(--amber)}
-.b-none{color:var(--tl)}
-.code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;color:var(--tm)}
-.center{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--tm);padding:40px;font-weight:600}
+.b-correct{color:var(--green);font-weight:700}
+.b-wrong{color:var(--red);font-weight:700}
+.center{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--tm);padding:28px;font-weight:600}
 .spin{display:inline-block;width:18px;height:18px;border:2.5px solid rgba(6,97,222,.25);border-top-color:var(--blue);border-radius:50%;animation:sp .7s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
-.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:.8rem;color:var(--tm)}
-.legend span{display:inline-flex;align-items:center;gap:6px}
-.legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+.empty{color:var(--tm);font-size:.9rem;padding:8px 2px}
 </style>
 </head>
 <body>
 <div class="bar">
   <div class="brand"><span class="dot"></span>SAT Samarkand · Teacher Dashboard</div>
-  <div class="who"><a href="/practice/">Student view →</a></div>
+  <div class="who">
+    <a href="/practice/">Student view →</a>
+    <a id="logout" class="hide">Log out</a>
+  </div>
 </div>
 <div class="wrap">
 
-  <!-- PIN -->
-  <section id="vPin">
+  <!-- AUTH -->
+  <section id="vAuth">
     <div class="card">
-      <h1>Teacher access</h1>
-      <p class="sub">Enter your dashboard PIN to view student progress.</p>
-      <label for="pin">PIN</label>
-      <input type="password" id="pin" autocomplete="off" inputmode="numeric">
-      <div style="margin-top:18px"><button class="btn wide" id="pinBtn">View dashboard</button></div>
-      <div class="msg err hide" id="pinMsg"></div>
+      <div class="tabs">
+        <button id="tabLogin" class="on">Log in</button>
+        <button id="tabSignup">Create account</button>
+      </div>
+      <h1 id="authTitle">Teacher log in</h1>
+      <p class="sub" id="authSub">Sign in to manage your classes and see student progress.</p>
+      <label for="email">Email</label>
+      <input type="email" id="email" autocomplete="email" placeholder="you@example.com">
+      <label for="pw">Password</label>
+      <input type="password" id="pw" autocomplete="current-password" placeholder="••••••••">
+      <div style="margin-top:20px"><button class="btn wide" id="authBtn">Log in</button></div>
+      <div class="msg err hide" id="authMsg"></div>
     </div>
   </section>
 
   <!-- DASHBOARD -->
   <section id="vDash" class="hide">
     <div class="head">
-      <div><h1>Student progress</h1><p class="sub" style="margin:4px 0 0" id="updated"></p></div>
-      <div class="tools">
-        <select id="grpFilter" style="font-size:.85rem;padding:9px 30px 9px 14px;border:1.5px solid var(--bd);border-radius:40px;font-family:var(--f);background:#fff;cursor:pointer"></select>
-        <button class="btn ghost sm" id="csvBtn">Export CSV</button>
-        <button class="btn sm" id="refreshBtn">Refresh</button>
+      <div><h1>Your classes</h1><p class="sub" style="margin:4px 0 0" id="hello"></p></div>
+    </div>
+
+    <div class="classcard" style="margin-bottom:18px">
+      <h2 style="margin-bottom:12px">Create a class</h2>
+      <div class="newclass">
+        <input type="text" id="newName" placeholder="Class name (e.g. Faridun ODD 10:00)" maxlength="60">
+        <button class="btn" id="createBtn">Create class</button>
       </div>
+      <div class="msg err hide" id="createMsg"></div>
     </div>
-    <div class="stats" id="stats"></div>
-    <div class="tablewrap" id="tablewrap"><div class="center"><span class="spin"></span>Loading…</div></div>
-    <div class="legend">
-      <span><i style="background:var(--green)"></i>Complete (all questions attempted)</span>
-      <span><i style="background:var(--amber)"></i>Started</span>
-      <span><i style="background:var(--bd2)"></i>Not started</span>
-      <span>Each cell: <b>attempted / target</b> &nbsp;·&nbsp; <b>score = correct / attempted</b></span>
-    </div>
+
+    <div id="classList" class="classes"><div class="center"><span class="spin"></span>Loading…</div></div>
   </section>
 </div>
 
@@ -118,119 +132,142 @@ const SUPABASE_URL="https://qypiezuwjoeghbitjxwg.supabase.co";
 const SUPABASE_ANON="sb_publishable_EyK1NgnLTzVVzMvtayEyrw_yFpHkuHt";
 const sb=supabase.createClient(SUPABASE_URL,SUPABASE_ANON);
 const $=id=>document.getElementById(id);
-let PIN=null, TOPICS=[], ROWS=[];
+const esc=s=>(s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+let mode="login";
 
-function esc(s){return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
-
-async function login(){
-  const pin=$("pin").value.trim();const msg=$("pinMsg");msg.classList.add("hide");
-  if(!pin){msg.textContent="Enter your PIN.";msg.classList.remove("hide");return;}
-  const btn=$("pinBtn");btn.disabled=true;btn.innerHTML='<span class="spin" style="border-color:rgba(255,255,255,.4);border-top-color:#fff"></span>';
-  const ok=await load(pin);
-  btn.disabled=false;btn.textContent="View dashboard";
-  if(ok){PIN=pin;$("vPin").classList.add("hide");$("vDash").classList.remove("hide");}
-  else{msg.textContent="Wrong PIN.";msg.classList.remove("hide");}
+/* ---------- auth tabs ---------- */
+function setMode(m){
+  mode=m;
+  $("tabLogin").classList.toggle("on",m==="login");
+  $("tabSignup").classList.toggle("on",m==="signup");
+  $("authTitle").textContent=m==="login"?"Teacher log in":"Create teacher account";
+  $("authSub").textContent=m==="login"
+    ?"Sign in to manage your classes and see student progress."
+    :"Make an account to create classes and track your students.";
+  $("authBtn").textContent=m==="login"?"Log in":"Create account";
+  $("pw").autocomplete=m==="login"?"current-password":"new-password";
+  $("authMsg").classList.add("hide");
 }
-$("pinBtn").onclick=login;
-$("pin").addEventListener("keydown",e=>{if(e.key==="Enter")login();});
+$("tabLogin").onclick=()=>setMode("login");
+$("tabSignup").onclick=()=>setMode("signup");
 
-async function load(pin){
-  const [tRes,sRes]=await Promise.all([
-    sb.rpc("list_topics"),
-    sb.rpc("teacher_summary",{p_pin:pin})
-  ]);
-  if(sRes.error)return false;
-  TOPICS=tRes.data||[];
-  ROWS=sRes.data||[];
-  render();
-  return true;
-}
-
-function render(){
-  // index summary rows by student+topic+task
-  const stu=new Map(); // sid -> {name, code, cells:{topic:{class:{a,c},home:{a,c}}}}
-  ROWS.forEach(r=>{
-    if(!stu.has(r.student_id))stu.set(r.student_id,{name:r.full_name,group:r.group_label||"",cells:{}});
-    if(!r.topic)return; // student with no attempts (left join null)
-    const s=stu.get(r.student_id);
-    s.cells[r.topic]=s.cells[r.topic]||{};
-    s.cells[r.topic][r.task_type]={a:r.attempted,c:r.correct};
-  });
-  let students=[...stu.values()].sort((a,b)=>a.name.localeCompare(b.name));
-
-  // group filter options
-  const allGroups=[...new Set(students.map(s=>s.group).filter(Boolean))].sort();
-  const sel=$("grpFilter");
-  if(sel.dataset.built!=="1"){
-    sel.innerHTML='<option value="">All classes</option>'+allGroups.map(g=>`<option value="${esc(g)}">${esc(g)}</option>`).join("");
-    sel.dataset.built="1";
+/* ---------- auth ---------- */
+async function doAuth(){
+  const email=$("email").value.trim(), pw=$("pw").value;
+  const msg=$("authMsg");msg.classList.add("hide");msg.className="msg err hide";
+  if(!email||!pw){msg.textContent="Enter your email and password.";msg.classList.remove("hide");return;}
+  if(mode==="signup"&&pw.length<6){msg.textContent="Password must be at least 6 characters.";msg.classList.remove("hide");return;}
+  const btn=$("authBtn");btn.disabled=true;btn.innerHTML='<span class="spin" style="border-color:rgba(255,255,255,.4);border-top-color:#fff"></span>';
+  let res;
+  if(mode==="signup") res=await sb.auth.signUp({email,password:pw});
+  else res=await sb.auth.signInWithPassword({email,password:pw});
+  btn.disabled=false;btn.textContent=mode==="login"?"Log in":"Create account";
+  if(res.error){msg.textContent=res.error.message||"Something went wrong.";msg.classList.remove("hide");return;}
+  if(mode==="signup"&&!res.data.session){
+    msg.className="msg ok";msg.textContent="Account created. Check your email to confirm, then log in.";msg.classList.remove("hide");
+    setMode("login");return;
   }
-  const filter=sel.value;
-  if(filter)students=students.filter(s=>s.group===filter);
-
-  // stats
-  const totalStudents=students.length;
-  let active=0;
-  students.forEach(s=>{if(Object.keys(s.cells).length)active++;});
-  $("stats").innerHTML=
-    statBox(totalStudents,"Students")+
-    statBox(active,"Active")+
-    statBox(TOPICS.length,"Topics");
-  $("updated").textContent="Updated "+new Date().toLocaleString();
-
-  // table
-  let h='<table><thead><tr class="grp"><th class="name" rowspan="2">Student</th><th rowspan="2">Class</th>';
-  TOPICS.forEach(t=>{h+=`<th colspan="2">${esc(t.name)}</th>`;});
-  h+='</tr><tr>';
-  TOPICS.forEach(()=>{h+='<th>Class task</th><th>Hometask</th>';});
-  h+='</tr></thead><tbody>';
-  if(!students.length){h+=`<tr><td class="name">No students yet</td><td colspan="${1+TOPICS.length*2}"></td></tr>`;}
-  students.forEach(s=>{
-    h+=`<tr><td class="name">${esc(s.name)}</td><td class="code">${esc(s.group)}</td>`;
-    TOPICS.forEach(t=>{
-      h+=cellHtml(s.cells[t.id]&&s.cells[t.id].class,t.target_class);
-      h+=cellHtml(s.cells[t.id]&&s.cells[t.id].home,t.target_home);
-    });
-    h+='</tr>';
-  });
-  h+='</tbody></table>';
-  $("tablewrap").innerHTML=h;
+  showDash();
 }
-function statBox(n,l){return `<div class="stat"><div class="n">${n}</div><div class="l">${l}</div></div>`;}
-function cellHtml(d,target){
-  const a=d?d.a:0, c=d?d.c:0;
-  let cls="b-none";
-  if(a>0&&a>=target)cls="b-done";else if(a>0)cls="b-part";
-  const score=a>0?Math.round(c/a*100)+"%":"—";
-  return `<td><span class="cell"><span class="d ${cls}">${a}/${target}</span><span class="s">${score}</span></span></td>`;
+$("authBtn").onclick=doAuth;
+$("pw").addEventListener("keydown",e=>{if(e.key==="Enter")doAuth();});
+$("email").addEventListener("keydown",e=>{if(e.key==="Enter")doAuth();});
+$("logout").onclick=async()=>{await sb.auth.signOut();location.reload();};
+
+/* ---------- dashboard ---------- */
+async function showDash(){
+  const {data:{user}}=await sb.auth.getUser();
+  $("vAuth").classList.add("hide");$("vDash").classList.remove("hide");$("logout").classList.remove("hide");
+  $("hello").textContent="Signed in as "+(user?user.email:"");
+  loadClasses();
 }
 
-$("refreshBtn").onclick=async()=>{
-  $("tablewrap").innerHTML='<div class="center"><span class="spin"></span>Loading…</div>';
-  await load(PIN);
-};
-$("grpFilter").onchange=()=>render();
-$("csvBtn").onclick=()=>{
-  let rows=[["Student","Class","Topic","Task","Attempted","Target","Correct","Score%"]];
-  const stu=new Map();
-  ROWS.forEach(r=>{
-    if(!stu.has(r.student_id))stu.set(r.student_id,{name:r.full_name,group:r.group_label||"",cells:{}});
-    if(!r.topic)return;
-    const s=stu.get(r.student_id);s.cells[r.topic]=s.cells[r.topic]||{};
-    s.cells[r.topic][r.task_type]={a:r.attempted,c:r.correct};
+async function loadClasses(){
+  $("classList").innerHTML='<div class="center"><span class="spin"></span>Loading…</div>';
+  const {data,error}=await sb.rpc("my_classes");
+  if(error){$("classList").innerHTML='<div class="empty">Couldn\'t load classes: '+esc(error.message)+'</div>';return;}
+  if(!data||!data.length){$("classList").innerHTML='<div class="empty">No classes yet. Create your first class above.</div>';return;}
+  $("classList").innerHTML="";
+  data.forEach(c=>{
+    const el=document.createElement("div");el.className="classcard";
+    el.innerHTML=`
+      <div class="ch">
+        <div>
+          <div class="cn">${esc(c.name)}</div>
+          <div class="meta">
+            <span class="codepill"><span class="code">${esc(c.join_code)}</span><button class="cp" data-code="${esc(c.join_code)}">Copy</button></span>
+            <span class="scount">${c.student_count} student${c.student_count==1?"":"s"}</span>
+          </div>
+        </div>
+        <button class="btn ghost sm" data-cid="${c.id}" data-name="${esc(c.name)}">View progress</button>
+      </div>
+      <div class="statsArea hide"></div>`;
+    el.querySelector(".cp").onclick=ev=>{
+      navigator.clipboard.writeText(ev.target.dataset.code);
+      ev.target.textContent="Copied!";setTimeout(()=>ev.target.textContent="Copy",1200);
+    };
+    el.querySelector("[data-cid]").onclick=ev=>toggleStats(el,ev.target.dataset.cid,ev.target);
+    $("classList").appendChild(el);
   });
-  [...stu.values()].sort((a,b)=>a.name.localeCompare(b.name)).forEach(s=>{
-    TOPICS.forEach(t=>{
-      [["class",t.target_class],["home",t.target_home]].forEach(([tt,tg])=>{
-        const d=s.cells[t.id]&&s.cells[t.id][tt];const a=d?d.a:0,c=d?d.c:0;
-        rows.push([s.name,s.group,t.name,tt,a,tg,c,a?Math.round(c/a*100):0]);
-      });
-    });
+}
+
+async function toggleStats(card,cid,btn){
+  const area=card.querySelector(".statsArea");
+  if(!area.classList.contains("hide")){area.classList.add("hide");btn.textContent="View progress";return;}
+  area.classList.remove("hide");btn.textContent="Hide progress";
+  area.innerHTML='<div class="center"><span class="spin"></span>Loading…</div>';
+  const {data,error}=await sb.rpc("class_stats",{p_class_id:cid});
+  if(error){area.innerHTML='<div class="empty">Couldn\'t load: '+esc(error.message)+'</div>';return;}
+  renderStats(area,data||[]);
+}
+
+function renderStats(area,rows){
+  if(!rows.length){area.innerHTML='<div class="empty" style="margin-top:14px">No students have joined this class yet.</div>';return;}
+  const totSolved=rows.reduce((a,r)=>a+Number(r.solved),0);
+  const totCorrect=rows.reduce((a,r)=>a+Number(r.correct),0);
+  const totMist=rows.reduce((a,r)=>a+Number(r.mistakes),0);
+  let h=`<div class="stats">
+    ${stat(rows.length,"Students")}
+    ${stat(totSolved,"Solved")}
+    ${stat(totCorrect,"Correct")}
+    ${stat(totMist,"Mistakes")}
+  </div>
+  <div class="tablewrap"><table><thead><tr>
+    <th class="name">Student</th><th>Solved</th><th>Correct</th><th>Mistakes</th><th>Accuracy</th>
+  </tr></thead><tbody>`;
+  rows.forEach(r=>{
+    const s=Number(r.solved),c=Number(r.correct),m=Number(r.mistakes);
+    const acc=s>0?Math.round(c/s*100)+"%":"—";
+    h+=`<tr><td class="name">${esc(r.full_name)}</td>
+      <td>${s}</td>
+      <td class="b-correct">${c}</td>
+      <td class="b-wrong">${m}</td>
+      <td>${acc}</td></tr>`;
   });
-  const csv=rows.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(",")).join("\n");
-  const blob=new Blob([csv],{type:"text/csv"});const url=URL.createObjectURL(blob);
-  const a=document.createElement("a");a.href=url;a.download="sat-samarkand-progress.csv";a.click();URL.revokeObjectURL(url);
-};
+  h+="</tbody></table></div>";
+  area.innerHTML=h;
+}
+function stat(n,l){return `<div class="stat"><div class="n">${n}</div><div class="l">${l}</div></div>`;}
+
+/* ---------- create class ---------- */
+async function createClass(){
+  const name=$("newName").value.trim();const msg=$("createMsg");msg.classList.add("hide");
+  if(!name){msg.textContent="Enter a class name.";msg.classList.remove("hide");return;}
+  const btn=$("createBtn");btn.disabled=true;btn.innerHTML='<span class="spin" style="border-color:rgba(255,255,255,.4);border-top-color:#fff"></span>';
+  const {error}=await sb.rpc("create_class",{p_name:name});
+  btn.disabled=false;btn.textContent="Create class";
+  if(error){msg.textContent=error.message||"Couldn't create class.";msg.classList.remove("hide");return;}
+  $("newName").value="";
+  loadClasses();
+}
+$("createBtn").onclick=createClass;
+$("newName").addEventListener("keydown",e=>{if(e.key==="Enter")createClass();});
+
+/* ---------- boot ---------- */
+(async function boot(){
+  const {data:{session}}=await sb.auth.getSession();
+  if(session)showDash();else setMode("login");
+})();
 </script>
 </body>
 </html>

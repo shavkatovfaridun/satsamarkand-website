@@ -124,11 +124,11 @@ select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(6,97,222,.14)}
   <!-- LOGIN -->
   <section id="vLogin" class="card">
     <h1>Let's begin</h1>
-    <p class="sub">Enter your name and pick your class so your teacher can see your progress.</p>
+    <p class="sub">Enter your name and your class join code so your teacher can see your progress.</p>
     <label for="name">Full name</label>
     <input type="text" id="name" class="noupper" autocomplete="name" placeholder="e.g. Ali Karimov" maxlength="60">
-    <label for="grp" style="margin-top:16px">Class / group</label>
-    <select id="grp"></select>
+    <label for="code" style="margin-top:16px">Class join code</label>
+    <input type="text" id="code" autocomplete="off" placeholder="e.g. 4F9K2A" maxlength="6" style="text-transform:uppercase">
     <div style="margin-top:18px"><button class="btn wide" id="loginBtn">Continue</button></div>
     <div class="msg err hide" id="loginMsg"></div>
   </section>
@@ -232,29 +232,23 @@ $("logout").onclick=e=>{e.preventDefault();clearSession();};
 function isStaleSession(error){return error&&/invalid session/i.test(error.message||"");}
 function handleStaleSession(){clearSession();alert("Your session expired. Please log in again.");}
 
-/* ---------- groups ---------- */
-async function loadGroups(){
-  const sel=$("grp");
-  const {data,error}=await sb.rpc("list_groups");
-  sel.innerHTML="";
-  if(error||!data||!data.length){
-    const o=document.createElement("option");o.value="";o.textContent="(no class)";sel.appendChild(o);return;
-  }
-  data.forEach(g=>{const o=document.createElement("option");o.value=g.name;o.textContent=g.name;sel.appendChild(o);});
-}
-
 /* ---------- login ---------- */
 async function doLogin(){
   const name=$("name").value.trim();
-  const grp=$("grp").value;
+  const code=$("code").value.trim().toUpperCase();
   const msg=$("loginMsg");msg.classList.add("hide");
   if(!name){msg.textContent="Please enter your name.";msg.classList.remove("hide");return;}
+  if(!code){msg.textContent="Please enter your class join code.";msg.classList.remove("hide");return;}
   const btn=$("loginBtn");btn.disabled=true;btn.innerHTML='<span class="spin"></span>';
-  const {data,error}=await sb.rpc("start_session",{p_name:name,p_group:grp});
+  const {data,error}=await sb.rpc("start_session",{p_name:name,p_join_code:code});
   btn.disabled=false;btn.textContent="Continue";
-  if(error){msg.textContent="Something went wrong. Try again.";msg.classList.remove("hide");return;}
+  if(error){
+    if(/invalid class code/i.test(error.message||"")){msg.textContent="That join code isn't valid. Check with your teacher.";}
+    else{msg.textContent="Something went wrong. Try again.";}
+    msg.classList.remove("hide");return;
+  }
   if(!data||!data.length){msg.textContent="Couldn't start. Try again.";msg.classList.remove("hide");return;}
-  setSession(data[0].id,data[0].full_name,data[0].group_label);
+  setSession(data[0].id,data[0].full_name,data[0].class_name);
   loadTopics();
 }
 $("loginBtn").onclick=doLogin;
@@ -428,7 +422,6 @@ $("homeBtn").onclick=()=>loadTopics();
     if(id&&nm){setSession(id,nm,gp);loadTopics();return;}
   }catch(e){}
   show("vLogin");
-  loadGroups();
 })();
 </script>
 </body>
