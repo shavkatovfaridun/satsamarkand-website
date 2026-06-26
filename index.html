@@ -873,7 +873,7 @@ nav.scrolled{
 
   <!-- ═══ URGENCY BANNER ═══ -->
   <div style="background:linear-gradient(135deg,#022049,#0661de);color:#fff;padding:14px 5vw;text-align:center;margin-bottom:0">
-    <p style="margin:0;font-size:.9rem;font-weight:500;letter-spacing:-.01em" data-en="🗓 June 2026 intake is now open — classes start June 14. Spots fill fast. <a href='https://t.me/m/E0A422n9ZmIx' target='_blank' rel='noopener' style='color:#60a5fa;font-weight:700;text-decoration:none'>Reserve yours →</a>" data-uz="🗓 Iyun 2026 qabuli ochiq — darslar 14-iyundan boshlanadi. O'rinlar tez to'ladi. <a href='https://t.me/m/E0A422n9ZmIx' target='_blank' rel='noopener' style='color:#60a5fa;font-weight:700;text-decoration:none'>O'rningizni band qiling →</a>" data-ru="🗓 Набор на июнь 2026 открыт — занятия с 14 июня. Места ограничены. <a href='https://t.me/m/E0A422n9ZmIx' target='_blank' rel='noopener' style='color:#60a5fa;font-weight:700;text-decoration:none'>Записаться →</a>">🗓 June 2026 intake is now open — classes start June 14. Spots fill fast. <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" style="color:#60a5fa;font-weight:700;text-decoration:none">Reserve yours →</a></p>
+    <p style="margin:0;font-size:.9rem;font-weight:500;letter-spacing:-.01em" data-en="🗓 Join the next intake now — spots filling fast. <a href='https://t.me/m/E0A422n9ZmIx' target='_blank' rel='noopener' style='color:#60a5fa;font-weight:700;text-decoration:none'>Reserve your seat →</a>" data-uz="🗓 Keyingi qabulga hozir qo'shiling — o'rinlar tez to'lmoqda. <a href='https://t.me/m/E0A422n9ZmIx' target='_blank' rel='noopener' style='color:#60a5fa;font-weight:700;text-decoration:none'>O'rningizni band qiling →</a>" data-ru="🗓 Присоединяйтесь к следующему набору — места заполняются. <a href='https://t.me/m/E0A422n9ZmIx' target='_blank' rel='noopener' style='color:#60a5fa;font-weight:700;text-decoration:none'>Забронируйте место →</a>">🗓 Join the next intake now — spots filling fast. <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" style="color:#60a5fa;font-weight:700;text-decoration:none">Reserve your seat →</a></p>
   </div>
 
   <!-- ═══ RESULTS TICKER ═══ -->
@@ -1636,6 +1636,12 @@ window.addEventListener('scroll', () => {
       el.style.transitionDelay=(i*0.035)+'s';
       obs.observe(el);
     });
+    /* Safety net — if observer never fires (e.g. hidden tab, slow scroll), force visible after 2.5s */
+    setTimeout(function(){
+      document.querySelectorAll(sel).forEach(function(el){
+        if(!el.classList.contains('anim-in')) el.classList.add('anim-in');
+      });
+    }, 2500);
   });
 })();
 </script>
