@@ -112,6 +112,25 @@ select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(6,97,222,.14)}
 .center .spin{border-color:rgba(6,97,222,.25);border-top-color:var(--blue)}
 @keyframes sp{to{transform:rotate(360deg)}}
 .fnote{text-align:center;color:var(--tl);font-size:.78rem;margin-top:26px}
+/* navigation */
+.navrow{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:22px}
+.navrow #nextBtn{margin-left:auto}
+.flagbtn{padding:14px 16px}
+.flagbtn.on{background:var(--redpale);color:var(--red);border-color:var(--red)}
+.navtoggle{width:100%;margin-top:14px;padding:12px 16px;border:1.5px solid var(--bd);border-radius:14px;background:var(--bg2);font-family:var(--f);font-weight:700;font-size:.92rem;color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+.navtoggle:hover{border-color:var(--blue);color:var(--blue)}
+.navpanel{margin-top:12px;border:1px solid var(--bd);border-radius:18px;padding:16px;background:var(--bg2)}
+.navgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(46px,1fr));gap:9px}
+.ncell{position:relative;aspect-ratio:1;border:1.6px solid var(--bd);border-radius:12px;background:#fff;font-weight:700;font-size:.95rem;color:var(--t2);cursor:pointer;font-family:var(--f);transition:border-color .12s,background .12s}
+.ncell:hover{border-color:var(--blue)}
+.ncell.done{background:var(--navy);color:#fff;border-color:var(--navy)}
+.ncell.cur{outline:3px solid var(--blue);outline-offset:2px}
+.ncell.flag::after{content:"\2691";position:absolute;top:-7px;right:-5px;font-size:.72rem;line-height:1;color:var(--red)}
+.navlegend{display:flex;gap:18px;margin-top:14px;font-size:.78rem;color:var(--tm);font-weight:600;align-items:center}
+.navlegend i{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:5px;font-style:normal;margin-right:6px;vertical-align:middle}
+.navlegend i.done{background:var(--navy)}
+.navlegend i.flag{color:var(--red);font-size:.85rem}
+.pill.skip{background:var(--bg3);color:var(--tm)}
 </style>
 </head>
 <body>
@@ -171,9 +190,16 @@ select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(6,97,222,.14)}
       <div class="choices" id="qChoices"></div>
       <div id="gridWrap" class="hide"><input type="text" id="gridIn" class="gridin" maxlength="6" placeholder="Answer"></div>
       <div class="fb" id="fb"></div>
-      <div class="runfoot">
-        <span style="color:var(--tl);font-size:.82rem" id="runSrc2"></span>
-        <button class="btn" id="nextBtn" disabled>Submit</button>
+      <div class="navrow">
+        <button class="btn ghost" id="backBtn">&larr; Back</button>
+        <button class="btn ghost flagbtn" id="flagBtn">&#9873; Flag</button>
+        <button class="btn" id="nextBtn" disabled>Next</button>
+      </div>
+      <button class="navtoggle" id="navToggle"><span id="navLabel"></span> &#9662;</button>
+      <div class="navpanel hide" id="navPanel">
+        <div class="navgrid" id="navGrid"></div>
+        <div class="navlegend"><span><i class="done"></i>answered</span><span><i class="flag">&#9873;</i>flagged</span></div>
+        <button class="btn wide" id="finishBtn" style="margin-top:14px;background:linear-gradient(135deg,var(--green),#0a7a3c);box-shadow:0 6px 22px rgba(10,138,67,.28)">Finish &amp; see results</button>
       </div>
     </div>
   </section>
@@ -206,7 +232,8 @@ const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
 /* ---------- state ---------- */
 let SID=null, NAME=null;
 let curTopic=null, curTask=null, curMode=null;
-let qs=[], idx=0, answered=false, results=[];
+let qs=[], idx=0;
+let answers=[], submitted=[], results=[], marked=[];
 
 /* ---------- helpers ---------- */
 const $=id=>document.getElementById(id);
@@ -289,21 +316,27 @@ document.querySelectorAll(".mode").forEach(m=>{
 });
 
 /* ---------- runner ---------- */
+function isAnswered(i){const a=answers[i];return a!=null&&a!=="";}
+
 async function startRun(mode){
   curMode=mode;
   show("vRun");
+  $("navPanel").classList.add("hide");
   $("qChoices").innerHTML='';$("qText").innerHTML='<div class="center"><span class="spin"></span>Loading questions…</div>';
   $("qSrc").textContent='';$("fb").className='fb';
   const {data,error}=await sb.rpc("get_questions",{p_topic:curTopic,p_task_type:curTask});
   if(error||!data||!data.length){$("qText").innerHTML='No questions found for this set yet.';return;}
-  qs=data;idx=0;results=[];
+  qs=data;idx=0;
+  answers=new Array(qs.length).fill(null);
+  submitted=new Array(qs.length).fill(false);
+  results=new Array(qs.length).fill(null);
+  marked=new Array(qs.length).fill(false);
   renderQ();
 }
 
 function renderQ(){
-  answered=false;
   const q=qs[idx];
-  $("progBar").style.width=((idx)/qs.length*100)+"%";
+  const locked=(curMode==="practice"&&submitted[idx]);
   $("pCount").textContent=`Question ${idx+1} of ${qs.length}`;
   $("pMode").textContent=curMode==="practice"?"Practice mode":"Test mode";
   $("qSrc").textContent=q.source||"";
@@ -313,67 +346,37 @@ function renderQ(){
   const grid=$("gridWrap");
   if(q.answer_format==="grid"){
     grid.classList.remove("hide");ch.classList.add("hide");
-    $("gridIn").value="";$("gridIn").disabled=false;
-    $("gridIn").oninput=()=>{$("nextBtn").disabled=!$("gridIn").value.trim();};
+    const gi=$("gridIn");
+    gi.value=answers[idx]||"";gi.disabled=locked;
+    gi.oninput=()=>{answers[idx]=gi.value.trim()||null;renderNav();updateButtons();};
   }else{
     grid.classList.add("hide");ch.classList.remove("hide");
     [["A",q.option_a],["B",q.option_b],["C",q.option_c],["D",q.option_d]].forEach(([L,txt])=>{
       if(txt==null)return;
       const c=document.createElement("div");c.className="choice";c.dataset.letter=L;
       c.innerHTML=`<div class="lt">${L}</div><div class="ct">${esc(txt)}</div>`;
-      c.onclick=()=>{
-        if(answered)return;
-        ch.querySelectorAll(".choice").forEach(x=>x.classList.remove("sel"));
-        c.classList.add("sel");$("nextBtn").disabled=false;
-      };
+      if(answers[idx]===L)c.classList.add("sel");
+      if(!locked){
+        c.onclick=()=>{
+          answers[idx]=L;
+          ch.querySelectorAll(".choice").forEach(x=>x.classList.remove("sel"));
+          c.classList.add("sel");renderNav();updateButtons();
+        };
+      }
       ch.appendChild(c);
     });
   }
-  const nb=$("nextBtn");
-  nb.disabled=true;
-  nb.textContent=(curMode==="practice")?"Submit":(idx===qs.length-1?"Finish":"Next");
-  nb.onclick=onNext;
+  if(locked)applyReveal(q,answers[idx],results[idx]);
+  $("flagBtn").classList.toggle("on",!!marked[idx]);
+  renderNav();updateButtons();
 }
 
-async function onNext(){
-  // practice mode, second click: answer already submitted & revealed — just advance.
-  if(curMode==="practice" && answered){
-    idx++; if(idx>=qs.length){finish();}else{renderQ();} return;
-  }
-  const q=qs[idx];
-  const grid=q.answer_format==="grid";
-  // get chosen answer
-  let chosen;
-  if(grid){chosen=$("gridIn").value.trim();if(!chosen)return;}
-  else{const sel=$("qChoices").querySelector(".choice.sel");if(!sel)return;chosen=sel.dataset.letter;}
-
-  if(curMode==="practice" && !answered){
-    // submit + reveal
-    const nb=$("nextBtn");nb.disabled=true;nb.innerHTML='<span class="spin"></span>';
-    const {data,error}=await sb.rpc("submit_attempt",{p_sid:SID,p_question_id:q.id,p_mode:"practice",p_answer:chosen});
-    if(error){if(isStaleSession(error)){handleStaleSession();return;}nb.disabled=false;nb.textContent="Submit";$("fb").className="fb no";$("fb").textContent="Couldn't save — try again.";return;}
-    const r=data[0];answered=true;
-    results.push({q,chosen,correct:r.correct,ok:r.is_correct});
-    revealPractice(q,chosen,r);
-    nb.innerHTML="";nb.textContent=(idx===qs.length-1?"See results":"Next");nb.disabled=false;
-    return;
-  }
-  // test mode: submit silently, advance
-  const nb=$("nextBtn");nb.disabled=true;nb.innerHTML='<span class="spin"></span>';
-  const {data,error}=await sb.rpc("submit_attempt",{p_sid:SID,p_question_id:q.id,p_mode:"test",p_answer:chosen});
-  nb.innerHTML="";nb.disabled=false;
-  if(error){if(isStaleSession(error)){handleStaleSession();return;}nb.textContent=(idx===qs.length-1?"Finish":"Next");$("fb").className="fb no";$("fb").textContent="Couldn't save — try again.";return;}
-  const r=data[0];
-  results.push({q,chosen,correct:r.correct,ok:r.is_correct});
-  idx++; if(idx>=qs.length){finish();}else{renderQ();}
-}
-
-function revealPractice(q,chosen,r){
+function applyReveal(q,chosen,r){
+  if(!r)return;
   if(q.answer_format==="grid"){
-    $("gridIn").disabled=true;
     const fb=$("fb");
     fb.className="fb "+(r.is_correct?"ok":"no");
-    fb.textContent=r.is_correct?"Correct!":("Not quite. Correct answer: "+r.correct);
+    fb.textContent=r.is_correct?"Correct!":("Correct answer: "+r.correct);
     return;
   }
   $("qChoices").querySelectorAll(".choice").forEach(c=>{
@@ -387,23 +390,106 @@ function revealPractice(q,chosen,r){
   fb.textContent=r.is_correct?"Correct!":("Correct answer: "+r.correct);
 }
 
+function updateButtons(){
+  $("backBtn").disabled=(idx===0);
+  const done=curMode==="practice"
+    ? submitted.filter(Boolean).length
+    : answers.reduce((n,a)=>n+((a!=null&&a!=="")?1:0),0);
+  $("progBar").style.width=(done/qs.length*100)+"%";
+  const nb=$("nextBtn");
+  const last=(idx===qs.length-1);
+  nb.className="btn";nb.innerHTML="";
+  if(curMode==="practice"&&!submitted[idx]){
+    nb.textContent="Check answer";
+    nb.disabled=!isAnswered(idx);
+    nb.onclick=checkPractice;
+  }else if(last){
+    nb.textContent="Finish";nb.disabled=false;nb.onclick=finish;
+  }else{
+    nb.textContent="Next →";nb.disabled=false;nb.onclick=()=>{idx++;renderQ();};
+  }
+}
+
+async function checkPractice(){
+  const q=qs[idx];const chosen=answers[idx];
+  if(chosen==null||chosen==="")return;
+  const nb=$("nextBtn");nb.disabled=true;nb.innerHTML='<span class="spin"></span>';
+  const {data,error}=await sb.rpc("submit_attempt",{p_sid:SID,p_question_id:q.id,p_mode:"practice",p_answer:chosen});
+  if(error){
+    if(isStaleSession(error)){handleStaleSession();return;}
+    updateButtons();$("fb").className="fb no";$("fb").textContent="Couldn't save — try again.";return;
+  }
+  results[idx]=data[0];submitted[idx]=true;
+  renderQ();
+}
+
+function renderNav(){
+  $("navLabel").textContent=`Question ${idx+1} of ${qs.length}`;
+  const g=$("navGrid");g.innerHTML="";
+  for(let i=0;i<qs.length;i++){
+    const b=document.createElement("button");b.className="ncell";b.textContent=i+1;
+    const done=curMode==="practice"?submitted[i]:(answers[i]!=null&&answers[i]!=="");
+    if(done)b.classList.add("done");
+    if(i===idx)b.classList.add("cur");
+    if(marked[i])b.classList.add("flag");
+    b.onclick=()=>{idx=i;$("navPanel").classList.add("hide");renderQ();};
+    g.appendChild(b);
+  }
+}
+
+async function finish(){
+  const pending=curMode==="practice"
+    ? submitted.reduce((n,s)=>n+(s?0:1),0)
+    : answers.reduce((n,a)=>n+((a==null||a==="")?1:0),0);
+  if(pending>0){
+    const msg=curMode==="practice"
+      ? `You have ${pending} unchecked question${pending>1?'s':''}. Finish anyway?`
+      : `You have ${pending} unanswered question${pending>1?'s':''}. Submit anyway?`;
+    if(!confirm(msg))return;
+  }
+  if(curMode==="test"){
+    $("navPanel").classList.add("hide");
+    $("qChoices").innerHTML="";$("gridWrap").classList.add("hide");$("fb").className="fb";
+    $("qText").innerHTML='<div class="center"><span class="spin"></span>Submitting…</div>';
+    const calls=qs.map((q,i)=>{
+      const a=answers[i];
+      if(a==null||a==="")return Promise.resolve({skip:true});
+      return sb.rpc("submit_attempt",{p_sid:SID,p_question_id:q.id,p_mode:"test",p_answer:a}).then(res=>({res,i}));
+    });
+    const out=await Promise.all(calls);
+    let stale=false;
+    out.forEach(o=>{
+      if(o.skip)return;
+      if(o.res.error){if(isStaleSession(o.res.error))stale=true;results[o.i]=null;}
+      else results[o.i]=o.res.data[0];
+    });
+    if(stale){handleStaleSession();return;}
+  }
+  renderResults();
+}
+
 /* ---------- results ---------- */
-function finish(){
+function renderResults(){
   $("progBar").style.width="100%";
-  const total=results.length;
-  const got=results.filter(r=>r.ok).length;
+  let total=0,got=0;
+  qs.forEach((q,i)=>{if(results[i]){total++;if(results[i].is_correct)got++;}});
   $("scoreBig").textContent=got+" / "+total;
   $("scorePct").textContent=total?Math.round(got/total*100)+"% correct":"";
-  // full review (both modes)
   const rev=$("review");rev.innerHTML="";
-  results.forEach((r,i)=>{
-    const q=r.q;
-    const chTxt=letterText(q,r.chosen);
-    const coTxt=letterText(q,r.correct);
+  qs.forEach((q,i)=>{
+    const r=results[i];const chosen=answers[i];
     const el=document.createElement("div");el.className="revq";
-    el.innerHTML=`<div class="rh"><span class="pill ${r.ok?'ok':'no'}">${r.ok?'Correct':'Wrong'}</span><span>Q${i+1} · ${esc(q.source||"")}</span></div>
+    if(!r){
+      el.innerHTML=`<div class="rh"><span class="pill skip">Skipped</span><span>Q${i+1} · ${esc(q.source||"")}</span></div>
+        <div class="rt">${esc(q.prompt)}</div>
+        <div class="ans">Not answered.</div>`;
+      rev.appendChild(el);return;
+    }
+    const chTxt=letterText(q,chosen);
+    const coTxt=letterText(q,r.correct);
+    el.innerHTML=`<div class="rh"><span class="pill ${r.is_correct?'ok':'no'}">${r.is_correct?'Correct':'Wrong'}</span><span>Q${i+1} · ${esc(q.source||"")}</span></div>
       <div class="rt">${esc(q.prompt)}</div>
-      <div class="ans">Your answer: <b>${r.chosen}${chTxt?" — "+esc(chTxt):""}</b><br>Correct answer: <b>${r.correct}${coTxt?" — "+esc(coTxt):""}</b></div>`;
+      <div class="ans">Your answer: <b>${chosen?esc(String(chosen)):'—'}${chTxt?" — "+esc(chTxt):""}</b><br>Correct answer: <b>${esc(String(r.correct))}${coTxt?" — "+esc(coTxt):""}</b></div>`;
     rev.appendChild(el);
   });
   show("vDone");
@@ -412,6 +498,10 @@ function letterText(q,L){
   if(!L)return"";
   return {A:q.option_a,B:q.option_b,C:q.option_c,D:q.option_d}[L]||"";
 }
+$("backBtn").onclick=()=>{if(idx>0){idx--;renderQ();}};
+$("flagBtn").onclick=()=>{marked[idx]=!marked[idx];$("flagBtn").classList.toggle("on",marked[idx]);renderNav();};
+$("navToggle").onclick=()=>{$("navPanel").classList.toggle("hide");};
+$("finishBtn").onclick=finish;
 $("retryBtn").onclick=()=>startRun(curMode);
 $("homeBtn").onclick=()=>loadTopics();
 
