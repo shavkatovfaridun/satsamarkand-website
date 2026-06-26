@@ -144,6 +144,42 @@ select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(6,97,222,.14)}
 .navlegend i.no{background:var(--red);border-color:var(--red)}
 .navlegend .bk{position:relative;display:inline-block;width:13px;height:19px;margin-right:6px;background:var(--red);clip-path:polygon(0 0,100% 0,100% 100%,50% 76%,0 100%);border-radius:3px 3px 0 0;vertical-align:middle}
 .pill.skip{background:var(--bg3);color:var(--tm)}
+/* ===== bluebook-style runner ===== */
+.wrap.runwide{max-width:1200px}
+.tbar{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:6px 2px 14px}
+.tlink{background:none;border:none;font-family:var(--f);font-weight:700;font-size:.95rem;color:var(--navy);cursor:pointer;padding:6px 2px}
+.tlink:hover{color:var(--blue)}
+.tbar-c{display:flex;flex-direction:column;align-items:center;gap:7px;flex:1}
+.tclock{font-size:1.55rem;font-weight:800;color:var(--navy);font-variant-numeric:tabular-nums;letter-spacing:1px}
+.tclock.hid{visibility:hidden}
+.tctrls{display:flex;gap:8px}
+.tchip{border:1px solid var(--bd);background:#fff;border-radius:999px;padding:4px 13px;font-family:var(--f);font-weight:700;font-size:.8rem;color:var(--t2);cursor:pointer;line-height:1.4;min-width:34px}
+.tchip:hover{border-color:var(--blue);color:var(--blue)}
+.tmode{font-size:.82rem;font-weight:800;color:var(--tm);white-space:nowrap;padding-top:9px;text-transform:uppercase;letter-spacing:.04em}
+.split{display:flex;align-items:stretch;min-height:360px;border-top:1px solid var(--bd)}
+.split .pane{flex:1;min-width:0;padding:26px 32px}
+.vdiv{width:1px;background:var(--bd);align-self:stretch}
+.passage{font-size:1.12rem;line-height:1.75;color:var(--t)}
+.qhead{display:flex;align-items:center;gap:12px;background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:7px 10px;margin-bottom:20px}
+.qnum{background:var(--navy);color:#fff;font-weight:800;width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex:0 0 auto}
+.markbtn{display:flex;align-items:center;gap:8px;background:none;border:none;font-family:var(--f);font-weight:700;font-size:.9rem;color:var(--navy);cursor:pointer;padding:4px 2px}
+.markbtn .bkico{display:inline-block;width:13px;height:18px;background:var(--bd2);clip-path:polygon(0 0,100% 0,100% 100%,50% 74%,0 100%);border-radius:2px 2px 0 0;transition:background .12s}
+.markbtn.on .bkico{background:var(--red)}
+.markbtn:hover{color:var(--blue)}
+.elimtog{margin-left:auto;border:1px solid var(--bd);background:#fff;border-radius:8px;min-width:38px;height:30px;padding:0 8px;font-family:var(--f);font-weight:800;font-size:.8rem;color:var(--t2);cursor:pointer;text-decoration:line-through}
+.elimtog:hover{border-color:var(--blue);color:var(--blue)}
+.elimtog.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.qstem{font-size:1.06rem;line-height:1.55;color:var(--t);font-weight:700;margin-bottom:18px}
+.choice .cross{flex:0 0 auto;margin-left:12px;width:30px;height:30px;border:1.5px solid var(--bd2);border-radius:999px;background:#fff;font-weight:800;font-size:.82rem;color:var(--tm);cursor:pointer;display:none;align-items:center;justify-content:center;position:relative}
+.choice .cross:hover{border-color:var(--navy);color:var(--navy)}
+.choices.elim .choice .cross{display:inline-flex}
+.choice .cross::after{content:"";position:absolute;left:4px;right:4px;top:50%;height:1.7px;background:currentColor;transform:translateY(-50%)}
+.choice.struck .ct{text-decoration:line-through;opacity:.45}
+.choice.struck .lt{opacity:.4}
+.choice.struck{border-style:dashed}
+.bbar{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--bd);margin-top:10px;padding-top:18px}
+.bbar .navtoggle{width:auto;margin-top:0;padding:11px 20px;border-radius:999px}
+@media(max-width:780px){.split{flex-direction:column}.vdiv{width:auto;height:1px}.split .pane{padding:22px 4px}.wrap.runwide{max-width:760px}}
 </style>
 </head>
 <body>
@@ -195,20 +231,42 @@ select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(6,97,222,.14)}
 
   <!-- RUNNER -->
   <section id="vRun" class="hide">
-    <div class="card">
-      <div class="prog"><i id="progBar"></i></div>
-      <div class="pmeta"><span id="pCount"></span><span class="pmeta-r"><span id="pTimer" class="ptimer">0:00</span><span id="pMode"></span></span></div>
-      <div class="src" id="qSrc"></div>
-      <div class="qtext" id="qText"></div>
-      <div class="choices" id="qChoices"></div>
-      <div id="gridWrap" class="hide"><input type="text" id="gridIn" class="gridin" maxlength="6" placeholder="Answer"></div>
-      <div class="fb" id="fb"></div>
-      <div class="navrow">
+    <div class="card" style="padding:18px 20px">
+      <div class="tbar">
+        <button class="tlink" id="backTop">&larr; Go back</button>
+        <div class="tbar-c">
+          <div class="tclock" id="pTimer">0:00</div>
+          <div class="tctrls">
+            <button class="tchip" id="pauseBtn" title="Pause timer">&#10074;&#10074;</button>
+            <button class="tchip" id="hideBtn">Hide</button>
+          </div>
+        </div>
+        <span class="tmode" id="pMode"></span>
+      </div>
+      <div class="prog hide"><i id="progBar"></i></div>
+      <div class="split">
+        <div class="pane">
+          <div class="src" id="qSrc"></div>
+          <div class="passage" id="qText"></div>
+        </div>
+        <div class="vdiv"></div>
+        <div class="pane">
+          <div class="qhead">
+            <span class="qnum" id="qNum">1</span>
+            <button class="markbtn" id="flagBtn"><span class="bkico"></span><span>Mark for Review</span></button>
+            <button class="elimtog" id="elimTog" title="Cross out answers">ABC</button>
+          </div>
+          <div class="qstem" id="qStem"></div>
+          <div class="choices" id="qChoices"></div>
+          <div id="gridWrap" class="hide"><input type="text" id="gridIn" class="gridin" maxlength="6" placeholder="Answer"></div>
+          <div class="fb" id="fb"></div>
+        </div>
+      </div>
+      <div class="bbar">
         <button class="btn ghost" id="backBtn">&larr; Back</button>
-        <button class="btn ghost flagbtn" id="flagBtn">&#128278; Mark</button>
+        <button class="navtoggle" id="navToggle">Question <b id="navLabel2">1</b> of <b id="navTot">1</b> &#9662;</button>
         <button class="btn" id="nextBtn" disabled>Next</button>
       </div>
-      <button class="navtoggle" id="navToggle">&#9783; All questions</button>
       <div class="navmodal hide" id="navPanel">
         <div class="navbox">
           <div class="navhead"><b id="navLabel"></b><button class="navx" id="navClose">&times;</button></div>
@@ -250,16 +308,20 @@ let SID=null, NAME=null;
 let curTopic=null, curTask=null, curMode=null;
 let qs=[], idx=0;
 let answers=[], submitted=[], results=[], marked=[];
-let timerInt=null, startTime=0, elapsedStr="0:00";
+let timerInt=null, elapsedSec=0, elapsedStr="0:00", paused=false;
+let crossed=[], elimMode=false;
+const STEMS={transitions:"Which choice completes the text with the most logical transition?"};
+function stemFor(){return STEMS[curTopic]||"Which choice completes the text with the most logical answer?";}
 function fmtTime(s){const m=Math.floor(s/60);return m+":"+String(s%60).padStart(2,"0");}
-function tickTimer(){elapsedStr=fmtTime(Math.floor((Date.now()-startTime)/1000));const t=$("pTimer");if(t)t.textContent=elapsedStr;}
-function startTimer(){startTime=Date.now();elapsedStr="0:00";const t=$("pTimer");if(t)t.textContent="0:00";clearInterval(timerInt);timerInt=setInterval(tickTimer,1000);}
+function renderTime(){elapsedStr=fmtTime(elapsedSec);const t=$("pTimer");if(t)t.textContent=elapsedStr;}
+function tickTimer(){if(paused)return;elapsedSec++;renderTime();}
+function startTimer(){elapsedSec=0;paused=false;renderTime();const t=$("pTimer");if(t)t.classList.remove("hid");const pb=$("pauseBtn");if(pb)pb.innerHTML="&#10074;&#10074;";const hb=$("hideBtn");if(hb)hb.textContent="Hide";clearInterval(timerInt);timerInt=setInterval(tickTimer,1000);}
 function stopTimer(){clearInterval(timerInt);timerInt=null;}
 
 /* ---------- helpers ---------- */
 const $=id=>document.getElementById(id);
 const views=["vLogin","vTopics","vMode","vRun","vDone"];
-function show(v){views.forEach(x=>$(x).classList.toggle("hide",x!==v));window.scrollTo(0,0);}
+function show(v){views.forEach(x=>$(x).classList.toggle("hide",x!==v));document.querySelector(".wrap").classList.toggle("runwide",v==="vRun");window.scrollTo(0,0);}
 function esc(s){return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
 
 /* ---------- session ---------- */
@@ -352,6 +414,9 @@ async function startRun(mode){
   submitted=new Array(qs.length).fill(false);
   results=new Array(qs.length).fill(null);
   marked=new Array(qs.length).fill(false);
+  crossed=Array.from({length:qs.length},()=>({}));
+  elimMode=false;$("elimTog").classList.remove("on");
+  $("navTot").textContent=qs.length;
   startTimer();
   renderQ();
 }
@@ -359,12 +424,14 @@ async function startRun(mode){
 function renderQ(){
   const q=qs[idx];
   const locked=(curMode==="practice"&&submitted[idx]);
-  $("pCount").textContent=`Question ${idx+1} of ${qs.length}`;
-  $("pMode").textContent=curMode==="practice"?"Practice mode":"Test mode";
+  $("qNum").textContent=idx+1;
+  $("pMode").textContent=curMode==="practice"?"Practice":"Test";
   $("qSrc").textContent=q.source||"";
   $("qText").textContent=q.prompt;
+  $("qStem").textContent=stemFor();
   const fb=$("fb");fb.className="fb";fb.textContent="";
   const ch=$("qChoices");ch.innerHTML="";
+  ch.classList.toggle("elim",elimMode&&!locked);
   const grid=$("gridWrap");
   if(q.answer_format==="grid"){
     grid.classList.remove("hide");ch.classList.add("hide");
@@ -376,13 +443,20 @@ function renderQ(){
     [["A",q.option_a],["B",q.option_b],["C",q.option_c],["D",q.option_d]].forEach(([L,txt])=>{
       if(txt==null)return;
       const c=document.createElement("div");c.className="choice";c.dataset.letter=L;
-      c.innerHTML=`<div class="lt">${L}</div><div class="ct">${esc(txt)}</div>`;
+      c.innerHTML=`<div class="lt">${L}</div><div class="ct">${esc(txt)}</div><button class="cross" title="Cross out">${L}</button>`;
       if(answers[idx]===L)c.classList.add("sel");
+      if(crossed[idx]&&crossed[idx][L])c.classList.add("struck");
       if(!locked){
         c.onclick=()=>{
-          answers[idx]=L;
-          ch.querySelectorAll(".choice").forEach(x=>x.classList.remove("sel"));
-          c.classList.add("sel");renderNav();updateButtons();
+          if(crossed[idx])crossed[idx][L]=false;
+          answers[idx]=L;renderQ();
+        };
+        c.querySelector(".cross").onclick=(e)=>{
+          e.stopPropagation();
+          if(!crossed[idx])crossed[idx]={};
+          crossed[idx][L]=!crossed[idx][L];
+          if(crossed[idx][L]&&answers[idx]===L)answers[idx]=null;
+          renderQ();
         };
       }
       ch.appendChild(c);
@@ -418,6 +492,7 @@ function updateButtons(){
     ? submitted.filter(Boolean).length
     : answers.reduce((n,a)=>n+((a!=null&&a!=="")?1:0),0);
   $("progBar").style.width=(done/qs.length*100)+"%";
+  const nl=$("navLabel2");if(nl)nl.textContent=idx+1;
   const nb=$("nextBtn");
   const last=(idx===qs.length-1);
   nb.className="btn";nb.innerHTML="";
@@ -531,6 +606,10 @@ $("navPanel").onclick=(e)=>{if(e.target===$("navPanel"))$("navPanel").classList.
 $("finishBtn").onclick=finish;
 $("retryBtn").onclick=()=>startRun(curMode);
 $("homeBtn").onclick=()=>loadTopics();
+$("pauseBtn").onclick=()=>{paused=!paused;$("pauseBtn").innerHTML=paused?"&#9654;":"&#10074;&#10074;";$("pauseBtn").title=paused?"Resume timer":"Pause timer";};
+$("hideBtn").onclick=()=>{const t=$("pTimer");t.classList.toggle("hid");$("hideBtn").textContent=t.classList.contains("hid")?"Show":"Hide";};
+$("elimTog").onclick=()=>{elimMode=!elimMode;$("elimTog").classList.toggle("on",elimMode);renderQ();};
+$("backTop").onclick=()=>{if(confirm("Leave this set? Progress on unsubmitted questions will be lost.")){stopTimer();loadTopics();}};
 
 /* ---------- boot ---------- */
 (function boot(){
