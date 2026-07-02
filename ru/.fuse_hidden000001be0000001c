@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SAT Samarkand — Лучшая Подготовка к SAT в Самарканде</title>
+<meta name="description" content="SAT Samarkand — ведущий центр подготовки к SAT в Самарканде. Подтверждённые баллы 1500+, бесплатный Mock SAT, 8 экспертных менторов. Студенты в Purdue, Drexel, METU, Inha.">
+<link rel="canonical" href="https://satsamarkand.uz/ru/">
+<link rel="alternate" hreflang="ru" href="https://satsamarkand.uz/ru/">
+<link rel="alternate" hreflang="en" href="https://satsamarkand.uz/">
+<link rel="alternate" hreflang="uz" href="https://satsamarkand.uz/uz/">
+<link rel="alternate" hreflang="x-default" href="https://satsamarkand.uz/">
+<meta property="og:image" content="https://satsamarkand.uz/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SAT Samarkand","url":"https://satsamarkand.uz/ru/","inLanguage":"ru"}</script>
+<meta http-equiv="refresh" content="0;url=https://satsamarkand.uz/">
+<script>localStorage.setItem('sats_lang','ru');window.location.replace('/');</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H7P88TD85G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H7P88TD85G');
+</script>
+
+<style>
+.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 4px 20px rgba(0,0,0,.15);text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:0 6px 28px rgba(0,0,0,.2)}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:linear-gradient(135deg,#10b981,#059669);color:#fff}.fmchat .fmicon{background:linear-gradient(135deg,#0088cc,#006bb3);color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
+
+
+
+@media(max-width:640px){.fwidget{bottom:80px;right:14px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
+</style>
+<link rel="stylesheet" href="/enhancements.css">
+</head>
+<body><p>&#1055;&#1077;&#1088;&#1077;&#1085;&#1072;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077;... <a href="/">SAT Samarkand</a></p><a href="/ru/kursy-sat-samarkand/" style="display:none">Kursy SAT Samarkand</a>
+
+<script>
+/* ── SCROLL REVEAL + COUNTERS ── */
+(function(){
+  var EASE = 'cubic-bezier(.25,.46,.45,.94)';
+
+  /* Selectors to scroll-reveal (avoid hero — it uses CSS animation) */
+  var SOLO = [
+    '.sh','.pg-h2','.pillar-h2',
+    '.slbl','.slbl-pg','.pillar-section-label',
+    '.sp','.pg-lead','.pillar-lead',
+    '.mock-banner','.cta-banner','.form-card','.form-info',
+    '.marq','.div'
+  ];
+
+  /* Grid containers whose children get staggered */
+  var GRIDS = [
+    '.wgrid','.pgrid','.steps-grid',
+    '.results-grid','.scores-grid','.mgrid',
+    '.uni-grid','.partners-grid','.services-grid',
+    '.pricing-grid','.faq-wrap','.faq-list',
+    '.blog-grid','.wgrid','.inner-links-grid'
+  ];
+
+  var tagged = new WeakSet();
+
+  function tag(el, delay){
+    if(!el || tagged.has(el)) return;
+    /* Skip if inside a .hero or .pillar-hero */
+    if(el.closest('.hero,.pillar-hero,.pg-hero')) return;
+    tagged.add(el);
+    el.setAttribute('data-anim','1');
+    if(delay) el.setAttribute('data-anim-d', String(delay));
+  }
+
+  SOLO.forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(el){ tag(el); });
+  });
+
+  GRIDS.forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(grid){
+      var kids = grid.children;
+      for(var i=0;i<kids.length;i++) tag(kids[i], Math.min(i+1,8));
+    });
+  });
+
+  /* Fallback if no IntersectionObserver */
+  var all = document.querySelectorAll('[data-anim]');
+  if(!window.IntersectionObserver){
+    all.forEach(function(el){ el.classList.add('is-visible'); });
+    return;
+  }
+
+  var revealObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('is-visible');
+        revealObs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.1, rootMargin:'0px 0px -36px 0px'});
+
+  all.forEach(function(el){ revealObs.observe(el); });
+
+  /* ── COUNTER ANIMATION ── */
+  function runCounter(el){
+    var raw = el.textContent.trim();
+    var num = parseFloat(raw.replace(/[^0-9.]/g,''));
+    var suffix = raw.replace(/[0-9.]/g,'');
+    if(isNaN(num)||num===0||num<4) return;
+    var start = null, dur = 1600;
+    var from = num > 200 ? num - 300 : num > 10 ? Math.max(0, num - (num*0.6|0)) : 0;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts-start)/dur,1);
+      var e = 1-Math.pow(1-p,3);
+      var cur = from + (num-from)*e;
+      el.textContent = (num%1===0 ? Math.round(cur) : cur.toFixed(1)) + suffix;
+      if(p<1) requestAnimationFrame(step);
+      else el.textContent = raw;
+    }
+    requestAnimationFrame(step);
+  }
+
+  var ctrObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ runCounter(e.target); ctrObs.unobserve(e.target); }
+    });
+  },{threshold:0.6});
+
+  document.querySelectorAll('.tb-num,.pillar-stat-num,.stat__num,.mock-day').forEach(function(el){
+    ctrObs.observe(el);
+  });
+
+})();
+</script>
+
+
+<div class="fwidget" id="fwidget">
+  <a href="tel:+998951131600" class="fmitem fmcall">
+    <div class="fmicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+    <div class="fminfo"><div class="fmtitle" data-en="Call us" data-uz="Qo'ng'iroq qiling" data-ru="Позвонить">Call us</div><div class="fmsub">+998 95 113 16 00</div></div>
+  </a>
+  <a href="https://t.me/satsam_support" target="_blank" class="fmitem fmchat">
+    <div class="fmicon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg></div>
+    <div class="fminfo"><div class="fmtitle" data-en="Have a question?" data-uz="Savol bormi?" data-ru="Есть вопрос?">Have a question?</div><div class="fmsub">@satsam_support</div></div>
+  </a>
+</div>
+
+
+</body>
+</html>
