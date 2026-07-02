@@ -39,6 +39,26 @@
       "source": "/index.html",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/blog/sat-test-center-tashkent-guide/",
+      "destination": "/blog/sat-test-centers-samarkand/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sat-test-center-tashkent-guide",
+      "destination": "/blog/sat-test-centers-samarkand/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/samarkand-tashkent-sat-exam-travel-guide/",
+      "destination": "/blog/sat-test-centers-samarkand/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/samarkand-tashkent-sat-exam-travel-guide",
+      "destination": "/blog/sat-test-centers-samarkand/",
+      "permanent": true
     }
   ]
 }
