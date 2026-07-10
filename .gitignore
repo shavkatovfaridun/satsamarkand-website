@@ -1,3 +1,6 @@
 .vercel
 
 supabase_setup.sql
+
+.fuse_hidden*
+.DS_Store
