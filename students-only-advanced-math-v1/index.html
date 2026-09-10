@@ -1,0 +1,2397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>SAT Advanced Math Practice — SAT Samarkand (Private)</title>
+<style>
+:root{
+  --navy:#022049; --navy2:#010e24; --blue:#0661DE; --blue2:#044fba; --blue3:#3b82f6;
+  --ink:#1a202c; --ink-strong:#0b1220; --ink-soft:#5b6472;
+  --surface:#ffffff; --surface-2:#f6f8fc; --line:#e3e8f0;
+  --green:#0E8A76; --green-bg:#eafaf5; --red:#C0392B; --red-bg:#fdeeec; --amber:#B9790E;
+  --r-sm:12px; --r-md:18px; --r-lg:26px;
+  --shadow:0 10px 30px rgba(2,32,73,.08);
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--surface-2);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:var(--blue);}
+
+/* ---- Lock screen ---- */
+#lock{
+  position:fixed;inset:0;z-index:9999;background:linear-gradient(135deg,var(--navy),var(--navy2));
+  display:flex;align-items:center;justify-content:center;padding:24px;
+}
+.lock-card{
+  background:#fff;border-radius:var(--r-lg);padding:40px 32px;max-width:380px;width:100%;
+  box-shadow:0 30px 80px rgba(0,0,0,.35);text-align:center;
+}
+.lock-card img{height:44px;margin:0 auto 18px;}
+.lock-card h1{font-size:1.3rem;margin:0 0 8px;color:var(--navy);}
+.lock-card p{font-size:.92rem;color:var(--ink-soft);margin:0 0 22px;line-height:1.5;}
+.lock-card input{
+  width:100%;padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;font-size:1rem;
+  text-align:center;letter-spacing:.5px;margin-bottom:12px;outline:none;
+}
+.lock-card input:focus{border-color:var(--blue);}
+.lock-btn{
+  width:100%;padding:13px 16px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--blue2));
+  color:#fff;font-size:1rem;font-weight:600;cursor:pointer;
+}
+.lock-btn:hover{filter:brightness(1.06);}
+.lock-err{color:var(--red);font-size:.85rem;margin-top:10px;min-height:1.2em;}
+
+/* ---- App shell ---- */
+#app{display:none;}
+.top{
+  background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:28px 20px 22px;
+}
+.top-inner{max-width:960px;margin:0 auto;}
+.top-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.top-brand img{height:26px;}
+.top-brand span{font-weight:700;letter-spacing:.3px;font-size:.95rem;}
+.top h1{font-size:1.5rem;margin:0 0 6px;}
+.top p{margin:0;color:#c9d6ee;font-size:.9rem;max-width:620px;line-height:1.5;}
+.priv-badge{
+  display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  border-radius:999px;padding:5px 12px;font-size:.75rem;font-weight:600;margin-top:14px;color:#fff;
+}
+
+.scorebar{
+  position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow);
+}
+.scorebar-inner{max-width:960px;margin:0 auto;padding:12px 20px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+.stat{display:flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:var(--ink-soft);}
+.stat .dot{width:9px;height:9px;border-radius:50%;}
+.dot.c{background:var(--green);} .dot.m{background:var(--red);} .dot.u{background:#c3cbd8;}
+.stat b{color:var(--ink-strong);font-size:1rem;}
+.progress-wrap{flex:1;min-width:140px;}
+.progress-track{height:8px;border-radius:99px;background:var(--surface-2);overflow:hidden;display:flex;}
+.progress-track .seg{height:100%;}
+.seg.c{background:var(--green);} .seg.m{background:var(--red);}
+.reset-btn{
+  border:1px solid var(--line);background:#fff;border-radius:10px;padding:7px 12px;font-size:.8rem;font-weight:600;
+  color:var(--ink-soft);cursor:pointer;
+}
+.reset-btn:hover{border-color:var(--red);color:var(--red);}
+
+.filters{max-width:960px;margin:0 auto;padding:14px 20px 0;display:flex;gap:8px;flex-wrap:wrap;}
+.filter-btn{
+  border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:.82rem;font-weight:600;
+  color:var(--ink-soft);cursor:pointer;
+}
+.filter-btn.active{background:var(--navy);border-color:var(--navy);color:#fff;}
+
+.jumpwrap{max-width:960px;margin:14px auto 0;padding:0 20px;}
+details.jump{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;}
+details.jump summary{padding:12px 16px;font-weight:600;font-size:.88rem;cursor:pointer;color:var(--navy);list-style:none;display:flex;align-items:center;justify-content:space-between;}
+details.jump summary::-webkit-details-marker{display:none;}
+.jumpgrid{padding:4px 14px 16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(34px,1fr));gap:6px;}
+.jcell{
+  aspect-ratio:1;border-radius:8px;border:1px solid var(--line);background:var(--surface-2);
+  display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:600;color:var(--ink-soft);
+  cursor:pointer;text-decoration:none;
+}
+.jcell.c{background:var(--green-bg);border-color:var(--green);color:var(--green);}
+.jcell.m{background:var(--red-bg);border-color:var(--red);color:var(--red);}
+
+.qwrap{max-width:960px;margin:0 auto;padding:20px 20px 80px;}
+.qcard{
+  background:#fff;border-radius:var(--r-lg);border:1.5px solid var(--line);margin-bottom:18px;
+  box-shadow:var(--shadow);overflow:hidden;transition:border-color .2s;
+  scroll-margin-top:80px;
+}
+.qcard.c{border-color:var(--green);}
+.qcard.m{border-color:var(--red);}
+.qcard-head{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:var(--surface-2);border-bottom:1px solid var(--line);}
+.qnum{font-weight:800;color:var(--navy);font-size:.95rem;}
+.qstatus{font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:999px;background:#eef2f8;color:var(--ink-soft);}
+.qcard.c .qstatus{background:var(--green-bg);color:var(--green);}
+.qcard.m .qstatus{background:var(--red-bg);color:var(--red);}
+.qimg-wrap{padding:20px 20px 6px;background:#fff;}
+.qimg-wrap img{margin:0 auto;border-radius:8px;}
+.qactions{padding:14px 18px 20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+.btn{
+  border:none;border-radius:10px;padding:10px 16px;font-size:.85rem;font-weight:700;cursor:pointer;
+}
+.btn-show{background:var(--surface-2);border:1.5px solid var(--line);color:var(--navy);}
+.btn-show:hover{border-color:var(--blue);}
+.btn-correct{background:var(--green-bg);color:var(--green);border:1.5px solid var(--green);}
+.btn-correct.active{background:var(--green);color:#fff;}
+.btn-mistake{background:var(--red-bg);color:var(--red);border:1.5px solid var(--red);}
+.btn-mistake.active{background:var(--red);color:#fff;}
+.answer-reveal{
+  display:none;margin-top:2px;padding:12px 18px;background:var(--surface-2);border-top:1px dashed var(--line);
+  font-size:.95rem;color:var(--ink-strong);
+}
+.answer-reveal b{color:var(--blue2);}
+.answer-reveal.show{display:block;}
+
+.qwrap.hide-c .qcard.c{display:none;}
+.qwrap.hide-m .qcard.m{display:none;}
+.qwrap.hide-u .qcard.u{display:none;}
+
+footer.pfoot{max-width:960px;margin:0 auto;padding:0 20px 60px;color:var(--ink-soft);font-size:.8rem;text-align:center;line-height:1.6;}
+
+@media(max-width:640px){
+  .top h1{font-size:1.25rem;}
+  .jumpgrid{grid-template-columns:repeat(auto-fill,minmax(28px,1fr));}
+}
+</style>
+</head>
+<body>
+
+<div id="lock">
+  <div class="lock-card">
+    <img src="assets/logo-transparent.png" alt="SAT Samarkand">
+    <h1>Private Practice Set</h1>
+    <p>This page is for enrolled SAT Samarkand / SAT ZONE students only. Enter the passcode your mentor gave you to continue.</p>
+    <input type="password" id="pw" placeholder="Passcode" autocomplete="off" onkeydown="if(event.key==='Enter')tryUnlock()">
+    <button class="lock-btn" onclick="tryUnlock()">Unlock</button>
+    <div class="lock-err" id="lockerr"></div>
+  </div>
+</div>
+
+<div id="app">
+  <div class="top">
+    <div class="top-inner">
+      <div class="top-brand"><img src="assets/logo-transparent.png" alt=""><span>SAT SAMARKAND</span></div>
+      <h1>SAT Advanced Math — 150 Question Practice Set</h1>
+      <p>Work through each question, then reveal the answer and mark yourself correct or a mistake so you can find your weak spots fast. Your progress is saved on this device.</p>
+      <div class="priv-badge">&#128274; Private &mdash; enrolled students only, not indexed or linked publicly</div>
+    </div>
+  </div>
+
+  <div class="scorebar">
+    <div class="scorebar-inner">
+      <div class="stat"><span class="dot c"></span>Correct <b id="statC">0</b></div>
+      <div class="stat"><span class="dot m"></span>Mistakes <b id="statM">0</b></div>
+      <div class="stat"><span class="dot u"></span>Left <b id="statU">150</b></div>
+      <div class="progress-wrap"><div class="progress-track"><div class="seg c" id="segC" style="width:0%"></div><div class="seg m" id="segM" style="width:0%"></div></div></div>
+      <button class="reset-btn" onclick="resetProgress()">Reset progress</button>
+    </div>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" data-f="all" onclick="setFilter('all')">All (150)</button>
+    <button class="filter-btn" data-f="u" onclick="setFilter('u')">Unanswered</button>
+    <button class="filter-btn" data-f="m" onclick="setFilter('m')">Mistakes to review</button>
+    <button class="filter-btn" data-f="c" onclick="setFilter('c')">Correct</button>
+  </div>
+
+  <div class="jumpwrap">
+    <details class="jump">
+      <summary>Jump to a question <span style="color:var(--ink-soft);font-weight:400;">(tap a number)</span></summary>
+      <div class="jumpgrid"><a class="jcell" href="#q1" id="jc1">1</a>
+<a class="jcell" href="#q2" id="jc2">2</a>
+<a class="jcell" href="#q3" id="jc3">3</a>
+<a class="jcell" href="#q4" id="jc4">4</a>
+<a class="jcell" href="#q5" id="jc5">5</a>
+<a class="jcell" href="#q6" id="jc6">6</a>
+<a class="jcell" href="#q7" id="jc7">7</a>
+<a class="jcell" href="#q8" id="jc8">8</a>
+<a class="jcell" href="#q9" id="jc9">9</a>
+<a class="jcell" href="#q10" id="jc10">10</a>
+<a class="jcell" href="#q11" id="jc11">11</a>
+<a class="jcell" href="#q12" id="jc12">12</a>
+<a class="jcell" href="#q13" id="jc13">13</a>
+<a class="jcell" href="#q14" id="jc14">14</a>
+<a class="jcell" href="#q15" id="jc15">15</a>
+<a class="jcell" href="#q16" id="jc16">16</a>
+<a class="jcell" href="#q17" id="jc17">17</a>
+<a class="jcell" href="#q18" id="jc18">18</a>
+<a class="jcell" href="#q19" id="jc19">19</a>
+<a class="jcell" href="#q20" id="jc20">20</a>
+<a class="jcell" href="#q21" id="jc21">21</a>
+<a class="jcell" href="#q22" id="jc22">22</a>
+<a class="jcell" href="#q23" id="jc23">23</a>
+<a class="jcell" href="#q24" id="jc24">24</a>
+<a class="jcell" href="#q25" id="jc25">25</a>
+<a class="jcell" href="#q26" id="jc26">26</a>
+<a class="jcell" href="#q27" id="jc27">27</a>
+<a class="jcell" href="#q28" id="jc28">28</a>
+<a class="jcell" href="#q29" id="jc29">29</a>
+<a class="jcell" href="#q30" id="jc30">30</a>
+<a class="jcell" href="#q31" id="jc31">31</a>
+<a class="jcell" href="#q32" id="jc32">32</a>
+<a class="jcell" href="#q33" id="jc33">33</a>
+<a class="jcell" href="#q34" id="jc34">34</a>
+<a class="jcell" href="#q35" id="jc35">35</a>
+<a class="jcell" href="#q36" id="jc36">36</a>
+<a class="jcell" href="#q37" id="jc37">37</a>
+<a class="jcell" href="#q38" id="jc38">38</a>
+<a class="jcell" href="#q39" id="jc39">39</a>
+<a class="jcell" href="#q40" id="jc40">40</a>
+<a class="jcell" href="#q41" id="jc41">41</a>
+<a class="jcell" href="#q42" id="jc42">42</a>
+<a class="jcell" href="#q43" id="jc43">43</a>
+<a class="jcell" href="#q44" id="jc44">44</a>
+<a class="jcell" href="#q45" id="jc45">45</a>
+<a class="jcell" href="#q46" id="jc46">46</a>
+<a class="jcell" href="#q47" id="jc47">47</a>
+<a class="jcell" href="#q48" id="jc48">48</a>
+<a class="jcell" href="#q49" id="jc49">49</a>
+<a class="jcell" href="#q50" id="jc50">50</a>
+<a class="jcell" href="#q51" id="jc51">51</a>
+<a class="jcell" href="#q52" id="jc52">52</a>
+<a class="jcell" href="#q53" id="jc53">53</a>
+<a class="jcell" href="#q54" id="jc54">54</a>
+<a class="jcell" href="#q55" id="jc55">55</a>
+<a class="jcell" href="#q56" id="jc56">56</a>
+<a class="jcell" href="#q57" id="jc57">57</a>
+<a class="jcell" href="#q58" id="jc58">58</a>
+<a class="jcell" href="#q59" id="jc59">59</a>
+<a class="jcell" href="#q60" id="jc60">60</a>
+<a class="jcell" href="#q61" id="jc61">61</a>
+<a class="jcell" href="#q62" id="jc62">62</a>
+<a class="jcell" href="#q63" id="jc63">63</a>
+<a class="jcell" href="#q64" id="jc64">64</a>
+<a class="jcell" href="#q65" id="jc65">65</a>
+<a class="jcell" href="#q66" id="jc66">66</a>
+<a class="jcell" href="#q67" id="jc67">67</a>
+<a class="jcell" href="#q68" id="jc68">68</a>
+<a class="jcell" href="#q69" id="jc69">69</a>
+<a class="jcell" href="#q70" id="jc70">70</a>
+<a class="jcell" href="#q71" id="jc71">71</a>
+<a class="jcell" href="#q72" id="jc72">72</a>
+<a class="jcell" href="#q73" id="jc73">73</a>
+<a class="jcell" href="#q74" id="jc74">74</a>
+<a class="jcell" href="#q75" id="jc75">75</a>
+<a class="jcell" href="#q76" id="jc76">76</a>
+<a class="jcell" href="#q77" id="jc77">77</a>
+<a class="jcell" href="#q78" id="jc78">78</a>
+<a class="jcell" href="#q79" id="jc79">79</a>
+<a class="jcell" href="#q80" id="jc80">80</a>
+<a class="jcell" href="#q81" id="jc81">81</a>
+<a class="jcell" href="#q82" id="jc82">82</a>
+<a class="jcell" href="#q83" id="jc83">83</a>
+<a class="jcell" href="#q84" id="jc84">84</a>
+<a class="jcell" href="#q85" id="jc85">85</a>
+<a class="jcell" href="#q86" id="jc86">86</a>
+<a class="jcell" href="#q87" id="jc87">87</a>
+<a class="jcell" href="#q88" id="jc88">88</a>
+<a class="jcell" href="#q89" id="jc89">89</a>
+<a class="jcell" href="#q90" id="jc90">90</a>
+<a class="jcell" href="#q91" id="jc91">91</a>
+<a class="jcell" href="#q92" id="jc92">92</a>
+<a class="jcell" href="#q93" id="jc93">93</a>
+<a class="jcell" href="#q94" id="jc94">94</a>
+<a class="jcell" href="#q95" id="jc95">95</a>
+<a class="jcell" href="#q96" id="jc96">96</a>
+<a class="jcell" href="#q97" id="jc97">97</a>
+<a class="jcell" href="#q98" id="jc98">98</a>
+<a class="jcell" href="#q99" id="jc99">99</a>
+<a class="jcell" href="#q100" id="jc100">100</a>
+<a class="jcell" href="#q101" id="jc101">101</a>
+<a class="jcell" href="#q102" id="jc102">102</a>
+<a class="jcell" href="#q103" id="jc103">103</a>
+<a class="jcell" href="#q104" id="jc104">104</a>
+<a class="jcell" href="#q105" id="jc105">105</a>
+<a class="jcell" href="#q106" id="jc106">106</a>
+<a class="jcell" href="#q107" id="jc107">107</a>
+<a class="jcell" href="#q108" id="jc108">108</a>
+<a class="jcell" href="#q109" id="jc109">109</a>
+<a class="jcell" href="#q110" id="jc110">110</a>
+<a class="jcell" href="#q111" id="jc111">111</a>
+<a class="jcell" href="#q112" id="jc112">112</a>
+<a class="jcell" href="#q113" id="jc113">113</a>
+<a class="jcell" href="#q114" id="jc114">114</a>
+<a class="jcell" href="#q115" id="jc115">115</a>
+<a class="jcell" href="#q116" id="jc116">116</a>
+<a class="jcell" href="#q117" id="jc117">117</a>
+<a class="jcell" href="#q118" id="jc118">118</a>
+<a class="jcell" href="#q119" id="jc119">119</a>
+<a class="jcell" href="#q120" id="jc120">120</a>
+<a class="jcell" href="#q121" id="jc121">121</a>
+<a class="jcell" href="#q122" id="jc122">122</a>
+<a class="jcell" href="#q123" id="jc123">123</a>
+<a class="jcell" href="#q124" id="jc124">124</a>
+<a class="jcell" href="#q125" id="jc125">125</a>
+<a class="jcell" href="#q126" id="jc126">126</a>
+<a class="jcell" href="#q127" id="jc127">127</a>
+<a class="jcell" href="#q128" id="jc128">128</a>
+<a class="jcell" href="#q129" id="jc129">129</a>
+<a class="jcell" href="#q130" id="jc130">130</a>
+<a class="jcell" href="#q131" id="jc131">131</a>
+<a class="jcell" href="#q132" id="jc132">132</a>
+<a class="jcell" href="#q133" id="jc133">133</a>
+<a class="jcell" href="#q134" id="jc134">134</a>
+<a class="jcell" href="#q135" id="jc135">135</a>
+<a class="jcell" href="#q136" id="jc136">136</a>
+<a class="jcell" href="#q137" id="jc137">137</a>
+<a class="jcell" href="#q138" id="jc138">138</a>
+<a class="jcell" href="#q139" id="jc139">139</a>
+<a class="jcell" href="#q140" id="jc140">140</a>
+<a class="jcell" href="#q141" id="jc141">141</a>
+<a class="jcell" href="#q142" id="jc142">142</a>
+<a class="jcell" href="#q143" id="jc143">143</a>
+<a class="jcell" href="#q144" id="jc144">144</a>
+<a class="jcell" href="#q145" id="jc145">145</a>
+<a class="jcell" href="#q146" id="jc146">146</a>
+<a class="jcell" href="#q147" id="jc147">147</a>
+<a class="jcell" href="#q148" id="jc148">148</a>
+<a class="jcell" href="#q149" id="jc149">149</a>
+<a class="jcell" href="#q150" id="jc150">150</a></div>
+    </details>
+  </div>
+
+  <div class="qwrap" id="qwrap">
+    
+<article class="qcard u" id="q1" data-q="1">
+  <div class="qcard-head">
+    <span class="qnum">Question 1 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q001.png" alt="SAT Advanced Math practice question 1" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(1)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(1,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(1,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans1">Correct answer: <b>22.75 or 91/4</b></div>
+</article>
+<article class="qcard u" id="q2" data-q="2">
+  <div class="qcard-head">
+    <span class="qnum">Question 2 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q002.png" alt="SAT Advanced Math practice question 2" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(2)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(2,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(2,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans2">Correct answer: <b>2</b></div>
+</article>
+<article class="qcard u" id="q3" data-q="3">
+  <div class="qcard-head">
+    <span class="qnum">Question 3 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q003.png" alt="SAT Advanced Math practice question 3" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(3)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(3,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(3,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans3">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q4" data-q="4">
+  <div class="qcard-head">
+    <span class="qnum">Question 4 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q004.png" alt="SAT Advanced Math practice question 4" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(4)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(4,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(4,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans4">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q5" data-q="5">
+  <div class="qcard-head">
+    <span class="qnum">Question 5 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q005.png" alt="SAT Advanced Math practice question 5" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(5)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(5,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(5,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans5">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q6" data-q="6">
+  <div class="qcard-head">
+    <span class="qnum">Question 6 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q006.png" alt="SAT Advanced Math practice question 6" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(6)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(6,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(6,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans6">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q7" data-q="7">
+  <div class="qcard-head">
+    <span class="qnum">Question 7 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q007.png" alt="SAT Advanced Math practice question 7" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(7)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(7,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(7,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans7">Correct answer: <b>11</b></div>
+</article>
+<article class="qcard u" id="q8" data-q="8">
+  <div class="qcard-head">
+    <span class="qnum">Question 8 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q008.png" alt="SAT Advanced Math practice question 8" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(8)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(8,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(8,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans8">Correct answer: <b>10,800</b></div>
+</article>
+<article class="qcard u" id="q9" data-q="9">
+  <div class="qcard-head">
+    <span class="qnum">Question 9 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q009.png" alt="SAT Advanced Math practice question 9" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(9)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(9,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(9,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans9">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q10" data-q="10">
+  <div class="qcard-head">
+    <span class="qnum">Question 10 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q010.png" alt="SAT Advanced Math practice question 10" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(10)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(10,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(10,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans10">Correct answer: <b>10,000</b></div>
+</article>
+<article class="qcard u" id="q11" data-q="11">
+  <div class="qcard-head">
+    <span class="qnum">Question 11 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q011.png" alt="SAT Advanced Math practice question 11" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(11)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(11,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(11,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans11">Correct answer: <b>95/97</b></div>
+</article>
+<article class="qcard u" id="q12" data-q="12">
+  <div class="qcard-head">
+    <span class="qnum">Question 12 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q012.png" alt="SAT Advanced Math practice question 12" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(12)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(12,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(12,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans12">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q13" data-q="13">
+  <div class="qcard-head">
+    <span class="qnum">Question 13 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q013.png" alt="SAT Advanced Math practice question 13" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(13)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(13,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(13,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans13">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q14" data-q="14">
+  <div class="qcard-head">
+    <span class="qnum">Question 14 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q014.png" alt="SAT Advanced Math practice question 14" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(14)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(14,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(14,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans14">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q15" data-q="15">
+  <div class="qcard-head">
+    <span class="qnum">Question 15 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q015.png" alt="SAT Advanced Math practice question 15" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(15)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(15,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(15,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans15">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q16" data-q="16">
+  <div class="qcard-head">
+    <span class="qnum">Question 16 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q016.png" alt="SAT Advanced Math practice question 16" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(16)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(16,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(16,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans16">Correct answer: <b>-28/3 or -9.333</b></div>
+</article>
+<article class="qcard u" id="q17" data-q="17">
+  <div class="qcard-head">
+    <span class="qnum">Question 17 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q017.png" alt="SAT Advanced Math practice question 17" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(17)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(17,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(17,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans17">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q18" data-q="18">
+  <div class="qcard-head">
+    <span class="qnum">Question 18 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q018.png" alt="SAT Advanced Math practice question 18" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(18)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(18,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(18,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans18">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q19" data-q="19">
+  <div class="qcard-head">
+    <span class="qnum">Question 19 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q019.png" alt="SAT Advanced Math practice question 19" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(19)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(19,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(19,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans19">Correct answer: <b>-86</b></div>
+</article>
+<article class="qcard u" id="q20" data-q="20">
+  <div class="qcard-head">
+    <span class="qnum">Question 20 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q020.png" alt="SAT Advanced Math practice question 20" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(20)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(20,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(20,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans20">Correct answer: <b>2,197</b></div>
+</article>
+<article class="qcard u" id="q21" data-q="21">
+  <div class="qcard-head">
+    <span class="qnum">Question 21 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q021.png" alt="SAT Advanced Math practice question 21" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(21)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(21,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(21,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans21">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q22" data-q="22">
+  <div class="qcard-head">
+    <span class="qnum">Question 22 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q022.png" alt="SAT Advanced Math practice question 22" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(22)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(22,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(22,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans22">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q23" data-q="23">
+  <div class="qcard-head">
+    <span class="qnum">Question 23 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q023.png" alt="SAT Advanced Math practice question 23" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(23)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(23,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(23,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans23">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q24" data-q="24">
+  <div class="qcard-head">
+    <span class="qnum">Question 24 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q024.png" alt="SAT Advanced Math practice question 24" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(24)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(24,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(24,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans24">Correct answer: <b>-336</b></div>
+</article>
+<article class="qcard u" id="q25" data-q="25">
+  <div class="qcard-head">
+    <span class="qnum">Question 25 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q025.png" alt="SAT Advanced Math practice question 25" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(25)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(25,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(25,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans25">Correct answer: <b>7,500</b></div>
+</article>
+<article class="qcard u" id="q26" data-q="26">
+  <div class="qcard-head">
+    <span class="qnum">Question 26 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q026.png" alt="SAT Advanced Math practice question 26" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(26)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(26,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(26,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans26">Correct answer: <b>23/40 or 0.575</b></div>
+</article>
+<article class="qcard u" id="q27" data-q="27">
+  <div class="qcard-head">
+    <span class="qnum">Question 27 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q027.png" alt="SAT Advanced Math practice question 27" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(27)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(27,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(27,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans27">Correct answer: <b>7,007</b></div>
+</article>
+<article class="qcard u" id="q28" data-q="28">
+  <div class="qcard-head">
+    <span class="qnum">Question 28 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q028.png" alt="SAT Advanced Math practice question 28" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(28)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(28,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(28,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans28">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q29" data-q="29">
+  <div class="qcard-head">
+    <span class="qnum">Question 29 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q029.png" alt="SAT Advanced Math practice question 29" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(29)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(29,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(29,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans29">Correct answer: <b>4</b></div>
+</article>
+<article class="qcard u" id="q30" data-q="30">
+  <div class="qcard-head">
+    <span class="qnum">Question 30 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q030.png" alt="SAT Advanced Math practice question 30" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(30)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(30,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(30,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans30">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q31" data-q="31">
+  <div class="qcard-head">
+    <span class="qnum">Question 31 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q031.png" alt="SAT Advanced Math practice question 31" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(31)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(31,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(31,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans31">Correct answer: <b>173</b></div>
+</article>
+<article class="qcard u" id="q32" data-q="32">
+  <div class="qcard-head">
+    <span class="qnum">Question 32 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q032.png" alt="SAT Advanced Math practice question 32" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(32)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(32,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(32,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans32">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q33" data-q="33">
+  <div class="qcard-head">
+    <span class="qnum">Question 33 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q033.png" alt="SAT Advanced Math practice question 33" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(33)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(33,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(33,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans33">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q34" data-q="34">
+  <div class="qcard-head">
+    <span class="qnum">Question 34 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q034.png" alt="SAT Advanced Math practice question 34" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(34)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(34,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(34,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans34">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q35" data-q="35">
+  <div class="qcard-head">
+    <span class="qnum">Question 35 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q035.png" alt="SAT Advanced Math practice question 35" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(35)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(35,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(35,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans35">Correct answer: <b>2</b></div>
+</article>
+<article class="qcard u" id="q36" data-q="36">
+  <div class="qcard-head">
+    <span class="qnum">Question 36 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q036.png" alt="SAT Advanced Math practice question 36" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(36)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(36,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(36,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans36">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q37" data-q="37">
+  <div class="qcard-head">
+    <span class="qnum">Question 37 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q037.png" alt="SAT Advanced Math practice question 37" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(37)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(37,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(37,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans37">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q38" data-q="38">
+  <div class="qcard-head">
+    <span class="qnum">Question 38 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q038.png" alt="SAT Advanced Math practice question 38" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(38)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(38,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(38,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans38">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q39" data-q="39">
+  <div class="qcard-head">
+    <span class="qnum">Question 39 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q039.png" alt="SAT Advanced Math practice question 39" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(39)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(39,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(39,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans39">Correct answer: <b>62</b></div>
+</article>
+<article class="qcard u" id="q40" data-q="40">
+  <div class="qcard-head">
+    <span class="qnum">Question 40 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q040.png" alt="SAT Advanced Math practice question 40" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(40)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(40,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(40,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans40">Correct answer: <b>120</b></div>
+</article>
+<article class="qcard u" id="q41" data-q="41">
+  <div class="qcard-head">
+    <span class="qnum">Question 41 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q041.png" alt="SAT Advanced Math practice question 41" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(41)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(41,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(41,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans41">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q42" data-q="42">
+  <div class="qcard-head">
+    <span class="qnum">Question 42 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q042.png" alt="SAT Advanced Math practice question 42" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(42)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(42,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(42,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans42">Correct answer: <b>17</b></div>
+</article>
+<article class="qcard u" id="q43" data-q="43">
+  <div class="qcard-head">
+    <span class="qnum">Question 43 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q043.png" alt="SAT Advanced Math practice question 43" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(43)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(43,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(43,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans43">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q44" data-q="44">
+  <div class="qcard-head">
+    <span class="qnum">Question 44 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q044.png" alt="SAT Advanced Math practice question 44" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(44)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(44,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(44,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans44">Correct answer: <b>369</b></div>
+</article>
+<article class="qcard u" id="q45" data-q="45">
+  <div class="qcard-head">
+    <span class="qnum">Question 45 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q045.png" alt="SAT Advanced Math practice question 45" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(45)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(45,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(45,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans45">Correct answer: <b>19/24 or 0.792</b></div>
+</article>
+<article class="qcard u" id="q46" data-q="46">
+  <div class="qcard-head">
+    <span class="qnum">Question 46 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q046.png" alt="SAT Advanced Math practice question 46" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(46)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(46,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(46,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans46">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q47" data-q="47">
+  <div class="qcard-head">
+    <span class="qnum">Question 47 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q047.png" alt="SAT Advanced Math practice question 47" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(47)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(47,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(47,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans47">Correct answer: <b>76</b></div>
+</article>
+<article class="qcard u" id="q48" data-q="48">
+  <div class="qcard-head">
+    <span class="qnum">Question 48 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q048.png" alt="SAT Advanced Math practice question 48" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(48)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(48,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(48,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans48">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q49" data-q="49">
+  <div class="qcard-head">
+    <span class="qnum">Question 49 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q049.png" alt="SAT Advanced Math practice question 49" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(49)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(49,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(49,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans49">Correct answer: <b>3,600</b></div>
+</article>
+<article class="qcard u" id="q50" data-q="50">
+  <div class="qcard-head">
+    <span class="qnum">Question 50 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q050.png" alt="SAT Advanced Math practice question 50" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(50)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(50,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(50,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans50">Correct answer: <b>61.75</b></div>
+</article>
+<article class="qcard u" id="q51" data-q="51">
+  <div class="qcard-head">
+    <span class="qnum">Question 51 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q051.png" alt="SAT Advanced Math practice question 51" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(51)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(51,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(51,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans51">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q52" data-q="52">
+  <div class="qcard-head">
+    <span class="qnum">Question 52 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q052.png" alt="SAT Advanced Math practice question 52" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(52)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(52,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(52,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans52">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q53" data-q="53">
+  <div class="qcard-head">
+    <span class="qnum">Question 53 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q053.png" alt="SAT Advanced Math practice question 53" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(53)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(53,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(53,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans53">Correct answer: <b>20.25 or 81/4</b></div>
+</article>
+<article class="qcard u" id="q54" data-q="54">
+  <div class="qcard-head">
+    <span class="qnum">Question 54 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q054.png" alt="SAT Advanced Math practice question 54" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(54)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(54,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(54,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans54">Correct answer: <b>133</b></div>
+</article>
+<article class="qcard u" id="q55" data-q="55">
+  <div class="qcard-head">
+    <span class="qnum">Question 55 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q055.png" alt="SAT Advanced Math practice question 55" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(55)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(55,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(55,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans55">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q56" data-q="56">
+  <div class="qcard-head">
+    <span class="qnum">Question 56 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q056.png" alt="SAT Advanced Math practice question 56" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(56)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(56,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(56,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans56">Correct answer: <b>1/77</b></div>
+</article>
+<article class="qcard u" id="q57" data-q="57">
+  <div class="qcard-head">
+    <span class="qnum">Question 57 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q057.png" alt="SAT Advanced Math practice question 57" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(57)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(57,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(57,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans57">Correct answer: <b>900</b></div>
+</article>
+<article class="qcard u" id="q58" data-q="58">
+  <div class="qcard-head">
+    <span class="qnum">Question 58 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q058.png" alt="SAT Advanced Math practice question 58" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(58)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(58,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(58,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans58">Correct answer: <b>136</b></div>
+</article>
+<article class="qcard u" id="q59" data-q="59">
+  <div class="qcard-head">
+    <span class="qnum">Question 59 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q059.png" alt="SAT Advanced Math practice question 59" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(59)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(59,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(59,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans59">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q60" data-q="60">
+  <div class="qcard-head">
+    <span class="qnum">Question 60 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q060.png" alt="SAT Advanced Math practice question 60" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(60)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(60,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(60,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans60">Correct answer: <b>13/84 or 0.155</b></div>
+</article>
+<article class="qcard u" id="q61" data-q="61">
+  <div class="qcard-head">
+    <span class="qnum">Question 61 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q061.png" alt="SAT Advanced Math practice question 61" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(61)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(61,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(61,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans61">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q62" data-q="62">
+  <div class="qcard-head">
+    <span class="qnum">Question 62 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q062.png" alt="SAT Advanced Math practice question 62" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(62)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(62,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(62,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans62">Correct answer: <b>27/16 or 1.686</b></div>
+</article>
+<article class="qcard u" id="q63" data-q="63">
+  <div class="qcard-head">
+    <span class="qnum">Question 63 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q063.png" alt="SAT Advanced Math practice question 63" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(63)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(63,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(63,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans63">Correct answer: <b>2,401</b></div>
+</article>
+<article class="qcard u" id="q64" data-q="64">
+  <div class="qcard-head">
+    <span class="qnum">Question 64 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q064.png" alt="SAT Advanced Math practice question 64" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(64)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(64,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(64,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans64">Correct answer: <b>-11</b></div>
+</article>
+<article class="qcard u" id="q65" data-q="65">
+  <div class="qcard-head">
+    <span class="qnum">Question 65 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q065.png" alt="SAT Advanced Math practice question 65" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(65)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(65,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(65,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans65">Correct answer: <b>-113</b></div>
+</article>
+<article class="qcard u" id="q66" data-q="66">
+  <div class="qcard-head">
+    <span class="qnum">Question 66 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q066.png" alt="SAT Advanced Math practice question 66" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(66)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(66,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(66,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans66">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q67" data-q="67">
+  <div class="qcard-head">
+    <span class="qnum">Question 67 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q067.png" alt="SAT Advanced Math practice question 67" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(67)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(67,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(67,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans67">Correct answer: <b>16</b></div>
+</article>
+<article class="qcard u" id="q68" data-q="68">
+  <div class="qcard-head">
+    <span class="qnum">Question 68 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q068.png" alt="SAT Advanced Math practice question 68" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(68)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(68,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(68,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans68">Correct answer: <b>73,728</b></div>
+</article>
+<article class="qcard u" id="q69" data-q="69">
+  <div class="qcard-head">
+    <span class="qnum">Question 69 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q069.png" alt="SAT Advanced Math practice question 69" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(69)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(69,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(69,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans69">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q70" data-q="70">
+  <div class="qcard-head">
+    <span class="qnum">Question 70 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q070.png" alt="SAT Advanced Math practice question 70" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(70)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(70,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(70,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans70">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q71" data-q="71">
+  <div class="qcard-head">
+    <span class="qnum">Question 71 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q071.png" alt="SAT Advanced Math practice question 71" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(71)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(71,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(71,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans71">Correct answer: <b>29/4 or 7.25</b></div>
+</article>
+<article class="qcard u" id="q72" data-q="72">
+  <div class="qcard-head">
+    <span class="qnum">Question 72 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q072.png" alt="SAT Advanced Math practice question 72" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(72)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(72,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(72,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans72">Correct answer: <b>22</b></div>
+</article>
+<article class="qcard u" id="q73" data-q="73">
+  <div class="qcard-head">
+    <span class="qnum">Question 73 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q073.png" alt="SAT Advanced Math practice question 73" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(73)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(73,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(73,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans73">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q74" data-q="74">
+  <div class="qcard-head">
+    <span class="qnum">Question 74 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q074.png" alt="SAT Advanced Math practice question 74" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(74)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(74,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(74,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans74">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q75" data-q="75">
+  <div class="qcard-head">
+    <span class="qnum">Question 75 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q075.png" alt="SAT Advanced Math practice question 75" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(75)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(75,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(75,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans75">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q76" data-q="76">
+  <div class="qcard-head">
+    <span class="qnum">Question 76 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q076.png" alt="SAT Advanced Math practice question 76" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(76)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(76,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(76,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans76">Correct answer: <b>1/4 or 0.25</b></div>
+</article>
+<article class="qcard u" id="q77" data-q="77">
+  <div class="qcard-head">
+    <span class="qnum">Question 77 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q077.png" alt="SAT Advanced Math practice question 77" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(77)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(77,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(77,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans77">Correct answer: <b>10.7</b></div>
+</article>
+<article class="qcard u" id="q78" data-q="78">
+  <div class="qcard-head">
+    <span class="qnum">Question 78 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q078.png" alt="SAT Advanced Math practice question 78" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(78)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(78,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(78,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans78">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q79" data-q="79">
+  <div class="qcard-head">
+    <span class="qnum">Question 79 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q079.png" alt="SAT Advanced Math practice question 79" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(79)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(79,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(79,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans79">Correct answer: <b>-40</b></div>
+</article>
+<article class="qcard u" id="q80" data-q="80">
+  <div class="qcard-head">
+    <span class="qnum">Question 80 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q080.png" alt="SAT Advanced Math practice question 80" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(80)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(80,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(80,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans80">Correct answer: <b>129</b></div>
+</article>
+<article class="qcard u" id="q81" data-q="81">
+  <div class="qcard-head">
+    <span class="qnum">Question 81 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q081.png" alt="SAT Advanced Math practice question 81" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(81)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(81,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(81,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans81">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q82" data-q="82">
+  <div class="qcard-head">
+    <span class="qnum">Question 82 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q082.png" alt="SAT Advanced Math practice question 82" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(82)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(82,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(82,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans82">Correct answer: <b>-198</b></div>
+</article>
+<article class="qcard u" id="q83" data-q="83">
+  <div class="qcard-head">
+    <span class="qnum">Question 83 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q083.png" alt="SAT Advanced Math practice question 83" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(83)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(83,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(83,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans83">Correct answer: <b>34</b></div>
+</article>
+<article class="qcard u" id="q84" data-q="84">
+  <div class="qcard-head">
+    <span class="qnum">Question 84 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q084.png" alt="SAT Advanced Math practice question 84" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(84)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(84,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(84,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans84">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q85" data-q="85">
+  <div class="qcard-head">
+    <span class="qnum">Question 85 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q085.png" alt="SAT Advanced Math practice question 85" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(85)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(85,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(85,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans85">Correct answer: <b>6</b></div>
+</article>
+<article class="qcard u" id="q86" data-q="86">
+  <div class="qcard-head">
+    <span class="qnum">Question 86 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q086.png" alt="SAT Advanced Math practice question 86" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(86)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(86,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(86,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans86">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q87" data-q="87">
+  <div class="qcard-head">
+    <span class="qnum">Question 87 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q087.png" alt="SAT Advanced Math practice question 87" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(87)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(87,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(87,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans87">Correct answer: <b>24</b></div>
+</article>
+<article class="qcard u" id="q88" data-q="88">
+  <div class="qcard-head">
+    <span class="qnum">Question 88 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q088.png" alt="SAT Advanced Math practice question 88" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(88)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(88,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(88,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans88">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q89" data-q="89">
+  <div class="qcard-head">
+    <span class="qnum">Question 89 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q089.png" alt="SAT Advanced Math practice question 89" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(89)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(89,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(89,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans89">Correct answer: <b>37.5</b></div>
+</article>
+<article class="qcard u" id="q90" data-q="90">
+  <div class="qcard-head">
+    <span class="qnum">Question 90 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q090.png" alt="SAT Advanced Math practice question 90" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(90)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(90,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(90,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans90">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q91" data-q="91">
+  <div class="qcard-head">
+    <span class="qnum">Question 91 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q091.png" alt="SAT Advanced Math practice question 91" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(91)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(91,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(91,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans91">Correct answer: <b>4</b></div>
+</article>
+<article class="qcard u" id="q92" data-q="92">
+  <div class="qcard-head">
+    <span class="qnum">Question 92 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q092.png" alt="SAT Advanced Math practice question 92" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(92)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(92,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(92,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans92">Correct answer: <b>48</b></div>
+</article>
+<article class="qcard u" id="q93" data-q="93">
+  <div class="qcard-head">
+    <span class="qnum">Question 93 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q093.png" alt="SAT Advanced Math practice question 93" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(93)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(93,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(93,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans93">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q94" data-q="94">
+  <div class="qcard-head">
+    <span class="qnum">Question 94 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q094.png" alt="SAT Advanced Math practice question 94" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(94)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(94,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(94,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans94">Correct answer: <b>27/21 or 1.286</b></div>
+</article>
+<article class="qcard u" id="q95" data-q="95">
+  <div class="qcard-head">
+    <span class="qnum">Question 95 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q095.png" alt="SAT Advanced Math practice question 95" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(95)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(95,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(95,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans95">Correct answer: <b>3,900</b></div>
+</article>
+<article class="qcard u" id="q96" data-q="96">
+  <div class="qcard-head">
+    <span class="qnum">Question 96 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q096.png" alt="SAT Advanced Math practice question 96" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(96)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(96,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(96,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans96">Correct answer: <b>354</b></div>
+</article>
+<article class="qcard u" id="q97" data-q="97">
+  <div class="qcard-head">
+    <span class="qnum">Question 97 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q097.png" alt="SAT Advanced Math practice question 97" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(97)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(97,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(97,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans97">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q98" data-q="98">
+  <div class="qcard-head">
+    <span class="qnum">Question 98 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q098.png" alt="SAT Advanced Math practice question 98" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(98)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(98,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(98,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans98">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q99" data-q="99">
+  <div class="qcard-head">
+    <span class="qnum">Question 99 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q099.png" alt="SAT Advanced Math practice question 99" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(99)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(99,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(99,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans99">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q100" data-q="100">
+  <div class="qcard-head">
+    <span class="qnum">Question 100 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q100.png" alt="SAT Advanced Math practice question 100" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(100)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(100,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(100,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans100">Correct answer: <b>200</b></div>
+</article>
+<article class="qcard u" id="q101" data-q="101">
+  <div class="qcard-head">
+    <span class="qnum">Question 101 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q101.png" alt="SAT Advanced Math practice question 101" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(101)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(101,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(101,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans101">Correct answer: <b>35, 36, 37</b></div>
+</article>
+<article class="qcard u" id="q102" data-q="102">
+  <div class="qcard-head">
+    <span class="qnum">Question 102 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q102.png" alt="SAT Advanced Math practice question 102" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(102)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(102,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(102,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans102">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q103" data-q="103">
+  <div class="qcard-head">
+    <span class="qnum">Question 103 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q103.png" alt="SAT Advanced Math practice question 103" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(103)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(103,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(103,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans103">Correct answer: <b>462</b></div>
+</article>
+<article class="qcard u" id="q104" data-q="104">
+  <div class="qcard-head">
+    <span class="qnum">Question 104 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q104.png" alt="SAT Advanced Math practice question 104" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(104)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(104,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(104,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans104">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q105" data-q="105">
+  <div class="qcard-head">
+    <span class="qnum">Question 105 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q105.png" alt="SAT Advanced Math practice question 105" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(105)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(105,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(105,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans105">Correct answer: <b>12</b></div>
+</article>
+<article class="qcard u" id="q106" data-q="106">
+  <div class="qcard-head">
+    <span class="qnum">Question 106 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q106.png" alt="SAT Advanced Math practice question 106" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(106)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(106,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(106,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans106">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q107" data-q="107">
+  <div class="qcard-head">
+    <span class="qnum">Question 107 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q107.png" alt="SAT Advanced Math practice question 107" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(107)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(107,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(107,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans107">Correct answer: <b>183</b></div>
+</article>
+<article class="qcard u" id="q108" data-q="108">
+  <div class="qcard-head">
+    <span class="qnum">Question 108 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q108.png" alt="SAT Advanced Math practice question 108" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(108)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(108,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(108,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans108">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q109" data-q="109">
+  <div class="qcard-head">
+    <span class="qnum">Question 109 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q109.png" alt="SAT Advanced Math practice question 109" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(109)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(109,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(109,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans109">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q110" data-q="110">
+  <div class="qcard-head">
+    <span class="qnum">Question 110 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q110.png" alt="SAT Advanced Math practice question 110" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(110)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(110,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(110,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans110">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q111" data-q="111">
+  <div class="qcard-head">
+    <span class="qnum">Question 111 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q111.png" alt="SAT Advanced Math practice question 111" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(111)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(111,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(111,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans111">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q112" data-q="112">
+  <div class="qcard-head">
+    <span class="qnum">Question 112 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q112.png" alt="SAT Advanced Math practice question 112" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(112)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(112,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(112,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans112">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q113" data-q="113">
+  <div class="qcard-head">
+    <span class="qnum">Question 113 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q113.png" alt="SAT Advanced Math practice question 113" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(113)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(113,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(113,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans113">Correct answer: <b>35</b></div>
+</article>
+<article class="qcard u" id="q114" data-q="114">
+  <div class="qcard-head">
+    <span class="qnum">Question 114 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q114.png" alt="SAT Advanced Math practice question 114" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(114)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(114,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(114,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans114">Correct answer: <b>A</b></div>
+</article>
+<article class="qcard u" id="q115" data-q="115">
+  <div class="qcard-head">
+    <span class="qnum">Question 115 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q115.png" alt="SAT Advanced Math practice question 115" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(115)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(115,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(115,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans115">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q116" data-q="116">
+  <div class="qcard-head">
+    <span class="qnum">Question 116 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q116.png" alt="SAT Advanced Math practice question 116" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(116)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(116,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(116,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans116">Correct answer: <b>194</b></div>
+</article>
+<article class="qcard u" id="q117" data-q="117">
+  <div class="qcard-head">
+    <span class="qnum">Question 117 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q117.png" alt="SAT Advanced Math practice question 117" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(117)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(117,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(117,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans117">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q118" data-q="118">
+  <div class="qcard-head">
+    <span class="qnum">Question 118 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q118.png" alt="SAT Advanced Math practice question 118" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(118)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(118,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(118,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans118">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q119" data-q="119">
+  <div class="qcard-head">
+    <span class="qnum">Question 119 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q119.png" alt="SAT Advanced Math practice question 119" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(119)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(119,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(119,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans119">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q120" data-q="120">
+  <div class="qcard-head">
+    <span class="qnum">Question 120 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q120.png" alt="SAT Advanced Math practice question 120" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(120)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(120,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(120,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans120">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q121" data-q="121">
+  <div class="qcard-head">
+    <span class="qnum">Question 121 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q121.png" alt="SAT Advanced Math practice question 121" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(121)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(121,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(121,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans121">Correct answer: <b>1,937</b></div>
+</article>
+<article class="qcard u" id="q122" data-q="122">
+  <div class="qcard-head">
+    <span class="qnum">Question 122 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q122.png" alt="SAT Advanced Math practice question 122" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(122)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(122,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(122,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans122">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q123" data-q="123">
+  <div class="qcard-head">
+    <span class="qnum">Question 123 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q123.png" alt="SAT Advanced Math practice question 123" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(123)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(123,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(123,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans123">Correct answer: <b>196</b></div>
+</article>
+<article class="qcard u" id="q124" data-q="124">
+  <div class="qcard-head">
+    <span class="qnum">Question 124 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q124.png" alt="SAT Advanced Math practice question 124" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(124)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(124,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(124,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans124">Correct answer: <b>1,932</b></div>
+</article>
+<article class="qcard u" id="q125" data-q="125">
+  <div class="qcard-head">
+    <span class="qnum">Question 125 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q125.png" alt="SAT Advanced Math practice question 125" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(125)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(125,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(125,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans125">Correct answer: <b>48,384</b></div>
+</article>
+<article class="qcard u" id="q126" data-q="126">
+  <div class="qcard-head">
+    <span class="qnum">Question 126 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q126.png" alt="SAT Advanced Math practice question 126" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(126)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(126,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(126,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans126">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q127" data-q="127">
+  <div class="qcard-head">
+    <span class="qnum">Question 127 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q127.png" alt="SAT Advanced Math practice question 127" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(127)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(127,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(127,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans127">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q128" data-q="128">
+  <div class="qcard-head">
+    <span class="qnum">Question 128 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q128.png" alt="SAT Advanced Math practice question 128" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(128)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(128,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(128,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans128">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q129" data-q="129">
+  <div class="qcard-head">
+    <span class="qnum">Question 129 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q129.png" alt="SAT Advanced Math practice question 129" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(129)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(129,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(129,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans129">Correct answer: <b>52.5</b></div>
+</article>
+<article class="qcard u" id="q130" data-q="130">
+  <div class="qcard-head">
+    <span class="qnum">Question 130 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q130.png" alt="SAT Advanced Math practice question 130" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(130)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(130,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(130,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans130">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q131" data-q="131">
+  <div class="qcard-head">
+    <span class="qnum">Question 131 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q131.png" alt="SAT Advanced Math practice question 131" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(131)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(131,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(131,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans131">Correct answer: <b>9</b></div>
+</article>
+<article class="qcard u" id="q132" data-q="132">
+  <div class="qcard-head">
+    <span class="qnum">Question 132 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q132.png" alt="SAT Advanced Math practice question 132" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(132)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(132,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(132,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans132">Correct answer: <b>16</b></div>
+</article>
+<article class="qcard u" id="q133" data-q="133">
+  <div class="qcard-head">
+    <span class="qnum">Question 133 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q133.png" alt="SAT Advanced Math practice question 133" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(133)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(133,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(133,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans133">Correct answer: <b>1</b></div>
+</article>
+<article class="qcard u" id="q134" data-q="134">
+  <div class="qcard-head">
+    <span class="qnum">Question 134 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q134.png" alt="SAT Advanced Math practice question 134" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(134)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(134,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(134,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans134">Correct answer: <b>102</b></div>
+</article>
+<article class="qcard u" id="q135" data-q="135">
+  <div class="qcard-head">
+    <span class="qnum">Question 135 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q135.png" alt="SAT Advanced Math practice question 135" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(135)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(135,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(135,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans135">Correct answer: <b>93</b></div>
+</article>
+<article class="qcard u" id="q136" data-q="136">
+  <div class="qcard-head">
+    <span class="qnum">Question 136 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q136.png" alt="SAT Advanced Math practice question 136" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(136)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(136,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(136,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans136">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q137" data-q="137">
+  <div class="qcard-head">
+    <span class="qnum">Question 137 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q137.png" alt="SAT Advanced Math practice question 137" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(137)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(137,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(137,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans137">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q138" data-q="138">
+  <div class="qcard-head">
+    <span class="qnum">Question 138 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q138.png" alt="SAT Advanced Math practice question 138" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(138)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(138,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(138,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans138">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q139" data-q="139">
+  <div class="qcard-head">
+    <span class="qnum">Question 139 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q139.png" alt="SAT Advanced Math practice question 139" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(139)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(139,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(139,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans139">Correct answer: <b>123</b></div>
+</article>
+<article class="qcard u" id="q140" data-q="140">
+  <div class="qcard-head">
+    <span class="qnum">Question 140 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q140.png" alt="SAT Advanced Math practice question 140" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(140)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(140,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(140,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans140">Correct answer: <b>-131</b></div>
+</article>
+<article class="qcard u" id="q141" data-q="141">
+  <div class="qcard-head">
+    <span class="qnum">Question 141 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q141.png" alt="SAT Advanced Math practice question 141" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(141)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(141,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(141,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans141">Correct answer: <b>10/3 or 3.333</b></div>
+</article>
+<article class="qcard u" id="q142" data-q="142">
+  <div class="qcard-head">
+    <span class="qnum">Question 142 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q142.png" alt="SAT Advanced Math practice question 142" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(142)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(142,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(142,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans142">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q143" data-q="143">
+  <div class="qcard-head">
+    <span class="qnum">Question 143 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q143.png" alt="SAT Advanced Math practice question 143" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(143)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(143,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(143,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans143">Correct answer: <b>5,476</b></div>
+</article>
+<article class="qcard u" id="q144" data-q="144">
+  <div class="qcard-head">
+    <span class="qnum">Question 144 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q144.png" alt="SAT Advanced Math practice question 144" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(144)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(144,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(144,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans144">Correct answer: <b>C</b></div>
+</article>
+<article class="qcard u" id="q145" data-q="145">
+  <div class="qcard-head">
+    <span class="qnum">Question 145 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q145.png" alt="SAT Advanced Math practice question 145" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(145)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(145,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(145,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans145">Correct answer: <b>14</b></div>
+</article>
+<article class="qcard u" id="q146" data-q="146">
+  <div class="qcard-head">
+    <span class="qnum">Question 146 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q146.png" alt="SAT Advanced Math practice question 146" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(146)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(146,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(146,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans146">Correct answer: <b>-15</b></div>
+</article>
+<article class="qcard u" id="q147" data-q="147">
+  <div class="qcard-head">
+    <span class="qnum">Question 147 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q147.png" alt="SAT Advanced Math practice question 147" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(147)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(147,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(147,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans147">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q148" data-q="148">
+  <div class="qcard-head">
+    <span class="qnum">Question 148 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q148.png" alt="SAT Advanced Math practice question 148" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(148)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(148,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(148,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans148">Correct answer: <b>D</b></div>
+</article>
+<article class="qcard u" id="q149" data-q="149">
+  <div class="qcard-head">
+    <span class="qnum">Question 149 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q149.png" alt="SAT Advanced Math practice question 149" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(149)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(149,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(149,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans149">Correct answer: <b>B</b></div>
+</article>
+<article class="qcard u" id="q150" data-q="150">
+  <div class="qcard-head">
+    <span class="qnum">Question 150 <span style="color:var(--ink-soft);font-weight:500;">of 150</span></span>
+    <span class="qstatus">Unanswered</span>
+  </div>
+  <div class="qimg-wrap"><img src="qimgs/q150.png" alt="SAT Advanced Math practice question 150" loading="lazy"></div>
+  <div class="qactions">
+    <button class="btn btn-show" onclick="toggleAnswer(150)">Show Answer</button>
+    <button class="btn btn-correct" onclick="mark(150,'c')">&#10003; I got it right</button>
+    <button class="btn btn-mistake" onclick="mark(150,'m')">&#10007; I made a mistake</button>
+  </div>
+  <div class="answer-reveal" id="ans150">Correct answer: <b>32.67</b></div>
+</article>
+  </div>
+
+  <footer class="pfoot">
+    SAT Samarkand &middot; Advanced Math practice set for enrolled students. Please don't share this link outside your cohort.
+  </footer>
+</div>
+
+<script>
+var PASSCODE = "satsamarkand2024";
+var N = 150;
+
+function tryUnlock(){
+  var v = document.getElementById('pw').value.trim().toLowerCase();
+  if (v === PASSCODE.toLowerCase()) {
+    try { localStorage.setItem('samq_unlocked','1'); } catch(e){}
+    document.getElementById('lock').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+  } else {
+    document.getElementById('lockerr').textContent = 'Incorrect passcode. Ask your mentor if you don\'t have it.';
+  }
+}
+
+(function checkUnlocked(){
+  try {
+    if (localStorage.getItem('samq_unlocked') === '1') {
+      document.getElementById('lock').style.display = 'none';
+      document.getElementById('app').style.display = 'block';
+    }
+  } catch(e){}
+})();
+
+function loadState(){
+  try {
+    var raw = localStorage.getItem('samq_progress');
+    return raw ? JSON.parse(raw) : {};
+  } catch(e){ return {}; }
+}
+function saveState(state){
+  try { localStorage.setItem('samq_progress', JSON.stringify(state)); } catch(e){}
+}
+
+var state = loadState();
+
+function toggleAnswer(i){
+  var el = document.getElementById('ans'+i);
+  el.classList.toggle('show');
+}
+
+function mark(i, val){
+  if (state[i] === val) delete state[i]; else state[i] = val;
+  saveState(state);
+  renderCard(i);
+  renderStats();
+}
+
+function renderCard(i){
+  var card = document.getElementById('q'+i);
+  var status = state[i];
+  card.classList.remove('c','m','u');
+  card.classList.add(status || 'u');
+  var statusEl = card.querySelector('.qstatus');
+  statusEl.textContent = status === 'c' ? 'Correct' : status === 'm' ? 'Mistake' : 'Unanswered';
+  var cBtn = card.querySelector('.btn-correct');
+  var mBtn = card.querySelector('.btn-mistake');
+  cBtn.classList.toggle('active', status === 'c');
+  mBtn.classList.toggle('active', status === 'm');
+  var jc = document.getElementById('jc'+i);
+  jc.classList.remove('c','m');
+  if (status) jc.classList.add(status);
+}
+
+function renderStats(){
+  var c=0,m=0;
+  for (var k in state) { if (state[k]==='c') c++; else if (state[k]==='m') m++; }
+  var u = N - c - m;
+  document.getElementById('statC').textContent = c;
+  document.getElementById('statM').textContent = m;
+  document.getElementById('statU').textContent = u;
+  document.getElementById('segC').style.width = (c/N*100)+'%';
+  document.getElementById('segM').style.width = (m/N*100)+'%';
+}
+
+function resetProgress(){
+  if (!confirm('Reset all progress on this device? This cannot be undone.')) return;
+  state = {};
+  saveState(state);
+  for (var i=1;i<=N;i++) renderCard(i);
+  renderStats();
+}
+
+var currentFilter = 'all';
+function setFilter(f){
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.toggle('active', b.dataset.f===f); });
+  var wrap = document.getElementById('qwrap');
+  wrap.classList.remove('hide-c','hide-m','hide-u');
+  if (f==='u') { wrap.classList.add('hide-c'); wrap.classList.add('hide-m'); }
+  else if (f==='m') { wrap.classList.add('hide-c'); wrap.classList.add('hide-u'); }
+  else if (f==='c') { wrap.classList.add('hide-m'); wrap.classList.add('hide-u'); }
+}
+
+for (var i=1;i<=N;i++) renderCard(i);
+renderStats();
+</script>
+</body>
+</html>
