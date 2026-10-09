@@ -29,7 +29,7 @@ a{text-decoration:none;color:inherit}
 
 /* LANG BAR */
 .lbar{background:var(--navy3);display:flex;justify-content:flex-end;gap:2px;padding:6px 5vw;align-items:center}
-.lb{background:none;border:none;color:rgba(255,255,255,.4);font-size:.72rem;font-weight:500;font-family:var(--f);letter-spacing:.04em;padding:4px 10px;border-radius:20px;cursor:pointer;transition:all .15s}
+.lb{background:none;border:none;color:rgba(255,255,255,.4);font-size:.72rem;font-weight:500;font-family:var(--f);letter-spacing:.04em;padding:4px 10px;border-radius:4px;cursor:pointer;transition:all .15s}
 .lb:hover{color:rgba(255,255,255,.75)}
 .lb.on{color:#fff;background:rgba(255,255,255,.12)}
 
@@ -46,7 +46,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .nlinks a:hover{color:var(--t)}
 .nlinks a.on{color:var(--blue);border-bottom-color:var(--blue)}
 .nright{display:flex;align-items:center;gap:8px}
-.nenroll{background:var(--blue);color:#fff;border:none;padding:8px 18px;border-radius:20px;font-size:.82rem;font-weight:600;font-family:var(--f);text-decoration:none;transition:background .15s;white-space:nowrap;cursor:pointer}
+.nenroll{background:var(--blue);color:#fff;border:none;padding:8px 18px;border-radius:4px;font-size:.82rem;font-weight:600;font-family:var(--f);text-decoration:none;transition:background .15s;white-space:nowrap;cursor:pointer}
 .nenroll:hover{background:var(--blue2)}
 .nham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--t)}
 
@@ -63,17 +63,17 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .shd{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.4rem;flex-wrap:wrap;gap:1rem}
 
 /* BUTTONS */
-.btnf{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;border:none;padding:14px 30px;border-radius:980px;font-size:.95rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:background .15s,transform .1s}
+.btnf{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;border:none;padding:14px 30px;border-radius:4px;font-size:.95rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:background .15s,transform .1s}
 .btnf:hover{background:var(--blue2);transform:scale(.98)}
-.btns{display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--blue);border:1.5px solid var(--blue);padding:13px 28px;border-radius:980px;font-size:.95rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:all .15s}
+.btns{display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--blue);border:1.5px solid var(--blue);padding:13px 28px;border-radius:4px;font-size:.95rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:all .15s}
 .btns:hover{background:var(--bxpale)}
-.btnw{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--navy);border:none;padding:14px 30px;border-radius:980px;font-size:.95rem;font-weight:700;font-family:var(--f);cursor:pointer;text-decoration:none;transition:all .15s}
+.btnw{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--navy);border:none;padding:14px 30px;border-radius:4px;font-size:.95rem;font-weight:700;font-family:var(--f);cursor:pointer;text-decoration:none;transition:all .15s}
 .btnw:hover{background:var(--bg2)}
 
 /* HERO */
 .hero{padding:84px 5vw 64px;text-align:center;position:relative;overflow:hidden}
-.hbg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(6,97,222,.07),transparent 70%)}
-.hero-pill{display:inline-flex;align-items:center;gap:8px;background:var(--bxpale);border:1px solid rgba(6,97,222,.15);border-radius:20px;padding:6px 16px;margin-bottom:1.6rem;font-size:.78rem;font-weight:500;color:var(--blue);position:relative}
+.hbg{position:absolute;inset:0;pointer-events:none;background:transparent}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:var(--bxpale);border:1px solid rgba(6,97,222,.15);border-radius:4px;padding:6px 16px;margin-bottom:1.6rem;font-size:.78rem;font-weight:500;color:var(--blue);position:relative}
 .hero-pdot{width:6px;height:6px;border-radius:50%;background:var(--blue);animation:blink 2s infinite;flex-shrink:0}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 .hero h1{font-family:var(--f);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.08;letter-spacing:-.03em;color:var(--navy);max-width:860px;margin:0 auto 1.2rem;position:relative}
@@ -90,7 +90,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:var(--rlg);overflow:hidden;margin-top:2.5rem}
 .wc{background:#fff;padding:30px 26px;transition:background .15s}
 .wc:hover{background:var(--bxpale)}
-.wic{width:40px;height:40px;border-radius:10px;background:var(--bxpale);display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;font-size:1.25rem}
+.wic{width:40px;height:40px;border-radius:4px;background:var(--bxpale);display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;font-size:1.25rem}
 .wc h3{font-size:.97rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;letter-spacing:-.01em}
 .wc p{font-size:.83rem;color:var(--tm);line-height:1.6}
 
@@ -115,9 +115,9 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pcard{background:#fff;border:1px solid var(--bd);border-radius:var(--rxl);overflow:hidden;box-shadow:var(--ss);transition:all .25s;display:flex;flex-direction:column}
 .pcard:hover{box-shadow:var(--sm);transform:translateY(-4px)}
 .pcard.popular{border:2px solid var(--blue);box-shadow:0 0 0 4px rgba(6,97,222,.07),var(--sm)}
-.pcard.premium{border:2px solid var(--navy);background:linear-gradient(160deg,var(--navy3),var(--navy));color:#fff}
-.pribbon{display:inline-block;background:var(--blue);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:.7rem}
-.pcard.premium .pribbon{background:linear-gradient(90deg,#d4a030,#fbbf24);color:var(--navy3)}
+.pcard.premium{border:2px solid var(--navy);background:#022049;color:#fff}
+.pribbon{display:inline-block;background:var(--blue);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:4px;margin-bottom:.7rem}
+.pcard.premium .pribbon{background:#0661de;color:var(--navy3)}
 .phead{padding:30px 28px 0}
 .ptag{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:.4rem}
 .pcard.premium .ptag{color:#60a5fa}
@@ -133,10 +133,10 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pcard.premium .pfeats li{color:rgba(255,255,255,.8)}
 .pfeats li::before{content:'✓';color:var(--green);font-weight:700;font-size:.85rem;flex-shrink:0;margin-top:.05em}
 .pcard.premium .pfeats li::before{color:#34d399}
-.pbtn{display:block;text-align:center;padding:13px;border-radius:980px;font-size:.88rem;font-weight:600;font-family:var(--f);text-decoration:none;transition:all .15s;border:none;cursor:pointer;width:100%}
+.pbtn{display:block;text-align:center;padding:13px;border-radius:4px;font-size:.88rem;font-weight:600;font-family:var(--f);text-decoration:none;transition:all .15s;border:none;cursor:pointer;width:100%}
 .pbtn.sol{background:var(--blue);color:#fff}
 .pbtn.sol:hover{background:var(--blue2)}
-.pbtn.pop{background:var(--blue);color:#fff;box-shadow:0 4px 14px rgba(6,97,222,.28)}
+.pbtn.pop{background:var(--blue);color:#fff;box-shadow:none}
 .pbtn.pop:hover{background:var(--blue2)}
 .pbtn.prem{background:#fff;color:var(--navy)}
 .pbtn.prem:hover{background:var(--bg2)}
@@ -153,8 +153,8 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .faq-a p{padding:0 22px;font-size:.88rem;color:var(--tm);line-height:1.7}
 
 /* CTA BANNER */
-.cta-banner{background:linear-gradient(135deg,var(--navy3),var(--navy),var(--blue2));border-radius:var(--rxl);padding:60px 48px;text-align:center;color:#fff;position:relative;overflow:hidden}
-.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.07),transparent 60%);pointer-events:none}
+.cta-banner{background:#022049;border-radius:var(--rxl);padding:60px 48px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background:transparent;pointer-events:none}
 .cta-banner h2{font-family:var(--f);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;margin-bottom:.7rem;position:relative}
 .cta-banner p{font-size:1rem;color:rgba(255,255,255,.7);max-width:520px;margin:0 auto 2rem;line-height:1.65;position:relative}
 
@@ -164,7 +164,7 @@ footer a{color:rgba(255,255,255,.6)}
 footer a:hover{color:#fff}
 
 
-.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 4px 20px rgba(0,0,0,.15);text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:0 6px 28px rgba(0,0,0,.2)}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:linear-gradient(135deg,#10b981,#059669);color:#fff}.fmchat .fmicon{background:linear-gradient(135deg,#0088cc,#006bb3);color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
+.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 
 
 
@@ -179,12 +179,12 @@ footer a:hover{color:#fff}
 @media(max-width:640px){.wgrid{grid-template-columns:1fr}.uni-grid{grid-template-columns:1fr}.pgrid{grid-template-columns:1fr}}
 
 /* Mob nav overlay */
-.mob-nav{display:none;position:fixed;top:52px;left:0;right:0;bottom:0;background:#fff;z-index:499;overflow-y:auto;box-shadow:0 8px 32px rgba(0,0,0,.18)}
+.mob-nav{display:none;position:fixed;top:52px;left:0;right:0;bottom:0;background:#fff;z-index:499;overflow-y:auto;box-shadow:none}
 .mob-nav.open{display:block}
 .mob-nav ul{list-style:none;padding:6px 0 40px;margin:0}
 .mob-nav li a{display:block;padding:13px 24px;color:var(--t,#1d1d1f);font-size:.95rem;text-decoration:none;border-bottom:1px solid #f5f5f7}
 .mob-nav li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
-.mob-nav .mob-enroll{display:block;margin:16px 24px 8px;padding:14px 24px;background:var(--blue,#0661de);color:#fff!important;border-radius:10px;text-align:center;font-weight:600;font-size:.95rem;border-bottom:none!important}
+.mob-nav .mob-enroll{display:block;margin:16px 24px 8px;padding:14px 24px;background:var(--blue,#0661de);color:#fff!important;border-radius:4px;text-align:center;font-weight:600;font-size:.95rem;border-bottom:none!important}
 .mob-nav .mob-sec{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--tl,#86868b);padding:10px 24px 3px;margin-top:4px;pointer-events:none;display:block}
 
 /* Hamburger → X */
@@ -254,7 +254,7 @@ footer a:hover{color:#fff}
 nav{
   transition:box-shadow .5s ease,background .4s ease !important}
 nav.scrolled{
-  box-shadow:0 1px 24px rgba(0,0,0,.09) !important}
+  box-shadow:none}
 .nlinks a{
   transition:color .3s ease,border-color .3s ease !important}
 .lb{
@@ -274,7 +274,7 @@ nav.scrolled{
 .pprice{font-family:var(--f);font-size:2.2rem;font-weight:700;color:var(--navy);letter-spacing:-.04em;margin:12px 0 4px;line-height:1}
 .pprice-sub{font-size:.78rem;color:var(--tm);margin-bottom:0}
 .pcard.popular .pprice{color:var(--blue)}
-.pcard.premium .pprice{color:#7c3aed}
+.pcard.premium .pprice{color:#0661de}
 
 .footer{background:var(--navy3);border-top:1px solid rgba(255,255,255,.05);padding:52px 5vw 32px}
 .fgrid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
@@ -292,8 +292,8 @@ nav.scrolled{
 .fbot a:hover{color:rgba(255,255,255,.5)}
 
 /* ── PAGE-SPECIFIC ── */
-.pg-hero{background:linear-gradient(135deg,#f0f5ff 0%,#e8f0fe 50%,#f4f8ff 100%);padding:72px 5vw 56px;text-align:center}
-.pg-label{display:inline-flex;align-items:center;gap:6px;background:rgba(6,97,222,.08);border:1px solid rgba(6,97,222,.18);border-radius:999px;padding:5px 14px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
+.pg-hero{background:#f6f8fd;padding:72px 5vw 56px;text-align:center}
+.pg-label{display:inline-flex;align-items:center;gap:6px;background:rgba(6,97,222,.08);border:1px solid rgba(6,97,222,.18);border-radius:4px;padding:5px 14px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
 .pg-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue);display:inline-block}
 .pg-h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:16px}
 .pg-h1 span{color:var(--blue)}
@@ -306,21 +306,21 @@ nav.scrolled{
 .centers-section{max-width:900px;margin:0 auto;padding:64px 5vw}
 .centers-section h2{font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:8px;text-align:center}
 .centers-section .s2-sub{text-align:center;color:#718096;font-size:.92rem;margin-bottom:40px}
-.center-card{background:#fff;border:1px solid #e8edf5;border-radius:28px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,.05);transition:box-shadow .2s,transform .2s;display:grid;grid-template-columns:48px 1fr;gap:20px;align-items:start}
-.center-card:hover{box-shadow:0 8px 36px rgba(0,0,0,.1);transform:translateY(-2px)}
-.center-num{width:48px;height:48px;border-radius:14px;background:var(--blue);color:#fff;font-size:1.1rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.center-card{background:#fff;border:1px solid #e8edf5;border-radius:4px;padding:28px 32px;margin-bottom:24px;box-shadow:none;transition:box-shadow .2s,transform .2s;display:grid;grid-template-columns:48px 1fr;gap:20px;align-items:start}
+.center-card:hover{box-shadow:none;transform:translateY(-2px)}
+.center-num{width:48px;height:48px;border-radius:4px;background:var(--blue);color:#fff;font-size:1.1rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
 .center-body h3{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.3}
 .center-addr{font-size:.86rem;color:#4a5568;display:flex;align-items:flex-start;gap:7px;margin-bottom:14px;line-height:1.5}
 .center-addr svg{flex-shrink:0;margin-top:2px;color:var(--blue)}
 .center-maps{display:flex;gap:10px;flex-wrap:wrap}
-.map-btn{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border-radius:999px;font-size:.8rem;font-weight:600;text-decoration:none;transition:transform .15s,box-shadow .15s;border:1.5px solid}
+.map-btn{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border-radius:4px;font-size:.8rem;font-weight:600;text-decoration:none;transition:transform .15s,box-shadow .15s;border:1.5px solid}
 .map-btn-google{background:#fff;color:#1a73e8;border-color:#1a73e8}
-.map-btn-google:hover{background:#1a73e8;color:#fff;transform:translateY(-1px);box-shadow:0 4px 14px rgba(26,115,232,.3)}
+.map-btn-google:hover{background:#1a73e8;color:#fff;transform:translateY(-1px);box-shadow:none}
 .map-btn-yandex{background:#fff;color:#fc3f1d;border-color:#fc3f1d}
-.map-btn-yandex:hover{background:#fc3f1d;color:#fff;transform:translateY(-1px);box-shadow:0 4px 14px rgba(252,63,29,.3)}
-.center-note{font-size:.78rem;color:#718096;margin-top:10px;padding:8px 12px;background:#f7f9fc;border-radius:12px;border-left:3px solid var(--blue)}
+.map-btn-yandex:hover{background:#fc3f1d;color:#fff;transform:translateY(-1px);box-shadow:none}
+.center-note{font-size:.78rem;color:#718096;margin-top:10px;padding:8px 12px;background:#f7f9fc;border-radius:4px;border-left:3px solid var(--blue)}
 /* CTA Banner */
-.cta-block{background:linear-gradient(135deg,var(--navy) 0%,#0a3a7a 100%);border-radius:28px;padding:48px 40px;text-align:center;max-width:760px;margin:0 auto 64px;color:#fff}
+.cta-block{background:#022049;border-radius:4px;padding:48px 40px;text-align:center;max-width:760px;margin:0 auto 64px;color:#fff}
 .cta-block h2{font-size:1.8rem;font-weight:800;margin-bottom:12px}
 .cta-block p{color:rgba(255,255,255,.7);font-size:.95rem;margin-bottom:28px;line-height:1.6}
 .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
@@ -331,7 +331,6 @@ nav.scrolled{
   .pg-stats{gap:20px}
 }
 </style>
-<link rel="stylesheet" href="/enhancements.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -347,129 +346,83 @@ nav.scrolled{
   ]
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/theme.css?v=3">
 </head>
 <body>
 
-<nav class="mob-nav" id="mobnav">
-<ul class="mob-list">
-<li><a href="/" onclick="closeMobileNav()" data-en="Home" data-uz="Bosh sahifa" data-ru="Главная">Home</a></li>
-
-<li class="mob-group">
-  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
-    <span data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</span>
-    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <ul class="mob-group-body">
-    <li><a href="/courses/" onclick="closeMobileNav()" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
-    <li><a href="/ap/" onclick="closeMobileNav()" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a></li>
-    <li><a href="/ielts/" onclick="closeMobileNav()" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a></li>
-    <li><a href="/schedule/" onclick="closeMobileNav()" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
-    <li><a href="/intensive-sat-bootcamp/" onclick="closeMobileNav()" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
-    <li><a href="/digital-sat/" onclick="closeMobileNav()" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
-  </ul>
-</li>
-
-<li class="mob-group">
-  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
-    <span data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</span>
-    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <ul class="mob-group-body">
-    <li><a href="/admissions/" onclick="closeMobileNav()" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг">Admissions Consulting</a></li>
-    <li><a href="/universities/" onclick="closeMobileNav()" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></li>
-    <li><a href="/results/" onclick="closeMobileNav()" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
-  </ul>
-</li>
-
-<li class="mob-group">
-  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
-    <span data-en="About" data-uz="Biz haqimizda" data-ru="О нас">About</span>
-    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <ul class="mob-group-body">
-    <li><a href="/about/" onclick="closeMobileNav()" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
-    <li><a href="/teachers/" onclick="closeMobileNav()" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Преподаватели">Our Teachers</a></li>
-    <li><a href="/blog/" onclick="closeMobileNav()" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
-    <li><a href="/sat-zone/" onclick="closeMobileNav()" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a></li>
-    <li><a href="/contact/" onclick="closeMobileNav()" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
-  </ul>
-</li>
-
-<li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Diagnostic" data-uz="Diagnostika" data-ru="Диагностика">Diagnostic</a></li>
-<li><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="mob-enroll" data-en="Book FREE Lesson →" data-uz="Bepul Dars →" data-ru="Бесплатный урок →">Enroll Now →</a></li>
-</ul>
-</nav>
 
 
-<div class="lbar">
-<button class="lb" data-lang="en" onclick="setLang('en')">EN</button>
-<button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button>
-<button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button>
+
+
+
+<!--SX-HEADER-->
+<a class="sx-skip" href="#sx-main">Skip to content</a>
+<div class="sx-hd" id="sx-hd" role="banner">
+  <div class="sx-wrap">
+    <div class="sx-hd-in">
+      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/logo.png" alt="" width="34" height="34"><span><small>SAT</small>Samarkand</span></a>
+      <div class="sx-nav" role="navigation" aria-label="Main">
+        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div></div>
+        <div class="sx-nav-i"><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div></div>
+        <div class="sx-nav-i"><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></div>
+        <div class="sx-nav-i"><a href="/sat-zone/" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a></div>
+        <div class="sx-nav-i"><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></div>
+      </div>
+      <div class="sx-langs" role="group" aria-label="Language"><button class="lb" data-lang="en" onclick="setLang('en')">EN</button><button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button><button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button></div>
+      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a>
+      <button class="sx-burger" id="sx-burger" aria-label="Menu" aria-expanded="false"><i></i></button>
+    </div>
+    <div class="sx-drawer" role="navigation" aria-label="Mobile">
+      <a class="sx-has-sub" href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a>
+      <div class="sx-sub"><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div>
+      <a class="sx-has-sub" href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a>
+      <div class="sx-sub"><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div>
+      <a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a>
+      <a class="sx-has-sub" href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a>
+      <div class="sx-sub"><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div>
+      <a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a>
+      <a href="/sat-zone/" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a>
+      <a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a>
+      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a></div>
+    </div>
+  </div>
 </div>
-
-<nav><div class="ni">
-<a href="/" class="nlogo"><img src="/logo.png" alt="SAT Samarkand logo" width="28" height="28" loading="eager"><div class="nlt"><span class="nlt1">SAT</span><span class="nlt2">SAMARKAND</span></div></a>
-<ul class="nlinks" id="nlinks">
-<li><a onclick="closeMobileNav()" href="/" data-en="Home" data-uz="Bosh sahifa" data-ru="Главная">Home</a></li>
-<li class="has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses<span class="dd-arrow">▾</span></a>
-  <ul class="dd">
-    <li><a onclick="closeMobileNav()" href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
-    <li><a onclick="closeMobileNav()" href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a></li>
-    <li><a onclick="closeMobileNav()" href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a></li>
-    <li><a onclick="closeMobileNav()" href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
-    <li><a onclick="closeMobileNav()" href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
-    <li><a onclick="closeMobileNav()" href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
-  </ul>
-</li>
-<li class="has-dd"><a href="/admissions/" class="on" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions<span class="dd-arrow">▾</span></a>
-  <ul class="dd">
-    <li><a onclick="closeMobileNav()" href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a></li>
-    <li><a onclick="closeMobileNav()" href="/universities/" data-en="76+ Universities" data-uz="76+ Universitetlar" data-ru="76+ Университетов">76+ Universities</a></li>
-  </ul>
-</li>
-<li><a onclick="closeMobileNav()" href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
-<li class="has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About<span class="dd-arrow">▾</span></a>
-  <ul class="dd">
-    <li><a onclick="closeMobileNav()" href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
-    <li><a onclick="closeMobileNav()" href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></li>
-  </ul>
-</li>
-<li><a onclick="closeMobileNav()" href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
-<li><a onclick="closeMobileNav()" href="/sat-zone/" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a></li>
-<li><a onclick="closeMobileNav()" href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
-<li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Test" data-uz="Bepul test" data-ru="Бесплатный тест">Free Test</a></li>
-</ul>
-<div class="nright"><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="nenroll" data-en="Book FREE Lesson" data-uz="Bepul Dars" data-ru="Бесплатный урок">Enroll Now</a><button class="nham" onclick="toggleMobileNav()" aria-label="Menu"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="12" x2="19" y2="12"/><line x1="3" y1="18" x2="19" y2="18"/></svg></button></div>
-</div></nav>
+<span id="sx-main"></span>
+<!--/SX-HEADER-->
 
 <!-- HERO -->
-<section style="background:linear-gradient(160deg,#010e24 0%,#02163a 55%,#0a1f4e 100%);padding:80px 5vw 64px;text-align:center;position:relative;overflow:hidden;">
+<section style="background:#022049;padding:80px 5vw 64px;text-align:center;position:relative;overflow:hidden;">
   <!-- glow orbs -->
-  <div style="position:absolute;top:-80px;left:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(6,97,222,.18) 0%,transparent 70%);pointer-events:none"></div>
-  <div style="position:absolute;bottom:-60px;right:-60px;width:360px;height:360px;background:radial-gradient(circle,rgba(59,130,246,.14) 0%,transparent 70%);pointer-events:none"></div>
+  <div style="position:absolute;top:-80px;left:-80px;width:480px;height:480px;background:transparent;pointer-events:none"></div>
+  <div style="position:absolute;bottom:-60px;right:-60px;width:360px;height:360px;background:transparent;pointer-events:none"></div>
 
-  <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(6,97,222,.15);border:1px solid rgba(6,97,222,.3);border-radius:999px;padding:6px 18px;margin-bottom:1.6rem;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#93c5fd;position:relative">
+  <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(6,97,222,.15);border:1px solid rgba(6,97,222,.3);border-radius:4px;padding:6px 18px;margin-bottom:1.6rem;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#93c5fd;position:relative">
     <span style="width:7px;height:7px;border-radius:50%;background:#3b82f6;display:inline-block;animation:_cta-pulse 2s ease-in-out infinite"></span>
     <span data-en="Samarkand · Uzbekistan" data-uz="Samarqand · O'zbekiston" data-ru="Самарканд · Узбекистан">Samarkand · Uzbekistan</span>
   </div>
 
   <h1 style="font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:#fff;margin-bottom:1rem;line-height:1.15;position:relative">
     <span data-en="SAT Test Centers" data-uz="SAT Imtihon Markazlari" data-ru="Центры тестирования SAT">SAT Test Centers</span><br>
-    <span style="background:linear-gradient(135deg,#60a5fa,#93c5fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text" data-en="in Samarkand" data-uz="Samarqandda" data-ru="в Самарканде">in Samarkand</span>
+    <span style="background:#0661de;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text" data-en="in Samarkand" data-uz="Samarqandda" data-ru="в Самарканде">in Samarkand</span>
   </h1>
   <p style="font-size:1.08rem;color:rgba(255,255,255,.7);max-width:560px;margin:0 auto 2.4rem;line-height:1.65;position:relative" data-en="All 5 official SAT testing locations in Samarkand — with exact addresses, directions, and map links." data-uz="Samarqanddagi barcha 5 ta rasmiy SAT imtihon markazlari — aniq manzillar va xarita havolalari bilan." data-ru="Все 5 официальных центров тестирования SAT в Самарканде — с точными адресами и ссылками на карты.">All 5 official SAT testing locations in Samarkand — with exact addresses, directions, and map links.</p>
 
   <!-- stat pills -->
   <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;position:relative">
-    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px 28px;text-align:center">
+    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:16px 28px;text-align:center">
       <div style="font-size:1.8rem;font-weight:900;color:#fff;line-height:1">5</div>
       <div style="font-size:.75rem;color:rgba(255,255,255,.55);margin-top:4px;font-weight:500" data-en="Test Centers" data-uz="Imtihon Markazi" data-ru="Центров">Test Centers</div>
     </div>
-    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px 28px;text-align:center">
+    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:16px 28px;text-align:center">
       <div style="font-size:1.8rem;font-weight:900;color:#fff;line-height:1">1600</div>
       <div style="font-size:.75rem;color:rgba(255,255,255,.55);margin-top:4px;font-weight:500" data-en="Max SAT Score" data-uz="Maksimal Ball" data-ru="Макс. Балл">Max SAT Score</div>
     </div>
-    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px 28px;text-align:center">
+    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:16px 28px;text-align:center">
       <div style="font-size:1.8rem;font-weight:900;color:#fff;line-height:1">Digital</div>
       <div style="font-size:.75rem;color:rgba(255,255,255,.55);margin-top:4px;font-weight:500" data-en="SAT Format" data-uz="SAT Formati" data-ru="Формат SAT">SAT Format</div>
     </div>
@@ -479,16 +432,16 @@ nav.scrolled{
 <!-- PARTNER SPOTLIGHT -->
 <div style="max-width:860px;margin:0 auto;padding:48px 5vw 0">
   <div style="text-align:center;margin-bottom:18px">
-    <span style="display:inline-block;background:linear-gradient(135deg,#8a6414,#D9A74C);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:999px" data-en="SAT Samarkand Partner Location" data-uz="SAT Samarkand hamkor markazi" data-ru="Партнёрская площадка SAT Samarkand">SAT Samarkand Partner Location</span>
+    <span style="display:inline-block;background:#0661de;color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:4px" data-en="SAT Samarkand Partner Location" data-uz="SAT Samarkand hamkor markazi" data-ru="Партнёрская площадка SAT Samarkand">SAT Samarkand Partner Location</span>
   </div>
-  <div class="ctr-card" style="border:1.5px solid #D9A74C;margin-bottom:8px">
-    <div class="ctr-top" style="background:linear-gradient(135deg,#7a5810,#D9A74C)">
+  <div class="ctr-card" style="border:1.5px solid #0661de;margin-bottom:8px">
+    <div class="ctr-top" style="background:#0661de">
       <div class="ctr-num" style="background:rgba(255,255,255,.28)">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8L6 21l1.6-7L2.2 9.2l7.1-.6z"/></svg>
       </div>
       <div style="flex:1;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
         <div class="ctr-name" data-en="Cambridge Unit School" data-uz="Cambridge Unit School" data-ru="Cambridge Unit School">Cambridge Unit School</div>
-        <span style="background:rgba(255,255,255,.92);color:#7a5810;font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 11px;border-radius:999px;flex-shrink:0" data-en="Partner" data-uz="Hamkor" data-ru="Партнёр">Partner</span>
+        <span style="background:rgba(255,255,255,.92);color:#0661de;font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 11px;border-radius:4px;flex-shrink:0" data-en="Partner" data-uz="Hamkor" data-ru="Партнёр">Partner</span>
       </div>
     </div>
     <div class="ctr-body">
@@ -524,21 +477,21 @@ nav.scrolled{
 
   <!-- center card helper styles -->
   <style>
-    .ctr-card{background:#fff;border:1px solid #e2e8f0;border-radius:28px;padding:0;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.05);overflow:hidden;transition:box-shadow .2s,transform .2s}
-    .ctr-card:hover{box-shadow:0 10px 40px rgba(0,0,0,.1);transform:translateY(-3px)}
-    .ctr-top{background:linear-gradient(135deg,#022049,#0a3a7a);padding:22px 28px;display:flex;align-items:center;gap:16px}
-    .ctr-num{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.15);color:#fff;font-size:1.15rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .ctr-card{background:#fff;border:1px solid #e2e8f0;border-radius:4px;padding:0;margin-bottom:20px;box-shadow:none;overflow:hidden;transition:box-shadow .2s,transform .2s}
+    .ctr-card:hover{box-shadow:none;transform:translateY(-3px)}
+    .ctr-top{background:#022049;padding:22px 28px;display:flex;align-items:center;gap:16px}
+    .ctr-num{width:44px;height:44px;border-radius:4px;background:rgba(255,255,255,.15);color:#fff;font-size:1.15rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
     .ctr-name{font-size:1.05rem;font-weight:700;color:#fff;line-height:1.3}
     .ctr-body{padding:22px 28px}
     .ctr-row{display:flex;align-items:flex-start;gap:9px;margin-bottom:14px;font-size:.87rem;color:#4a5568;line-height:1.55}
     .ctr-row svg{flex-shrink:0;margin-top:2px;color:#0661de}
     .ctr-maps{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
-    .mlink{display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:999px;font-size:.8rem;font-weight:600;text-decoration:none;transition:transform .15s,box-shadow .15s;border:1.5px solid}
+    .mlink{display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:4px;font-size:.8rem;font-weight:600;text-decoration:none;transition:transform .15s,box-shadow .15s;border:1.5px solid}
     .mlink-g{background:#fff;color:#1a73e8;border-color:#1a73e8}
-    .mlink-g:hover{background:#e8f0fe;box-shadow:0 4px 14px rgba(26,115,232,.2)}
+    .mlink-g:hover{background:#e8f0fe;box-shadow:none}
     .mlink-y{background:#fff;color:#e8340a;border-color:#e8340a}
-    .mlink-y:hover{background:#fff3f0;box-shadow:0 4px 14px rgba(232,52,10,.2)}
-    .ctr-note{font-size:.79rem;color:#64748b;background:#f1f5ff;border-left:3px solid #0661de;border-radius:0 10px 10px 0;padding:9px 14px;margin-top:14px;line-height:1.55}
+    .mlink-y:hover{background:#fff3f0;box-shadow:none}
+    .ctr-note{font-size:.79rem;color:#64748b;background:#f1f5ff;border-left:3px solid #0661de;border-radius:0 4px 4px 0;padding:9px 14px;margin-top:14px;line-height:1.55}
     .ctr-note a{color:#0661de;text-decoration:none}
     .ctr-note a:hover{text-decoration:underline}
   </style>
@@ -670,7 +623,7 @@ nav.scrolled{
 </div>
 
 <!-- CTA BAND -->
-<section style="background:linear-gradient(135deg,#022049,#0a3a7a);padding:60px 5vw;text-align:center;margin:0 16px 48px;border-radius:32px">
+<section style="background:#022049;padding:60px 5vw;text-align:center;margin:0 16px 48px;border-radius:4px">
   <h2 style="font-size:1.8rem;font-weight:900;color:#fff;margin-bottom:12px" data-en="Preparing for SAT in Samarkand?" data-uz="Samarqandda SATga tayyorlanmoqdamisiz?" data-ru="Готовитесь к SAT в Самарканде?">Preparing for SAT in Samarkand?</h2>
   <p style="color:rgba(255,255,255,.7);font-size:1rem;max-width:520px;margin:0 auto 2rem;line-height:1.6" data-en="SAT Samarkand offers the most results-driven SAT prep in the city. Our mentors earned top scores themselves." data-uz="SAT Samarkand shahardagi eng natijali SAT tayyorgarligini taklif etadi. Mentorlarimiz o'zlari SATda yuqori natija olgan." data-ru="SAT Samarkand предлагает наиболее результативную подготовку к SAT в городе. Наши менторы сами отлично сдали SAT.">SAT Samarkand offers the most results-driven SAT prep in the city. Our mentors earned top scores themselves.</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
@@ -680,48 +633,67 @@ nav.scrolled{
 </section>
 
 
-<div class="footer">
-<div class="fgrid">
-<div>
-<div class="flogrow"><img src="/logo.png" alt="SAT Samarkand"><span class="fbrand">SAT <span>Samarkand</span></span></div>
-<p class="ftagline" data-en="Samarkand's official SAT, AP &amp; IELTS prep center." data-uz="Samarqandning rasmiy markazi." data-ru="Официальный центр.">Samarkand's official SAT, AP &amp; IELTS prep center.</p>
-<p class="fpartner" data-en="Partners: Joylink &amp; Millennium" data-uz="Joylink &amp; Millennium" data-ru="Joylink &amp; Millennium">Partners: Joylink &amp; Millennium</p>
+<!--SX-FOOTER-->
+<div class="sx-ft" role="contentinfo">
+  <div class="sx-wrap">
+    <div class="sx-ft-grid">
+      <div>
+        <a class="sx-brand" href="/"><span class="sx-chip"><img src="/logo.png" alt="" width="28" height="28"></span><span><small>SAT</small>Samarkand</span></a>
+        <p class="sx-ft-about" data-en="Samarkand’s official SAT, AP & IELTS prep center." data-uz="Samarqandning rasmiy markazi." data-ru="Официальный центр.">Samarkand’s official SAT, AP & IELTS prep center.</p>
+        <p class="sx-ft-about" style="margin-top:6px" data-en="Partners: Joylink & Millennium" data-uz="Joylink & Millennium" data-ru="Joylink & Millennium">Partners: Joylink & Millennium</p>
+      </div>
+      <div>
+        <h3 data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</h3>
+        <ul>
+          <li><a href="/sat-course-samarkand/" data-en="SAT Course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT Course</a></li>
+          <li><a href="/digital-sat/" data-en="Digital SAT" data-uz="Raqamli SAT" data-ru="Цифровой SAT">Digital SAT</a></li>
+          <li><a href="/sat-math-prep/" data-en="SAT Math" data-uz="SAT Matematika" data-ru="Математика SAT">SAT Math</a></li>
+          <li><a href="/sat-english-prep/" data-en="SAT English" data-uz="SAT Ingliz tili" data-ru="Английский SAT">SAT English</a></li>
+          <li><a href="/sat-tutoring-samarkand/" data-en="Tutoring" data-uz="Individual dars" data-ru="Репетиторство">Tutoring</a></li>
+          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-en="About" data-uz="Biz" data-ru="О нас">About</h3>
+        <ul>
+          <li><a href="/teachers/" data-en="Teachers" data-uz="O'qituvchilar" data-ru="Учителя">Teachers</a></li>
+          <li><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
+          <li><a href="/pricing/" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a></li>
+          <li><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+          <li><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
+          <li><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h3>
+        <ul>
+          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram Channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram Channel</a></li>
+          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support Chat" data-uz="Yordam" data-ru="Поддержка">Support Chat</a></li>
+          <li><a href="https://instagram.com/sat_samarkand" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="tel:+998951131600" class="sx-num">+998 95 113 16 00</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-en="Address" data-uz="Manzil" data-ru="Адрес">Address</h3>
+        <address>
+          Temur Malik 19<span data-en="Main center" data-uz="Asosiy markaz" data-ru="Главный центр">Main center</span>
+          Mirzo Ulug'bek 105<span data-en="Second branch · Joylink Academy" data-uz="Ikkinchi filial · Joylink Academy" data-ru="Второй филиал · Joylink Academy">Second branch · Joylink Academy</span>
+          Samarkand, Uzbekistan<span data-en="Mon–Sat 9:00–19:00 · Sun: Mock SAT 10:00" data-uz="Du–Sha 9:00–19:00 · Yak: Mock SAT 10:00" data-ru="Пн–Сб 9:00–19:00 · Вс: Mock SAT 10:00">Mon–Sat 9:00–19:00 · Sun: Mock SAT 10:00</span>
+        </address>
+      </div>
+    </div>
+    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span></div>
+  </div>
 </div>
-<div class="fcol"><h4 data-en="Explore" data-uz="Sahifalar" data-ru="Разделы">Explore</h4>
-<a href="/universities/" data-en="Universities" data-uz="Universitetlar" data-ru="Университеты">Universities</a>
-<a href="https://diagnostic.satsamarkand.uz" target="_blank" data-en="Free Mock" data-uz="Bepul Mock" data-ru="Mock">Free Mock</a>
-<a href="/courses/" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a>
-<a href="/teachers/" data-en="Teachers" data-uz="Mentorlar" data-ru="Преподаватели">Teachers</a>
-<a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Register" data-uz="Yozilish" data-ru="Запись">Register</a>
-<a href="https://diagnostic.satsamarkand.uz" target="_blank" data-en="Diagnostic" data-uz="Diagnostika" data-ru="Диагностика">Diagnostic</a>
+<div class="sx-sticky">
+  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a>
+  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qo'ng'iroq" data-ru="Позвоните нам">Call us</a>
 </div>
-<div class="fcol"><h4 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h4>
-<a href="https://t.me/sat_samarkand" target="_blank" data-en="Telegram Channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram Channel</a>
-<a href="https://t.me/satsam_support" target="_blank" data-en="Support Chat" data-uz="Yordam" data-ru="Поддержка">Support Chat</a>
-<a href="https://instagram.com/sat_samarkand" target="_blank">Instagram</a>
-<a href="tel:+998951131600">+998 95 113 16 00</a>
-</div>
-<div class="fcol"><h4 data-en="Locations" data-uz="Joylashuv" data-ru="Адрес">Locations</h4>
-<p>Temur Malik 19</p>
-<p>Mirzo Ulug'bek 105</p>
-<p>Samarkand, Uzbekistan</p>
-</div>
-</div>
-<div class="fbot"><p>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></p><a href="https://satsamarkand.uz">satsamarkand.uz</a></div>
-</div>
+<!--/SX-FOOTER-->
 
-<div class="fwidget" id="fwidget">
-  <a href="tel:+998951131600" class="fmitem fmcall">
-    <div class="fmicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
-    <div class="fminfo"><div class="fmtitle" data-en="Call us" data-uz="Qo'ng'iroq qiling" data-ru="Позвонить">Call us</div><div class="fmsub">+998 95 113 16 00</div></div>
-  </a>
-  <a href="https://t.me/satsam_support" target="_blank" class="fmitem fmchat">
-    <div class="fmicon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg></div>
-    <div class="fminfo"><div class="fmtitle" data-en="Have a question?" data-uz="Savol bormi?" data-ru="Есть вопрос?">Have a question?</div><div class="fmsub">@satsam_support</div></div>
-  </a>
-</div>
 
-<div class="mob-sticky"><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Book FREE Lesson →" data-uz="Bepul Dars →" data-ru="Бесплатный урок →">Book FREE Lesson →</a></div>
+
+
 
 <script>
 let currentLang = localStorage.getItem('sats_lang');
@@ -789,7 +761,7 @@ document.querySelectorAll('.faq-q').forEach(q => {
 
 // Dropdown nav CSS (keep in sync sitewide)
 const ddStyle = document.createElement('style');
-ddStyle.textContent = '.nlinks li.has-dd{position:relative}.nlinks .dd{display:none;position:fixed;top:0;left:0;background:#fff;border:1px solid var(--bd,#d2d2d7);border-radius:10px;min-width:210px;box-shadow:0 8px 28px rgba(0,0,0,.13);z-index:99999;list-style:none;padding:5px 0}.nlinks li.has-dd.dd-open .dd{display:block}.nlinks .dd li a{height:auto!important;padding:9px 16px!important;font-size:.8rem!important;display:block;white-space:nowrap;border-bottom:none!important;line-height:1.4}.nlinks .dd li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)!important}.nlinks .dd-arrow{font-size:.65rem;margin-left:2px;opacity:.6}';
+ddStyle.textContent = '.nlinks li.has-dd{position:relative}.nlinks .dd{display:none;position:fixed;top:0;left:0;background:#fff;border:1px solid var(--bd,#d2d2d7);border-radius:4px;min-width:210px;box-shadow:none;z-index:99999;list-style:none;padding:5px 0}.nlinks li.has-dd.dd-open .dd{display:block}.nlinks .dd li a{height:auto!important;padding:9px 16px!important;font-size:.8rem!important;display:block;white-space:nowrap;border-bottom:none!important;line-height:1.4}.nlinks .dd li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)!important}.nlinks .dd-arrow{font-size:.65rem;margin-left:2px;opacity:.6}';
 document.head.appendChild(ddStyle);
 </script>
 
@@ -949,5 +921,6 @@ if(typeof toggleMobileNav==='undefined'){
 }
 </script>
 
+<script src="/theme.js?v=3" defer></script>
 </body>
 </html>

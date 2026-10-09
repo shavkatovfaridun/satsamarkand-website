@@ -22,7 +22,7 @@ a{text-decoration:none;color:inherit}
 button{font-family:inherit;cursor:pointer;border:none}
 .no-select{-webkit-user-select:none;user-select:none}
 .lbar{background:var(--navy3);display:flex;justify-content:flex-end;gap:2px;padding:6px 5vw;align-items:center}
-.lb{background:none;border:none;color:rgba(255,255,255,.4);font-size:.72rem;font-weight:500;font-family:var(--f);letter-spacing:.04em;padding:4px 10px;border-radius:20px;cursor:pointer}
+.lb{background:none;border:none;color:rgba(255,255,255,.4);font-size:.72rem;font-weight:500;font-family:var(--f);letter-spacing:.04em;padding:4px 10px;border-radius:4px;cursor:pointer}
 .lb:hover{color:rgba(255,255,255,.75)}
 .lb.on{color:#fff;background:rgba(255,255,255,.12)}
 nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.07)}
@@ -37,9 +37,9 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .screen.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .wrap{max-width:760px;margin:0 auto;padding:40px 5vw 80px}
-.intro-hero{background:linear-gradient(160deg,var(--navy3),var(--navy));border-radius:var(--rxl);padding:48px 40px;text-align:center;color:#fff;box-shadow:var(--sl);margin-bottom:2rem;position:relative;overflow:hidden}
-.intro-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(96,165,250,.18),transparent 60%)}
-.intro-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.25);color:#60a5fa;font-size:.72rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:1.4rem;position:relative;letter-spacing:.05em;text-transform:uppercase}
+.intro-hero{background:#022049;border-radius:var(--rxl);padding:48px 40px;text-align:center;color:#fff;box-shadow:var(--sl);margin-bottom:2rem;position:relative;overflow:hidden}
+.intro-hero::before{content:"";position:absolute;inset:0;background:transparent}
+.intro-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.25);color:#60a5fa;font-size:.72rem;font-weight:700;padding:5px 14px;border-radius:4px;margin-bottom:1.4rem;position:relative;letter-spacing:.05em;text-transform:uppercase}
 .intro-hero h1{font-family:var(--f);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:.8rem;position:relative}
 .intro-hero h1 em{font-style:normal;color:#60a5fa}
 .intro-hero p{font-size:.98rem;color:rgba(255,255,255,.7);max-width:520px;margin:0 auto 1.8rem;line-height:1.65;position:relative}
@@ -49,7 +49,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .intro-ml{font-size:.68rem;color:rgba(255,255,255,.5);margin-top:4px;letter-spacing:.04em;text-transform:uppercase}
 .intro-features{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:2rem}
 .if-card{background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:18px 20px;display:flex;gap:12px;align-items:flex-start}
-.if-icon{width:32px;height:32px;border-radius:8px;background:var(--bxpale);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.if-icon{width:32px;height:32px;border-radius:4px;background:var(--bxpale);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .if-icon svg{width:16px;height:16px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round}
 .if-card h4{font-size:.85rem;font-weight:700;color:var(--navy);margin-bottom:.2rem}
 .if-card p{font-size:.78rem;color:var(--tm);line-height:1.5}
@@ -59,7 +59,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .warning-block h4{font-size:.88rem;font-weight:700;color:#78350f;margin-bottom:.4rem}
 .warning-block ul{list-style:none;font-size:.8rem;color:#78350f;line-height:1.7}
 .warning-block ul li::before{content:"- ";font-weight:700}
-.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--blue);color:#fff;padding:15px 36px;border-radius:980px;font-size:1rem;font-weight:700;font-family:var(--f);text-decoration:none;border:none;cursor:pointer}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--blue);color:#fff;padding:15px 36px;border-radius:4px;font-size:1rem;font-weight:700;font-family:var(--f);text-decoration:none;border:none;cursor:pointer}
 .btn-primary:hover{background:var(--blue2)}
 .btn-primary:disabled{opacity:.5;cursor:not-allowed}
 .btn-big{padding:17px 40px;font-size:1.05rem}
@@ -88,15 +88,15 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .test-timer.critical{color:#fca5a5;animation:pulse 1s infinite}
 .test-timer svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-.test-lang-switch{display:flex;gap:2px;background:rgba(255,255,255,.08);border-radius:20px;padding:3px}
-.test-lang-switch button{background:none;border:none;color:rgba(255,255,255,.5);font-size:.7rem;font-weight:600;font-family:var(--f);padding:4px 10px;border-radius:14px;cursor:pointer}
+.test-lang-switch{display:flex;gap:2px;background:rgba(255,255,255,.08);border-radius:4px;padding:3px}
+.test-lang-switch button{background:none;border:none;color:rgba(255,255,255,.5);font-size:.7rem;font-weight:600;font-family:var(--f);padding:4px 10px;border-radius:4px;cursor:pointer}
 .test-lang-switch button.on{background:rgba(96,165,250,.2);color:#fff}
 .progress-bar-outer{background:rgba(255,255,255,.15);height:4px;width:100%}
 .progress-bar-inner{background:#60a5fa;height:100%;width:0%;transition:width .3s ease}
 .question-wrap{max-width:760px;margin:0 auto;padding:32px 5vw 80px}
 .q-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;font-size:.78rem;color:var(--tm)}
 .q-num{font-weight:600;color:var(--navy);font-family:var(--f)}
-.q-diff{display:inline-flex;padding:3px 10px;border-radius:20px;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.q-diff{display:inline-flex;padding:3px 10px;border-radius:4px;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
 .q-diff.d1{background:#dbeafe;color:#1d4ed8}
 .q-diff.d2{background:var(--bxpale);color:var(--blue)}
 .q-diff.d3{background:#fef3c7;color:#b45309}
@@ -113,7 +113,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .q-choice-text{flex:1;line-height:1.5}
 .test-actions{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:1rem}
 .warn-strikes{font-size:.78rem;color:var(--amber);font-weight:600}
-.break-card{background:linear-gradient(160deg,var(--navy3),var(--navy));border-radius:var(--rxl);padding:48px 40px;text-align:center;color:#fff;box-shadow:var(--sl)}
+.break-card{background:#022049;border-radius:var(--rxl);padding:48px 40px;text-align:center;color:#fff;box-shadow:var(--sl)}
 .break-icon{width:80px;height:80px;border-radius:50%;background:rgba(96,165,250,.12);border:2px solid rgba(96,165,250,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem}
 .break-icon svg{width:38px;height:38px;stroke:#60a5fa;fill:none;stroke-width:2}
 .break-card h2{font-family:var(--f);font-size:1.8rem;font-weight:700;color:#fff;margin-bottom:.6rem}
@@ -123,7 +123,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .break-score-num{font-family:var(--f);font-size:3rem;font-weight:700;color:#60a5fa;line-height:1}
 .break-score-out{font-size:.88rem;color:rgba(255,255,255,.55);margin-top:.3rem}
 .break-countdown{font-size:.8rem;color:rgba(255,255,255,.5);margin-top:.8rem}
-.btn-white{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--navy);padding:14px 32px;border-radius:980px;font-size:.95rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:var(--f)}
+.btn-white{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--navy);padding:14px 32px;border-radius:4px;font-size:.95rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:var(--f)}
 .btn-white:hover{background:var(--bg2)}
 .full-overlay{display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;padding:2rem;text-align:center}
 .full-overlay.active{display:flex}
@@ -131,7 +131,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .full-overlay.warn{background:rgba(245,158,11,.95);color:#fff}
 .full-overlay h2{font-family:var(--f);font-size:2rem;font-weight:700;margin-bottom:.5rem}
 .full-overlay p{font-size:1rem;max-width:440px;margin-bottom:1.5rem}
-.full-overlay button{background:#fff;color:var(--red);padding:12px 28px;border-radius:980px;font-weight:700;border:none;cursor:pointer}
+.full-overlay button{background:#fff;color:var(--red);padding:12px 28px;border-radius:4px;font-weight:700;border:none;cursor:pointer}
 .full-overlay.warn button{color:#b45309}
 .error-msg{background:#fee2e2;border:1px solid #fca5a5;color:#991b1b;font-size:.82rem;padding:10px 14px;border-radius:var(--rsm);margin-bottom:1rem;display:none}
 @media(max-width:640px){.q-card{padding:24px 20px}.intro-hero,.break-card{padding:32px 24px}.form-card{padding:28px 22px}}
@@ -139,18 +139,18 @@ body.in-test .lbar,body.in-test nav{display:none}
 body.in-test{padding:0 !important}
 #screen-results{padding:0}
 .results-wrap{max-width:1000px;margin:0 auto;padding:32px 5vw 80px}
-.results-hero{background:linear-gradient(160deg,var(--navy3),var(--navy));border-radius:var(--rxl);padding:44px 36px;text-align:center;color:#fff;box-shadow:var(--sl);margin-bottom:1.5rem;position:relative;overflow:hidden}
-.results-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(96,165,250,.2),transparent 60%)}
-.level-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:30px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.2rem;position:relative}
+.results-hero{background:#022049;border-radius:var(--rxl);padding:44px 36px;text-align:center;color:#fff;box-shadow:var(--sl);margin-bottom:1.5rem;position:relative;overflow:hidden}
+.results-hero::before{content:"";position:absolute;inset:0;background:transparent}
+.level-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:4px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.2rem;position:relative}
 .level-foundation{background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#fca5a5}
 .level-building{background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fcd34d}
 .level-passed{background:rgba(6,97,222,.15);border:1px solid rgba(6,97,222,.3);color:#93c5fd}
-.level-advanced{background:linear-gradient(90deg,rgba(96,165,250,.2),rgba(124,58,237,.2));border:1px solid rgba(96,165,250,.4);color:#a5b4fc}
-.level-excellent{background:linear-gradient(90deg,rgba(251,191,36,.2),rgba(245,158,11,.2));border:1px solid rgba(251,191,36,.4);color:#fcd34d}
+.level-advanced{background:transparent;border:1px solid rgba(96,165,250,.4);color:#a5b4fc}
+.level-excellent{background:transparent;border:1px solid rgba(251,191,36,.4);color:#fcd34d}
 .results-score{font-family:var(--f);font-size:clamp(3.5rem,8vw,5.5rem);font-weight:700;color:#fff;letter-spacing:-.04em;line-height:1;position:relative}
 .results-score-out{font-size:1.1rem;color:rgba(255,255,255,.5);margin-top:.3rem;position:relative}
 .results-percent{font-family:var(--f);font-size:1.4rem;font-weight:600;color:#60a5fa;margin-top:.5rem;position:relative}
-.results-status{display:inline-flex;align-items:center;gap:8px;background:rgba(6,97,222,.12);border:1px solid rgba(6,97,222,.3);color:#93c5fd;font-size:.85rem;font-weight:700;padding:8px 18px;border-radius:30px;margin-top:1rem;position:relative}
+.results-status{display:inline-flex;align-items:center;gap:8px;background:rgba(6,97,222,.12);border:1px solid rgba(6,97,222,.3);color:#93c5fd;font-size:.85rem;font-weight:700;padding:8px 18px;border-radius:4px;margin-top:1rem;position:relative}
 .results-status.fail{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.3);color:#fca5a5}
 .results-status svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
 .results-sections{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:1.5rem}
@@ -164,12 +164,12 @@ body.in-test{padding:0 !important}
 .rs-pct{font-size:.85rem;color:var(--tm);font-weight:600;margin-left:auto}
 .rs-bar-wrap{height:8px;background:var(--bg3);border-radius:4px;overflow:hidden;margin-bottom:.6rem}
 .rs-bar{height:100%;border-radius:4px;transition:width 1s ease}
-.rs-bar.math{background:linear-gradient(90deg,var(--blue),var(--elec))}
-.rs-bar.english{background:linear-gradient(90deg,var(--green),#0661de)}
+.rs-bar.math{background:#0661de}
+.rs-bar.english{background:#0661de}
 .rs-status{font-size:.8rem;color:var(--tm);line-height:1.5}
-.cefr-badge{display:inline-block;background:var(--bxpale);border:1px solid rgba(6,97,222,.2);color:var(--blue);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px;margin-top:.4rem}
+.cefr-badge{display:inline-block;background:var(--bxpale);border:1px solid rgba(6,97,222,.2);color:var(--blue);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:4px;margin-top:.4rem}
 @media(max-width:640px){.results-sections{grid-template-columns:1fr}}
-.sat-estimate-card{background:linear-gradient(135deg,#fff,var(--bxpale));border:2px solid var(--blue);border-radius:var(--rlg);padding:28px;text-align:center;margin-bottom:1.5rem;box-shadow:var(--sm)}
+.sat-estimate-card{background:#fff;border:2px solid var(--blue);border-radius:var(--rlg);padding:28px;text-align:center;margin-bottom:1.5rem;box-shadow:var(--sm)}
 .sat-est-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.4rem}
 .sat-est-score{font-family:var(--f);font-size:3rem;font-weight:700;color:var(--navy);line-height:1;margin-bottom:.3rem}
 .sat-est-range{font-size:.88rem;color:var(--tm);margin-bottom:1rem}
@@ -196,19 +196,19 @@ body.in-test{padding:0 !important}
 .sg-card ul{list-style:none;display:flex;flex-direction:column;gap:6px}
 .sg-card ul li{font-size:.82rem;color:var(--t2);padding:6px 12px;background:var(--bg2);border-radius:var(--rsm);text-transform:capitalize}
 @media(max-width:640px){.strengths-gaps{grid-template-columns:1fr}}
-.recommend-card{background:linear-gradient(135deg,var(--navy3),var(--navy));border-radius:var(--rxl);padding:36px;color:#fff;box-shadow:var(--sl);margin-bottom:1.5rem;position:relative;overflow:hidden}
-.recommend-card::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 100% 0%,rgba(96,165,250,.15),transparent 60%)}
+.recommend-card{background:#022049;border-radius:var(--rxl);padding:36px;color:#fff;box-shadow:var(--sl);margin-bottom:1.5rem;position:relative;overflow:hidden}
+.recommend-card::before{content:"";position:absolute;inset:0;background:transparent}
 .recommend-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#60a5fa;margin-bottom:.5rem;position:relative}
 .recommend-card h3{font-family:var(--f);font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.8rem;position:relative}
 .recommend-card p{font-size:.92rem;color:rgba(255,255,255,.7);line-height:1.65;margin-bottom:1.4rem;position:relative}
 .recommend-btns{display:flex;gap:10px;flex-wrap:wrap;position:relative}
-.btn-white-rec{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--navy);padding:12px 24px;border-radius:980px;font-size:.9rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:var(--f)}
-.btn-outline-white{display:inline-flex;align-items:center;gap:6px;background:transparent;color:rgba(255,255,255,.9);border:1.5px solid rgba(255,255,255,.3);padding:11px 22px;border-radius:980px;font-size:.9rem;font-weight:600;text-decoration:none;font-family:var(--f);cursor:pointer}
+.btn-white-rec{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--navy);padding:12px 24px;border-radius:4px;font-size:.9rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:var(--f)}
+.btn-outline-white{display:inline-flex;align-items:center;gap:6px;background:transparent;color:rgba(255,255,255,.9);border:1.5px solid rgba(255,255,255,.3);padding:11px 22px;border-radius:4px;font-size:.9rem;font-weight:600;text-decoration:none;font-family:var(--f);cursor:pointer}
 .review-card{background:#fff;border:1px solid var(--bd);border-radius:var(--rlg);padding:28px;box-shadow:var(--ss);margin-bottom:1.5rem}
 .review-card h3{font-family:var(--f);font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
 .review-card .review-sub{font-size:.82rem;color:var(--tm);margin-bottom:1.2rem}
 .review-tabs{display:flex;gap:4px;margin-bottom:1rem;background:var(--bg2);padding:4px;border-radius:var(--rsm);width:fit-content;flex-wrap:wrap}
-.review-tab{background:none;border:none;padding:8px 18px;border-radius:6px;font-size:.83rem;font-weight:500;color:var(--tm);cursor:pointer;font-family:inherit}
+.review-tab{background:none;border:none;padding:8px 18px;border-radius:4px;font-size:.83rem;font-weight:500;color:var(--tm);cursor:pointer;font-family:inherit}
 .review-tab.on{background:#fff;color:var(--navy);box-shadow:var(--ss);font-weight:600}
 .review-list{display:flex;flex-direction:column;gap:14px}
 .review-item{border:1px solid var(--bd);border-radius:var(--r);padding:18px;background:var(--bg2)}
@@ -216,7 +216,7 @@ body.in-test{padding:0 !important}
 .review-item.incorrect{border-left:4px solid var(--red)}
 .review-item-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:.8rem}
 .review-item-num{font-size:.74rem;font-weight:700;color:var(--tl);letter-spacing:.08em;text-transform:uppercase;font-family:var(--f)}
-.review-item-status{font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.05em;text-transform:uppercase}
+.review-item-status{font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:4px;letter-spacing:.05em;text-transform:uppercase}
 .review-item-status.correct{background:#dbeafe;color:#1d4ed8}
 .review-item-status.incorrect{background:#fee2e2;color:#991b1b}
 .review-q-text{font-size:.88rem;color:var(--t);font-weight:500;margin-bottom:.8rem;line-height:1.5}
@@ -232,13 +232,13 @@ body.in-test{padding:0 !important}
 .download-section{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:1.5rem}
 .dl-card{background:#fff;border:1px solid var(--bd);border-radius:var(--rlg);padding:26px;box-shadow:var(--ss);text-align:center;transition:all .2s}
 .dl-card:hover{box-shadow:var(--sm);transform:translateY(-2px);border-color:var(--blue)}
-.dl-icon{width:50px;height:50px;border-radius:12px;background:var(--bxpale);display:flex;align-items:center;justify-content:center;margin:0 auto .8rem}
+.dl-icon{width:50px;height:50px;border-radius:4px;background:var(--bxpale);display:flex;align-items:center;justify-content:center;margin:0 auto .8rem}
 .dl-icon svg{width:24px;height:24px;stroke:var(--blue);fill:none;stroke-width:2}
-.dl-card.cert .dl-icon{background:linear-gradient(135deg,#fef3c7,#fcd34d)}
+.dl-card.cert .dl-icon{background:#0661de}
 .dl-card.cert .dl-icon svg{stroke:#b45309}
 .dl-card h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
 .dl-card p{font-size:.78rem;color:var(--tm);line-height:1.5;margin-bottom:1rem}
-.dl-btn{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;padding:10px 20px;border-radius:980px;font-size:.85rem;font-weight:600;font-family:var(--f);cursor:pointer;border:none}
+.dl-btn{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;padding:10px 20px;border-radius:4px;font-size:.85rem;font-weight:600;font-family:var(--f);cursor:pointer;border:none}
 .dl-btn:hover{background:var(--blue2)}
 .dl-card.cert .dl-btn{background:#b45309}
 .dl-card.cert .dl-btn:hover{background:#92400e}
@@ -261,11 +261,11 @@ body.in-test{padding:0 !important}
 .pr-date{font-size:10px;color:#6e6e73}
 .pr-h1{font-size:24px;font-weight:700;color:#022049;margin-bottom:4px}
 .pr-h2{font-size:16px;font-weight:700;color:#022049;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d2d2d7}
-.pr-score-block{background:#022049;color:#fff;padding:18px 24px;border-radius:8px;text-align:center;margin:14px 0}
+.pr-score-block{background:#022049;color:#fff;padding:18px 24px;border-radius:4px;text-align:center;margin:14px 0}
 .pr-score-num{font-size:42px;font-weight:700;line-height:1;letter-spacing:-2px}
 .pr-score-num small{font-size:18px;opacity:.5;font-weight:500}
 .pr-score-pct{font-size:14px;color:#60a5fa;margin-top:4px}
-.pr-status{display:inline-block;padding:4px 14px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:8px}
+.pr-status{display:inline-block;padding:4px 14px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:8px}
 .pr-status.pass{background:#044fba;color:#fff}
 .pr-status.fail{background:#f59e0b;color:#fff}
 .pr-info-table{width:100%;border-collapse:collapse;margin:8px 0;font-size:11px}
@@ -273,7 +273,7 @@ body.in-test{padding:0 !important}
 .pr-info-table td:first-child{color:#6e6e73;width:35%}
 .pr-info-table td:last-child{font-weight:600}
 .pr-sections{display:flex;gap:12px;margin:10px 0}
-.pr-sec-box{flex:1;background:#f5f5f7;padding:14px;border-radius:6px;border-left:3px solid #0661de}
+.pr-sec-box{flex:1;background:#f5f5f7;padding:14px;border-radius:4px;border-left:3px solid #0661de}
 .pr-sec-box.eng{border-left-color:#044fba}
 .pr-sec-label{font-size:10px;font-weight:700;text-transform:uppercase;color:#0661de;letter-spacing:1px}
 .pr-sec-box.eng .pr-sec-label{color:#044fba}
@@ -282,12 +282,12 @@ body.in-test{padding:0 !important}
 .pr-sec-bar{height:5px;background:#d2d2d7;border-radius:3px;overflow:hidden;margin-top:6px}
 .pr-sec-bar-fill{height:100%;background:#0661de}
 .pr-sec-box.eng .pr-sec-bar-fill{background:#044fba}
-.pr-cefr-tag{display:inline-block;padding:2px 8px;background:#e8f0fe;color:#0661de;font-size:9px;font-weight:700;border-radius:12px;margin-top:4px}
-.pr-est-box{background:#e8f0fe;border:1px solid #0661de;padding:14px;border-radius:6px;margin:12px 0;text-align:center}
+.pr-cefr-tag{display:inline-block;padding:2px 8px;background:#e8f0fe;color:#0661de;font-size:9px;font-weight:700;border-radius:4px;margin-top:4px}
+.pr-est-box{background:#e8f0fe;border:1px solid #0661de;padding:14px;border-radius:4px;margin:12px 0;text-align:center}
 .pr-est-label{font-size:10px;font-weight:700;color:#0661de;letter-spacing:1px;text-transform:uppercase}
 .pr-est-num{font-size:32px;font-weight:700;color:#022049;margin:4px 0;line-height:1}
 .pr-est-range{font-size:10px;color:#6e6e73}
-.pr-rec-block{background:linear-gradient(135deg,#022049,#0661de);color:#fff;padding:16px 20px;border-radius:8px;margin:12px 0}
+.pr-rec-block{background:#022049;color:#fff;padding:16px 20px;border-radius:4px;margin:12px 0}
 .pr-rec-label{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;opacity:.6}
 .pr-rec-name{font-size:18px;font-weight:700;margin:4px 0}
 .pr-rec-desc{font-size:11px;opacity:.85;line-height:1.5}
@@ -295,7 +295,7 @@ body.in-test{padding:0 !important}
 .pr-q.correct{border-left-color:#044fba}
 .pr-q.wrong{border-left-color:#dc2626}
 .pr-q-num{font-size:9px;font-weight:700;color:#6e6e73;letter-spacing:1px;text-transform:uppercase}
-.pr-q-status{display:inline-block;font-size:8px;font-weight:700;padding:1px 6px;border-radius:8px;margin-left:6px;letter-spacing:.5px}
+.pr-q-status{display:inline-block;font-size:8px;font-weight:700;padding:1px 6px;border-radius:4px;margin-left:6px;letter-spacing:.5px}
 .pr-q-status.correct{background:#dbeafe;color:#1d4ed8}
 .pr-q-status.wrong{background:#fee2e2;color:#991b1b}
 .pr-q-text{font-size:10px;font-weight:600;color:#1d1d1f;margin:4px 0;line-height:1.4}
@@ -422,7 +422,7 @@ body.in-test{padding:0 !important}
 nav{
   transition:box-shadow .5s ease,background .4s ease !important}
 nav.scrolled{
-  box-shadow:0 1px 24px rgba(0,0,0,.09) !important}
+  box-shadow:none}
 .nlinks a{
   transition:color .3s ease,border-color .3s ease !important}
 .lb{
@@ -440,7 +440,7 @@ nav.scrolled{
 </style>
 
 <style>
-.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 4px 20px rgba(0,0,0,.15);text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:0 6px 28px rgba(0,0,0,.2)}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:linear-gradient(135deg,#10b981,#059669);color:#fff}.fmchat .fmicon{background:linear-gradient(135deg,#0088cc,#006bb3);color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
+.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 
 
 
@@ -453,74 +453,52 @@ nav.scrolled{
 .footer-tel .fmtitle{font-size:.82rem;font-weight:500}
 .footer-tel .fmsub{font-size:.75rem;color:rgba(255,255,255,.35)}
 </style>
-<link rel="stylesheet" href="/enhancements.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/theme.css?v=3">
 </head>
 <body>
 
-<div class="lbar">
-  <button class="lb" data-lang="en" onclick="setLang('en')">EN</button>
-  <button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button>
-  <button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button>
-</div>
 
-<nav>
-  <div class="ni">
-    <a href="https://satsamarkand.uz" class="nlogo">
-      <img src="/logo.png" alt="SAT Samarkand">
-      <div class="nlt"><span class="nlt1">SAT</span><span class="nlt2">Samarkand</span></div>
-    </a>
-    <a href="https://satsamarkand.uz" class="nback" data-en="Back to main site" data-uz="Asosiy saytga" data-ru="На главную">Back to main site</a>
+
+<!--SX-HEADER-->
+<a class="sx-skip" href="#sx-main">Skip to content</a>
+<div class="sx-hd" id="sx-hd" role="banner">
+  <div class="sx-wrap">
+    <div class="sx-hd-in">
+      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/logo.png" alt="" width="34" height="34"><span><small>SAT</small>Samarkand</span></a>
+      <div class="sx-nav" role="navigation" aria-label="Main">
+        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div></div>
+        <div class="sx-nav-i"><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div></div>
+        <div class="sx-nav-i"><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></div>
+        <div class="sx-nav-i"><a href="/sat-zone/" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a></div>
+        <div class="sx-nav-i"><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></div>
+      </div>
+      <div class="sx-langs" role="group" aria-label="Language"><button class="lb" data-lang="en" onclick="setLang('en')">EN</button><button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button><button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button></div>
+      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a>
+      <button class="sx-burger" id="sx-burger" aria-label="Menu" aria-expanded="false"><i></i></button>
+    </div>
+    <div class="sx-drawer" role="navigation" aria-label="Mobile">
+      <a class="sx-has-sub" href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a>
+      <div class="sx-sub"><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div>
+      <a class="sx-has-sub" href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a>
+      <div class="sx-sub"><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div>
+      <a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a>
+      <a class="sx-has-sub" href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a>
+      <div class="sx-sub"><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div>
+      <a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a>
+      <a href="/sat-zone/" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a>
+      <a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a>
+      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a></div>
+    </div>
   </div>
-</nav>
-<nav class="mob-nav" id="mobnav">
-<ul class="mob-list">
-<li><a href="/" onclick="closeMobileNav()" data-en="Home" data-uz="Bosh sahifa" data-ru="Главная">Home</a></li>
+</div>
+<span id="sx-main"></span>
+<!--/SX-HEADER-->
 
-<li class="mob-group">
-  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
-    <span data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</span>
-    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <ul class="mob-group-body">
-    <li><a href="/courses/" onclick="closeMobileNav()" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
-    <li><a href="/ap/" onclick="closeMobileNav()" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a></li>
-    <li><a href="/ielts/" onclick="closeMobileNav()" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a></li>
-    <li><a href="/schedule/" onclick="closeMobileNav()" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
-    <li><a href="/intensive-sat-bootcamp/" onclick="closeMobileNav()" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
-    <li><a href="/digital-sat/" onclick="closeMobileNav()" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
-  </ul>
-</li>
-
-<li class="mob-group">
-  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
-    <span data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</span>
-    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <ul class="mob-group-body">
-    <li><a href="/admissions/" onclick="closeMobileNav()" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг">Admissions Consulting</a></li>
-    <li><a href="/universities/" onclick="closeMobileNav()" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></li>
-    <li><a href="/results/" onclick="closeMobileNav()" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
-  </ul>
-</li>
-
-<li class="mob-group">
-  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
-    <span data-en="About" data-uz="Biz haqimizda" data-ru="О нас">About</span>
-    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <ul class="mob-group-body">
-    <li><a href="/about/" onclick="closeMobileNav()" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
-    <li><a href="/teachers/" onclick="closeMobileNav()" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Преподаватели">Our Teachers</a></li>
-    <li><a href="/blog/" onclick="closeMobileNav()" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
-    <li><a href="/sat-zone/" onclick="closeMobileNav()" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a></li>
-    <li><a href="/contact/" onclick="closeMobileNav()" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
-  </ul>
-</li>
-
-<li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Diagnostic" data-uz="Diagnostika" data-ru="Диагностика">Diagnostic</a></li>
-<li><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="mob-enroll" data-en="Book FREE Lesson →" data-uz="Bepul Dars →" data-ru="Бесплатный урок →">Enroll Now →</a></li>
-</ul>
-</nav>
 
 <div class="screen active" id="screen-intro">
   <div class="wrap">
@@ -4504,23 +4482,14 @@ window.addEventListener('beforeunload', e => {
 </script>
 
 
-<div class="fwidget" id="fwidget">
-  <a href="tel:+998951131600" class="fmitem fmcall">
-    <div class="fmicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
-    <div class="fminfo"><div class="fmtitle" data-en="Call us" data-uz="Qo'ng'iroq qiling" data-ru="Позвонить">Call us</div><div class="fmsub">+998 95 113 16 00</div></div>
-  </a>
-  <a href="https://t.me/satsam_support" target="_blank" class="fmitem fmchat">
-    <div class="fmicon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg></div>
-    <div class="fminfo"><div class="fmtitle" data-en="Have a question?" data-uz="Savol bormi?" data-ru="Есть вопрос?">Have a question?</div><div class="fmsub">@satsam_support</div></div>
-  </a>
-</div>
+
 
 
 
 
 <script>
 // ═══ LANGUAGE ═══
-let currentLang = localStorage.getItem('sats_lang');
+currentLang = localStorage.getItem('sats_lang');
 if (!currentLang) {
   const bl = (navigator.language || 'en').toLowerCase();
   currentLang = bl.startsWith('uz') ? 'uz' : bl.startsWith('ru') ? 'ru' : 'en';
@@ -4615,5 +4584,63 @@ window.addEventListener('scroll', () => {
   }
 });
 </script>
+<!--SX-FOOTER-->
+<div class="sx-ft" role="contentinfo">
+  <div class="sx-wrap">
+    <div class="sx-ft-grid">
+      <div>
+        <a class="sx-brand" href="/"><span class="sx-chip"><img src="/logo.png" alt="" width="28" height="28"></span><span><small>SAT</small>Samarkand</span></a>
+        <p class="sx-ft-about" data-en="Samarkand’s official SAT, AP & IELTS prep center." data-uz="Samarqandning rasmiy markazi." data-ru="Официальный центр.">Samarkand’s official SAT, AP & IELTS prep center.</p>
+        <p class="sx-ft-about" style="margin-top:6px" data-en="Partners: Joylink & Millennium" data-uz="Joylink & Millennium" data-ru="Joylink & Millennium">Partners: Joylink & Millennium</p>
+      </div>
+      <div>
+        <h3 data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</h3>
+        <ul>
+          <li><a href="/sat-course-samarkand/" data-en="SAT Course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT Course</a></li>
+          <li><a href="/digital-sat/" data-en="Digital SAT" data-uz="Raqamli SAT" data-ru="Цифровой SAT">Digital SAT</a></li>
+          <li><a href="/sat-math-prep/" data-en="SAT Math" data-uz="SAT Matematika" data-ru="Математика SAT">SAT Math</a></li>
+          <li><a href="/sat-english-prep/" data-en="SAT English" data-uz="SAT Ingliz tili" data-ru="Английский SAT">SAT English</a></li>
+          <li><a href="/sat-tutoring-samarkand/" data-en="Tutoring" data-uz="Individual dars" data-ru="Репетиторство">Tutoring</a></li>
+          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-en="About" data-uz="Biz" data-ru="О нас">About</h3>
+        <ul>
+          <li><a href="/teachers/" data-en="Teachers" data-uz="O'qituvchilar" data-ru="Учителя">Teachers</a></li>
+          <li><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
+          <li><a href="/pricing/" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a></li>
+          <li><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+          <li><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
+          <li><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h3>
+        <ul>
+          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram Channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram Channel</a></li>
+          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support Chat" data-uz="Yordam" data-ru="Поддержка">Support Chat</a></li>
+          <li><a href="https://instagram.com/sat_samarkand" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="tel:+998951131600" class="sx-num">+998 95 113 16 00</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-en="Address" data-uz="Manzil" data-ru="Адрес">Address</h3>
+        <address>
+          Temur Malik 19<span data-en="Main center" data-uz="Asosiy markaz" data-ru="Главный центр">Main center</span>
+          Mirzo Ulug'bek 105<span data-en="Second branch · Joylink Academy" data-uz="Ikkinchi filial · Joylink Academy" data-ru="Второй филиал · Joylink Academy">Second branch · Joylink Academy</span>
+          Samarkand, Uzbekistan<span data-en="Mon–Sat 9:00–19:00 · Sun: Mock SAT 10:00" data-uz="Du–Sha 9:00–19:00 · Yak: Mock SAT 10:00" data-ru="Пн–Сб 9:00–19:00 · Вс: Mock SAT 10:00">Mon–Sat 9:00–19:00 · Sun: Mock SAT 10:00</span>
+        </address>
+      </div>
+    </div>
+    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span></div>
+  </div>
+</div>
+<div class="sx-sticky">
+  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a>
+  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qo'ng'iroq" data-ru="Позвоните нам">Call us</a>
+</div>
+<!--/SX-FOOTER-->
+<script src="/theme.js?v=3" defer></script>
 </body>
 </html>

@@ -59,6 +59,16 @@
       "source": "/blog/samarkand-tashkent-sat-exam-travel-guide",
       "destination": "/blog/sat-test-centers-samarkand/",
       "permanent": true
+    },
+    {
+      "source": "/free-sat-diagnostic-test/",
+      "destination": "https://diagnostic.satsamarkand.uz",
+      "permanent": true
+    },
+    {
+      "source": "/free-sat-diagnostic-test",
+      "destination": "https://diagnostic.satsamarkand.uz",
+      "permanent": true
     }
   ]
 }
