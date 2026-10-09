@@ -29,7 +29,7 @@
       "@id": "https://satsamarkand.uz/#organization",
       "name": "SAT Samarkand",
       "alternateName": ["Sat Samarkand", "SAT Center Samarkand"],
-      "description": "Samarkand's #1 SAT preparation and university admissions center. Students achieve 1500–1530 SAT scores. Founded by Faridun Shavkatov.",
+      "description": "Samarkand's #1 SAT preparation and university admissions center. Students achieve 1500–1520 SAT scores. Founded by Faridun Shavkatov.",
       "url": "https://satsamarkand.uz",
       "logo": "https://satsamarkand.uz/logo.png",
       "image": "https://satsamarkand.uz/og-image.jpg",
@@ -42,8 +42,8 @@
         {"@type": "PostalAddress", "streetAddress": "Mirzo Ulugbek 105", "addressLocality": "Samarkand", "addressCountry": "UZ"}
       ],
       "geo": {"@type": "GeoCoordinates", "latitude": 39.6542, "longitude": 66.9597},
-      "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "20:00"}],
-      "sameAs": ["https://t.me/satsamarkand", "https://instagram.com/satsamarkand"],
+      "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "19:00"}],
+      "sameAs": ["https://t.me/sat_samarkand", "https://instagram.com/sat_samarkand"],
       "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5", "reviewCount": "50", "bestRating": "5"}
     },
     {
@@ -108,7 +108,7 @@ a{text-decoration:none;color:inherit}
 
 /* LANG BAR */
 .lbar{background:var(--navy3);display:flex;justify-content:flex-end;gap:2px;padding:6px 5vw;align-items:center}
-.lb{background:none;border:none;color:rgba(255,255,255,.4);font-size:.72rem;font-weight:500;font-family:var(--f);letter-spacing:.04em;padding:4px 10px;border-radius:20px;cursor:pointer;transition:all .15s}
+.lb{background:none;border:none;color:rgba(255,255,255,.4);font-size:.72rem;font-weight:500;font-family:var(--f);letter-spacing:.04em;padding:4px 10px;border-radius:4px;cursor:pointer;transition:all .15s}
 .lb:hover{color:rgba(255,255,255,.75)}
 .lb.on{color:#fff;background:rgba(255,255,255,.12)}
 
@@ -125,7 +125,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .nlinks a:hover{color:var(--t)}
 .nlinks a.on{color:var(--blue);border-bottom-color:var(--blue)}
 .nright{display:flex;align-items:center;gap:8px}
-.nenroll{background:var(--blue);color:#fff;border:none;padding:8px 18px;border-radius:20px;font-size:.82rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:background .15s;white-space:nowrap}
+.nenroll{background:var(--blue);color:#fff;border:none;padding:8px 18px;border-radius:4px;font-size:.82rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:background .15s;white-space:nowrap}
 .nenroll:hover{background:var(--blue2)}
 .nham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--t)}
 
@@ -144,16 +144,16 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .smore:hover{text-decoration:underline}
 
 /* BUTTONS */
-.btnf{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;border:none;padding:13px 26px;border-radius:980px;font-size:.93rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:background .15s,transform .1s}
+.btnf{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;border:none;padding:13px 26px;border-radius:4px;font-size:.93rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:background .15s,transform .1s}
 .btnf:hover{background:var(--blue2);transform:scale(.98)}
-.btns{display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--blue);border:1.5px solid var(--blue);padding:12px 24px;border-radius:980px;font-size:.93rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:all .15s}
+.btns{display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--blue);border:1.5px solid var(--blue);padding:12px 24px;border-radius:4px;font-size:.93rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:all .15s}
 .btns:hover{background:var(--bxpale)}
-.btnw{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--navy);border:none;padding:13px 26px;border-radius:980px;font-size:.93rem;font-weight:700;font-family:var(--f);cursor:pointer;text-decoration:none;transition:all .15s;white-space:nowrap}
+.btnw{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--navy);border:none;padding:13px 26px;border-radius:4px;font-size:.93rem;font-weight:700;font-family:var(--f);cursor:pointer;text-decoration:none;transition:all .15s;white-space:nowrap}
 .btnw:hover{background:var(--bg2);transform:scale(.98)}
 
 /* PAGE HERO */
 .page-hero{background:var(--navy);padding:64px 5vw;text-align:center;position:relative;overflow:hidden}
-.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% -20%,rgba(6,97,222,.2),transparent 65%);pointer-events:none}
+.page-hero::before{content:'';position:absolute;inset:0;background:transparent;pointer-events:none}
 .page-hero .slbl{justify-content:center;color:rgba(255,255,255,.45)}
 .page-hero .slbl::before{background:rgba(255,255,255,.2)}
 .page-hero h1{font-family:var(--f);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:700;letter-spacing:-.03em;color:#fff;margin-bottom:.8rem;position:relative}
@@ -188,10 +188,10 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 /* CARDS */
 .card{background:#fff;border:1px solid var(--bd);border-radius:var(--rlg);padding:28px;box-shadow:var(--ss);transition:box-shadow .2s,transform .2s}
 .card:hover{box-shadow:var(--sm);transform:translateY(-2px)}
-.tag{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px}
+.tag{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:4px}
 .tag-blue{background:var(--bxpale);color:var(--blue);border:1px solid rgba(6,97,222,.15)}
 .tag-green{background:#dbeafe;color:#1d4ed8;border:1px solid #93c5fd}
-.tag-gold{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
+.tag-gold{background:#f0f4ff;color:#0661de;border:1px solid #60a5fa}
 
 /* FADE */
 .fade{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
@@ -204,7 +204,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .contact-info{display:flex;flex-direction:column;gap:14px}
 .ci{background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:22px;display:flex;align-items:flex-start;gap:14px;box-shadow:var(--ss);transition:box-shadow .2s,transform .2s;text-decoration:none;color:inherit}
 .ci:hover{box-shadow:var(--sm);transform:translateY(-2px)}
-.ci-icon{width:42px;height:42px;border-radius:11px;background:var(--bxpale);border:1px solid rgba(6,97,222,.13);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-icon{width:42px;height:42px;border-radius:4px;background:var(--bxpale);border:1px solid rgba(6,97,222,.13);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .ci-icon svg{width:19px;height:19px;stroke:var(--blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .ci h4{font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.25rem}
 .ci .main-link{font-size:.85rem;color:var(--blue);font-weight:600;display:block;margin-bottom:.2rem}
@@ -216,8 +216,8 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .branch.soon{opacity:.65}
 .branch-head{display:flex;align-items:center;gap:14px;margin-bottom:.8rem}
 .branch-n{font-family:var(--f);font-size:1.7rem;font-weight:700;color:var(--bg3);line-height:1;letter-spacing:-.04em;flex-shrink:0}
-.branch.active .branch-n{color:var(--blue);background:linear-gradient(135deg,var(--blue),var(--elec));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.branch-status{display:inline-flex;align-items:center;gap:5px;font-size:.66rem;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.05em;text-transform:uppercase}
+.branch.active .branch-n{color:var(--blue);background:#0661de;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.branch-status{display:inline-flex;align-items:center;gap:5px;font-size:.66rem;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:.05em;text-transform:uppercase}
 .branch.active .branch-status{background:#dbeafe;color:#1d4ed8;border:1px solid #93c5fd}
 .branch.soon .branch-status{background:var(--bg2);color:var(--tl);border:1px solid var(--bd)}
 .branch-dot{width:6px;height:6px;border-radius:50%}
@@ -226,11 +226,11 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .branch h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.3rem;letter-spacing:-.01em}
 .branch-addr{font-size:.83rem;color:var(--tm);margin-bottom:1rem;display:flex;align-items:center;gap:6px}
 .branch-addr svg{width:14px;height:14px;stroke:var(--tm);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-.branch a.b-btn{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:var(--blue);font-weight:600;text-decoration:none;border:1.5px solid rgba(6,97,222,.22);padding:7px 14px;border-radius:980px;background:var(--bxpale);transition:all .15s}
+.branch a.b-btn{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:var(--blue);font-weight:600;text-decoration:none;border:1.5px solid rgba(6,97,222,.22);padding:7px 14px;border-radius:4px;background:var(--bxpale);transition:all .15s}
 .branch a.b-btn:hover{border-color:var(--blue);background:var(--bpale)}
-.branch.soon span.b-btn{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:var(--tl);font-weight:600;border:1.5px solid var(--bd);padding:7px 14px;border-radius:980px;background:var(--bg2)}
+.branch.soon span.b-btn{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:var(--tl);font-weight:600;border:1.5px solid var(--bd);padding:7px 14px;border-radius:4px;background:var(--bg2)}
 
-.action-card{background:linear-gradient(135deg,var(--bxpale),#fff);border:1.5px solid rgba(6,97,222,.18);border-radius:var(--rlg);padding:24px;margin-top:1.5rem}
+.action-card{background:#fff;border:1.5px solid rgba(6,97,222,.18);border-radius:var(--rlg);padding:24px;margin-top:1.5rem}
 .action-card h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
 .action-card p{font-size:.83rem;color:var(--tm);margin-bottom:1.1rem;line-height:1.55}
 @media(max-width:760px){.contact-grid{grid-template-columns:1fr;gap:1.8rem}}
@@ -246,7 +246,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 
 
 @media(max-width:960px){
-  .nlinks.open{display:flex!important;flex-direction:column;position:fixed;top:52px;left:0;right:0;background:#fff;box-shadow:0 8px 32px rgba(0,0,0,.14);z-index:499;padding:6px 0;max-height:calc(100vh - 52px);overflow-y:auto}
+  .nlinks.open{display:flex!important;flex-direction:column;position:fixed;top:52px;left:0;right:0;background:#fff;box-shadow:none;z-index:499;padding:6px 0;max-height:calc(100vh - 52px);overflow-y:auto}
   .nlinks.open li{display:block;width:100%}
   .nlinks.open a{height:48px;padding:0 24px;border-bottom:1px solid var(--bg2)!important;color:var(--t)!important;font-size:.92rem;width:100%}
   .nlinks.open a:hover{background:var(--bg2)}
@@ -258,9 +258,9 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
   display:none;position:fixed;top:0;left:0;
   background:#fff;
   border:1px solid rgba(0,0,0,.08);
-  border-radius:14px;
+  border-radius:4px;
   min-width:224px;
-  box-shadow:0 2px 8px rgba(0,0,0,.06),0 12px 36px rgba(0,0,0,.14);
+  box-shadow:none;
   z-index:99999;list-style:none;padding:6px 0;overflow:hidden}
 .nlinks li.has-dd.dd-open .dd{display:block}
 .dd li a{
@@ -278,7 +278,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 /* ── Mobile nav panel (compact accordion) ── */
 .mob-nav{display:none;position:fixed;top:52px;left:0;right:0;
   max-height:calc(100vh - 52px);background:#fff;z-index:1999;overflow-y:auto;
-  box-shadow:0 12px 40px rgba(0,0,0,.18);border-radius:0 0 16px 16px}
+  box-shadow:none;border-radius:0 0 4px 4px}
 .mob-nav.open{display:block}
 .mob-nav .mob-list{list-style:none;padding:6px 0 12px;margin:0}
 .mob-nav .mob-list>li>a{display:block;padding:13px 20px;color:var(--t,#1d1d1f);
@@ -299,7 +299,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
   border-bottom:1px solid #f5f5f7}
 .mob-group-body li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
 .mob-nav .mob-enroll{display:block;margin:12px 20px 8px;padding:14px 24px;
-  background:var(--blue,#0661de);color:#fff!important;border-radius:10px;
+  background:var(--blue,#0661de);color:#fff!important;border-radius:4px;
   text-align:center;font-weight:600;font-size:.95rem;border-bottom:none!important;
   text-decoration:none}
 .mob-nav .mob-enroll:hover{background:#0550c0!important;color:#fff!important}
@@ -369,7 +369,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 nav{
   transition:box-shadow .5s ease,background .4s ease !important}
 nav.scrolled{
-  box-shadow:0 1px 24px rgba(0,0,0,.09) !important}
+  box-shadow:none}
 .nlinks a{
   transition:color .3s ease,border-color .3s ease !important}
 .lb{
@@ -395,135 +395,78 @@ nav.scrolled{
 </script>
 
 <style>
-.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 4px 20px rgba(0,0,0,.15);text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:0 6px 28px rgba(0,0,0,.2)}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:linear-gradient(135deg,#10b981,#059669);color:#fff}.fmchat .fmicon{background:linear-gradient(135deg,#0088cc,#006bb3);color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
+.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 
 
 
 @media(max-width:640px){.fwidget{bottom:80px;right:14px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 </style>
-<link rel="stylesheet" href="/enhancements.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/theme.css?v=3">
 </head>
 <body>
-<div class="lbar">
-  <button class="lb" data-lang="en" onclick="setLang('en')">EN</button>
-  <button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button>
-  <button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button>
-</div>
-<nav>
-  <div class="ni">
-    <a href="/" class="nlogo">
-      <img src="/logo.png" alt="SAT Samarkand">
-      <div class="nlt"><span class="nlt1">SAT</span><span class="nlt2">Samarkand</span></div>
-    </a>
-    <ul class="nlinks" id="nlinks">
-<li><a onclick="closeMobileNav()" href="/" data-en="Home" data-uz="Bosh sahifa" data-ru="Главная">Home</a></li>
-<li class="has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses<span class="dd-arrow">▾</span></a>
-  <ul class="dd">
-    <li><a onclick="closeMobileNav()" href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
-    <li><a onclick="closeMobileNav()" href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a></li>
-    <li><a onclick="closeMobileNav()" href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a></li>
-    <li><a onclick="closeMobileNav()" href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
-    <li><a onclick="closeMobileNav()" href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
-    <li><a onclick="closeMobileNav()" href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
-  </ul>
-</li>
-<li class="has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions<span class="dd-arrow">▾</span></a>
-  <ul class="dd">
-    <li><a onclick="closeMobileNav()" href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a></li>
-    <li><a onclick="closeMobileNav()" href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></li>
-  </ul>
-</li>
-<li><a onclick="closeMobileNav()" href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
-<li class="has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About<span class="dd-arrow">▾</span></a>
-  <ul class="dd">
-    <li><a onclick="closeMobileNav()" href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
-    <li><a onclick="closeMobileNav()" href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></li>
-  </ul>
-</li>
-<li><a onclick="closeMobileNav()" href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
-<li><a onclick="closeMobileNav()" href="/sat-zone/" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a></li>
-<li><a onclick="closeMobileNav()" href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
-<li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Diagnostic" data-uz="Diagnostika" data-ru="Диагностика">Diagnostic</a></li>
-</ul>
-    <div class="nright">
-      <a href="https://t.me/m/E0A422n9ZmIx" class="nenroll" data-en="Enroll Now" data-uz="Ro'yxatdan O'tish" data-ru="Записаться">Enroll Now</a>
-      <button class="nham" onclick="toggleNav()" aria-label="Menu">
-        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="12" x2="19" y2="12"/><line x1="3" y1="18" x2="19" y2="18"/></svg>
-      </button>
+
+<!--SX-HEADER-->
+<a class="sx-skip" href="#sx-main">Skip to content</a>
+<div class="sx-hd" id="sx-hd" role="banner">
+  <div class="sx-wrap">
+    <div class="sx-hd-in">
+      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/logo.png" alt="" width="34" height="34"><span><small>SAT</small>Samarkand</span></a>
+      <div class="sx-nav" role="navigation" aria-label="Main">
+        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div></div>
+        <div class="sx-nav-i"><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div></div>
+        <div class="sx-nav-i"><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></div>
+        <div class="sx-nav-i"><a href="/sat-zone/" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a></div>
+        <div class="sx-nav-i"><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></div>
+      </div>
+      <div class="sx-langs" role="group" aria-label="Language"><button class="lb" data-lang="en" onclick="setLang('en')">EN</button><button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button><button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button></div>
+      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a>
+      <button class="sx-burger" id="sx-burger" aria-label="Menu" aria-expanded="false"><i></i></button>
+    </div>
+    <div class="sx-drawer" role="navigation" aria-label="Mobile">
+      <a class="sx-has-sub" href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a>
+      <div class="sx-sub"><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div>
+      <a class="sx-has-sub" href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a>
+      <div class="sx-sub"><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div>
+      <a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a>
+      <a class="sx-has-sub" href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a>
+      <div class="sx-sub"><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div>
+      <a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a>
+      <a href="/sat-zone/" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a>
+      <a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a>
+      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a></div>
     </div>
   </div>
-</nav>
-<nav class="mob-nav" id="mobnav">
-<ul class="mob-list">
-<li><a href="/" onclick="closeMobileNav()" data-en="Home" data-uz="Bosh sahifa" data-ru="Главная">Home</a></li>
+</div>
+<span id="sx-main"></span>
+<!--/SX-HEADER-->
 
-<li class="mob-group">
-  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
-    <span data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</span>
-    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <ul class="mob-group-body">
-    <li><a href="/courses/" onclick="closeMobileNav()" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a></li>
-    <li><a href="/ap/" onclick="closeMobileNav()" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a></li>
-    <li><a href="/ielts/" onclick="closeMobileNav()" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a></li>
-    <li><a href="/schedule/" onclick="closeMobileNav()" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a></li>
-    <li><a href="/intensive-sat-bootcamp/" onclick="closeMobileNav()" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a></li>
-    <li><a href="/digital-sat/" onclick="closeMobileNav()" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></li>
-  </ul>
-</li>
-
-<li class="mob-group">
-  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
-    <span data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</span>
-    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <ul class="mob-group-body">
-    <li><a href="/admissions/" onclick="closeMobileNav()" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг">Admissions Consulting</a></li>
-    <li><a href="/universities/" onclick="closeMobileNav()" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></li>
-    <li><a href="/results/" onclick="closeMobileNav()" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
-  </ul>
-</li>
-
-<li class="mob-group">
-  <button class="mob-group-hd" onclick="toggleMobGroup(this)">
-    <span data-en="About" data-uz="Biz haqimizda" data-ru="О нас">About</span>
-    <svg class="mob-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <ul class="mob-group-body">
-    <li><a href="/about/" onclick="closeMobileNav()" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
-    <li><a href="/teachers/" onclick="closeMobileNav()" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Преподаватели">Our Teachers</a></li>
-    <li><a href="/blog/" onclick="closeMobileNav()" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
-    <li><a href="/sat-zone/" onclick="closeMobileNav()" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a></li>
-    <li><a href="/contact/" onclick="closeMobileNav()" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
-  </ul>
-</li>
-
-<li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Diagnostic" data-uz="Diagnostika" data-ru="Диагностика">Diagnostic</a></li>
-<li><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="mob-enroll" data-en="Book FREE Lesson →" data-uz="Bepul Dars →" data-ru="Бесплатный урок →">Enroll Now →</a></li>
-</ul>
-</nav>
 
 <!-- ══════════════════════════════════════════════════
      HERO
 ══════════════════════════════════════════════════ -->
-<section style="background:linear-gradient(160deg,#010e24 0%,#02163a 55%,#0a1f4e 100%);padding:88px 5vw 72px;position:relative;overflow:hidden;color:#fff">
-  <div style="position:absolute;top:-80px;right:4%;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(6,97,222,.2),transparent 70%);pointer-events:none"></div>
-  <div style="position:absolute;bottom:-60px;left:6%;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.12),transparent 70%);pointer-events:none"></div>
+<section style="background:#022049;padding:88px 5vw 72px;position:relative;overflow:hidden;color:#fff">
+  <div style="position:absolute;top:-80px;right:4%;width:380px;height:380px;border-radius:50%;background:transparent;pointer-events:none"></div>
+  <div style="position:absolute;bottom:-60px;left:6%;width:260px;height:260px;border-radius:50%;background:transparent;pointer-events:none"></div>
   <div style="max-width:780px;margin:0 auto;position:relative">
-    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(6,97,222,.18);border:1px solid rgba(6,97,222,.4);border-radius:999px;padding:6px 16px;margin-bottom:24px">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(6,97,222,.18);border:1px solid rgba(6,97,222,.4);border-radius:4px;padding:6px 16px;margin-bottom:24px">
       <span style="width:7px;height:7px;border-radius:50%;background:#0661de;display:inline-block"></span>
       <span style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#93c5fd;text-transform:uppercase"
         data-en="Contact Us" data-uz="Biz bilan bog'laning" data-ru="Свяжитесь с нами">Contact Us</span>
     </div>
     <h1 style="font-size:clamp(2.4rem,5vw,3.8rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin:0 0 1.2rem">
       <span data-en="We respond" data-uz="Javob beramiz" data-ru="Мы отвечаем">We respond</span><br>
-      <span style="background:linear-gradient(90deg,#3b82f6,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"
+      <span style="background:#0661de;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"
         data-en="within hours." data-uz="bir necha soat ichida." data-ru="в течение нескольких часов.">within hours.</span>
     </h1>
     <p style="font-size:1.05rem;color:rgba(255,255,255,.6);line-height:1.7;max-width:540px;margin:0"
-      data-en="Telegram is fastest. Or come visit us at either branch — we're open Saturday through Thursday, 9AM–8PM."
-      data-uz="Telegram eng tezkor. Yoki filiallarimizga tashrif buyuring — shanba-payshanba, 9:00–20:00."
-      data-ru="Telegram — быстрее всего. Или приходите в любой из наших филиалов — шб–чт, 9:00–20:00.">Telegram is fastest. Or come visit us at either branch — we're open Saturday through Thursday, 9AM–8PM.</p>
+      data-en="Telegram is fastest. Or come visit us at either branch — we're open Monday to Saturday, 9:00–19:00."
+      data-uz="Telegram eng tezkor. Yoki filiallarimizga tashrif buyuring — dushanba–shanba, 9:00–19:00."
+      data-ru="Telegram — быстрее всего. Или приходите в любой из наших филиалов — пн–сб, 9:00–19:00.">Telegram is fastest. Or come visit us at either branch — we're open Monday to Saturday, 9:00–19:00.</p>
   </div>
 </section>
 
@@ -535,7 +478,7 @@ nav.scrolled{
 
     <!-- Left: channels -->
     <div>
-      <div style="display:inline-flex;align-items:center;gap:8px;background:#eff6ff;border:1px solid rgba(6,97,222,.2);border-radius:999px;padding:5px 14px;margin-bottom:16px">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:#eff6ff;border:1px solid rgba(6,97,222,.2);border-radius:4px;padding:5px 14px;margin-bottom:16px">
         <span style="width:6px;height:6px;border-radius:50%;background:#0661de;display:inline-block"></span>
         <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;color:#0661de;text-transform:uppercase"
           data-en="Get in Touch" data-uz="Bog'lanish" data-ru="Связаться">Get in Touch</span>
@@ -547,17 +490,17 @@ nav.scrolled{
 
         <!-- Telegram Support -->
         <a href="https://t.me/satsam_support" target="_blank" rel="noopener"
-          style="display:flex;align-items:center;gap:16px;background:#fff;border:1.5px solid #e2e8f0;border-radius:20px;padding:20px 22px;text-decoration:none;transition:transform .2s,box-shadow .2s,border-color .2s"
+          style="display:flex;align-items:center;gap:16px;background:#fff;border:1.5px solid #e2e8f0;border-radius:4px;padding:20px 22px;text-decoration:none;transition:transform .2s,box-shadow .2s,border-color .2s"
           onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(6,97,222,.12)';this.style.borderColor='rgba(6,97,222,.35)'"
           onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
-          <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#0661de,#044fba);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <div style="width:48px;height:48px;border-radius:4px;background:#0661de;display:flex;align-items:center;justify-content:center;flex-shrink:0">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg>
           </div>
           <div style="flex:1">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">
               <div style="font-size:.95rem;font-weight:700;color:#022049"
                 data-en="Support Chat" data-uz="Yordam Chat" data-ru="Чат поддержки">Support Chat</div>
-              <div style="background:#dcfce7;color:#16a34a;font-size:.65rem;font-weight:700;border-radius:999px;padding:2px 8px">FASTEST</div>
+              <div style="background:#dcfce7;color:#16a34a;font-size:.65rem;font-weight:700;border-radius:4px;padding:2px 8px">FASTEST</div>
             </div>
             <div style="font-size:.82rem;color:#6e6e73"
               data-en="Questions, enrollment, program info — @satsam_support"
@@ -569,10 +512,10 @@ nav.scrolled{
 
         <!-- Phone -->
         <a href="tel:+998951131600"
-          style="display:flex;align-items:center;gap:16px;background:#fff;border:1.5px solid #e2e8f0;border-radius:20px;padding:20px 22px;text-decoration:none;transition:transform .2s,box-shadow .2s,border-color .2s"
+          style="display:flex;align-items:center;gap:16px;background:#fff;border:1.5px solid #e2e8f0;border-radius:4px;padding:20px 22px;text-decoration:none;transition:transform .2s,box-shadow .2s,border-color .2s"
           onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(6,97,222,.12)';this.style.borderColor='rgba(6,97,222,.35)'"
           onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
-          <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#022049,#0661de);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <div style="width:48px;height:48px;border-radius:4px;background:#022049;display:flex;align-items:center;justify-content:center;flex-shrink:0">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
           </div>
           <div style="flex:1">
@@ -585,10 +528,10 @@ nav.scrolled{
 
         <!-- Instagram -->
         <a href="https://instagram.com/sat_samarkand" target="_blank" rel="noopener"
-          style="display:flex;align-items:center;gap:16px;background:#fff;border:1.5px solid #e2e8f0;border-radius:20px;padding:20px 22px;text-decoration:none;transition:transform .2s,box-shadow .2s,border-color .2s"
-          onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(200,50,150,.1)';this.style.borderColor='rgba(200,50,150,.3)'"
+          style="display:flex;align-items:center;gap:16px;background:#fff;border:1.5px solid #e2e8f0;border-radius:4px;padding:20px 22px;text-decoration:none;transition:transform .2s,box-shadow .2s,border-color .2s"
+          onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(6,97,222,.1)';this.style.borderColor='rgba(6,97,222,.3)'"
           onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
-          <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <div style="width:48px;height:48px;border-radius:4px;background:#0661de;display:flex;align-items:center;justify-content:center;flex-shrink:0">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </div>
           <div style="flex:1">
@@ -600,10 +543,10 @@ nav.scrolled{
 
         <!-- Results Channel -->
         <a href="https://t.me/sat_samarkand_results" target="_blank" rel="noopener"
-          style="display:flex;align-items:center;gap:16px;background:#fff;border:1.5px solid #e2e8f0;border-radius:20px;padding:20px 22px;text-decoration:none;transition:transform .2s,box-shadow .2s,border-color .2s"
+          style="display:flex;align-items:center;gap:16px;background:#fff;border:1.5px solid #e2e8f0;border-radius:4px;padding:20px 22px;text-decoration:none;transition:transform .2s,box-shadow .2s,border-color .2s"
           onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(6,97,222,.12)';this.style.borderColor='rgba(6,97,222,.35)'"
           onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
-          <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#022049,#3b82f6);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <div style="width:48px;height:48px;border-radius:4px;background:#0661de;display:flex;align-items:center;justify-content:center;flex-shrink:0">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <div style="flex:1">
@@ -622,21 +565,21 @@ nav.scrolled{
     <div style="display:flex;flex-direction:column;gap:20px">
 
       <!-- Hours card -->
-      <div style="background:linear-gradient(135deg,#010e24,#022049);border-radius:28px;padding:36px;color:#fff;position:relative;overflow:hidden">
-        <div style="position:absolute;top:-40px;right:-30px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(6,97,222,.25),transparent 70%);pointer-events:none"></div>
+      <div style="background:#022049;border-radius:4px;padding:36px;color:#fff;position:relative;overflow:hidden">
+        <div style="position:absolute;top:-40px;right:-30px;width:160px;height:160px;border-radius:50%;background:transparent;pointer-events:none"></div>
         <div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;color:#93c5fd;text-transform:uppercase;margin-bottom:14px"
           data-en="Opening Hours" data-uz="Ish vaqti" data-ru="Часы работы">Opening Hours</div>
         <div style="display:flex;flex-direction:column;gap:10px">
           <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.07)">
             <span style="font-size:.9rem;color:rgba(255,255,255,.7)"
-              data-en="Saturday – Thursday" data-uz="Shanba – Payshanba" data-ru="Суббота – Четверг">Saturday – Thursday</span>
-            <span style="font-size:.9rem;font-weight:700;color:#fff">9:00 – 20:00</span>
+              data-en="Monday – Saturday" data-uz="Dushanba – Shanba" data-ru="Понедельник – Суббота">Monday – Saturday</span>
+            <span style="font-size:.9rem;font-weight:700;color:#fff">9:00 – 19:00</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:center">
             <span style="font-size:.9rem;color:rgba(255,255,255,.7)"
-              data-en="Friday" data-uz="Juma" data-ru="Пятница">Friday</span>
+              data-en="Sunday" data-uz="Yakshanba" data-ru="Воскресенье">Sunday</span>
             <span style="font-size:.88rem;font-weight:600;color:rgba(255,255,255,.4)"
-              data-en="Closed" data-uz="Dam olish" data-ru="Выходной">Closed</span>
+              data-en="Mock SAT · 10:00" data-uz="Mock SAT · 10:00" data-ru="Mock SAT · 10:00">Mock SAT · 10:00</span>
           </div>
         </div>
         <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:8px">
@@ -649,9 +592,9 @@ nav.scrolled{
       </div>
 
       <!-- Sunday mock card -->
-      <div style="background:#eff6ff;border:1.5px solid rgba(6,97,222,.2);border-radius:24px;padding:28px">
+      <div style="background:#eff6ff;border:1.5px solid rgba(6,97,222,.2);border-radius:4px;padding:28px">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-          <div style="width:36px;height:36px;border-radius:10px;background:#0661de;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <div style="width:36px;height:36px;border-radius:4px;background:#0661de;display:flex;align-items:center;justify-content:center;flex-shrink:0">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
           <div style="font-size:.92rem;font-weight:700;color:#022049"
@@ -662,12 +605,12 @@ nav.scrolled{
           data-uz="Har yakshanba 1-filialda soat 10:00 da. To'liq vaqtli mock — barchaga ochiq."
           data-ru="Каждое воскресенье в 10:00 в Филиале 1. Полный пробный экзамен — бесплатно для всех.">Every Sunday at 10:00 AM at Branch 1. Full timed mock — open to all, no commitment needed.</p>
         <a href="https://t.me/m/dZGyk8a_ZDc5" target="_blank" rel="noopener"
-          style="display:inline-flex;align-items:center;gap:6px;background:#0661de;color:#fff;border-radius:999px;padding:11px 20px;font-size:.84rem;font-weight:700;text-decoration:none"
+          style="display:inline-flex;align-items:center;gap:6px;background:#0661de;color:#fff;border-radius:4px;padding:11px 20px;font-size:.84rem;font-weight:700;text-decoration:none"
           data-en="Reserve Your Spot →" data-uz="O'rin Band Qiling →" data-ru="Забронировать →">Reserve Your Spot →</a>
       </div>
 
       <!-- Enroll CTA -->
-      <div style="background:#022049;border-radius:24px;padding:28px;color:#fff">
+      <div style="background:#022049;border-radius:4px;padding:28px;color:#fff">
         <div style="font-size:.92rem;font-weight:700;margin-bottom:8px"
           data-en="Ready to enroll?" data-uz="Yozilishga tayyormisiz?" data-ru="Готовы записаться?">Ready to enroll?</div>
         <p style="font-size:.84rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0 0 16px"
@@ -675,7 +618,7 @@ nav.scrolled{
           data-uz="Telegramda yozing — bir necha soatda o'rningizni tasdiqlaydi."
           data-ru="Напишите в Telegram — подтвердим место в течение нескольких часов.">Message us on Telegram and we'll confirm your spot within hours.</p>
         <a href="https://t.me/satsam_support?text=Kursga+yozilmoqchiman" target="_blank" rel="noopener"
-          style="display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#0661de,#044fba);color:#fff;border-radius:999px;padding:12px 22px;font-size:.88rem;font-weight:700;text-decoration:none;box-shadow:0 6px 20px rgba(6,97,222,.35)"
+          style="display:inline-flex;align-items:center;gap:7px;background:#0661de;color:#fff;border-radius:4px;padding:12px 22px;font-size:.88rem;font-weight:700;text-decoration:none;box-shadow:none"
           data-en="Enroll via Telegram →" data-uz="Telegramda yozilish →" data-ru="Записаться в Telegram →">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg>
           Enroll via Telegram →
@@ -692,7 +635,7 @@ nav.scrolled{
 <section style="padding:0 5vw 80px;background:#fff">
   <div style="max-width:1100px;margin:0 auto">
 
-    <div style="display:inline-flex;align-items:center;gap:8px;background:#eff6ff;border:1px solid rgba(6,97,222,.2);border-radius:999px;padding:5px 14px;margin-bottom:16px">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:#eff6ff;border:1px solid rgba(6,97,222,.2);border-radius:4px;padding:5px 14px;margin-bottom:16px">
       <span style="width:6px;height:6px;border-radius:50%;background:#0661de;display:inline-block"></span>
       <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;color:#0661de;text-transform:uppercase"
         data-en="Find Us" data-uz="Bizni toping" data-ru="Как нас найти">Find Us</span>
@@ -703,19 +646,19 @@ nav.scrolled{
     <!-- Branch tabs -->
     <div style="display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap">
       <button onclick="showMap(1)" id="mtab1"
-        style="display:flex;align-items:center;gap:8px;padding:11px 24px;border-radius:999px;border:2px solid #0661de;background:#0661de;color:#fff;font-size:.86rem;font-weight:700;cursor:pointer;transition:all .15s;font-family:inherit">
+        style="display:flex;align-items:center;gap:8px;padding:11px 24px;border-radius:4px;border:2px solid #0661de;background:#0661de;color:#fff;font-size:.86rem;font-weight:700;cursor:pointer;transition:all .15s;font-family:inherit">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         <span data-en="Branch 1 — Temur Malik 19" data-uz="1-filial — Temur Malik 19" data-ru="Филиал 1 — Темур Малик 19">Branch 1 — Temur Malik 19</span>
       </button>
       <button onclick="showMap(2)" id="mtab2"
-        style="display:flex;align-items:center;gap:8px;padding:11px 24px;border-radius:999px;border:2px solid #e2e8f0;background:#fff;color:#022049;font-size:.86rem;font-weight:700;cursor:pointer;transition:all .15s;font-family:inherit">
+        style="display:flex;align-items:center;gap:8px;padding:11px 24px;border-radius:4px;border:2px solid #e2e8f0;background:#fff;color:#022049;font-size:.86rem;font-weight:700;cursor:pointer;transition:all .15s;font-family:inherit">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         <span data-en="Branch 2 — Mirzo Ulug'bek 105" data-uz="2-filial — Mirzo Ulug'bek 105" data-ru="Филиал 2 — Мирзо Улугбек 105">Branch 2 — Mirzo Ulug'bek 105</span>
       </button>
     </div>
 
     <!-- Map 1 -->
-    <div id="mwrap1" style="border-radius:24px;overflow:hidden;box-shadow:0 4px 28px rgba(0,0,0,.1);border:1px solid #e2e8f0">
+    <div id="mwrap1" style="border-radius:4px;overflow:hidden;box-shadow:none;border:1px solid #e2e8f0">
       <iframe src="https://maps.google.com/maps?q=SAT+Samarkand+Dinamo+Samarkand+Uzbekistan&output=embed&z=17"
         width="100%" height="440" style="border:0;display:block" allowfullscreen="" loading="lazy"
         title="SAT Samarkand — Branch 1, Temur Malik 19"></iframe>
@@ -734,7 +677,7 @@ nav.scrolled{
     </div>
 
     <!-- Map 2 -->
-    <div id="mwrap2" style="display:none;border-radius:24px;overflow:hidden;box-shadow:0 4px 28px rgba(0,0,0,.1);border:1px solid #e2e8f0">
+    <div id="mwrap2" style="display:none;border-radius:4px;overflow:hidden;box-shadow:none;border:1px solid #e2e8f0">
       <iframe src="https://maps.google.com/maps?q=Mirzo+Ulugbek+105+Samarkand+Uzbekistan&output=embed&z=16"
         width="100%" height="440" style="border:0;display:block" allowfullscreen="" loading="lazy"
         title="SAT Samarkand — Branch 2, Mirzo Ulugbek 105"></iframe>
@@ -771,42 +714,63 @@ function showMap(n) {
 }
 </style>
 
-<div class="footer">
-  <div class="fgrid">
-    <div>
-      <div class="flogrow"><img src="/logo.png" alt="SAT Samarkand"><span class="fbrand">SAT <span>Samarkand</span></span></div>
-      <p class="ftagline" data-en="Samarkand's most results-driven SAT, AP &amp; IELTS prep center." data-uz="Samarqandning rasmiy SAT, AP va IELTS markazi." data-ru="Официальный центр SAT, AP и IELTS в Самарканде.">Samarkand's most results-driven SAT, AP &amp; IELTS prep center.</p>
-      <p class="fpartner" data-en="In partnership with Joylink IT Academy &amp; Millennium Education" data-uz="Joylink IT Academy va Millennium Education hamkorligida" data-ru="В партнёрстве с Joylink IT Academy и Millennium Education">In partnership with Joylink IT Academy &amp; Millennium Education</p>
+<!--SX-FOOTER-->
+<div class="sx-ft" role="contentinfo">
+  <div class="sx-wrap">
+    <div class="sx-ft-grid">
+      <div>
+        <a class="sx-brand" href="/"><span class="sx-chip"><img src="/logo.png" alt="" width="28" height="28"></span><span><small>SAT</small>Samarkand</span></a>
+        <p class="sx-ft-about" data-en="Samarkand’s official SAT, AP & IELTS prep center." data-uz="Samarqandning rasmiy markazi." data-ru="Официальный центр.">Samarkand’s official SAT, AP & IELTS prep center.</p>
+        <p class="sx-ft-about" style="margin-top:6px" data-en="Partners: Joylink & Millennium" data-uz="Joylink & Millennium" data-ru="Joylink & Millennium">Partners: Joylink & Millennium</p>
+      </div>
+      <div>
+        <h3 data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</h3>
+        <ul>
+          <li><a href="/sat-course-samarkand/" data-en="SAT Course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT Course</a></li>
+          <li><a href="/digital-sat/" data-en="Digital SAT" data-uz="Raqamli SAT" data-ru="Цифровой SAT">Digital SAT</a></li>
+          <li><a href="/sat-math-prep/" data-en="SAT Math" data-uz="SAT Matematika" data-ru="Математика SAT">SAT Math</a></li>
+          <li><a href="/sat-english-prep/" data-en="SAT English" data-uz="SAT Ingliz tili" data-ru="Английский SAT">SAT English</a></li>
+          <li><a href="/sat-tutoring-samarkand/" data-en="Tutoring" data-uz="Individual dars" data-ru="Репетиторство">Tutoring</a></li>
+          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-en="About" data-uz="Biz" data-ru="О нас">About</h3>
+        <ul>
+          <li><a href="/teachers/" data-en="Teachers" data-uz="O'qituvchilar" data-ru="Учителя">Teachers</a></li>
+          <li><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
+          <li><a href="/pricing/" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a></li>
+          <li><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+          <li><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
+          <li><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h3>
+        <ul>
+          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram Channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram Channel</a></li>
+          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support Chat" data-uz="Yordam" data-ru="Поддержка">Support Chat</a></li>
+          <li><a href="https://instagram.com/sat_samarkand" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="tel:+998951131600" class="sx-num">+998 95 113 16 00</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-en="Address" data-uz="Manzil" data-ru="Адрес">Address</h3>
+        <address>
+          Temur Malik 19<span data-en="Main center" data-uz="Asosiy markaz" data-ru="Главный центр">Main center</span>
+          Mirzo Ulug'bek 105<span data-en="Second branch · Joylink Academy" data-uz="Ikkinchi filial · Joylink Academy" data-ru="Второй филиал · Joylink Academy">Second branch · Joylink Academy</span>
+          Samarkand, Uzbekistan<span data-en="Mon–Sat 9:00–19:00 · Sun: Mock SAT 10:00" data-uz="Du–Sha 9:00–19:00 · Yak: Mock SAT 10:00" data-ru="Пн–Сб 9:00–19:00 · Вс: Mock SAT 10:00">Mon–Sat 9:00–19:00 · Sun: Mock SAT 10:00</span>
+        </address>
+      </div>
     </div>
-    <div class="fcol">
-      <h4 data-en="Pages" data-uz="Sahifalar" data-ru="Страницы">Pages</h4>
-      <a href="/about/" data-en="About" data-uz="Biz haqimizda" data-ru="О нас">About</a>
-      <a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a>
-      <a href="https://diagnostic.satsamarkand.uz" data-en="Diagnostic" data-uz="Diagnostika" data-ru="Диагностика">Diagnostic</a>
-      <a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a>
-      <a href="https://t.me/m/E0A422n9ZmIx" data-en="Register" data-uz="Ro'yxatdan o'tish" data-ru="Записаться">Register</a>
-      <a href="/sat-zone/">SATZONE</a>
-      <a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a>
-    </div>
-    <div class="fcol">
-      <h4 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h4>
-      <a href="https://t.me/sat_samarkand" target="_blank">Telegram Channel</a>
-      <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" data-en="Support &amp; Questions" data-uz="Yordam va Savollar" data-ru="Поддержка">Support &amp; Questions</a>
-      <a href="https://instagram.com/sat_samarkand" target="_blank">Instagram</a>
-      <a href="tel:+998951131600">+998 95 113 16 00</a>
-    </div>
-    <div class="fcol">
-      <h4 data-en="Locations" data-uz="Joylashuv" data-ru="Адрес">Locations</h4>
-      <p>Temur Malik 19</p>
-      <p>Mirzo Ulug'bek 105</p>
-      <p data-en="Samarkand, Uzbekistan" data-uz="Samarqand, O'zbekiston" data-ru="Самарканд, Узбекистан">Samarkand, Uzbekistan</p>
-    </div>
-  </div>
-  <div class="fbot">
-    <p>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></p>
-    <a href="https://satsamarkand.uz">satsamarkand.uz</a>
+    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span></div>
   </div>
 </div>
+<div class="sx-sticky">
+  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a>
+  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qo'ng'iroq" data-ru="Позвоните нам">Call us</a>
+</div>
+<!--/SX-FOOTER-->
 </div>
 
 <script>
@@ -1038,17 +1002,9 @@ if(typeof toggleMobileNav==='undefined'){
 }
 </script>
 
-<div class="fwidget" id="fwidget">
-  <a href="tel:+998951131600" class="fmitem fmcall">
-    <div class="fmicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
-    <div class="fminfo"><div class="fmtitle" data-en="Call us" data-uz="Qo'ng'iroq qiling" data-ru="Позвонить">Call us</div><div class="fmsub">+998 95 113 16 00</div></div>
-  </a>
-  <a href="https://t.me/satsam_support" target="_blank" class="fmitem fmchat">
-    <div class="fmicon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg></div>
-    <div class="fminfo"><div class="fmtitle" data-en="Have a question?" data-uz="Savol bormi?" data-ru="Есть вопрос?">Have a question?</div><div class="fmsub">@satsam_support</div></div>
-  </a>
-</div>
 
 
+
+<script src="/theme.js?v=3" defer></script>
 </body>
 </html>
