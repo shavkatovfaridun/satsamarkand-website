@@ -4,3 +4,6 @@ supabase_setup.sql
 
 .fuse_hidden*
 .DS_Store
+
+# redesign build scripts (local only)
+_tools/
