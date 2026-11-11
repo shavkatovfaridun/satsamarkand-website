@@ -2,20 +2,7 @@
 
 User-agent: *
 Allow: /
-
-# Block admin areas
 Disallow: /admin/
-Disallow: /admin
+Disallow: /practice/dashboard/
 
-# Allow Google, Bing, Yandex (important for Russian-speaking users in Uzbekistan)
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# Sitemap location
 Sitemap: https://satsamarkand.uz/sitemap.xml
