@@ -433,6 +433,17 @@ h2 em{font-weight:400}
   .js .scale .seg,.js .scale .pb{transform:none;transition:none}
   *{transition:none!important}
 }
+
+/* five mentors */
+.mentors{grid-template-columns:repeat(5,1fr)}
+.mentor{padding:26px 22px 30px 0}
+.mentor+.mentor{padding-left:22px}
+.mentor .big{font-size:clamp(2.5rem,4.1vw,3.5rem)}
+.mentor .big small{display:block;margin:10px 0 0;position:static}
+.mentor h3{font-size:1.08rem;margin-top:18px}
+.mentor p{font-size:.9rem}
+@media(max-width:1020px){.mentors{grid-template-columns:1fr 1fr}.mentor:nth-child(odd){padding-left:0;border-left:0}}
+@media(max-width:560px){.mentors{grid-template-columns:1fr}.mentor,.mentor+.mentor{padding-left:0;padding-right:0;border-left:0}}
 </style>
 </head>
 <body>
@@ -451,7 +462,6 @@ h2 em{font-weight:400}
         <div class="nav-i"><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></div>
         <div class="nav-i has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="dd"><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div></div>
         <div class="nav-i"><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></div>
-        <div class="nav-i"><a href="/sat-zone/" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a></div>
         <div class="nav-i"><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></div>
       </nav>
       <div class="langs" role="group" aria-label="Language">
@@ -469,7 +479,6 @@ h2 em{font-weight:400}
       <a class="has-sub" href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a>
       <div class="sub"><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div>
       <a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a>
-      <a href="/sat-zone/" data-en="SATZONE" data-uz="SATZONE" data-ru="SATZONE">SATZONE</a>
       <a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a>
       <div class="cta"><a class="btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a><a class="btn line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a></div>
     </nav>
@@ -626,8 +635,11 @@ h2 em{font-weight:400}
       <div><h2 data-en="Every mentor <em>aced the SAT</em> themselves." data-uz="Har bir mentor <em>SATni a'lo topshirgan.</em>" data-ru="Каждый ментор <em>отлично сдал SAT.</em>">Every mentor <em>aced the SAT</em> themselves.</h2><p class="lede" data-en="Not just teachers — people who've been exactly where you are and know every shortcut to the top score." data-uz="Shunchaki o'qituvchilar emas — aynan siz turgan joyda bo'lgan odamlar." data-ru="Не просто учителя — люди, которые прошли этот путь сами.">Not just teachers — people who've been exactly where you are and know every shortcut to the top score.</p></div>
     </div>
     <div class="mentors">
-      <article class="mentor"><div class="big">800<small>MATH</small></div><h3>Shoxrux Mexrojiddinov</h3><span class="role mono">SAT Math</span><p data-en="Perfect 800/800 SAT Math score. Algebra, geometry, and advanced math — zero mistakes possible." data-uz="SAT Matematikadan mukammal 800 ball. Algebra, geometriya va murakkab masalalar." data-ru="Идеальный результат 800 по математике SAT. Алгебра, геометрия, сложные задачи.">Perfect 800/800 SAT Math score. Algebra, geometry, and advanced math — zero mistakes possible.</p></article>
-      <article class="mentor"><div class="big">700<small>ENG</small></div><h3>Azizbek Vakhobov</h3><span class="role mono">SAT English</span><p data-en="3 years teaching SAT English. Grammar, reading, and vocabulary — mastered and demystified." data-uz="3 yillik SAT ingliz tili tajribasi. Grammatika, o'qish va leksika." data-ru="3 года преподаёт SAT English. Грамматика, чтение и лексика.">3 years teaching SAT English. Grammar, reading, and vocabulary — mastered and demystified.</p></article>
+      <article class="mentor"><div class="big">1520<small>SAT</small></div><h3>Faridun Shavkatov</h3><span class="role mono" data-en="Founder · Math &amp; English" data-uz="Asoschi · Math va Ingliz tili" data-ru="Основатель · Математика и английский">Founder · Math &amp; English</span><p data-en="800 Math and 720 English on the SAT. Head teacher — personally reviews all course material." data-uz="SATda Math 800 va Ingliz tili 720. Bosh o'qituvchi — barcha dars materiallarini shaxsan tekshiradi." data-ru="800 по математике и 720 по английскому на SAT. Главный преподаватель — лично проверяет все материалы.">800 Math and 720 English on the SAT. Head teacher — personally reviews all course material.</p></article>
+      <article class="mentor"><div class="big">800<small>MATH</small></div><h3>Shoxrux Mexrojiddinov</h3><span class="role mono" data-en="SAT Math" data-uz="SAT Math" data-ru="SAT Math">SAT Math</span><p data-en="Perfect 800/800 SAT Math score. Algebra, geometry, and advanced math." data-uz="SAT Matematikadan mukammal 800 ball. Algebra, geometriya va murakkab masalalar." data-ru="Идеальный результат 800 по математике SAT. Алгебра, геометрия, сложные задачи.">Perfect 800/800 SAT Math score. Algebra, geometry, and advanced math.</p></article>
+      <article class="mentor"><div class="big">790<small>MATH</small></div><h3>Gulgina Abdirahimova</h3><span class="role mono" data-en="SAT Math" data-uz="SAT Math" data-ru="SAT Math">SAT Math</span><p data-en="790 out of 800 on SAT Math." data-uz="SAT Matematikadan 800 dan 790 ball." data-ru="790 из 800 по математике SAT.">790 out of 800 on SAT Math.</p></article>
+      <article class="mentor"><div class="big">720<small>ENG</small></div><h3>Dilmurod Kudratov</h3><span class="role mono" data-en="SAT English" data-uz="SAT English" data-ru="SAT English">SAT English</span><p data-en="720 on SAT Reading &amp; Writing." data-uz="SAT Reading &amp; Writing bo'limidan 720 ball." data-ru="720 по разделу Reading &amp; Writing SAT.">720 on SAT Reading &amp; Writing.</p></article>
+      <article class="mentor"><div class="big">700<small>ENG</small></div><h3>Azizbek Vakhobov</h3><span class="role mono" data-en="SAT English" data-uz="SAT English" data-ru="SAT English">SAT English</span><p data-en="3 years teaching SAT English. Grammar, reading, and vocabulary." data-uz="3 yillik SAT ingliz tili tajribasi. Grammatika, o'qish va leksika." data-ru="3 года преподаёт SAT English. Грамматика, чтение и лексика.">3 years teaching SAT English. Grammar, reading, and vocabulary.</p></article>
     </div>
     <p class="more"><a class="lnk" href="/teachers/" data-en="Meet all mentors →" data-uz="Barcha mentorlar →" data-ru="Все менторы →">Meet all mentors →</a></p>
 
