@@ -58,10 +58,10 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:#022049;--navy3:#010e24;--blue:#0661de;--blue2:#0450b4;--elec:#2979ff;--green:#044fba;
-  --bxpale:#f0f4ff;--bpale:#e8f0fe;
-  --t:#1d1d1f;--t2:#3d3d3d;--tm:#6e6e73;--tl:#86868b;
-  --bg:#fff;--bg2:#f5f5f7;--bg3:#e8ecf0;--bd:#d2d2d7;
+  --navy:#022049;--navy3:#022049;--blue:#0661de;--blue2:#0550b8;--elec:#0661de;--green:#0550b8;
+  --bxpale:#e8f1fd;--bpale:#e8f1fd;
+  --t:#022049;--t2:#022049;--tm:#5a6b85;--tl:#5a6b85;
+  --bg:#fff;--bg2:#f4f7fb;--bg3:#d6e0ee;--bd:#d6e0ee;
   --ss:0 1px 3px rgba(0,0,0,.06);--sm:0 2px 12px rgba(0,0,0,.08);--sl:0 8px 32px rgba(0,0,0,.1);
   --r:12px;--rsm:8px;--rlg:18px;--rxl:24px;
   --f:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;
@@ -164,7 +164,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pcard.premium .pribbon{background:#0661de;color:var(--navy3)}
 .phead{padding:30px 28px 0}
 .ptag{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:.4rem}
-.pcard.premium .ptag{color:#60a5fa}
+.pcard.premium .ptag{color:#e8f1fd}
 .ptitle{font-family:var(--f);font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:.25rem}
 .pcard.premium .ptitle{color:#fff}
 .psub{font-size:.83rem;color:var(--tm);margin-bottom:1.2rem;line-height:1.5}
@@ -176,7 +176,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pfeats li{font-size:.85rem;color:var(--t2);display:flex;align-items:flex-start;gap:8px;line-height:1.45}
 .pcard.premium .pfeats li{color:rgba(255,255,255,.8)}
 .pfeats li::before{content:'✓';color:var(--green);font-weight:700;font-size:.85rem;flex-shrink:0;margin-top:.05em}
-.pcard.premium .pfeats li::before{color:#34d399}
+.pcard.premium .pfeats li::before{color:#0661de}
 .pbtn{display:block;text-align:center;padding:13px;border-radius:4px;font-size:.88rem;font-weight:600;font-family:var(--f);text-decoration:none;transition:all .15s;border:none;cursor:pointer;width:100%}
 .pbtn.sol{background:var(--blue);color:#fff}
 .pbtn.sol:hover{background:var(--blue2)}
@@ -208,7 +208,7 @@ footer a{color:rgba(255,255,255,.6)}
 footer a:hover{color:#fff}
 
 
-.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
+.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#022049;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#5a6b85;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 
 
 
@@ -226,10 +226,10 @@ footer a:hover{color:#fff}
 .mob-nav{display:none;position:fixed;top:52px;left:0;right:0;bottom:0;background:#fff;z-index:499;overflow-y:auto;box-shadow:none}
 .mob-nav.open{display:block}
 .mob-nav ul{list-style:none;padding:6px 0 40px;margin:0}
-.mob-nav li a{display:block;padding:13px 24px;color:var(--t,#1d1d1f);font-size:.95rem;text-decoration:none;border-bottom:1px solid #f5f5f7}
-.mob-nav li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-nav li a{display:block;padding:13px 24px;color:var(--t,#022049);font-size:.95rem;text-decoration:none;border-bottom:1px solid #f4f7fb}
+.mob-nav li a:hover{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-nav .mob-enroll{display:block;margin:16px 24px 8px;padding:14px 24px;background:var(--blue,#0661de);color:#fff!important;border-radius:4px;text-align:center;font-weight:600;font-size:.95rem;border-bottom:none!important}
-.mob-nav .mob-sec{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--tl,#86868b);padding:10px 24px 3px;margin-top:4px;pointer-events:none;display:block}
+.mob-nav .mob-sec{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--tl,#5a6b85);padding:10px 24px 3px;margin-top:4px;pointer-events:none;display:block}
 
 /* Hamburger → X */
 .nham svg line{transition:all .25s;transform-box:fill-box;transform-origin:center}
@@ -412,22 +412,22 @@ nav.scrolled{
   </div>
   <div class="wgrid">
     <div class="wc">
-      <div style="width:40px;height:40px;border-radius:4px;background:#e8f0ff;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+      <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
       <h3 data-en="SAT Preparation" data-uz="SAT tayyorgarligi" data-ru="Подготовка к SAT">SAT Preparation</h3>
       <p data-en="Targeted SAT coaching with proven methods. Our students average 1500+. The SAT is the foundation — we build it right." data-uz="Samarali usullar bilan SAT boʻyicha coaching. Oʻquvchilarimiz oʻrtacha 1500+ oladi." data-ru="Целевой коучинг по SAT. Наши студенты набирают в среднем 1500+.">Targeted SAT coaching with proven methods. Our students average 1500+. The SAT is the foundation — we build it right.</p>
     </div>
     <div class="wc">
-      <div style="width:40px;height:40px;border-radius:4px;background:#f0f4ff;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+      <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
       <h3 data-en="University Selection" data-uz="Universitet tanlash" data-ru="Выбор университета">University Selection</h3>
       <p data-en="We match you to universities that fit your score, budget, major, and career goals — US, EU, Turkey, and beyond." data-uz="Ballingiz, byudjetingiz va maqsadlaringizga mos universitetlarni tanlaymiz." data-ru="Подбираем университеты под ваш балл, бюджет и цели.">We match you to universities that fit your score, budget, major, and career goals — US, EU, Turkey, and beyond.</p>
     </div>
     <div class="wc">
-      <div style="width:40px;height:40px;border-radius:4px;background:#edfaf3;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+      <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
       <h3 data-en="Application Essays" data-uz="Qabul inshosi" data-ru="Эссе для поступления">Application Essays</h3>
       <p data-en="Common App personal statement, supplemental essays, &quot;Why This School&quot; — we make your story impossible to ignore." data-uz="Common App inshosi, qoʻshimcha insholar — sizning hikoyangizni unutib boʻlmaydigan qilamiz." data-ru="Личный эссе, дополнительные эссе — делаем вашу историю незабываемой.">Common App personal statement, supplemental essays — we make your story impossible to ignore.</p>
     </div>
     <div class="wc">
-      <div style="width:40px;height:40px;border-radius:4px;background:#f0f4ff;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+      <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
       <h3 data-en="Scholarship Applications" data-uz="Stipendiya arizalari" data-ru="Заявки на стипендии">Scholarship Applications</h3>
       <p data-en="Identify and apply for merit scholarships, financial aid, and need-based grants to make your education affordable." data-uz="Merit stipendiyalari, moliyaviy yordam va grantlarni aniqlaymiz va ariza beramiz." data-ru="Ищем и подаём заявки на стипендии, финансовую помощь и гранты.">Identify and apply for merit scholarships, financial aid, and need-based grants.</p>
     </div>
@@ -437,7 +437,7 @@ nav.scrolled{
       <p data-en="Mock interviews, common questions, and confidence coaching so you walk into admissions interviews ready to impress." data-uz="Mock intervyular va ishonch treningi — qabul intervyusiga tayyor boring." data-ru="Пробные интервью и тренинги уверенности для поступления.">Mock interviews and confidence coaching so you walk into admissions interviews ready to impress.</p>
     </div>
     <div class="wc">
-      <div style="width:40px;height:40px;border-radius:4px;background:#f0f4ff;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19.5 2.5S18 2 16.5 3.5L13 7 4.8 5.2c-.8-.2-1.6.4-1.8 1.2L3 7c-.2.8.2 1.6.8 2l5.4 3.4L7 17l-2 1v2l4-1 1-2 3.4 5.4c.4.6 1.2 1 2 .8l.8-.2c.8-.2 1.4-1 1.2-1.8z"/></svg></div>
+      <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19.5 2.5S18 2 16.5 3.5L13 7 4.8 5.2c-.8-.2-1.6.4-1.8 1.2L3 7c-.2.8.2 1.6.8 2l5.4 3.4L7 17l-2 1v2l4-1 1-2 3.4 5.4c.4.6 1.2 1 2 .8l.8-.2c.8-.2 1.4-1 1.2-1.8z"/></svg></div>
       <h3 data-en="Student Visa Guidance" data-uz="Talaba vizasi" data-ru="Студенческая виза">Student Visa Guidance</h3>
       <p data-en="Step-by-step help with F-1, Schengen, and other student visa applications so you don't lose your spot over paperwork." data-uz="F-1, Schengen va boshqa student vizalari boʻyicha bosqichma-bosqich yordam." data-ru="Пошаговая помощь с визой F-1, Шенген и другими студенческими визами.">Step-by-step help with F-1, Schengen, and other student visa applications.</p>
     </div>

@@ -14,10 +14,10 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:#022049;--navy3:#010e24;--blue:#0661de;--blue2:#0450b4;--elec:#2979ff;--green:#16a34a;
-  --bxpale:#f0f4ff;--bpale:#e8f0fe;
-  --t:#1d1d1f;--t2:#3d3d3d;--tm:#6e6e73;--tl:#86868b;
-  --bg:#fff;--bg2:#f5f5f7;--bg3:#e8ecf0;--bd:#d2d2d7;
+  --navy:#022049;--navy3:#022049;--blue:#0661de;--blue2:#0550b8;--elec:#0661de;--green:#0661de;
+  --bxpale:#e8f1fd;--bpale:#e8f1fd;
+  --t:#022049;--t2:#022049;--tm:#5a6b85;--tl:#5a6b85;
+  --bg:#fff;--bg2:#f4f7fb;--bg3:#d6e0ee;--bd:#d6e0ee;
   --ss:0 1px 3px rgba(0,0,0,.06);--sm:0 2px 12px rgba(0,0,0,.08);--sl:0 8px 32px rgba(0,0,0,.1);
   --r:12px;--rsm:8px;--rlg:18px;--rxl:24px;
   --f:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;
@@ -120,7 +120,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pcard.premium .pribbon{background:#0661de;color:var(--navy3)}
 .phead{padding:30px 28px 0}
 .ptag{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:.4rem}
-.pcard.premium .ptag{color:#60a5fa}
+.pcard.premium .ptag{color:#e8f1fd}
 .ptitle{font-family:var(--f);font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:.25rem}
 .pcard.premium .ptitle{color:#fff}
 .psub{font-size:.83rem;color:var(--tm);margin-bottom:1.2rem;line-height:1.5}
@@ -132,7 +132,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pfeats li{font-size:.85rem;color:var(--t2);display:flex;align-items:flex-start;gap:8px;line-height:1.45}
 .pcard.premium .pfeats li{color:rgba(255,255,255,.8)}
 .pfeats li::before{content:'✓';color:var(--green);font-weight:700;font-size:.85rem;flex-shrink:0;margin-top:.05em}
-.pcard.premium .pfeats li::before{color:#34d399}
+.pcard.premium .pfeats li::before{color:#0661de}
 .pbtn{display:block;text-align:center;padding:13px;border-radius:4px;font-size:.88rem;font-weight:600;font-family:var(--f);text-decoration:none;transition:all .15s;border:none;cursor:pointer;width:100%}
 .pbtn.sol{background:var(--blue);color:#fff}
 .pbtn.sol:hover{background:var(--blue2)}
@@ -164,7 +164,7 @@ footer a{color:rgba(255,255,255,.6)}
 footer a:hover{color:#fff}
 
 
-.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
+.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#022049;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#5a6b85;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 
 
 
@@ -182,10 +182,10 @@ footer a:hover{color:#fff}
 .mob-nav{display:none;position:fixed;top:52px;left:0;right:0;bottom:0;background:#fff;z-index:499;overflow-y:auto;box-shadow:none}
 .mob-nav.open{display:block}
 .mob-nav ul{list-style:none;padding:6px 0 40px;margin:0}
-.mob-nav li a{display:block;padding:13px 24px;color:var(--t,#1d1d1f);font-size:.95rem;text-decoration:none;border-bottom:1px solid #f5f5f7}
-.mob-nav li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-nav li a{display:block;padding:13px 24px;color:var(--t,#022049);font-size:.95rem;text-decoration:none;border-bottom:1px solid #f4f7fb}
+.mob-nav li a:hover{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-nav .mob-enroll{display:block;margin:16px 24px 8px;padding:14px 24px;background:var(--blue,#0661de);color:#fff!important;border-radius:4px;text-align:center;font-weight:600;font-size:.95rem;border-bottom:none!important}
-.mob-nav .mob-sec{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--tl,#86868b);padding:10px 24px 3px;margin-top:4px;pointer-events:none;display:block}
+.mob-nav .mob-sec{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--tl,#5a6b85);padding:10px 24px 3px;margin-top:4px;pointer-events:none;display:block}
 
 /* Hamburger → X */
 .nham svg line{transition:all .25s;transform-box:fill-box;transform-origin:center}
@@ -292,7 +292,7 @@ nav.scrolled{
 .fbot a:hover{color:rgba(255,255,255,.5)}
 
 /* ── PAGE-SPECIFIC ── */
-.pg-hero{background:#f6f8fd;padding:72px 5vw 56px;text-align:center}
+.pg-hero{background:#f4f7fb;padding:72px 5vw 56px;text-align:center}
 .pg-label{display:inline-flex;align-items:center;gap:6px;background:rgba(6,97,222,.08);border:1px solid rgba(6,97,222,.18);border-radius:4px;padding:5px 14px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
 .pg-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue);display:inline-block}
 .pg-h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:16px}
@@ -301,11 +301,11 @@ nav.scrolled{
 .pg-stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-top:8px}
 .pg-stat{text-align:center}
 .pg-stat-n{font-size:1.8rem;font-weight:800;color:var(--navy)}
-.pg-stat-l{font-size:.75rem;color:#718096;text-transform:uppercase;letter-spacing:.08em}
+.pg-stat-l{font-size:.75rem;color:#5a6b85;text-transform:uppercase;letter-spacing:.08em}
 /* Centers grid */
 .centers-section{max-width:900px;margin:0 auto;padding:64px 5vw}
 .centers-section h2{font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:8px;text-align:center}
-.centers-section .s2-sub{text-align:center;color:#718096;font-size:.92rem;margin-bottom:40px}
+.centers-section .s2-sub{text-align:center;color:#5a6b85;font-size:.92rem;margin-bottom:40px}
 .center-card{background:#fff;border:1px solid #e8edf5;border-radius:4px;padding:28px 32px;margin-bottom:24px;box-shadow:none;transition:box-shadow .2s,transform .2s;display:grid;grid-template-columns:48px 1fr;gap:20px;align-items:start}
 .center-card:hover{box-shadow:none;transform:translateY(-2px)}
 .center-num{width:48px;height:48px;border-radius:4px;background:var(--blue);color:#fff;font-size:1.1rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
@@ -314,11 +314,11 @@ nav.scrolled{
 .center-addr svg{flex-shrink:0;margin-top:2px;color:var(--blue)}
 .center-maps{display:flex;gap:10px;flex-wrap:wrap}
 .map-btn{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border-radius:4px;font-size:.8rem;font-weight:600;text-decoration:none;transition:transform .15s,box-shadow .15s;border:1.5px solid}
-.map-btn-google{background:#fff;color:#1a73e8;border-color:#1a73e8}
-.map-btn-google:hover{background:#1a73e8;color:#fff;transform:translateY(-1px);box-shadow:none}
+.map-btn-google{background:#fff;color:#0661de;border-color:#0661de}
+.map-btn-google:hover{background:#0661de;color:#fff;transform:translateY(-1px);box-shadow:none}
 .map-btn-yandex{background:#fff;color:#fc3f1d;border-color:#fc3f1d}
 .map-btn-yandex:hover{background:#fc3f1d;color:#fff;transform:translateY(-1px);box-shadow:none}
-.center-note{font-size:.78rem;color:#718096;margin-top:10px;padding:8px 12px;background:#f7f9fc;border-radius:4px;border-left:3px solid var(--blue)}
+.center-note{font-size:.78rem;color:#5a6b85;margin-top:10px;padding:8px 12px;background:#f7f9fc;border-radius:4px;border-left:3px solid var(--blue)}
 /* CTA Banner */
 .cta-block{background:#022049;border-radius:4px;padding:48px 40px;text-align:center;max-width:760px;margin:0 auto 64px;color:#fff}
 .cta-block h2{font-size:1.8rem;font-weight:800;margin-bottom:12px}
@@ -398,7 +398,7 @@ nav.scrolled{
   <div style="position:absolute;top:-80px;left:-80px;width:480px;height:480px;background:transparent;pointer-events:none"></div>
   <div style="position:absolute;bottom:-60px;right:-60px;width:360px;height:360px;background:transparent;pointer-events:none"></div>
 
-  <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(6,97,222,.15);border:1px solid rgba(6,97,222,.3);border-radius:4px;padding:6px 18px;margin-bottom:1.6rem;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#93c5fd;position:relative">
+  <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(6,97,222,.15);border:1px solid rgba(6,97,222,.3);border-radius:4px;padding:6px 18px;margin-bottom:1.6rem;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#e8f1fd;position:relative">
     <span style="width:7px;height:7px;border-radius:50%;background:#3b82f6;display:inline-block;animation:_cta-pulse 2s ease-in-out infinite"></span>
     <span data-en="Samarkand · Uzbekistan" data-uz="Samarqand · Oʻzbekiston" data-ru="Самарканд · Узбекистан">Samarkand · Uzbekistan</span>
   </div>
@@ -470,11 +470,11 @@ nav.scrolled{
 <!-- CENTERS -->
 <div style="max-width:860px;margin:0 auto;padding:64px 5vw">
   <h2 style="font-size:1.5rem;font-weight:800;color:#022049;text-align:center;margin-bottom:8px" data-en="Official SAT Test Centers in Samarkand" data-uz="Samarqanddagi rasmiy SAT imtihon markazlari" data-ru="Официальные центры тестирования SAT в Самарканде">Official SAT Test Centers in Samarkand</h2>
-  <p style="text-align:center;color:#718096;font-size:.92rem;margin-bottom:48px" data-en="Verified locations for Digital SAT — click map links for directions." data-uz="Digital SAT uchun tasdiqlangan manzillar." data-ru="Подтверждённые локации для Digital SAT.">Verified locations for Digital SAT — click map links for directions.</p>
+  <p style="text-align:center;color:#5a6b85;font-size:.92rem;margin-bottom:48px" data-en="Verified locations for Digital SAT — click map links for directions." data-uz="Digital SAT uchun tasdiqlangan manzillar." data-ru="Подтверждённые локации для Digital SAT.">Verified locations for Digital SAT — click map links for directions.</p>
 
   <!-- center card helper styles -->
   <style>
-    .ctr-card{background:#fff;border:1px solid #e2e8f0;border-radius:4px;padding:0;margin-bottom:20px;box-shadow:none;overflow:hidden;transition:box-shadow .2s,transform .2s}
+    .ctr-card{background:#fff;border:1px solid #d6e0ee;border-radius:4px;padding:0;margin-bottom:20px;box-shadow:none;overflow:hidden;transition:box-shadow .2s,transform .2s}
     .ctr-card:hover{box-shadow:none;transform:translateY(-3px)}
     .ctr-top{background:#022049;padding:22px 28px;display:flex;align-items:center;gap:16px}
     .ctr-num{width:44px;height:44px;border-radius:4px;background:rgba(255,255,255,.15);color:#fff;font-size:1.15rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -484,8 +484,8 @@ nav.scrolled{
     .ctr-row svg{flex-shrink:0;margin-top:2px;color:#0661de}
     .ctr-maps{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
     .mlink{display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:4px;font-size:.8rem;font-weight:600;text-decoration:none;transition:transform .15s,box-shadow .15s;border:1.5px solid}
-    .mlink-g{background:#fff;color:#1a73e8;border-color:#1a73e8}
-    .mlink-g:hover{background:#e8f0fe;box-shadow:none}
+    .mlink-g{background:#fff;color:#0661de;border-color:#0661de}
+    .mlink-g:hover{background:#e8f1fd;box-shadow:none}
     .mlink-y{background:#fff;color:#e8340a;border-color:#e8340a}
     .mlink-y:hover{background:#fff3f0;box-shadow:none}
     .ctr-note{font-size:.79rem;color:#64748b;background:#f1f5ff;border-left:3px solid #0661de;border-radius:0 4px 4px 0;padding:9px 14px;margin-top:14px;line-height:1.55}
@@ -577,7 +577,7 @@ nav.scrolled{
     <div class="ctr-body">
       <div class="ctr-row">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span data-en="128 Khuja Gunzhoish Street, mahalla Humo, Samarkand 140100 (Aravasozlar bus stop)" data-uz="Xoʻja Gunjoish koʻchasi 128, «Humo» mahallasi, Samarqand 140100 (Aravasozlar avtobus bekati)" data-ru="ул. Хужа Гунжоиш 128, махалля «Хумо», Самарканд 140100 (остановка Аравасозлар)">128 Khuja Gunzhoish Street, mahalla Humo, Samarkand 140100 <em style="color:#718096">(Aravasozlar bus stop)</em></span>
+        <span data-en="128 Khuja Gunzhoish Street, mahalla Humo, Samarkand 140100 (Aravasozlar bus stop)" data-uz="Xoʻja Gunjoish koʻchasi 128, «Humo» mahallasi, Samarqand 140100 (Aravasozlar avtobus bekati)" data-ru="ул. Хужа Гунжоиш 128, махалля «Хумо», Самарканд 140100 (остановка Аравасозлар)">128 Khuja Gunzhoish Street, mahalla Humo, Samarkand 140100 <em style="color:#5a6b85">(Aravasozlar bus stop)</em></span>
       </div>
       <div class="ctr-maps">
         <a href="https://maps.app.goo.gl/UbPXcWzQWcfQRcXC9" target="_blank" rel="noopener" class="mlink mlink-g">

@@ -88,12 +88,12 @@
 
 <style>
 :root{
-  --navy:#022049;--navy2:#011535;--navy3:#010e24;
-  --blue:#0661de;--blue2:#0450b4;--elec:#2979ff;
-  --bpale:#e8f0fe;--bxpale:#f0f4ff;
-  --t:#1d1d1f;--t2:#3d3d3d;--tm:#6e6e73;--tl:#86868b;
-  --bg:#fff;--bg2:#f5f5f7;--bg3:#e8ecf0;
-  --bd:#d2d2d7;--bd2:#c0c0c8;
+  --navy:#022049;--navy2:#022049;--navy3:#022049;
+  --blue:#0661de;--blue2:#0550b8;--elec:#0661de;
+  --bpale:#e8f1fd;--bxpale:#e8f1fd;
+  --t:#022049;--t2:#022049;--tm:#5a6b85;--tl:#5a6b85;
+  --bg:#fff;--bg2:#f4f7fb;--bg3:#d6e0ee;
+  --bd:#d6e0ee;--bd2:#d6e0ee;
   --ss:0 1px 3px rgba(0,0,0,.06),0 1px 8px rgba(0,0,0,.04);
   --sm:0 2px 12px rgba(0,0,0,.08),0 4px 24px rgba(0,0,0,.05);
   --sl:0 8px 32px rgba(0,0,0,.1),0 2px 8px rgba(0,0,0,.06);
@@ -158,7 +158,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .page-hero .slbl{justify-content:center;color:rgba(255,255,255,.45)}
 .page-hero .slbl::before{background:rgba(255,255,255,.2)}
 .page-hero h1{font-family:var(--f);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:700;letter-spacing:-.03em;color:#fff;margin-bottom:.8rem;position:relative}
-.page-hero h1 em{font-style:normal;color:#60a5fa}
+.page-hero h1 em{font-style:normal;color:#e8f1fd}
 .page-hero p{font-size:1.05rem;color:rgba(255,255,255,.65);max-width:560px;margin:0 auto;line-height:1.65;position:relative}
 
 /* FOOTER */
@@ -191,8 +191,8 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .card:hover{box-shadow:var(--sm);transform:translateY(-2px)}
 .tag{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:4px}
 .tag-blue{background:var(--bxpale);color:var(--blue);border:1px solid rgba(6,97,222,.15)}
-.tag-green{background:#dbeafe;color:#1d4ed8;border:1px solid #93c5fd}
-.tag-gold{background:#f0f4ff;color:#0661de;border:1px solid #60a5fa}
+.tag-green{background:#e8f1fd;color:#0550b8;border:1px solid #e8f1fd}
+.tag-gold{background:#e8f1fd;color:#0661de;border:1px solid #e8f1fd}
 
 /* FADE */
 .fade{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
@@ -203,10 +203,10 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:2.4rem}
 @media(max-width:860px){.pgrid{grid-template-columns:1fr}}
-.pdual{background:var(--bg2,#f5f5f7);border-radius:4px;padding:10px 14px;margin-bottom:1.4rem}
+.pdual{background:var(--bg2,#f4f7fb);border-radius:4px;padding:10px 14px;margin-bottom:1.4rem}
 .pdual-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0}
-.pdual-row:not(:last-child){border-bottom:1px solid var(--bd,#d2d2d7)}
-.pdual-lbl{font-size:.78rem;color:var(--tm,#6e6e73);font-weight:500}
+.pdual-row:not(:last-child){border-bottom:1px solid var(--bd,#d6e0ee)}
+.pdual-lbl{font-size:.78rem;color:var(--tm,#5a6b85);font-weight:500}
 .pdual-val{font-family:var(--f);font-size:1.05rem;font-weight:700;color:var(--navy);letter-spacing:-.02em}
 .pdual-val small{font-size:.68rem;font-weight:500;color:var(--tm);margin-left:2px}
 .pc.prm .pdual{background:rgba(255,255,255,.09)}
@@ -242,7 +242,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pfeats li{font-size:.83rem;color:var(--t2);display:flex;align-items:flex-start;gap:9px;line-height:1.45}
 .pc.prm .pfeats li{color:rgba(255,255,255,.7)}
 .pfeats li svg{width:15px;height:15px;flex-shrink:0;margin-top:1px;stroke:#0661de;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.pc.prm .pfeats li svg{stroke:#60d394}
+.pc.prm .pfeats li svg{stroke:#0661de}
 .pnote{font-size:.74rem;color:var(--tl);line-height:1.5;padding:9px 11px;background:var(--bg2);border-radius:var(--rsm);margin-bottom:1.1rem}
 .pc.prm .pnote{background:rgba(255,255,255,.06);color:rgba(255,255,255,.35)}
 .pbtn{display:block;text-align:center;padding:11px;border-radius:4px;font-size:.87rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:all .15s;border:none}
@@ -261,7 +261,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .compare-table th:last-child{border-radius:0 var(--rsm) 0 0}
 .compare-table td{padding:11px 16px;border-bottom:1px solid var(--bd);color:var(--t2)}
 .compare-table tr:hover td{background:var(--bxpale)}
-.compare-table .check{color:#044fba;font-weight:700}
+.compare-table .check{color:#0550b8;font-weight:700}
 .compare-table .cross{color:var(--tl)}
 .compare-table .pop-col{background:rgba(6,97,222,.04);font-weight:600;color:var(--blue)}
 
@@ -298,9 +298,9 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
   font-size:.83rem!important;font-weight:500!important;
   display:flex!important;align-items:center;white-space:nowrap;
   border-bottom:none!important;line-height:1.3;
-  color:var(--t,#1d1d1f)!important;text-decoration:none;
+  color:var(--t,#022049)!important;text-decoration:none;
   transition:background .12s,color .12s}
-.dd li a:hover{background:#f0f4ff;color:var(--blue,#0661de)!important}
+.dd li a:hover{background:#e8f1fd;color:var(--blue,#0661de)!important}
 .dd li:not(:last-child) a{border-bottom:1px solid rgba(0,0,0,.045)!important}
 .nlinks .dd-arrow{font-size:.65rem;margin-left:3px;opacity:.5;transition:transform .2s}
 .nlinks li.has-dd:hover .dd-arrow{opacity:.9}
@@ -311,28 +311,28 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
   box-shadow:none;border-radius:0 0 4px 4px}
 .mob-nav.open{display:block}
 .mob-nav .mob-list{list-style:none;padding:6px 0 12px;margin:0}
-.mob-nav .mob-list>li>a{display:block;padding:13px 20px;color:var(--t,#1d1d1f);
-  font-size:.95rem;text-decoration:none;border-bottom:1px solid #f5f5f7}
-.mob-nav .mob-list>li>a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-nav .mob-list>li>a{display:block;padding:13px 20px;color:var(--t,#022049);
+  font-size:.95rem;text-decoration:none;border-bottom:1px solid #f4f7fb}
+.mob-nav .mob-list>li>a:hover{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-group-hd{display:flex;align-items:center;justify-content:space-between;
-  width:100%;padding:13px 20px;background:none;border:none;border-bottom:1px solid #f5f5f7;
-  color:var(--t,#1d1d1f);font-size:.95rem;font-weight:500;cursor:pointer;text-align:left;
+  width:100%;padding:13px 20px;background:none;border:none;border-bottom:1px solid #f4f7fb;
+  color:var(--t,#022049);font-size:.95rem;font-weight:500;cursor:pointer;text-align:left;
   font-family:inherit}
-.mob-group-hd:hover,.mob-group.open .mob-group-hd{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-group-hd:hover,.mob-group.open .mob-group-hd{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-arrow{transition:transform .22s;flex-shrink:0}
 .mob-group.open .mob-arrow{transform:rotate(180deg)}
 .mob-group-body{list-style:none;padding:0;margin:0;
-  max-height:0;overflow:hidden;transition:max-height .28s ease;background:#fafafa}
+  max-height:0;overflow:hidden;transition:max-height .28s ease;background:#f4f7fb}
 .mob-group.open .mob-group-body{max-height:400px}
 .mob-group-body li a{display:block;padding:10px 20px 10px 30px;
-  color:var(--tm,#6e6e73);font-size:.88rem;text-decoration:none;
-  border-bottom:1px solid #f5f5f7}
-.mob-group-body li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+  color:var(--tm,#5a6b85);font-size:.88rem;text-decoration:none;
+  border-bottom:1px solid #f4f7fb}
+.mob-group-body li a:hover{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-nav .mob-enroll{display:block;margin:12px 20px 8px;padding:14px 24px;
   background:var(--blue,#0661de);color:#fff!important;border-radius:4px;
   text-align:center;font-weight:600;font-size:.95rem;border-bottom:none!important;
   text-decoration:none}
-.mob-nav .mob-enroll:hover{background:#0550c0!important;color:#fff!important}
+.mob-nav .mob-enroll:hover{background:#0550b8!important;color:#fff!important}
 /* Hamburger → X animation */
 .nham svg line{transition:all .25s;transform-box:fill-box;transform-origin:center}
 .nham.open svg line:first-child{transform:translateY(6px) rotate(45deg)}
@@ -340,7 +340,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .nham.open svg line:last-child{transform:translateY(-6px) rotate(-45deg)}
 /* Nav visible on desktop/laptop (960px+); hamburger on tablet/mobile */
 
-.pillar-cta-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;color:#0661de;background:#e8f0ff;border:1px solid #c7d9ff;border-radius:4px;padding:6px 16px;margin-bottom:18px;text-transform:uppercase}
+.pillar-cta-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;color:#0661de;background:#e8f1fd;border:1px solid #d6e0ee;border-radius:4px;padding:6px 16px;margin-bottom:18px;text-transform:uppercase}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    SITE-WIDE ANIMATION SYSTEM
@@ -428,7 +428,7 @@ nav.scrolled{
 </script>
 
 <style>
-.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
+.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#022049;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#5a6b85;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 
 
 
@@ -486,7 +486,7 @@ nav.scrolled{
   </div>
 </div>
 
-<div style="background:#f0f4ff;border-bottom:1px solid #d4e0ff;padding:18px 5vw">
+<div style="background:#e8f1fd;border-bottom:1px solid #d4e0ff;padding:18px 5vw">
   <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:clamp(24px,5vw,64px);flex-wrap:wrap;align-items:center">
     <div style="text-align:center">
       <div style="font-family:var(--f);font-size:1.35rem;font-weight:700;color:var(--navy);letter-spacing:-.02em" class="tb-num">500+</div>
@@ -510,12 +510,12 @@ nav.scrolled{
 <style>
 .inc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:2.2rem}
 @media(max-width:640px){.inc-grid{grid-template-columns:1fr}}
-.inc-card{background:#fff;border:1px solid var(--bd,#d2d2d7);border-radius:4px;padding:22px 20px;display:flex;align-items:flex-start;gap:18px;box-shadow:none;transition:box-shadow .2s,transform .2s}
+.inc-card{background:#fff;border:1px solid var(--bd,#d6e0ee);border-radius:4px;padding:22px 20px;display:flex;align-items:flex-start;gap:18px;box-shadow:none;transition:box-shadow .2s,transform .2s}
 .inc-card:hover{box-shadow:none;transform:translateY(-2px)}
 .inc-icon{width:54px;height:54px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .inc-icon svg{width:26px;height:26px}
 .inc-title{font-size:.95rem;font-weight:700;color:var(--navy,#022049);margin-bottom:6px;letter-spacing:-.01em}
-.inc-desc{font-size:.81rem;color:var(--tm,#6e6e73);line-height:1.6}
+.inc-desc{font-size:.81rem;color:var(--tm,#5a6b85);line-height:1.6}
 </style>
 <div class="sec alt">
   <div class="w">
@@ -525,7 +525,7 @@ nav.scrolled{
 
       <!-- 1: Top-scoring mentors -->
       <div class="inc-card">
-        <div class="inc-icon" style="background:#e8f0ff">
+        <div class="inc-icon" style="background:#e8f1fd">
           <svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="8" r="4"/>
             <path d="M6 20v-1a6 6 0 0112 0v1"/>
@@ -541,7 +541,7 @@ nav.scrolled{
 
       <!-- 2: Weekly Mock Tests -->
       <div class="inc-card">
-        <div class="inc-icon" style="background:#edfaf3">
+        <div class="inc-icon" style="background:#e8f1fd">
           <svg viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="20" x2="18" y2="9"/>
             <line x1="12" y1="20" x2="12" y2="4"/>
@@ -557,7 +557,7 @@ nav.scrolled{
 
       <!-- 3: Sunday Mock SAT -->
       <div class="inc-card">
-        <div class="inc-icon" style="background:#f0f4ff">
+        <div class="inc-icon" style="background:#e8f1fd">
           <svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
             <line x1="16" y1="2" x2="16" y2="6"/>
@@ -574,7 +574,7 @@ nav.scrolled{
 
       <!-- 4: Max 12 students -->
       <div class="inc-card">
-        <div class="inc-icon" style="background:#f0f4ff">
+        <div class="inc-icon" style="background:#e8f1fd">
           <svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
             <circle cx="9" cy="7" r="4"/>
@@ -605,7 +605,7 @@ nav.scrolled{
         <div style="font-size:1.6rem;font-weight:800;color:var(--navy);letter-spacing:-.03em;margin-bottom:6px">10:00–12:00</div>
         <div style="font-size:.82rem;color:var(--tm)" data-en="Morning · Mon–Sat" data-uz="Ertalab · Du–Sha" data-ru="Утро · Пн–Сб">Morning · Mon–Sat</div>
       </div>
-      <div style="border:2px solid var(--blue);border-radius:4px;padding:22px;background:#f6f8fd;text-align:center;position:relative">
+      <div style="border:2px solid var(--blue);border-radius:4px;padding:22px;background:#f4f7fb;text-align:center;position:relative">
         <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.1em;padding:3px 12px;border-radius:4px;white-space:nowrap" data-en="MOST POPULAR" data-uz="ENG MASHHUR" data-ru="ПОПУЛЯРНОЕ">MOST POPULAR</div>
         <div style="font-size:1.6rem;font-weight:800;color:var(--blue);letter-spacing:-.03em;margin-bottom:6px">14:00–16:00</div>
         <div style="font-size:.82rem;color:var(--tm)" data-en="Afternoon · Mon–Sat" data-uz="Tushdan keyin · Du–Sha" data-ru="День · Пн–Сб">Afternoon · Mon–Sat</div>
@@ -614,7 +614,7 @@ nav.scrolled{
         <div style="font-size:1.6rem;font-weight:800;color:var(--navy);letter-spacing:-.03em;margin-bottom:6px">16:00–18:00</div>
         <div style="font-size:.82rem;color:var(--tm)" data-en="Evening · Mon–Sat" data-uz="Kechki · Du–Sha" data-ru="Вечер · Пн–Сб">Evening · Mon–Sat</div>
       </div>
-      <div style="border:1.5px dashed #0661de;border-radius:4px;padding:22px;background:#f0f4ff;text-align:center">
+      <div style="border:1.5px dashed #0661de;border-radius:4px;padding:22px;background:#e8f1fd;text-align:center">
         <div style="font-size:1.6rem;font-weight:800;color:#0661de;letter-spacing:-.03em;margin-bottom:6px">08:00–10:00</div>
         <div style="font-size:.82rem;color:var(--tm)" data-en="Summer only · Jul–Aug" data-uz="Faqat yoz · Iyul–Avg" data-ru="Только лето · Июль–Авг">Summer only · Jul–Aug</div>
       </div>
@@ -707,22 +707,22 @@ nav.scrolled{
 
 <div class="div"></div>
 
-<div class="sec" style="background:#f6f8fd">
+<div class="sec" style="background:#f4f7fb">
   <div class="w">
     <div style="display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;max-width:760px;margin:0 auto">
       <div>
-        <div class="slbl" style="color:#044fba" data-en="The Guarantee" data-uz="Kafolat" data-ru="Гарантия">The Guarantee</div>
-        <h2 class="sh" style="color:#1d4ed8" data-en="Score 1500+ — or keep studying free for up to 3 months." data-uz="1500+ oling — yoki 3 oygacha bepul oʻqing." data-ru="Наберите 1500+ — или учитесь бесплатно до 3 месяцев.">Score 1500+ — or keep studying free for up to 3 months.</h2>
+        <div class="slbl" style="color:#0550b8" data-en="The Guarantee" data-uz="Kafolat" data-ru="Гарантия">The Guarantee</div>
+        <h2 class="sh" style="color:#0550b8" data-en="Score 1500+ — or keep studying free for up to 3 months." data-uz="1500+ oling — yoki 3 oygacha bepul oʻqing." data-ru="Наберите 1500+ — или учитесь бесплатно до 3 месяцев.">Score 1500+ — or keep studying free for up to 3 months.</h2>
         <p class="sp" data-en="This isn't a trial extension. It's a commitment: if you complete our 1500+ program and score below 1500, you keep studying free for up to 3 additional months. No fine print." data-uz="Bu sinov muddati emas. Bu majburiyat: agar SAT MAX dasturida belgilangan sanagacha 1500+ olmasangiz, 3 oygacha bepul oʻqishni davom ettirasiz. Yashirin shartlarsiz." data-ru="Это не пробный период. Это обязательство: если на программе SAT MAX вы не набрали 1500+ к целевой дате — продолжаете учиться бесплатно до 3 месяцев. Без мелкого шрифта.">This isn't a trial extension. It's a commitment: if you complete our 1500+ program and score below 1500, you keep studying free for up to 3 additional months. No fine print.</p>
         <div style="margin-top:1rem;display:flex;gap:12px;flex-wrap:wrap">
-          <div style="display:flex;align-items:center;gap:6px;font-size:.83rem;color:#044fba;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Up to 3 months free</div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:.83rem;color:#044fba;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No extra fees</div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:.83rem;color:#044fba;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No fine print</div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:.83rem;color:#0550b8;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Up to 3 months free</div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:.83rem;color:#0550b8;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No extra fees</div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:.83rem;color:#0550b8;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No fine print</div>
         </div>
       </div>
       <div style="text-align:center;background:#fff;border-radius:4px;padding:20px 24px;border:2px solid #bfdbfe;min-width:140px">
-        <div style="font-size:2.4rem;font-weight:900;color:#1d4ed8;letter-spacing:-.04em;line-height:1">1500</div>
-        <div style="font-size:.75rem;color:#044fba;font-weight:600;margin-top:4px">GUARANTEED</div>
+        <div style="font-size:2.4rem;font-weight:900;color:#0550b8;letter-spacing:-.04em;line-height:1">1500</div>
+        <div style="font-size:.75rem;color:#0550b8;font-weight:600;margin-top:4px">GUARANTEED</div>
         <div style="font-size:.7rem;color:var(--tl);margin-top:6px">or study free<br>up to 3 months</div>
       </div>
     </div>
@@ -759,7 +759,7 @@ nav.scrolled{
     <p class="sp" style="margin-bottom:2rem" data-en="These are real SAT scores from real students — names, starting scores, final scores, and how long it took." data-uz="Bular haqiqiy oʻquvchilarning haqiqiy SAT ballari — ismlar, boshlangʻich va yakuniy ball, vaqt." data-ru="Это реальные результаты реальных студентов — имена, начальные и финальные баллы, сроки.">These are real SAT scores from real students — names, starting scores, final scores, and how long it took.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:1.5rem">
 
-      <div style="border:1.5px solid #e2e8f0;border-radius:4px;padding:22px;background:#fff;position:relative">
+      <div style="border:1.5px solid #d6e0ee;border-radius:4px;padding:22px;background:#fff;position:relative">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
           <div style="width:44px;height:44px;border-radius:50%;background:#0661de;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff">D</div>
           <div>
@@ -767,7 +767,7 @@ nav.scrolled{
             <div style="font-size:.78rem;color:var(--tl)">16 years old</div>
           </div>
           <div style="margin-left:auto;text-align:right">
-            <div style="font-size:1.4rem;font-weight:800;color:#044fba;letter-spacing:-.03em">1500</div>
+            <div style="font-size:1.4rem;font-weight:800;color:#0550b8;letter-spacing:-.03em">1500</div>
             <div style="font-size:.72rem;color:var(--tl)">final score</div>
           </div>
         </div>
@@ -775,7 +775,7 @@ nav.scrolled{
         <div style="margin-top:10px;font-size:.75rem;color:var(--tl)">+270 points</div>
       </div>
 
-      <div style="border:1.5px solid #e2e8f0;border-radius:4px;padding:22px;background:#fff">
+      <div style="border:1.5px solid #d6e0ee;border-radius:4px;padding:22px;background:#fff">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
           <div style="width:44px;height:44px;border-radius:50%;background:#0661de;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff">N</div>
           <div>
@@ -783,7 +783,7 @@ nav.scrolled{
             <div style="font-size:.78rem;color:var(--tl)">Started at B2 English</div>
           </div>
           <div style="margin-left:auto;text-align:right">
-            <div style="font-size:1.4rem;font-weight:800;color:#044fba;letter-spacing:-.03em">1460</div>
+            <div style="font-size:1.4rem;font-weight:800;color:#0550b8;letter-spacing:-.03em">1460</div>
             <div style="font-size:.72rem;color:var(--tl)">final score</div>
           </div>
         </div>
@@ -791,7 +791,7 @@ nav.scrolled{
         <div style="margin-top:10px;font-size:.75rem;color:var(--tl)">From B2 → 1460</div>
       </div>
 
-      <div style="border:1.5px solid #e2e8f0;border-radius:4px;padding:22px;background:#fff">
+      <div style="border:1.5px solid #d6e0ee;border-radius:4px;padding:22px;background:#fff">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
           <div style="width:44px;height:44px;border-radius:50%;background:#0661de;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff">A</div>
           <div>
@@ -799,7 +799,7 @@ nav.scrolled{
             <div style="font-size:.78rem;color:var(--tl)">1.5 months</div>
           </div>
           <div style="margin-left:auto;text-align:right">
-            <div style="font-size:1.4rem;font-weight:800;color:#044fba;letter-spacing:-.03em">1440</div>
+            <div style="font-size:1.4rem;font-weight:800;color:#0550b8;letter-spacing:-.03em">1440</div>
             <div style="font-size:.72rem;color:var(--tl)">final score</div>
           </div>
         </div>
@@ -807,7 +807,7 @@ nav.scrolled{
         <div style="margin-top:10px;font-size:.75rem;color:var(--tl)">+220 points in 1.5 months</div>
       </div>
 
-      <div style="border:1.5px solid #e2e8f0;border-radius:4px;padding:22px;background:#fff">
+      <div style="border:1.5px solid #d6e0ee;border-radius:4px;padding:22px;background:#fff">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
           <div style="width:44px;height:44px;border-radius:50%;background:#0661de;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff">S</div>
           <div>
@@ -815,7 +815,7 @@ nav.scrolled{
             <div style="font-size:.78rem;color:var(--tl)">B2 English, math beginner</div>
           </div>
           <div style="margin-left:auto;text-align:right">
-            <div style="font-size:1.4rem;font-weight:800;color:#044fba;letter-spacing:-.03em">1440</div>
+            <div style="font-size:1.4rem;font-weight:800;color:#0550b8;letter-spacing:-.03em">1440</div>
             <div style="font-size:.72rem;color:var(--tl)">final score</div>
           </div>
         </div>
@@ -823,7 +823,7 @@ nav.scrolled{
         <div style="margin-top:10px;font-size:.75rem;color:var(--tl)">From beginner → 1440</div>
       </div>
 
-      <div style="border:1.5px solid #e2e8f0;border-radius:4px;padding:22px;background:#fff">
+      <div style="border:1.5px solid #d6e0ee;border-radius:4px;padding:22px;background:#fff">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
           <div style="width:44px;height:44px;border-radius:50%;background:#0661de;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff">T</div>
           <div>
@@ -831,7 +831,7 @@ nav.scrolled{
             <div style="font-size:.78rem;color:var(--tl)">Math only · 3 months</div>
           </div>
           <div style="margin-left:auto;text-align:right">
-            <div style="font-size:1.4rem;font-weight:800;color:#044fba;letter-spacing:-.03em">800</div>
+            <div style="font-size:1.4rem;font-weight:800;color:#0550b8;letter-spacing:-.03em">800</div>
             <div style="font-size:.72rem;color:var(--tl)">math score</div>
           </div>
         </div>
@@ -839,7 +839,7 @@ nav.scrolled{
         <div style="margin-top:10px;font-size:.75rem;color:var(--tl)">+250 Math points in 3 months</div>
       </div>
 
-      <div style="border:1.5px solid #e2e8f0;border-radius:4px;padding:22px;background:#f6f8fd">
+      <div style="border:1.5px solid #d6e0ee;border-radius:4px;padding:22px;background:#f4f7fb">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           <div style="font-weight:700;font-size:.95rem;color:var(--navy)">50+ more like this</div>
@@ -877,28 +877,28 @@ nav.scrolled{
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px">
 
       <div style="border:1.5px solid var(--bd);border-radius:4px;padding:22px;background:#fff">
-        <div style="width:40px;height:40px;border-radius:4px;background:#f0f4ff;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
         <div style="font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:.4rem" data-en="&ldquo;I'm just starting. Don't know my level.&rdquo;" data-uz="&ldquo;Endi boshlayman. Darajamni bilmayman.&rdquo;" data-ru="&ldquo;Только начинаю. Не знаю уровень.&rdquo;">&ldquo;I'm just starting. Don't know my level.&rdquo;</div>
         <div style="font-size:.82rem;color:var(--tm);margin-bottom:1rem" data-en="→ Take the free diagnostic first. 40 min, tells you exactly where you are." data-uz="→ Avval bepul diagnostika. 40 daqiqa." data-ru="→ Сначала диагностика. 40 минут.">→ Take the free diagnostic first. 40 min, tells you exactly where you are.</div>
         <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" style="display:inline-block;font-size:.82rem;font-weight:600;color:var(--blue)" data-en="Take free diagnostic →" data-uz="Bepul diagnostika →" data-ru="Пройти диагностику →">Take free diagnostic →</a>
       </div>
 
       <div style="border:1.5px solid var(--bd);border-radius:4px;padding:22px;background:#fff">
-        <div style="width:40px;height:40px;border-radius:4px;background:#edfaf3;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
         <div style="font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:.4rem" data-en="&ldquo;I scored 900–1100. I want 1300+.&rdquo;" data-uz="&ldquo;900–1100 oldim. 1300+ xohlayman.&rdquo;" data-ru="&ldquo;Набрал 900–1100. Хочу 1300+.&rdquo;">&ldquo;I scored 900–1100. I want 1300+.&rdquo;</div>
         <div style="font-size:.82rem;color:var(--tm);margin-bottom:1rem" data-en="→ SAT MAX (2 subjects). Most students start here — real progress, real analytics." data-uz="→ SAT MAX (2 fan). Koʻp oʻquvchilar shu yerdan boshlaydi." data-ru="→ SAT MAX (2 предмета). Большинство студентов начинают здесь.">→ SAT MAX (2 subjects). Most students start here — real progress, real analytics.</div>
         <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" style="display:inline-block;font-size:.82rem;font-weight:600;color:var(--blue)" data-en="Enroll in SAT MAX →" data-uz="SAT MAX ga yoziling →" data-ru="Записаться в SAT MAX →">Enroll in SAT MAX →</a>
       </div>
 
       <div style="border:1.5px solid var(--bd);border-radius:4px;padding:22px;background:#fff">
-        <div style="width:40px;height:40px;border-radius:4px;background:#e8f0ff;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
         <div style="font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:.4rem" data-en="&ldquo;I scored 1100+. Need 1500. Guaranteed.&rdquo;" data-uz="&ldquo;1100+ oldim. 1500 kerak. Kafolatli.&rdquo;" data-ru="&ldquo;Набрал 1100+. Нужно 1500. С гарантией.&rdquo;">&ldquo;I scored 1100+. Need 1500. Guaranteed.&rdquo;</div>
         <div style="font-size:.82rem;color:var(--tm);margin-bottom:1rem" data-en="→ SAT MAX (1 500+ Guarantee). Score under 1500 after the program? You keep studying free for up to 3 more months." data-uz="→ SAT MAX (1500+ kafolat). 1500+ ga yetmasangiz, 3 oygacha bepul oʻqiysiz." data-ru="→ SAT MAX (гарантия 1500). Не набрали 1500+? Учитесь бесплатно до 3 месяцев.">→ SAT MAX (1 500+ Guarantee). Score under 1500 after the program? You keep studying free for up to 3 more months.</div>
         <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" style="display:inline-block;font-size:.82rem;font-weight:600;color:var(--blue)" data-en="Take diagnostic to qualify →" data-uz="Kirish uchun diagnostika →" data-ru="Диагностика для отбора →">Take diagnostic to qualify →</a>
       </div>
 
       <div style="border:1.5px solid var(--bd);border-radius:4px;padding:22px;background:#fff">
-        <div style="width:40px;height:40px;border-radius:4px;background:#f0f4ff;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <div style="font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:.4rem" data-en="&ldquo;I need maximum speed. 1-on-1 only.&rdquo;" data-uz="&ldquo;Eng tez natija kerak. Faqat 1:1.&rdquo;" data-ru="&ldquo;Нужна максимальная скорость. Только 1 на 1.&rdquo;">&ldquo;I need maximum speed. 1-on-1 only.&rdquo;</div>
         <div style="font-size:.82rem;color:var(--tm);margin-bottom:1rem" data-en="→ Private Mentorship. Your schedule, your pace. Limited spots." data-uz="→ Xususiy Mentorlik. Sizning jadval. Cheklangan oʻrinlar." data-ru="→ Частное наставничество. Ваш темп. Ограниченные места.">→ Private Mentorship. Your schedule, your pace. Limited spots.</div>
         <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" style="display:inline-block;font-size:.82rem;font-weight:600;color:var(--blue)" data-en="Apply for Private →" data-uz="Private uchun ariza →" data-ru="Подать заявку →">Apply for Private →</a>
