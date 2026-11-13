@@ -99,6 +99,156 @@
       "source": "/ru/besplatny-sat-test",
       "destination": "https://diagnostic.satsamarkand.uz",
       "permanent": true
+    },
+    {
+      "source": "/blog/best-universities-samarkand-students/",
+      "destination": "/blog/samarkand-university-abroad-complete-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-universities-samarkand-students",
+      "destination": "/blog/samarkand-university-abroad-complete-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/does-digital-sat-have-essay/",
+      "destination": "/digital-sat/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/does-digital-sat-have-essay",
+      "destination": "/digital-sat/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/scholarships-samarkand-students-2026/",
+      "destination": "/blog/samarkand-university-abroad-complete-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/scholarships-samarkand-students-2026",
+      "destination": "/blog/samarkand-university-abroad-complete-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sat-vs-dtm-uzbekistan-comparison/",
+      "destination": "/blog/sat-state-grant-uzbekistan/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sat-vs-dtm-uzbekistan-comparison",
+      "destination": "/blog/sat-state-grant-uzbekistan/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sat-vs-act-which-is-better/",
+      "destination": "/digital-sat/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sat-vs-act-which-is-better",
+      "destination": "/digital-sat/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/stipendii-dlya-uzbekistantsev-sat/",
+      "destination": "/blog/sat-gosudarstvennyy-grant/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/stipendii-dlya-uzbekistantsev-sat",
+      "destination": "/blog/sat-gosudarstvennyy-grant/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/digital-sat-polnoe-rukovodstvo/",
+      "destination": "/ru/tsifrovoy-sat/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/digital-sat-polnoe-rukovodstvo",
+      "destination": "/ru/tsifrovoy-sat/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kak-vybrat-kursy-sat-uzbekistan/",
+      "destination": "/ru/kursy-sat-samarkand/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kak-vybrat-kursy-sat-uzbekistan",
+      "destination": "/ru/kursy-sat-samarkand/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sat-samarkand-markaz-haqida/",
+      "destination": "/uz/biz-haqimizda/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sat-samarkand-markaz-haqida",
+      "destination": "/uz/biz-haqimizda/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/samarkand-talabalari-xorijda-muvaffaqiyat/",
+      "destination": "/uz/natijalar/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/samarkand-talabalari-xorijda-muvaffaqiyat",
+      "destination": "/uz/natijalar/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/xorijda-universitetni-qanday-tanlash/",
+      "destination": "/blog/sat-ball-nechta-kerak/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/xorijda-universitetni-qanday-tanlash",
+      "destination": "/blog/sat-ball-nechta-kerak/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/aqsh-universitetlari-sat-bali-2026/",
+      "destination": "/blog/sat-ball-nechta-kerak/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/aqsh-universitetlari-sat-bali-2026",
+      "destination": "/blog/sat-ball-nechta-kerak/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ingliz-tilini-sat-uchun-oshirish/",
+      "destination": "/blog/sat-tayyorgarlik-kitoblar-resurslar/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ingliz-tilini-sat-uchun-oshirish",
+      "destination": "/blog/sat-tayyorgarlik-kitoblar-resurslar/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/koreya-universitetlari-sat-bali/",
+      "destination": "/blog/sat-ball-nechta-kerak/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/koreya-universitetlari-sat-bali",
+      "destination": "/blog/sat-ball-nechta-kerak/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/samarkandlik-talabaning-sat-tajribasi/",
+      "destination": "/uz/natijalar/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/samarkandlik-talabaning-sat-tajribasi",
+      "destination": "/uz/natijalar/",
+      "permanent": true
     }
   ]
 }
