@@ -363,10 +363,9 @@ nav.scrolled{
 
 @media(max-width:640px){.fwidget{bottom:80px;right:14px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/theme.css?v=3">
+<link rel="preload" href="/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/theme.css?v=4">
 </head>
 <body>
 
@@ -375,30 +374,30 @@ nav.scrolled{
 <div class="sx-hd" id="sx-hd" role="banner">
   <div class="sx-wrap">
     <div class="sx-hd-in">
-      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/logo.png" alt="" width="34" height="34"><span><small>SAT</small>Samarkand</span></a>
+      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/brand/mark-primary.png" alt="" width="35" height="40"><span>SAT Samarkand</span></a>
       <div class="sx-nav" role="navigation" aria-label="Main">
-        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All courses" data-uz="Barcha kurslar" data-ru="Все курсы">All courses</a><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions consulting</a><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div></div>
         <div class="sx-nav-i"><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div></div>
         <div class="sx-nav-i"><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></div>
         <div class="sx-nav-i"><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></div>
       </div>
       <div class="sx-langs" role="group" aria-label="Language"><button class="lb" data-lang="en" onclick="setLang('en')">EN</button><button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button><button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button></div>
-      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a>
+      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a>
       <button class="sx-burger" id="sx-burger" aria-label="Menu" aria-expanded="false"><i></i></button>
     </div>
     <div class="sx-drawer" role="navigation" aria-label="Mobile">
       <a class="sx-has-sub" href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a>
-      <div class="sx-sub"><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div>
+      <div class="sx-sub"><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div>
       <a class="sx-has-sub" href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a>
-      <div class="sx-sub"><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div>
+      <div class="sx-sub"><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div>
       <a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a>
       <a class="sx-has-sub" href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a>
-      <div class="sx-sub"><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div>
+      <div class="sx-sub"><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div>
       <a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a>
       <a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a>
-      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a></div>
+      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a></div>
     </div>
   </div>
 </div>
@@ -407,9 +406,9 @@ nav.scrolled{
 
 
 <div class="page-hero">
-  <div class="slbl" data-en="Enrollment" data-uz="Ro'yxatdan O'tish" data-ru="Запись">Enrollment</div>
-  <h1 data-en="Join SAT <em>Samarkand.</em>" data-uz="SAT <em>Samarkandga</em> qo'shiling." data-ru="Присоединяйтесь к SAT <em>Samarkand.</em>">Join SAT <em>Samarkand.</em></h1>
-  <p data-en="Fill in the form below. We'll confirm your spot and contact you within 24 hours." data-uz="Quyidagi formani to'ldiring. 24 soat ichida o'rningizni tasdiqlab, siz bilan bog'lanamiz." data-ru="Заполните форму ниже. Подтвердим место и свяжемся с вами в течение 24 часов.">Fill in the form below. We'll confirm your spot and contact you within 24 hours.</p>
+  <div class="slbl" data-en="Enrollment" data-uz="Roʻyxatdan Oʻtish" data-ru="Запись">Enrollment</div>
+  <h1 data-en="Join SAT <em>Samarkand.</em>" data-uz="SAT <em>Samarkandga</em> qoʻshiling." data-ru="Присоединяйтесь к SAT <em>Samarkand.</em>">Join SAT <em>Samarkand.</em></h1>
+  <p data-en="Fill in the form below. We'll confirm your spot and contact you within 24 hours." data-uz="Quyidagi formani toʻldiring. 24 soat ichida oʻrningizni tasdiqlab, siz bilan bogʻlanamiz." data-ru="Заполните форму ниже. Подтвердим место и свяжемся с вами в течение 24 часов.">Fill in the form below. We'll confirm your spot and contact you within 24 hours.</p>
 </div>
 
 <div class="sec">
@@ -417,14 +416,14 @@ nav.scrolled{
     <div class="reg-layout">
       <div class="rform" style="max-width:100%">
         <div class="form-card">
-          <div class="error-msg" id="errMsg" data-en="Something went wrong. Please try again or message us on Telegram." data-uz="Xatolik yuz berdi. Qayta urinib ko'ring." data-ru="Что-то пошло не так. Попробуйте снова.">Something went wrong. Please try again or message us on Telegram.</div>
+          <div class="error-msg" id="errMsg" data-en="Something went wrong. Please try again or message us on Telegram." data-uz="Xatolik yuz berdi. Qayta urinib koʻring." data-ru="Что-то пошло не так. Попробуйте снова.">Something went wrong. Please try again or message us on Telegram.</div>
           <div id="formWrap">
             <div style="margin-bottom:1.6rem">
-              <h3 style="font-family:var(--f);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.3rem" data-en="Enrollment Form" data-uz="Ro'yxat Formasi" data-ru="Форма записи">Enrollment Form</h3>
+              <h3 style="font-family:var(--f);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.3rem" data-en="Enrollment Form" data-uz="Roʻyxat Formasi" data-ru="Форма записи">Enrollment Form</h3>
               <p style="font-size:.8rem;color:var(--tl)"><span data-en="Fields marked" data-uz="Belgilangan maydonlar" data-ru="Поля с">Fields marked</span> <span style="color:var(--blue)">*</span> <span data-en="are required." data-uz="majburiy." data-ru="обязательны.">are required.</span></p>
             </div>
-            <div class="fg"><label data-en="Full Name" data-uz="To'liq Ism" data-ru="Полное имя">Full Name</label> <span class="req">*</span><input type="text" id="fname" data-en-ph="Your full name" data-uz-ph="To'liq ismingiz" data-ru-ph="Ваше полное имя" required></div>
-            <div class="fg"><label data-en="Phone Number" data-uz="Telefon Raqami" data-ru="Номер телефона">Phone Number</label> <span class="req">*</span><input type="tel" id="fphone" data-en-ph="+998 XX XXX XX XX" data-uz-ph="+998 XX XXX XX XX" data-ru-ph="+998 XX XXX XX XX" required><div class="hint" data-en="We'll contact you via this number to confirm your spot." data-uz="O'rningizni tasdiqlash uchun shu raqam orqali bog'lanamiz." data-ru="Мы свяжемся по этому номеру.">We'll contact you via this number to confirm your spot.</div></div>
+            <div class="fg"><label data-en="Full Name" data-uz="Toʻliq Ism" data-ru="Полное имя">Full Name</label> <span class="req">*</span><input type="text" id="fname" data-en-ph="Your full name" data-uz-ph="To'liq ismingiz" data-ru-ph="Ваше полное имя" required></div>
+            <div class="fg"><label data-en="Phone Number" data-uz="Telefon Raqami" data-ru="Номер телефона">Phone Number</label> <span class="req">*</span><input type="tel" id="fphone" data-en-ph="+998 XX XXX XX XX" data-uz-ph="+998 XX XXX XX XX" data-ru-ph="+998 XX XXX XX XX" required><div class="hint" data-en="We'll contact you via this number to confirm your spot." data-uz="Oʻrningizni tasdiqlash uchun shu raqam orqali bogʻlanamiz." data-ru="Мы свяжемся по этому номеру.">We'll contact you via this number to confirm your spot.</div></div>
             <div class="frow">
               <div class="fg"><label data-en="Age" data-uz="Yosh" data-ru="Возраст">Age</label><input type="number" id="fage" data-en-ph="e.g. 17" data-uz-ph="masalan, 17" data-ru-ph="например, 17" min="10" max="30"></div>
               <div class="fg"><label data-en="Grade / Year" data-uz="Sinf / Kurs" data-ru="Класс / Курс">Grade / Year</label><input type="text" id="fgrade" data-en-ph="e.g. 11th grade" data-uz-ph="masalan, 11-sinf" data-ru-ph="например, 11 класс"></div>
@@ -453,7 +452,7 @@ nav.scrolled{
                 <option value="" data-en="— Select —" data-uz="— Tanlang —" data-ru="— Выберите —">— Select —</option>
                 <option>Telegram</option>
                 <option>Instagram</option>
-                <option data-en="Friend / Classmate" data-uz="Do'st / Sinfdosh" data-ru="Друг / Одноклассник">Friend / Classmate</option>
+                <option data-en="Friend / Classmate" data-uz="Doʻst / Sinfdosh" data-ru="Друг / Одноклассник">Friend / Classmate</option>
                 <option data-en="School" data-uz="Maktab" data-ru="Школа">School</option>
                 <option data-en="Google Search" data-uz="Google Qidiruv" data-ru="Google поиск">Google Search</option>
                 <option data-en="Other" data-uz="Boshqa" data-ru="Другое">Other</option>
@@ -464,11 +463,11 @@ nav.scrolled{
           </div>
           <div class="success-msg" id="successMsg">
             <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <h3 data-en="You're registered!" data-uz="Ro'yxatdan o'tdingiz!" data-ru="Вы записаны!">You're registered!</h3>
+            <h3 data-en="You're registered!" data-uz="Roʻyxatdan oʻtdingiz!" data-ru="Вы записаны!">You're registered!</h3>
             <p data-en="Thank you. We'll contact you on" data-uz="Rahmat. Sizga" data-ru="Спасибо. Мы свяжемся по">Thank you. We'll contact you on</p>
             <p style="margin:.4rem 0;font-weight:600;color:var(--navy)" id="confirmedPhone"></p>
-            <p data-en="within 24 hours to confirm your spot." data-uz="raqam orqali 24 soat ichida bog'lanamiz." data-ru="в течение 24 часов.">within 24 hours to confirm your spot.</p>
-            <p style="margin-top:1rem" data-en="In the meantime, join our Telegram:" data-uz="Shu vaqt davomida Telegramga qo'shiling:" data-ru="Пока что присоединяйтесь к Telegram:">In the meantime, join our Telegram:</p>
+            <p data-en="within 24 hours to confirm your spot." data-uz="raqam orqali 24 soat ichida bogʻlanamiz." data-ru="в течение 24 часов.">within 24 hours to confirm your spot.</p>
+            <p style="margin-top:1rem" data-en="In the meantime, join our Telegram:" data-uz="Shu vaqt davomida Telegramga qoʻshiling:" data-ru="Пока что присоединяйтесь к Telegram:">In the meantime, join our Telegram:</p>
             <a href="https://t.me/sat_samarkand" target="_blank" style="display:inline-block;margin-top:.8rem;background:var(--blue);color:#fff;padding:10px 22px;border-radius:4px;font-weight:600;font-size:.86rem;text-decoration:none">@sat_samarkand →</a>
           </div>
         </div>
@@ -476,12 +475,12 @@ nav.scrolled{
 
       <div class="side-info">
         <div class="info-card">
-          <h4 data-en="What happens next?" data-uz="Keyin nima bo'ladi?" data-ru="Что дальше?">What happens next?</h4>
+          <h4 data-en="What happens next?" data-uz="Keyin nima boʻladi?" data-ru="Что дальше?">What happens next?</h4>
           <ul>
-            <li data-en="We receive your registration" data-uz="Ro'yxatingizni qabul qilamiz" data-ru="Получаем заявку">We receive your registration</li>
-            <li data-en="We call or message you within 24h" data-uz="24 soat ichida bog'lanamiz" data-ru="Свяжемся в течение 24ч">We call or message you within 24h</li>
+            <li data-en="We receive your registration" data-uz="Roʻyxatingizni qabul qilamiz" data-ru="Получаем заявку">We receive your registration</li>
+            <li data-en="We call or message you within 24h" data-uz="24 soat ichida bogʻlanamiz" data-ru="Свяжемся в течение 24ч">We call or message you within 24h</li>
             <li data-en="You attend a free trial lesson" data-uz="Bepul sinov darsiga borasiz" data-ru="Бесплатный пробный урок">You attend a free trial lesson</li>
-            <li data-en="You officially join your group" data-uz="Guruhingizga rasmiy qo'shilasiz" data-ru="Официально присоединяетесь">You officially join your group</li>
+            <li data-en="You officially join your group" data-uz="Guruhingizga rasmiy qoʻshilasiz" data-ru="Официально присоединяетесь">You officially join your group</li>
           </ul>
         </div>
         <div class="info-card">
@@ -505,28 +504,28 @@ nav.scrolled{
   <div class="sx-wrap">
     <div class="sx-ft-grid">
       <div>
-        <a class="sx-brand" href="/"><span class="sx-chip"><img src="/logo.png" alt="" width="28" height="28"></span><span><small>SAT</small>Samarkand</span></a>
+        <a class="sx-ft-logo" href="/"><img src="/brand/logo-outline.png" alt="SAT Samarkand" width="136" height="131" loading="lazy"></a>
         <p class="sx-ft-about" data-en="Samarkand’s official SAT, AP & IELTS prep center." data-uz="Samarqandning rasmiy markazi." data-ru="Официальный центр.">Samarkand’s official SAT, AP & IELTS prep center.</p>
         <p class="sx-ft-about" style="margin-top:6px" data-en="Partners: Joylink & Millennium" data-uz="Joylink & Millennium" data-ru="Joylink & Millennium">Partners: Joylink & Millennium</p>
       </div>
       <div>
         <h3 data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</h3>
         <ul>
-          <li><a href="/sat-course-samarkand/" data-en="SAT Course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT Course</a></li>
+          <li><a href="/sat-course-samarkand/" data-en="SAT course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT course</a></li>
           <li><a href="/digital-sat/" data-en="Digital SAT" data-uz="Raqamli SAT" data-ru="Цифровой SAT">Digital SAT</a></li>
           <li><a href="/sat-math-prep/" data-en="SAT Math" data-uz="SAT Matematika" data-ru="Математика SAT">SAT Math</a></li>
           <li><a href="/sat-english-prep/" data-en="SAT English" data-uz="SAT Ingliz tili" data-ru="Английский SAT">SAT English</a></li>
           <li><a href="/sat-tutoring-samarkand/" data-en="Tutoring" data-uz="Individual dars" data-ru="Репетиторство">Tutoring</a></li>
-          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a></li>
+          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a></li>
         </ul>
       </div>
       <div>
         <h3 data-en="About" data-uz="Biz" data-ru="О нас">About</h3>
         <ul>
-          <li><a href="/teachers/" data-en="Teachers" data-uz="O'qituvchilar" data-ru="Учителя">Teachers</a></li>
+          <li><a href="/teachers/" data-en="Teachers" data-uz="Oʻqituvchilar" data-ru="Учителя">Teachers</a></li>
           <li><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
           <li><a href="/pricing/" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a></li>
-          <li><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+          <li><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a></li>
           <li><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
           <li><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
         </ul>
@@ -534,8 +533,8 @@ nav.scrolled{
       <div>
         <h3 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h3>
         <ul>
-          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram Channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram Channel</a></li>
-          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support Chat" data-uz="Yordam" data-ru="Поддержка">Support Chat</a></li>
+          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram channel</a></li>
+          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support chat" data-uz="Yordam" data-ru="Поддержка">Support chat</a></li>
           <li><a href="https://instagram.com/sat_samarkand" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="tel:+998951131600" class="sx-num">+998 95 113 16 00</a></li>
         </ul>
@@ -549,12 +548,12 @@ nav.scrolled{
         </address>
       </div>
     </div>
-    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span></div>
+    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span><span class="sx-ft-tm" data-en="SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand." data-uz="SAT® — College Board tashkilotining roʻyxatdan oʻtgan savdo belgisi. College Board SAT Samarkand bilan bogʻliq emas." data-ru="SAT® — зарегистрированный товарный знак College Board. College Board не связан с SAT Samarkand.">SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand.</span></div>
   </div>
 </div>
 <div class="sx-sticky">
-  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a>
-  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qo'ng'iroq" data-ru="Позвоните нам">Call us</a>
+  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a>
+  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qoʻngʻiroq" data-ru="Позвоните нам">Call us</a>
 </div>
 <!--/SX-FOOTER-->
 
@@ -562,7 +561,7 @@ nav.scrolled{
   </a>
   <a href="tel:+998951131600" class="fitem">
     <div class="ficon fph"><svg viewBox="0 0 24 24" fill="white"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.66A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div>
-    <div><div class="ftext" data-en="Call us" data-uz="Qo'ng'iroq" data-ru="Позвонить">Call us</div><div class="fsub">+998 95 113 16 00</div></div>
+    <div><div class="ftext" data-en="Call us" data-uz="Qoʻngʻiroq" data-ru="Позвонить">Call us</div><div class="fsub">+998 95 113 16 00</div></div>
   </a>
 </div>
 
@@ -839,6 +838,6 @@ if(typeof toggleMobileNav==='undefined'){
 
 
 
-<script src="/theme.js?v=3" defer></script>
+<script src="/theme.js?v=4" defer></script>
 </body>
 </html>

@@ -402,10 +402,9 @@ nav.scrolled{
 
 @media(max-width:640px){.fwidget{bottom:80px;right:14px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/theme.css?v=3">
+<link rel="preload" href="/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/theme.css?v=4">
 </head>
 <body>
 
@@ -414,30 +413,30 @@ nav.scrolled{
 <div class="sx-hd" id="sx-hd" role="banner">
   <div class="sx-wrap">
     <div class="sx-hd-in">
-      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/logo.png" alt="" width="34" height="34"><span><small>SAT</small>Samarkand</span></a>
+      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/brand/mark-primary.png" alt="" width="35" height="40"><span>SAT Samarkand</span></a>
       <div class="sx-nav" role="navigation" aria-label="Main">
-        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All courses" data-uz="Barcha kurslar" data-ru="Все курсы">All courses</a><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions consulting</a><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div></div>
         <div class="sx-nav-i"><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div></div>
         <div class="sx-nav-i"><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></div>
         <div class="sx-nav-i"><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></div>
       </div>
       <div class="sx-langs" role="group" aria-label="Language"><button class="lb" data-lang="en" onclick="setLang('en')">EN</button><button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button><button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button></div>
-      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a>
+      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a>
       <button class="sx-burger" id="sx-burger" aria-label="Menu" aria-expanded="false"><i></i></button>
     </div>
     <div class="sx-drawer" role="navigation" aria-label="Mobile">
       <a class="sx-has-sub" href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a>
-      <div class="sx-sub"><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div>
+      <div class="sx-sub"><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div>
       <a class="sx-has-sub" href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a>
-      <div class="sx-sub"><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div>
+      <div class="sx-sub"><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div>
       <a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a>
       <a class="sx-has-sub" href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a>
-      <div class="sx-sub"><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div>
+      <div class="sx-sub"><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div>
       <a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a>
       <a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a>
-      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a></div>
+      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a></div>
     </div>
   </div>
 </div>
@@ -455,7 +454,7 @@ nav.scrolled{
     <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(6,97,222,.18);border:1px solid rgba(6,97,222,.4);border-radius:4px;padding:6px 16px;margin-bottom:24px">
       <span style="width:7px;height:7px;border-radius:50%;background:#0661de;display:inline-block"></span>
       <span style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#93c5fd;text-transform:uppercase"
-        data-en="Contact Us" data-uz="Biz bilan bog'laning" data-ru="Свяжитесь с нами">Contact Us</span>
+        data-en="Contact Us" data-uz="Biz bilan bogʻlaning" data-ru="Свяжитесь с нами">Contact Us</span>
     </div>
     <h1 style="font-size:clamp(2.4rem,5vw,3.8rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin:0 0 1.2rem">
       <span data-en="We respond" data-uz="Javob beramiz" data-ru="Мы отвечаем">We respond</span><br>
@@ -480,7 +479,7 @@ nav.scrolled{
       <div style="display:inline-flex;align-items:center;gap:8px;background:#eff6ff;border:1px solid rgba(6,97,222,.2);border-radius:4px;padding:5px 14px;margin-bottom:16px">
         <span style="width:6px;height:6px;border-radius:50%;background:#0661de;display:inline-block"></span>
         <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;color:#0661de;text-transform:uppercase"
-          data-en="Get in Touch" data-uz="Bog'lanish" data-ru="Связаться">Get in Touch</span>
+          data-en="Get in Touch" data-uz="Bogʻlanish" data-ru="Связаться">Get in Touch</span>
       </div>
       <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#022049;letter-spacing:-.02em;line-height:1.1;margin:0 0 28px"
         data-en="Choose your channel." data-uz="Kanal tanlang." data-ru="Выберите канал.">Choose your channel.</h2>
@@ -519,7 +518,7 @@ nav.scrolled{
           </div>
           <div style="flex:1">
             <div style="font-size:.95rem;font-weight:700;color:#022049;margin-bottom:3px"
-              data-en="Call Us" data-uz="Qo'ng'iroq qiling" data-ru="Позвонить">Call Us</div>
+              data-en="Call Us" data-uz="Qoʻngʻiroq qiling" data-ru="Позвонить">Call Us</div>
             <div style="font-size:.82rem;color:#6e6e73">+998 95 113 16 00</div>
           </div>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -552,7 +551,7 @@ nav.scrolled{
             <div style="font-size:.95rem;font-weight:700;color:#022049;margin-bottom:3px"
               data-en="Results Channel" data-uz="Natijalar Kanali" data-ru="Канал результатов">Results Channel</div>
             <div style="font-size:.82rem;color:#6e6e73"
-              data-en="See real verified student scores" data-uz="Haqiqiy tasdiqlangan natijalarni ko'ring" data-ru="Реальные подтверждённые результаты">See real verified student scores</div>
+              data-en="See real verified student scores" data-uz="Haqiqiy tasdiqlangan natijalarni koʻring" data-ru="Реальные подтверждённые результаты">See real verified student scores</div>
           </div>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6e6e73" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -601,11 +600,11 @@ nav.scrolled{
         </div>
         <p style="font-size:.85rem;color:#3d3d3d;line-height:1.6;margin:0 0 16px"
           data-en="Every Sunday at 10:00 AM at Branch 1. Full timed mock — open to all, no commitment needed."
-          data-uz="Har yakshanba 1-filialda soat 10:00 da. To'liq vaqtli mock — barchaga ochiq."
+          data-uz="Har yakshanba 1-filialda soat 10:00 da. Toʻliq vaqtli mock — barchaga ochiq."
           data-ru="Каждое воскресенье в 10:00 в Филиале 1. Полный пробный экзамен — бесплатно для всех.">Every Sunday at 10:00 AM at Branch 1. Full timed mock — open to all, no commitment needed.</p>
         <a href="https://t.me/m/dZGyk8a_ZDc5" target="_blank" rel="noopener"
           style="display:inline-flex;align-items:center;gap:6px;background:#0661de;color:#fff;border-radius:4px;padding:11px 20px;font-size:.84rem;font-weight:700;text-decoration:none"
-          data-en="Reserve Your Spot →" data-uz="O'rin Band Qiling →" data-ru="Забронировать →">Reserve Your Spot →</a>
+          data-en="Reserve Your Spot →" data-uz="Oʻrin Band Qiling →" data-ru="Забронировать →">Reserve Your Spot →</a>
       </div>
 
       <!-- Enroll CTA -->
@@ -614,7 +613,7 @@ nav.scrolled{
           data-en="Ready to enroll?" data-uz="Yozilishga tayyormisiz?" data-ru="Готовы записаться?">Ready to enroll?</div>
         <p style="font-size:.84rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0 0 16px"
           data-en="Message us on Telegram and we'll confirm your spot within hours."
-          data-uz="Telegramda yozing — bir necha soatda o'rningizni tasdiqlaydi."
+          data-uz="Telegramda yozing — bir necha soatda oʻrningizni tasdiqlaydi."
           data-ru="Напишите в Telegram — подтвердим место в течение нескольких часов.">Message us on Telegram and we'll confirm your spot within hours.</p>
         <a href="https://t.me/satsam_support?text=Kursga+yozilmoqchiman" target="_blank" rel="noopener"
           style="display:inline-flex;align-items:center;gap:7px;background:#0661de;color:#fff;border-radius:4px;padding:12px 22px;font-size:.88rem;font-weight:700;text-decoration:none;box-shadow:none"
@@ -652,7 +651,7 @@ nav.scrolled{
       <button onclick="showMap(2)" id="mtab2"
         style="display:flex;align-items:center;gap:8px;padding:11px 24px;border-radius:4px;border:2px solid #e2e8f0;background:#fff;color:#022049;font-size:.86rem;font-weight:700;cursor:pointer;transition:all .15s;font-family:inherit">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span data-en="Branch 2 — Mirzo Ulug'bek 105" data-uz="2-filial — Mirzo Ulug'bek 105" data-ru="Филиал 2 — Мирзо Улугбек 105">Branch 2 — Mirzo Ulug'bek 105</span>
+        <span data-en="Branch 2 — Mirzo Ulug'bek 105" data-uz="2-filial — Mirzo Ulugʻbek 105" data-ru="Филиал 2 — Мирзо Улугбек 105">Branch 2 — Mirzo Ulug'bek 105</span>
       </button>
     </div>
 
@@ -718,28 +717,28 @@ function showMap(n) {
   <div class="sx-wrap">
     <div class="sx-ft-grid">
       <div>
-        <a class="sx-brand" href="/"><span class="sx-chip"><img src="/logo.png" alt="" width="28" height="28"></span><span><small>SAT</small>Samarkand</span></a>
+        <a class="sx-ft-logo" href="/"><img src="/brand/logo-outline.png" alt="SAT Samarkand" width="136" height="131" loading="lazy"></a>
         <p class="sx-ft-about" data-en="Samarkand’s official SAT, AP & IELTS prep center." data-uz="Samarqandning rasmiy markazi." data-ru="Официальный центр.">Samarkand’s official SAT, AP & IELTS prep center.</p>
         <p class="sx-ft-about" style="margin-top:6px" data-en="Partners: Joylink & Millennium" data-uz="Joylink & Millennium" data-ru="Joylink & Millennium">Partners: Joylink & Millennium</p>
       </div>
       <div>
         <h3 data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</h3>
         <ul>
-          <li><a href="/sat-course-samarkand/" data-en="SAT Course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT Course</a></li>
+          <li><a href="/sat-course-samarkand/" data-en="SAT course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT course</a></li>
           <li><a href="/digital-sat/" data-en="Digital SAT" data-uz="Raqamli SAT" data-ru="Цифровой SAT">Digital SAT</a></li>
           <li><a href="/sat-math-prep/" data-en="SAT Math" data-uz="SAT Matematika" data-ru="Математика SAT">SAT Math</a></li>
           <li><a href="/sat-english-prep/" data-en="SAT English" data-uz="SAT Ingliz tili" data-ru="Английский SAT">SAT English</a></li>
           <li><a href="/sat-tutoring-samarkand/" data-en="Tutoring" data-uz="Individual dars" data-ru="Репетиторство">Tutoring</a></li>
-          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a></li>
+          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a></li>
         </ul>
       </div>
       <div>
         <h3 data-en="About" data-uz="Biz" data-ru="О нас">About</h3>
         <ul>
-          <li><a href="/teachers/" data-en="Teachers" data-uz="O'qituvchilar" data-ru="Учителя">Teachers</a></li>
+          <li><a href="/teachers/" data-en="Teachers" data-uz="Oʻqituvchilar" data-ru="Учителя">Teachers</a></li>
           <li><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
           <li><a href="/pricing/" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a></li>
-          <li><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+          <li><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a></li>
           <li><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
           <li><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
         </ul>
@@ -747,8 +746,8 @@ function showMap(n) {
       <div>
         <h3 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h3>
         <ul>
-          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram Channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram Channel</a></li>
-          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support Chat" data-uz="Yordam" data-ru="Поддержка">Support Chat</a></li>
+          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram channel</a></li>
+          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support chat" data-uz="Yordam" data-ru="Поддержка">Support chat</a></li>
           <li><a href="https://instagram.com/sat_samarkand" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="tel:+998951131600" class="sx-num">+998 95 113 16 00</a></li>
         </ul>
@@ -762,12 +761,12 @@ function showMap(n) {
         </address>
       </div>
     </div>
-    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span></div>
+    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span><span class="sx-ft-tm" data-en="SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand." data-uz="SAT® — College Board tashkilotining roʻyxatdan oʻtgan savdo belgisi. College Board SAT Samarkand bilan bogʻliq emas." data-ru="SAT® — зарегистрированный товарный знак College Board. College Board не связан с SAT Samarkand.">SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand.</span></div>
   </div>
 </div>
 <div class="sx-sticky">
-  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a>
-  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qo'ng'iroq" data-ru="Позвоните нам">Call us</a>
+  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a>
+  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qoʻngʻiroq" data-ru="Позвоните нам">Call us</a>
 </div>
 <!--/SX-FOOTER-->
 </div>
@@ -1004,6 +1003,6 @@ if(typeof toggleMobileNav==='undefined'){
 
 
 
-<script src="/theme.js?v=3" defer></script>
+<script src="/theme.js?v=4" defer></script>
 </body>
 </html>

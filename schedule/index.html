@@ -614,10 +614,9 @@ nav.scrolled{
 .footer-tel .fmtitle{font-size:.82rem;font-weight:500}
 .footer-tel .fmsub{font-size:.75rem;color:rgba(255,255,255,.35)}
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/theme.css?v=3">
+<link rel="preload" href="/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/theme.css?v=4">
 </head>
 <body>
 
@@ -626,30 +625,30 @@ nav.scrolled{
 <div class="sx-hd" id="sx-hd" role="banner">
   <div class="sx-wrap">
     <div class="sx-hd-in">
-      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/logo.png" alt="" width="34" height="34"><span><small>SAT</small>Samarkand</span></a>
+      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/brand/mark-primary.png" alt="" width="35" height="40"><span>SAT Samarkand</span></a>
       <div class="sx-nav" role="navigation" aria-label="Main">
-        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All courses" data-uz="Barcha kurslar" data-ru="Все курсы">All courses</a><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions consulting</a><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div></div>
         <div class="sx-nav-i"><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div></div>
         <div class="sx-nav-i"><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></div>
         <div class="sx-nav-i"><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></div>
       </div>
       <div class="sx-langs" role="group" aria-label="Language"><button class="lb" data-lang="en" onclick="setLang('en')">EN</button><button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button><button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button></div>
-      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a>
+      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a>
       <button class="sx-burger" id="sx-burger" aria-label="Menu" aria-expanded="false"><i></i></button>
     </div>
     <div class="sx-drawer" role="navigation" aria-label="Mobile">
       <a class="sx-has-sub" href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a>
-      <div class="sx-sub"><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div>
+      <div class="sx-sub"><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div>
       <a class="sx-has-sub" href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a>
-      <div class="sx-sub"><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div>
+      <div class="sx-sub"><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div>
       <a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a>
       <a class="sx-has-sub" href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a>
-      <div class="sx-sub"><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div>
+      <div class="sx-sub"><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div>
       <a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a>
       <a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a>
-      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a></div>
+      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a></div>
     </div>
   </div>
 </div>
@@ -660,8 +659,8 @@ nav.scrolled{
 
 <div class="sch-hero">
   <div class="sch-badge" data-en="Updated May 2026" data-uz="Yangilangan: 2026-yil may" data-ru="&#1054;&#1073;&#1085;&#1086;&#1074;&#1083;&#1077;&#1085;&#1086; &#1084;&#1072;&#1081; 2026">Updated May 2026</div>
-  <h1 data-en="SAT Test Dates &amp; Schedule 2026&#8211;2027 — Uzbekistan" data-uz="SAT Test Sanalari va Jadvali 2026&#8211;2027 — O&#39;zbekiston" data-ru="&#1044;&#1072;&#1090;&#1099; &#1080; &#1088;&#1072;&#1089;&#1087;&#1080;&#1089;&#1072;&#1085;&#1080;&#1077; SAT 2026&#8211;2027 — &#1059;&#1079;&#1073;&#1077;&#1082;&#1080;&#1089;&#1090;&#1072;&#1085;">SAT Test Dates &amp; Schedule 2026&#8211;2027 — Uzbekistan</h1>
-  <p data-en="All official Digital SAT dates, registration deadlines and score release dates for students in Uzbekistan. Register early — spots fill fast." data-uz="O&#39;zbekistondagi talabalar uchun barcha rasmiy Digital SAT sanalari, ro&#39;yxatdan o&#39;tish muddatlari va natija chiqish sanalari." data-ru="&#1042;&#1089;&#1077; &#1086;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1077; &#1076;&#1072;&#1090;&#1099; Digital SAT, &#1076;&#1077;&#1076;&#1083;&#1072;&#1081;&#1085;&#1099; &#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1080; &#1080; &#1076;&#1072;&#1090;&#1099; &#1074;&#1099;&#1093;&#1086;&#1076;&#1072; &#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1086;&#1074;.">All official Digital SAT dates, registration deadlines and score release dates for students in Uzbekistan.</p>
+  <h1 data-en="SAT Test Dates &amp; Schedule 2026&#8211;2027 — Uzbekistan" data-uz="SAT Test Sanalari va Jadvali 2026&#8211;2027 — Oʻzbekiston" data-ru="&#1044;&#1072;&#1090;&#1099; &#1080; &#1088;&#1072;&#1089;&#1087;&#1080;&#1089;&#1072;&#1085;&#1080;&#1077; SAT 2026&#8211;2027 — &#1059;&#1079;&#1073;&#1077;&#1082;&#1080;&#1089;&#1090;&#1072;&#1085;">SAT Test Dates &amp; Schedule 2026&#8211;2027 — Uzbekistan</h1>
+  <p data-en="All official Digital SAT dates, registration deadlines and score release dates for students in Uzbekistan. Register early — spots fill fast." data-uz="Oʻzbekistondagi talabalar uchun barcha rasmiy Digital SAT sanalari, roʻyxatdan oʻtish muddatlari va natija chiqish sanalari." data-ru="&#1042;&#1089;&#1077; &#1086;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1077; &#1076;&#1072;&#1090;&#1099; Digital SAT, &#1076;&#1077;&#1076;&#1083;&#1072;&#1081;&#1085;&#1099; &#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1080; &#1080; &#1076;&#1072;&#1090;&#1099; &#1074;&#1099;&#1093;&#1086;&#1076;&#1072; &#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1086;&#1074;.">All official Digital SAT dates, registration deadlines and score release dates for students in Uzbekistan.</p>
 </div>
 
 <div class="sch-wrap">
@@ -673,7 +672,7 @@ nav.scrolled{
     <table class="dates-table">
       <thead><tr>
         <th data-en="Test Date" data-uz="Test Sanasi" data-ru="&#1044;&#1072;&#1090;&#1072;">Test Date</th>
-        <th data-en="Registration Deadline" data-uz="Ro&#39;yxatdan o&#39;tish muddati" data-ru="&#1044;&#1077;&#1076;&#1083;&#1072;&#1081;&#1085;">Registration Deadline</th>
+        <th data-en="Registration Deadline" data-uz="Roʻyxatdan oʻtish muddati" data-ru="&#1044;&#1077;&#1076;&#1083;&#1072;&#1081;&#1085;">Registration Deadline</th>
         <th data-en="Late Registration" data-uz="Kechiktirilgan" data-ru="&#1055;&#1086;&#1079;&#1076;&#1085;&#1103;&#1103;">Late Registration</th>
         <th data-en="Score Release" data-uz="Natijalar" data-ru="&#1053;&#1072;&#1090;&#1080;&#1078;&#1072;">Score Release</th>
       </tr></thead>
@@ -696,7 +695,7 @@ nav.scrolled{
     <table class="dates-table">
       <thead><tr>
         <th data-en="Test Date" data-uz="Test Sanasi" data-ru="Дата теста">Test Date</th>
-        <th data-en="Registration Deadline" data-uz="Ro'yxatdan o'tish muddati" data-ru="Дедлайн">Registration Deadline</th>
+        <th data-en="Registration Deadline" data-uz="Roʻyxatdan oʻtish muddati" data-ru="Дедлайн">Registration Deadline</th>
         <th data-en="Late Registration" data-uz="Kechiktirilgan" data-ru="Поздняя">Late Registration</th>
         <th data-en="Score Release" data-uz="Natijalar" data-ru="Результаты">Score Release</th>
       </tr></thead>
@@ -719,11 +718,11 @@ nav.scrolled{
     <div style="flex:1;min-width:200px">
       <div style="font-weight:700;color:#fff;font-size:.95rem;margin-bottom:.2rem"
         data-en="Need help registering? We'll walk you through it — free."
-        data-uz="Ro'yxatdan o'tishda yordam kerakmi? Bepul yo'riqnoma beramiz."
+        data-uz="Roʻyxatdan oʻtishda yordam kerakmi? Bepul yoʻriqnoma beramiz."
         data-ru="Нужна помощь с регистрацией? Поможем бесплатно.">Need help registering? We'll walk you through it — free.</div>
       <div style="color:rgba(255,255,255,.55);font-size:.82rem"
         data-en="SAT Samarkand helps students with the full College Board registration process. Message us on Telegram."
-        data-uz="SAT Samarqand talabalarga College Board ro'yxatidan o'tishda yordam beradi. Bizga Telegram orqali yozing."
+        data-uz="SAT Samarqand talabalarga College Board roʻyxatidan oʻtishda yordam beradi. Bizga Telegram orqali yozing."
         data-ru="SAT Samarkand помогает пройти регистрацию на College Board. Напишите нам в Telegram.">SAT Samarkand helps students with the full College Board registration process. Message us on Telegram.</div>
     </div>
     <a href="https://t.me/satsam_support" target="_blank" rel="noopener"
@@ -732,7 +731,7 @@ nav.scrolled{
   </div>
 
   <!-- HOW TO REGISTER -->
-  <h2 class="sch-h2" data-en="How to Register for SAT from Uzbekistan" data-uz="O&#39;zbekistondan SAT ga qanday ro&#39;yxatdan o&#39;tish kerak" data-ru="&#1050;&#1072;&#1082; &#1079;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1090;&#1100;&#1089;&#1103; &#1085;&#1072; SAT &#1080;&#1079; &#1059;&#1079;&#1073;&#1077;&#1082;&#1080;&#1089;&#1090;&#1072;&#1085;&#1072;">How to Register for SAT from Uzbekistan</h2>
+  <h2 class="sch-h2" data-en="How to Register for SAT from Uzbekistan" data-uz="Oʻzbekistondan SAT ga qanday roʻyxatdan oʻtish kerak" data-ru="&#1050;&#1072;&#1082; &#1079;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1090;&#1100;&#1089;&#1103; &#1085;&#1072; SAT &#1080;&#1079; &#1059;&#1079;&#1073;&#1077;&#1082;&#1080;&#1089;&#1090;&#1072;&#1085;&#1072;">How to Register for SAT from Uzbekistan</h2>
   <div class="steps-grid">
     <div class="step-box">
       <div class="step-num-big">1</div>
@@ -742,12 +741,12 @@ nav.scrolled{
     <div class="step-box">
       <div class="step-num-big">2</div>
       <h4 data-en="Choose Test Date &amp; Center" data-uz="Test sanasi va markazini tanlang" data-ru="&#1042;&#1099;&#1073;&#1077;&#1088;&#1080;&#1090;&#1077; &#1076;&#1072;&#1090;&#1091; &#1080; &#1094;&#1077;&#1085;&#1090;&#1088;">Choose Test Date &amp; Center</h4>
-      <p data-en="Select a date and an official test center in Samarkand. Register at least 4 weeks before your chosen date." data-uz="Samarqanddagi test sanasi va rasmiy markazni tanlang. Tanlangan sanadan kamida 4 hafta oldin ro&#39;yxatdan o&#39;ting." data-ru="Выберите дату и официальный тест-центр в Самарканде. Зарегистрируйтесь минимум за 4 недели до выбранной даты.">Select a date and an official test center in Samarkand. Register at least 4 weeks before your date.</p>
+      <p data-en="Select a date and an official test center in Samarkand. Register at least 4 weeks before your chosen date." data-uz="Samarqanddagi test sanasi va rasmiy markazni tanlang. Tanlangan sanadan kamida 4 hafta oldin roʻyxatdan oʻting." data-ru="Выберите дату и официальный тест-центр в Самарканде. Зарегистрируйтесь минимум за 4 недели до выбранной даты.">Select a date and an official test center in Samarkand. Register at least 4 weeks before your date.</p>
     </div>
     <div class="step-box">
       <div class="step-num-big">3</div>
-      <h4 data-en="Pay Registration Fee" data-uz="Ro&#39;yxatdan o&#39;tish to&#39;lovini to&#39;lang" data-ru="&#1054;&#1087;&#1083;&#1072;&#1090;&#1080;&#1090;&#1077; &#1074;&#1079;&#1085;&#1086;&#1089;">Pay Registration Fee</h4>
-      <p data-en="SAT fee is approximately $60 USD for international students. Fee waivers are not available for international students." data-uz="SAT to&#39;lovi xalqaro talabalar uchun taxminan $60. Imtiyoz kuponi xalqaro talabalarga taqdim etilmaydi." data-ru="&#1042;&#1079;&#1085;&#1086;&#1089; SAT &#1076;&#1083;&#1103; &#1084;&#1077;&#1078;&#1076;&#1091;&#1085;&#1072;&#1088;&#1086;&#1076;&#1085;&#1099;&#1093; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074; ~$60.">SAT fee is ~$60 USD for international students.</p>
+      <h4 data-en="Pay Registration Fee" data-uz="Roʻyxatdan oʻtish toʻlovini toʻlang" data-ru="&#1054;&#1087;&#1083;&#1072;&#1090;&#1080;&#1090;&#1077; &#1074;&#1079;&#1085;&#1086;&#1089;">Pay Registration Fee</h4>
+      <p data-en="SAT fee is approximately $60 USD for international students. Fee waivers are not available for international students." data-uz="SAT toʻlovi xalqaro talabalar uchun taxminan $60. Imtiyoz kuponi xalqaro talabalarga taqdim etilmaydi." data-ru="&#1042;&#1079;&#1085;&#1086;&#1089; SAT &#1076;&#1083;&#1103; &#1084;&#1077;&#1078;&#1076;&#1091;&#1085;&#1072;&#1088;&#1086;&#1076;&#1085;&#1099;&#1093; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074; ~$60.">SAT fee is ~$60 USD for international students.</p>
     </div>
     <div class="step-box">
       <div class="step-num-big">4</div>
@@ -759,26 +758,26 @@ nav.scrolled{
   <div class="tip-box">
     <h4 data-en="&#128161; Pro tip for Samarkand students" data-uz="&#128161; Samarqand talabalari uchun maslahat" data-ru="&#128161; &#1057;&#1086;&#1074;&#1077;&#1090; &#1076;&#1083;&#1103; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074; &#1057;&#1072;&#1084;&#1072;&#1088;&#1082;&#1072;&#1085;&#1076;&#1072;">&#128161; Pro tip for Samarkand students</h4>
     <ul>
-      <li data-en="Register for the October or November date if you start preparing in August." data-uz="Avgust oyida tayyorlanishni boshlasangiz, oktyabr yoki noyabr sanasiga ro&#39;yxatdan o&#39;ting." data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1091;&#1081;&#1090;&#1077;&#1089;&#1100; &#1085;&#1072; &#1086;&#1082;&#1090;&#1103;&#1073;&#1088;&#1100;/&#1085;&#1086;&#1103;&#1073;&#1088;&#1100;, &#1077;&#1089;&#1083;&#1080; &#1085;&#1072;&#1095;&#1080;&#1085;&#1072;&#1077;&#1090;&#1077; &#1074; &#1072;&#1074;&#1075;&#1091;&#1089;&#1090;&#1077;.">Register for October or November if you start preparing in August.</li>
+      <li data-en="Register for the October or November date if you start preparing in August." data-uz="Avgust oyida tayyorlanishni boshlasangiz, oktyabr yoki noyabr sanasiga roʻyxatdan oʻting." data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1091;&#1081;&#1090;&#1077;&#1089;&#1100; &#1085;&#1072; &#1086;&#1082;&#1090;&#1103;&#1073;&#1088;&#1100;/&#1085;&#1086;&#1103;&#1073;&#1088;&#1100;, &#1077;&#1089;&#1083;&#1080; &#1085;&#1072;&#1095;&#1080;&#1085;&#1072;&#1077;&#1090;&#1077; &#1074; &#1072;&#1074;&#1075;&#1091;&#1089;&#1090;&#1077;.">Register for October or November if you start preparing in August.</li>
       <li data-en="You can take SAT up to 7 times — your best score is sent to universities." data-uz="SAT ni 7 martagacha topshirish mumkin — universitetlarga eng yaxshi ball yuboriladi." data-ru="SAT &#1084;&#1086;&#1078;&#1085;&#1086; &#1089;&#1076;&#1072;&#1074;&#1072;&#1090;&#1100; &#1076;&#1086; 7 &#1088;&#1072;&#1079; — &#1074; &#1091;&#1085;&#1080;&#1074;&#1077;&#1088;&#1089;&#1080;&#1090;&#1077;&#1090;&#1099; &#1086;&#1090;&#1087;&#1088;&#1072;&#1074;&#1083;&#1103;&#1077;&#1090;&#1089;&#1103; &#1083;&#1091;&#1095;&#1096;&#1080;&#1081; &#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;.">You can take SAT up to 7 times — only your best score goes to universities (Score Choice).</li>
       <li data-en="SAT Samarkand enrolled students get test-day logistics support via our Telegram group." data-uz="SAT Samarqand talabalariga Telegram guruh orqali test kuni logistika yordami beriladi." data-ru="&#1047;&#1072;&#1095;&#1080;&#1089;&#1083;&#1077;&#1085;&#1085;&#1099;&#1077; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1099; &#1087;&#1086;&#1083;&#1091;&#1095;&#1072;&#1102;&#1090; &#1087;&#1086;&#1076;&#1076;&#1077;&#1088;&#1078;&#1082;&#1091; &#1074; Telegram.">Enrolled students get test-day logistics support via our Telegram group.</li>
     </ul>
   </div>
 
   <!-- FAQ -->
-  <h2 class="sch-h2" style="margin-top:2rem" data-en="Frequently Asked Questions" data-uz="Ko&#39;p so&#39;raladigan savollar" data-ru="&#1063;&#1072;&#1089;&#1090;&#1086; &#1079;&#1072;&#1076;&#1072;&#1074;&#1072;&#1077;&#1084;&#1099;&#1077; &#1074;&#1086;&#1087;&#1088;&#1086;&#1089;&#1099;">Frequently Asked Questions</h2>
+  <h2 class="sch-h2" style="margin-top:2rem" data-en="Frequently Asked Questions" data-uz="Koʻp soʻraladigan savollar" data-ru="&#1063;&#1072;&#1089;&#1090;&#1086; &#1079;&#1072;&#1076;&#1072;&#1074;&#1072;&#1077;&#1084;&#1099;&#1077; &#1074;&#1086;&#1087;&#1088;&#1086;&#1089;&#1099;">Frequently Asked Questions</h2>
   <div class="faq-wrap">
     <div class="faq-item">
-      <p class="faq-q" data-en="Can I take SAT in Samarkand city itself?" data-uz="SAT ni to&#39;g&#39;ridan-to&#39;g&#39;ri Samarqand shahrida topshirish mumkinmi?" data-ru="&#1052;&#1086;&#1078;&#1085;&#1086; &#1083;&#1080; &#1089;&#1076;&#1072;&#1090;&#1100; SAT &#1085;&#1077;&#1087;&#1086;&#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1086; &#1074; &#1057;&#1072;&#1084;&#1072;&#1088;&#1082;&#1072;&#1085;&#1076;&#1077;?">Can I take SAT in Samarkand city itself?</p>
-      <div class="faq-a" data-en="Yes! The SAT can be taken in Samarkand itself. There are 5 official test centers in Samarkand: Samarkand International University of Technology (SIUT), Silk Road International University, Presidential School Samarkand, Innovative Center, and the Agency for Assessment of Knowledge and Competences. No need to travel to Tashkent." data-uz="Ha! SAT Samarqandning o&#39;zida topshiriladi. Shaharda 5 ta rasmiy test markazi bor: Samarqand xalqaro texnologiya universiteti (SIUT), Silk Road xalqaro universiteti, Samarqand Prezident maktabi, Innovative Center va Bilim va malakalarni baholash agentligi. Toshkentga borish shart emas." data-ru="Да! SAT можно сдать в самом Самарканде — в городе 5 официальных тест-центров: Самаркандский международный технологический университет (SIUT), Международный университет Silk Road, Президентская школа Самарканда, Innovative Center и Агентство по оценке знаний и компетенций. Ехать в Ташкент не нужно.">Yes! The SAT can be taken in Samarkand itself at 5 official test centers. No need to travel to Tashkent.</div>
+      <p class="faq-q" data-en="Can I take SAT in Samarkand city itself?" data-uz="SAT ni toʻgʻridan-toʻgʻri Samarqand shahrida topshirish mumkinmi?" data-ru="&#1052;&#1086;&#1078;&#1085;&#1086; &#1083;&#1080; &#1089;&#1076;&#1072;&#1090;&#1100; SAT &#1085;&#1077;&#1087;&#1086;&#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1086; &#1074; &#1057;&#1072;&#1084;&#1072;&#1088;&#1082;&#1072;&#1085;&#1076;&#1077;?">Can I take SAT in Samarkand city itself?</p>
+      <div class="faq-a" data-en="Yes! The SAT can be taken in Samarkand itself. There are 5 official test centers in Samarkand: Samarkand International University of Technology (SIUT), Silk Road International University, Presidential School Samarkand, Innovative Center, and the Agency for Assessment of Knowledge and Competences. No need to travel to Tashkent." data-uz="Ha! SAT Samarqandning oʻzida topshiriladi. Shaharda 5 ta rasmiy test markazi bor: Samarqand xalqaro texnologiya universiteti (SIUT), Silk Road xalqaro universiteti, Samarqand Prezident maktabi, Innovative Center va Bilim va malakalarni baholash agentligi. Toshkentga borish shart emas." data-ru="Да! SAT можно сдать в самом Самарканде — в городе 5 официальных тест-центров: Самаркандский международный технологический университет (SIUT), Международный университет Silk Road, Президентская школа Самарканда, Innovative Center и Агентство по оценке знаний и компетенций. Ехать в Ташкент не нужно.">Yes! The SAT can be taken in Samarkand itself at 5 official test centers. No need to travel to Tashkent.</div>
     </div>
     <div class="faq-item">
       <p class="faq-q" data-en="How long does it take to get SAT scores?" data-uz="SAT natijalari qachon keladi?" data-ru="&#1050;&#1086;&#1075;&#1076;&#1072; &#1087;&#1088;&#1080;&#1093;&#1086;&#1076;&#1103;&#1090; &#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1099; SAT?">How long does it take to get SAT scores?</p>
-      <div class="faq-a" data-en="Digital SAT scores are released approximately 13 days after the test date. You'll receive an email notification and can view scores in your College Board account. Some score components may be available earlier." data-uz="Digital SAT natijalari test sanasidan taxminan 13 kun keyin e&#39;lon qilinadi. College Board akkauntingizda ko&#39;rishingiz mumkin." data-ru="&#1056;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1099; Digital SAT &#1086;&#1073;&#1098;&#1103;&#1074;&#1083;&#1103;&#1102;&#1090;&#1089;&#1103; &#1087;&#1088;&#1080;&#1084;&#1077;&#1088;&#1085;&#1086; &#1095;&#1077;&#1088;&#1077;&#1079; 13 &#1076;&#1085;&#1077;&#1081; &#1087;&#1086;&#1089;&#1083;&#1077; &#1090;&#1077;&#1089;&#1090;&#1072;.">Digital SAT scores are released ~13 days after the test date.</div>
+      <div class="faq-a" data-en="Digital SAT scores are released approximately 13 days after the test date. You'll receive an email notification and can view scores in your College Board account. Some score components may be available earlier." data-uz="Digital SAT natijalari test sanasidan taxminan 13 kun keyin e&#39;lon qilinadi. College Board akkauntingizda koʻrishingiz mumkin." data-ru="&#1056;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1099; Digital SAT &#1086;&#1073;&#1098;&#1103;&#1074;&#1083;&#1103;&#1102;&#1090;&#1089;&#1103; &#1087;&#1088;&#1080;&#1084;&#1077;&#1088;&#1085;&#1086; &#1095;&#1077;&#1088;&#1077;&#1079; 13 &#1076;&#1085;&#1077;&#1081; &#1087;&#1086;&#1089;&#1083;&#1077; &#1090;&#1077;&#1089;&#1090;&#1072;.">Digital SAT scores are released ~13 days after the test date.</div>
     </div>
     <div class="faq-item">
       <p class="faq-q" data-en="What documents do I need to bring to the SAT test center?" data-uz="SAT test markaziga qanday hujjatlar kerak?" data-ru="&#1050;&#1072;&#1082;&#1080;&#1077; &#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090;&#1099; &#1085;&#1091;&#1078;&#1085;&#1099; &#1085;&#1072; SAT?">What documents do I need to bring to the SAT test center?</p>
-      <div class="faq-a" data-en="Bring your passport (or government-issued photo ID), your printed admission ticket from College Board, and your fully charged device with Bluebook installed. No phones or smart watches allowed during the test." data-uz="Pasport (yoki rasmiy fotosuratli hujjat), College Board dan chop etilgan qabul biletingiz va Bluebook o&#39;rnatilgan to&#39;liq zaryadlangan qurilmangizni olib keling." data-ru="&#1055;&#1088;&#1080;&#1085;&#1077;&#1089;&#1090;&#1080; &#1087;&#1072;&#1089;&#1087;&#1086;&#1088;&#1090;, &#1088;&#1072;&#1089;&#1087;&#1077;&#1095;&#1072;&#1090;&#1072;&#1085;&#1085;&#1099;&#1081; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082; &#1080; &#1079;&#1072;&#1088;&#1103;&#1078;&#1077;&#1085;&#1085;&#1086;&#1077; &#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1086; &#1089; Bluebook.">Bring your passport, printed admission ticket, and charged device with Bluebook installed.</div>
+      <div class="faq-a" data-en="Bring your passport (or government-issued photo ID), your printed admission ticket from College Board, and your fully charged device with Bluebook installed. No phones or smart watches allowed during the test." data-uz="Pasport (yoki rasmiy fotosuratli hujjat), College Board dan chop etilgan qabul biletingiz va Bluebook oʻrnatilgan toʻliq zaryadlangan qurilmangizni olib keling." data-ru="&#1055;&#1088;&#1080;&#1085;&#1077;&#1089;&#1090;&#1080; &#1087;&#1072;&#1089;&#1087;&#1086;&#1088;&#1090;, &#1088;&#1072;&#1089;&#1087;&#1077;&#1095;&#1072;&#1090;&#1072;&#1085;&#1085;&#1099;&#1081; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082; &#1080; &#1079;&#1072;&#1088;&#1103;&#1078;&#1077;&#1085;&#1085;&#1086;&#1077; &#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1086; &#1089; Bluebook.">Bring your passport, printed admission ticket, and charged device with Bluebook installed.</div>
     </div>
   </div>
 
@@ -788,15 +787,15 @@ nav.scrolled{
     <a href="/sat-course-samarkand/" class="internal-link-card"><h5 data-en="SAT Course" data-uz="SAT Kursi" data-ru="&#1050;&#1091;&#1088;&#1089; SAT">SAT Course</h5><p data-en="Structured group prep" data-uz="Guruh tayyorgarlik" data-ru="&#1043;&#1088;&#1091;&#1087;&#1087;&#1086;&#1074;&#1072;&#1103; &#1087;&#1086;&#1076;&#1075;&#1086;&#1090;&#1086;&#1074;&#1082;&#1072;">Structured group prep</p></a>
     <a href="/intensive-sat-bootcamp/" class="internal-link-card"><h5 data-en="Intensive Bootcamp" data-uz="Intensiv Bootcamp" data-ru="&#1048;&#1085;&#1090;&#1077;&#1085;&#1089;&#1080;&#1074;">Intensive Bootcamp</h5><p data-en="Fast-track 3-month program" data-uz="3 oylik tezlashtirilgan" data-ru="3-&#1084;&#1077;&#1089;&#1103;&#1095;&#1085;&#1072;&#1103; &#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1072;">Fast-track 3-month program</p></a>
     <a href="/digital-sat/" class="internal-link-card"><h5 data-en="Digital SAT Prep" data-uz="Raqamli SAT" data-ru="Digital SAT">Digital SAT Prep</h5><p data-en="Adaptive format mastery" data-uz="Adaptiv format" data-ru="&#1040;&#1076;&#1072;&#1087;&#1090;&#1080;&#1074;&#1085;&#1099;&#1081; &#1092;&#1086;&#1088;&#1084;&#1072;&#1090;">Adaptive format mastery</p></a>
-    <a href="https://diagnostic.satsamarkand.uz" class="internal-link-card" target="_blank" rel="noopener"><h5 data-en="Free Diagnostic" data-uz="Bepul Diagnostika" data-ru="&#1041;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1072;&#1103; &#1076;&#1080;&#1072;&#1075;&#1085;&#1086;&#1089;&#1090;&#1080;&#1082;&#1072;">Free Diagnostic</h5><p data-en="Know your starting score" data-uz="Boshlang&#39;ich balingizni biling" data-ru="&#1059;&#1079;&#1085;&#1072;&#1081;&#1090;&#1077; &#1089;&#1074;&#1086;&#1081; &#1073;&#1072;&#1083;&#1083;">Know your starting score</p></a>
-    <a href="/sat-in-samarkand/" class="internal-link-card"><h5 data-en="SAT in Samarkand Guide" data-uz="Samarqandda SAT" data-ru="SAT &#1074; &#1057;&#1072;&#1084;&#1072;&#1088;&#1082;&#1072;&#1085;&#1076;&#1077;">SAT in Samarkand Guide</h5><p data-en="Complete local overview" data-uz="To&#39;liq mahalliy ma&#39;lumot" data-ru="&#1055;&#1086;&#1083;&#1085;&#1099;&#1081; &#1083;&#1086;&#1082;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1075;&#1080;&#1076;">Complete local overview</p></a>
+    <a href="https://diagnostic.satsamarkand.uz" class="internal-link-card" target="_blank" rel="noopener"><h5 data-en="Free Diagnostic" data-uz="Bepul Diagnostika" data-ru="&#1041;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1072;&#1103; &#1076;&#1080;&#1072;&#1075;&#1085;&#1086;&#1089;&#1090;&#1080;&#1082;&#1072;">Free Diagnostic</h5><p data-en="Know your starting score" data-uz="Boshlangʻich balingizni biling" data-ru="&#1059;&#1079;&#1085;&#1072;&#1081;&#1090;&#1077; &#1089;&#1074;&#1086;&#1081; &#1073;&#1072;&#1083;&#1083;">Know your starting score</p></a>
+    <a href="/sat-in-samarkand/" class="internal-link-card"><h5 data-en="SAT in Samarkand Guide" data-uz="Samarqandda SAT" data-ru="SAT &#1074; &#1057;&#1072;&#1084;&#1072;&#1088;&#1082;&#1072;&#1085;&#1076;&#1077;">SAT in Samarkand Guide</h5><p data-en="Complete local overview" data-uz="Toʻliq mahalliy ma&#39;lumot" data-ru="&#1055;&#1086;&#1083;&#1085;&#1099;&#1081; &#1083;&#1086;&#1082;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1075;&#1080;&#1076;">Complete local overview</p></a>
     <a href="/blog/raspisanie-sat-2026-uzbekistan/" class="internal-link-card"><h5 data-en="SAT 2026 Blog Article" data-uz="SAT 2026 Maqolasi" data-ru="&#1057;&#1090;&#1072;&#1090;&#1100;&#1103; SAT 2026">SAT 2026 Blog Article</h5><p data-en="Detailed schedule analysis" data-uz="Batafsil jadval tahlili" data-ru="&#1044;&#1077;&#1090;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1072;&#1085;&#1072;&#1083;&#1080;&#1079;">Detailed schedule analysis</p></a>
   </div>
 </div>
 
 <div class="cta-strip">
-  <h2 data-en="Don&#39;t Miss Your Test Date — Start Preparing Today" data-uz="Test sanasini o&#39;tkazib yubormang — Bugun tayyorlanishni boshlang" data-ru="&#1053;&#1077; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1080;&#1090;&#1077; &#1076;&#1072;&#1090;&#1091; — &#1053;&#1072;&#1095;&#1085;&#1080;&#1090;&#1077; &#1075;&#1086;&#1090;&#1086;&#1074;&#1080;&#1090;&#1100;&#1089;&#1103; &#1089;&#1077;&#1075;&#1086;&#1076;&#1085;&#1103;">Don't Miss Your Test Date — Start Preparing Today</h2>
-  <p data-en="Most students need 3–6 months of preparation to reach their target score. Start with a free diagnostic to know where you stand." data-uz="Ko&#39;pgina talabalar maqsad baliga erishish uchun 3-6 oy tayyorlanadi. Boshlang&#39;ich balingizni bilish uchun bepul diagnostika bilan boshlang." data-ru="&#1041;&#1086;&#1083;&#1100;&#1096;&#1080;&#1085;&#1089;&#1090;&#1074;&#1091; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074; &#1085;&#1091;&#1078;&#1085;&#1086; 3-6 &#1084;&#1077;&#1089;&#1103;&#1094;&#1077;&#1074; &#1087;&#1086;&#1076;&#1075;&#1086;&#1090;&#1086;&#1074;&#1082;&#1080;.">Most students need 3–6 months of preparation. Start with a free diagnostic to know where you stand.</p>
+  <h2 data-en="Don&#39;t Miss Your Test Date — Start Preparing Today" data-uz="Test sanasini oʻtkazib yubormang — Bugun tayyorlanishni boshlang" data-ru="&#1053;&#1077; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1080;&#1090;&#1077; &#1076;&#1072;&#1090;&#1091; — &#1053;&#1072;&#1095;&#1085;&#1080;&#1090;&#1077; &#1075;&#1086;&#1090;&#1086;&#1074;&#1080;&#1090;&#1100;&#1089;&#1103; &#1089;&#1077;&#1075;&#1086;&#1076;&#1085;&#1103;">Don't Miss Your Test Date — Start Preparing Today</h2>
+  <p data-en="Most students need 3–6 months of preparation to reach their target score. Start with a free diagnostic to know where you stand." data-uz="Koʻpgina talabalar maqsad baliga erishish uchun 3-6 oy tayyorlanadi. Boshlangʻich balingizni bilish uchun bepul diagnostika bilan boshlang." data-ru="&#1041;&#1086;&#1083;&#1100;&#1096;&#1080;&#1085;&#1089;&#1090;&#1074;&#1091; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074; &#1085;&#1091;&#1078;&#1085;&#1086; 3-6 &#1084;&#1077;&#1089;&#1103;&#1094;&#1077;&#1074; &#1087;&#1086;&#1076;&#1075;&#1086;&#1090;&#1086;&#1074;&#1082;&#1080;.">Most students need 3–6 months of preparation. Start with a free diagnostic to know where you stand.</p>
   <div class="cta-row">
     <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="cta-primary" data-en="Free Diagnostic Test" data-uz="Bepul Diagnostika" data-ru="&#1041;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1072;&#1103; &#1076;&#1080;&#1072;&#1075;&#1085;&#1086;&#1089;&#1090;&#1080;&#1082;&#1072;">Free Diagnostic Test</a>
     <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="cta-sec" data-en="Enroll via Telegram" data-uz="Telegram orqali yozilish" data-ru="&#1047;&#1072;&#1087;&#1080;&#1089;&#1072;&#1090;&#1100;&#1089;&#1103; &#1095;&#1077;&#1088;&#1077;&#1079; Telegram">Enroll via Telegram</a>
@@ -807,28 +806,28 @@ nav.scrolled{
   <div class="sx-wrap">
     <div class="sx-ft-grid">
       <div>
-        <a class="sx-brand" href="/"><span class="sx-chip"><img src="/logo.png" alt="" width="28" height="28"></span><span><small>SAT</small>Samarkand</span></a>
+        <a class="sx-ft-logo" href="/"><img src="/brand/logo-outline.png" alt="SAT Samarkand" width="136" height="131" loading="lazy"></a>
         <p class="sx-ft-about" data-en="Samarkand’s official SAT, AP & IELTS prep center." data-uz="Samarqandning rasmiy markazi." data-ru="Официальный центр.">Samarkand’s official SAT, AP & IELTS prep center.</p>
         <p class="sx-ft-about" style="margin-top:6px" data-en="Partners: Joylink & Millennium" data-uz="Joylink & Millennium" data-ru="Joylink & Millennium">Partners: Joylink & Millennium</p>
       </div>
       <div>
         <h3 data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</h3>
         <ul>
-          <li><a href="/sat-course-samarkand/" data-en="SAT Course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT Course</a></li>
+          <li><a href="/sat-course-samarkand/" data-en="SAT course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT course</a></li>
           <li><a href="/digital-sat/" data-en="Digital SAT" data-uz="Raqamli SAT" data-ru="Цифровой SAT">Digital SAT</a></li>
           <li><a href="/sat-math-prep/" data-en="SAT Math" data-uz="SAT Matematika" data-ru="Математика SAT">SAT Math</a></li>
           <li><a href="/sat-english-prep/" data-en="SAT English" data-uz="SAT Ingliz tili" data-ru="Английский SAT">SAT English</a></li>
           <li><a href="/sat-tutoring-samarkand/" data-en="Tutoring" data-uz="Individual dars" data-ru="Репетиторство">Tutoring</a></li>
-          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a></li>
+          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a></li>
         </ul>
       </div>
       <div>
         <h3 data-en="About" data-uz="Biz" data-ru="О нас">About</h3>
         <ul>
-          <li><a href="/teachers/" data-en="Teachers" data-uz="O'qituvchilar" data-ru="Учителя">Teachers</a></li>
+          <li><a href="/teachers/" data-en="Teachers" data-uz="Oʻqituvchilar" data-ru="Учителя">Teachers</a></li>
           <li><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
           <li><a href="/pricing/" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a></li>
-          <li><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+          <li><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a></li>
           <li><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
           <li><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
         </ul>
@@ -836,8 +835,8 @@ nav.scrolled{
       <div>
         <h3 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h3>
         <ul>
-          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram Channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram Channel</a></li>
-          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support Chat" data-uz="Yordam" data-ru="Поддержка">Support Chat</a></li>
+          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram channel</a></li>
+          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support chat" data-uz="Yordam" data-ru="Поддержка">Support chat</a></li>
           <li><a href="https://instagram.com/sat_samarkand" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="tel:+998951131600" class="sx-num">+998 95 113 16 00</a></li>
         </ul>
@@ -851,12 +850,12 @@ nav.scrolled{
         </address>
       </div>
     </div>
-    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span></div>
+    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span><span class="sx-ft-tm" data-en="SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand." data-uz="SAT® — College Board tashkilotining roʻyxatdan oʻtgan savdo belgisi. College Board SAT Samarkand bilan bogʻliq emas." data-ru="SAT® — зарегистрированный товарный знак College Board. College Board не связан с SAT Samarkand.">SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand.</span></div>
   </div>
 </div>
 <div class="sx-sticky">
-  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a>
-  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qo'ng'iroq" data-ru="Позвоните нам">Call us</a>
+  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a>
+  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qoʻngʻiroq" data-ru="Позвоните нам">Call us</a>
 </div>
 <!--/SX-FOOTER-->
 
@@ -1173,6 +1172,6 @@ if(typeof toggleMobileNav==='undefined'){
   document.addEventListener('click',function(e){var mn=document.getElementById('mobnav');if(mn&&mn.classList.contains('open')&&!e.target.closest('#mobnav')&&!e.target.closest('.nham')){mn.classList.remove('open');var b=document.querySelector('.nham');if(b)b.classList.remove('open');}});
 }
 </script>
-<script src="/theme.js?v=3" defer></script>
+<script src="/theme.js?v=4" defer></script>
 </body>
 </html>

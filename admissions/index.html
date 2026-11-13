@@ -335,10 +335,9 @@ nav.scrolled{
 .fbot p,.fbot a{font-size:.72rem;color:rgba(255,255,255,.2);text-decoration:none}
 .fbot a:hover{color:rgba(255,255,255,.5)}
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/theme.css?v=3">
+<link rel="preload" href="/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/theme.css?v=4">
 </head>
 <body>
 
@@ -349,30 +348,30 @@ nav.scrolled{
 <div class="sx-hd" id="sx-hd" role="banner">
   <div class="sx-wrap">
     <div class="sx-hd-in">
-      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/logo.png" alt="" width="34" height="34"><span><small>SAT</small>Samarkand</span></a>
+      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/brand/mark-primary.png" alt="" width="35" height="40"><span>SAT Samarkand</span></a>
       <div class="sx-nav" role="navigation" aria-label="Main">
-        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All courses" data-uz="Barcha kurslar" data-ru="Все курсы">All courses</a><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions consulting</a><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div></div>
         <div class="sx-nav-i"><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div></div>
         <div class="sx-nav-i"><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></div>
         <div class="sx-nav-i"><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></div>
       </div>
       <div class="sx-langs" role="group" aria-label="Language"><button class="lb" data-lang="en" onclick="setLang('en')">EN</button><button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button><button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button></div>
-      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a>
+      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a>
       <button class="sx-burger" id="sx-burger" aria-label="Menu" aria-expanded="false"><i></i></button>
     </div>
     <div class="sx-drawer" role="navigation" aria-label="Mobile">
       <a class="sx-has-sub" href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a>
-      <div class="sx-sub"><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div>
+      <div class="sx-sub"><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div>
       <a class="sx-has-sub" href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a>
-      <div class="sx-sub"><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div>
+      <div class="sx-sub"><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div>
       <a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a>
       <a class="sx-has-sub" href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a>
-      <div class="sx-sub"><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div>
+      <div class="sx-sub"><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div>
       <a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a>
       <a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a>
-      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a></div>
+      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a></div>
     </div>
   </div>
 </div>
@@ -390,12 +389,12 @@ nav.scrolled{
   <p class="hero-sub">End-to-end admissions guidance — SAT prep, university selection, application essays, scholarships, and visa. We've helped students reach Purdue, Drexel, METU, Inha, and more.</p>
   <div class="hero-btns">
     <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="btnf" data-en="Start Free Consultation →" data-uz="Bepul maslahat →" data-ru="Бесплатная консультация →">Start Free Consultation →</a>
-    <a href="tel:+998951131600" class="btns" style="display:inline-flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span data-en="Call Now" data-uz="Qo'ng'iroq" data-ru="Позвонить">Call Now</span></a>
+    <a href="tel:+998951131600" class="btns" style="display:inline-flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span data-en="Call Now" data-uz="Qoʻngʻiroq" data-ru="Позвонить">Call Now</span></a>
   </div>
   <div class="trust-bar">
     <div class="tb"><div class="tb-num">25+</div><div class="tb-label" data-en="Universities" data-uz="Universitetlar" data-ru="Университетов">Universities</div></div>
     <div class="tb"><div class="tb-num">1520</div><div class="tb-label" data-en="Top SAT Score" data-uz="Top ball" data-ru="Лучший балл">Top SAT Score</div></div>
-    <div class="tb"><div class="tb-num">500+</div><div class="tb-label" data-en="SAT Students" data-uz="SAT O'quvchilar" data-ru="SAT Студентов">SAT Students</div></div>
+    <div class="tb"><div class="tb-num">500+</div><div class="tb-label" data-en="SAT Students" data-uz="SAT Oʻquvchilar" data-ru="SAT Студентов">SAT Students</div></div>
     <div class="tb"><div class="tb-num">100%</div><div class="tb-label" data-en="Personal Support" data-uz="Shaxsiy yordam" data-ru="Личная поддержка">Personal Support</div></div>
   </div>
 </div>
@@ -415,7 +414,7 @@ nav.scrolled{
     <div class="wc">
       <div style="width:40px;height:40px;border-radius:4px;background:#e8f0ff;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
       <h3 data-en="SAT Preparation" data-uz="SAT tayyorgarligi" data-ru="Подготовка к SAT">SAT Preparation</h3>
-      <p data-en="Targeted SAT coaching with proven methods. Our students average 1500+. The SAT is the foundation — we build it right." data-uz="Samarali usullar bilan SAT bo'yicha coaching. O'quvchilarimiz o'rtacha 1500+ oladi." data-ru="Целевой коучинг по SAT. Наши студенты набирают в среднем 1500+.">Targeted SAT coaching with proven methods. Our students average 1500+. The SAT is the foundation — we build it right.</p>
+      <p data-en="Targeted SAT coaching with proven methods. Our students average 1500+. The SAT is the foundation — we build it right." data-uz="Samarali usullar bilan SAT boʻyicha coaching. Oʻquvchilarimiz oʻrtacha 1500+ oladi." data-ru="Целевой коучинг по SAT. Наши студенты набирают в среднем 1500+.">Targeted SAT coaching with proven methods. Our students average 1500+. The SAT is the foundation — we build it right.</p>
     </div>
     <div class="wc">
       <div style="width:40px;height:40px;border-radius:4px;background:#f0f4ff;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
@@ -425,7 +424,7 @@ nav.scrolled{
     <div class="wc">
       <div style="width:40px;height:40px;border-radius:4px;background:#edfaf3;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
       <h3 data-en="Application Essays" data-uz="Qabul inshosi" data-ru="Эссе для поступления">Application Essays</h3>
-      <p data-en="Common App personal statement, supplemental essays, &quot;Why This School&quot; — we make your story impossible to ignore." data-uz="Common App inshosi, qo'shimcha insholar — sizning hikoyangizni unutib bo'lmaydigan qilamiz." data-ru="Личный эссе, дополнительные эссе — делаем вашу историю незабываемой.">Common App personal statement, supplemental essays — we make your story impossible to ignore.</p>
+      <p data-en="Common App personal statement, supplemental essays, &quot;Why This School&quot; — we make your story impossible to ignore." data-uz="Common App inshosi, qoʻshimcha insholar — sizning hikoyangizni unutib boʻlmaydigan qilamiz." data-ru="Личный эссе, дополнительные эссе — делаем вашу историю незабываемой.">Common App personal statement, supplemental essays — we make your story impossible to ignore.</p>
     </div>
     <div class="wc">
       <div style="width:40px;height:40px;border-radius:4px;background:#f0f4ff;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
@@ -440,7 +439,7 @@ nav.scrolled{
     <div class="wc">
       <div style="width:40px;height:40px;border-radius:4px;background:#f0f4ff;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19.5 2.5S18 2 16.5 3.5L13 7 4.8 5.2c-.8-.2-1.6.4-1.8 1.2L3 7c-.2.8.2 1.6.8 2l5.4 3.4L7 17l-2 1v2l4-1 1-2 3.4 5.4c.4.6 1.2 1 2 .8l.8-.2c.8-.2 1.4-1 1.2-1.8z"/></svg></div>
       <h3 data-en="Student Visa Guidance" data-uz="Talaba vizasi" data-ru="Студенческая виза">Student Visa Guidance</h3>
-      <p data-en="Step-by-step help with F-1, Schengen, and other student visa applications so you don't lose your spot over paperwork." data-uz="F-1, Schengen va boshqa student vizalari bo'yicha bosqichma-bosqich yordam." data-ru="Пошаговая помощь с визой F-1, Шенген и другими студенческими визами.">Step-by-step help with F-1, Schengen, and other student visa applications.</p>
+      <p data-en="Step-by-step help with F-1, Schengen, and other student visa applications so you don't lose your spot over paperwork." data-uz="F-1, Schengen va boshqa student vizalari boʻyicha bosqichma-bosqich yordam." data-ru="Пошаговая помощь с визой F-1, Шенген и другими студенческими визами.">Step-by-step help with F-1, Schengen, and other student visa applications.</p>
     </div>
   </div>
 </div>
@@ -453,7 +452,7 @@ nav.scrolled{
     <div>
       <div class="slbl" data-en="THE PROCESS" data-uz="JARAYON" data-ru="ПРОЦЕСС">THE PROCESS</div>
       <h2 class="sh" data-en="How Our Admissions Process Works" data-uz="Qabul jarayoni qanday ishlaydi" data-ru="Как работает наш процесс поступления">How Our Admissions Process Works</h2>
-      <p class="sp" data-en="A structured 6-step roadmap that takes you from zero to acceptance letter." data-uz="Noldan qabul xatigacha — 6 bosqichli aniq yo'l xaritasi." data-ru="Структурированный 6-шаговый план — от нуля до письма о зачислении.">A structured 6-step roadmap from zero to acceptance letter.</p>
+      <p class="sp" data-en="A structured 6-step roadmap that takes you from zero to acceptance letter." data-uz="Noldan qabul xatigacha — 6 bosqichli aniq yoʻl xaritasi." data-ru="Структурированный 6-шаговый план — от нуля до письма о зачислении.">A structured 6-step roadmap from zero to acceptance letter.</p>
     </div>
   </div>
   <div class="steps-grid">
@@ -469,13 +468,13 @@ nav.scrolled{
     </div>
     <div class="step-card">
       <div class="step-num">03</div>
-      <div class="step-title" data-en="University Shortlist" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University Shortlist</div>
-      <div class="step-desc" data-en="A balanced list: reach, match, and safety schools — all realistic for your profile and budget." data-uz="Muvozanatli ro'yxat: qiyin, mos va xavfsiz universitetlar — barchasi realistik." data-ru="Сбалансированный список: сложные, подходящие и запасные варианты.">Reach, match, and safety schools — all realistic for your profile and budget.</div>
+      <div class="step-title" data-en="University Shortlist" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University Shortlist</div>
+      <div class="step-desc" data-en="A balanced list: reach, match, and safety schools — all realistic for your profile and budget." data-uz="Muvozanatli roʻyxat: qiyin, mos va xavfsiz universitetlar — barchasi realistik." data-ru="Сбалансированный список: сложные, подходящие и запасные варианты.">Reach, match, and safety schools — all realistic for your profile and budget.</div>
     </div>
     <div class="step-card">
       <div class="step-num">04</div>
       <div class="step-title" data-en="Applications &amp; Essays" data-uz="Arizalar va insholar" data-ru="Заявки и эссе">Applications &amp; Essays</div>
-      <div class="step-desc" data-en="Complete Common App, Coalition App, or direct applications. We write, edit, and perfect every essay." data-uz="Common App, Coalition App yoki to'g'ridan-to'g'ri arizalar. Har bir inshoni yozamiz va takomillashtsiramiz." data-ru="Заполняем Common App, Coalition App. Пишем и совершенствуем каждое эссе.">Complete applications. We write, edit, and perfect every essay.</div>
+      <div class="step-desc" data-en="Complete Common App, Coalition App, or direct applications. We write, edit, and perfect every essay." data-uz="Common App, Coalition App yoki toʻgʻridan-toʻgʻri arizalar. Har bir inshoni yozamiz va takomillashtsiramiz." data-ru="Заполняем Common App, Coalition App. Пишем и совершенствуем каждое эссе.">Complete applications. We write, edit, and perfect every essay.</div>
     </div>
     <div class="step-card">
       <div class="step-num">05</div>
@@ -484,8 +483,8 @@ nav.scrolled{
     </div>
     <div class="step-card">
       <div class="step-num">06</div>
-      <div class="step-title" data-en="Visa &amp; Enrollment" data-uz="Viza va ro'yxatga olish" data-ru="Виза и зачисление">Visa &amp; Enrollment</div>
-      <div class="step-desc" data-en="Once accepted, we guide your visa application, I-20/DS-160, and everything needed to get on that plane." data-uz="Qabul qilingandan so'ng viza ariza, I-20/DS-160 va boshqa hujjatlar bo'yicha yo'naltiriamiz." data-ru="После зачисления помогаем с визой, I-20/DS-160 и всем необходимым.">Once accepted, we guide your visa and everything needed to get on that plane.</div>
+      <div class="step-title" data-en="Visa &amp; Enrollment" data-uz="Viza va roʻyxatga olish" data-ru="Виза и зачисление">Visa &amp; Enrollment</div>
+      <div class="step-desc" data-en="Once accepted, we guide your visa application, I-20/DS-160, and everything needed to get on that plane." data-uz="Qabul qilingandan soʻng viza ariza, I-20/DS-160 va boshqa hujjatlar boʻyicha yoʻnaltiriamiz." data-ru="После зачисления помогаем с визой, I-20/DS-160 и всем необходимым.">Once accepted, we guide your visa and everything needed to get on that plane.</div>
     </div>
   </div>
 </div>
@@ -497,7 +496,7 @@ nav.scrolled{
   <div class="shd">
     <div>
       <div class="slbl" data-en="REAL RESULTS" data-uz="HAQIQIY NATIJALAR" data-ru="РЕАЛЬНЫЕ РЕЗУЛЬТАТЫ">REAL RESULTS</div>
-      <h2 class="sh" data-en="Universities Our Students Actually Attend" data-uz="O'quvchilarimiz o'qiyotgan universitetlar" data-ru="Университеты, в которых учатся наши студенты">Universities Our Students Actually Attend</h2>
+      <h2 class="sh" data-en="Universities Our Students Actually Attend" data-uz="Oʻquvchilarimiz oʻqiyotgan universitetlar" data-ru="Университеты, в которых учатся наши студенты">Universities Our Students Actually Attend</h2>
       <p class="sp" data-en="Real acceptances from students in Samarkand. Not hypothetical." data-uz="Samarqanddan talabalar qabul qilingan haqiqiy universitetlar." data-ru="Реальные зачисления студентов из Самарканда.">Real acceptances from students in Samarkand. Not hypothetical.</p>
     </div>
     <a href="/universities/" class="btns" data-en="See All 76+ Universities →" data-uz="76+ Universitetlar →" data-ru="76+ Университетов →">See All 76+ Universities →</a>
@@ -523,23 +522,23 @@ nav.scrolled{
     <div>
       <div class="slbl" data-en="PACKAGES" data-uz="PAKETLAR" data-ru="ПАКЕТЫ">PACKAGES</div>
       <h2 class="sh" data-en="Admissions Consulting Packages" data-uz="Qabul konsaltingi paketlari" data-ru="Пакеты консультаций по поступлению">Admissions Consulting Packages</h2>
-      <p class="sp" data-en="No hidden fees. Pay for real results. For prices, message us on Telegram or call +998 95 113 16 00." data-uz="Yashirin to'lovlar yo'q. Narxni bilish uchun Telegramda yozing yoki qo'ng'iroq qiling: +998 95 113 16 00." data-ru="Без скрытых комиссий. Чтобы узнать цену, напишите в Telegram или позвоните: +998 95 113 16 00.">No hidden fees. Pay for real results. For prices, message us on Telegram or call +998 95 113 16 00.</p>
+      <p class="sp" data-en="No hidden fees. Pay for real results. For prices, message us on Telegram or call +998 95 113 16 00." data-uz="Yashirin toʻlovlar yoʻq. Narxni bilish uchun Telegramda yozing yoki qoʻngʻiroq qiling: +998 95 113 16 00." data-ru="Без скрытых комиссий. Чтобы узнать цену, напишите в Telegram или позвоните: +998 95 113 16 00.">No hidden fees. Pay for real results. For prices, message us on Telegram or call +998 95 113 16 00.</p>
     </div>
   </div>
   <div class="pgrid">
     <div class="pcard">
       <div class="phead">
-        <div class="ptag" data-en="STARTER" data-uz="BOSHLANG'ICH" data-ru="СТАРТОВЫЙ">STARTER</div>
+        <div class="ptag" data-en="STARTER" data-uz="BOSHLANGʻICH" data-ru="СТАРТОВЫЙ">STARTER</div>
         <div class="ptitle" data-en="Essentials" data-uz="Asosiy" data-ru="Базовый">Essentials</div>
-        <div class="psub" data-en="University shortlist + application review" data-uz="Universitetlar ro'yxati + ariza ko'rib chiqish" data-ru="Список университетов + проверка заявки">University shortlist + application review</div>
-        <div class="pprice" style="font-size:1.4rem" data-en="Price on request" data-uz="Narxi so&#39;rov bo&#39;yicha" data-ru="Цена по запросу">Price on request</div><div class="pprice-sub" data-en="Free diagnostic · Message us · Call" data-uz="Bepul diagnostika · Yozing · Qo&#39;ng&#39;iroq qiling" data-ru="Бесплатная диагностика · Напишите · Позвоните">Free diagnostic · Message us · Call</div>
+        <div class="psub" data-en="University shortlist + application review" data-uz="Universitetlar roʻyxati + ariza koʻrib chiqish" data-ru="Список университетов + проверка заявки">University shortlist + application review</div>
+        <div class="pprice" style="font-size:1.4rem" data-en="Price on request" data-uz="Narxi soʻrov boʻyicha" data-ru="Цена по запросу">Price on request</div><div class="pprice-sub" data-en="Free diagnostic · Message us · Call" data-uz="Bepul diagnostika · Yozing · Qoʻngʻiroq qiling" data-ru="Бесплатная диагностика · Напишите · Позвоните">Free diagnostic · Message us · Call</div>
       </div>
       <div class="pdiv-line"></div>
       <div class="pbody">
         <ul class="pfeats">
-          <li data-en="University shortlist (5 schools)" data-uz="Universitetlar ro'yxati (5 ta)" data-ru="Список университетов (5 школ)">University shortlist (5 schools)</li>
-          <li data-en="Common App setup &amp; review" data-uz="Common App sozlash va ko'rib chiqish" data-ru="Настройка и проверка Common App">Common App setup &amp; review</li>
-          <li data-en="Personal statement review (2 rounds)" data-uz="Shaxsiy bayonot ko'rib chiqish (2 marta)" data-ru="Проверка личного заявления (2 раунда)">Personal statement review (2 rounds)</li>
+          <li data-en="University shortlist (5 schools)" data-uz="Universitetlar roʻyxati (5 ta)" data-ru="Список университетов (5 школ)">University shortlist (5 schools)</li>
+          <li data-en="Common App setup &amp; review" data-uz="Common App sozlash va koʻrib chiqish" data-ru="Настройка и проверка Common App">Common App setup &amp; review</li>
+          <li data-en="Personal statement review (2 rounds)" data-uz="Shaxsiy bayonot koʻrib chiqish (2 marta)" data-ru="Проверка личного заявления (2 раунда)">Personal statement review (2 rounds)</li>
           <li data-en="Application deadline tracking" data-uz="Ariza muddatlarini kuzatish" data-ru="Отслеживание дедлайнов">Application deadline tracking</li>
           <li data-en="Email support" data-uz="Email orqali yordam" data-ru="Поддержка по email">Email support</li>
         </ul>
@@ -550,20 +549,20 @@ nav.scrolled{
     <div class="pcard popular">
       <div class="phead">
         <div class="pribbon" data-en="MOST POPULAR" data-uz="ENG MASHHUR" data-ru="ПОПУЛЯРНЫЙ">MOST POPULAR</div>
-        <div class="ptag" data-en="FULL SERVICE" data-uz="TO'LIQ XIZMAT" data-ru="ПОЛНЫЙ СЕРВИС">FULL SERVICE</div>
-        <div class="ptitle" data-en="Full Admissions" data-uz="To'liq qabul" data-ru="Полное поступление">Full Admissions</div>
-        <div class="psub" data-en="Everything from essays to visa — fully managed" data-uz="Insholardan vizagacha — to'liq boshqaruv" data-ru="От эссе до визы — полное сопровождение">Everything from essays to visa — fully managed</div>
-        <div class="pprice" style="font-size:1.4rem" data-en="Price on request" data-uz="Narxi so&#39;rov bo&#39;yicha" data-ru="Цена по запросу">Price on request</div><div class="pprice-sub" data-en="Free diagnostic · Message us · Call" data-uz="Bepul diagnostika · Yozing · Qo&#39;ng&#39;iroq qiling" data-ru="Бесплатная диагностика · Напишите · Позвоните">Free diagnostic · Message us · Call</div>
+        <div class="ptag" data-en="FULL SERVICE" data-uz="TOʻLIQ XIZMAT" data-ru="ПОЛНЫЙ СЕРВИС">FULL SERVICE</div>
+        <div class="ptitle" data-en="Full Admissions" data-uz="Toʻliq qabul" data-ru="Полное поступление">Full Admissions</div>
+        <div class="psub" data-en="Everything from essays to visa — fully managed" data-uz="Insholardan vizagacha — toʻliq boshqaruv" data-ru="От эссе до визы — полное сопровождение">Everything from essays to visa — fully managed</div>
+        <div class="pprice" style="font-size:1.4rem" data-en="Price on request" data-uz="Narxi soʻrov boʻyicha" data-ru="Цена по запросу">Price on request</div><div class="pprice-sub" data-en="Free diagnostic · Message us · Call" data-uz="Bepul diagnostika · Yozing · Qoʻngʻiroq qiling" data-ru="Бесплатная диагностика · Напишите · Позвоните">Free diagnostic · Message us · Call</div>
       </div>
       <div class="pdiv-line"></div>
       <div class="pbody">
         <ul class="pfeats">
           <li data-en="Everything in Essentials" data-uz="Asosiy paketdagi hamma narsa" data-ru="Всё из пакета Essentials">Everything in Essentials</li>
-          <li data-en="Full university list (10+ schools)" data-uz="To'liq universitetlar ro'yxati (10+)" data-ru="Полный список (10+ школ)">Full university list (10+ schools)</li>
-          <li data-en="All supplemental essays written &amp; polished" data-uz="Barcha qo'shimcha insholar yoziladi va takomillashtiriladi" data-ru="Все дополнительные эссе написаны и отточены">All supplemental essays written &amp; polished</li>
+          <li data-en="Full university list (10+ schools)" data-uz="Toʻliq universitetlar roʻyxati (10+)" data-ru="Полный список (10+ школ)">Full university list (10+ schools)</li>
+          <li data-en="All supplemental essays written &amp; polished" data-uz="Barcha qoʻshimcha insholar yoziladi va takomillashtiriladi" data-ru="Все дополнительные эссе написаны и отточены">All supplemental essays written &amp; polished</li>
           <li data-en="Scholarship application support" data-uz="Stipendiya ariza yordami" data-ru="Помощь с заявкой на стипендию">Scholarship application support</li>
           <li data-en="Interview prep (3 mock sessions)" data-uz="Intervyu tayyorgarligi (3 mock session)" data-ru="Подготовка к интервью (3 пробных сессии)">Interview prep (3 mock sessions)</li>
-          <li data-en="Visa application guidance" data-uz="Viza ariza bo'yicha yo'riqnoma" data-ru="Руководство по визовому заявлению">Visa application guidance</li>
+          <li data-en="Visa application guidance" data-uz="Viza ariza boʻyicha yoʻriqnoma" data-ru="Руководство по визовому заявлению">Visa application guidance</li>
           <li data-en="Weekly 1-on-1 check-ins" data-uz="Haftalik shaxsiy uchrashuvlar" data-ru="Еженедельные индивидуальные встречи">Weekly 1-on-1 check-ins</li>
         </ul>
         <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="pbtn pop" data-en="Book FREE Lesson →" data-uz="Bepul Dars →" data-ru="Бесплатный урок →">Enroll Now →</a>
@@ -575,19 +574,19 @@ nav.scrolled{
         <div class="pribbon" data-en="BEST VALUE" data-uz="ENG YAXSHI NARX" data-ru="ЛУЧШАЯ ЦЕНА">BEST VALUE</div>
         <div class="ptag" data-en="BUNDLE" data-uz="PAKET" data-ru="ПАКЕТ">BUNDLE</div>
         <div class="ptitle" data-en="SAT + Admissions" data-uz="SAT + Qabul" data-ru="SAT + Поступление">SAT + Admissions</div>
-        <div class="psub" data-en="Complete SAT prep + full admissions — end-to-end" data-uz="To'liq SAT tayyorgarligi + to'liq qabul — boshdan-oxir" data-ru="Полная подготовка к SAT + поступление — от начала до конца">Complete SAT prep + full admissions — end-to-end</div>
-        <div class="pprice" style="font-size:1.4rem" data-en="Price on request" data-uz="Narxi so&#39;rov bo&#39;yicha" data-ru="Цена по запросу">Price on request</div><div class="pprice-sub" data-en="Free diagnostic · Message us · Call" data-uz="Bepul diagnostika · Yozing · Qo&#39;ng&#39;iroq qiling" data-ru="Бесплатная диагностика · Напишите · Позвоните">Free diagnostic · Message us · Call</div>
+        <div class="psub" data-en="Complete SAT prep + full admissions — end-to-end" data-uz="Toʻliq SAT tayyorgarligi + toʻliq qabul — boshdan-oxir" data-ru="Полная подготовка к SAT + поступление — от начала до конца">Complete SAT prep + full admissions — end-to-end</div>
+        <div class="pprice" style="font-size:1.4rem" data-en="Price on request" data-uz="Narxi soʻrov boʻyicha" data-ru="Цена по запросу">Price on request</div><div class="pprice-sub" data-en="Free diagnostic · Message us · Call" data-uz="Bepul diagnostika · Yozing · Qoʻngʻiroq qiling" data-ru="Бесплатная диагностика · Напишите · Позвоните">Free diagnostic · Message us · Call</div>
       </div>
       <div class="pdiv-line"></div>
       <div class="pbody">
         <ul class="pfeats">
-          <li data-en="Complete SAT preparation program" data-uz="To'liq SAT tayyorgarlik dasturi" data-ru="Полная программа подготовки к SAT">Complete SAT preparation program</li>
-          <li data-en="Full admissions consulting package" data-uz="To'liq qabul konsaltingi paketi" data-ru="Полный пакет консультаций по поступлению">Full admissions consulting package</li>
-          <li data-en="Guaranteed SAT score improvement" data-uz="Kafolatlangan SAT bali o'sishi" data-ru="Гарантированное улучшение балла SAT">Guaranteed SAT score improvement</li>
+          <li data-en="Complete SAT preparation program" data-uz="Toʻliq SAT tayyorgarlik dasturi" data-ru="Полная программа подготовки к SAT">Complete SAT preparation program</li>
+          <li data-en="Full admissions consulting package" data-uz="Toʻliq qabul konsaltingi paketi" data-ru="Полный пакет консультаций по поступлению">Full admissions consulting package</li>
+          <li data-en="Guaranteed SAT score improvement" data-uz="Kafolatlangan SAT bali oʻsishi" data-ru="Гарантированное улучшение балла SAT">Guaranteed SAT score improvement</li>
           <li data-en="Priority scheduling &amp; support" data-uz="Ustuvor jadvallash va yordam" data-ru="Приоритетное планирование и поддержка">Priority scheduling &amp; support</li>
           <li data-en="Everything covered end-to-end" data-uz="Hamma narsa boshdan-oxir qamrab olingan" data-ru="Всё охвачено от начала до конца">Everything covered end-to-end</li>
         </ul>
-        <a href="tel:+998951131600" class="pbtn prem" data-en="Call to Discuss" data-uz="Muhokama uchun qo'ng'iroq" data-ru="Позвонить для обсуждения"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Call to Discuss</a>
+        <a href="tel:+998951131600" class="pbtn prem" data-en="Call to Discuss" data-uz="Muhokama uchun qoʻngʻiroq" data-ru="Позвонить для обсуждения"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Call to Discuss</a>
       </div>
     </div>
   </div>
@@ -599,35 +598,35 @@ nav.scrolled{
 <div class="w">
   <div class="shd">
     <div>
-      <div class="slbl" data-en="FAQ" data-uz="KO'P SO'RALADIGAN SAVOLLAR" data-ru="ВОПРОСЫ И ОТВЕТЫ">FAQ</div>
-      <h2 class="sh" data-en="Frequently Asked Questions" data-uz="Ko'p so'raladigan savollar" data-ru="Часто задаваемые вопросы">Frequently Asked Questions</h2>
-      <p class="sp" data-en="Answers to what every student in Samarkand asks about university admissions." data-uz="Samarqanddagi har bir talabaning universitetga qabul bo'yicha savollari." data-ru="Ответы на вопросы, которые задают все студенты о поступлении.">Answers to what every student asks about university admissions.</p>
+      <div class="slbl" data-en="FAQ" data-uz="KOʻP SOʻRALADIGAN SAVOLLAR" data-ru="ВОПРОСЫ И ОТВЕТЫ">FAQ</div>
+      <h2 class="sh" data-en="Frequently Asked Questions" data-uz="Koʻp soʻraladigan savollar" data-ru="Часто задаваемые вопросы">Frequently Asked Questions</h2>
+      <p class="sp" data-en="Answers to what every student in Samarkand asks about university admissions." data-uz="Samarqanddagi har bir talabaning universitetga qabul boʻyicha savollari." data-ru="Ответы на вопросы, которые задают все студенты о поступлении.">Answers to what every student asks about university admissions.</p>
     </div>
   </div>
   <div class="faq-wrap">
     <div class="faq-item">
       <div class="faq-q" data-en="Do I need a high SAT score to apply to US universities?" data-uz="AQSh universitetlariga ariza berish uchun yuqori SAT bali kerakmi?" data-ru="Нужен ли высокий балл SAT для подачи заявки в университеты США?">Do I need a high SAT score to apply to US universities?</div>
-      <div class="faq-a"><p data-en="Many US universities are now test-optional, but a strong SAT score (1350+) significantly improves your chances and qualifies you for merit scholarships worth thousands of dollars. We always recommend preparing for and submitting the SAT." data-uz="Ko'p AQSh universitetlari test-optional, lekin kuchli SAT bali (1350+) imkoniyatlaringizni sezilarli darajada oshiradi va minglab dollar miqdoridagi merit stipendiyalarga murojaat qilish imkonini beradi." data-ru="Многие университеты США теперь не требуют обязательного теста, но высокий балл SAT (1350+) значительно улучшает ваши шансы и даёт право на стипендии.">Many US universities are now test-optional, but a strong SAT score (1350+) significantly improves your chances and qualifies you for merit scholarships worth thousands of dollars.</p></div>
+      <div class="faq-a"><p data-en="Many US universities are now test-optional, but a strong SAT score (1350+) significantly improves your chances and qualifies you for merit scholarships worth thousands of dollars. We always recommend preparing for and submitting the SAT." data-uz="Koʻp AQSh universitetlari test-optional, lekin kuchli SAT bali (1350+) imkoniyatlaringizni sezilarli darajada oshiradi va minglab dollar miqdoridagi merit stipendiyalarga murojaat qilish imkonini beradi." data-ru="Многие университеты США теперь не требуют обязательного теста, но высокий балл SAT (1350+) значительно улучшает ваши шансы и даёт право на стипендии.">Many US universities are now test-optional, but a strong SAT score (1350+) significantly improves your chances and qualifies you for merit scholarships worth thousands of dollars.</p></div>
     </div>
     <div class="faq-item">
       <div class="faq-q" data-en="How early should I start the admissions process?" data-uz="Qabul jarayonini qachon boshlash kerak?" data-ru="Когда начинать процесс поступления?">How early should I start the admissions process?</div>
-      <div class="faq-a"><p data-en="Ideally 12–18 months before your intended enrollment date. Starting late is the #1 reason students miss deadlines and scholarship opportunities." data-uz="Ideally rejalashtirilgan o'qish sanasidan 12-18 oy oldin. Kechikish — talabalarning muddatlarni o'tkazib yuborish va stipendiya imkoniyatlarini yo'qotishining asosiy sababi." data-ru="В идеале за 12–18 месяцев до предполагаемой даты зачисления. Запоздалый старт — главная причина пропущенных дедлайнов и стипендий.">Ideally 12–18 months before your intended enrollment date. Starting late is the #1 reason students miss deadlines and scholarship opportunities.</p></div>
+      <div class="faq-a"><p data-en="Ideally 12–18 months before your intended enrollment date. Starting late is the #1 reason students miss deadlines and scholarship opportunities." data-uz="Ideally rejalashtirilgan oʻqish sanasidan 12-18 oy oldin. Kechikish — talabalarning muddatlarni oʻtkazib yuborish va stipendiya imkoniyatlarini yoʻqotishining asosiy sababi." data-ru="В идеале за 12–18 месяцев до предполагаемой даты зачисления. Запоздалый старт — главная причина пропущенных дедлайнов и стипендий.">Ideally 12–18 months before your intended enrollment date. Starting late is the #1 reason students miss deadlines and scholarship opportunities.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" data-en="Can I get scholarships to US universities from Uzbekistan?" data-uz="O'zbekistondan AQSh universitetlariga stipendiya olish mumkinmi?" data-ru="Можно ли получить стипендию в университет США из Узбекистана?">Can I get scholarships to US universities from Uzbekistan?</div>
-      <div class="faq-a"><p data-en="Yes. Many US universities offer generous merit scholarships to international students — some covering 50–100% of tuition. Our students have received scholarships worth $15,000–$40,000 per year. The key is applying to the right schools with a strong application." data-uz="Ha. Ko'p AQSh universitetlari xalqaro talabalar uchun katta merit stipendiyalar taklif etadi — ba'zilari ta'lim xarajatlarining 50–100% ni qoplaydi. O'quvchilarimiz yiliga 15,000–40,000 dollar miqdoridagi stipendiyalar olishgan." data-ru="Да. Многие университеты США предлагают щедрые стипендии для иностранных студентов — некоторые покрывают 50–100% стоимости обучения. Наши студенты получали $15 000–$40 000 в год.">Yes. Many US universities offer generous merit scholarships — some covering 50–100% of tuition. Our students have received $15,000–$40,000 per year.</p></div>
+      <div class="faq-q" data-en="Can I get scholarships to US universities from Uzbekistan?" data-uz="Oʻzbekistondan AQSh universitetlariga stipendiya olish mumkinmi?" data-ru="Можно ли получить стипендию в университет США из Узбекистана?">Can I get scholarships to US universities from Uzbekistan?</div>
+      <div class="faq-a"><p data-en="Yes. Many US universities offer generous merit scholarships to international students — some covering 50–100% of tuition. Our students have received scholarships worth $15,000–$40,000 per year. The key is applying to the right schools with a strong application." data-uz="Ha. Koʻp AQSh universitetlari xalqaro talabalar uchun katta merit stipendiyalar taklif etadi — ba'zilari ta'lim xarajatlarining 50–100% ni qoplaydi. Oʻquvchilarimiz yiliga 15,000–40,000 dollar miqdoridagi stipendiyalar olishgan." data-ru="Да. Многие университеты США предлагают щедрые стипендии для иностранных студентов — некоторые покрывают 50–100% стоимости обучения. Наши студенты получали $15 000–$40 000 в год.">Yes. Many US universities offer generous merit scholarships — some covering 50–100% of tuition. Our students have received $15,000–$40,000 per year.</p></div>
     </div>
     <div class="faq-item">
       <div class="faq-q" data-en="What is Common App and do I need it?" data-uz="Common App nima va undan foydalanishim kerakmi?" data-ru="Что такое Common App и нужен ли он мне?">What is Common App and do I need it?</div>
-      <div class="faq-a"><p data-en="Common App is the main application platform used by 1,000+ US universities. We guide you through every section: activities list, essays, recommendations, and submission. You only fill it out once for multiple schools." data-uz="Common App — 1000+ AQSh universitetlari tomonidan ishlatiladigan asosiy ariza platformasi. Biz sizni har bir bo'lim orqali boshqaramiz: faoliyatlar ro'yxati, insholar, tavsiyalar va topshirish." data-ru="Common App — основная платформа для подачи заявок в 1000+ университетов США. Заполняется один раз для нескольких школ.">Common App is used by 1,000+ US universities. You fill it out once for multiple schools — we guide every section.</p></div>
+      <div class="faq-a"><p data-en="Common App is the main application platform used by 1,000+ US universities. We guide you through every section: activities list, essays, recommendations, and submission. You only fill it out once for multiple schools." data-uz="Common App — 1000+ AQSh universitetlari tomonidan ishlatiladigan asosiy ariza platformasi. Biz sizni har bir boʻlim orqali boshqaramiz: faoliyatlar roʻyxati, insholar, tavsiyalar va topshirish." data-ru="Common App — основная платформа для подачи заявок в 1000+ университетов США. Заполняется один раз для нескольких школ.">Common App is used by 1,000+ US universities. You fill it out once for multiple schools — we guide every section.</p></div>
     </div>
     <div class="faq-item">
       <div class="faq-q" data-en="How does the student visa process work?" data-uz="Talaba vizasi jarayoni qanday ishlaydi?" data-ru="Как работает процесс получения студенческой визы?">How does the student visa process work?</div>
-      <div class="faq-a"><p data-en="Once accepted, the university sends you an I-20 form. You then complete the DS-160 form, pay the SEVIS fee, and attend a visa interview at the US Embassy in Tashkent. We prepare you for every step, including the interview questions." data-uz="Qabul qilingandan so'ng universitet sizga I-20 formani yuboradi. Keyin DS-160 formani to'ldirasiz, SEVIS to'lovini to'laysiz va Toshkentdagi AQSh Elchixonasida viza intervyusida qatnashasiz." data-ru="После зачисления университет присылает форму I-20. Затем заполняете DS-160, оплачиваете взнос SEVIS и проходите интервью в посольстве США в Ташкенте.">Once accepted, the university sends an I-20. You complete DS-160, pay SEVIS fee, and attend a visa interview in Tashkent — we prepare you for every step.</p></div>
+      <div class="faq-a"><p data-en="Once accepted, the university sends you an I-20 form. You then complete the DS-160 form, pay the SEVIS fee, and attend a visa interview at the US Embassy in Tashkent. We prepare you for every step, including the interview questions." data-uz="Qabul qilingandan soʻng universitet sizga I-20 formani yuboradi. Keyin DS-160 formani toʻldirasiz, SEVIS toʻlovini toʻlaysiz va Toshkentdagi AQSh Elchixonasida viza intervyusida qatnashasiz." data-ru="После зачисления университет присылает форму I-20. Затем заполняете DS-160, оплачиваете взнос SEVIS и проходите интервью в посольстве США в Ташкенте.">Once accepted, the university sends an I-20. You complete DS-160, pay SEVIS fee, and attend a visa interview in Tashkent — we prepare you for every step.</p></div>
     </div>
     <div class="faq-item">
       <div class="faq-q" data-en="Are your consultants real university graduates?" data-uz="Sizning konsultantlaringiz haqiqiy universitet bitiruvchilarimy?" data-ru="Ваши консультанты — настоящие выпускники университетов?">Are your consultants real university graduates?</div>
-      <div class="faq-a"><p data-en="Our founder and mentors have personally gone through competitive university applications. Every mentor earned a top SAT score and most have been through US or European university admissions. We teach from lived experience." data-uz="Asoschi va mentorlarimiz shaxsan raqobatbardosh universitiet arizalaridan o'tishgan. Har bir mentor SATda yuqori natija olgan va ko'plari AQSh yoki Yevropa universitetlariga qabul jarayonidan o'tishgan." data-ru="Основатель и менторы лично прошли через конкурентные заявки в университеты. Каждый ментор показал высокий результат по SAT.">Our founder and mentors personally went through competitive university applications. Every mentor earned a top SAT score.</p></div>
+      <div class="faq-a"><p data-en="Our founder and mentors have personally gone through competitive university applications. Every mentor earned a top SAT score and most have been through US or European university admissions. We teach from lived experience." data-uz="Asoschi va mentorlarimiz shaxsan raqobatbardosh universitiet arizalaridan oʻtishgan. Har bir mentor SATda yuqori natija olgan va koʻplari AQSh yoki Yevropa universitetlariga qabul jarayonidan oʻtishgan." data-ru="Основатель и менторы лично прошли через конкурентные заявки в университеты. Каждый ментор показал высокий результат по SAT.">Our founder and mentors personally went through competitive university applications. Every mentor earned a top SAT score.</p></div>
     </div>
   </div>
 </div>
@@ -638,7 +637,7 @@ nav.scrolled{
 <div class="w">
   <div class="cta-banner">
     <h2 data-en="Ready to Apply? Let's Talk." data-uz="Ariza berishga tayyormisiz? Gaplashaylik." data-ru="Готовы поступать? Поговорим.">Ready to Apply? Let's Talk.</h2>
-    <p data-en="Free 30-minute consultation. We'll assess your profile and tell you honestly which universities you can get into." data-uz="Bepul 30 daqiqalik maslahat. Profilingizni baholaymiz va qaysi universitetlarga kirish mumkinligini rostgo'ylik bilan aytamiz." data-ru="Бесплатная 30-минутная консультация. Оценим профиль и честно скажем, в какие университеты вы можете поступить.">Free 30-minute consultation. We'll assess your profile and tell you honestly which universities you can get into.</p>
+    <p data-en="Free 30-minute consultation. We'll assess your profile and tell you honestly which universities you can get into." data-uz="Bepul 30 daqiqalik maslahat. Profilingizni baholaymiz va qaysi universitetlarga kirish mumkinligini rostgoʻylik bilan aytamiz." data-ru="Бесплатная 30-минутная консультация. Оценим профиль и честно скажем, в какие университеты вы можете поступить.">Free 30-minute consultation. We'll assess your profile and tell you honestly which universities you can get into.</p>
     <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="btnw" data-en="Book Free Consultation on Telegram" data-uz="Telegramda bepul maslahat" data-ru="Записаться на консультацию в Telegram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Book Free Consultation on Telegram</a>
   </div>
 </div>
@@ -649,28 +648,28 @@ nav.scrolled{
   <div class="sx-wrap">
     <div class="sx-ft-grid">
       <div>
-        <a class="sx-brand" href="/"><span class="sx-chip"><img src="/logo.png" alt="" width="28" height="28"></span><span><small>SAT</small>Samarkand</span></a>
+        <a class="sx-ft-logo" href="/"><img src="/brand/logo-outline.png" alt="SAT Samarkand" width="136" height="131" loading="lazy"></a>
         <p class="sx-ft-about" data-en="Samarkand’s official SAT, AP & IELTS prep center." data-uz="Samarqandning rasmiy markazi." data-ru="Официальный центр.">Samarkand’s official SAT, AP & IELTS prep center.</p>
         <p class="sx-ft-about" style="margin-top:6px" data-en="Partners: Joylink & Millennium" data-uz="Joylink & Millennium" data-ru="Joylink & Millennium">Partners: Joylink & Millennium</p>
       </div>
       <div>
         <h3 data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</h3>
         <ul>
-          <li><a href="/sat-course-samarkand/" data-en="SAT Course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT Course</a></li>
+          <li><a href="/sat-course-samarkand/" data-en="SAT course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT course</a></li>
           <li><a href="/digital-sat/" data-en="Digital SAT" data-uz="Raqamli SAT" data-ru="Цифровой SAT">Digital SAT</a></li>
           <li><a href="/sat-math-prep/" data-en="SAT Math" data-uz="SAT Matematika" data-ru="Математика SAT">SAT Math</a></li>
           <li><a href="/sat-english-prep/" data-en="SAT English" data-uz="SAT Ingliz tili" data-ru="Английский SAT">SAT English</a></li>
           <li><a href="/sat-tutoring-samarkand/" data-en="Tutoring" data-uz="Individual dars" data-ru="Репетиторство">Tutoring</a></li>
-          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a></li>
+          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a></li>
         </ul>
       </div>
       <div>
         <h3 data-en="About" data-uz="Biz" data-ru="О нас">About</h3>
         <ul>
-          <li><a href="/teachers/" data-en="Teachers" data-uz="O'qituvchilar" data-ru="Учителя">Teachers</a></li>
+          <li><a href="/teachers/" data-en="Teachers" data-uz="Oʻqituvchilar" data-ru="Учителя">Teachers</a></li>
           <li><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
           <li><a href="/pricing/" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a></li>
-          <li><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+          <li><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a></li>
           <li><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
           <li><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
         </ul>
@@ -678,8 +677,8 @@ nav.scrolled{
       <div>
         <h3 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h3>
         <ul>
-          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram Channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram Channel</a></li>
-          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support Chat" data-uz="Yordam" data-ru="Поддержка">Support Chat</a></li>
+          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram channel</a></li>
+          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support chat" data-uz="Yordam" data-ru="Поддержка">Support chat</a></li>
           <li><a href="https://instagram.com/sat_samarkand" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="tel:+998951131600" class="sx-num">+998 95 113 16 00</a></li>
         </ul>
@@ -693,12 +692,12 @@ nav.scrolled{
         </address>
       </div>
     </div>
-    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span></div>
+    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span><span class="sx-ft-tm" data-en="SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand." data-uz="SAT® — College Board tashkilotining roʻyxatdan oʻtgan savdo belgisi. College Board SAT Samarkand bilan bogʻliq emas." data-ru="SAT® — зарегистрированный товарный знак College Board. College Board не связан с SAT Samarkand.">SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand.</span></div>
   </div>
 </div>
 <div class="sx-sticky">
-  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a>
-  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qo'ng'iroq" data-ru="Позвоните нам">Call us</a>
+  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a>
+  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qoʻngʻiroq" data-ru="Позвоните нам">Call us</a>
 </div>
 <!--/SX-FOOTER-->
 
@@ -933,6 +932,6 @@ if(typeof toggleMobileNav==='undefined'){
   document.addEventListener('click',function(e){var mn=document.getElementById('mobnav');if(mn&&mn.classList.contains('open')&&!e.target.closest('#mobnav')&&!e.target.closest('.nham')){mn.classList.remove('open');var b=document.querySelector('.nham');if(b)b.classList.remove('open');}});
 }
 </script>
-<script src="/theme.js?v=3" defer></script>
+<script src="/theme.js?v=4" defer></script>
 </body>
 </html>

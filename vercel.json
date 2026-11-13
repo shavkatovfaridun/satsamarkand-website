@@ -79,6 +79,26 @@
       "source": "/sat-zone",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/uz/bepul-sat-diagnostika/",
+      "destination": "https://diagnostic.satsamarkand.uz",
+      "permanent": true
+    },
+    {
+      "source": "/uz/bepul-sat-diagnostika",
+      "destination": "https://diagnostic.satsamarkand.uz",
+      "permanent": true
+    },
+    {
+      "source": "/ru/besplatny-sat-test/",
+      "destination": "https://diagnostic.satsamarkand.uz",
+      "permanent": true
+    },
+    {
+      "source": "/ru/besplatny-sat-test",
+      "destination": "https://diagnostic.satsamarkand.uz",
+      "permanent": true
     }
   ]
 }
