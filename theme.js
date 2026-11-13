@@ -35,8 +35,8 @@
     d.addEventListener('keydown', function (e) { if (e.key === 'Escape') menu(false); });
   }
 
-  // Call-request form: same Apps Script endpoint and field names as /register/.
-  var LEAD_URL = 'https://script.google.com/macros/s/AKfycbySO6lLsainzUtHLBF5HVKatqIcbHZSpzsSBAOml7mBIsRadRT52A88Roz-oG9uDeZLpQ/exec';
+  // Call-request form: posts to the SAT CRM web app, which files it as a Website lead.
+  var LEAD_URL = 'https://script.google.com/macros/s/AKfycbw3SE2fWz_C6XvsX8u7uT8kemHc6k7LXJY3HdwJOR8PyLEO2aw1rxslI-hKSocyTdyc/exec';
   d.querySelectorAll('.sx-lead-form').forEach(function (f) {
     f.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -46,7 +46,7 @@
       if (phone.replace(/\D/g, '').length < 12) { f.elements.phone.focus(); return; }
       btn.disabled = true;
       fetch(LEAD_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify({
-        type: 'registration', name: name, phone: phone, age: '', grade: '', school: '', program: '',
+        type: 'call request', name: name, phone: phone, age: '', grade: '', school: '', program: '',
         heard: 'Website call request', message: 'Call request from ' + location.pathname
       }) }).then(function () {
         f.classList.add('sx-ok');
