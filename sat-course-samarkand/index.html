@@ -163,7 +163,7 @@
 <style>
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--navy:#022049;--navy3:#010e24;--blue:#0661de;--blue2:#0450b4;--elec:#2979ff;--green:#044fba;--bxpale:#f0f4ff;--bpale:#e8f0fe;--t:#1d1d1f;--t2:#3d3d3d;--tm:#6e6e73;--tl:#86868b;--bg:#fff;--bg2:#f5f5f7;--bg3:#e8ecf0;--bd:#d2d2d7;--ss:0 1px 3px rgba(0,0,0,.06);--sm:0 2px 12px rgba(0,0,0,.08);--sl:0 8px 32px rgba(0,0,0,.1);--r:12px;--rsm:8px;--rlg:18px;--rxl:24px;--f:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;--ft:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif}
+:root{--navy:#022049;--navy3:#022049;--blue:#0661de;--blue2:#0550b8;--elec:#0661de;--green:#0550b8;--bxpale:#e8f1fd;--bpale:#e8f1fd;--t:#022049;--t2:#022049;--tm:#5a6b85;--tl:#5a6b85;--bg:#fff;--bg2:#f4f7fb;--bg3:#d6e0ee;--bd:#d6e0ee;--ss:0 1px 3px rgba(0,0,0,.06);--sm:0 2px 12px rgba(0,0,0,.08);--sl:0 8px 32px rgba(0,0,0,.1);--r:12px;--rsm:8px;--rlg:18px;--rxl:24px;--f:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;--ft:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:64px}
 body{font-family:var(--ft);background:var(--bg);color:var(--t);line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
@@ -231,19 +231,19 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .uni-loc{font-size:.7rem;color:var(--tl);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 .mock-banner{background:#022049;border-radius:var(--rxl);padding:48px;color:#fff;box-shadow:var(--sl);position:relative;overflow:hidden;margin-top:2rem}
 .mock-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:center;position:relative}
-.mock-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.25);color:#60a5fa;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:4px;margin-bottom:1rem}
-.mock-badge-dot{width:7px;height:7px;border-radius:50%;background:#34d399;animation:blink 2s infinite}
+.mock-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.25);color:#e8f1fd;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:4px;margin-bottom:1rem}
+.mock-badge-dot{width:7px;height:7px;border-radius:50%;background:#0661de;animation:blink 2s infinite}
 .mock-h{font-family:var(--f);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:#fff;margin-bottom:.6rem;letter-spacing:-.02em;line-height:1.15}
 .mock-sub{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.65;margin-bottom:1.5rem}
 .mock-features{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.5rem}
 .mf{display:flex;align-items:center;gap:8px;font-size:.85rem;color:rgba(255,255,255,.85)}
-.mf svg{width:16px;height:16px;stroke:#60a5fa;flex-shrink:0;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mf svg{width:16px;height:16px;stroke:#e8f1fd;flex-shrink:0;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .mock-card-info{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--rlg);padding:24px}
 .mock-day{font-family:var(--f);font-size:2.4rem;font-weight:700;color:#fff;letter-spacing:-.03em;line-height:1}
 .mock-time-row{display:flex;align-items:baseline;gap:8px;margin-top:.4rem;color:rgba(255,255,255,.7);font-size:.9rem}
-.mock-time{font-family:var(--f);font-size:1.4rem;font-weight:700;color:#60a5fa}
+.mock-time{font-family:var(--f);font-size:1.4rem;font-weight:700;color:#e8f1fd}
 .mock-loc-row{margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:flex-start;gap:8px;color:rgba(255,255,255,.85);font-size:.85rem}
-.mock-loc-row svg{width:16px;height:16px;stroke:#60a5fa;flex-shrink:0;fill:none;stroke-width:2;margin-top:2px}
+.mock-loc-row svg{width:16px;height:16px;stroke:#e8f1fd;flex-shrink:0;fill:none;stroke-width:2;margin-top:2px}
 .scarousel{display:flex;gap:14px;overflow-x:auto;padding:4px 0 18px;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;margin-top:2rem}
 .scarousel::-webkit-scrollbar{display:none}
 .scard{flex:0 0 170px;scroll-snap-align:start;background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:20px 16px;border-top:3px solid var(--blue);transition:all .2s;box-shadow:var(--ss);text-decoration:none;color:inherit;display:block}
@@ -264,12 +264,12 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .results-table tbody tr:hover td{background:var(--bxpale)}
 .rank-badge{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;font-family:var(--f)}
 .rank-1{background:#0661de;color:#fff}
-.rank-2{background:#f6f8fd;color:#fff}
+.rank-2{background:#f4f7fb;color:#fff}
 .rank-3{background:#0661de;color:#fff}
 .rank-other{background:var(--bg2);color:var(--tm)}
 .score-val{font-family:var(--f);font-size:1.05rem;font-weight:700;color:var(--navy)}
 .year-badge{font-size:.7rem;font-weight:600;color:var(--blue);background:var(--bxpale);border:1px solid rgba(6,97,222,.15);padding:3px 10px;border-radius:4px}
-.year-badge.y2026{background:#dbeafe;color:#1d4ed8;border-color:#93c5fd}
+.year-badge.y2026{background:#e8f1fd;color:#0550b8;border-color:#e8f1fd}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:2.5rem}
 .pcard{background:#fff;border:1px solid var(--bd);border-radius:var(--rxl);padding:0;overflow:hidden;box-shadow:var(--ss);transition:all .25s;display:flex;flex-direction:column;position:relative}
 .pcard:hover{box-shadow:var(--sm);transform:translateY(-4px)}
@@ -279,7 +279,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pcard.premium .pribbon{background:#0661de;color:var(--navy3)}
 .phead{padding:30px 28px 0}
 .ptag{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem}
-.pcard.premium .ptag{color:#60a5fa}
+.pcard.premium .ptag{color:#e8f1fd}
 .ptitle{font-family:var(--f);font-size:1.45rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
 .pcard.premium .ptitle{color:#fff}
 .psub{font-size:.83rem;color:var(--tm);margin-bottom:1.4rem;line-height:1.5;min-height:2.5em}
@@ -291,8 +291,8 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .ptier-label-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
 .ptier-label{font-size:.72rem;font-weight:700;color:var(--navy);letter-spacing:.04em}
 .pcard.premium .ptier-label{color:#fff}
-.ptier-savings{font-size:.65rem;font-weight:700;color:var(--green);background:#dbeafe;padding:2px 8px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase}
-.pcard.premium .ptier-savings{background:rgba(52,211,153,.2);color:#34d399}
+.ptier-savings{font-size:.65rem;font-weight:700;color:var(--green);background:#e8f1fd;padding:2px 8px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase}
+.pcard.premium .ptier-savings{background:rgba(52,211,153,.2);color:#0661de}
 .ptier-price-row{display:flex;align-items:baseline;gap:5px}
 .ptier-price{font-family:var(--f);font-size:1.4rem;font-weight:700;color:var(--navy);line-height:1}
 .pcard.premium .ptier-price{color:#fff}
@@ -307,7 +307,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pfeats li{font-size:.83rem;color:var(--t2);display:flex;align-items:flex-start;gap:8px;line-height:1.45}
 .pcard.premium .pfeats li{color:rgba(255,255,255,.75)}
 .pfeats li svg{width:14px;height:14px;flex-shrink:0;margin-top:3px;stroke:#0661de;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.pcard.premium .pfeats li svg{stroke:#60d394}
+.pcard.premium .pfeats li svg{stroke:#0661de}
 .pnote{font-size:.74rem;color:var(--tl);line-height:1.5;padding:9px 11px;background:var(--bg2);border-radius:var(--rsm);margin-bottom:1.1rem}
 .pcard.premium .pnote{background:rgba(255,255,255,.06);color:rgba(255,255,255,.4)}
 .pbtn{display:block;text-align:center;padding:12px;border-radius:4px;font-size:.88rem;font-weight:600;font-family:var(--f);text-decoration:none;transition:all .15s;border:none;cursor:pointer;width:100%}
@@ -342,11 +342,11 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .form-section{background:#022049;padding:80px 5vw;color:#fff}
 .form-wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
 .form-info h2{font-family:var(--f);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:1rem}
-.form-info h2 em{font-style:normal;color:#60a5fa}
+.form-info h2 em{font-style:normal;color:#e8f1fd}
 .form-info p{font-size:1rem;color:rgba(255,255,255,.65);line-height:1.65;margin-bottom:1.5rem}
 .form-bullets{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:1.5rem}
 .form-bullets li{font-size:.92rem;color:rgba(255,255,255,.85);display:flex;align-items:flex-start;gap:10px}
-.form-bullets li svg{width:18px;height:18px;stroke:#60a5fa;flex-shrink:0;margin-top:2px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.form-bullets li svg{width:18px;height:18px;stroke:#e8f1fd;flex-shrink:0;margin-top:2px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .form-card{background:#fff;border-radius:var(--rxl);padding:36px;box-shadow:var(--sl);color:var(--t)}
 .form-card h3{font-family:var(--f);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
 .form-card .subtitle{font-size:.82rem;color:var(--tl);margin-bottom:1.5rem}
@@ -360,7 +360,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .submit-btn:hover{background:var(--blue2)}
 .submit-btn:disabled{opacity:.5;cursor:not-allowed}
 .success-msg{display:none;text-align:center;padding:32px 24px}
-.success-msg svg{width:56px;height:56px;stroke:#044fba;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1rem}
+.success-msg svg{width:56px;height:56px;stroke:#0550b8;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1rem}
 .success-msg h3{font-family:var(--f);font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
 .success-msg p{font-size:.92rem;color:var(--tm);line-height:1.6}
 .success-msg .highlight{font-weight:700;color:var(--navy);margin:.4rem 0}
@@ -386,7 +386,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .fcol a:hover{color:rgba(255,255,255,.8)}
 .fbot{max-width:1200px;margin:36px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
 .fbot p,.fbot a{font-size:.72rem;color:rgba(255,255,255,.2);text-decoration:none}
-.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
+.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#022049;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#5a6b85;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 
 
 
@@ -427,13 +427,13 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 
 /* ═══ TELEGRAM ENROLLMENT SECTION ═══ */
 .tg-enroll-wrap{max-width:760px;margin:0 auto;padding:80px 5vw;text-align:center}
-.tg-enroll-badge{display:inline-flex;align-items:center;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.25);color:#60a5fa;font-size:.72rem;font-weight:700;padding:5px 14px;border-radius:4px;margin-bottom:1.4rem;letter-spacing:.08em;text-transform:uppercase}
+.tg-enroll-badge{display:inline-flex;align-items:center;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.25);color:#e8f1fd;font-size:.72rem;font-weight:700;padding:5px 14px;border-radius:4px;margin-bottom:1.4rem;letter-spacing:.08em;text-transform:uppercase}
 .tg-enroll-h2{font-family:var(--f);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:1rem}
-.tg-enroll-h2 em{font-style:normal;color:#60a5fa}
+.tg-enroll-h2 em{font-style:normal;color:#e8f1fd}
 .tg-enroll-sub{font-size:1rem;color:rgba(255,255,255,.65);max-width:500px;margin:0 auto 2.5rem;line-height:1.7}
 .tg-enroll-steps{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:2.5rem;flex-wrap:wrap}
 .tg-step{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:140px}
-.tg-step-num{width:40px;height:40px;border-radius:50%;background:rgba(96,165,250,.15);border:1.5px solid rgba(96,165,250,.3);color:#60a5fa;font-family:var(--f);font-size:1.1rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.tg-step-num{width:40px;height:40px;border-radius:50%;background:rgba(96,165,250,.15);border:1.5px solid rgba(96,165,250,.3);color:#e8f1fd;font-family:var(--f);font-size:1.1rem;font-weight:700;display:flex;align-items:center;justify-content:center}
 .tg-step-text{font-size:.78rem;color:rgba(255,255,255,.6);line-height:1.4;text-align:center}
 .tg-step-arrow{font-size:1.2rem;color:rgba(255,255,255,.2);flex-shrink:0}
 @media(max-width:600px){.tg-step-arrow{display:none}.tg-enroll-steps{gap:20px}}
@@ -453,9 +453,9 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pillar-hero{background:#022049;padding:80px 5vw 72px;color:#fff;position:relative;overflow:hidden}
 .pillar-hero::before{content:"";position:absolute;inset:0;background:transparent;pointer-events:none}
 .pillar-hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center;position:relative}
-.pillar-hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.25);color:#60a5fa;font-size:.95rem;font-weight:800;padding:10px 22px;border-radius:4px;margin-bottom:1.2rem;letter-spacing:.12em;text-transform:uppercase}
+.pillar-hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.25);color:#e8f1fd;font-size:.95rem;font-weight:800;padding:10px 22px;border-radius:4px;margin-bottom:1.2rem;letter-spacing:.12em;text-transform:uppercase}
 .pillar-hero h1{font-family:var(--f);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;color:#fff;letter-spacing:-.04em;line-height:1.05;margin-bottom:1rem}
-.pillar-hero h1 em{font-style:normal;color:#60a5fa}
+.pillar-hero h1 em{font-style:normal;color:#e8f1fd}
 .pillar-hero-sub{font-size:1.05rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:1.8rem;max-width:520px}
 .pillar-hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
 .pillar-stat{display:flex;flex-direction:column}
@@ -472,7 +472,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .hero-card-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07)}
 .hero-card-row:last-child{border-bottom:none}
 .hero-card-icon{width:34px;height:34px;border-radius:4px;background:rgba(96,165,250,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.hero-card-icon svg{width:16px;height:16px;stroke:#60a5fa;fill:none;stroke-width:2}
+.hero-card-icon svg{width:16px;height:16px;stroke:#e8f1fd;fill:none;stroke-width:2}
 .hero-card-text{flex:1}
 .hero-card-main{font-size:.88rem;font-weight:600;color:#fff;line-height:1.3}
 .hero-card-sub{font-size:.74rem;color:rgba(255,255,255,.45);margin-top:2px}
@@ -546,7 +546,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pillar-cta-section{background:#022049;border-radius:4px;padding:56px 48px;text-align:center;color:#fff;margin:60px 0;position:relative;overflow:hidden}
 .pillar-cta-section::before{content:"";position:absolute;inset:0;background:transparent;pointer-events:none}
 .pillar-cta-section h2{font-family:var(--f);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:#fff;letter-spacing:-.03em;margin-bottom:.8rem;position:relative}
-.pillar-cta-section h2 em{font-style:normal;color:#60a5fa}
+.pillar-cta-section h2 em{font-style:normal;color:#e8f1fd}
 .pillar-cta-section p{font-size:1rem;color:rgba(255,255,255,.7);margin-bottom:2rem;line-height:1.7;position:relative}
 .pillar-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
 
@@ -593,9 +593,9 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
   font-size:.83rem!important;font-weight:500!important;
   display:flex!important;align-items:center;white-space:nowrap;
   border-bottom:none!important;line-height:1.3;
-  color:var(--t,#1d1d1f)!important;text-decoration:none;
+  color:var(--t,#022049)!important;text-decoration:none;
   transition:background .12s,color .12s}
-.dd li a:hover{background:#f0f4ff;color:var(--blue,#0661de)!important}
+.dd li a:hover{background:#e8f1fd;color:var(--blue,#0661de)!important}
 .dd li:not(:last-child) a{border-bottom:1px solid rgba(0,0,0,.045)!important}
 .nlinks .dd-arrow{font-size:.65rem;margin-left:3px;opacity:.5;transition:transform .2s}
 .nlinks li.has-dd:hover .dd-arrow{opacity:.9}
@@ -606,28 +606,28 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
   box-shadow:none;border-radius:0 0 4px 4px}
 .mob-nav.open{display:block}
 .mob-nav .mob-list{list-style:none;padding:6px 0 12px;margin:0}
-.mob-nav .mob-list>li>a{display:block;padding:13px 20px;color:var(--t,#1d1d1f);
-  font-size:.95rem;text-decoration:none;border-bottom:1px solid #f5f5f7}
-.mob-nav .mob-list>li>a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-nav .mob-list>li>a{display:block;padding:13px 20px;color:var(--t,#022049);
+  font-size:.95rem;text-decoration:none;border-bottom:1px solid #f4f7fb}
+.mob-nav .mob-list>li>a:hover{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-group-hd{display:flex;align-items:center;justify-content:space-between;
-  width:100%;padding:13px 20px;background:none;border:none;border-bottom:1px solid #f5f5f7;
-  color:var(--t,#1d1d1f);font-size:.95rem;font-weight:500;cursor:pointer;text-align:left;
+  width:100%;padding:13px 20px;background:none;border:none;border-bottom:1px solid #f4f7fb;
+  color:var(--t,#022049);font-size:.95rem;font-weight:500;cursor:pointer;text-align:left;
   font-family:inherit}
-.mob-group-hd:hover,.mob-group.open .mob-group-hd{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-group-hd:hover,.mob-group.open .mob-group-hd{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-arrow{transition:transform .22s;flex-shrink:0}
 .mob-group.open .mob-arrow{transform:rotate(180deg)}
 .mob-group-body{list-style:none;padding:0;margin:0;
-  max-height:0;overflow:hidden;transition:max-height .28s ease;background:#fafafa}
+  max-height:0;overflow:hidden;transition:max-height .28s ease;background:#f4f7fb}
 .mob-group.open .mob-group-body{max-height:400px}
 .mob-group-body li a{display:block;padding:10px 20px 10px 30px;
-  color:var(--tm,#6e6e73);font-size:.88rem;text-decoration:none;
-  border-bottom:1px solid #f5f5f7}
-.mob-group-body li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+  color:var(--tm,#5a6b85);font-size:.88rem;text-decoration:none;
+  border-bottom:1px solid #f4f7fb}
+.mob-group-body li a:hover{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-nav .mob-enroll{display:block;margin:12px 20px 8px;padding:14px 24px;
   background:var(--blue,#0661de);color:#fff!important;border-radius:4px;
   text-align:center;font-weight:600;font-size:.95rem;border-bottom:none!important;
   text-decoration:none}
-.mob-nav .mob-enroll:hover{background:#0550c0!important;color:#fff!important}
+.mob-nav .mob-enroll:hover{background:#0550b8!important;color:#fff!important}
 /* Hamburger → X animation */
 .nham svg line{transition:all .25s;transform-box:fill-box;transform-origin:center}
 .nham.open svg line:first-child{transform:translateY(6px) rotate(45deg)}
@@ -725,10 +725,9 @@ nav.scrolled{
   gtag('js', new Date());
   gtag('config', 'G-H7P88TD85G');
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/theme.css?v=3">
+<link rel="preload" href="/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/theme.css?v=4">
 </head>
 <body>
 
@@ -739,30 +738,30 @@ nav.scrolled{
 <div class="sx-hd" id="sx-hd" role="banner">
   <div class="sx-wrap">
     <div class="sx-hd-in">
-      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/logo.png" alt="" width="34" height="34"><span><small>SAT</small>Samarkand</span></a>
+      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/brand/mark-primary.png" alt="" width="35" height="40"><span>SAT Samarkand</span></a>
       <div class="sx-nav" role="navigation" aria-label="Main">
-        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All courses" data-uz="Barcha kurslar" data-ru="Все курсы">All courses</a><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions consulting</a><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div></div>
         <div class="sx-nav-i"><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div></div>
         <div class="sx-nav-i"><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></div>
         <div class="sx-nav-i"><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></div>
       </div>
       <div class="sx-langs" role="group" aria-label="Language"><button class="lb" data-lang="en" onclick="setLang('en')">EN</button><button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button><button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button></div>
-      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a>
+      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a>
       <button class="sx-burger" id="sx-burger" aria-label="Menu" aria-expanded="false"><i></i></button>
     </div>
     <div class="sx-drawer" role="navigation" aria-label="Mobile">
       <a class="sx-has-sub" href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a>
-      <div class="sx-sub"><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div>
+      <div class="sx-sub"><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div>
       <a class="sx-has-sub" href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a>
-      <div class="sx-sub"><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div>
+      <div class="sx-sub"><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div>
       <a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a>
       <a class="sx-has-sub" href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a>
-      <div class="sx-sub"><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div>
+      <div class="sx-sub"><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div>
       <a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a>
       <a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a>
-      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a></div>
+      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a></div>
     </div>
   </div>
 </div>
@@ -779,7 +778,7 @@ nav.scrolled{
       <span data-en="SAMARKAND'S #1 SAT PREP CENTER" data-uz="SAMARQANDNING #1 SAT MARKAZI" data-ru="ЦЕНТР SAT №1 В САМАРКАНДЕ">SAMARKAND'S #1 SAT PREP CENTER</span>
     </div>
     <h1 data-en="The best <em>SAT course</em> in Samarkand." data-uz="Samarqandda eng yaxshi <em>SAT kursi.</em>" data-ru="Лучший <em>курс SAT</em> в Самарканде.">The best <em>SAT course</em> in Samarkand.</h1>
-    <p class="pillar-hero-sub" data-en="Expert mentors with top SAT scores. Small groups, weekly mock tests, and a guaranteed path to your target university." data-uz="Yuqori natijali tajribali mentorlar. Kichik guruhlar, haftalik mock testlar va kafolatlangan yo'l." data-ru="Опытные менторы с высокими баллами SAT. Маленькие группы, еженедельные пробники, гарантированный результат.">Expert mentors with top SAT scores. Small groups, weekly mock tests, and a guaranteed path to your target university.</p>
+    <p class="pillar-hero-sub" data-en="Expert mentors with top SAT scores. Small groups, weekly mock tests, and a guaranteed path to your target university." data-uz="Yuqori natijali tajribali mentorlar. Kichik guruhlar, haftalik mock testlar va kafolatlangan yoʻl." data-ru="Опытные менторы с высокими баллами SAT. Маленькие группы, еженедельные пробники, гарантированный результат.">Expert mentors with top SAT scores. Small groups, weekly mock tests, and a guaranteed path to your target university.</p>
     <div class="pillar-hero-stats">
       <div class="pillar-stat">
         <span class="pillar-stat-num">500+</span>
@@ -827,7 +826,7 @@ nav.scrolled{
       <div class="hero-card-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
       <div class="hero-card-text">
         <div class="hero-card-main" data-en="3-language instruction (EN / UZ / RU)" data-uz="3 tilda dars (EN / UZ / RU)" data-ru="Обучение на 3 языках (EN / UZ / RU)">3-language instruction (EN / UZ / RU)</div>
-        <div class="hero-card-sub" data-en="Learn in your strongest language" data-uz="Qulay tilda o'qing" data-ru="Учитесь на удобном языке">Learn in your strongest language</div>
+        <div class="hero-card-sub" data-en="Learn in your strongest language" data-uz="Qulay tilda oʻqing" data-ru="Учитесь на удобном языке">Learn in your strongest language</div>
       </div>
     </div>
     <div class="hero-card-row">
@@ -852,32 +851,32 @@ nav.scrolled{
       <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
         <h3 data-en="Top-Scoring Mentors" data-uz="Yuqori Natijali Mentorlar" data-ru="Менторы с высокими баллами">Top-Scoring Mentors</h3>
-        <p data-en="Every SAT Samarkand mentor earned a top score on the real SAT. Not theory teachers — people who scored it themselves." data-uz="Har bir SAT Samarqand mentori haqiqiy SATda yuqori natija olgan. Nazariya emas — o'zlari erishgan natija." data-ru="Каждый ментор SAT Samarkand показал высокий результат на реальном SAT. Не теоретики — люди, которые сами это сделали.">Every SAT Samarkand mentor earned a top score on the real SAT. Not theory teachers — people who scored it themselves.</p>
+        <p data-en="Every SAT Samarkand mentor earned a top score on the real SAT. Not theory teachers — people who scored it themselves." data-uz="Har bir SAT Samarqand mentori haqiqiy SATda yuqori natija olgan. Nazariya emas — oʻzlari erishgan natija." data-ru="Каждый ментор SAT Samarkand показал высокий результат на реальном SAT. Не теоретики — люди, которые сами это сделали.">Every SAT Samarkand mentor earned a top score on the real SAT. Not theory teachers — people who scored it themselves.</p>
       </div>
       <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
         <h3 data-en="Small Groups (Max 12)" data-uz="Kichik Guruhlar (Max 12)" data-ru="Маленькие группы (Макс 15)">Small Groups (Max 12)</h3>
-        <p data-en="We cap classes at 12 students. Your mentor knows your name, your weak points, and your progress every single week." data-uz="Guruhlar 12 talabadan oshmasin deb cheklanadi. Mentoringiz ismingizni, zaif tomonlaringizni va har haftalik o'zgarishingizni biladi." data-ru="Группы ограничены 12 студентами. Ваш ментор знает вас по имени, ваши слабые места и еженедельный прогресс.">We cap classes at 12 students. Your mentor knows your name, your weak points, and your progress every single week.</p>
+        <p data-en="We cap classes at 12 students. Your mentor knows your name, your weak points, and your progress every single week." data-uz="Guruhlar 12 talabadan oshmasin deb cheklanadi. Mentoringiz ismingizni, zaif tomonlaringizni va har haftalik oʻzgarishingizni biladi." data-ru="Группы ограничены 12 студентами. Ваш ментор знает вас по имени, ваши слабые места и еженедельный прогресс.">We cap classes at 12 students. Your mentor knows your name, your weak points, and your progress every single week.</p>
       </div>
       <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
         <h3 data-en="Free Sunday Mock SAT" data-uz="Bepul Yakshanba Mock SAT" data-ru="Бесплатный воскресный Mock SAT">Free Sunday Mock SAT</h3>
-        <p data-en="Every Sunday at 10:00 AM, we run a full-length Mock SAT. Practice under real test conditions. Free for all SAT Samarkand students." data-uz="Har yakshanba soat 10:00 da to'liq Mock SAT o'tkazamiz. Haqiqiy sharoitda mashq qiling. Barcha talabalar uchun bepul." data-ru="Каждое воскресенье в 10:00 проводим полный Mock SAT. Практика в реальных условиях. Бесплатно для всех студентов.">Every Sunday at 10:00 AM, we run a full-length Mock SAT. Practice under real test conditions. Free for all SAT Samarkand students.</p>
+        <p data-en="Every Sunday at 10:00 AM, we run a full-length Mock SAT. Practice under real test conditions. Free for all SAT Samarkand students." data-uz="Har yakshanba soat 10:00 da toʻliq Mock SAT oʻtkazamiz. Haqiqiy sharoitda mashq qiling. Barcha talabalar uchun bepul." data-ru="Каждое воскресенье в 10:00 проводим полный Mock SAT. Практика в реальных условиях. Бесплатно для всех студентов.">Every Sunday at 10:00 AM, we run a full-length Mock SAT. Practice under real test conditions. Free for all SAT Samarkand students.</p>
       </div>
       <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
-        <h3 data-en="3-Language Teaching" data-uz="3 Tilda O'qitish" data-ru="Обучение на 3 языках">3-Language Teaching</h3>
-        <p data-en="Instruction in English, Uzbek, and Russian. For Math, switch languages mid-class. We explain in the language you understand best." data-uz="Ingliz, o'zbek va rus tillarida darslar. Matematikani dars davomida til almashtirib tushuntirish. Eng yaxshi tushunadigan tilda o'qitamiz." data-ru="Преподавание на английском, узбекском и русском. Для математики можно переключаться. Объясняем на том языке, который вы понимаете лучше всего.">Instruction in English, Uzbek, and Russian. For Math, switch languages mid-class. We explain in the language you understand best.</p>
+        <h3 data-en="3-Language Teaching" data-uz="3 Tilda Oʻqitish" data-ru="Обучение на 3 языках">3-Language Teaching</h3>
+        <p data-en="Instruction in English, Uzbek, and Russian. For Math, switch languages mid-class. We explain in the language you understand best." data-uz="Ingliz, oʻzbek va rus tillarida darslar. Matematikani dars davomida til almashtirib tushuntirish. Eng yaxshi tushunadigan tilda oʻqitamiz." data-ru="Преподавание на английском, узбекском и русском. Для математики можно переключаться. Объясняем на том языке, который вы понимаете лучше всего.">Instruction in English, Uzbek, and Russian. For Math, switch languages mid-class. We explain in the language you understand best.</p>
       </div>
       <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
         <h3 data-en="Digital SAT Specialists" data-uz="Raqamli SAT Mutaxassislari" data-ru="Специалисты Digital SAT">Digital SAT Specialists</h3>
-        <p data-en="We teach the Digital SAT — the current format. Adaptive modules, Desmos calculator strategy, Bluebook interface practice." data-uz="Biz hozirgi format — Raqamli SATni o'qitamiz. Adaptiv modullar, Desmos kalkulyator strategiyasi, Bluebook interfeysi mashqi." data-ru="Мы обучаем Digital SAT — текущий формат. Адаптивные модули, стратегия с калькулятором Desmos, практика в интерфейсе Bluebook.">We teach the Digital SAT — the current format. Adaptive modules, Desmos calculator strategy, Bluebook interface practice.</p>
+        <p data-en="We teach the Digital SAT — the current format. Adaptive modules, Desmos calculator strategy, Bluebook interface practice." data-uz="Biz hozirgi format — Raqamli SATni oʻqitamiz. Adaptiv modullar, Desmos kalkulyator strategiyasi, Bluebook interfeysi mashqi." data-ru="Мы обучаем Digital SAT — текущий формат. Адаптивные модули, стратегия с калькулятором Desmos, практика в интерфейсе Bluebook.">We teach the Digital SAT — the current format. Adaptive modules, Desmos calculator strategy, Bluebook interface practice.</p>
       </div>
       <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
         <h3 data-en="1500+ Score Guarantee" data-uz="1500+ Ball Kafolati" data-ru="Гарантия 1500+ баллов">1500+ Score Guarantee</h3>
-        <p data-en="SAT MAX students who don't hit 1500+ by the target date continue studying free for up to 3 additional months. We stand behind our results." data-uz="SAT MAX talabasi belgilangan sanagacha 1500+ olmasa, 3 oygacha bepul o'qishni davom ettiradi. Biz natijamiz uchun javob beramiz." data-ru="Если студент SAT MAX не набирает 1500+ к целевой дате, он продолжает учиться бесплатно до 3 месяцев. Мы отвечаем за результат.">SAT MAX students who don't hit 1500+ by the target date continue studying free for up to 3 additional months. We stand behind our results.</p>
+        <p data-en="SAT MAX students who don't hit 1500+ by the target date continue studying free for up to 3 additional months. We stand behind our results." data-uz="SAT MAX talabasi belgilangan sanagacha 1500+ olmasa, 3 oygacha bepul oʻqishni davom ettiradi. Biz natijamiz uchun javob beramiz." data-ru="Если студент SAT MAX не набирает 1500+ к целевой дате, он продолжает учиться бесплатно до 3 месяцев. Мы отвечаем за результат.">SAT MAX students who don't hit 1500+ by the target date continue studying free for up to 3 additional months. We stand behind our results.</p>
       </div>
     </div>
   </section>
@@ -886,22 +885,22 @@ nav.scrolled{
   <section class="pillar-section" id="programs">
     <div class="pillar-section-label" data-en="PROGRAMS" data-uz="DASTURLAR" data-ru="ПРОГРАММЫ">PROGRAMS</div>
     <h2 class="pillar-h2" data-en="Choose your <em>SAT program.</em>" data-uz="SAT <em>dasturingizni</em> tanlang." data-ru="Выберите свою <em>программу SAT.</em>">Choose your <em>SAT program.</em></h2>
-    <p class="pillar-lead" data-en="Three programs designed for different starting levels and goals. Not sure which one fits you? Take the free diagnostic test first." data-uz="Turli boshlang'ich darajalar va maqsadlar uchun uchta dastur. Qaysi biri sizga mos ekanligini bilmaysizmi? Avval bepul diagnostika testini toping." data-ru="Три программы для разных уровней и целей. Не уверены, какая подходит вам? Сначала пройдите бесплатный диагностический тест.">Three programs designed for different starting levels and goals. Not sure which one fits you? Take the free diagnostic test first.</p>
+    <p class="pillar-lead" data-en="Three programs designed for different starting levels and goals. Not sure which one fits you? Take the free diagnostic test first." data-uz="Turli boshlangʻich darajalar va maqsadlar uchun uchta dastur. Qaysi biri sizga mos ekanligini bilmaysizmi? Avval bepul diagnostika testini toping." data-ru="Три программы для разных уровней и целей. Не уверены, какая подходит вам? Сначала пройдите бесплатный диагностический тест.">Three programs designed for different starting levels and goals. Not sure which one fits you? Take the free diagnostic test first.</p>
     <div class="programs-grid">
       <div class="prog-card">
         <div>
-          <div class="prog-badge" data-en="MOST POPULAR" data-uz="ENG KO'P TANLANADI" data-ru="САМЫЙ ПОПУЛЯРНЫЙ">MOST POPULAR</div>
+          <div class="prog-badge" data-en="MOST POPULAR" data-uz="ENG KOʻP TANLANADI" data-ru="САМЫЙ ПОПУЛЯРНЫЙ">MOST POPULAR</div>
           <h3 data-en="SAT Intensive Program" data-uz="SAT Intensiv Dastur" data-ru="Интенсивная программа SAT">SAT Intensive Program</h3>
-          <p data-en="Group preparation covering all SAT sections. Weekly mock tests, mentor feedback, and structured study plan from day one." data-uz="Barcha SAT bo'limlarini qamrab oluvchi guruh tayyorgarligi. Haftalik mock testlar, mentor fikri va birinchi kundan boshlab rejali o'qish." data-ru="Групповая подготовка по всем разделам SAT. Еженедельные пробники, обратная связь ментора и структурированный план учебы.">Group preparation covering all SAT sections. Weekly mock tests, mentor feedback, and structured study plan from day one.</p>
+          <p data-en="Group preparation covering all SAT sections. Weekly mock tests, mentor feedback, and structured study plan from day one." data-uz="Barcha SAT boʻlimlarini qamrab oluvchi guruh tayyorgarligi. Haftalik mock testlar, mentor fikri va birinchi kundan boshlab rejali oʻqish." data-ru="Групповая подготовка по всем разделам SAT. Еженедельные пробники, обратная связь ментора и структурированный план учебы.">Group preparation covering all SAT sections. Weekly mock tests, mentor feedback, and structured study plan from day one.</p>
           <ul class="prog-features">
             <li data-en="Group classes (max 12 students)" data-uz="Guruh darslari (max 12 talaba)" data-ru="Групповые занятия (макс 12 студентов)">Group classes (max 12 students)</li>
-            <li data-en="Math + English (both sections)" data-uz="Matematika + Ingliz (ikki bo'lim)" data-ru="Математика + Английский (оба раздела)">Math + English (both sections)</li>
+            <li data-en="Math + English (both sections)" data-uz="Matematika + Ingliz (ikki boʻlim)" data-ru="Математика + Английский (оба раздела)">Math + English (both sections)</li>
             <li data-en="Weekly Mock SAT included" data-uz="Haftalik Mock SAT kiradi" data-ru="Еженедельный Mock SAT включён">Weekly Mock SAT included</li>
             <li data-en="Score report after every mock" data-uz="Har mock dan keyin ball hisoboti" data-ru="Отчёт о результатах после каждого пробника">Score report after every mock</li>
           </ul>
         </div>
         <div class="prog-price-wrap">
-          <div class="prog-price" style="font-size:1.15rem;line-height:1.25" data-en="Price on request" data-uz="Narxi so&#39;rov bo&#39;yicha" data-ru="Цена по запросу">Price on request</div><div class="prog-price-sub" data-en="Free diagnostic · Message us · Call" data-uz="Bepul diagnostika · Yozing · Qo&#39;ng&#39;iroq qiling" data-ru="Бесплатная диагностика · Напишите · Позвоните">Free diagnostic · Message us · Call</div>
+          <div class="prog-price" style="font-size:1.15rem;line-height:1.25" data-en="Price on request" data-uz="Narxi soʻrov boʻyicha" data-ru="Цена по запросу">Price on request</div><div class="prog-price-sub" data-en="Free diagnostic · Message us · Call" data-uz="Bepul diagnostika · Yozing · Qoʻngʻiroq qiling" data-ru="Бесплатная диагностика · Напишите · Позвоните">Free diagnostic · Message us · Call</div>
           <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="prog-cta" data-en="Enroll →" data-uz="Yozilish →" data-ru="Записаться →">Enroll →</a>
         </div>
       </div>
@@ -919,7 +918,7 @@ nav.scrolled{
           </ul>
         </div>
         <div class="prog-price-wrap">
-          <div class="prog-price" style="font-size:1.15rem;line-height:1.25" data-en="Price on request" data-uz="Narxi so&#39;rov bo&#39;yicha" data-ru="Цена по запросу">Price on request</div><div class="prog-price-sub" data-en="Free diagnostic · Message us · Call" data-uz="Bepul diagnostika · Yozing · Qo&#39;ng&#39;iroq qiling" data-ru="Бесплатная диагностика · Напишите · Позвоните">Free diagnostic · Message us · Call</div>
+          <div class="prog-price" style="font-size:1.15rem;line-height:1.25" data-en="Price on request" data-uz="Narxi soʻrov boʻyicha" data-ru="Цена по запросу">Price on request</div><div class="prog-price-sub" data-en="Free diagnostic · Message us · Call" data-uz="Bepul diagnostika · Yozing · Qoʻngʻiroq qiling" data-ru="Бесплатная диагностика · Напишите · Позвоните">Free diagnostic · Message us · Call</div>
           <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="prog-cta" data-en="Enroll →" data-uz="Yozilish →" data-ru="Записаться →">Enroll →</a>
         </div>
       </div>
@@ -931,26 +930,26 @@ nav.scrolled{
           <p data-en="Personalized one-on-one sessions with a dedicated mentor. Flexible schedule, completely customized to your specific needs and target score." data-uz="Shaxsiy mentoringiz bilan individual seanslari. Moslashuvchan jadval, sizning ehtiyojlaringiz va maqsad ballingizga moslashtirilgan." data-ru="Индивидуальные занятия с личным ментором. Гибкий график, полностью настроен под ваши потребности и целевой балл.">Personalized one-on-one sessions with a dedicated mentor. Flexible schedule, completely customized to your specific needs and target score.</p>
           <ul class="prog-features">
             <li data-en="Dedicated personal mentor" data-uz="Shaxsiy mentor" data-ru="Личный ментор">Dedicated personal mentor</li>
-            <li data-en="Fully customized curriculum" data-uz="To'liq moslashtirilgan dastur" data-ru="Полностью индивидуальная программа">Fully customized curriculum</li>
+            <li data-en="Fully customized curriculum" data-uz="Toʻliq moslashtirilgan dastur" data-ru="Полностью индивидуальная программа">Fully customized curriculum</li>
             <li data-en="Flexible scheduling" data-uz="Moslashuvchan vaqt" data-ru="Гибкий график">Flexible scheduling</li>
-            <li data-en="Fastest path to target score" data-uz="Maqsad ballga eng tez yo'l" data-ru="Самый быстрый путь к цели">Fastest path to target score</li>
+            <li data-en="Fastest path to target score" data-uz="Maqsad ballga eng tez yoʻl" data-ru="Самый быстрый путь к цели">Fastest path to target score</li>
           </ul>
         </div>
         <div class="prog-price-wrap">
-          <div class="prog-price" style="font-size:1.15rem;line-height:1.25" data-en="Price on request" data-uz="Narxi so&#39;rov bo&#39;yicha" data-ru="Цена по запросу">Price on request</div><div class="prog-price-sub" data-en="Free diagnostic · Message us · Call" data-uz="Bepul diagnostika · Yozing · Qo&#39;ng&#39;iroq qiling" data-ru="Бесплатная диагностика · Напишите · Позвоните">Free diagnostic · Message us · Call</div>
+          <div class="prog-price" style="font-size:1.15rem;line-height:1.25" data-en="Price on request" data-uz="Narxi soʻrov boʻyicha" data-ru="Цена по запросу">Price on request</div><div class="prog-price-sub" data-en="Free diagnostic · Message us · Call" data-uz="Bepul diagnostika · Yozing · Qoʻngʻiroq qiling" data-ru="Бесплатная диагностика · Напишите · Позвоните">Free diagnostic · Message us · Call</div>
           <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="prog-cta" data-en="Enroll →" data-uz="Yozilish →" data-ru="Записаться →">Enroll →</a>
         </div>
       </div>
     </div>
     <p style="text-align:center;font-size:.84rem;color:var(--tm);margin-top:1.2rem">
-      <a href="/courses/" style="color:var(--blue);font-weight:600;text-decoration:none" data-en="See full pricing details →" data-uz="To'liq narxlarni ko'rish →" data-ru="Полные цены →">See full pricing details →</a>
+      <a href="/courses/" style="color:var(--blue);font-weight:600;text-decoration:none" data-en="See full pricing details →" data-uz="Toʻliq narxlarni koʻrish →" data-ru="Полные цены →">See full pricing details →</a>
     </p>
   </section>
 
   <!-- ═══ HOW IT WORKS ═══ -->
   <section class="pillar-section">
     <div class="pillar-section-label" data-en="HOW IT WORKS" data-uz="QANDAY ISHLAYDI" data-ru="КАК ЭТО РАБОТАЕТ">HOW IT WORKS</div>
-    <h2 class="pillar-h2" data-en="Your path from <em>today to 1500+.</em>" data-uz="Bugundan <em>1500+</em> gacha yo'lingiz." data-ru="Ваш путь <em>от сегодня до 1500+.</em>">Your path from <em>today to 1500+.</em></h2>
+    <h2 class="pillar-h2" data-en="Your path from <em>today to 1500+.</em>" data-uz="Bugundan <em>1500+</em> gacha yoʻlingiz." data-ru="Ваш путь <em>от сегодня до 1500+.</em>">Your path from <em>today to 1500+.</em></h2>
     <p class="pillar-lead" data-en="We don't just hand you a textbook. SAT Samarkand is a structured, mentored, tested preparation system." data-uz="Biz shunchaki darslik bermaymiz. SAT Samarqand — bu tizimli, mentorli, tekshirib koriladigan tayyorgarlik tizimi." data-ru="Мы не просто выдаём учебник. SAT Samarkand — структурированная, менторская, проверяемая система подготовки.">We don't just hand you a textbook. SAT Samarkand is a structured, mentored, tested preparation system.</p>
     <div class="steps-list">
       <div class="step-item">
@@ -964,21 +963,21 @@ nav.scrolled{
         <div class="step-num">2</div>
         <div class="step-content">
           <h3 data-en="Choose Your Program" data-uz="Dasturingizni Tanlang" data-ru="Выберите программу">Choose Your Program</h3>
-          <p data-en="Based on your diagnostic results, we recommend the right program. Enroll via Telegram in under 2 minutes. No paperwork, no waiting." data-uz="Diagnostika natijalaringiz asosida to'g'ri dasturni tavsiya qilamiz. Telegram orqali 2 daqiqada yoziling. Hujjat yo'q, kutish yo'q." data-ru="На основе результатов диагностики рекомендуем подходящую программу. Запишитесь через Telegram менее чем за 2 минуты. Без документов, без ожидания.">Based on your diagnostic results, we recommend the right program. Enroll via Telegram in under 2 minutes. No paperwork, no waiting.</p>
+          <p data-en="Based on your diagnostic results, we recommend the right program. Enroll via Telegram in under 2 minutes. No paperwork, no waiting." data-uz="Diagnostika natijalaringiz asosida toʻgʻri dasturni tavsiya qilamiz. Telegram orqali 2 daqiqada yoziling. Hujjat yoʻq, kutish yoʻq." data-ru="На основе результатов диагностики рекомендуем подходящую программу. Запишитесь через Telegram менее чем за 2 минуты. Без документов, без ожидания.">Based on your diagnostic results, we recommend the right program. Enroll via Telegram in under 2 minutes. No paperwork, no waiting.</p>
         </div>
       </div>
       <div class="step-item">
         <div class="step-num">3</div>
         <div class="step-content">
           <h3 data-en="Structured Weekly Classes" data-uz="Tizimli Haftalik Darslar" data-ru="Структурированные еженедельные занятия">Structured Weekly Classes</h3>
-          <p data-en="Classes follow a proven curriculum covering Digital SAT Math (Algebra, Advanced Math, Problem-Solving) and Reading & Writing (Craft, Structure, Information & Ideas)." data-uz="Darslar Raqamli SAT Matematika (Algebra, Ilg'or Matematika, Muammo Yechish) va O'qish va Yozishni qamrab oluvchi tasdiqlangan o'quv rejasini kuzatadi." data-ru="Занятия следуют проверенной программе, охватывающей цифровой SAT по математике и чтению и письму.">Classes follow a proven curriculum covering Digital SAT Math (Algebra, Advanced Math, Problem-Solving) and Reading &amp; Writing (Craft, Structure, Information &amp; Ideas).</p>
+          <p data-en="Classes follow a proven curriculum covering Digital SAT Math (Algebra, Advanced Math, Problem-Solving) and Reading & Writing (Craft, Structure, Information & Ideas)." data-uz="Darslar Raqamli SAT Matematika (Algebra, Ilgʻor Matematika, Muammo Yechish) va Oʻqish va Yozishni qamrab oluvchi tasdiqlangan oʻquv rejasini kuzatadi." data-ru="Занятия следуют проверенной программе, охватывающей цифровой SAT по математике и чтению и письму.">Classes follow a proven curriculum covering Digital SAT Math (Algebra, Advanced Math, Problem-Solving) and Reading &amp; Writing (Craft, Structure, Information &amp; Ideas).</p>
         </div>
       </div>
       <div class="step-item">
         <div class="step-num">4</div>
         <div class="step-content">
           <h3 data-en="Weekly Mock SAT (Every Sunday)" data-uz="Haftalik Mock SAT (Har Yakshanba)" data-ru="Еженедельный Mock SAT (каждое воскресенье)">Weekly Mock SAT (Every Sunday)</h3>
-          <p data-en="Practice under real exam conditions every week. After each mock, receive a detailed score report showing your progress, weak topics, and what to focus on next." data-uz="Har hafta haqiqiy imtihon sharoitida mashq qiling. Har bir mock dan so'ng progress, zaif mavzular va keyin nimaga e'tibor berish kerakligini ko'rsatuvchi batafsil ball hisobotini oling." data-ru="Еженедельная практика в реальных условиях экзамена. После каждого пробника — подробный отчёт о прогрессе, слабых темах и приоритетах.">Practice under real exam conditions every week. After each mock, receive a detailed score report showing your progress, weak topics, and what to focus on next.</p>
+          <p data-en="Practice under real exam conditions every week. After each mock, receive a detailed score report showing your progress, weak topics, and what to focus on next." data-uz="Har hafta haqiqiy imtihon sharoitida mashq qiling. Har bir mock dan soʻng progress, zaif mavzular va keyin nimaga e'tibor berish kerakligini koʻrsatuvchi batafsil ball hisobotini oling." data-ru="Еженедельная практика в реальных условиях экзамена. После каждого пробника — подробный отчёт о прогрессе, слабых темах и приоритетах.">Practice under real exam conditions every week. After each mock, receive a detailed score report showing your progress, weak topics, and what to focus on next.</p>
         </div>
       </div>
       <div class="step-item">
@@ -1024,21 +1023,21 @@ nav.scrolled{
       </div>
     </div>
     <p style="text-align:center;font-size:.84rem;color:var(--tm);margin-top:1.4rem">
-      <a href="/results/" style="color:var(--blue);font-weight:600;text-decoration:none" data-en="See all student results →" data-uz="Barcha natijalarni ko'rish →" data-ru="Все результаты →">See all student results →</a>
+      <a href="/results/" style="color:var(--blue);font-weight:600;text-decoration:none" data-en="See all student results →" data-uz="Barcha natijalarni koʻrish →" data-ru="Все результаты →">See all student results →</a>
     </p>
   </section>
 
   <!-- ═══ FAQ ═══ -->
   <section class="pillar-section">
     <div class="pillar-section-label" data-en="FAQ" data-uz="FAQ" data-ru="FAQ">FAQ</div>
-    <h2 class="pillar-h2" data-en="Frequently asked <em>questions.</em>" data-uz="Ko'p beriladigan <em>savollar.</em>" data-ru="Часто задаваемые <em>вопросы.</em>">Frequently asked <em>questions.</em></h2>
+    <h2 class="pillar-h2" data-en="Frequently asked <em>questions.</em>" data-uz="Koʻp beriladigan <em>savollar.</em>" data-ru="Часто задаваемые <em>вопросы.</em>">Frequently asked <em>questions.</em></h2>
     <div class="faq-list">
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
           <span data-en="What is the best SAT course in Samarkand?" data-uz="Samarqandda eng yaxshi SAT kursi qaysi?" data-ru="Какие лучшие курсы SAT в Самарканде?">What is the best SAT course in Samarkand?</span>
           <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
-        <div class="faq-a" data-en="SAT Samarkand is widely considered the leading SAT preparation center in Samarkand, Uzbekistan. With top-scoring mentors, small group classes capped at 12 students, and students placed at Purdue, Drexel, METU, and Inha, we offer the most comprehensive and results-proven SAT prep in the region." data-uz="SAT Samarqand Samarqand, O'zbekistondagi yetakchi SAT tayyorgarlik markazi hisoblanadi. Yuqori natijali mentorlar, 12 talabagacha cheklangan kichik guruh darslari va Purdue, Drexel, METU va Inhaga joylashgan talabalar bilan biz mintaqadagi eng keng qamrovli va natijali SAT tayyorgarligini taqdim etamiz." data-ru="SAT Samarkand широко считается ведущим центром подготовки к SAT в Самарканде, Узбекистан. С менторами с высокими результатами SAT, маленькими группами до 12 студентов и студентами в Purdue, Drexel, METU и Inha, мы предлагаем наиболее комплексную и результативную подготовку к SAT в регионе.">SAT Samarkand is widely considered the leading SAT preparation center in Samarkand, Uzbekistan. With top-scoring mentors, small group classes capped at 12 students, and students placed at Purdue, Drexel, METU, and Inha, we offer the most comprehensive and results-proven SAT prep in the region.</div>
+        <div class="faq-a" data-en="SAT Samarkand is widely considered the leading SAT preparation center in Samarkand, Uzbekistan. With top-scoring mentors, small group classes capped at 12 students, and students placed at Purdue, Drexel, METU, and Inha, we offer the most comprehensive and results-proven SAT prep in the region." data-uz="SAT Samarqand Samarqand, Oʻzbekistondagi yetakchi SAT tayyorgarlik markazi hisoblanadi. Yuqori natijali mentorlar, 12 talabagacha cheklangan kichik guruh darslari va Purdue, Drexel, METU va Inhaga joylashgan talabalar bilan biz mintaqadagi eng keng qamrovli va natijali SAT tayyorgarligini taqdim etamiz." data-ru="SAT Samarkand широко считается ведущим центром подготовки к SAT в Самарканде, Узбекистан. С менторами с высокими результатами SAT, маленькими группами до 12 студентов и студентами в Purdue, Drexel, METU и Inha, мы предлагаем наиболее комплексную и результативную подготовку к SAT в регионе.">SAT Samarkand is widely considered the leading SAT preparation center in Samarkand, Uzbekistan. With top-scoring mentors, small group classes capped at 12 students, and students placed at Purdue, Drexel, METU, and Inha, we offer the most comprehensive and results-proven SAT prep in the region.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
@@ -1052,21 +1051,21 @@ nav.scrolled{
           <span data-en="How long does it take to prepare for the SAT?" data-uz="SATga tayyorlanish qancha vaqt oladi?" data-ru="Сколько времени нужно на подготовку к SAT?">How long does it take to prepare for the SAT?</span>
           <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
-        <div class="faq-a" data-en="Most students need 3 to 6 months of focused preparation. Students starting below 1100 typically need 6 months. Students above 1200 can often reach 1500+ in 3 months with the right preparation. Your diagnostic test result will give you a personalized recommendation." data-uz="Ko'pchilik talabalar 3 dan 6 oygacha maqsadli tayyorgarlik kerak. 1100 dan pastdan boshlaydigan talabalar odatda 6 oy kerak. 1200 dan yuqori talabalar ko'pincha to'g'ri tayyorgarlik bilan 3 oyda 1500+ ga yetishi mumkin. Diagnostika testi natijasi sizga shaxsiy tavsiya beradi." data-ru="Большинству студентов нужно от 3 до 6 месяцев целенаправленной подготовки. Студентам ниже 1100 обычно нужно 6 месяцев. Студенты выше 1200 часто достигают 1500+ за 3 месяца с правильной подготовкой.">Most students need 3 to 6 months of focused preparation. Students starting below 1100 typically need 6 months. Students above 1200 can often reach 1500+ in 3 months with the right preparation. Your diagnostic test result will give you a personalized recommendation.</div>
+        <div class="faq-a" data-en="Most students need 3 to 6 months of focused preparation. Students starting below 1100 typically need 6 months. Students above 1200 can often reach 1500+ in 3 months with the right preparation. Your diagnostic test result will give you a personalized recommendation." data-uz="Koʻpchilik talabalar 3 dan 6 oygacha maqsadli tayyorgarlik kerak. 1100 dan pastdan boshlaydigan talabalar odatda 6 oy kerak. 1200 dan yuqori talabalar koʻpincha toʻgʻri tayyorgarlik bilan 3 oyda 1500+ ga yetishi mumkin. Diagnostika testi natijasi sizga shaxsiy tavsiya beradi." data-ru="Большинству студентов нужно от 3 до 6 месяцев целенаправленной подготовки. Студентам ниже 1100 обычно нужно 6 месяцев. Студенты выше 1200 часто достигают 1500+ за 3 месяца с правильной подготовкой.">Most students need 3 to 6 months of focused preparation. Students starting below 1100 typically need 6 months. Students above 1200 can often reach 1500+ in 3 months with the right preparation. Your diagnostic test result will give you a personalized recommendation.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
           <span data-en="Is there a free SAT test in Samarkand?" data-uz="Samarqandda bepul SAT testi bormi?" data-ru="Есть ли бесплатный тест SAT в Самарканде?">Is there a free SAT test in Samarkand?</span>
           <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
-        <div class="faq-a" data-en="Yes — two options. First, take the free online diagnostic test at diagnostic.satsamarkand.uz. Second, attend our free Sunday Mock SAT at Temur Malik 19 every Sunday at 10:00 AM. Both are completely free with no commitment required." data-uz="Ha — ikkita variant. Birinchisi, diagnostic.satsamarkand.uz saytida bepul onlayn diagnostika testini toping. Ikkinchisi, har yakshanba soat 10:00 da Temur Malik 19 da bepul Mock SATga keling. Ikkalasi ham hech qanday majburiyatsiz to'liq bepul." data-ru="Да — два варианта. Первый: пройдите бесплатный онлайн диагностический тест на diagnostic.satsamarkand.uz. Второй: посетите наш бесплатный воскресный Mock SAT по адресу Темур Малик 19 каждое воскресенье в 10:00. Оба полностью бесплатны.">Yes — two options. First, take the free online diagnostic test at diagnostic.satsamarkand.uz. Second, attend our free Sunday Mock SAT at Temur Malik 19 every Sunday at 10:00 AM. Both are completely free with no commitment required.</div>
+        <div class="faq-a" data-en="Yes — two options. First, take the free online diagnostic test at diagnostic.satsamarkand.uz. Second, attend our free Sunday Mock SAT at Temur Malik 19 every Sunday at 10:00 AM. Both are completely free with no commitment required." data-uz="Ha — ikkita variant. Birinchisi, diagnostic.satsamarkand.uz saytida bepul onlayn diagnostika testini toping. Ikkinchisi, har yakshanba soat 10:00 da Temur Malik 19 da bepul Mock SATga keling. Ikkalasi ham hech qanday majburiyatsiz toʻliq bepul." data-ru="Да — два варианта. Первый: пройдите бесплатный онлайн диагностический тест на diagnostic.satsamarkand.uz. Второй: посетите наш бесплатный воскресный Mock SAT по адресу Темур Малик 19 каждое воскресенье в 10:00. Оба полностью бесплатны.">Yes — two options. First, take the free online diagnostic test at diagnostic.satsamarkand.uz. Second, attend our free Sunday Mock SAT at Temur Malik 19 every Sunday at 10:00 AM. Both are completely free with no commitment required.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
           <span data-en="Where is SAT Samarkand located?" data-uz="SAT Samarqand qayerda joylashgan?" data-ru="Где находится SAT Samarkand?">Where is SAT Samarkand located?</span>
           <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
-        <div class="faq-a" data-en="SAT Samarkand has two locations in Samarkand, Uzbekistan: Main center at Temur Malik 19, and a second branch at Joylink Academy on Mirzo Ulugbek 105. Both locations are open Monday to Saturday, 9:00 AM to 7:00 PM." data-uz="SAT Samarqand Samarqand, O'zbekistonda ikkita manzilda: Asosiy markaz Temur Malik 19 da va Mirzo Ulug'bek 105 da Joylink Academy dagi ikkinchi filial. Ikkalasi ham dushanbadan shanbagacha soat 9:00 dan 19:00 gacha ochiq." data-ru="SAT Samarkand имеет два адреса в Самарканде, Узбекистан: Главный центр на Темур Малик 19 и второй филиал в Joylink Academy на Мирзо Улугбек 105. Оба работают с понедельника по субботу с 9:00 до 19:00.">SAT Samarkand has two locations in Samarkand, Uzbekistan: Main center at Temur Malik 19, and a second branch at Joylink Academy on Mirzo Ulugbek 105. Both locations are open Monday to Saturday, 9:00 AM to 7:00 PM.</div>
+        <div class="faq-a" data-en="SAT Samarkand has two locations in Samarkand, Uzbekistan: Main center at Temur Malik 19, and a second branch at Joylink Academy on Mirzo Ulugbek 105. Both locations are open Monday to Saturday, 9:00 AM to 7:00 PM." data-uz="SAT Samarqand Samarqand, Oʻzbekistonda ikkita manzilda: Asosiy markaz Temur Malik 19 da va Mirzo Ulugʻbek 105 da Joylink Academy dagi ikkinchi filial. Ikkalasi ham dushanbadan shanbagacha soat 9:00 dan 19:00 gacha ochiq." data-ru="SAT Samarkand имеет два адреса в Самарканде, Узбекистан: Главный центр на Темур Малик 19 и второй филиал в Joylink Academy на Мирзо Улугбек 105. Оба работают с понедельника по субботу с 9:00 до 19:00.">SAT Samarkand has two locations in Samarkand, Uzbekistan: Main center at Temur Malik 19, and a second branch at Joylink Academy on Mirzo Ulugbek 105. Both locations are open Monday to Saturday, 9:00 AM to 7:00 PM.</div>
       </div>
     </div>
   </section>
@@ -1074,7 +1073,7 @@ nav.scrolled{
   <!-- ═══ FINAL CTA ═══ -->
   <div class="pillar-cta-section">
     <h2 data-en="Ready to start your <em>SAT journey?</em>" data-uz="SAT <em>sayohatingizni</em> boshlashga tayyormisiz?" data-ru="Готовы начать свой <em>путь к SAT?</em>">Ready to start your <em>SAT journey?</em></h2>
-    <p data-en="Take the free diagnostic test and find out exactly where you stand. Then register via Telegram — we respond in minutes." data-uz="Bepul diagnostika testini toping va o'z darajangizni aniq bilib oling. Keyin Telegram orqali yoziling — daqiqalar ichida javob beramiz." data-ru="Пройдите бесплатный диагностический тест и узнайте точно свой уровень. Затем запишитесь через Telegram — ответим в течение минут.">Take the free diagnostic test and find out exactly where you stand. Then register via Telegram — we respond in minutes.</p>
+    <p data-en="Take the free diagnostic test and find out exactly where you stand. Then register via Telegram — we respond in minutes." data-uz="Bepul diagnostika testini toping va oʻz darajangizni aniq bilib oling. Keyin Telegram orqali yoziling — daqiqalar ichida javob beramiz." data-ru="Пройдите бесплатный диагностический тест и узнайте точно свой уровень. Затем запишитесь через Telegram — ответим в течение минут.">Take the free diagnostic test and find out exactly where you stand. Then register via Telegram — we respond in minutes.</p>
     <div class="pillar-cta-btns">
       <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="btn-tg-hero" data-en="Register via Telegram" data-uz="Telegram orqali yozilish" data-ru="Записаться через Telegram">Register via Telegram</a>
       <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="btn-ghost-hero" data-en="Free Diagnostic Test" data-uz="Bepul Diagnostika" data-ru="Бесплатный тест">Free Diagnostic Test</a>
@@ -1083,7 +1082,7 @@ nav.scrolled{
 
   <!-- ═══ INTERNAL LINKS ═══ -->
   <div class="internal-links">
-    <h3 data-en="Explore SAT Samarkand" data-uz="SAT Samarqandni o'rganing" data-ru="Изучите SAT Samarkand">Explore SAT Samarkand</h3>
+    <h3 data-en="Explore SAT Samarkand" data-uz="SAT Samarqandni oʻrganing" data-ru="Изучите SAT Samarkand">Explore SAT Samarkand</h3>
     <div class="internal-links-grid">
       <a href="/courses/" class="internal-link-item">
         <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
@@ -1114,9 +1113,9 @@ nav.scrolled{
 
   <!-- ═══ SEO CONTENT ═══ -->
   <div class="seo-content-block">
-    <h2 data-en="SAT Course in Samarkand — Complete Guide" data-uz="Samarqandda SAT Kursi — To'liq Qo'llanma" data-ru="Курс SAT в Самарканде — Полное руководство">SAT Course in Samarkand — Complete Guide</h2>
-    <p data-en="Looking for the best SAT course in Samarkand? SAT Samarkand is the first and leading SAT preparation center dedicated exclusively to SAT, AP, and IELTS preparation in Samarkand, Uzbekistan. Founded in August 2024, we have helped over 200 students achieve their target SAT scores and gain admission to universities in the USA, Korea, and Turkey." data-uz="Samarqandda eng yaxshi SAT kursini qidirmoqdamisiz? SAT Samarqand — Samarqand, O'zbekistonda faqat SAT, AP va IELTS tayyorgarligiga bag'ishlangan birinchi va yetakchi SAT tayyorgarlik markazidir. 2024-yil avgustda tashkil etilgan, biz 200 dan ortiq talabaga AQSh, Koreya va Turkiyadagi universitetlarga maqsadli SAT ballarini olish va kirish imkoniyatini berishda yordam berdik." data-ru="Ищете лучший курс SAT в Самарканде? SAT Samarkand — первый и ведущий центр подготовки к SAT, специализирующийся исключительно на подготовке к SAT, AP и IELTS в Самарканде, Узбекистан. Основанный в августе 2024 года, мы помогли более 200 студентам достичь целевых баллов SAT и поступить в университеты США, Кореи и Турции.">Looking for the best SAT course in Samarkand? SAT Samarkand is the first and leading SAT preparation center dedicated exclusively to SAT, AP, and IELTS preparation in Samarkand, Uzbekistan. Founded in August 2024, we have helped over 200 students achieve their target SAT scores and gain admission to universities in the USA, Korea, and Turkey.</p>
-    <p data-en="Our SAT courses in Samarkand cover the complete Digital SAT curriculum: Math (Algebra, Advanced Math, Problem-Solving and Data Analysis, Geometry and Trigonometry) and Reading and Writing (Craft and Structure, Information and Ideas, Standard English Conventions). SAT preparation in Samarkand at SAT Samarkand is delivered in English, Uzbek, and Russian by mentors with top scores on the real SAT." data-uz="Samarqanddagi SAT kurslarimiz to'liq Raqamli SAT o'quv rejasini qamrab oladi: Matematika (Algebra, Ilg'or Matematika, Muammo Yechish va Ma'lumotlar Tahlili, Geometriya va Trigonometriya) va O'qish va Yozish. Samarqandda SAT tayyorgarligi haqiqiy SATda yuqori natija olgan mentorlar tomonidan ingliz, o'zbek va rus tillarida olib boriladi." data-ru="Наши курсы SAT в Самарканде охватывают полную программу цифрового SAT: Математика и Чтение и письмо. Подготовка к SAT в Самарканде в SAT Samarkand ведётся на английском, узбекском и русском языках менторами с высокими результатами на реальном SAT.">Our SAT courses in Samarkand cover the complete Digital SAT curriculum: Math (Algebra, Advanced Math, Problem-Solving and Data Analysis, Geometry and Trigonometry) and Reading and Writing (Craft and Structure, Information and Ideas, Standard English Conventions). SAT preparation in Samarkand at SAT Samarkand is delivered in English, Uzbek, and Russian by mentors with top scores on the real SAT.</p>
+    <h2 data-en="SAT Course in Samarkand — Complete Guide" data-uz="Samarqandda SAT Kursi — Toʻliq Qoʻllanma" data-ru="Курс SAT в Самарканде — Полное руководство">SAT Course in Samarkand — Complete Guide</h2>
+    <p data-en="Looking for the best SAT course in Samarkand? SAT Samarkand is the first and leading SAT preparation center dedicated exclusively to SAT, AP, and IELTS preparation in Samarkand, Uzbekistan. Founded in August 2024, we have helped over 200 students achieve their target SAT scores and gain admission to universities in the USA, Korea, and Turkey." data-uz="Samarqandda eng yaxshi SAT kursini qidirmoqdamisiz? SAT Samarqand — Samarqand, Oʻzbekistonda faqat SAT, AP va IELTS tayyorgarligiga bagʻishlangan birinchi va yetakchi SAT tayyorgarlik markazidir. 2024-yil avgustda tashkil etilgan, biz 200 dan ortiq talabaga AQSh, Koreya va Turkiyadagi universitetlarga maqsadli SAT ballarini olish va kirish imkoniyatini berishda yordam berdik." data-ru="Ищете лучший курс SAT в Самарканде? SAT Samarkand — первый и ведущий центр подготовки к SAT, специализирующийся исключительно на подготовке к SAT, AP и IELTS в Самарканде, Узбекистан. Основанный в августе 2024 года, мы помогли более 200 студентам достичь целевых баллов SAT и поступить в университеты США, Кореи и Турции.">Looking for the best SAT course in Samarkand? SAT Samarkand is the first and leading SAT preparation center dedicated exclusively to SAT, AP, and IELTS preparation in Samarkand, Uzbekistan. Founded in August 2024, we have helped over 200 students achieve their target SAT scores and gain admission to universities in the USA, Korea, and Turkey.</p>
+    <p data-en="Our SAT courses in Samarkand cover the complete Digital SAT curriculum: Math (Algebra, Advanced Math, Problem-Solving and Data Analysis, Geometry and Trigonometry) and Reading and Writing (Craft and Structure, Information and Ideas, Standard English Conventions). SAT preparation in Samarkand at SAT Samarkand is delivered in English, Uzbek, and Russian by mentors with top scores on the real SAT." data-uz="Samarqanddagi SAT kurslarimiz toʻliq Raqamli SAT oʻquv rejasini qamrab oladi: Matematika (Algebra, Ilgʻor Matematika, Muammo Yechish va Ma'lumotlar Tahlili, Geometriya va Trigonometriya) va Oʻqish va Yozish. Samarqandda SAT tayyorgarligi haqiqiy SATda yuqori natija olgan mentorlar tomonidan ingliz, oʻzbek va rus tillarida olib boriladi." data-ru="Наши курсы SAT в Самарканде охватывают полную программу цифрового SAT: Математика и Чтение и письмо. Подготовка к SAT в Самарканде в SAT Samarkand ведётся на английском, узбекском и русском языках менторами с высокими результатами на реальном SAT.">Our SAT courses in Samarkand cover the complete Digital SAT curriculum: Math (Algebra, Advanced Math, Problem-Solving and Data Analysis, Geometry and Trigonometry) and Reading and Writing (Craft and Structure, Information and Ideas, Standard English Conventions). SAT preparation in Samarkand at SAT Samarkand is delivered in English, Uzbek, and Russian by mentors with top scores on the real SAT.</p>
   </div>
 
 </div>
@@ -1126,28 +1125,28 @@ nav.scrolled{
   <div class="sx-wrap">
     <div class="sx-ft-grid">
       <div>
-        <a class="sx-brand" href="/"><span class="sx-chip"><img src="/logo.png" alt="" width="28" height="28"></span><span><small>SAT</small>Samarkand</span></a>
+        <a class="sx-ft-logo" href="/"><img src="/brand/logo-outline.png" alt="SAT Samarkand" width="136" height="131" loading="lazy"></a>
         <p class="sx-ft-about" data-en="Samarkand’s official SAT, AP & IELTS prep center." data-uz="Samarqandning rasmiy markazi." data-ru="Официальный центр.">Samarkand’s official SAT, AP & IELTS prep center.</p>
         <p class="sx-ft-about" style="margin-top:6px" data-en="Partners: Joylink & Millennium" data-uz="Joylink & Millennium" data-ru="Joylink & Millennium">Partners: Joylink & Millennium</p>
       </div>
       <div>
         <h3 data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</h3>
         <ul>
-          <li><a href="/sat-course-samarkand/" data-en="SAT Course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT Course</a></li>
+          <li><a href="/sat-course-samarkand/" data-en="SAT course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT course</a></li>
           <li><a href="/digital-sat/" data-en="Digital SAT" data-uz="Raqamli SAT" data-ru="Цифровой SAT">Digital SAT</a></li>
           <li><a href="/sat-math-prep/" data-en="SAT Math" data-uz="SAT Matematika" data-ru="Математика SAT">SAT Math</a></li>
           <li><a href="/sat-english-prep/" data-en="SAT English" data-uz="SAT Ingliz tili" data-ru="Английский SAT">SAT English</a></li>
           <li><a href="/sat-tutoring-samarkand/" data-en="Tutoring" data-uz="Individual dars" data-ru="Репетиторство">Tutoring</a></li>
-          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a></li>
+          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a></li>
         </ul>
       </div>
       <div>
         <h3 data-en="About" data-uz="Biz" data-ru="О нас">About</h3>
         <ul>
-          <li><a href="/teachers/" data-en="Teachers" data-uz="O'qituvchilar" data-ru="Учителя">Teachers</a></li>
+          <li><a href="/teachers/" data-en="Teachers" data-uz="Oʻqituvchilar" data-ru="Учителя">Teachers</a></li>
           <li><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
           <li><a href="/pricing/" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a></li>
-          <li><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+          <li><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a></li>
           <li><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
           <li><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
         </ul>
@@ -1155,8 +1154,8 @@ nav.scrolled{
       <div>
         <h3 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h3>
         <ul>
-          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram Channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram Channel</a></li>
-          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support Chat" data-uz="Yordam" data-ru="Поддержка">Support Chat</a></li>
+          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram channel</a></li>
+          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support chat" data-uz="Yordam" data-ru="Поддержка">Support chat</a></li>
           <li><a href="https://instagram.com/sat_samarkand" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="tel:+998951131600" class="sx-num">+998 95 113 16 00</a></li>
         </ul>
@@ -1170,12 +1169,12 @@ nav.scrolled{
         </address>
       </div>
     </div>
-    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span></div>
+    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span><span class="sx-ft-tm" data-en="SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand." data-uz="SAT® — College Board tashkilotining roʻyxatdan oʻtgan savdo belgisi. College Board SAT Samarkand bilan bogʻliq emas." data-ru="SAT® — зарегистрированный товарный знак College Board. College Board не связан с SAT Samarkand.">SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand.</span></div>
   </div>
 </div>
 <div class="sx-sticky">
-  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a>
-  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qo'ng'iroq" data-ru="Позвоните нам">Call us</a>
+  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a>
+  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qoʻngʻiroq" data-ru="Позвоните нам">Call us</a>
 </div>
 <!--/SX-FOOTER-->
 
@@ -1427,6 +1426,6 @@ if(typeof toggleMobileNav==='undefined'){
   document.addEventListener('click',function(e){var mn=document.getElementById('mobnav');if(mn&&mn.classList.contains('open')&&!e.target.closest('#mobnav')&&!e.target.closest('.nham')){mn.classList.remove('open');var b=document.querySelector('.nham');if(b)b.classList.remove('open');}});
 }
 </script>
-<script src="/theme.js?v=3" defer></script>
+<script src="/theme.js?v=4" defer></script>
 </body>
 </html>

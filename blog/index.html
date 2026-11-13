@@ -37,7 +37,7 @@
 <style>
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--navy:#022049;--navy3:#010e24;--blue:#0661de;--blue2:#0450b4;--elec:#2979ff;--green:#044fba;--bxpale:#f0f4ff;--bpale:#e8f0fe;--t:#1d1d1f;--t2:#3d3d3d;--tm:#6e6e73;--tl:#86868b;--bg:#fff;--bg2:#f5f5f7;--bg3:#e8ecf0;--bd:#d2d2d7;--ss:0 1px 3px rgba(0,0,0,.06);--sm:0 2px 12px rgba(0,0,0,.08);--sl:0 8px 32px rgba(0,0,0,.1);--r:12px;--rsm:8px;--rlg:18px;--rxl:24px;--f:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;--ft:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif}
+:root{--navy:#022049;--navy3:#022049;--blue:#0661de;--blue2:#0550b8;--elec:#0661de;--green:#0550b8;--bxpale:#e8f1fd;--bpale:#e8f1fd;--t:#022049;--t2:#022049;--tm:#5a6b85;--tl:#5a6b85;--bg:#fff;--bg2:#f4f7fb;--bg3:#d6e0ee;--bd:#d6e0ee;--ss:0 1px 3px rgba(0,0,0,.06);--sm:0 2px 12px rgba(0,0,0,.08);--sl:0 8px 32px rgba(0,0,0,.1);--r:12px;--rsm:8px;--rlg:18px;--rxl:24px;--f:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;--ft:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:64px}
 body{font-family:var(--ft);background:var(--bg);color:var(--t);line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
@@ -105,19 +105,19 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .uni-loc{font-size:.7rem;color:var(--tl);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 .mock-banner{background:#022049;border-radius:var(--rxl);padding:48px;color:#fff;box-shadow:var(--sl);position:relative;overflow:hidden;margin-top:2rem}
 .mock-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:center;position:relative}
-.mock-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.25);color:#60a5fa;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:4px;margin-bottom:1rem}
-.mock-badge-dot{width:7px;height:7px;border-radius:50%;background:#34d399;animation:blink 2s infinite}
+.mock-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.25);color:#e8f1fd;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:4px;margin-bottom:1rem}
+.mock-badge-dot{width:7px;height:7px;border-radius:50%;background:#0661de;animation:blink 2s infinite}
 .mock-h{font-family:var(--f);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:#fff;margin-bottom:.6rem;letter-spacing:-.02em;line-height:1.15}
 .mock-sub{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.65;margin-bottom:1.5rem}
 .mock-features{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.5rem}
 .mf{display:flex;align-items:center;gap:8px;font-size:.85rem;color:rgba(255,255,255,.85)}
-.mf svg{width:16px;height:16px;stroke:#60a5fa;flex-shrink:0;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mf svg{width:16px;height:16px;stroke:#e8f1fd;flex-shrink:0;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .mock-card-info{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--rlg);padding:24px}
 .mock-day{font-family:var(--f);font-size:2.4rem;font-weight:700;color:#fff;letter-spacing:-.03em;line-height:1}
 .mock-time-row{display:flex;align-items:baseline;gap:8px;margin-top:.4rem;color:rgba(255,255,255,.7);font-size:.9rem}
-.mock-time{font-family:var(--f);font-size:1.4rem;font-weight:700;color:#60a5fa}
+.mock-time{font-family:var(--f);font-size:1.4rem;font-weight:700;color:#e8f1fd}
 .mock-loc-row{margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:flex-start;gap:8px;color:rgba(255,255,255,.85);font-size:.85rem}
-.mock-loc-row svg{width:16px;height:16px;stroke:#60a5fa;flex-shrink:0;fill:none;stroke-width:2;margin-top:2px}
+.mock-loc-row svg{width:16px;height:16px;stroke:#e8f1fd;flex-shrink:0;fill:none;stroke-width:2;margin-top:2px}
 .scarousel{display:flex;gap:14px;overflow-x:auto;padding:4px 0 18px;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;margin-top:2rem}
 .scarousel::-webkit-scrollbar{display:none}
 .scard{flex:0 0 170px;scroll-snap-align:start;background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:20px 16px;border-top:3px solid var(--blue);transition:all .2s;box-shadow:var(--ss);text-decoration:none;color:inherit;display:block}
@@ -138,12 +138,12 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .results-table tbody tr:hover td{background:var(--bxpale)}
 .rank-badge{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;font-family:var(--f)}
 .rank-1{background:#0661de;color:#fff}
-.rank-2{background:#f6f8fd;color:#fff}
+.rank-2{background:#f4f7fb;color:#fff}
 .rank-3{background:#0661de;color:#fff}
 .rank-other{background:var(--bg2);color:var(--tm)}
 .score-val{font-family:var(--f);font-size:1.05rem;font-weight:700;color:var(--navy)}
 .year-badge{font-size:.7rem;font-weight:600;color:var(--blue);background:var(--bxpale);border:1px solid rgba(6,97,222,.15);padding:3px 10px;border-radius:4px}
-.year-badge.y2026{background:#dbeafe;color:#1d4ed8;border-color:#93c5fd}
+.year-badge.y2026{background:#e8f1fd;color:#0550b8;border-color:#e8f1fd}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:2.5rem}
 .pcard{background:#fff;border:1px solid var(--bd);border-radius:var(--rxl);padding:0;overflow:hidden;box-shadow:var(--ss);transition:all .25s;display:flex;flex-direction:column;position:relative}
 .pcard:hover{box-shadow:var(--sm);transform:translateY(-4px)}
@@ -153,7 +153,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pcard.premium .pribbon{background:#0661de;color:var(--navy3)}
 .phead{padding:30px 28px 0}
 .ptag{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem}
-.pcard.premium .ptag{color:#60a5fa}
+.pcard.premium .ptag{color:#e8f1fd}
 .ptitle{font-family:var(--f);font-size:1.45rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
 .pcard.premium .ptitle{color:#fff}
 .psub{font-size:.83rem;color:var(--tm);margin-bottom:1.4rem;line-height:1.5;min-height:2.5em}
@@ -165,8 +165,8 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .ptier-label-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
 .ptier-label{font-size:.72rem;font-weight:700;color:var(--navy);letter-spacing:.04em}
 .pcard.premium .ptier-label{color:#fff}
-.ptier-savings{font-size:.65rem;font-weight:700;color:var(--green);background:#dbeafe;padding:2px 8px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase}
-.pcard.premium .ptier-savings{background:rgba(52,211,153,.2);color:#34d399}
+.ptier-savings{font-size:.65rem;font-weight:700;color:var(--green);background:#e8f1fd;padding:2px 8px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase}
+.pcard.premium .ptier-savings{background:rgba(52,211,153,.2);color:#0661de}
 .ptier-price-row{display:flex;align-items:baseline;gap:5px}
 .ptier-price{font-family:var(--f);font-size:1.4rem;font-weight:700;color:var(--navy);line-height:1}
 .pcard.premium .ptier-price{color:#fff}
@@ -181,7 +181,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pfeats li{font-size:.83rem;color:var(--t2);display:flex;align-items:flex-start;gap:8px;line-height:1.45}
 .pcard.premium .pfeats li{color:rgba(255,255,255,.75)}
 .pfeats li svg{width:14px;height:14px;flex-shrink:0;margin-top:3px;stroke:#0661de;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.pcard.premium .pfeats li svg{stroke:#60d394}
+.pcard.premium .pfeats li svg{stroke:#0661de}
 .pnote{font-size:.74rem;color:var(--tl);line-height:1.5;padding:9px 11px;background:var(--bg2);border-radius:var(--rsm);margin-bottom:1.1rem}
 .pcard.premium .pnote{background:rgba(255,255,255,.06);color:rgba(255,255,255,.4)}
 .pbtn{display:block;text-align:center;padding:12px;border-radius:4px;font-size:.88rem;font-weight:600;font-family:var(--f);text-decoration:none;transition:all .15s;border:none;cursor:pointer;width:100%}
@@ -216,11 +216,11 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .form-section{background:#022049;padding:80px 5vw;color:#fff}
 .form-wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
 .form-info h2{font-family:var(--f);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:1rem}
-.form-info h2 em{font-style:normal;color:#60a5fa}
+.form-info h2 em{font-style:normal;color:#e8f1fd}
 .form-info p{font-size:1rem;color:rgba(255,255,255,.65);line-height:1.65;margin-bottom:1.5rem}
 .form-bullets{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:1.5rem}
 .form-bullets li{font-size:.92rem;color:rgba(255,255,255,.85);display:flex;align-items:flex-start;gap:10px}
-.form-bullets li svg{width:18px;height:18px;stroke:#60a5fa;flex-shrink:0;margin-top:2px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.form-bullets li svg{width:18px;height:18px;stroke:#e8f1fd;flex-shrink:0;margin-top:2px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .form-card{background:#fff;border-radius:var(--rxl);padding:36px;box-shadow:var(--sl);color:var(--t)}
 .form-card h3{font-family:var(--f);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
 .form-card .subtitle{font-size:.82rem;color:var(--tl);margin-bottom:1.5rem}
@@ -234,7 +234,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .submit-btn:hover{background:var(--blue2)}
 .submit-btn:disabled{opacity:.5;cursor:not-allowed}
 .success-msg{display:none;text-align:center;padding:32px 24px}
-.success-msg svg{width:56px;height:56px;stroke:#044fba;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1rem}
+.success-msg svg{width:56px;height:56px;stroke:#0550b8;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1rem}
 .success-msg h3{font-family:var(--f);font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
 .success-msg p{font-size:.92rem;color:var(--tm);line-height:1.6}
 .success-msg .highlight{font-weight:700;color:var(--navy);margin:.4rem 0}
@@ -260,7 +260,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .fcol a:hover{color:rgba(255,255,255,.8)}
 .fbot{max-width:1200px;margin:36px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
 .fbot p,.fbot a{font-size:.72rem;color:rgba(255,255,255,.2);text-decoration:none}
-.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
+.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#022049;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#5a6b85;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 
 
 
@@ -301,13 +301,13 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 
 /* ═══ TELEGRAM ENROLLMENT SECTION ═══ */
 .tg-enroll-wrap{max-width:760px;margin:0 auto;padding:80px 5vw;text-align:center}
-.tg-enroll-badge{display:inline-flex;align-items:center;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.25);color:#60a5fa;font-size:.72rem;font-weight:700;padding:5px 14px;border-radius:4px;margin-bottom:1.4rem;letter-spacing:.08em;text-transform:uppercase}
+.tg-enroll-badge{display:inline-flex;align-items:center;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.25);color:#e8f1fd;font-size:.72rem;font-weight:700;padding:5px 14px;border-radius:4px;margin-bottom:1.4rem;letter-spacing:.08em;text-transform:uppercase}
 .tg-enroll-h2{font-family:var(--f);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:1rem}
-.tg-enroll-h2 em{font-style:normal;color:#60a5fa}
+.tg-enroll-h2 em{font-style:normal;color:#e8f1fd}
 .tg-enroll-sub{font-size:1rem;color:rgba(255,255,255,.65);max-width:500px;margin:0 auto 2.5rem;line-height:1.7}
 .tg-enroll-steps{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:2.5rem;flex-wrap:wrap}
 .tg-step{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:140px}
-.tg-step-num{width:40px;height:40px;border-radius:50%;background:rgba(96,165,250,.15);border:1.5px solid rgba(96,165,250,.3);color:#60a5fa;font-family:var(--f);font-size:1.1rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.tg-step-num{width:40px;height:40px;border-radius:50%;background:rgba(96,165,250,.15);border:1.5px solid rgba(96,165,250,.3);color:#e8f1fd;font-family:var(--f);font-size:1.1rem;font-weight:700;display:flex;align-items:center;justify-content:center}
 .tg-step-text{font-size:.78rem;color:rgba(255,255,255,.6);line-height:1.4;text-align:center}
 .tg-step-arrow{font-size:1.2rem;color:rgba(255,255,255,.2);flex-shrink:0}
 @media(max-width:600px){.tg-step-arrow{display:none}.tg-enroll-steps{gap:20px}}
@@ -327,9 +327,9 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pg-hero{background:#022049;padding:64px 5vw 56px;color:#fff;position:relative;overflow:hidden}
 .pg-hero::before{content:"";position:absolute;inset:0;background:transparent;pointer-events:none}
 .pg-hero-inner{max-width:1100px;margin:0 auto;position:relative}
-.pg-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.25);color:#60a5fa;font-size:.7rem;font-weight:700;padding:4px 13px;border-radius:4px;margin-bottom:1rem;letter-spacing:.06em;text-transform:uppercase}
+.pg-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.25);color:#e8f1fd;font-size:.7rem;font-weight:700;padding:4px 13px;border-radius:4px;margin-bottom:1rem;letter-spacing:.06em;text-transform:uppercase}
 .pg-hero h1{font-family:var(--f);font-size:clamp(1.8rem,4vw,2.9rem);font-weight:700;color:#fff;letter-spacing:-.04em;line-height:1.08;margin-bottom:.8rem}
-.pg-hero h1 em{font-style:normal;color:#60a5fa}
+.pg-hero h1 em{font-style:normal;color:#e8f1fd}
 .pg-hero-sub{font-size:.98rem;color:rgba(255,255,255,.68);line-height:1.75;margin-bottom:1.6rem;max-width:620px}
 .pg-hero-btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn-tg-pg{display:inline-flex;align-items:center;gap:8px;background:#0661de;color:#fff;padding:13px 26px;border-radius:4px;font-family:var(--f);font-size:.9rem;font-weight:700;text-decoration:none;box-shadow:none;transition:all .2s}
@@ -355,7 +355,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .cta-banner{background:#022049;border-radius:4px;padding:44px 40px;text-align:center;color:#fff;margin:48px 0;position:relative;overflow:hidden}
 .cta-banner::before{content:"";position:absolute;inset:0;background:transparent;pointer-events:none}
 .cta-banner h2{font-family:var(--f);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;color:#fff;margin-bottom:.6rem;letter-spacing:-.02em;position:relative}
-.cta-banner h2 em{font-style:normal;color:#60a5fa}
+.cta-banner h2 em{font-style:normal;color:#e8f1fd}
 .cta-banner p{font-size:.93rem;color:rgba(255,255,255,.65);margin-bottom:1.6rem;line-height:1.7;position:relative}
 .cta-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;position:relative}
 .faq-list{display:flex;flex-direction:column;gap:10px}
@@ -389,9 +389,9 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
   font-size:.83rem!important;font-weight:500!important;
   display:flex!important;align-items:center;white-space:nowrap;
   border-bottom:none!important;line-height:1.3;
-  color:var(--t,#1d1d1f)!important;text-decoration:none;
+  color:var(--t,#022049)!important;text-decoration:none;
   transition:background .12s,color .12s}
-.dd li a:hover{background:#f0f4ff;color:var(--blue,#0661de)!important}
+.dd li a:hover{background:#e8f1fd;color:var(--blue,#0661de)!important}
 .dd li:not(:last-child) a{border-bottom:1px solid rgba(0,0,0,.045)!important}
 .nlinks .dd-arrow{font-size:.65rem;margin-left:3px;opacity:.5;transition:transform .2s}
 .nlinks li.has-dd:hover .dd-arrow{opacity:.9}
@@ -402,28 +402,28 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
   box-shadow:none;border-radius:0 0 4px 4px}
 .mob-nav.open{display:block}
 .mob-nav .mob-list{list-style:none;padding:6px 0 12px;margin:0}
-.mob-nav .mob-list>li>a{display:block;padding:13px 20px;color:var(--t,#1d1d1f);
-  font-size:.95rem;text-decoration:none;border-bottom:1px solid #f5f5f7}
-.mob-nav .mob-list>li>a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-nav .mob-list>li>a{display:block;padding:13px 20px;color:var(--t,#022049);
+  font-size:.95rem;text-decoration:none;border-bottom:1px solid #f4f7fb}
+.mob-nav .mob-list>li>a:hover{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-group-hd{display:flex;align-items:center;justify-content:space-between;
-  width:100%;padding:13px 20px;background:none;border:none;border-bottom:1px solid #f5f5f7;
-  color:var(--t,#1d1d1f);font-size:.95rem;font-weight:500;cursor:pointer;text-align:left;
+  width:100%;padding:13px 20px;background:none;border:none;border-bottom:1px solid #f4f7fb;
+  color:var(--t,#022049);font-size:.95rem;font-weight:500;cursor:pointer;text-align:left;
   font-family:inherit}
-.mob-group-hd:hover,.mob-group.open .mob-group-hd{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-group-hd:hover,.mob-group.open .mob-group-hd{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-arrow{transition:transform .22s;flex-shrink:0}
 .mob-group.open .mob-arrow{transform:rotate(180deg)}
 .mob-group-body{list-style:none;padding:0;margin:0;
-  max-height:0;overflow:hidden;transition:max-height .28s ease;background:#fafafa}
+  max-height:0;overflow:hidden;transition:max-height .28s ease;background:#f4f7fb}
 .mob-group.open .mob-group-body{max-height:400px}
 .mob-group-body li a{display:block;padding:10px 20px 10px 30px;
-  color:var(--tm,#6e6e73);font-size:.88rem;text-decoration:none;
-  border-bottom:1px solid #f5f5f7}
-.mob-group-body li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+  color:var(--tm,#5a6b85);font-size:.88rem;text-decoration:none;
+  border-bottom:1px solid #f4f7fb}
+.mob-group-body li a:hover{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-nav .mob-enroll{display:block;margin:12px 20px 8px;padding:14px 24px;
   background:var(--blue,#0661de);color:#fff!important;border-radius:4px;
   text-align:center;font-weight:600;font-size:.95rem;border-bottom:none!important;
   text-decoration:none}
-.mob-nav .mob-enroll:hover{background:#0550c0!important;color:#fff!important}
+.mob-nav .mob-enroll:hover{background:#0550b8!important;color:#fff!important}
 /* Hamburger → X animation */
 .nham svg line{transition:all .25s;transform-box:fill-box;transform-origin:center}
 .nham.open svg line:first-child{transform:translateY(6px) rotate(45deg)}
@@ -521,10 +521,9 @@ nav.scrolled{
   gtag('js', new Date());
   gtag('config', 'G-H7P88TD85G');
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/theme.css?v=3">
+<link rel="preload" href="/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/theme.css?v=4">
 </head>
 <body>
 
@@ -533,30 +532,30 @@ nav.scrolled{
 <div class="sx-hd" id="sx-hd" role="banner">
   <div class="sx-wrap">
     <div class="sx-hd-in">
-      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/logo.png" alt="" width="34" height="34"><span><small>SAT</small>Samarkand</span></a>
+      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/brand/mark-primary.png" alt="" width="35" height="40"><span>SAT Samarkand</span></a>
       <div class="sx-nav" role="navigation" aria-label="Main">
-        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All courses" data-uz="Barcha kurslar" data-ru="Все курсы">All courses</a><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions consulting</a><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div></div>
         <div class="sx-nav-i"><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div></div>
         <div class="sx-nav-i"><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></div>
         <div class="sx-nav-i"><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></div>
       </div>
       <div class="sx-langs" role="group" aria-label="Language"><button class="lb" data-lang="en" onclick="setLang('en')">EN</button><button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button><button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button></div>
-      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a>
+      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a>
       <button class="sx-burger" id="sx-burger" aria-label="Menu" aria-expanded="false"><i></i></button>
     </div>
     <div class="sx-drawer" role="navigation" aria-label="Mobile">
       <a class="sx-has-sub" href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a>
-      <div class="sx-sub"><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div>
+      <div class="sx-sub"><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div>
       <a class="sx-has-sub" href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a>
-      <div class="sx-sub"><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div>
+      <div class="sx-sub"><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div>
       <a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a>
       <a class="sx-has-sub" href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a>
-      <div class="sx-sub"><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div>
+      <div class="sx-sub"><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div>
       <a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a>
       <a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a>
-      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a></div>
+      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a></div>
     </div>
   </div>
 </div>
@@ -567,8 +566,8 @@ nav.scrolled{
 <section class="pg-hero">
 <div class="pg-hero-inner">
   <div class="pg-badge" data-en="SAT Preparation Blog" data-uz="SAT Blog" data-ru="&#1041;&#1083;&#1086;&#1075; SAT">SAT Preparation Blog</div>
-  <h1 data-en="SAT tips, guides &amp; <em>insights from Samarkand.</em>" data-uz="SAT maslahatlar, qo&#39;llanmalar &amp; <em>Samarqanddan tushunchalar.</em>" data-ru="&#1057;&#1086;&#1074;&#1077;&#1090;&#1099;, &#1088;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1072; &amp; <em>&#1080;&#1085;&#1089;&#1072;&#1081;&#1090;&#1099; &#1080;&#1079; &#1057;&#1072;&#1084;&#1072;&#1088;&#1082;&#1072;&#1085;&#1076;&#1072;.</em>">SAT tips, guides &amp; <em>insights from Samarkand.</em></h1>
-  <p class="pg-hero-sub" data-en="Practical SAT preparation advice for students in Uzbekistan. Written by SAT Samarkand mentors who aced the SAT themselves." data-uz="O&#39;zbekistondagi talabalar uchun amaliy SAT tayyorgarlik maslahatlari. O&#39;zlari SATda yuqori natija olgan SAT Samarqand mentorlari tomonidan yozilgan." data-ru="&#1055;&#1088;&#1072;&#1082;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1089;&#1086;&#1074;&#1077;&#1090;&#1099; &#1087;&#1086; &#1087;&#1086;&#1076;&#1075;&#1086;&#1090;&#1086;&#1074;&#1082;&#1077; SAT &#1076;&#1083;&#1103; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074; &#1074; &#1059;&#1079;&#1073;&#1077;&#1082;&#1080;&#1089;&#1090;&#1072;&#1085;&#1077;.">Practical SAT preparation advice for students in Uzbekistan. Written by mentors who aced the SAT themselves.</p>
+  <h1 data-en="SAT tips, guides &amp; <em>insights from Samarkand.</em>" data-uz="SAT maslahatlar, qoʻllanmalar &amp; <em>Samarqanddan tushunchalar.</em>" data-ru="&#1057;&#1086;&#1074;&#1077;&#1090;&#1099;, &#1088;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1072; &amp; <em>&#1080;&#1085;&#1089;&#1072;&#1081;&#1090;&#1099; &#1080;&#1079; &#1057;&#1072;&#1084;&#1072;&#1088;&#1082;&#1072;&#1085;&#1076;&#1072;.</em>">SAT tips, guides &amp; <em>insights from Samarkand.</em></h1>
+  <p class="pg-hero-sub" data-en="Practical SAT preparation advice for students in Uzbekistan. Written by SAT Samarkand mentors who aced the SAT themselves." data-uz="Oʻzbekistondagi talabalar uchun amaliy SAT tayyorgarlik maslahatlari. Oʻzlari SATda yuqori natija olgan SAT Samarqand mentorlari tomonidan yozilgan." data-ru="&#1055;&#1088;&#1072;&#1082;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1089;&#1086;&#1074;&#1077;&#1090;&#1099; &#1087;&#1086; &#1087;&#1086;&#1076;&#1075;&#1086;&#1090;&#1086;&#1074;&#1082;&#1077; SAT &#1076;&#1083;&#1103; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074; &#1074; &#1059;&#1079;&#1073;&#1077;&#1082;&#1080;&#1089;&#1090;&#1072;&#1085;&#1077;.">Practical SAT preparation advice for students in Uzbekistan. Written by mentors who aced the SAT themselves.</p>
   <div class="pg-hero-btns" style="margin-top:1.4rem">
     <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="btn-tg-pg">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -581,9 +580,9 @@ nav.scrolled{
 
 <div class="pg-wrap">
 <section class="pg-section">
-  <div class="slbl-pg" data-en="LATEST ARTICLES" data-uz="SO&#39;NGGI MAQOLALAR" data-ru="&#1057;&#1042;&#1045;&#1046;&#1048;&#1045; &#1057;&#1058;&#1040;&#1058;&#1068;&#1048;">LATEST ARTICLES</div>
-  <h2 class="pg-h2" data-en="Expert guides <em>for Uzbek students.</em>" data-uz="O&#39;zbek talabalar uchun <em>ekspert qo&#39;llanmalar.</em>" data-ru="&#1069;&#1082;&#1089;&#1087;&#1077;&#1088;&#1090;&#1085;&#1099;&#1077; &#1088;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1072; <em>&#1076;&#1083;&#1103; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074;.</em>">Expert guides <em>for Uzbek students.</em></h2>
-  <p class="pg-lead" data-en="Practical SAT preparation advice from mentors who aced the SAT themselves. In English, Uzbek, and Russian." data-uz="O&#39;zlari SATda yuqori natija olgan mentorlardan amaliy SAT maslahatlari." data-ru="&#1055;&#1088;&#1072;&#1082;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1089;&#1086;&#1074;&#1077;&#1090;&#1099; &#1086;&#1090; &#1084;&#1077;&#1085;&#1090;&#1086;&#1088;&#1086;&#1074;, &#1085;&#1072;&#1073;&#1088;&#1072;&#1074;&#1096;&#1080;&#1093; 1500+.">Practical SAT preparation advice from mentors who aced the SAT themselves.</p>
+  <div class="slbl-pg" data-en="LATEST ARTICLES" data-uz="SOʻNGGI MAQOLALAR" data-ru="&#1057;&#1042;&#1045;&#1046;&#1048;&#1045; &#1057;&#1058;&#1040;&#1058;&#1068;&#1048;">LATEST ARTICLES</div>
+  <h2 class="pg-h2" data-en="Expert guides <em>for Uzbek students.</em>" data-uz="Oʻzbek talabalar uchun <em>ekspert qoʻllanmalar.</em>" data-ru="&#1069;&#1082;&#1089;&#1087;&#1077;&#1088;&#1090;&#1085;&#1099;&#1077; &#1088;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1072; <em>&#1076;&#1083;&#1103; &#1089;&#1090;&#1091;&#1076;&#1077;&#1085;&#1090;&#1086;&#1074;.</em>">Expert guides <em>for Uzbek students.</em></h2>
+  <p class="pg-lead" data-en="Practical SAT preparation advice from mentors who aced the SAT themselves. In English, Uzbek, and Russian." data-uz="Oʻzlari SATda yuqori natija olgan mentorlardan amaliy SAT maslahatlari." data-ru="&#1055;&#1088;&#1072;&#1082;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1089;&#1086;&#1074;&#1077;&#1090;&#1099; &#1086;&#1090; &#1084;&#1077;&#1085;&#1090;&#1086;&#1088;&#1086;&#1074;, &#1085;&#1072;&#1073;&#1088;&#1072;&#1074;&#1096;&#1080;&#1093; 1500+.">Practical SAT preparation advice from mentors who aced the SAT themselves.</p>
 
   <style>
   .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:2rem}
@@ -605,7 +604,7 @@ nav.scrolled{
 
   <div class="blog-grid">
     <a href="/blog/how-to-score-1500-digital-sat/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#011533">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:130px;display:block">
     <defs>
       <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
@@ -646,7 +645,7 @@ nav.scrolled{
     <text x="260" y="125" text-anchor="middle" fill="rgba(255,255,255,.35)" font-size="8" font-family="system-ui,sans-serif">Month 3</text>
   </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -654,7 +653,7 @@ nav.scrolled{
       </div>
     </a>
     <a href="/blog/sat-vs-ielts-uzbekistan/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#04082a">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g2a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1f"/><stop offset="100%" stop-color="#0a2555"/></linearGradient>
@@ -681,11 +680,11 @@ nav.scrolled{
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT vs IELTS for Uzbek Students: Which Should You Take?" data-uz="SAT vs IELTS: O'zbek talabalar uchun qaysi biri?" data-ru="SAT или IELTS: что сдавать?">SAT vs IELTS for Uzbek Students: Which Should You Take?</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT vs IELTS for Uzbek Students: Which Should You Take?" data-uz="SAT vs IELTS: Oʻzbek talabalar uchun qaysi biri?" data-ru="SAT или IELTS: что сдавать?">SAT vs IELTS for Uzbek Students: Which Should You Take?</div>
       </div>
     </a>
     <a href="/blog/sat-registration-uzbekistan-2026/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030c1e">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g3a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030c1e"/><stop offset="100%" stop-color="#071f42"/></linearGradient>
@@ -720,15 +719,15 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Registration in Uzbekistan 2026: Step-by-Step Guide" data-uz="O'zbekistonda SAT ro'yxatdan o'tish 2026" data-ru="Регистрация на SAT в Узбекистане 2026">SAT Registration in Uzbekistan 2026: Step-by-Step Guide</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Registration in Uzbekistan 2026: Step-by-Step Guide" data-uz="Oʻzbekistonda SAT roʻyxatdan oʻtish 2026" data-ru="Регистрация на SAT в Узбекистане 2026">SAT Registration in Uzbekistan 2026: Step-by-Step Guide</div>
       </div>
     </a>
     <a href="/blog/digital-sat-vs-paper-sat/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030f22">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g4a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030f22"/><stop offset="100%" stop-color="#0a2040"/></linearGradient>
@@ -764,15 +763,15 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Digital SAT vs Paper SAT: What Changed and What It Means for You" data-uz="Digital SAT vs qog'oz SAT: nima o'zgardi?" data-ru="Digital SAT vs бумажный SAT: что изменилось">Digital SAT vs Paper SAT: What Changed and What It Means for You</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Digital SAT vs Paper SAT: What Changed and What It Means for You" data-uz="Digital SAT vs qogʻoz SAT: nima oʻzgardi?" data-ru="Digital SAT vs бумажный SAT: что изменилось">Digital SAT vs Paper SAT: What Changed and What It Means for You</div>
       </div>
     </a>
     <a href="/blog/sat-preparation-samarkand-complete-guide/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#02091c">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g6a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#02091c"/><stop offset="100%" stop-color="#07184a"/></linearGradient>
@@ -797,15 +796,15 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Preparation in Samarkand: The Complete 2026 Guide" data-uz="Samarkandda SAT tayyorgarlik: to'liq qo'llanma 2026" data-ru="Подготовка к SAT в Самарканде: полный гайд 2026">SAT Preparation in Samarkand: The Complete 2026 Guide</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Preparation in Samarkand: The Complete 2026 Guide" data-uz="Samarkandda SAT tayyorgarlik: toʻliq qoʻllanma 2026" data-ru="Подготовка к SAT в Самарканде: полный гайд 2026">SAT Preparation in Samarkand: The Complete 2026 Guide</div>
       </div>
     </a>
     <a href="/blog/samarkand-students-us-universities-sat-stories/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#020a1c">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g7a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#020a1c"/><stop offset="100%" stop-color="#061a3e"/></linearGradient>
@@ -870,15 +869,15 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Prep for Samarkand's Presidential School Students" data-uz="Samarkand Prezident maktabi o'quvchilari uchun SAT" data-ru="SAT для студентов Президентской школы Самарканда">SAT Prep for Samarkand's Presidential School Students</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Prep for Samarkand's Presidential School Students" data-uz="Samarkand Prezident maktabi oʻquvchilari uchun SAT" data-ru="SAT для студентов Президентской школы Самарканда">SAT Prep for Samarkand's Presidential School Students</div>
       </div>
     </a>
     <a href="/blog/uzbek-math-advantage-sat/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030d1d">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g9a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1d"/><stop offset="100%" stop-color="#071d3a"/></linearGradient>
@@ -905,11 +904,11 @@ nav.scrolled{
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Uzbek Students' Hidden SAT Math Advantage (And How to Use It)" data-uz="O'zbek talabalarning SAT matematika afzalligi" data-ru="Скрытое преимущество узбекских студентов по математике SAT">Uzbek Students' Hidden SAT Math Advantage (And How to Use It)</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Uzbek Students' Hidden SAT Math Advantage (And How to Use It)" data-uz="Oʻzbek talabalarning SAT matematika afzalligi" data-ru="Скрытое преимущество узбекских студентов по математике SAT">Uzbek Students' Hidden SAT Math Advantage (And How to Use It)</div>
       </div>
     </a>
     <a href="/blog/sat-prep-schedule-samarkand-school/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#020c1e">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g10a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#020c1e"/><stop offset="100%" stop-color="#071b3c"/></linearGradient>
@@ -939,11 +938,11 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Prep Schedule for Samarkand School Students: Weekly Plan" data-uz="Samarkand maktab o'quvchilari uchun SAT jadval" data-ru="Расписание подготовки к SAT для школьников Самарканда">SAT Prep Schedule for Samarkand School Students: Weekly Plan</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Prep Schedule for Samarkand School Students: Weekly Plan" data-uz="Samarkand maktab oʻquvchilari uchun SAT jadval" data-ru="Расписание подготовки к SAT для школьников Самарканда">SAT Prep Schedule for Samarkand School Students: Weekly Plan</div>
       </div>
     </a>
     <a href="/blog/sat-ball-nechta-kerak/" class="blog-card">
@@ -974,15 +973,15 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="How Many SAT Points Do You Need? (Uzbek University Guide)" data-uz="SAT uchun necha ball kerak: to'liq qo'llanma" data-ru="Сколько баллов SAT нужно?">How Many SAT Points Do You Need? (Uzbek University Guide)</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="How Many SAT Points Do You Need? (Uzbek University Guide)" data-uz="SAT uchun necha ball kerak: toʻliq qoʻllanma" data-ru="Сколько баллов SAT нужно?">How Many SAT Points Do You Need? (Uzbek University Guide)</div>
       </div>
     </a>
     <a href="/blog/ozbekistonda-sat-qayerda-topshirish/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030c1e">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g12a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030c1e"/><stop offset="100%" stop-color="#071c3c"/></linearGradient>
@@ -1003,11 +1002,11 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Where to Take SAT in Uzbekistan (2026 Guide)" data-uz="O'zbekistonda SAT qayerda topshirish mumkin 2026" data-ru="Где сдать SAT в Узбекистане 2026">Where to Take SAT in Uzbekistan (2026 Guide)</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Where to Take SAT in Uzbekistan (2026 Guide)" data-uz="Oʻzbekistonda SAT qayerda topshirish mumkin 2026" data-ru="Где сдать SAT в Узбекистане 2026">Where to Take SAT in Uzbekistan (2026 Guide)</div>
       </div>
     </a>
     <a href="/blog/sat-va-yos-turkiya-universitetlari/" class="blog-card">
@@ -1036,11 +1035,11 @@ nav.scrolled{
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT vs YÖS for Turkish Universities: Uzbek Student's Guide" data-uz="SAT va YÖS Turkiya universitetlari uchun: qo'llanma" data-ru="SAT vs YÖS для турецких университетов">SAT vs YÖS for Turkish Universities: Uzbek Student's Guide</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT vs YÖS for Turkish Universities: Uzbek Student's Guide" data-uz="SAT va YÖS Turkiya universitetlari uchun: qoʻllanma" data-ru="SAT vs YÖS для турецких университетов">SAT vs YÖS for Turkish Universities: Uzbek Student's Guide</div>
       </div>
     </a>
     <a href="/blog/koreya-universitetlari-sat-bali/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030b1e">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g14a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030b1e"/><stop offset="100%" stop-color="#071a3c"/></linearGradient>
@@ -1077,11 +1076,11 @@ nav.scrolled{
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Korean Universities SAT Score Requirements for Uzbek Students" data-uz="Koreya universitetlari uchun SAT ball: to'liq jadval" data-ru="Баллы SAT для корейских университетов">Korean Universities SAT Score Requirements for Uzbek Students</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Korean Universities SAT Score Requirements for Uzbek Students" data-uz="Koreya universitetlari uchun SAT ball: toʻliq jadval" data-ru="Баллы SAT для корейских университетов">Korean Universities SAT Score Requirements for Uzbek Students</div>
       </div>
     </a>
     <a href="/blog/podgotovka-k-sat-samarkand/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#02091c">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g15a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#02091c"/><stop offset="100%" stop-color="#061840"/></linearGradient>
@@ -1106,7 +1105,7 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -1114,7 +1113,7 @@ nav.scrolled{
       </div>
     </a>
     <a href="/blog/sat-ili-ielts-uzbekistan-ru/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#04082a">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g16a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1f"/><stop offset="100%" stop-color="#0a2555"/></linearGradient>
@@ -1140,11 +1139,11 @@ nav.scrolled{
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT or IELTS: Which to Choose for Uzbekistan Students? (RU)" data-uz="SAT yoki IELTS: O'zbek talabalari uchun (RU)" data-ru="SAT или IELTS: что выбрать студентам из Узбекистана?">SAT or IELTS: Which to Choose for Uzbekistan Students? (RU)</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT or IELTS: Which to Choose for Uzbekistan Students? (RU)" data-uz="SAT yoki IELTS: Oʻzbek talabalari uchun (RU)" data-ru="SAT или IELTS: что выбрать студентам из Узбекистана?">SAT or IELTS: Which to Choose for Uzbekistan Students? (RU)</div>
       </div>
     </a>
     <a href="/blog/sat-math-tips-uzbek-students/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030d1d">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g17a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1d"/><stop offset="100%" stop-color="#071d3a"/></linearGradient>
@@ -1179,11 +1178,11 @@ nav.scrolled{
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Math Tips That Actually Work for Uzbek Students" data-uz="O'zbek talabalar uchun SAT matematika maslahatlari" data-ru="Советы по математике SAT для узбекских студентов">SAT Math Tips That Actually Work for Uzbek Students</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Math Tips That Actually Work for Uzbek Students" data-uz="Oʻzbek talabalar uchun SAT matematika maslahatlari" data-ru="Советы по математике SAT для узбекских студентов">SAT Math Tips That Actually Work for Uzbek Students</div>
       </div>
     </a>
     <a href="/blog/sat-reading-writing-tips-uzbek/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030d1d">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="g18a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1d"/><stop offset="100%" stop-color="#071d3a"/></linearGradient>
@@ -1220,11 +1219,11 @@ nav.scrolled{
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Reading & Writing Tips for Uzbek Students" data-uz="O'zbek talabalar uchun SAT Reading & Writing maslahatlari" data-ru="Советы по чтению и письму SAT для узбекских студентов">SAT Reading & Writing Tips for Uzbek Students</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Reading & Writing Tips for Uzbek Students" data-uz="Oʻzbek talabalar uchun SAT Reading & Writing maslahatlari" data-ru="Советы по чтению и письму SAT для узбекских студентов">SAT Reading & Writing Tips for Uzbek Students</div>
       </div>
     </a>
     <a href="/blog/aqsh-universitetlari-sat-bali-2026/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030b1e">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030b1e"/><stop offset="100%" stop-color="#071c3c"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#rg1)"/>
@@ -1257,7 +1256,7 @@ nav.scrolled{
       </div>
     </a>
     <a href="/blog/germaniya-universitetlari-sat-bali/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030b1e">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030b1e"/><stop offset="100%" stop-color="#071c3c"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#rg2)"/>
@@ -1286,7 +1285,7 @@ nav.scrolled{
       </div>
     </a>
     <a href="/blog/how-long-sat-score-valid/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030e20">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030e20"/><stop offset="100%" stop-color="#081e3e"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#rg3)"/>
@@ -1316,7 +1315,7 @@ nav.scrolled{
       </div>
     </a>
     <a href="/blog/how-to-improve-sat-score-fast/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030d1d">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1d"/><stop offset="100%" stop-color="#071d3a"/></linearGradient>
     <linearGradient id="rg4b" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#0661de"/><stop offset="100%" stop-color="#0661de"/></linearGradient>
@@ -1368,11 +1367,11 @@ nav.scrolled{
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Scholarships for Uzbekistan Students — Role of SAT (RU)" data-uz="O'zbek talabalari uchun stipendiyalar — SAT roli" data-ru="Стипендии для студентов из Узбекистана: роль SAT">Scholarships for Uzbekistan Students — Role of SAT (RU)</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Scholarships for Uzbekistan Students — Role of SAT (RU)" data-uz="Oʻzbek talabalari uchun stipendiyalar — SAT roli" data-ru="Стипендии для студентов из Узбекистана: роль SAT">Scholarships for Uzbekistan Students — Role of SAT (RU)</div>
       </div>
     </a>
     <a href="/blog/sat-test-day-complete-guide/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030c1e">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg6" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030c1e"/><stop offset="100%" stop-color="#071c3c"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#rg6)"/>
@@ -1393,15 +1392,15 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Test Day: Complete Checklist and What to Expect" data-uz="SAT imtihon kuni: to'liq tekshiruv va nima kutish" data-ru="День экзамена SAT: полный чеклист и что ожидать">SAT Test Day: Complete Checklist and What to Expect</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Test Day: Complete Checklist and What to Expect" data-uz="SAT imtihon kuni: toʻliq tekshiruv va nima kutish" data-ru="День экзамена SAT: полный чеклист и что ожидать">SAT Test Day: Complete Checklist and What to Expect</div>
       </div>
     </a>
     <a href="/blog/sat-vs-act-which-is-better/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#04082a">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg7" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1f"/><stop offset="100%" stop-color="#0a2555"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#rg7)"/>
@@ -1420,11 +1419,11 @@ nav.scrolled{
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT vs ACT: Which Test Is Better for Uzbek Students?" data-uz="SAT vs ACT: O'zbek talabalar uchun qaysi biri?" data-ru="SAT vs ACT: какой тест лучше для узбекских студентов?">SAT vs ACT: Which Test Is Better for Uzbek Students?</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT vs ACT: Which Test Is Better for Uzbek Students?" data-uz="SAT vs ACT: Oʻzbek talabalar uchun qaysi biri?" data-ru="SAT vs ACT: какой тест лучше для узбекских студентов?">SAT vs ACT: Which Test Is Better for Uzbek Students?</div>
       </div>
     </a>
     <a href="/blog/sat-prep-6-month-timeline/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#020c1e">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg8" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#020c1e"/><stop offset="100%" stop-color="#071b3c"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#rg8)"/>
@@ -1452,11 +1451,11 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="6-Month SAT Prep Timeline: Week-by-Week Study Plan" data-uz="6 oylik SAT tayyorgarlik: haftalik o'qish rejasi" data-ru="6-месячный план подготовки к SAT: понедельный план">6-Month SAT Prep Timeline: Week-by-Week Study Plan</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="6-Month SAT Prep Timeline: Week-by-Week Study Plan" data-uz="6 oylik SAT tayyorgarlik: haftalik oʻqish rejasi" data-ru="6-месячный план подготовки к SAT: понедельный план">6-Month SAT Prep Timeline: Week-by-Week Study Plan</div>
       </div>
     </a>
     <a href="/blog/singapur-universitetlari-sat-bali/" class="blog-card">
@@ -1496,7 +1495,7 @@ nav.scrolled{
   <path d="M0 108 Q100 112 200 108 Q300 104 400 108" fill="#0d2040" opacity=".3"/>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -1504,7 +1503,7 @@ nav.scrolled{
       </div>
     </a>
     <a href="/blog/digital-sat-calculator-guide/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030d1d">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg9" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1d"/><stop offset="100%" stop-color="#071d3a"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#rg9)"/>
@@ -1525,11 +1524,11 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Digital SAT Calculator: Complete Guide to Using Desmos" data-uz="Digital SAT kalkulyator: Desmos qo'llanmasi" data-ru="Калькулятор Digital SAT: как использовать Desmos">Digital SAT Calculator: Complete Guide to Using Desmos</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Digital SAT Calculator: Complete Guide to Using Desmos" data-uz="Digital SAT kalkulyator: Desmos qoʻllanmasi" data-ru="Калькулятор Digital SAT: как использовать Desmos">Digital SAT Calculator: Complete Guide to Using Desmos</div>
       </div>
     </a>
     <a href="/blog/does-digital-sat-have-essay/" class="blog-card">
@@ -1558,7 +1557,7 @@ nav.scrolled{
   <text x="221" y="105" font-size="12" fill="#0661de" font-weight="bold" font-family="monospace">2026 ✓</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -1599,7 +1598,7 @@ nav.scrolled{
   <circle cx="345" cy="45" r="1" fill="white" opacity=".2"/>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -1639,15 +1638,15 @@ nav.scrolled{
   <text x="300" y="86" font-size="14" fill="#0661de">★★★</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="How to Choose SAT Courses in Uzbekistan (RU)" data-uz="O'zbekistonda SAT kurslarini qanday tanlash" data-ru="Как выбрать курсы SAT в Узбекистане">How to Choose SAT Courses in Uzbekistan (RU)</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="How to Choose SAT Courses in Uzbekistan (RU)" data-uz="Oʻzbekistonda SAT kurslarini qanday tanlash" data-ru="Как выбрать курсы SAT в Узбекистане">How to Choose SAT Courses in Uzbekistan (RU)</div>
       </div>
     </a>
     <a href="/blog/sat-percentiles-explained/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030e20">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg10" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030e20"/><stop offset="100%" stop-color="#081e40"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#rg10)"/>
@@ -1665,7 +1664,7 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -1710,7 +1709,7 @@ nav.scrolled{
   <ellipse cx="120" cy="115" rx="60" ry="8" fill="#0661de" opacity=".08"/>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -1743,15 +1742,15 @@ nav.scrolled{
   <text x="300" y="113" font-size="8" fill="white" opacity=".7">11th/12th grade</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Fee Waivers: What International Students Need to Know" data-uz="SAT to'lov imtiyozi xalqaro talabalar uchun" data-ru="Льготы на оплату SAT для международных студентов">SAT Fee Waivers: What International Students Need to Know</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Fee Waivers: What International Students Need to Know" data-uz="SAT toʻlov imtiyozi xalqaro talabalar uchun" data-ru="Льготы на оплату SAT для международных студентов">SAT Fee Waivers: What International Students Need to Know</div>
       </div>
     </a>
     <a href="/blog/sat-preparation-9th-10th-grade/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#020c1e">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg13" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#020c1e"/><stop offset="100%" stop-color="#071b3c"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#rg13)"/>
@@ -1771,11 +1770,11 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Preparation for 9th and 10th Graders in Uzbekistan" data-uz="9 va 10-sinf o'quvchilari uchun SAT tayyorgarlik" data-ru="Подготовка к SAT для 9–10 классов в Узбекистане">SAT Preparation for 9th and 10th Graders in Uzbekistan</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Preparation for 9th and 10th Graders in Uzbekistan" data-uz="9 va 10-sinf oʻquvchilari uchun SAT tayyorgarlik" data-ru="Подготовка к SAT для 9–10 классов в Узбекистане">SAT Preparation for 9th and 10th Graders in Uzbekistan</div>
       </div>
     </a>
     <a href="/blog/xorijda-universitetni-qanday-tanlash/" class="blog-card">
@@ -1818,15 +1817,15 @@ nav.scrolled{
   <text x="210" y="103" font-size="9" fill="white" opacity=".8">Apply early</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="How to Choose a University Abroad: Uzbek Students' Guide (UZ)" data-uz="Xorijda universitetni qanday tanlash: to'liq qo'llanma" data-ru="Как выбрать зарубежный университет для узбекских студентов">How to Choose a University Abroad: Uzbek Students' Guide (UZ)</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="How to Choose a University Abroad: Uzbek Students' Guide (UZ)" data-uz="Xorijda universitetni qanday tanlash: toʻliq qoʻllanma" data-ru="Как выбрать зарубежный университет для узбекских студентов">How to Choose a University Abroad: Uzbek Students' Guide (UZ)</div>
       </div>
     </a>
     <a href="/blog/digital-sat-polnoe-rukovodstvo/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#0a0f1e">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="ds1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#161f3e"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#ds1)"/>
@@ -1852,15 +1851,15 @@ nav.scrolled{
   <text x="340" y="60" font-size="8" fill="rgba(255,255,255,0.05)" font-family="monospace">11010</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Digital SAT 2026: Complete Guide (RU)" data-uz="Digital SAT 2026: to'liq qo'llanma (RU)" data-ru="Digital SAT 2026: полное руководство">Digital SAT 2026: Complete Guide (RU)</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Digital SAT 2026: Complete Guide (RU)" data-uz="Digital SAT 2026: toʻliq qoʻllanma (RU)" data-ru="Digital SAT 2026: полное руководство">Digital SAT 2026: Complete Guide (RU)</div>
       </div>
     </a>
     <a href="/blog/sat-vs-gre-vs-gmat-uzbekistan/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#04082a">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg15" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1f"/><stop offset="100%" stop-color="#0a2555"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#rg15)"/>
@@ -1884,7 +1883,7 @@ nav.scrolled{
       </div>
     </a>
     <a href="/blog/samarkandlik-talabaning-sat-tajribasi/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030d1d">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs>
     <linearGradient id="rg11" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1d"/><stop offset="100%" stop-color="#071d3a"/></linearGradient>
@@ -1942,7 +1941,7 @@ nav.scrolled{
   <text x="318" y="87" font-size="8" fill="rgba(255,255,255,0.5)">universities</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -1950,7 +1949,7 @@ nav.scrolled{
       </div>
     </a>
     <a href="/blog/raspisanie-sat-2026-uzbekistan/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#030c1e">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg12" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030c1e"/><stop offset="100%" stop-color="#071c3c"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#rg12)"/>
@@ -1969,11 +1968,11 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Schedule 2026-2027 for Uzbekistan Students (RU)" data-uz="SAT 2026-2027 sanalar O'zbekiston uchun (RU)" data-ru="Расписание SAT 2026–2027 для студентов из Узбекистана">SAT Schedule 2026-2027 for Uzbekistan Students (RU)</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Schedule 2026-2027 for Uzbekistan Students (RU)" data-uz="SAT 2026-2027 sanalar Oʻzbekiston uchun (RU)" data-ru="Расписание SAT 2026–2027 для студентов из Узбекистана">SAT Schedule 2026-2027 for Uzbekistan Students (RU)</div>
       </div>
     </a>
     <a href="/blog/free-sat-prep-resources-uzbekistan/" class="blog-card">
@@ -2011,11 +2010,11 @@ nav.scrolled{
   <text x="140" y="109" font-size="9" fill="rgba(255,255,255,0.6)">Khan Academy: 40hrs personalized prep</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Free SAT Preparation Resources for Uzbekistan Students" data-uz="O'zbekiston talabalari uchun bepul SAT resurslari" data-ru="Бесплатные ресурсы для подготовки к SAT для студентов из Узбекистана">Free SAT Preparation Resources for Uzbekistan Students</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Free SAT Preparation Resources for Uzbekistan Students" data-uz="Oʻzbekiston talabalari uchun bepul SAT resurslari" data-ru="Бесплатные ресурсы для подготовки к SAT для студентов из Узбекистана">Free SAT Preparation Resources for Uzbekistan Students</div>
       </div>
     </a>
     <a href="/blog/samarkand-talabalari-xorijda-muvaffaqiyat/" class="blog-card">
@@ -2061,7 +2060,7 @@ nav.scrolled{
   <text x="305" y="92" font-size="9" fill="#0661de" font-weight="bold">SAT 1500</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -2104,15 +2103,15 @@ nav.scrolled{
   <text x="185" y="116" font-size="8" fill="rgba(255,255,255,0.5)">→ Time each module</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Advanced SAT Strategies for Students Targeting 1500+" data-uz="1500+ maqsad qilgan talabalar uchun ilg'or SAT strategiyalari" data-ru="Продвинутые стратегии SAT для студентов, нацеленных на 1500+">Advanced SAT Strategies for Students Targeting 1500+</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Advanced SAT Strategies for Students Targeting 1500+" data-uz="1500+ maqsad qilgan talabalar uchun ilgʻor SAT strategiyalari" data-ru="Продвинутые стратегии SAT для студентов, нацеленных на 1500+">Advanced SAT Strategies for Students Targeting 1500+</div>
       </div>
     </a>
     <a href="/blog/sat-vs-dtm-uzbekistan-comparison/" class="blog-card">
-      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#04082a">
+      <div class="blog-card-top" style="position:relative;overflow:hidden;padding:0;min-height:130px;background:#022049">
         <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block" aria-hidden="true">
   <defs><linearGradient id="rg14" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#030d1f"/><stop offset="100%" stop-color="#0a2555"/></linearGradient></defs>
   <rect width="400" height="130" fill="url(#rg14)"/>
@@ -2128,7 +2127,7 @@ nav.scrolled{
 
         </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -2169,7 +2168,7 @@ nav.scrolled{
   <text x="305" y="104" font-size="12" fill="#0661de">★★★★★</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -2205,7 +2204,7 @@ nav.scrolled{
   <text x="240" y="111" font-size="8" fill="#0661de">→ Language only</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -2241,7 +2240,7 @@ nav.scrolled{
   <text x="240" y="109" font-size="8" fill="rgba(255,255,255,0.5)">★ Desmos tricks</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -2287,11 +2286,11 @@ nav.scrolled{
   <circle cx="200" cy="104" r="5" fill="#0661de" opacity=".8"/><text x="210" y="108" font-size="8" fill="#0661de" font-weight="bold">Get accepted! ★</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Complete Guide: Getting Into a Top University from Samarkand" data-uz="Samarkanddan xorijiy universitetga kirish: to'liq qo'llanma" data-ru="Полный гайд: поступление в топ-университет из Самарканда">Complete Guide: Getting Into a Top University from Samarkand</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Complete Guide: Getting Into a Top University from Samarkand" data-uz="Samarkanddan xorijiy universitetga kirish: toʻliq qoʻllanma" data-ru="Полный гайд: поступление в топ-университет из Самарканда">Complete Guide: Getting Into a Top University from Samarkand</div>
       </div>
     </a>
     <a href="/blog/ingliz-tilini-sat-uchun-oshirish/" class="blog-card">
@@ -2330,7 +2329,7 @@ nav.scrolled{
   <text x="185" y="108" font-size="9" fill="#0661de">⚡ Khan Academy R&amp;W</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
@@ -2371,11 +2370,11 @@ nav.scrolled{
   <text x="193" y="104" font-size="8" fill="white" opacity=".8">Canadian Merit Awards</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Scholarship Guide for Samarkand Students: 2026 Opportunities" data-uz="Samarkand talabalari uchun stipendiya qo'llanmasi 2026" data-ru="Гид по стипендиям для студентов из Самарканда: 2026">Scholarship Guide for Samarkand Students: 2026 Opportunities</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Scholarship Guide for Samarkand Students: 2026 Opportunities" data-uz="Samarkand talabalari uchun stipendiya qoʻllanmasi 2026" data-ru="Гид по стипендиям для студентов из Самарканда: 2026">Scholarship Guide for Samarkand Students: 2026 Opportunities</div>
       </div>
     </a>
     <a href="/blog/sat-dlya-roditelej-chto-nado-znat/" class="blog-card">
@@ -2405,11 +2404,11 @@ nav.scrolled{
   <text x="165" y="106" font-size="8" fill="#0661de">✓ All answered inside →</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT for Parents: What You Need to Know About Your Child's Prep (RU)" data-uz="Ota-onalar uchun SAT: bilish kerak bo'lgan narsalar (RU)" data-ru="SAT для родителей: всё, что нужно знать о подготовке ребёнка">SAT for Parents: What You Need to Know About Your Child's Prep (RU)</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT for Parents: What You Need to Know About Your Child's Prep (RU)" data-uz="Ota-onalar uchun SAT: bilish kerak boʻlgan narsalar (RU)" data-ru="SAT для родителей: всё, что нужно знать о подготовке ребёнка">SAT for Parents: What You Need to Know About Your Child's Prep (RU)</div>
       </div>
     </a>
     <a href="/blog/sat-test-centers-samarkand/" class="blog-card">
@@ -2451,11 +2450,11 @@ nav.scrolled{
   <text x="190" y="107" font-size="8" fill="#0661de">⚡ Register 6-8 weeks early!</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Test Centers in Samarkand: Complete 2026 Guide" data-uz="Samarqanddagi SAT test markazlari: to&#39;liq 2026 qo&#39;llanma" data-ru="Тест-центры SAT в Самарканде: полный гайд 2026">SAT Test Centers in Samarkand: Complete 2026 Guide</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="SAT Test Centers in Samarkand: Complete 2026 Guide" data-uz="Samarqanddagi SAT test markazlari: toʻliq 2026 qoʻllanma" data-ru="Тест-центры SAT в Самарканде: полный гайд 2026">SAT Test Centers in Samarkand: Complete 2026 Guide</div>
       </div>
     </a>
     <a href="/blog/why-sat-worth-it-uzbekistan-students/" class="blog-card">
@@ -2485,11 +2484,11 @@ nav.scrolled{
   <text x="155" y="107" font-size="9" fill="#0661de" font-weight="bold">✓ Opens global doors in 2026</text>
 </svg>
         <div style="position:absolute;top:0;left:0;right:0;padding:14px 18px 0">
-          <div class="blog-card-tag" data-en="GUIDE" data-uz="QO'LLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
+          <div class="blog-card-tag" data-en="GUIDE" data-uz="QOʻLLANMA" data-ru="РУКОВОДСТВО">GUIDE</div>
         </div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Why the SAT Is Worth It for Uzbek Students in 2026" data-uz="2026 yilda SAT O'zbek talabalar uchun nima uchun foydali" data-ru="Почему SAT стоит того для студентов из Узбекистана в 2026 году">Why the SAT Is Worth It for Uzbek Students in 2026</div>
+        <div class="blog-card-title" style="font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem" data-en="Why the SAT Is Worth It for Uzbek Students in 2026" data-uz="2026 yilda SAT Oʻzbek talabalar uchun nima uchun foydali" data-ru="Почему SAT стоит того для студентов из Узбекистана в 2026 году">Why the SAT Is Worth It for Uzbek Students in 2026</div>
       </div>
     </a>
   </div>
@@ -2500,28 +2499,28 @@ nav.scrolled{
   <div class="sx-wrap">
     <div class="sx-ft-grid">
       <div>
-        <a class="sx-brand" href="/"><span class="sx-chip"><img src="/logo.png" alt="" width="28" height="28"></span><span><small>SAT</small>Samarkand</span></a>
+        <a class="sx-ft-logo" href="/"><img src="/brand/logo-outline.png" alt="SAT Samarkand" width="136" height="131" loading="lazy"></a>
         <p class="sx-ft-about" data-en="Samarkand’s official SAT, AP & IELTS prep center." data-uz="Samarqandning rasmiy markazi." data-ru="Официальный центр.">Samarkand’s official SAT, AP & IELTS prep center.</p>
         <p class="sx-ft-about" style="margin-top:6px" data-en="Partners: Joylink & Millennium" data-uz="Joylink & Millennium" data-ru="Joylink & Millennium">Partners: Joylink & Millennium</p>
       </div>
       <div>
         <h3 data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</h3>
         <ul>
-          <li><a href="/sat-course-samarkand/" data-en="SAT Course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT Course</a></li>
+          <li><a href="/sat-course-samarkand/" data-en="SAT course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT course</a></li>
           <li><a href="/digital-sat/" data-en="Digital SAT" data-uz="Raqamli SAT" data-ru="Цифровой SAT">Digital SAT</a></li>
           <li><a href="/sat-math-prep/" data-en="SAT Math" data-uz="SAT Matematika" data-ru="Математика SAT">SAT Math</a></li>
           <li><a href="/sat-english-prep/" data-en="SAT English" data-uz="SAT Ingliz tili" data-ru="Английский SAT">SAT English</a></li>
           <li><a href="/sat-tutoring-samarkand/" data-en="Tutoring" data-uz="Individual dars" data-ru="Репетиторство">Tutoring</a></li>
-          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a></li>
+          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a></li>
         </ul>
       </div>
       <div>
         <h3 data-en="About" data-uz="Biz" data-ru="О нас">About</h3>
         <ul>
-          <li><a href="/teachers/" data-en="Teachers" data-uz="O'qituvchilar" data-ru="Учителя">Teachers</a></li>
+          <li><a href="/teachers/" data-en="Teachers" data-uz="Oʻqituvchilar" data-ru="Учителя">Teachers</a></li>
           <li><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
           <li><a href="/pricing/" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a></li>
-          <li><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+          <li><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a></li>
           <li><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
           <li><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
         </ul>
@@ -2529,8 +2528,8 @@ nav.scrolled{
       <div>
         <h3 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h3>
         <ul>
-          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram Channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram Channel</a></li>
-          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support Chat" data-uz="Yordam" data-ru="Поддержка">Support Chat</a></li>
+          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram channel</a></li>
+          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support chat" data-uz="Yordam" data-ru="Поддержка">Support chat</a></li>
           <li><a href="https://instagram.com/sat_samarkand" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="tel:+998951131600" class="sx-num">+998 95 113 16 00</a></li>
         </ul>
@@ -2544,12 +2543,12 @@ nav.scrolled{
         </address>
       </div>
     </div>
-    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span></div>
+    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span><span class="sx-ft-tm" data-en="SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand." data-uz="SAT® — College Board tashkilotining roʻyxatdan oʻtgan savdo belgisi. College Board SAT Samarkand bilan bogʻliq emas." data-ru="SAT® — зарегистрированный товарный знак College Board. College Board не связан с SAT Samarkand.">SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand.</span></div>
   </div>
 </div>
 <div class="sx-sticky">
-  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a>
-  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qo'ng'iroq" data-ru="Позвоните нам">Call us</a>
+  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a>
+  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qoʻngʻiroq" data-ru="Позвоните нам">Call us</a>
 </div>
 <!--/SX-FOOTER-->
 
@@ -2740,6 +2739,6 @@ if(typeof toggleMobileNav==='undefined'){
   document.addEventListener('click',function(e){var mn=document.getElementById('mobnav');if(mn&&mn.classList.contains('open')&&!e.target.closest('#mobnav')&&!e.target.closest('.nham')){mn.classList.remove('open');var b=document.querySelector('.nham');if(b)b.classList.remove('open');}});
 }
 </script>
-<script src="/theme.js?v=3" defer></script>
+<script src="/theme.js?v=4" defer></script>
 </body>
 </html>

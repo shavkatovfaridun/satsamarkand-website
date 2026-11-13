@@ -88,12 +88,12 @@
 
 <style>
 :root{
-  --navy:#022049;--navy2:#011535;--navy3:#010e24;
-  --blue:#0661de;--blue2:#0450b4;--elec:#2979ff;
-  --bpale:#e8f0fe;--bxpale:#f0f4ff;
-  --t:#1d1d1f;--t2:#3d3d3d;--tm:#6e6e73;--tl:#86868b;
-  --bg:#fff;--bg2:#f5f5f7;--bg3:#e8ecf0;
-  --bd:#d2d2d7;--bd2:#c0c0c8;
+  --navy:#022049;--navy2:#022049;--navy3:#022049;
+  --blue:#0661de;--blue2:#0550b8;--elec:#0661de;
+  --bpale:#e8f1fd;--bxpale:#e8f1fd;
+  --t:#022049;--t2:#022049;--tm:#5a6b85;--tl:#5a6b85;
+  --bg:#fff;--bg2:#f4f7fb;--bg3:#d6e0ee;
+  --bd:#d6e0ee;--bd2:#d6e0ee;
   --ss:0 1px 3px rgba(0,0,0,.06),0 1px 8px rgba(0,0,0,.04);
   --sm:0 2px 12px rgba(0,0,0,.08),0 4px 24px rgba(0,0,0,.05);
   --sl:0 8px 32px rgba(0,0,0,.1),0 2px 8px rgba(0,0,0,.06);
@@ -158,7 +158,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .page-hero .slbl{justify-content:center;color:rgba(255,255,255,.45)}
 .page-hero .slbl::before{background:rgba(255,255,255,.2)}
 .page-hero h1{font-family:var(--f);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:700;letter-spacing:-.03em;color:#fff;margin-bottom:.8rem;position:relative}
-.page-hero h1 em{font-style:normal;color:#60a5fa}
+.page-hero h1 em{font-style:normal;color:#e8f1fd}
 .page-hero p{font-size:1.05rem;color:rgba(255,255,255,.65);max-width:560px;margin:0 auto;line-height:1.65;position:relative}
 
 /* FOOTER */
@@ -191,8 +191,8 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .card:hover{box-shadow:var(--sm);transform:translateY(-2px)}
 .tag{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:4px}
 .tag-blue{background:var(--bxpale);color:var(--blue);border:1px solid rgba(6,97,222,.15)}
-.tag-green{background:#dbeafe;color:#1d4ed8;border:1px solid #93c5fd}
-.tag-gold{background:#f0f4ff;color:#0661de;border:1px solid #60a5fa}
+.tag-green{background:#e8f1fd;color:#0550b8;border:1px solid #e8f1fd}
+.tag-gold{background:#e8f1fd;color:#0661de;border:1px solid #e8f1fd}
 
 /* FADE */
 .fade{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
@@ -203,10 +203,10 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:2.4rem}
 @media(max-width:860px){.pgrid{grid-template-columns:1fr}}
-.pdual{background:var(--bg2,#f5f5f7);border-radius:4px;padding:10px 14px;margin-bottom:1.4rem}
+.pdual{background:var(--bg2,#f4f7fb);border-radius:4px;padding:10px 14px;margin-bottom:1.4rem}
 .pdual-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0}
-.pdual-row:not(:last-child){border-bottom:1px solid var(--bd,#d2d2d7)}
-.pdual-lbl{font-size:.78rem;color:var(--tm,#6e6e73);font-weight:500}
+.pdual-row:not(:last-child){border-bottom:1px solid var(--bd,#d6e0ee)}
+.pdual-lbl{font-size:.78rem;color:var(--tm,#5a6b85);font-weight:500}
 .pdual-val{font-family:var(--f);font-size:1.05rem;font-weight:700;color:var(--navy);letter-spacing:-.02em}
 .pdual-val small{font-size:.68rem;font-weight:500;color:var(--tm);margin-left:2px}
 .pc.prm .pdual{background:rgba(255,255,255,.09)}
@@ -242,7 +242,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .pfeats li{font-size:.83rem;color:var(--t2);display:flex;align-items:flex-start;gap:9px;line-height:1.45}
 .pc.prm .pfeats li{color:rgba(255,255,255,.7)}
 .pfeats li svg{width:15px;height:15px;flex-shrink:0;margin-top:1px;stroke:#0661de;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.pc.prm .pfeats li svg{stroke:#60d394}
+.pc.prm .pfeats li svg{stroke:#0661de}
 .pnote{font-size:.74rem;color:var(--tl);line-height:1.5;padding:9px 11px;background:var(--bg2);border-radius:var(--rsm);margin-bottom:1.1rem}
 .pc.prm .pnote{background:rgba(255,255,255,.06);color:rgba(255,255,255,.35)}
 .pbtn{display:block;text-align:center;padding:11px;border-radius:4px;font-size:.87rem;font-weight:600;font-family:var(--f);cursor:pointer;text-decoration:none;transition:all .15s;border:none}
@@ -261,7 +261,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .compare-table th:last-child{border-radius:0 var(--rsm) 0 0}
 .compare-table td{padding:11px 16px;border-bottom:1px solid var(--bd);color:var(--t2)}
 .compare-table tr:hover td{background:var(--bxpale)}
-.compare-table .check{color:#044fba;font-weight:700}
+.compare-table .check{color:#0550b8;font-weight:700}
 .compare-table .cross{color:var(--tl)}
 .compare-table .pop-col{background:rgba(6,97,222,.04);font-weight:600;color:var(--blue)}
 
@@ -298,9 +298,9 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
   font-size:.83rem!important;font-weight:500!important;
   display:flex!important;align-items:center;white-space:nowrap;
   border-bottom:none!important;line-height:1.3;
-  color:var(--t,#1d1d1f)!important;text-decoration:none;
+  color:var(--t,#022049)!important;text-decoration:none;
   transition:background .12s,color .12s}
-.dd li a:hover{background:#f0f4ff;color:var(--blue,#0661de)!important}
+.dd li a:hover{background:#e8f1fd;color:var(--blue,#0661de)!important}
 .dd li:not(:last-child) a{border-bottom:1px solid rgba(0,0,0,.045)!important}
 .nlinks .dd-arrow{font-size:.65rem;margin-left:3px;opacity:.5;transition:transform .2s}
 .nlinks li.has-dd:hover .dd-arrow{opacity:.9}
@@ -311,28 +311,28 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
   box-shadow:none;border-radius:0 0 4px 4px}
 .mob-nav.open{display:block}
 .mob-nav .mob-list{list-style:none;padding:6px 0 12px;margin:0}
-.mob-nav .mob-list>li>a{display:block;padding:13px 20px;color:var(--t,#1d1d1f);
-  font-size:.95rem;text-decoration:none;border-bottom:1px solid #f5f5f7}
-.mob-nav .mob-list>li>a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-nav .mob-list>li>a{display:block;padding:13px 20px;color:var(--t,#022049);
+  font-size:.95rem;text-decoration:none;border-bottom:1px solid #f4f7fb}
+.mob-nav .mob-list>li>a:hover{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-group-hd{display:flex;align-items:center;justify-content:space-between;
-  width:100%;padding:13px 20px;background:none;border:none;border-bottom:1px solid #f5f5f7;
-  color:var(--t,#1d1d1f);font-size:.95rem;font-weight:500;cursor:pointer;text-align:left;
+  width:100%;padding:13px 20px;background:none;border:none;border-bottom:1px solid #f4f7fb;
+  color:var(--t,#022049);font-size:.95rem;font-weight:500;cursor:pointer;text-align:left;
   font-family:inherit}
-.mob-group-hd:hover,.mob-group.open .mob-group-hd{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+.mob-group-hd:hover,.mob-group.open .mob-group-hd{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-arrow{transition:transform .22s;flex-shrink:0}
 .mob-group.open .mob-arrow{transform:rotate(180deg)}
 .mob-group-body{list-style:none;padding:0;margin:0;
-  max-height:0;overflow:hidden;transition:max-height .28s ease;background:#fafafa}
+  max-height:0;overflow:hidden;transition:max-height .28s ease;background:#f4f7fb}
 .mob-group.open .mob-group-body{max-height:400px}
 .mob-group-body li a{display:block;padding:10px 20px 10px 30px;
-  color:var(--tm,#6e6e73);font-size:.88rem;text-decoration:none;
-  border-bottom:1px solid #f5f5f7}
-.mob-group-body li a:hover{background:var(--bxpale,#f0f4ff);color:var(--blue,#0661de)}
+  color:var(--tm,#5a6b85);font-size:.88rem;text-decoration:none;
+  border-bottom:1px solid #f4f7fb}
+.mob-group-body li a:hover{background:var(--bxpale,#e8f1fd);color:var(--blue,#0661de)}
 .mob-nav .mob-enroll{display:block;margin:12px 20px 8px;padding:14px 24px;
   background:var(--blue,#0661de);color:#fff!important;border-radius:4px;
   text-align:center;font-weight:600;font-size:.95rem;border-bottom:none!important;
   text-decoration:none}
-.mob-nav .mob-enroll:hover{background:#0550c0!important;color:#fff!important}
+.mob-nav .mob-enroll:hover{background:#0550b8!important;color:#fff!important}
 /* Hamburger → X animation */
 .nham svg line{transition:all .25s;transform-box:fill-box;transform-origin:center}
 .nham.open svg line:first-child{transform:translateY(6px) rotate(45deg)}
@@ -340,7 +340,7 @@ nav{position:sticky;top:0;z-index:2000;background:rgba(255,255,255,.92);backdrop
 .nham.open svg line:last-child{transform:translateY(-6px) rotate(-45deg)}
 /* Nav visible on desktop/laptop (960px+); hamburger on tablet/mobile */
 
-.pillar-cta-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;color:#0661de;background:#e8f0ff;border:1px solid #c7d9ff;border-radius:4px;padding:6px 16px;margin-bottom:18px;text-transform:uppercase}
+.pillar-cta-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;color:#0661de;background:#e8f1fd;border:1px solid #d6e0ee;border-radius:4px;padding:6px 16px;margin-bottom:18px;text-transform:uppercase}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    SITE-WIDE ANIMATION SYSTEM
@@ -428,16 +428,15 @@ nav.scrolled{
 </script>
 
 <style>
-.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#1d1d1f;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#6e6e73;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
+.fwidget{position:fixed;bottom:26px;right:22px;z-index:800;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.fmitem{display:flex;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 16px;box-shadow:none;text-decoration:none;color:#022049;transition:transform .2s,box-shadow .2s;min-width:190px}.fmitem:hover{transform:translateX(-3px);box-shadow:none}.fmicon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%}.fmcall .fmicon{background:#0661de;color:#fff}.fmchat .fmicon{background:#0661de;color:#fff}.fmicon svg{width:18px;height:18px}.fmtitle{font-weight:600;font-size:.88rem;line-height:1.2}.fmsub{font-size:.75rem;color:#5a6b85;margin-top:1px}@media(max-width:640px){.fwidget{bottom:76px;right:12px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 
 
 
 @media(max-width:640px){.fwidget{bottom:80px;right:14px;gap:8px}.fmitem{min-width:0;padding:9px 14px 9px 10px}}
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/theme.css?v=3">
+<link rel="preload" href="/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/theme.css?v=4">
 </head>
 <body>
 
@@ -446,30 +445,30 @@ nav.scrolled{
 <div class="sx-hd" id="sx-hd" role="banner">
   <div class="sx-wrap">
     <div class="sx-hd-in">
-      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/logo.png" alt="" width="34" height="34"><span><small>SAT</small>Samarkand</span></a>
+      <a class="sx-brand" href="/" aria-label="SAT Samarkand"><img src="/brand/mark-primary.png" alt="" width="35" height="40"><span>SAT Samarkand</span></a>
       <div class="sx-nav" role="navigation" aria-label="Main">
-        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All Courses &amp; Pricing" data-uz="Barcha kurslar" data-ru="Все курсы">All Courses &amp; Pricing</a><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions Consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions Consulting</a><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a><div class="sx-dd"><a href="/courses/" data-en="All courses" data-uz="Barcha kurslar" data-ru="Все курсы">All courses</a><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a><div class="sx-dd"><a href="/admissions/" data-en="Admissions consulting" data-uz="Qabul konsaltingi" data-ru="Консалтинг по поступлению">Admissions consulting</a><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div></div>
         <div class="sx-nav-i"><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></div>
-        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div></div>
+        <div class="sx-nav-i sx-has-dd"><a href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a><div class="sx-dd"><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div></div>
         <div class="sx-nav-i"><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></div>
         <div class="sx-nav-i"><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></div>
       </div>
       <div class="sx-langs" role="group" aria-label="Language"><button class="lb" data-lang="en" onclick="setLang('en')">EN</button><button class="lb" data-lang="uz" onclick="setLang('uz')">UZ</button><button class="lb" data-lang="ru" onclick="setLang('ru')">RU</button></div>
-      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a>
+      <a class="sx-btn sx-sm" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a>
       <button class="sx-burger" id="sx-burger" aria-label="Menu" aria-expanded="false"><i></i></button>
     </div>
     <div class="sx-drawer" role="navigation" aria-label="Mobile">
       <a class="sx-has-sub" href="/courses/" data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</a>
-      <div class="sx-sub"><a href="/ap/" data-en="AP Courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP Courses</a><a href="/ielts/" data-en="IELTS Prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS Prep</a><a href="/schedule/" data-en="SAT Test Schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT Test Schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive Bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive Bootcamp</a><a href="/digital-sat/" data-en="Digital SAT Guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT Guide</a></div>
+      <div class="sx-sub"><a href="/ap/" data-en="AP courses" data-uz="AP Kurslar" data-ru="Курсы AP">AP courses</a><a href="/ielts/" data-en="IELTS prep" data-uz="IELTS Tayyorgarlik" data-ru="Подготовка IELTS">IELTS prep</a><a href="/schedule/" data-en="SAT test schedule" data-uz="Imtihon jadvali" data-ru="Расписание тестов">SAT test schedule</a><a href="/intensive-sat-bootcamp/" data-en="Intensive bootcamp" data-uz="Intensiv bootcamp" data-ru="Интенсивный буткемп">Intensive bootcamp</a><a href="/digital-sat/" data-en="Digital SAT guide" data-uz="Digital SAT" data-ru="Цифровой SAT">Digital SAT guide</a></div>
       <a class="sx-has-sub" href="/admissions/" data-en="Admissions" data-uz="Qabul" data-ru="Поступление">Admissions</a>
-      <div class="sx-sub"><a href="/universities/" data-en="University List" data-uz="Universitetlar ro'yxati" data-ru="Список университетов">University List</a></div>
+      <div class="sx-sub"><a href="/universities/" data-en="University list" data-uz="Universitetlar roʻyxati" data-ru="Список университетов">University list</a></div>
       <a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a>
       <a class="sx-has-sub" href="/about/" data-en="About" data-uz="Biz" data-ru="О нас">About</a>
-      <div class="sx-sub"><a href="/teachers/" data-en="Our Teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our Teachers</a></div>
+      <div class="sx-sub"><a href="/teachers/" data-en="Our teachers" data-uz="Mentorlarimiz" data-ru="Наши преподаватели">Our teachers</a></div>
       <a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a>
       <a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a>
-      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll Now" data-uz="Ro'yxatdan o'ting" data-ru="Записаться">Enroll Now</a></div>
+      <div class="sx-cta"><a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a><a class="sx-btn sx-line" href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" data-en="Enroll now" data-uz="Roʻyxatdan oʻting" data-ru="Записаться">Enroll now</a></div>
     </div>
   </div>
 </div>
@@ -479,7 +478,7 @@ nav.scrolled{
 
 <div class="page-hero">
   <div class="slbl" data-en="Programs &amp; Pricing" data-uz="Dasturlar va Narxlar" data-ru="Программы и цены">Programs &amp; Pricing</div>
-  <h1 data-en="Pick your path to <em>1500+.</em>" data-uz="<em>1500+</em> ga yo'lingizni tanlang." data-ru="Выберите свой путь к <em>1500+.</em>">Pick your path to <em>1500+.</em></h1>
+  <h1 data-en="Pick your path to <em>1500+.</em>" data-uz="<em>1500+</em> ga yoʻlingizni tanlang." data-ru="Выберите свой путь к <em>1500+.</em>">Pick your path to <em>1500+.</em></h1>
   <p data-en="3 programs, every level, every budget. Not sure where to start? Take the free diagnostic — we'll tell you exactly which fits." data-uz="3 dastur, har bir daraja. Bepul diagnostika topshing — biz mos dasturni aytamiz." data-ru="3 программы для любого уровня. Пройдите диагностику — подберём нужную.">3 programs, every level, every budget. Not sure where to start? Take the free diagnostic — we'll tell you exactly which fits.</p>
   <div style="margin-top:1.5rem;display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
     <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="btnw" data-en="Take Free Diagnostic →" data-uz="Bepul Diagnostika →" data-ru="Пройти диагностику →">Take Free Diagnostic →</a>
@@ -487,11 +486,11 @@ nav.scrolled{
   </div>
 </div>
 
-<div style="background:#f0f4ff;border-bottom:1px solid #d4e0ff;padding:18px 5vw">
+<div style="background:#e8f1fd;border-bottom:1px solid #d4e0ff;padding:18px 5vw">
   <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:clamp(24px,5vw,64px);flex-wrap:wrap;align-items:center">
     <div style="text-align:center">
       <div style="font-family:var(--f);font-size:1.35rem;font-weight:700;color:var(--navy);letter-spacing:-.02em" class="tb-num">500+</div>
-      <div style="font-size:.72rem;color:var(--tm);letter-spacing:.04em;text-transform:uppercase" data-en="Students Trained" data-uz="O'quvchilar" data-ru="Обучено студентов">Students Trained</div>
+      <div style="font-size:.72rem;color:var(--tm);letter-spacing:.04em;text-transform:uppercase" data-en="Students Trained" data-uz="Oʻquvchilar" data-ru="Обучено студентов">Students Trained</div>
     </div>
     <div style="text-align:center">
       <div style="font-family:var(--f);font-size:1.35rem;font-weight:700;color:var(--navy);letter-spacing:-.02em" class="tb-num">1520</div>
@@ -511,12 +510,12 @@ nav.scrolled{
 <style>
 .inc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:2.2rem}
 @media(max-width:640px){.inc-grid{grid-template-columns:1fr}}
-.inc-card{background:#fff;border:1px solid var(--bd,#d2d2d7);border-radius:4px;padding:22px 20px;display:flex;align-items:flex-start;gap:18px;box-shadow:none;transition:box-shadow .2s,transform .2s}
+.inc-card{background:#fff;border:1px solid var(--bd,#d6e0ee);border-radius:4px;padding:22px 20px;display:flex;align-items:flex-start;gap:18px;box-shadow:none;transition:box-shadow .2s,transform .2s}
 .inc-card:hover{box-shadow:none;transform:translateY(-2px)}
 .inc-icon{width:54px;height:54px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .inc-icon svg{width:26px;height:26px}
 .inc-title{font-size:.95rem;font-weight:700;color:var(--navy,#022049);margin-bottom:6px;letter-spacing:-.01em}
-.inc-desc{font-size:.81rem;color:var(--tm,#6e6e73);line-height:1.6}
+.inc-desc{font-size:.81rem;color:var(--tm,#5a6b85);line-height:1.6}
 </style>
 <div class="sec alt">
   <div class="w">
@@ -526,7 +525,7 @@ nav.scrolled{
 
       <!-- 1: Top-scoring mentors -->
       <div class="inc-card">
-        <div class="inc-icon" style="background:#e8f0ff">
+        <div class="inc-icon" style="background:#e8f1fd">
           <svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="8" r="4"/>
             <path d="M6 20v-1a6 6 0 0112 0v1"/>
@@ -536,13 +535,13 @@ nav.scrolled{
         </div>
         <div>
           <div class="inc-title" data-en="Top-scoring mentors" data-uz="SATda yuqori natija olgan mentorlar" data-ru="Менторы с высокими баллами">Top-scoring mentors</div>
-          <div class="inc-desc" data-en="Not theory teachers — coaches who solved every problem themselves." data-uz="Nazariya emas — hamma masalani o'zlari yechgan." data-ru="Не теоретики — те, кто сам решал каждую задачу.">Not theory teachers — coaches who solved every problem themselves.</div>
+          <div class="inc-desc" data-en="Not theory teachers — coaches who solved every problem themselves." data-uz="Nazariya emas — hamma masalani oʻzlari yechgan." data-ru="Не теоретики — те, кто сам решал каждую задачу.">Not theory teachers — coaches who solved every problem themselves.</div>
         </div>
       </div>
 
       <!-- 2: Weekly Mock Tests -->
       <div class="inc-card">
-        <div class="inc-icon" style="background:#edfaf3">
+        <div class="inc-icon" style="background:#e8f1fd">
           <svg viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="20" x2="18" y2="9"/>
             <line x1="12" y1="20" x2="12" y2="4"/>
@@ -552,13 +551,13 @@ nav.scrolled{
         </div>
         <div>
           <div class="inc-title" data-en="Weekly mock tests" data-uz="Haftalik mock testlar" data-ru="Еженедельные тесты">Weekly mock tests</div>
-          <div class="inc-desc" data-en="Real SAT conditions every week. You see exactly where points are leaking." data-uz="Haqiqiy sharoitda haftalik test. Qayerda ball yo'qolayotganini ko'rasiz." data-ru="Реальные условия SAT каждую неделю. Видите, где теряете очки.">Real SAT conditions every week. You see exactly where points are leaking.</div>
+          <div class="inc-desc" data-en="Real SAT conditions every week. You see exactly where points are leaking." data-uz="Haqiqiy sharoitda haftalik test. Qayerda ball yoʻqolayotganini koʻrasiz." data-ru="Реальные условия SAT каждую неделю. Видите, где теряете очки.">Real SAT conditions every week. You see exactly where points are leaking.</div>
         </div>
       </div>
 
       <!-- 3: Sunday Mock SAT -->
       <div class="inc-card">
-        <div class="inc-icon" style="background:#f0f4ff">
+        <div class="inc-icon" style="background:#e8f1fd">
           <svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
             <line x1="16" y1="2" x2="16" y2="6"/>
@@ -569,13 +568,13 @@ nav.scrolled{
         </div>
         <div>
           <div class="inc-title" data-en="Free Sunday Mock SAT" data-uz="Yakshanba bepul Mock SAT" data-ru="Бесплатный Mock SAT по воскресеньям">Free Sunday Mock SAT</div>
-          <div class="inc-desc" data-en="Full-length timed mock every Sunday. Open to all students, free." data-uz="Har yakshanba to'liq Mock SAT. Barcha o'quvchilar uchun bepul." data-ru="Полный пробный экзамен каждое воскресенье. Для всех студентов бесплатно.">Full-length timed mock every Sunday. Open to all students, free.</div>
+          <div class="inc-desc" data-en="Full-length timed mock every Sunday. Open to all students, free." data-uz="Har yakshanba toʻliq Mock SAT. Barcha oʻquvchilar uchun bepul." data-ru="Полный пробный экзамен каждое воскресенье. Для всех студентов бесплатно.">Full-length timed mock every Sunday. Open to all students, free.</div>
         </div>
       </div>
 
       <!-- 4: Max 12 students -->
       <div class="inc-card">
-        <div class="inc-icon" style="background:#f0f4ff">
+        <div class="inc-icon" style="background:#e8f1fd">
           <svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
             <circle cx="9" cy="7" r="4"/>
@@ -585,7 +584,7 @@ nav.scrolled{
         </div>
         <div>
           <div class="inc-title" data-en="Max 12 students per class" data-uz="Guruhda max 12 talaba" data-ru="Максимум 12 студентов в группе">Max 12 students per class</div>
-          <div class="inc-desc" data-en="Small enough that your mentor knows your weak spots by name." data-uz="Mentoring hamma o'quvchini yaxshi biladi." data-ru="Достаточно маленькая группа, чтобы ментор знал ваши слабые места.">Small enough that your mentor knows your weak spots by name.</div>
+          <div class="inc-desc" data-en="Small enough that your mentor knows your weak spots by name." data-uz="Mentoring hamma oʻquvchini yaxshi biladi." data-ru="Достаточно маленькая группа, чтобы ментор знал ваши слабые места.">Small enough that your mentor knows your weak spots by name.</div>
         </div>
       </div>
 
@@ -606,7 +605,7 @@ nav.scrolled{
         <div style="font-size:1.6rem;font-weight:800;color:var(--navy);letter-spacing:-.03em;margin-bottom:6px">10:00–12:00</div>
         <div style="font-size:.82rem;color:var(--tm)" data-en="Morning · Mon–Sat" data-uz="Ertalab · Du–Sha" data-ru="Утро · Пн–Сб">Morning · Mon–Sat</div>
       </div>
-      <div style="border:2px solid var(--blue);border-radius:4px;padding:22px;background:#f6f8fd;text-align:center;position:relative">
+      <div style="border:2px solid var(--blue);border-radius:4px;padding:22px;background:#f4f7fb;text-align:center;position:relative">
         <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.1em;padding:3px 12px;border-radius:4px;white-space:nowrap" data-en="MOST POPULAR" data-uz="ENG MASHHUR" data-ru="ПОПУЛЯРНОЕ">MOST POPULAR</div>
         <div style="font-size:1.6rem;font-weight:800;color:var(--blue);letter-spacing:-.03em;margin-bottom:6px">14:00–16:00</div>
         <div style="font-size:.82rem;color:var(--tm)" data-en="Afternoon · Mon–Sat" data-uz="Tushdan keyin · Du–Sha" data-ru="День · Пн–Сб">Afternoon · Mon–Sat</div>
@@ -615,13 +614,13 @@ nav.scrolled{
         <div style="font-size:1.6rem;font-weight:800;color:var(--navy);letter-spacing:-.03em;margin-bottom:6px">16:00–18:00</div>
         <div style="font-size:.82rem;color:var(--tm)" data-en="Evening · Mon–Sat" data-uz="Kechki · Du–Sha" data-ru="Вечер · Пн–Сб">Evening · Mon–Sat</div>
       </div>
-      <div style="border:1.5px dashed #0661de;border-radius:4px;padding:22px;background:#f0f4ff;text-align:center">
+      <div style="border:1.5px dashed #0661de;border-radius:4px;padding:22px;background:#e8f1fd;text-align:center">
         <div style="font-size:1.6rem;font-weight:800;color:#0661de;letter-spacing:-.03em;margin-bottom:6px">08:00–10:00</div>
         <div style="font-size:.82rem;color:var(--tm)" data-en="Summer only · Jul–Aug" data-uz="Faqat yoz · Iyul–Avg" data-ru="Только лето · Июль–Авг">Summer only · Jul–Aug</div>
       </div>
     </div>
     <div style="border:1.5px solid var(--bd);border-radius:4px;padding:16px 20px;background:#f9fafb;font-size:.83rem;color:var(--tm);line-height:1.7">
-      <strong>Note:</strong> <span data-en="Each section meets 3× per week, 2 hours per lesson. Math + English together = 6 sessions per week. Sunday Mock SAT (10:00 AM, both locations) is free for all enrolled students." data-uz="Har bo'lim haftada 3 marta, 2 soatdan dars. Matematika + Ingliz tili = haftada 6 dars. Yakshanba Mock SAT (10:00, ikkala manzil) barcha o'quvchilar uchun bepul." data-ru="Каждый раздел проводится 3× в неделю, по 2 часа. Математика + Английский = 6 занятий в неделю. Mock SAT каждое воскресенье — бесплатно.">Each section meets 3× per week, 2 hours per lesson. Math + English together = 6 sessions per week. Sunday Mock SAT (10:00 AM, both locations) is free for all enrolled students.</span>
+      <strong>Note:</strong> <span data-en="Each section meets 3× per week, 2 hours per lesson. Math + English together = 6 sessions per week. Sunday Mock SAT (10:00 AM, both locations) is free for all enrolled students." data-uz="Har boʻlim haftada 3 marta, 2 soatdan dars. Matematika + Ingliz tili = haftada 6 dars. Yakshanba Mock SAT (10:00, ikkala manzil) barcha oʻquvchilar uchun bepul." data-ru="Каждый раздел проводится 3× в неделю, по 2 часа. Математика + Английский = 6 занятий в неделю. Mock SAT каждое воскресенье — бесплатно.">Each section meets 3× per week, 2 hours per lesson. Math + English together = 6 sessions per week. Sunday Mock SAT (10:00 AM, both locations) is free for all enrolled students.</span>
     </div>
     <div style="text-align:center;margin-top:1.5rem">
       <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-weight:600;font-size:.9rem;border-radius:4px;padding:13px 28px;text-decoration:none" data-en="Reserve your time slot →" data-uz="Vaqtingizni band qiling →" data-ru="Забронировать место →">Reserve your time slot →</a>
@@ -644,7 +643,7 @@ nav.scrolled{
           <div class="ptag" data-en="Group Program" data-uz="Guruh Dasturi" data-ru="Групповая программа">Group Program</div>
           <div class="ptitle" data-en="Intensive" data-uz="Intensiv" data-ru="Интенсив">Intensive</div>
           <div class="psub" data-en="Core SAT prep in a focused small group" data-uz="Kichik guruhda asosiy SAT tayyorgarlik" data-ru="Основная подготовка к SAT в малой группе">Core SAT prep in a focused small group</div>
-          <div class="pdual"><div class="price-ask" style="font-size:.84rem;line-height:1.5"><div style="font-weight:700;color:inherit;font-size:1.15rem;margin-bottom:4px" data-en="Price on request" data-uz="Narxi so&#39;rov bo&#39;yicha" data-ru="Цена по запросу">Price on request</div><a href="/free-sat-diagnostic-test/" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Take the free diagnostic test" data-uz="→ Bepul diagnostika testini topshiring" data-ru="→ Пройдите бесплатный диагностический тест">→ Take the free diagnostic test</a><a href="https://t.me/satsam_support" target="_blank" rel="noopener" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Message us on Telegram" data-uz="→ Telegramda yozing" data-ru="→ Напишите нам в Telegram">→ Message us on Telegram</a><a href="tel:+998951131600" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Call +998 95 113 16 00" data-uz="→ Qo&#39;ng&#39;iroq qiling: +998 95 113 16 00" data-ru="→ Позвоните: +998 95 113 16 00">→ Call +998 95 113 16 00</a></div></div>
+          <div class="pdual"><div class="price-ask" style="font-size:.84rem;line-height:1.5"><div style="font-weight:700;color:inherit;font-size:1.15rem;margin-bottom:4px" data-en="Price on request" data-uz="Narxi soʻrov boʻyicha" data-ru="Цена по запросу">Price on request</div><a href="/free-sat-diagnostic-test/" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Take the free diagnostic test" data-uz="→ Bepul diagnostika testini topshiring" data-ru="→ Пройдите бесплатный диагностический тест">→ Take the free diagnostic test</a><a href="https://t.me/satsam_support" target="_blank" rel="noopener" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Message us on Telegram" data-uz="→ Telegramda yozing" data-ru="→ Напишите нам в Telegram">→ Message us on Telegram</a><a href="tel:+998951131600" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Call +998 95 113 16 00" data-uz="→ Qoʻngʻiroq qiling: +998 95 113 16 00" data-ru="→ Позвоните: +998 95 113 16 00">→ Call +998 95 113 16 00</a></div></div>
         </div>
         <div class="pdiv"></div>
         <div class="pb"><ul class="pfeats">
@@ -652,7 +651,7 @@ nav.scrolled{
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Weekly mock tests" data-uz="Haftalik mock testlar" data-ru="Еженедельные тесты">Weekly mock tests</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Free Sunday Mock SAT" data-uz="Yakshanba bepul Mock SAT" data-ru="Бесплатный Mock SAT">Free Sunday Mock SAT</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Top-scoring mentors" data-uz="SATda yuqori natija olgan mentorlar" data-ru="Менторы с высокими баллами">Top-scoring mentors</span></li>
-        </ul><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="pbtn out" data-en="Enroll Now" data-uz="Ro'yxatdan O'tish" data-ru="Записаться">Enroll Now</a></div>
+        </ul><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="pbtn out" data-en="Enroll Now" data-uz="Roʻyxatdan Oʻtish" data-ru="Записаться">Enroll Now</a></div>
       </div>
 
       <!-- Card 2: SAT Max (Most Popular) -->
@@ -661,8 +660,8 @@ nav.scrolled{
           <div class="pbadge" data-en="Most Popular" data-uz="Eng Mashhur" data-ru="Самый популярный">Most Popular</div>
           <div class="ptag" data-en="Group Program" data-uz="Guruh Dasturi" data-ru="Групповая программа">Group Program</div>
           <div class="ptitle" data-en="SAT Max" data-uz="SAT Max" data-ru="SAT Max">SAT Max</div>
-          <div class="psub" data-en="Advanced prep with deeper analytics and support" data-uz="Chuqur tahlil va qo'llab-quvvatlash bilan kengaytirilgan tayyorgarlik" data-ru="Продвинутая подготовка с глубокой аналитикой">Advanced prep with deeper analytics and support</div>
-          <div class="pdual"><div class="price-ask" style="font-size:.84rem;line-height:1.5"><div style="font-weight:700;color:inherit;font-size:1.15rem;margin-bottom:4px" data-en="Price on request" data-uz="Narxi so&#39;rov bo&#39;yicha" data-ru="Цена по запросу">Price on request</div><a href="/free-sat-diagnostic-test/" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Take the free diagnostic test" data-uz="→ Bepul diagnostika testini topshiring" data-ru="→ Пройдите бесплатный диагностический тест">→ Take the free diagnostic test</a><a href="https://t.me/satsam_support" target="_blank" rel="noopener" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Message us on Telegram" data-uz="→ Telegramda yozing" data-ru="→ Напишите нам в Telegram">→ Message us on Telegram</a><a href="tel:+998951131600" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Call +998 95 113 16 00" data-uz="→ Qo&#39;ng&#39;iroq qiling: +998 95 113 16 00" data-ru="→ Позвоните: +998 95 113 16 00">→ Call +998 95 113 16 00</a></div></div>
+          <div class="psub" data-en="Advanced prep with deeper analytics and support" data-uz="Chuqur tahlil va qoʻllab-quvvatlash bilan kengaytirilgan tayyorgarlik" data-ru="Продвинутая подготовка с глубокой аналитикой">Advanced prep with deeper analytics and support</div>
+          <div class="pdual"><div class="price-ask" style="font-size:.84rem;line-height:1.5"><div style="font-weight:700;color:inherit;font-size:1.15rem;margin-bottom:4px" data-en="Price on request" data-uz="Narxi soʻrov boʻyicha" data-ru="Цена по запросу">Price on request</div><a href="/free-sat-diagnostic-test/" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Take the free diagnostic test" data-uz="→ Bepul diagnostika testini topshiring" data-ru="→ Пройдите бесплатный диагностический тест">→ Take the free diagnostic test</a><a href="https://t.me/satsam_support" target="_blank" rel="noopener" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Message us on Telegram" data-uz="→ Telegramda yozing" data-ru="→ Напишите нам в Telegram">→ Message us on Telegram</a><a href="tel:+998951131600" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Call +998 95 113 16 00" data-uz="→ Qoʻngʻiroq qiling: +998 95 113 16 00" data-ru="→ Позвоните: +998 95 113 16 00">→ Call +998 95 113 16 00</a></div></div>
         </div>
         <div class="pdiv"></div>
         <div class="pb"><ul class="pfeats">
@@ -671,24 +670,24 @@ nav.scrolled{
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Free Sunday Mock SAT" data-uz="Yakshanba bepul Mock SAT" data-ru="Бесплатный Mock SAT">Free Sunday Mock SAT</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="1-on-1 sessions 2× per week" data-uz="Haftada 2 marta 1:1 dars" data-ru="Занятия 1:1 дважды в неделю">1-on-1 sessions 2× per week</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Top-scoring mentors" data-uz="SATda yuqori natija olgan mentorlar" data-ru="Менторы 1500+">Top-scoring mentors</span></li>
-        </ul><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="pbtn pop-btn" data-en="Enroll Now" data-uz="Ro'yxatdan O'tish" data-ru="Записаться">Enroll Now</a></div>
+        </ul><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="pbtn pop-btn" data-en="Enroll Now" data-uz="Roʻyxatdan Oʻtish" data-ru="Записаться">Enroll Now</a></div>
       </div>
 
       <!-- Card 3: Individual -->
       <div class="pc prm fade">
         <div class="ph">
-          <div class="pbadge gold" data-en="Max 4 Spots Left" data-uz="4 ta o'rin qoldi" data-ru="Осталось 4 места">Max 4 Spots Left</div>
+          <div class="pbadge gold" data-en="Max 4 Spots Left" data-uz="4 ta oʻrin qoldi" data-ru="Осталось 4 места">Max 4 Spots Left</div>
           <div class="ptag" data-en="1-on-1 Program" data-uz="1:1 Dastur" data-ru="Программа 1:1">1-on-1 Program</div>
           <div class="ptitle" data-en="Individual" data-uz="Individual" data-ru="Индивидуальный">Individual</div>
-          <div class="psub" data-en="Fully personalized sessions with your own top-scoring mentor" data-uz="O'z yuqori natijali mentoringiz bilan to'liq shaxsiy darslar" data-ru="Полностью персональные занятия с вашим ментором 1500+">Fully personalized sessions with your own top-scoring mentor</div>
-          <div class="pdual"><div class="price-ask" style="font-size:.84rem;line-height:1.5"><div style="font-weight:700;color:inherit;font-size:1.15rem;margin-bottom:4px" data-en="Price on request" data-uz="Narxi so&#39;rov bo&#39;yicha" data-ru="Цена по запросу">Price on request</div><a href="/free-sat-diagnostic-test/" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Take the free diagnostic test" data-uz="→ Bepul diagnostika testini topshiring" data-ru="→ Пройдите бесплатный диагностический тест">→ Take the free diagnostic test</a><a href="https://t.me/satsam_support" target="_blank" rel="noopener" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Message us on Telegram" data-uz="→ Telegramda yozing" data-ru="→ Напишите нам в Telegram">→ Message us on Telegram</a><a href="tel:+998951131600" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Call +998 95 113 16 00" data-uz="→ Qo&#39;ng&#39;iroq qiling: +998 95 113 16 00" data-ru="→ Позвоните: +998 95 113 16 00">→ Call +998 95 113 16 00</a></div></div>
+          <div class="psub" data-en="Fully personalized sessions with your own top-scoring mentor" data-uz="Oʻz yuqori natijali mentoringiz bilan toʻliq shaxsiy darslar" data-ru="Полностью персональные занятия с вашим ментором 1500+">Fully personalized sessions with your own top-scoring mentor</div>
+          <div class="pdual"><div class="price-ask" style="font-size:.84rem;line-height:1.5"><div style="font-weight:700;color:inherit;font-size:1.15rem;margin-bottom:4px" data-en="Price on request" data-uz="Narxi soʻrov boʻyicha" data-ru="Цена по запросу">Price on request</div><a href="/free-sat-diagnostic-test/" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Take the free diagnostic test" data-uz="→ Bepul diagnostika testini topshiring" data-ru="→ Пройдите бесплатный диагностический тест">→ Take the free diagnostic test</a><a href="https://t.me/satsam_support" target="_blank" rel="noopener" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Message us on Telegram" data-uz="→ Telegramda yozing" data-ru="→ Напишите нам в Telegram">→ Message us on Telegram</a><a href="tel:+998951131600" style="display:block;margin-top:4px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Call +998 95 113 16 00" data-uz="→ Qoʻngʻiroq qiling: +998 95 113 16 00" data-ru="→ Позвоните: +998 95 113 16 00">→ Call +998 95 113 16 00</a></div></div>
         </div>
         <div class="pdiv"></div>
         <div class="pb"><ul class="pfeats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#60d394" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Fully personalized curriculum" data-uz="To'liq shaxsiy dastur" data-ru="Персонализированная программа">Fully personalized curriculum</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#60d394" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Fully personalized curriculum" data-uz="Toʻliq shaxsiy dastur" data-ru="Персонализированная программа">Fully personalized curriculum</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#60d394" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Flexible schedule around you" data-uz="Sizga mos jadval" data-ru="Расписание под вас">Flexible schedule around you</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#60d394" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Free Sunday Mock SAT" data-uz="Yakshanba bepul Mock SAT" data-ru="Бесплатный Mock SAT">Free Sunday Mock SAT</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#60d394" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Fastest path to your target score" data-uz="Maqsad ballingizga eng tez yo'l" data-ru="Быстрейший путь к цели">Fastest path to your target score</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#60d394" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-en="Fastest path to your target score" data-uz="Maqsad ballingizga eng tez yoʻl" data-ru="Быстрейший путь к цели">Fastest path to your target score</span></li>
         </ul><a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="pbtn prm-btn" data-en="Apply Now →" data-uz="Ariza Berish →" data-ru="Подать заявку →">Apply Now →</a></div>
       </div>
 
@@ -698,7 +697,7 @@ nav.scrolled{
         <div style="font-weight:700;font-size:.95rem;color:var(--navy);margin-bottom:.3rem" data-en="Also available: AP &amp; IELTS" data-uz="Shuningdek: AP va IELTS" data-ru="Также доступно: AP и IELTS">Also available: AP &amp; IELTS</div>
         <div style="font-size:.82rem;color:var(--tm)" data-en="AP Calculus, AP Microeconomics, AP Macroeconomics, and IELTS — same mentors, same small-group format. Ask us for current schedule and pricing." data-uz="AP Calculus, AP Mikroiqtisodiyot, AP Makroiqtisodiyot va IELTS — bir xil mentorlar, kichik guruh formati." data-ru="AP Calculus, AP Micro, AP Macro и IELTS — те же менторы, тот же малогрупповой формат. Уточняйте расписание и цены.">AP Calculus, AP Microeconomics, AP Macroeconomics, and IELTS — same mentors, same small-group format. Ask us for current schedule and pricing.</div>
       </div>
-      <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" style="flex-shrink:0;background:var(--blue);color:#fff;font-weight:600;font-size:.85rem;border-radius:4px;padding:11px 20px;text-decoration:none;white-space:nowrap" data-en="Ask about AP/IELTS →" data-uz="AP/IELTS haqida so'rang →" data-ru="Узнать об AP/IELTS →">Ask about AP/IELTS →</a>
+      <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" style="flex-shrink:0;background:var(--blue);color:#fff;font-weight:600;font-size:.85rem;border-radius:4px;padding:11px 20px;text-decoration:none;white-space:nowrap" data-en="Ask about AP/IELTS →" data-uz="AP/IELTS haqida soʻrang →" data-ru="Узнать об AP/IELTS →">Ask about AP/IELTS →</a>
     </div>
   </div>
 </div>
@@ -708,22 +707,22 @@ nav.scrolled{
 
 <div class="div"></div>
 
-<div class="sec" style="background:#f6f8fd">
+<div class="sec" style="background:#f4f7fb">
   <div class="w">
     <div style="display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;max-width:760px;margin:0 auto">
       <div>
-        <div class="slbl" style="color:#044fba" data-en="The Guarantee" data-uz="Kafolat" data-ru="Гарантия">The Guarantee</div>
-        <h2 class="sh" style="color:#1d4ed8" data-en="Score 1500+ — or keep studying free for up to 3 months." data-uz="1500+ oling — yoki 3 oygacha bepul o'qing." data-ru="Наберите 1500+ — или учитесь бесплатно до 3 месяцев.">Score 1500+ — or keep studying free for up to 3 months.</h2>
-        <p class="sp" data-en="This isn't a trial extension. It's a commitment: if you complete our 1500+ program and score below 1500, you keep studying free for up to 3 additional months. No fine print." data-uz="Bu sinov muddati emas. Bu majburiyat: agar SAT MAX dasturida belgilangan sanagacha 1500+ olmasangiz, 3 oygacha bepul o'qishni davom ettirasiz. Yashirin shartlarsiz." data-ru="Это не пробный период. Это обязательство: если на программе SAT MAX вы не набрали 1500+ к целевой дате — продолжаете учиться бесплатно до 3 месяцев. Без мелкого шрифта.">This isn't a trial extension. It's a commitment: if you complete our 1500+ program and score below 1500, you keep studying free for up to 3 additional months. No fine print.</p>
+        <div class="slbl" style="color:#0550b8" data-en="The Guarantee" data-uz="Kafolat" data-ru="Гарантия">The Guarantee</div>
+        <h2 class="sh" style="color:#0550b8" data-en="Score 1500+ — or keep studying free for up to 3 months." data-uz="1500+ oling — yoki 3 oygacha bepul oʻqing." data-ru="Наберите 1500+ — или учитесь бесплатно до 3 месяцев.">Score 1500+ — or keep studying free for up to 3 months.</h2>
+        <p class="sp" data-en="This isn't a trial extension. It's a commitment: if you complete our 1500+ program and score below 1500, you keep studying free for up to 3 additional months. No fine print." data-uz="Bu sinov muddati emas. Bu majburiyat: agar SAT MAX dasturida belgilangan sanagacha 1500+ olmasangiz, 3 oygacha bepul oʻqishni davom ettirasiz. Yashirin shartlarsiz." data-ru="Это не пробный период. Это обязательство: если на программе SAT MAX вы не набрали 1500+ к целевой дате — продолжаете учиться бесплатно до 3 месяцев. Без мелкого шрифта.">This isn't a trial extension. It's a commitment: if you complete our 1500+ program and score below 1500, you keep studying free for up to 3 additional months. No fine print.</p>
         <div style="margin-top:1rem;display:flex;gap:12px;flex-wrap:wrap">
-          <div style="display:flex;align-items:center;gap:6px;font-size:.83rem;color:#044fba;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Up to 3 months free</div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:.83rem;color:#044fba;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No extra fees</div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:.83rem;color:#044fba;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No fine print</div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:.83rem;color:#0550b8;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Up to 3 months free</div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:.83rem;color:#0550b8;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No extra fees</div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:.83rem;color:#0550b8;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No fine print</div>
         </div>
       </div>
       <div style="text-align:center;background:#fff;border-radius:4px;padding:20px 24px;border:2px solid #bfdbfe;min-width:140px">
-        <div style="font-size:2.4rem;font-weight:900;color:#1d4ed8;letter-spacing:-.04em;line-height:1">1500</div>
-        <div style="font-size:.75rem;color:#044fba;font-weight:600;margin-top:4px">GUARANTEED</div>
+        <div style="font-size:2.4rem;font-weight:900;color:#0550b8;letter-spacing:-.04em;line-height:1">1500</div>
+        <div style="font-size:.75rem;color:#0550b8;font-weight:600;margin-top:4px">GUARANTEED</div>
         <div style="font-size:.7rem;color:var(--tl);margin-top:6px">or study free<br>up to 3 months</div>
       </div>
     </div>
@@ -733,13 +732,13 @@ nav.scrolled{
 <div class="sec alt">
   <div class="w">
     <div class="slbl" data-en="Compare Programs" data-uz="Dasturlarni Solishtiring" data-ru="Сравнить программы">Compare Programs</div>
-    <h2 class="sh" data-en="See what you get." data-uz="Nima olishingizni ko&#x27;ring." data-ru="Посмотрите, что вы получите.">See what you get.</h2>
+    <h2 class="sh" data-en="See what you get." data-uz="Nima olishingizni koʻring." data-ru="Посмотрите, что вы получите.">See what you get.</h2>
     <p class="sp" style="margin-bottom:.5rem" data-en="Every program includes top-scoring mentors, small classes, and weekly mocks. The difference is intensity." data-uz="Har bir dasturda yuqori natijali mentorlar, kichik guruhlar va haftalik mocklar bor. Farq — intensivlikda." data-ru="В каждой программе менторы 1500+, малые группы и еженедельные тесты. Разница — в интенсивности.">Every program includes top-scoring mentors, small classes, and weekly mocks. The difference is intensity.</p>
     <div style="overflow-x:auto">
       <table class="compare-table">
         <thead><tr><th data-en="Feature" data-uz="Xususiyat" data-ru="Возможность">Feature</th><th data-en="Intensive" data-uz="Intensiv" data-ru="Интенсив">Intensive</th><th style="background:var(--blue)" data-en="SAT Max ⭐" data-uz="SAT Max ⭐" data-ru="SAT Max ⭐">SAT Max ⭐</th><th data-en="Individual" data-uz="Individual" data-ru="Индивидуальный">Individual</th></tr></thead>
         <tbody>
-          <tr><td data-en="Price" data-uz="Narx" data-ru="Цена">Price</td><td colspan="3" style="text-align:center"><a href="/free-sat-diagnostic-test/" style="display:inline-block;margin:0 10px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Take the free diagnostic test" data-uz="→ Bepul diagnostika testini topshiring" data-ru="→ Пройдите бесплатный диагностический тест">→ Take the free diagnostic test</a><a href="https://t.me/satsam_support" target="_blank" rel="noopener" style="display:inline-block;margin:0 10px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Message us on Telegram" data-uz="→ Telegramda yozing" data-ru="→ Напишите нам в Telegram">→ Message us on Telegram</a><a href="tel:+998951131600" style="display:inline-block;margin:0 10px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Call +998 95 113 16 00" data-uz="→ Qo&#39;ng&#39;iroq qiling: +998 95 113 16 00" data-ru="→ Позвоните: +998 95 113 16 00">→ Call +998 95 113 16 00</a></td></tr>
+          <tr><td data-en="Price" data-uz="Narx" data-ru="Цена">Price</td><td colspan="3" style="text-align:center"><a href="/free-sat-diagnostic-test/" style="display:inline-block;margin:0 10px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Take the free diagnostic test" data-uz="→ Bepul diagnostika testini topshiring" data-ru="→ Пройдите бесплатный диагностический тест">→ Take the free diagnostic test</a><a href="https://t.me/satsam_support" target="_blank" rel="noopener" style="display:inline-block;margin:0 10px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Message us on Telegram" data-uz="→ Telegramda yozing" data-ru="→ Напишите нам в Telegram">→ Message us on Telegram</a><a href="tel:+998951131600" style="display:inline-block;margin:0 10px;color:var(--blue);font-weight:600;text-decoration:none" data-en="→ Call +998 95 113 16 00" data-uz="→ Qoʻngʻiroq qiling: +998 95 113 16 00" data-ru="→ Позвоните: +998 95 113 16 00">→ Call +998 95 113 16 00</a></td></tr>
           <tr><td data-en="Class format" data-uz="Dars formati" data-ru="Формат занятий">Class format</td><td data-en="Group (max 12)" data-uz="Guruh (maks 12)" data-ru="Группа (макс. 12)">Group (max 12)</td><td class="pop-col" data-en="Group (max 12)" data-uz="Guruh (maks 12)" data-ru="Группа (макс. 12)">Group (max 12)</td><td>1-on-1</td></tr>
           <tr><td data-en="Weekly mocks" data-uz="Haftalik mocklar" data-ru="Еженедельные тесты">Weekly mocks</td><td class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="pop-col check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
           <tr><td data-en="Free Sunday Mock" data-uz="Yakshanba mock" data-ru="Воскресный Mock">Free Sunday Mock</td><td class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="pop-col check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
@@ -756,11 +755,11 @@ nav.scrolled{
 <div class="sec">
   <div class="w">
     <div class="slbl" data-en="Real Results" data-uz="Haqiqiy Natijalar" data-ru="Реальные результаты">Real Results</div>
-    <h2 class="sh" data-en="500+ students. Scores that speak." data-uz="500+ o'quvchi. Gapiradigan natijalar." data-ru="500+ студентов. Говорящие результаты.">500+ students. Scores that speak.</h2>
-    <p class="sp" style="margin-bottom:2rem" data-en="These are real SAT scores from real students — names, starting scores, final scores, and how long it took." data-uz="Bular haqiqiy o'quvchilarning haqiqiy SAT ballari — ismlar, boshlang'ich va yakuniy ball, vaqt." data-ru="Это реальные результаты реальных студентов — имена, начальные и финальные баллы, сроки.">These are real SAT scores from real students — names, starting scores, final scores, and how long it took.</p>
+    <h2 class="sh" data-en="500+ students. Scores that speak." data-uz="500+ oʻquvchi. Gapiradigan natijalar." data-ru="500+ студентов. Говорящие результаты.">500+ students. Scores that speak.</h2>
+    <p class="sp" style="margin-bottom:2rem" data-en="These are real SAT scores from real students — names, starting scores, final scores, and how long it took." data-uz="Bular haqiqiy oʻquvchilarning haqiqiy SAT ballari — ismlar, boshlangʻich va yakuniy ball, vaqt." data-ru="Это реальные результаты реальных студентов — имена, начальные и финальные баллы, сроки.">These are real SAT scores from real students — names, starting scores, final scores, and how long it took.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:1.5rem">
 
-      <div style="border:1.5px solid #e2e8f0;border-radius:4px;padding:22px;background:#fff;position:relative">
+      <div style="border:1.5px solid #d6e0ee;border-radius:4px;padding:22px;background:#fff;position:relative">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
           <div style="width:44px;height:44px;border-radius:50%;background:#0661de;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff">D</div>
           <div>
@@ -768,7 +767,7 @@ nav.scrolled{
             <div style="font-size:.78rem;color:var(--tl)">16 years old</div>
           </div>
           <div style="margin-left:auto;text-align:right">
-            <div style="font-size:1.4rem;font-weight:800;color:#044fba;letter-spacing:-.03em">1500</div>
+            <div style="font-size:1.4rem;font-weight:800;color:#0550b8;letter-spacing:-.03em">1500</div>
             <div style="font-size:.72rem;color:var(--tl)">final score</div>
           </div>
         </div>
@@ -776,7 +775,7 @@ nav.scrolled{
         <div style="margin-top:10px;font-size:.75rem;color:var(--tl)">+270 points</div>
       </div>
 
-      <div style="border:1.5px solid #e2e8f0;border-radius:4px;padding:22px;background:#fff">
+      <div style="border:1.5px solid #d6e0ee;border-radius:4px;padding:22px;background:#fff">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
           <div style="width:44px;height:44px;border-radius:50%;background:#0661de;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff">N</div>
           <div>
@@ -784,7 +783,7 @@ nav.scrolled{
             <div style="font-size:.78rem;color:var(--tl)">Started at B2 English</div>
           </div>
           <div style="margin-left:auto;text-align:right">
-            <div style="font-size:1.4rem;font-weight:800;color:#044fba;letter-spacing:-.03em">1460</div>
+            <div style="font-size:1.4rem;font-weight:800;color:#0550b8;letter-spacing:-.03em">1460</div>
             <div style="font-size:.72rem;color:var(--tl)">final score</div>
           </div>
         </div>
@@ -792,7 +791,7 @@ nav.scrolled{
         <div style="margin-top:10px;font-size:.75rem;color:var(--tl)">From B2 → 1460</div>
       </div>
 
-      <div style="border:1.5px solid #e2e8f0;border-radius:4px;padding:22px;background:#fff">
+      <div style="border:1.5px solid #d6e0ee;border-radius:4px;padding:22px;background:#fff">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
           <div style="width:44px;height:44px;border-radius:50%;background:#0661de;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff">A</div>
           <div>
@@ -800,7 +799,7 @@ nav.scrolled{
             <div style="font-size:.78rem;color:var(--tl)">1.5 months</div>
           </div>
           <div style="margin-left:auto;text-align:right">
-            <div style="font-size:1.4rem;font-weight:800;color:#044fba;letter-spacing:-.03em">1440</div>
+            <div style="font-size:1.4rem;font-weight:800;color:#0550b8;letter-spacing:-.03em">1440</div>
             <div style="font-size:.72rem;color:var(--tl)">final score</div>
           </div>
         </div>
@@ -808,7 +807,7 @@ nav.scrolled{
         <div style="margin-top:10px;font-size:.75rem;color:var(--tl)">+220 points in 1.5 months</div>
       </div>
 
-      <div style="border:1.5px solid #e2e8f0;border-radius:4px;padding:22px;background:#fff">
+      <div style="border:1.5px solid #d6e0ee;border-radius:4px;padding:22px;background:#fff">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
           <div style="width:44px;height:44px;border-radius:50%;background:#0661de;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff">S</div>
           <div>
@@ -816,7 +815,7 @@ nav.scrolled{
             <div style="font-size:.78rem;color:var(--tl)">B2 English, math beginner</div>
           </div>
           <div style="margin-left:auto;text-align:right">
-            <div style="font-size:1.4rem;font-weight:800;color:#044fba;letter-spacing:-.03em">1440</div>
+            <div style="font-size:1.4rem;font-weight:800;color:#0550b8;letter-spacing:-.03em">1440</div>
             <div style="font-size:.72rem;color:var(--tl)">final score</div>
           </div>
         </div>
@@ -824,7 +823,7 @@ nav.scrolled{
         <div style="margin-top:10px;font-size:.75rem;color:var(--tl)">From beginner → 1440</div>
       </div>
 
-      <div style="border:1.5px solid #e2e8f0;border-radius:4px;padding:22px;background:#fff">
+      <div style="border:1.5px solid #d6e0ee;border-radius:4px;padding:22px;background:#fff">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
           <div style="width:44px;height:44px;border-radius:50%;background:#0661de;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff">T</div>
           <div>
@@ -832,7 +831,7 @@ nav.scrolled{
             <div style="font-size:.78rem;color:var(--tl)">Math only · 3 months</div>
           </div>
           <div style="margin-left:auto;text-align:right">
-            <div style="font-size:1.4rem;font-weight:800;color:#044fba;letter-spacing:-.03em">800</div>
+            <div style="font-size:1.4rem;font-weight:800;color:#0550b8;letter-spacing:-.03em">800</div>
             <div style="font-size:.72rem;color:var(--tl)">math score</div>
           </div>
         </div>
@@ -840,7 +839,7 @@ nav.scrolled{
         <div style="margin-top:10px;font-size:.75rem;color:var(--tl)">+250 Math points in 3 months</div>
       </div>
 
-      <div style="border:1.5px solid #e2e8f0;border-radius:4px;padding:22px;background:#f6f8fd">
+      <div style="border:1.5px solid #d6e0ee;border-radius:4px;padding:22px;background:#f4f7fb">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           <div style="font-weight:700;font-size:.95rem;color:var(--navy)">50+ more like this</div>
@@ -860,10 +859,10 @@ nav.scrolled{
     <div style="display:inline-flex;align-items:center;gap:14px;background:#0661de;color:#fff;border-radius:4px;padding:20px 32px;max-width:720px;width:100%;text-align:left">
       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
       <div>
-        <div style="font-weight:700;font-size:1rem;margin-bottom:3px" data-en="Next group starts June 2026 — spots filling fast" data-uz="Keyingi guruh iyun 2026 — o'rinlar tezda tugaydi" data-ru="Следующая группа — июнь 2026. Места заканчиваются">Next group starts June 2026 — spots filling fast</div>
+        <div style="font-weight:700;font-size:1rem;margin-bottom:3px" data-en="Next group starts June 2026 — spots filling fast" data-uz="Keyingi guruh iyun 2026 — oʻrinlar tezda tugaydi" data-ru="Следующая группа — июнь 2026. Места заканчиваются">Next group starts June 2026 — spots filling fast</div>
         <div style="font-size:.83rem;opacity:.85" data-en="Max 12 students per group. Reserve your spot before it closes." data-uz="Guruhda max 12 talaba. Yeringizni band qiling." data-ru="Максимум 12 студентов в группе. Забронируйте место заранее.">Max 12 students per group. Reserve your spot before it closes.</div>
       </div>
-      <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" style="flex-shrink:0;background:#fff;color:#0661de;font-weight:700;font-size:.85rem;border-radius:4px;padding:10px 18px;text-decoration:none;white-space:nowrap" data-en="Reserve Spot →" data-uz="O'rin band qil →" data-ru="Забронировать →">Reserve Spot →</a>
+      <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" style="flex-shrink:0;background:#fff;color:#0661de;font-weight:700;font-size:.85rem;border-radius:4px;padding:10px 18px;text-decoration:none;white-space:nowrap" data-en="Reserve Spot →" data-uz="Oʻrin band qil →" data-ru="Забронировать →">Reserve Spot →</a>
     </div>
   </div>
 </div>
@@ -872,36 +871,36 @@ nav.scrolled{
 
 <div class="sec">
   <div class="w">
-    <div class="slbl" data-en="Quick Guide" data-uz="Qisqa Ko'rsatma" data-ru="Быстрый гид">Quick Guide</div>
+    <div class="slbl" data-en="Quick Guide" data-uz="Qisqa Koʻrsatma" data-ru="Быстрый гид">Quick Guide</div>
     <h2 class="sh" data-en="Not sure which fits you?" data-uz="Qaysi siz uchun mos?" data-ru="Не знаете, что подойдёт?">Not sure which fits you?</h2>
-    <p class="sp" style="margin-bottom:2rem" data-en="Find your situation below — we'll point you to the right program." data-uz="Quyida holatingizni toping — biz mos dasturni ko'rsatamiz." data-ru="Найдите свою ситуацию ниже — мы укажем на подходящую программу.">Find your situation below — we'll point you to the right program.</p>
+    <p class="sp" style="margin-bottom:2rem" data-en="Find your situation below — we'll point you to the right program." data-uz="Quyida holatingizni toping — biz mos dasturni koʻrsatamiz." data-ru="Найдите свою ситуацию ниже — мы укажем на подходящую программу.">Find your situation below — we'll point you to the right program.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px">
 
       <div style="border:1.5px solid var(--bd);border-radius:4px;padding:22px;background:#fff">
-        <div style="width:40px;height:40px;border-radius:4px;background:#f0f4ff;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
         <div style="font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:.4rem" data-en="&ldquo;I'm just starting. Don't know my level.&rdquo;" data-uz="&ldquo;Endi boshlayman. Darajamni bilmayman.&rdquo;" data-ru="&ldquo;Только начинаю. Не знаю уровень.&rdquo;">&ldquo;I'm just starting. Don't know my level.&rdquo;</div>
         <div style="font-size:.82rem;color:var(--tm);margin-bottom:1rem" data-en="→ Take the free diagnostic first. 40 min, tells you exactly where you are." data-uz="→ Avval bepul diagnostika. 40 daqiqa." data-ru="→ Сначала диагностика. 40 минут.">→ Take the free diagnostic first. 40 min, tells you exactly where you are.</div>
         <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" style="display:inline-block;font-size:.82rem;font-weight:600;color:var(--blue)" data-en="Take free diagnostic →" data-uz="Bepul diagnostika →" data-ru="Пройти диагностику →">Take free diagnostic →</a>
       </div>
 
       <div style="border:1.5px solid var(--bd);border-radius:4px;padding:22px;background:#fff">
-        <div style="width:40px;height:40px;border-radius:4px;background:#edfaf3;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#044fba" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
         <div style="font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:.4rem" data-en="&ldquo;I scored 900–1100. I want 1300+.&rdquo;" data-uz="&ldquo;900–1100 oldim. 1300+ xohlayman.&rdquo;" data-ru="&ldquo;Набрал 900–1100. Хочу 1300+.&rdquo;">&ldquo;I scored 900–1100. I want 1300+.&rdquo;</div>
-        <div style="font-size:.82rem;color:var(--tm);margin-bottom:1rem" data-en="→ SAT MAX (2 subjects). Most students start here — real progress, real analytics." data-uz="→ SAT MAX (2 fan). Ko'p o'quvchilar shu yerdan boshlaydi." data-ru="→ SAT MAX (2 предмета). Большинство студентов начинают здесь.">→ SAT MAX (2 subjects). Most students start here — real progress, real analytics.</div>
+        <div style="font-size:.82rem;color:var(--tm);margin-bottom:1rem" data-en="→ SAT MAX (2 subjects). Most students start here — real progress, real analytics." data-uz="→ SAT MAX (2 fan). Koʻp oʻquvchilar shu yerdan boshlaydi." data-ru="→ SAT MAX (2 предмета). Большинство студентов начинают здесь.">→ SAT MAX (2 subjects). Most students start here — real progress, real analytics.</div>
         <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" style="display:inline-block;font-size:.82rem;font-weight:600;color:var(--blue)" data-en="Enroll in SAT MAX →" data-uz="SAT MAX ga yoziling →" data-ru="Записаться в SAT MAX →">Enroll in SAT MAX →</a>
       </div>
 
       <div style="border:1.5px solid var(--bd);border-radius:4px;padding:22px;background:#fff">
-        <div style="width:40px;height:40px;border-radius:4px;background:#e8f0ff;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
         <div style="font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:.4rem" data-en="&ldquo;I scored 1100+. Need 1500. Guaranteed.&rdquo;" data-uz="&ldquo;1100+ oldim. 1500 kerak. Kafolatli.&rdquo;" data-ru="&ldquo;Набрал 1100+. Нужно 1500. С гарантией.&rdquo;">&ldquo;I scored 1100+. Need 1500. Guaranteed.&rdquo;</div>
-        <div style="font-size:.82rem;color:var(--tm);margin-bottom:1rem" data-en="→ SAT MAX (1 500+ Guarantee). Score under 1500 after the program? You keep studying free for up to 3 more months." data-uz="→ SAT MAX (1500+ kafolat). 1500+ ga yetmasangiz, 3 oygacha bepul o'qiysiz." data-ru="→ SAT MAX (гарантия 1500). Не набрали 1500+? Учитесь бесплатно до 3 месяцев.">→ SAT MAX (1 500+ Guarantee). Score under 1500 after the program? You keep studying free for up to 3 more months.</div>
+        <div style="font-size:.82rem;color:var(--tm);margin-bottom:1rem" data-en="→ SAT MAX (1 500+ Guarantee). Score under 1500 after the program? You keep studying free for up to 3 more months." data-uz="→ SAT MAX (1500+ kafolat). 1500+ ga yetmasangiz, 3 oygacha bepul oʻqiysiz." data-ru="→ SAT MAX (гарантия 1500). Не набрали 1500+? Учитесь бесплатно до 3 месяцев.">→ SAT MAX (1 500+ Guarantee). Score under 1500 after the program? You keep studying free for up to 3 more months.</div>
         <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" style="display:inline-block;font-size:.82rem;font-weight:600;color:var(--blue)" data-en="Take diagnostic to qualify →" data-uz="Kirish uchun diagnostika →" data-ru="Диагностика для отбора →">Take diagnostic to qualify →</a>
       </div>
 
       <div style="border:1.5px solid var(--bd);border-radius:4px;padding:22px;background:#fff">
-        <div style="width:40px;height:40px;border-radius:4px;background:#f0f4ff;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div style="width:40px;height:40px;border-radius:4px;background:#e8f1fd;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0661de" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <div style="font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:.4rem" data-en="&ldquo;I need maximum speed. 1-on-1 only.&rdquo;" data-uz="&ldquo;Eng tez natija kerak. Faqat 1:1.&rdquo;" data-ru="&ldquo;Нужна максимальная скорость. Только 1 на 1.&rdquo;">&ldquo;I need maximum speed. 1-on-1 only.&rdquo;</div>
-        <div style="font-size:.82rem;color:var(--tm);margin-bottom:1rem" data-en="→ Private Mentorship. Your schedule, your pace. Limited spots." data-uz="→ Xususiy Mentorlik. Sizning jadval. Cheklangan o'rinlar." data-ru="→ Частное наставничество. Ваш темп. Ограниченные места.">→ Private Mentorship. Your schedule, your pace. Limited spots.</div>
+        <div style="font-size:.82rem;color:var(--tm);margin-bottom:1rem" data-en="→ Private Mentorship. Your schedule, your pace. Limited spots." data-uz="→ Xususiy Mentorlik. Sizning jadval. Cheklangan oʻrinlar." data-ru="→ Частное наставничество. Ваш темп. Ограниченные места.">→ Private Mentorship. Your schedule, your pace. Limited spots.</div>
         <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" style="display:inline-block;font-size:.82rem;font-weight:600;color:var(--blue)" data-en="Apply for Private →" data-uz="Private uchun ariza →" data-ru="Подать заявку →">Apply for Private →</a>
       </div>
 
@@ -913,28 +912,28 @@ nav.scrolled{
 
 <div class="sec alt">
   <div class="w">
-    <div class="slbl" data-en="Common Questions" data-uz="Ko'p So'raladigan Savollar" data-ru="Частые вопросы">Common Questions</div>
-    <h2 class="sh" style="margin-bottom:2rem" data-en="Everything you need to know." data-uz="Bilishingiz kerak bo'lgan hamma narsa." data-ru="Всё, что нужно знать.">Everything you need to know.</h2>
+    <div class="slbl" data-en="Common Questions" data-uz="Koʻp Soʻraladigan Savollar" data-ru="Частые вопросы">Common Questions</div>
+    <h2 class="sh" style="margin-bottom:2rem" data-en="Everything you need to know." data-uz="Bilishingiz kerak boʻlgan hamma narsa." data-ru="Всё, что нужно знать.">Everything you need to know.</h2>
     <div style="max-width:720px;display:flex;flex-direction:column;gap:10px">
 
       <div class="faq-item" style="border:1px solid var(--bd);border-radius:4px;background:#fff;overflow:hidden">
         <button class="faq-q" style="width:100%;text-align:left;padding:18px 20px;font-size:.9rem;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px" data-en="Do I need to take the diagnostic before enrolling?" data-uz="Yozilishdan oldin diagnostika zarurmi?" data-ru="Нужна ли диагностика перед записью?">Do I need to take the diagnostic before enrolling? <span class="faq-arrow" style="font-size:.9rem;transition:transform .3s;flex-shrink:0">▾</span></button>
-        <div class="faq-a" style="padding:0 20px 18px;font-size:.85rem;color:var(--tm);line-height:1.7" data-en="For most programs, no — enroll directly. The 1500+ Guaranteed program requires 1100+ on our diagnostic for entry. We recommend the diagnostic for any student without a recent score, because it helps us place you correctly." data-uz="Ko'p dasturlar uchun yo'q — to'g'ridan-to'g'ri yozilish mumkin. 1500+ dasturi 1500+ talab qiladi." data-ru="Для большинства программ — нет. Программа 1500+ требует 1100+ на диагностике. Рекомендуем диагностику всем без недавнего балла.">For most programs, no — enroll directly. The 1500+ Guaranteed program requires 1100+ on our diagnostic for entry. We recommend the diagnostic for any student without a recent score, because it helps us place you correctly.</div>
+        <div class="faq-a" style="padding:0 20px 18px;font-size:.85rem;color:var(--tm);line-height:1.7" data-en="For most programs, no — enroll directly. The 1500+ Guaranteed program requires 1100+ on our diagnostic for entry. We recommend the diagnostic for any student without a recent score, because it helps us place you correctly." data-uz="Koʻp dasturlar uchun yoʻq — toʻgʻridan-toʻgʻri yozilish mumkin. 1500+ dasturi 1500+ talab qiladi." data-ru="Для большинства программ — нет. Программа 1500+ требует 1100+ на диагностике. Рекомендуем диагностику всем без недавнего балла.">For most programs, no — enroll directly. The 1500+ Guaranteed program requires 1100+ on our diagnostic for entry. We recommend the diagnostic for any student without a recent score, because it helps us place you correctly.</div>
       </div>
 
       <div class="faq-item" style="border:1px solid var(--bd);border-radius:4px;background:#fff;overflow:hidden">
         <button class="faq-q" style="width:100%;text-align:left;padding:18px 20px;font-size:.9rem;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px" data-en="What does the 1500+ score guarantee mean exactly?" data-uz="1500+ ball kafolati nima degani?" data-ru="Что означает гарантия 1500+?">What does the 1500+ score guarantee mean exactly? <span class="faq-arrow" style="font-size:.9rem;transition:transform .3s;flex-shrink:0">▾</span></button>
-        <div class="faq-a" style="padding:0 20px 18px;font-size:.85rem;color:var(--tm);line-height:1.7" data-en="If you complete our 1500+ program and score under 1500 on the official SAT, you keep studying free of charge for up to 3 additional months. No fine print." data-uz="Agar 1500+ dasturni yakunlab, rasmiy SATda 1500 dan past olsangiz, 3 oygacha bepul o'qishni davom ettirasiz." data-ru="Если вы прошли нашу программу и набрали ниже 1500 — вы продолжаете учиться бесплатно до 3 месяцев.">If you complete our 1500+ program and score under 1500 on the official SAT, you keep studying free of charge for up to 3 additional months. No fine print.</div>
+        <div class="faq-a" style="padding:0 20px 18px;font-size:.85rem;color:var(--tm);line-height:1.7" data-en="If you complete our 1500+ program and score under 1500 on the official SAT, you keep studying free of charge for up to 3 additional months. No fine print." data-uz="Agar 1500+ dasturni yakunlab, rasmiy SATda 1500 dan past olsangiz, 3 oygacha bepul oʻqishni davom ettirasiz." data-ru="Если вы прошли нашу программу и набрали ниже 1500 — вы продолжаете учиться бесплатно до 3 месяцев.">If you complete our 1500+ program and score under 1500 on the official SAT, you keep studying free of charge for up to 3 additional months. No fine print.</div>
       </div>
 
       <div class="faq-item" style="border:1px solid var(--bd);border-radius:4px;background:#fff;overflow:hidden">
         <button class="faq-q" style="width:100%;text-align:left;padding:18px 20px;font-size:.9rem;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px" data-en="How many days per week are classes?" data-uz="Darslar haftada necha kun?" data-ru="Сколько дней в неделю занятия?">How many days per week are classes? <span class="faq-arrow" style="font-size:.9rem;transition:transform .3s;flex-shrink:0">▾</span></button>
-        <div class="faq-a" style="padding:0 20px 18px;font-size:.85rem;color:var(--tm);line-height:1.7" data-en="Each section (Math or English) meets 3 times per week, 2 hours per lesson. If you enroll in both, you attend 6 sessions per week — 12 hours of guided practice. Private sessions are scheduled flexibly. Sunday Mock SAT is every week, free for all students." data-uz="Har bo'lim (Matematika yoki Ingliz tili) haftada 3 marta, har biri 2 soat. Ikkalasiga yozilsangiz — haftada 6 dars, 12 soat amaliyot. Xususiy darslar moslashuvchan. Yakshanba Mock SAT har hafta bepul." data-ru="Каждый раздел (Мат. или Англ.) — 3 раза в неделю, по 2 часа. Оба раздела = 6 занятий и 12 часов. Частные — гибко. Mock SAT каждую неделю бесплатно.">Each section (Math or English) meets 3 times per week, 2 hours per lesson. If you enroll in both, you attend 6 sessions per week — 12 hours of guided practice. Private sessions are scheduled flexibly. Sunday Mock SAT is every week, free for all students.</div>
+        <div class="faq-a" style="padding:0 20px 18px;font-size:.85rem;color:var(--tm);line-height:1.7" data-en="Each section (Math or English) meets 3 times per week, 2 hours per lesson. If you enroll in both, you attend 6 sessions per week — 12 hours of guided practice. Private sessions are scheduled flexibly. Sunday Mock SAT is every week, free for all students." data-uz="Har boʻlim (Matematika yoki Ingliz tili) haftada 3 marta, har biri 2 soat. Ikkalasiga yozilsangiz — haftada 6 dars, 12 soat amaliyot. Xususiy darslar moslashuvchan. Yakshanba Mock SAT har hafta bepul." data-ru="Каждый раздел (Мат. или Англ.) — 3 раза в неделю, по 2 часа. Оба раздела = 6 занятий и 12 часов. Частные — гибко. Mock SAT каждую неделю бесплатно.">Each section (Math or English) meets 3 times per week, 2 hours per lesson. If you enroll in both, you attend 6 sessions per week — 12 hours of guided practice. Private sessions are scheduled flexibly. Sunday Mock SAT is every week, free for all students.</div>
       </div>
 
       <div class="faq-item" style="border:1px solid var(--bd);border-radius:4px;background:#fff;overflow:hidden">
-        <button class="faq-q" style="width:100%;text-align:left;padding:18px 20px;font-size:.9rem;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px" data-en="Can I switch programs after I start?" data-uz="Boshlagandan keyin dasturni o'zgartirish mumkinmi?" data-ru="Можно ли сменить программу после начала?">Can I switch programs after I start? <span class="faq-arrow" style="font-size:.9rem;transition:transform .3s;flex-shrink:0">▾</span></button>
-        <div class="faq-a" style="padding:0 20px 18px;font-size:.85rem;color:var(--tm);line-height:1.7" data-en="Yes. If you're growing faster than expected, you can upgrade. We assess progress monthly and proactively recommend the right level." data-uz="Ha. Tezroq o'sayotgan bo'lsangiz, yanada intensiv dasturga o'tishingiz mumkin. Har oy progress baholaymiz." data-ru="Да. Если прогресс быстрее ожидаемого — переходите выше. Оцениваем прогресс каждый месяц.">Yes. If you're growing faster than expected, you can upgrade. We assess progress monthly and proactively recommend the right level.</div>
+        <button class="faq-q" style="width:100%;text-align:left;padding:18px 20px;font-size:.9rem;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px" data-en="Can I switch programs after I start?" data-uz="Boshlagandan keyin dasturni oʻzgartirish mumkinmi?" data-ru="Можно ли сменить программу после начала?">Can I switch programs after I start? <span class="faq-arrow" style="font-size:.9rem;transition:transform .3s;flex-shrink:0">▾</span></button>
+        <div class="faq-a" style="padding:0 20px 18px;font-size:.85rem;color:var(--tm);line-height:1.7" data-en="Yes. If you're growing faster than expected, you can upgrade. We assess progress monthly and proactively recommend the right level." data-uz="Ha. Tezroq oʻsayotgan boʻlsangiz, yanada intensiv dasturga oʻtishingiz mumkin. Har oy progress baholaymiz." data-ru="Да. Если прогресс быстрее ожидаемого — переходите выше. Оцениваем прогресс каждый месяц.">Yes. If you're growing faster than expected, you can upgrade. We assess progress monthly and proactively recommend the right level.</div>
       </div>
 
       <div class="faq-item" style="border:1px solid var(--bd);border-radius:4px;background:#fff;overflow:hidden">
@@ -950,9 +949,9 @@ nav.scrolled{
 
 <div class="sec" style="text-align:center">
   <div class="w">
-    <div class="pillar-cta-tag" data-en="FREE · 40 QUESTIONS · NO SIGN-UP" data-uz="BEPUL · 40 SAVOL · RO'YXATSIZ" data-ru="БЕСПЛАТНО · 40 ВОПРОСОВ · БЕЗ РЕГИСТРАЦИИ">FREE · 40 QUESTIONS · NO SIGN-UP</div>
+    <div class="pillar-cta-tag" data-en="FREE · 40 QUESTIONS · NO SIGN-UP" data-uz="BEPUL · 40 SAVOL · ROʻYXATSIZ" data-ru="БЕСПЛАТНО · 40 ВОПРОСОВ · БЕЗ РЕГИСТРАЦИИ">FREE · 40 QUESTIONS · NO SIGN-UP</div>
     <h2 class="sh" style="text-align:center" data-en="Know your level <em>today.</em>" data-uz="Darajangizni <em>bugun</em> biling." data-ru="Узнайте свой уровень <em>сегодня.</em>">Know your level <em>today.</em></h2>
-    <p class="sp" style="margin:0 auto 1.6rem" data-en="Take the free 40-question diagnostic. 40 minutes, no sign-up. We'll show your score breakdown and tell you which program fits." data-uz="Bepul 40 savollik diagnostika. 40 daqiqa, ro'yxatsiz. Ball taqsimotini va mos dasturni ko'rasiz." data-ru="40 вопросов, 40 минут, без регистрации. Покажем разбивку баллов и подскажем подходящую программу.">Take the free 40-question diagnostic. 40 minutes, no sign-up. We'll show your score breakdown and tell you which program fits.</p>
+    <p class="sp" style="margin:0 auto 1.6rem" data-en="Take the free 40-question diagnostic. 40 minutes, no sign-up. We'll show your score breakdown and tell you which program fits." data-uz="Bepul 40 savollik diagnostika. 40 daqiqa, roʻyxatsiz. Ball taqsimotini va mos dasturni koʻrasiz." data-ru="40 вопросов, 40 минут, без регистрации. Покажем разбивку баллов и подскажем подходящую программу.">Take the free 40-question diagnostic. 40 minutes, no sign-up. We'll show your score breakdown and tell you which program fits.</p>
     <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
       <a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" class="btnf" data-en="Take Free Diagnostic →" data-uz="Bepul Diagnostika →" data-ru="Пройти диагностику →">Take Free Diagnostic →</a>
       <a href="https://t.me/m/E0A422n9ZmIx" target="_blank" rel="noopener" class="btns" data-en="Enroll via Telegram" data-uz="Telegram orqali yoziling" data-ru="Записаться через Telegram">Enroll via Telegram</a>
@@ -966,28 +965,28 @@ nav.scrolled{
   <div class="sx-wrap">
     <div class="sx-ft-grid">
       <div>
-        <a class="sx-brand" href="/"><span class="sx-chip"><img src="/logo.png" alt="" width="28" height="28"></span><span><small>SAT</small>Samarkand</span></a>
+        <a class="sx-ft-logo" href="/"><img src="/brand/logo-outline.png" alt="SAT Samarkand" width="136" height="131" loading="lazy"></a>
         <p class="sx-ft-about" data-en="Samarkand’s official SAT, AP & IELTS prep center." data-uz="Samarqandning rasmiy markazi." data-ru="Официальный центр.">Samarkand’s official SAT, AP & IELTS prep center.</p>
         <p class="sx-ft-about" style="margin-top:6px" data-en="Partners: Joylink & Millennium" data-uz="Joylink & Millennium" data-ru="Joylink & Millennium">Partners: Joylink & Millennium</p>
       </div>
       <div>
         <h3 data-en="Courses" data-uz="Kurslar" data-ru="Курсы">Courses</h3>
         <ul>
-          <li><a href="/sat-course-samarkand/" data-en="SAT Course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT Course</a></li>
+          <li><a href="/sat-course-samarkand/" data-en="SAT course" data-uz="SAT Kursi" data-ru="Курс SAT">SAT course</a></li>
           <li><a href="/digital-sat/" data-en="Digital SAT" data-uz="Raqamli SAT" data-ru="Цифровой SAT">Digital SAT</a></li>
           <li><a href="/sat-math-prep/" data-en="SAT Math" data-uz="SAT Matematika" data-ru="Математика SAT">SAT Math</a></li>
           <li><a href="/sat-english-prep/" data-en="SAT English" data-uz="SAT Ingliz tili" data-ru="Английский SAT">SAT English</a></li>
           <li><a href="/sat-tutoring-samarkand/" data-en="Tutoring" data-uz="Individual dars" data-ru="Репетиторство">Tutoring</a></li>
-          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a></li>
+          <li><a href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a></li>
         </ul>
       </div>
       <div>
         <h3 data-en="About" data-uz="Biz" data-ru="О нас">About</h3>
         <ul>
-          <li><a href="/teachers/" data-en="Teachers" data-uz="O'qituvchilar" data-ru="Учителя">Teachers</a></li>
+          <li><a href="/teachers/" data-en="Teachers" data-uz="Oʻqituvchilar" data-ru="Учителя">Teachers</a></li>
           <li><a href="/results/" data-en="Results" data-uz="Natijalar" data-ru="Результаты">Results</a></li>
           <li><a href="/pricing/" data-en="Pricing" data-uz="Narxlar" data-ru="Цены">Pricing</a></li>
-          <li><a href="/about/" data-en="About Us" data-uz="Biz haqimizda" data-ru="О нас">About Us</a></li>
+          <li><a href="/about/" data-en="About us" data-uz="Biz haqimizda" data-ru="О нас">About us</a></li>
           <li><a href="/blog/" data-en="Blog" data-uz="Blog" data-ru="Блог">Blog</a></li>
           <li><a href="/contact/" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
         </ul>
@@ -995,8 +994,8 @@ nav.scrolled{
       <div>
         <h3 data-en="Connect" data-uz="Aloqa" data-ru="Связь">Connect</h3>
         <ul>
-          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram Channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram Channel</a></li>
-          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support Chat" data-uz="Yordam" data-ru="Поддержка">Support Chat</a></li>
+          <li><a href="https://t.me/sat_samarkand" target="_blank" rel="noopener" data-en="Telegram channel" data-uz="Telegram kanal" data-ru="Telegram канал">Telegram channel</a></li>
+          <li><a href="https://t.me/satsam_support" target="_blank" rel="noopener" data-en="Support chat" data-uz="Yordam" data-ru="Поддержка">Support chat</a></li>
           <li><a href="https://instagram.com/sat_samarkand" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="tel:+998951131600" class="sx-num">+998 95 113 16 00</a></li>
         </ul>
@@ -1010,12 +1009,12 @@ nav.scrolled{
         </address>
       </div>
     </div>
-    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span></div>
+    <div class="sx-ft-base"><span>© 2026 SAT Samarkand. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></span><span class="sx-num">satsamarkand.uz</span><span class="sx-ft-tm" data-en="SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand." data-uz="SAT® — College Board tashkilotining roʻyxatdan oʻtgan savdo belgisi. College Board SAT Samarkand bilan bogʻliq emas." data-ru="SAT® — зарегистрированный товарный знак College Board. College Board не связан с SAT Samarkand.">SAT® is a registered trademark of College Board, which is not affiliated with SAT Samarkand.</span></div>
   </div>
 </div>
 <div class="sx-sticky">
-  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free Diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free Diagnostic</a>
-  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qo'ng'iroq" data-ru="Позвоните нам">Call us</a>
+  <a class="sx-btn" href="https://diagnostic.satsamarkand.uz" target="_blank" rel="noopener" data-en="Free diagnostic" data-uz="Bepul diagnostika" data-ru="Бесплатная диагностика">Free diagnostic</a>
+  <a class="sx-btn sx-line" href="tel:+998951131600" data-en="Call us" data-uz="Qoʻngʻiroq" data-ru="Позвоните нам">Call us</a>
 </div>
 <!--/SX-FOOTER-->
 
@@ -1266,6 +1265,6 @@ if(typeof toggleMobileNav==='undefined'){
 
 
 
-<script src="/theme.js?v=3" defer></script>
+<script src="/theme.js?v=4" defer></script>
 </body>
 </html>
