@@ -20,6 +20,9 @@
 ## Reference
 
 - [SAT state grant in Uzbekistan: the 1200+ rule, code 35787, 2026 statistics](https://satsamarkand.uz/blog/sat-state-grant-uzbekistan/) (also in [Uzbek](https://satsamarkand.uz/blog/sat-davlat-granti/) and [Russian](https://satsamarkand.uz/blog/sat-gosudarstvennyy-grant/))
+- [SAT state grant checker: three questions, published conditions only](https://satsamarkand.uz/sat-grant-checker/)
+- [How to send an SAT score to code 35787 (Uzbek)](https://satsamarkand.uz/blog/sat-balini-35787-kodiga-yuborish/) ([Russian](https://satsamarkand.uz/blog/kak-otpravit-sat-na-kod-35787/))
+- [SAT dates 2027 in Uzbekistan (Uzbek)](https://satsamarkand.uz/blog/sat-sanalari-2027/) ([Russian](https://satsamarkand.uz/blog/daty-sat-2027-uzbekistan/))
 - [SAT test dates and registration deadlines for Uzbekistan](https://satsamarkand.uz/schedule/)
 - [Digital SAT guide](https://satsamarkand.uz/digital-sat/)
 - [SAT transition words](https://satsamarkand.uz/sat-transition-words/)
